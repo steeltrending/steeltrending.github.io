@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>歷史圖卡 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鋼鐵潮流歷年每日速報圖卡彙整，可依月份與日期查詢、點圖放大。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.chip{background:transparent;border:1px solid #3A3F46;color:#C9CDD2;font:inherit;font-size:14px;min-height:40px;padding:0 14px;cursor:pointer}
+.chip:hover{border-color:#FF6A1A}
+.chip[aria-pressed="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.card{margin:0;border:1px solid #2A2F35;background:#121417;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.card:hover,.card:focus-visible{border-color:#FF6A1A;outline:none}
+.card .ph{aspect-ratio:1/1;overflow:hidden;background:#0B0C0E}
+.card img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.card .cap{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;border-top:1px solid #2A2F35;font-size:13px;letter-spacing:.08em;color:#C9CDD2}
+.card .cap span:last-child{color:#9AA0A6}
+.month-h{margin:40px 0 16px;font-size:20px;font-weight:900;display:flex;align-items:baseline;gap:12px}
+.month-h small{font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+input[type=date]{background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;min-height:40px;padding:0 10px;color-scheme:dark}
+@media (max-width:520px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.wrap{padding:0 16px}}
+</style>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="archive.html" aria-current="page" style="color:#FF8A47;text-decoration:none;padding:12px">歷史圖卡</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:64px;padding-bottom:96px">
+<p class="mono" style="margin:0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">ARCHIVE · DAILY BRIEF</p>
+<h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">歷史速報圖卡</h1>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:40em">每天發布的鋼鐵速報圖卡都收在這裡。可依月份篩選或直接選日期，點圖即可放大閱讀；每張圖卡都有自己的網址，方便分享。</p>
+
+<div style="margin-top:32px;padding:16px;border:1px solid #2A2F35;background:#15181B;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+<label for="jump" style="font-size:14px;color:#C9CDD2">查詢日期</label>
+<input id="jump" type="date">
+<span id="jump-msg" role="status" style="font-size:14px;color:#9AA0A6"></span>
+</div>
+<div id="months" role="group" aria-label="依月份篩選" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+</div>
+
+<p id="count" class="mono" style="margin:24px 0 0;font-size:12px;letter-spacing:.16em;color:#9AA0A6"></p>
+<div id="list"><p style="color:#9AA0A6">圖卡載入中…</p></div>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+
+<script src="assets/lightbox.js"></script>
+<script>
+(function () {
+  var WD = ['日', '一', '二', '三', '四', '五', '六'];
+  var all = [], view = [], month = 'all';
+  var list = document.getElementById('list');
+  var months = document.getElementById('months');
+  var jump = document.getElementById('jump');
+  var msg = document.getElementById('jump-msg');
+
+  function dot(d) { return d.replace(/-/g, '.'); }
+  function wd(d) { var p = d.split('-'); return '週' + WD[new Date(+p[0], p[1] - 1, +p[2]).getDay()]; }
+  function full(d) { return 'data/archive/' + d + '.jpg'; }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function openAt(date) {
+    var i = view.findIndex(function (x) { return x.date === date; });
+    if (i < 0) { setMonth('all'); i = view.findIndex(function (x) { return x.date === date; }); }
+    if (i < 0) return false;
+    window.SteelLightbox.open(view.map(function (x) {
+      return { src: full(x.date), title: '速報圖卡 ' + dot(x.date) + ' ' + wd(x.date) };
+    }), i);
+    return true;
+  }
+
+  function render() {
+    list.textContent = '';
+    view = month === 'all' ? all : all.filter(function (x) { return x.date.slice(0, 7) === month; });
+    document.getElementById('count').textContent = '共 ' + view.length + ' 張' + (month === 'all' ? '' : '（' + month.replace('-', ' 年 ') + ' 月）');
+    var cur = null, grid;
+    view.forEach(function (x) {
+      var m = x.date.slice(0, 7);
+      if (m !== cur) {
+        cur = m;
+        var h = el('h2', 'month-h', m.slice(0, 4) + ' 年 ' + (+m.slice(5)) + ' 月');
+        h.appendChild(el('small', null, view.filter(function (y) { return y.date.slice(0, 7) === m; }).length + ' CARDS'));
+        list.appendChild(h);
+        grid = el('div', 'grid'); list.appendChild(grid);
+      }
+      var a = el('a', 'card');
+      a.href = '#' + x.date; a.setAttribute('aria-label', '放大檢視 ' + dot(x.date) + ' 速報圖卡');
+      var ph = el('div', 'ph');
+      var img = el('img'); img.src = 'data/archive/thumb/' + x.date + '.jpg'; img.alt = dot(x.date) + ' 速報圖卡縮圖';
+      img.loading = 'lazy'; img.width = 480; img.height = Math.round(480 * x.h / x.w);
+      ph.appendChild(img); a.appendChild(ph);
+      var cap = el('div', 'cap'); cap.appendChild(el('span', 'mono', dot(x.date))); cap.appendChild(el('span', null, wd(x.date)));
+      a.appendChild(cap);
+      a.addEventListener('click', function (e) { e.preventDefault(); history.replaceState(null, '', '#' + x.date); openAt(x.date); });
+      grid.appendChild(a);
+    });
+    if (!view.length) list.appendChild(el('p', null, '這個月份沒有圖卡。'));
+    Array.prototype.forEach.call(months.children, function (b) { b.setAttribute('aria-pressed', String(b.dataset.m === month)); });
+  }
+  function setMonth(m) { month = m; render(); }
+
+  jump.addEventListener('change', function () {
+    var d = jump.value; if (!d) return;
+    if (openAt(d)) { msg.textContent = ''; history.replaceState(null, '', '#' + d); }
+    else {
+      var near = all.filter(function (x) { return x.date <= d; })[0] || all[all.length - 1];
+      msg.textContent = dot(d) + ' 沒有發布圖卡' + (near ? '，最接近的是 ' + dot(near.date) : '');
+    }
+  });
+
+  fetch('data/archive.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      all = (d.items || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+      if (!all.length) { list.innerHTML = '<p style="color:#9AA0A6">目前還沒有圖卡。</p>'; return; }
+      jump.min = all[all.length - 1].date; jump.max = all[0].date;
+      var ms = [];
+      all.forEach(function (x) { var m = x.date.slice(0, 7); if (ms.indexOf(m) < 0) ms.push(m); });
+      [['all', '全部']].concat(ms.map(function (m) { return [m, m.slice(0, 4) + '/' + m.slice(5)]; })).forEach(function (p) {
+        var b = el('button', 'chip', p[1]); b.type = 'button'; b.dataset.m = p[0];
+        b.addEventListener('click', function () { setMonth(p[0]); });
+        months.appendChild(b);
+      });
+      render();
+      var h = location.hash.slice(1);
+      if (/^\d{4}-\d{2}-\d{2}$/.test(h)) openAt(h);
+    })
+    .catch(function () { list.innerHTML = '<p style="color:#9AA0A6">圖卡清單暫時無法載入，請稍後再試。</p>'; });
+})();
+</script>
+</body>
+</html>
