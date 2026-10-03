@@ -2,9 +2,9 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<title>歷史圖卡 · 鋼鐵潮流 Steel Trending</title>
+<title>過去詳情 · 鋼鐵潮流 Steel Trending</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="鋼鐵潮流歷年每日速報圖卡彙整，可依月份與日期查詢、點圖放大。">
+<meta name="description" content="鋼鐵潮流每日速報彙整：依日期查詢當天的速報圖卡與完整版報告。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
@@ -22,6 +22,9 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 .card img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
 .card .cap{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;border-top:1px solid #2A2F35;font-size:13px;letter-spacing:.08em;color:#C9CDD2}
 .card .cap span:last-child{color:#9AA0A6}
+.card .meta{padding:0 12px 12px;font-size:12px;color:#9AA0A6;display:flex;gap:6px;flex-wrap:wrap}
+.card .tag{border:1px solid #3A3F46;padding:2px 8px}
+.card .tag.on{border-color:#FF6A1A;color:#FFB07F}
 .month-h{margin:40px 0 16px;font-size:20px;font-weight:900;display:flex;align-items:baseline;gap:12px}
 .month-h small{font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
 input[type=date]{background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;min-height:40px;padding:0 10px;color-scheme:dark}
@@ -29,6 +32,7 @@ input[type=date]{background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:
 </style>
 </head>
 <body>
+<script>if (/^#\d{4}-\d{2}-\d{2}$/.test(location.hash)) location.replace('day.html?d=' + location.hash.slice(1));</script>
 
 <header style="border-bottom:1px solid #2A2F35">
 <nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
@@ -41,16 +45,16 @@ input[type=date]{background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:
 </a>
 <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
 <a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
-<a href="archive.html" aria-current="page" style="color:#FF8A47;text-decoration:none;padding:12px">歷史圖卡</a>
+<a href="archive.html" aria-current="page" style="color:#FF8A47;text-decoration:none;padding:12px">過去詳情</a>
 <a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
 </div>
 </nav>
 </header>
 
 <main class="wrap" style="padding-top:64px;padding-bottom:96px">
-<p class="mono" style="margin:0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">ARCHIVE · DAILY BRIEF</p>
-<h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">歷史速報圖卡</h1>
-<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:40em">每天發布的鋼鐵速報圖卡都收在這裡。可依月份篩選或直接選日期，點圖即可放大閱讀；每張圖卡都有自己的網址，方便分享。</p>
+<p class="mono" style="margin:0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">ARCHIVE · PAST BRIEFS</p>
+<h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">過去詳情</h1>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:40em">每天的鋼鐵速報都收在這裡。依月份篩選或直接選日期，點進任一天即可看到當天的速報圖卡與完整版報告；每一天都有自己的網址，方便分享。</p>
 
 <div style="margin-top:32px;padding:16px;border:1px solid #2A2F35;background:#15181B;display:flex;flex-direction:column;gap:14px">
 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -62,7 +66,7 @@ input[type=date]{background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:
 </div>
 
 <p id="count" class="mono" style="margin:24px 0 0;font-size:12px;letter-spacing:.16em;color:#9AA0A6"></p>
-<div id="list"><p style="color:#9AA0A6">圖卡載入中…</p></div>
+<div id="list"><p style="color:#9AA0A6">載入中…</p></div>
 </main>
 
 <footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
@@ -72,7 +76,6 @@ input[type=date]{background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:
 </div>
 </footer>
 
-<script src="assets/lightbox.js"></script>
 <script>
 (function () {
   var WD = ['日', '一', '二', '三', '四', '五', '六'];
@@ -87,52 +90,48 @@ input[type=date]{background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:
   function full(d) { return 'data/archive/' + d + '.jpg'; }
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
 
-  function openAt(date) {
-    var i = view.findIndex(function (x) { return x.date === date; });
-    if (i < 0) { setMonth('all'); i = view.findIndex(function (x) { return x.date === date; }); }
-    if (i < 0) return false;
-    window.SteelLightbox.open(view.map(function (x) {
-      return { src: full(x.date), title: '速報圖卡 ' + dot(x.date) + ' ' + wd(x.date) };
-    }), i);
-    return true;
-  }
+  function dayUrl(d) { return 'day.html?d=' + d; }
+  function has(date) { return all.some(function (x) { return x.date === date; }); }
 
   function render() {
     list.textContent = '';
     view = month === 'all' ? all : all.filter(function (x) { return x.date.slice(0, 7) === month; });
-    document.getElementById('count').textContent = '共 ' + view.length + ' 張' + (month === 'all' ? '' : '（' + month.replace('-', ' 年 ') + ' 月）');
+    document.getElementById('count').textContent = '共 ' + view.length + ' 天' + (month === 'all' ? '' : '（' + month.replace('-', ' 年 ') + ' 月）');
     var cur = null, grid;
     view.forEach(function (x) {
       var m = x.date.slice(0, 7);
       if (m !== cur) {
         cur = m;
         var h = el('h2', 'month-h', m.slice(0, 4) + ' 年 ' + (+m.slice(5)) + ' 月');
-        h.appendChild(el('small', null, view.filter(function (y) { return y.date.slice(0, 7) === m; }).length + ' CARDS'));
+        h.appendChild(el('small', null, view.filter(function (y) { return y.date.slice(0, 7) === m; }).length + ' DAYS'));
         list.appendChild(h);
         grid = el('div', 'grid'); list.appendChild(grid);
       }
       var a = el('a', 'card');
-      a.href = '#' + x.date; a.setAttribute('aria-label', '放大檢視 ' + dot(x.date) + ' 速報圖卡');
+      a.href = dayUrl(x.date); a.setAttribute('aria-label', dot(x.date) + ' 速報詳情');
       var ph = el('div', 'ph');
-      var img = el('img'); img.src = 'data/archive/thumb/' + x.date + '.jpg'; img.alt = dot(x.date) + ' 速報圖卡縮圖';
+      var img = el('img'); img.src = 'data/archive/thumb/' + x.date + '.jpg'; img.alt = dot(x.date) + ' 速報縮圖';
       img.loading = 'lazy'; img.width = 480; img.height = Math.round(480 * x.h / x.w);
       ph.appendChild(img); a.appendChild(ph);
       var cap = el('div', 'cap'); cap.appendChild(el('span', 'mono', dot(x.date))); cap.appendChild(el('span', null, wd(x.date)));
       a.appendChild(cap);
-      a.addEventListener('click', function (e) { e.preventDefault(); history.replaceState(null, '', '#' + x.date); openAt(x.date); });
+      var meta = el('div', 'meta');
+      meta.appendChild(el('span', 'tag' + (x.w ? ' on' : ''), x.w ? '速報圖卡' : '無圖卡'));
+      meta.appendChild(el('span', 'tag' + (x.pages ? ' on' : ''), x.pages ? '完整報告 ' + x.pages + ' 頁' : '無完整報告'));
+      a.appendChild(meta);
       grid.appendChild(a);
     });
-    if (!view.length) list.appendChild(el('p', null, '這個月份沒有圖卡。'));
+    if (!view.length) list.appendChild(el('p', null, '這個月份沒有速報。'));
     Array.prototype.forEach.call(months.children, function (b) { b.setAttribute('aria-pressed', String(b.dataset.m === month)); });
   }
   function setMonth(m) { month = m; render(); }
 
   jump.addEventListener('change', function () {
     var d = jump.value; if (!d) return;
-    if (openAt(d)) { msg.textContent = ''; history.replaceState(null, '', '#' + d); }
+    if (has(d)) { location.href = dayUrl(d); }
     else {
       var near = all.filter(function (x) { return x.date <= d; })[0] || all[all.length - 1];
-      msg.textContent = dot(d) + ' 沒有發布圖卡' + (near ? '，最接近的是 ' + dot(near.date) : '');
+      msg.textContent = dot(d) + ' 沒有發布速報' + (near ? '，最接近的是 ' + dot(near.date) : '');
     }
   });
 
@@ -140,7 +139,7 @@ input[type=date]{background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) {
       all = (d.items || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
-      if (!all.length) { list.innerHTML = '<p style="color:#9AA0A6">目前還沒有圖卡。</p>'; return; }
+      if (!all.length) { list.innerHTML = '<p style="color:#9AA0A6">目前還沒有速報。</p>'; return; }
       jump.min = all[all.length - 1].date; jump.max = all[0].date;
       var ms = [];
       all.forEach(function (x) { var m = x.date.slice(0, 7); if (ms.indexOf(m) < 0) ms.push(m); });
@@ -150,10 +149,9 @@ input[type=date]{background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:
         months.appendChild(b);
       });
       render();
-      var h = location.hash.slice(1);
-      if (/^\d{4}-\d{2}-\d{2}$/.test(h)) openAt(h);
+
     })
-    .catch(function () { list.innerHTML = '<p style="color:#9AA0A6">圖卡清單暫時無法載入，請稍後再試。</p>'; });
+    .catch(function () { list.innerHTML = '<p style="color:#9AA0A6">清單暫時無法載入，請稍後再試。</p>'; });
 })();
 </script>
 </body>

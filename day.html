@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>速報詳情 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鋼鐵潮流每日速報詳情：當天的速報圖卡與完整版報告。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid #4A5058;color:#E8E6E1;background:transparent;font:inherit;font-size:15px;text-decoration:none;cursor:pointer}
+.btn:hover{border-color:#FF6A1A;color:#FFB07F}
+.btn.primary{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+.btn.primary:hover{background:#FF8A47;color:#0F1113}
+.btn[aria-disabled="true"]{opacity:.35;pointer-events:none}
+.tabs{display:flex;gap:0;border-bottom:1px solid #2A2F35;margin-top:32px;overflow-x:auto}
+.tab{background:transparent;border:0;border-bottom:3px solid transparent;color:#9AA0A6;font:inherit;font-size:16px;font-weight:700;padding:14px 20px;cursor:pointer;white-space:nowrap}
+.tab:hover{color:#E8E6E1}
+.tab[aria-selected="true"]{color:#E8E6E1;border-bottom-color:#FF6A1A}
+.tab .n{font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:12px;color:#9AA0A6;margin-left:6px}
+.panel{padding-top:28px}
+.pages{display:flex;flex-direction:column;gap:20px;max-width:900px;margin:0 auto}
+.page{margin:0;background:#fff;border:1px solid #2A2F35}
+.page img{display:block;width:100%;height:auto;cursor:zoom-in}
+.page figcaption{background:#121417;border-top:1px solid #2A2F35;padding:8px 12px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;color:#9AA0A6;display:flex;justify-content:space-between}
+.card-img{max-width:900px;margin:0 auto;border:1px solid #2A2F35;background:#121417}
+.card-img img{display:block;width:100%;height:auto;cursor:zoom-in}
+.empty{padding:64px 24px;text-align:center;color:#9AA0A6;border:1px dashed #3A3F46}
+details.text{max-width:900px;margin:0 auto 20px;border:1px solid #2A2F35;background:#15181B}
+details.text summary{cursor:pointer;padding:14px 18px;font-weight:700;list-style-position:inside}
+details.text pre{margin:0;padding:0 18px 18px;white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:15px;line-height:1.85;color:#C9CDD2;max-height:70vh;overflow:auto}
+.daynav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:48px;padding-top:24px;border-top:1px solid #2A2F35}
+@media (max-width:520px){.wrap{padding:0 16px}.tab{padding:12px 14px;font-size:15px}}
+</style>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="archive.html" style="color:#FF8A47;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="archive.html" style="text-decoration:none">過去詳情</a> <span aria-hidden="true">›</span> <span id="crumb">—</span></nav>
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-top:20px">
+<div>
+<p class="mono" style="margin:0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">DAILY BRIEF · <span id="wd-en">—</span></p>
+<h1 id="title" style="margin:10px 0 0;font-size:clamp(30px,5vw,48px);font-weight:900;line-height:1.2">載入中…</h1>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<a id="prev-top" class="btn" href="#" aria-disabled="true">‹ 前一天</a>
+<a id="next-top" class="btn" href="#" aria-disabled="true">後一天 ›</a>
+</div>
+</div>
+
+<div class="tabs" role="tablist" aria-label="內容切換">
+<button class="tab" role="tab" id="tab-report" aria-controls="panel-report" aria-selected="true">完整報告<span class="n" id="n-report"></span></button>
+<button class="tab" role="tab" id="tab-card" aria-controls="panel-card" aria-selected="false">速報圖卡</button>
+</div>
+
+<section id="panel-report" class="panel" role="tabpanel" aria-labelledby="tab-report">
+<div id="report-actions" style="max-width:900px;margin:0 auto 20px;display:flex;gap:10px;flex-wrap:wrap"></div>
+<div id="report-body"></div>
+</section>
+
+<section id="panel-card" class="panel" role="tabpanel" aria-labelledby="tab-card" hidden>
+<div id="card-body"></div>
+</section>
+
+<div class="daynav">
+<a id="prev-bot" class="btn" href="#" aria-disabled="true">‹ 前一天</a>
+<a class="btn" href="archive.html">回到過去詳情</a>
+<a id="next-bot" class="btn" href="#" aria-disabled="true">後一天 ›</a>
+</div>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+
+<script src="assets/lightbox.js"></script>
+<script>
+(function () {
+  var WD = ['日', '一', '二', '三', '四', '五', '六'];
+  var WDE = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+  var date = new URLSearchParams(location.search).get('d') || '';
+  function $(id) { return document.getElementById(id); }
+  function dot(d) { return d.replace(/-/g, '.'); }
+  function dow(d) { var p = d.split('-'); return new Date(+p[0], p[1] - 1, +p[2]).getDay(); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function setNav(ids, d) {
+    ids.forEach(function (id) {
+      var a = $(id);
+      if (d) { a.href = 'day.html?d=' + d; a.removeAttribute('aria-disabled'); a.title = dot(d); }
+      else { a.setAttribute('aria-disabled', 'true'); a.removeAttribute('href'); }
+    });
+  }
+
+  // 分頁切換（可用 #card / #report 直接開啟）
+  var tabs = [$('tab-report'), $('tab-card')];
+  function select(which) {
+    tabs.forEach(function (t) {
+      var on = t.id === 'tab-' + which;
+      t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1;
+      $(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    history.replaceState(null, '', '#' + which);
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t.id.slice(4)); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { var n = tabs[(i + 1) % 2]; n.focus(); select(n.id.slice(4)); }
+    });
+  });
+
+  function notFound(msg) {
+    $('title').textContent = msg; $('crumb').textContent = '找不到';
+    document.querySelector('.tabs').hidden = true; $('panel-report').hidden = true; $('panel-card').hidden = true;
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) { notFound('請從過去詳情選擇日期'); return; }
+
+  fetch('data/archive.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      var items = (d.items || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+      var i = items.findIndex(function (x) { return x.date === date; });
+      if (i < 0) { notFound(dot(date) + ' 沒有發布速報'); return; }
+      var it = items[i];
+      var label = dot(date) + '（週' + WD[dow(date)] + '）';
+      document.title = dot(date) + ' 鋼鐵速報 · 鋼鐵潮流';
+      $('crumb').textContent = label;
+      $('wd-en').textContent = WDE[dow(date)];
+      $('title').textContent = dot(date) + ' 鋼鐵速報';
+      setNav(['prev-top', 'prev-bot'], items[i + 1] && items[i + 1].date);
+      setNav(['next-top', 'next-bot'], items[i - 1] && items[i - 1].date);
+
+      // 完整報告
+      var base = 'data/report/' + date + '/';
+      var body = $('report-body'), acts = $('report-actions');
+      if (it.pages) {
+        $('n-report').textContent = it.pages + ' 頁';
+        var dl = el('a', 'btn primary', '下載 PDF'); dl.href = base + 'report.pdf'; dl.setAttribute('download', '鋼鐵潮流速報_' + date + '.pdf');
+        var op = el('a', 'btn', '在新分頁開啟 PDF'); op.href = base + 'report.pdf'; op.target = '_blank'; op.rel = 'noopener';
+        acts.appendChild(dl); acts.appendChild(op);
+
+        var det = el('details', 'text');
+        det.appendChild(el('summary', null, '文字版（可搜尋、複製）'));
+        var pre = el('pre', null, '載入中…'); det.appendChild(pre);
+        det.addEventListener('toggle', function () {
+          if (!det.open || det.dataset.loaded) return;
+          det.dataset.loaded = '1';
+          fetch(base + 'text.txt').then(function (r) { return r.text(); })
+            .then(function (t) { pre.textContent = t.trim() || '此報告沒有可擷取的文字。'; })
+            .catch(function () { pre.textContent = '文字版暫時無法載入。'; });
+        });
+        body.appendChild(det);
+
+        var pages = el('div', 'pages'), list = [];
+        for (var p = 1; p <= it.pages; p++) {
+          var src = base + 'p' + p + '.jpg';
+          list.push({ src: src, title: dot(date) + ' 完整報告 第 ' + p + '／' + it.pages + ' 頁' });
+          var fig = el('figure', 'page');
+          var img = el('img'); img.src = src; img.alt = dot(date) + ' 完整報告第 ' + p + ' 頁';
+          img.loading = p > 1 ? 'lazy' : 'eager';
+          if (it.pw) { img.width = it.pw; img.height = it.ph; }
+          (function (k) { img.addEventListener('click', function () { window.SteelLightbox.open(list, k); }); })(p - 1);
+          fig.appendChild(img);
+          var cap = el('figcaption'); cap.appendChild(el('span', null, 'PAGE ' + p + ' / ' + it.pages)); cap.appendChild(el('span', null, '點圖放大'));
+          fig.appendChild(cap);
+          pages.appendChild(fig);
+        }
+        body.appendChild(pages);
+      } else {
+        body.appendChild(el('p', 'empty', '這一天沒有完整版報告，請切換到「速報圖卡」。'));
+      }
+
+      // 速報圖卡
+      var cb = $('card-body');
+      if (it.w) {
+        var csrc = 'data/archive/' + date + '.jpg';
+        var box = el('figure', 'card-img'); box.style.margin = '0 auto';
+        var cimg = el('img'); cimg.src = csrc; cimg.alt = dot(date) + ' 速報圖卡'; cimg.width = it.w; cimg.height = it.h; cimg.loading = 'lazy';
+        cimg.addEventListener('click', function () { window.SteelLightbox.open([{ src: csrc, title: dot(date) + ' 速報圖卡' }], 0); });
+        box.appendChild(cimg);
+        var cap2 = el('figcaption', 'mono'); cap2.setAttribute('style', 'display:flex;justify-content:space-between;padding:10px 14px;border-top:1px solid #2A2F35;font-size:12px;letter-spacing:.14em;color:#9AA0A6');
+        cap2.appendChild(el('span', null, 'SOCIAL CARD · ' + dot(date))); cap2.appendChild(el('span', null, '點圖放大'));
+        box.appendChild(cap2);
+        cb.appendChild(box);
+      } else {
+        cb.appendChild(el('p', 'empty', '這一天沒有速報圖卡。'));
+      }
+
+      var want = location.hash.slice(1);
+      select(want === 'card' || want === 'report' ? want : (it.pages ? 'report' : 'card'));
+    })
+    .catch(function () { notFound('資料暫時無法載入，請稍後再試'); });
+})();
+</script>
+</body>
+</html>
