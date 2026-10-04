@@ -11,7 +11,8 @@
 body{margin:0;background:#0F1113}
 a{color:#FF8A47}a:hover{color:#FFB07F}
 </style>
-<style>html{scroll-behavior:smooth}</style>
+<style>html{scroll-behavior:smooth}#stock-rows a:hover,#stocks-title a:hover{color:#FF8A47 !important}
+</style>
 </head>
 <body>
 <div style="background: #0F1113; color: #E8E6E1; font-family: 'Noto Sans TC', 'PingFang TC', sans-serif; min-height: 100vh">
@@ -57,7 +58,7 @@ Facebook 粉專</a>
 <!-- Hero side: 七大地區龍頭鋼鐵股（資料：data/stocks.json，每日更新） -->
 <section aria-labelledby="stocks-title" style="border: 1px solid #2A2F35; background: #15181B; display: flex; flex-direction: column">
 <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 20px; border-bottom: 1px solid #2A2F35">
-<h2 id="stocks-title" style="margin: 0; font-size: 16px; font-weight: 700">七大地區龍頭鋼鐵股</h2>
+<h2 id="stocks-title" style="margin: 0; font-size: 16px; font-weight: 700"><a href="stocks.html" style="color: #E8E6E1; text-decoration: none">七大地區龍頭鋼鐵股</a></h2>
 <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #9AA0A6">STEEL STOCKS</span>
 </div>
 <div id="stock-rows" style="display: flex; flex-direction: column">
@@ -288,7 +289,11 @@ document.getElementById('mail-btn').addEventListener('click', function () {
       var list = (d.items || []).filter(function (it) { return !it.rank || it.rank === 1; });
       list.forEach(function (it, i) {
         var row = el('div', 'display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 20px' + (i < list.length - 1 ? '; border-bottom: 1px solid #22262B' : ''));
-        row.appendChild(el('span', 'font-size: 13px; color: #9AA0A6', it.region));
+        var SLUG = { '台灣': 'tw', '中國': 'cn', '日韓': 'jpkr', '美國': 'us', '歐洲': 'eu', '東南亞': 'sea', '印度': 'in' };
+        var rg = el('a', 'font-size: 13px; color: #9AA0A6; text-decoration: none; padding: 10px 0', it.region);
+        rg.href = 'stocks.html#' + (SLUG[it.region] || '');
+        rg.setAttribute('aria-label', it.region + '代表股明細');
+        row.appendChild(rg);
         var mid = el('div', 'display: flex; flex-direction: column; gap: 2px; min-width: 0');
         var nmA = el('a', 'font-size: 15px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #E8E6E1; text-decoration: none', it.name);
         nmA.href = 'stock.html?k=' + encodeURIComponent(it.key);

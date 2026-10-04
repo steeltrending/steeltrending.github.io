@@ -261,6 +261,12 @@ td .tk{font-size:12px;color:#9AA0A6;margin-top:3px}
       t.appendChild(tb); tw.appendChild(t); sec.appendChild(tw);
       wrap.appendChild(sec);
     });
+
+    // 區段由程式產生，載入後再依網址 #地區 捲動到對應位置
+    if (location.hash) {
+      var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target) requestAnimationFrame(function () { target.scrollIntoView(); });
+    }
   }
 })();
 </script>
