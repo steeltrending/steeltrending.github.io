@@ -1,104 +1,718 @@
 {
- "Kaohsiung China Steel Corporation Headquarters": [
+ "Hyundai Steel Dangjin filetype:bitmap": [],
+ "Hyundai Steel filetype:bitmap": [
   {
-   "title": "File:China Steel Corporation Headquarters, Kaohsiung, Taiwan, April 2014.jpg",
-   "thumb": "00_0.jpg",
-   "w": 920,
-   "h": 1200,
-   "license": "CC BY 1.0",
-   "artist": "Surmoer",
-   "date": "2014-04-21",
-   "desc": "China Steel Corporatoin Headquarters."
+   "title": "File:Hyundai Palisade LX2 Steel Graphite (12).jpg",
+   "thumb": "01_0.jpg",
+   "w": 3866,
+   "h": 2900,
+   "license": "CC BY-SA 4.0",
+   "artist": "Damian B Oh",
+   "date": "2025-05-15 18:45:48",
+   "desc": "Steel Graphite Hyundai Palisade LX2 SUV."
   },
   {
-   "title": "File:Headquarter of China Steel Corporation in Kaohsiung, Taiwan-2.jpg",
-   "thumb": "00_1.jpg",
-   "w": 1415,
-   "h": 2131,
+   "title": "File:Hyundai Palisade LX2 Steel Graphite (14).jpg",
+   "thumb": "01_1.jpg",
+   "w": 3896,
+   "h": 2921,
+   "license": "CC BY-SA 4.0",
+   "artist": "Damian B Oh",
+   "date": "2025-05-15 18:46:11",
+   "desc": "Steel Graphite Hyundai Palisade LX2 SUV."
+  },
+  {
+   "title": "File:Hyundai Palisade LX2 Steel Graphite (7).jpg",
+   "thumb": "01_2.jpg",
+   "w": 3877,
+   "h": 2123,
+   "license": "CC BY-SA 4.0",
+   "artist": "Damian B Oh",
+   "date": "2025-05-15 18:47:26",
+   "desc": "Steel Graphite Hyundai Palisade LX2 SUV."
+  },
+  {
+   "title": "File:Hyundai Palisade LX2 Steel Graphite (11).jpg",
+   "thumb": "01_3.jpg",
+   "w": 3750,
+   "h": 2813,
+   "license": "CC BY-SA 4.0",
+   "artist": "Damian B Oh",
+   "date": "2025-05-15 18:45:42",
+   "desc": "Steel Graphite Hyundai Palisade LX2 SUV."
+  },
+  {
+   "title": "File:Hyundai Palisade LX2 Steel Graphite (5).jpg",
+   "thumb": "01_4.jpg",
+   "w": 3972,
+   "h": 2979,
+   "license": "CC BY-SA 4.0",
+   "artist": "Damian B Oh",
+   "date": "2025-05-15 18:47:16",
+   "desc": "Steel Graphite Hyundai Palisade LX2 SUV."
+  },
+  {
+   "title": "File:Hyundai Palisade LX2 Steel Graphite (20).jpg",
+   "thumb": "01_5.jpg",
+   "w": 3897,
+   "h": 2923,
+   "license": "CC BY-SA 4.0",
+   "artist": "Damian B Oh",
+   "date": "2025-05-15 18:48:14",
+   "desc": "Steel Graphite Hyundai Palisade LX2 SUV."
+  },
+  {
+   "title": "File:Hyundai Palisade LX2 Steel Graphite (9).jpg",
+   "thumb": "01_6.jpg",
+   "w": 3822,
+   "h": 2866,
+   "license": "CC BY-SA 4.0",
+   "artist": "Damian B Oh",
+   "date": "2025-05-15 18:49:02",
+   "desc": "Steel Graphite Hyundai Palisade LX2 SUV."
+  },
+  {
+   "title": "File:Hyundai Palisade LX2 Steel Graphite (3).jpg",
+   "thumb": "01_7.jpg",
+   "w": 3963,
+   "h": 2972,
+   "license": "CC BY-SA 4.0",
+   "artist": "Damian B Oh",
+   "date": "2025-05-15 18:47:07",
+   "desc": "Steel Graphite Hyundai Palisade LX2 SUV."
+  },
+  {
+   "title": "File:Hyundai Palisade LX2 Steel Graphite (4).jpg",
+   "thumb": "01_8.jpg",
+   "w": 3991,
+   "h": 2993,
+   "license": "CC BY-SA 4.0",
+   "artist": "Damian B Oh",
+   "date": "2025-05-15 18:47:10",
+   "desc": "Steel Graphite Hyundai Palisade LX2 SUV."
+  },
+  {
+   "title": "File:Hyundai Palisade LX2 Steel Graphite (19).jpg",
+   "thumb": "01_9.jpg",
+   "w": 3918,
+   "h": 2939,
+   "license": "CC BY-SA 4.0",
+   "artist": "Damian B Oh",
+   "date": "2025-05-15 18:48:03",
+   "desc": "Steel Graphite Hyundai Palisade LX2 SUV."
+  }
+ ],
+ "Hyundai Motor Manufacturing Alabama filetype:bitmap": [
+  {
+   "title": "File:Hyundai Motor Manufacturing Alabama Highsmith 01.jpg",
+   "thumb": "02_0.jpg",
+   "w": 1024,
+   "h": 554,
+   "license": "Public domain",
+   "artist": "Carol M. Highsmith",
+   "date": "2010-03-12",
+   "desc": "Hyundai Motor Manufacturing Alabama in Montgomery, Alabama."
+  },
+  {
+   "title": "File:Hyundai Motor Manufacturing Alabama Highsmith 03.jpg",
+   "thumb": "02_1.jpg",
+   "w": 1024,
+   "h": 683,
+   "license": "Public domain",
+   "artist": "Carol M. Highsmith",
+   "date": "2010-03-12",
+   "desc": "A Hyundai Santa Fe being built at Hyundai Motor Manufacturing Alabama in Montgomery, Alabama."
+  },
+  {
+   "title": "File:Hyundai Motor Manufacturing Alabama Highsmith 04.jpg",
+   "thumb": "02_2.jpg",
+   "w": 1024,
+   "h": 683,
+   "license": "Public domain",
+   "artist": "Carol M. Highsmith",
+   "date": "2010-03-12",
+   "desc": "Hyundai Motor Manufacturing Alabama in Montgomery, Alabama."
+  },
+  {
+   "title": "File:Hyundai Motor Manufacturing Alabama Highsmith 02.jpg",
+   "thumb": "02_3.jpg",
+   "w": 1024,
+   "h": 683,
+   "license": "Public domain",
+   "artist": "Carol M. Highsmith",
+   "date": "2010-03-12",
+   "desc": "A Hyundai Sonata being built at Hyundai Motor Manufacturing Alabama in Montgomery, Alabama."
+  },
+  {
+   "title": "File:Hyundai manufacturing plant, Montgomery, Alabama LCCN2010647650.tif",
+   "thumb": "02_4.jpg",
+   "w": 6144,
+   "h": 4096,
+   "license": "Public domain",
+   "artist": "Carol M. Highsmith",
+   "date": "Taken on 12 March 2010, 04:39 (according to Exif data)",
+   "desc": "Title: Hyundai manufacturing plant, Montgomery, Alabama\nPhysical description: 1 photograph : digital, TIFF file, color.\n\nNotes: Title, date, subject note, and keywords provided by the photographer.; H"
+  },
+  {
+   "title": "File:Hyundai's first assembly and manufacturing plant in the United States is right outside of Montgomery, Alabama LCCN2010637655.tif",
+   "thumb": "02_5.jpg",
+   "w": 6144,
+   "h": 4096,
+   "license": "Public domain",
+   "artist": "Carol M. Highsmith",
+   "date": "Taken on 12 March 2010, 04:49 (according to Exif data)",
+   "desc": "Title: Hyundai's first assembly and manufacturing plant in the United States is right outside of Montgomery, Alabama\nPhysical description: 1 photograph : digital, TIFF file, color.\n\nNotes: This $1.4 b"
+  },
+  {
+   "title": "File:Hyundai's first assembly and manufacturing plant in the United States is right outside of Montgomery, Alabama LCCN2010637659.tif",
+   "thumb": "02_6.jpg",
+   "w": 6144,
+   "h": 4096,
+   "license": "Public domain",
+   "artist": "Carol M. Highsmith",
+   "date": "Taken on 12 March 2010, 05:06 (according to Exif data)",
+   "desc": "Title: Hyundai's first assembly and manufacturing plant in the United States is right outside of Montgomery, Alabama\nPhysical description: 1 photograph : digital, TIFF file, color.\n\nNotes: This $1.4 b"
+  },
+  {
+   "title": "File:Hyundai's first assembly and manufacturing plant in the United States is right outside of Montgomery, Alabama LCCN2010637666.tif",
+   "thumb": "02_7.jpg",
+   "w": 6144,
+   "h": 4096,
+   "license": "Public domain",
+   "artist": "Carol M. Highsmith",
+   "date": "Taken on 12 March 2010, 05:19 (according to Exif data)",
+   "desc": "Title: Hyundai's first assembly and manufacturing plant in the United States is right outside of Montgomery, Alabama\nPhysical description: 1 photograph : digital, TIFF file, color.\n\nNotes: This $1.4 b"
+  },
+  {
+   "title": "File:Hyundai's first assembly and manufacturing plant in the United States is right outside of Montgomery, Alabama LCCN2010637657.tif",
+   "thumb": "02_8.jpg",
+   "w": 6144,
+   "h": 4096,
+   "license": "Public domain",
+   "artist": "Carol M. Highsmith",
+   "date": "Taken on 12 March 2010, 04:52 (according to Exif data)",
+   "desc": "Title: Hyundai's first assembly and manufacturing plant in the United States is right outside of Montgomery, Alabama\nPhysical description: 1 photograph : digital, TIFF file, color.\n\nNotes: This $1.4 b"
+  },
+  {
+   "title": "File:Hyundai's first assembly and manufacturing plant in the United States is right outside of Montgomery, Alabama LCCN2010637664.tif",
+   "thumb": "02_9.jpg",
+   "w": 5696,
+   "h": 3437,
+   "license": "Public domain",
+   "artist": "Carol M. Highsmith",
+   "date": "Taken on 12 March 2010, 05:18 (according to Exif data)",
+   "desc": "Title: Hyundai's first assembly and manufacturing plant in the United States is right outside of Montgomery, Alabama\nPhysical description: 1 photograph : digital, TIFF file, color.\n\nNotes: This $1.4 b"
+  }
+ ],
+ "Kia Georgia plant West Point filetype:bitmap": [
+  {
+   "title": "File:Kia Optima Hybrid (US) - Flickr - skinnylawyer.jpg",
+   "thumb": "03_0.jpg",
+   "w": 1600,
+   "h": 1063,
+   "license": "CC BY-SA 2.0",
+   "artist": "skinnylawyer from Los Angeles, California, USA",
+   "date": "2011-11-18 18:39",
+   "desc": "In the Korean domestic and other Asian markets, Kia sells this vehicle as the K5. However, in the US and certain other markets, it becomes the third-generation Optima.\nThis is the hybrid version, usin"
+  },
+  {
+   "title": "File:20180923-RD-PJK-0906 TONED.jpg",
+   "thumb": "03_1.jpg",
+   "w": 3456,
+   "h": 5184,
+   "license": "Public domain",
+   "artist": "USDAgov",
+   "date": "Taken on 23 September 2018, 09:45:05",
+   "desc": "U.S. Department of Agriculture (USDA) has funded two major water and sewer projects in West Point– one to upgrade their water treatment plant ($6.3 million in loan and grant funds) and another to upgr"
+  },
+  {
+   "title": "File:20180923-RD-PJK-0878 TONED.jpg",
+   "thumb": "03_2.jpg",
+   "w": 5184,
+   "h": 3456,
+   "license": "Public domain",
+   "artist": "USDAgov",
+   "date": "Taken on 23 September 2018, 09:42:25",
+   "desc": "U.S. Department of Agriculture (USDA) has funded two major water and sewer projects in West Point– one to upgrade their water treatment plant ($6.3 million in loan and grant funds) and another to upgr"
+  },
+  {
+   "title": "File:20180923-RD-PJK-0937 TONED.jpg",
+   "thumb": "03_3.jpg",
+   "w": 5184,
+   "h": 3456,
+   "license": "Public domain",
+   "artist": "USDAgov",
+   "date": "Taken on 23 September 2018, 09:55:36",
+   "desc": "U.S. Department of Agriculture (USDA) has funded two major water and sewer projects in West Point– one to upgrade their water treatment plant ($6.3 million in loan and grant funds) and another to upgr"
+  },
+  {
+   "title": "File:20180923-RD-PJK-0915 TONED.jpg",
+   "thumb": "03_4.jpg",
+   "w": 5184,
+   "h": 3456,
+   "license": "Public domain",
+   "artist": "USDAgov",
+   "date": "Taken on 23 September 2018, 09:52:11",
+   "desc": "U.S. Department of Agriculture (USDA) has funded two major water and sewer projects in West Point– one to upgrade their water treatment plant ($6.3 million in loan and grant funds) and another to upgr"
+  },
+  {
+   "title": "File:20180923-RD-PJK-0881 TONED.jpg",
+   "thumb": "03_5.jpg",
+   "w": 5184,
+   "h": 3456,
+   "license": "Public domain",
+   "artist": "USDAgov",
+   "date": "Taken on 23 September 2018, 09:42:28",
+   "desc": "U.S. Department of Agriculture (USDA) has funded two major water and sewer projects in West Point– one to upgrade their water treatment plant ($6.3 million in loan and grant funds) and another to upgr"
+  },
+  {
+   "title": "File:20180923-RD-PJK-1634 TONED.jpg",
+   "thumb": "03_6.jpg",
+   "w": 5184,
+   "h": 3456,
+   "license": "Public domain",
+   "artist": "USDAgov",
+   "date": "Taken on 23 September 2018, 11:56:32",
+   "desc": "Water and waste water Superintendent Tavis Edwards overseas the processes that ensure the town of West Point and its residents receive healthy water for their daily needs. \nU.S. Department of Agricult"
+  },
+  {
+   "title": "File:20180923-RD-PJK-1708 TONED.jpg",
+   "thumb": "03_7.jpg",
+   "w": 5184,
+   "h": 3456,
+   "license": "Public domain",
+   "artist": "USDAgov",
+   "date": "Taken on 23 September 2018, 12:02:21",
+   "desc": "Water and waste water Superintendent Tavis Edwards overseas the processes that ensure the town of West Point and its residents receive healthy water for their daily needs. \nU.S. Department of Agricult"
+  },
+  {
+   "title": "File:20180923-RD-PJK-1615 TONED.jpg",
+   "thumb": "03_8.jpg",
+   "w": 5184,
+   "h": 3450,
+   "license": "Public domain",
+   "artist": "USDAgov",
+   "date": "Taken on 23 September 2018, 11:51:55",
+   "desc": "Water and waste water Superintendent Tavis Edwards overseas the processes that ensure the town of West Point and its residents receive healthy water for their daily needs. \nU.S. Department of Agricult"
+  },
+  {
+   "title": "File:20180923-RD-PJK-1058 TONED.jpg",
+   "thumb": "03_9.jpg",
+   "w": 3456,
+   "h": 5184,
+   "license": "Public domain",
+   "artist": "USDAgov",
+   "date": "Taken on 23 September 2018, 11:55:38",
+   "desc": "Water and waste water Superintendent Tavis Edwards overseas the processes that ensure the town of West Point and its residents receive healthy water for their daily needs. \nU.S. Department of Agricult"
+  }
+ ],
+ "Donaldsonville Mississippi River filetype:bitmap": [
+  {
+   "title": "File:Map of the Mississippi River - from Cairo to Donaldsonville. LOC 95675177-11.tif",
+   "thumb": "04_0.jpg",
+   "w": 9217,
+   "h": 5230,
+   "license": "Public domain",
+   "artist": "United States. Mississippi River Commission",
+   "date": "1892",
+   "desc": "\"Showing bank erosion as derived from special survey made November 20, 1891 to March 20, 1892. Showing also the controlling line of levees in 1892.\" Available also through the Library of Congress Web "
+  },
+  {
+   "title": "File:Map of the Mississippi River - from Cairo to Donaldsonville. LOC 95675177-13.jpg",
+   "thumb": "04_1.jpg",
+   "w": 9216,
+   "h": 4966,
+   "license": "Public domain",
+   "artist": "United States. Mississippi River Commission",
+   "date": "1892",
+   "desc": "\"Showing bank erosion as derived from special survey made November 20, 1891 to March 20, 1892. Showing also the controlling line of levees in 1892.\" Available also through the Library of Congress Web "
+  },
+  {
+   "title": "File:Map of the Mississippi River - from Cairo to Donaldsonville. LOC 95675177-18.jpg",
+   "thumb": "04_2.jpg",
+   "w": 9198,
+   "h": 5379,
+   "license": "Public domain",
+   "artist": "United States. Mississippi River Commission",
+   "date": "1892",
+   "desc": "\"Showing bank erosion as derived from special survey made November 20, 1891 to March 20, 1892. Showing also the controlling line of levees in 1892.\" Available also through the Library of Congress Web "
+  },
+  {
+   "title": "File:Map of the Mississippi River - from Cairo to Donaldsonville. LOC 95675177-7.jpg",
+   "thumb": "04_3.jpg",
+   "w": 9241,
+   "h": 5216,
+   "license": "Public domain",
+   "artist": "United States. Mississippi River Commission",
+   "date": "1892",
+   "desc": "\"Showing bank erosion as derived from special survey made November 20, 1891 to March 20, 1892. Showing also the controlling line of levees in 1892.\" Available also through the Library of Congress Web "
+  },
+  {
+   "title": "File:Map of the Mississippi River - from Cairo to Donaldsonville. LOC 95675177-24.jpg",
+   "thumb": "04_4.jpg",
+   "w": 9248,
+   "h": 5321,
+   "license": "Public domain",
+   "artist": "United States. Mississippi River Commission",
+   "date": "1892",
+   "desc": "\"Showing bank erosion as derived from special survey made November 20, 1891 to March 20, 1892. Showing also the controlling line of levees in 1892.\" Available also through the Library of Congress Web "
+  },
+  {
+   "title": "File:Map of the Mississippi River - from Cairo to Donaldsonville. LOC 95675177-3.jpg",
+   "thumb": "04_5.jpg",
+   "w": 9182,
+   "h": 5090,
+   "license": "Public domain",
+   "artist": "United States. Mississippi River Commission",
+   "date": "1892",
+   "desc": "\"Showing bank erosion as derived from special survey made November 20, 1891 to March 20, 1892. Showing also the controlling line of levees in 1892.\" Available also through the Library of Congress Web "
+  },
+  {
+   "title": "File:Map of the Mississippi River - from Cairo to Donaldsonville. LOC 95675177-12.tif",
+   "thumb": "04_6.jpg",
+   "w": 9376,
+   "h": 5568,
+   "license": "Public domain",
+   "artist": "United States. Mississippi River Commission",
+   "date": "1892",
+   "desc": "\"Showing bank erosion as derived from special survey made November 20, 1891 to March 20, 1892. Showing also the controlling line of levees in 1892.\" Available also through the Library of Congress Web "
+  },
+  {
+   "title": "File:Map of the Mississippi River - from Cairo to Donaldsonville. LOC 95675177-13.tif",
+   "thumb": "04_7.jpg",
+   "w": 9216,
+   "h": 4966,
+   "license": "Public domain",
+   "artist": "United States. Mississippi River Commission",
+   "date": "1892",
+   "desc": "\"Showing bank erosion as derived from special survey made November 20, 1891 to March 20, 1892. Showing also the controlling line of levees in 1892.\" Available also through the Library of Congress Web "
+  },
+  {
+   "title": "File:Map of the Mississippi River - from Cairo to Donaldsonville. LOC 95675177-26.tif",
+   "thumb": "04_8.jpg",
+   "w": 9337,
+   "h": 5242,
+   "license": "Public domain",
+   "artist": "United States. Mississippi River Commission",
+   "date": "1892",
+   "desc": "\"Showing bank erosion as derived from special survey made November 20, 1891 to March 20, 1892. Showing also the controlling line of levees in 1892.\" Available also through the Library of Congress Web "
+  },
+  {
+   "title": "File:Map of the Mississippi River - from Cairo to Donaldsonville. LOC 95675177-21.tif",
+   "thumb": "04_9.jpg",
+   "w": 9244,
+   "h": 5191,
+   "license": "Public domain",
+   "artist": "United States. Mississippi River Commission",
+   "date": "1892",
+   "desc": "\"Showing bank erosion as derived from special survey made November 20, 1891 to March 20, 1892. Showing also the controlling line of levees in 1892.\" Available also through the Library of Congress Web "
+  }
+ ],
+ "direct reduced iron plant filetype:bitmap": [
+  {
+   "title": "File:Changes in Ocean Productivity (3835).jpg",
+   "thumb": "05_0.jpg",
+   "w": 2880,
+   "h": 1558,
+   "license": "Public domain",
+   "artist": "Image by Robert Simmon, based on data provided by Watson Gregg, NASA GSFC",
+   "date": "1 October 2003 (upload date)",
+   "desc": "Plant life in the world’s oceans has become less productive since the early 1980s, absorbing less carbon, which may in turn impact the Earth’s carbon cycle. Watson Gregg, a NASA GSFC researcher, finds"
+  },
+  {
+   "title": "File:Development and electrical distribution of water power (1908) (14761185534).jpg",
+   "thumb": "05_1.jpg",
+   "w": 1866,
+   "h": 1584,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1908",
+   "desc": "Transmission line of West Buxton Power Station\nIdentifier: developmentelect00lynd (find matches)\nTitle: Development and electrical distribution of water power\nYear: 1908 (1900s)\nAuthors:  Lyndon, Lama"
+  },
+  {
+   "title": "File:The wetlands of southern Louisiana and their drainage (1914) (14803180243).jpg",
+   "thumb": "05_2.jpg",
+   "w": 2084,
+   "h": 1832,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1914",
+   "desc": "\nIdentifier: wetlandsofsouthe71okey (find matches)\nTitle: The wetlands of southern Louisiana and their drainage\nYear: 1914 (1910s)\nAuthors:  Okey, Charles W. (Charles William), 1886-\nSubjects:  Wetlan"
+  },
+  {
+   "title": "File:Factory and industrial management (1891) (14804096603).jpg",
+   "thumb": "05_3.jpg",
+   "w": 1666,
+   "h": 1004,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1891",
+   "desc": "\nIdentifier: factoryindustria23newy (find matches)\nTitle: Factory and industrial management\nYear: 1891 (1890s)\nAuthors: \nSubjects:  Engineering Factory management Industrial efficiency\nPublisher:  New"
+  },
+  {
+   "title": "File:The Street railway journal (1905) (14758247871).jpg",
+   "thumb": "05_4.jpg",
+   "w": 2080,
+   "h": 3697,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1905",
+   "desc": "\nIdentifier: streetrailwayj261905newy (find matches)\nTitle: The Street railway journal\nYear: 1884 (1880s)\nAuthors: \nSubjects:  Street-railroads Electric railroads Transportation\nPublisher:  New York :"
+  },
+  {
+   "title": "File:A Desert Intersection (154848).jpg",
+   "thumb": "05_5.jpg",
+   "w": 4226,
+   "h": 3522,
+   "license": "Public domain",
+   "artist": "NASA Earth Observatory images by Lauren Dauphin, using Landsat data from the U.S. Geological Survey. Story by Adam Voiland.",
+   "date": "Taken on 11 September 2025",
+   "desc": "Editor’s Note: Today’s story is the answer to the September 2025 puzzler.\nIn the Tarim Basin in western China, a curved ridge and winding river converge in a Y-shaped tangle of sand, rock, and water c"
+  },
+  {
+   "title": "File:1990 Chevrolet Corvette ZR1.jpg",
+   "thumb": "05_6.jpg",
+   "w": 4128,
+   "h": 2322,
+   "license": "CC BY 2.0",
+   "artist": "Eric Friedebach",
+   "date": "2015-11-17 12:32:09",
+   "desc": "From Wikipedia:\nen.wikipedia.org/wiki/Chevrolet_Corvette_(C4)#ZR-1_(1990%E2%80%931995)\nGeneral Motors acquired Group Lotus, a UK based engineering consultant and performance car manufacturing firm, du"
+  },
+  {
+   "title": "File:1990 Chevrolet Corvette ZR1 - 51334770643.jpg",
+   "thumb": "05_7.jpg",
+   "w": 3816,
+   "h": 2322,
+   "license": "CC BY 2.0",
+   "artist": "Eric Friedebach",
+   "date": "2015-11-17 12:32:45",
+   "desc": "From Wikipedia:\nen.wikipedia.org/wiki/Chevrolet_Corvette_(C4)#ZR-1_(1990%E2%80%931995)\nGeneral Motors acquired Group Lotus, a UK based engineering consultant and performance car manufacturing firm, du"
+  },
+  {
+   "title": "File:Habitability solar system.png",
+   "thumb": "05_8.jpg",
+   "w": 2000,
+   "h": 2800,
+   "license": "CC BY-SA 4.0",
+   "artist": "Pablo Carlos Budassi",
+   "date": "2022-08-09",
+   "desc": "Chart presenting a brief overview of considerations on the habitability of some relevant planets, moons, and dwarf planets in the Solar System.\nText on this image transcription:\nPlanetary Habitability"
+  },
+  {
+   "title": "File:Central Railway Station c.1901 (6900041723).jpg",
+   "thumb": "05_9.jpg",
+   "w": 3662,
+   "h": 2703,
+   "license": "CC BY 2.0",
+   "artist": "Governor Macquarie",
+   "date": "19 February 2012, 12:59 (according to Exif data)",
+   "desc": "&lt;a href=\"http://loc.alize.us/#/flickr:6900041723\" rel=\"noreferrer nofollow\"&gt;See where this picture was taken.&lt;/a&gt; &lt;a href=\"https://www.flickr.com/groups/geotagging/discuss/7215759416554"
+  }
+ ],
+ "electric arc furnace steel filetype:bitmap": [
+  {
+   "title": "File:Plasma torch auxiliary heating in electric arc furnace British Steel 1985.jpg",
+   "thumb": "06_0.jpg",
+   "w": 1009,
+   "h": 1368,
+   "license": "CC BY-SA 4.0",
+   "artist": "European Coal and Steel Community",
+   "date": "1991",
+   "desc": "Illustration of British Steel's trials to adopt a plasma torch on an electric arc furnace, circa 1985. Technical feasibility was confirmed, but profitability proved negative."
+  },
+  {
+   "title": "File:ECSC Financial report 1996 ProfilARBED Differdange Electric arc furnace 2.jpg",
+   "thumb": "06_1.jpg",
+   "w": 2112,
+   "h": 2126,
+   "license": "CC BY-SA 4.0",
+   "artist": "European Coal and Steel Community",
+   "date": "1996",
+   "desc": "The direct current electric arc furnace (DC-EAF) of Arbed steel mill at Differdange, Luxemburg, in 1996."
+  },
+  {
+   "title": "File:ECSC Financial report 1996 ProfilARBED Differdange Electric arc furnace 1.jpg",
+   "thumb": "06_2.jpg",
+   "w": 2109,
+   "h": 2125,
+   "license": "CC BY-SA 4.0",
+   "artist": "European Coal and Steel Community",
+   "date": "1996",
+   "desc": "The new direct current electric arc furnace (DC-EAF) of Arbed steel mill at Differdange, Luxemburg, during commissioning in November 1995."
+  },
+  {
+   "title": "File:Electric Arc Furnace at Magna - geograph.org.uk - 7507.jpg",
+   "thumb": "06_3.jpg",
+   "w": 640,
+   "h": 480,
+   "license": "CC BY-SA 2.0",
+   "artist": "Chris J Dixon",
+   "date": "2001-09-08",
+   "desc": "Electric Arc Furnace at Magna. Once one of the largest steel plants to be found, now simply a museum."
+  },
+  {
+   "title": "File:Electric arc furnaces - geograph.org.uk - 517378.jpg",
+   "thumb": "06_4.jpg",
+   "w": 640,
+   "h": 427,
+   "license": "CC BY-SA 2.0",
+   "artist": "Alan Murray-Rust",
+   "date": "2007-08-05",
+   "desc": "Electric arc furnaces steel mill. Part of the Sheffield Forgemaster complex at Brightside. The furnaces are contained in the building at the rear. The tall buildings at the front filter the dust and g"
+  },
+  {
+   "title": "File:Stassano Electric Arc Furnace at Warman Steel Casting Plant, Los Angeles (1914).jpg",
+   "thumb": "06_5.jpg",
+   "w": 2064,
+   "h": 1634,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1914",
+   "desc": "\nIdentifier: journalofele323271914paci (find matches)\nTitle: Journal of electricity, power, and gas\nYear: 1899 (1890s)\nAuthors:  Pacific Coast Electric Transmission Association\nSubjects:  Electrical e"
+  },
+  {
+   "title": "File:EB1911 Iron and Steel - Fig. 23.—Heroult Double-arc Electric Steel Purifying Furnace.jpg",
+   "thumb": "06_6.jpg",
+   "w": 235,
+   "h": 178,
+   "license": "Public domain",
+   "artist": "AnonymousUnknown author",
+   "date": "1911-01-01",
+   "desc": "Heroult Double-arc Electric Steel Purifying Furnace"
+  },
+  {
+   "title": "File:Electric-arc-furnace.jpg",
+   "thumb": "06_7.jpg",
+   "w": 600,
+   "h": 745,
+   "license": "CC BY 4.0",
+   "artist": "Er-wei Bai",
+   "date": "2014-01-14",
+   "desc": "Electric arc furnace."
+  },
+  {
+   "title": "File:White-hot steel pours like water from a 35-ton electric furnace, Allegheny Ludlum Steel 1a35062v.jpg",
+   "thumb": "06_8.jpg",
+   "w": 1024,
+   "h": 831,
+   "license": "Public domain",
+   "artist": "Alfred T. Palmer",
+   "date": "[1941?]",
+   "desc": "Title: White-hot steel pours like water from a 35-ton electric furnace, Allegheny Ludlum Steel[e] Corp., Brackenridge, Pa. The finest quality steels and alloys are produced in these furnaces, which al"
+  },
+  {
+   "title": "File:White-hot steel pours like water from a 35-ton electric furnace, Allegheny Ludlum Steel(e) Corp., Brackenridge, Pa. The finest quality steels and alloys are produced in these furnaces, which LCCN2017878223.tif",
+   "thumb": "06_9.jpg",
+   "w": 9184,
+   "h": 7457,
+   "license": "Public domain",
+   "artist": "Palmer, Alfred T., photographer",
+   "date": "circa 1941date QS:P,+1941-00-00T00:00:00Z/9,P1480,Q5727902",
+   "desc": "Title: White-hot steel pours like water from a 35-ton electric furnace, Allegheny Ludlum Steel[e] Corp., Brackenridge, Pa. The finest quality steels and alloys are produced in these furnaces, which al"
+  }
+ ],
+ "POSCO Pohang steelworks filetype:bitmap": [],
+ "hot rolled steel coil filetype:bitmap": [
+  {
+   "title": "File:DETAIL, END OF THE LINE AT THE 84-INCH STRIP MILL, WHERE THE HOT STRIP IS WATER-COOLED AND ROLLED ONTO COILS. - Corrigan, McKinney Steel Company, 3100 East Forty-fifth Street, HAER OHIO,18-CLEV,34-49.tif",
+   "thumb": "08_0.jpg",
+   "w": 5000,
+   "h": 3975,
+   "license": "Public domain",
+   "artist": "",
+   "date": "Documentation compiled after 1968",
+   "desc": ""
+  },
+  {
+   "title": "File:43 HOT ROLL, A TWO-HIGH REVERSING MILL THAT PRODUCES THE LONGEST COPPER AND ALLOY STRIP IN THE U.S. INDUSTRY. OVERALL LENGTH OF THE RUN-OUT LINE IS 300'. - American Brass Foundry HAER NY,15-BUF,25-19.tif",
+   "thumb": "08_1.jpg",
+   "w": 5000,
+   "h": 3602,
+   "license": "Public domain",
+   "artist": "\nLowe, Jet\nRelated names:\n\nBenz, transmitter",
+   "date": "1986date QS:P571,+1986-00-00T00:00:00Z/9",
+   "desc": ""
+  },
+  {
+   "title": "File:General layout continuous mill - Trumbull Steel.jpg",
+   "thumb": "08_2.jpg",
+   "w": 2012,
+   "h": 662,
+   "license": "Public domain",
+   "artist": "\"New Continuous Ten-Stand Strip Mill\", The Iron Age, June 1, 1922, p. 1511",
+   "date": "1922-06-01",
+   "desc": "General layout of the continuous hot-strip 14-inch rolling mill at Trumbull Steel in Warren, Ohio, in the United States in 1922. The schematic shows the relationship of the rolling mill to the gas cle"
+  },
+  {
+   "title": "File:Continuous ten-stand strip mill - Trumbull Steel.jpg",
+   "thumb": "08_3.jpg",
+   "w": 1950,
+   "h": 871,
+   "license": "Public domain",
+   "artist": "\"New Continuous Ten-Stand Strip Mill\", The Iron Age, June 1, 1922, p. 1510",
+   "date": "1922-06-01",
+   "desc": "Ten-stand continuous hot-strip rolling mill at Trumbull Steel in Warren, Ohio, in the United States in 1922.\nThe billet (pig iron) comes out of heating furnace at left. It passes into the \"roughing mi"
+  },
+  {
+   "title": "File:HengereltTekercs10.jpg",
+   "thumb": "08_4.jpg",
+   "w": 600,
+   "h": 451,
    "license": "CC BY-SA 3.0",
-   "artist": "SSR2000",
-   "date": "2014-05-11",
-   "desc": "中國鋼鐵公司在高雄市成功一路上的總部大樓。"
+   "artist": "The original uploader was Szalax at Hungarian Wikipedia.",
+   "date": "16 January 2008 (original upload date)",
+   "desc": "A coil of hot-rolled steel"
   },
   {
-   "title": "File:Kaohsiung China Steel Corporation Headquarters 02.jpg",
-   "thumb": "00_2.jpg",
-   "w": 2260,
-   "h": 3911,
-   "license": "CC BY-SA 4.0",
-   "artist": "Zairon",
-   "date": "2016-11-13 05:53:28",
-   "desc": "China Steel Corporation Headquarters, Kaohsiung, Taiwan"
+   "title": "File:SoCal Freight Graffiti Benching, Cajon Pass (12-20-2020) (50757308867).jpg",
+   "thumb": "08_5.jpg",
+   "w": 4276,
+   "h": 2851,
+   "license": "CC BY 2.0",
+   "artist": "siamesepuppy",
+   "date": "2020-12-20 13:11",
+   "desc": "Sunday December 20th 2020\nOut for the day to see some trains and some amazing art roll by.  All of the \"Fisheye\" 7.5mm shots the time is off by one hour, as I forgot to change the clock on the Fujifil"
   },
   {
-   "title": "File:Kaohsiung China Steel Corporation Headquarters 05.jpg",
-   "thumb": "00_3.jpg",
-   "w": 3058,
-   "h": 4326,
-   "license": "CC BY-SA 4.0",
-   "artist": "Zairon",
-   "date": "2016-11-13 05:49:06",
-   "desc": "China Steel Corporation Headquarters, Kaohsiung, Taiwan"
+   "title": "File:SoCal Freight Graffiti Benching, Cajon Pass (12-20-2020) (50757283117).jpg",
+   "thumb": "08_6.jpg",
+   "w": 3367,
+   "h": 2245,
+   "license": "CC BY 2.0",
+   "artist": "siamesepuppy",
+   "date": "2020-12-20 15:26",
+   "desc": "Sunday December 20th 2020\nOut for the day to see some trains and some amazing art roll by.  All of the \"Fisheye\" 7.5mm shots the time is off by one hour, as I forgot to change the clock on the Fujifil"
   },
   {
-   "title": "File:Kaohsiung China Steel Corporation Headquarters 10.jpg",
-   "thumb": "00_4.jpg",
-   "w": 4400,
-   "h": 3100,
-   "license": "CC BY-SA 4.0",
-   "artist": "Zairon",
-   "date": "2016-11-13 05:48:11",
-   "desc": "China Steel Corporation Headquarters, Kaohsiung, Taiwan"
+   "title": "File:SoCal Freight Graffiti Benching, Cajon Pass (12-20-2020) (50756468608).jpg",
+   "thumb": "08_7.jpg",
+   "w": 4036,
+   "h": 2691,
+   "license": "CC BY 2.0",
+   "artist": "siamesepuppy",
+   "date": "2020-12-20 13:11",
+   "desc": "Sunday December 20th 2020\nOut for the day to see some trains and some amazing art roll by.  All of the \"Fisheye\" 7.5mm shots the time is off by one hour, as I forgot to change the clock on the Fujifil"
   },
   {
-   "title": "File:Kaohsiung China Steel Corporation Headquarters 06.jpg",
-   "thumb": "00_5.jpg",
-   "w": 2850,
-   "h": 4382,
-   "license": "CC BY-SA 4.0",
-   "artist": "Zairon",
-   "date": "2016-11-13 05:48:07",
-   "desc": "China Steel Corporation Headquarters, Kaohsiung, Taiwan"
+   "title": "File:SoCal Freight Graffiti Benching, Cajon Pass (12-20-2020) (50756470968).jpg",
+   "thumb": "08_8.jpg",
+   "w": 3840,
+   "h": 2560,
+   "license": "CC BY 2.0",
+   "artist": "siamesepuppy",
+   "date": "2020-12-20 13:09",
+   "desc": "Sunday December 20th 2020\nOut for the day to see some trains and some amazing art roll by.  All of the \"Fisheye\" 7.5mm shots the time is off by one hour, as I forgot to change the clock on the Fujifil"
   },
   {
-   "title": "File:Kaohsiung China Steel Corporation Headquarters 04.jpg",
-   "thumb": "00_6.jpg",
-   "w": 3123,
-   "h": 4378,
-   "license": "CC BY-SA 4.0",
-   "artist": "Zairon",
-   "date": "2016-11-13 05:50:56",
-   "desc": "China Steel Corporation Headquarters, Kaohsiung, Taiwan"
-  },
-  {
-   "title": "File:Kaohsiung China Steel Corporation Headquarters 03.jpg",
-   "thumb": "00_7.jpg",
-   "w": 2418,
-   "h": 4308,
-   "license": "CC BY-SA 4.0",
-   "artist": "Zairon",
-   "date": "2016-11-13 05:53:05",
-   "desc": "China Steel Corporation Headquarters, Kaohsiung, Taiwan"
-  },
-  {
-   "title": "File:Kaohsiung China Steel Corporation Headquarters 08.jpg",
-   "thumb": "00_8.jpg",
-   "w": 3171,
-   "h": 4191,
-   "license": "CC BY-SA 4.0",
-   "artist": "Zairon",
-   "date": "2016-11-13 05:49:47",
-   "desc": "China Steel Corporation Headquarters, Kaohsiung, Taiwan"
-  },
-  {
-   "title": "File:Kaohsiung China Steel Corporation Headquarters 07.jpg",
-   "thumb": "00_9.jpg",
-   "w": 3324,
-   "h": 2964,
-   "license": "CC BY-SA 4.0",
-   "artist": "Zairon",
-   "date": "2016-11-13 05:49:04",
-   "desc": "China Steel Corporation Headquarters, Kaohsiung, Taiwan"
+   "title": "File:SoCal Freight Graffiti Benching, Cajon Pass (12-20-2020) (50757208686).jpg",
+   "thumb": "08_9.jpg",
+   "w": 3683,
+   "h": 2455,
+   "license": "CC BY 2.0",
+   "artist": "siamesepuppy",
+   "date": "2020-12-20 13:10",
+   "desc": "Sunday December 20th 2020\nOut for the day to see some trains and some amazing art roll by.  All of the \"Fisheye\" 7.5mm shots the time is off by one hour, as I forgot to change the clock on the Fujifil"
   }
  ]
 }
