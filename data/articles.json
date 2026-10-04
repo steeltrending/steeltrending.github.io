@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-eu-green-steel",
+   "category": "decarb",
+   "title": "歐洲綠鋼進度：氫氣退潮、電爐接棒",
+   "period": "2026-10",
+   "published": "2026-10-04",
+   "summary": "氫氣直接還原專案因綠氫太貴延後或改用天然氣，電弧爐專案 2027 年起陸續投產。",
+   "tags": [
+    "綠鋼",
+    "氫氣直接還原",
+    "電弧爐",
+    "Stegra",
+    "thyssenkrupp"
+   ],
+   "image": "assets/articles/2026-10-eu-green-steel-linz.jpg",
+   "url": "articles/2026-10-eu-green-steel.html"
+  },
+  {
    "id": "2026-10-us-canada-tariffs",
    "category": "trade",
    "title": "美加關稅戰升級：鋼鋁互課 50%，談判凍結",
