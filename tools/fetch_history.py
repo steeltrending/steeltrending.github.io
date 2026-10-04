@@ -59,36 +59,73 @@ def fetch_yahoo(symbol):
     return []
 
 
+def _vnd(out):
+    """部分來源以「千 VND」計價，統一換成 VND。"""
+    if out:
+        mid = sorted(c for _, c in out)[len(out) // 2]
+        if mid < 1000:
+            out = [[d, c * 1000] for d, c in out]
+    return sorted(p for p in out if p[0] >= START)
+
+
 def fetch_hpg():
     import requests
-    hdr = {"User-Agent": "Mozilla/5.0"}
-    # 1) TCBS（價格單位：VND）
+    hdr = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
+    now = int(time.time())
+    errs = []
+    # 1) Vietcap（VCI）
     try:
-        to = int(time.time())
+        r = requests.post(
+            "https://trading.vietcap.com.vn/api/chart/OHLCChart/gap-chart",
+            json={"timeFrame": "ONE_DAY", "symbols": ["HPG"], "to": now, "countBack": 400},
+            headers={**hdr, "Referer": "https://trading.vietcap.com.vn/", "Origin": "https://trading.vietcap.com.vn"},
+            timeout=30)
+        j = r.json()
+        j = j[0] if isinstance(j, list) else j
+        ts, cs = j.get("t") or [], j.get("c") or []
+        out = [[dt.datetime.fromtimestamp(int(t), TPE).strftime("%Y-%m-%d"), float(c)] for t, c in zip(ts, cs) if c is not None]
+        out = _vnd(out)
+        if out:
+            return out, "Vietcap", errs
+    except Exception as e:  # noqa: BLE001
+        errs.append(f"Vietcap: {e}")
+    # 2) TCBS
+    try:
         r = requests.get(
             "https://apipubaws.tcbs.com.vn/stock-insight/v2/stock/bars-long-term",
-            params={"ticker": "HPG", "type": "stock", "resolution": "D", "countBack": 400, "to": to},
+            params={"ticker": "HPG", "type": "stock", "resolution": "D", "countBack": 400, "to": now},
             headers=hdr, timeout=30)
         rows = r.json().get("data") or []
-        out = [[x["tradingDate"][:10], float(x["close"])] for x in rows if x.get("close") is not None]
-        out = [p for p in out if p[0] >= START]
+        out = _vnd([[x["tradingDate"][:10], float(x["close"])] for x in rows if x.get("close") is not None])
         if out:
-            return out, "TCBS"
+            return out, "TCBS", errs
     except Exception as e:  # noqa: BLE001
-        log(f"  HPG TCBS 失敗：{e}")
-    # 2) VNDirect（價格單位：千 VND → 乘 1000）
+        errs.append(f"TCBS: {e}")
+    # 3) KB Securities
+    try:
+        end = dt.datetime.now(TPE).strftime("%d-%m-%Y")
+        r = requests.get(
+            "https://kbbuddywts.kbsec.com.vn/iis-server/investment/stocks/HPG/data_day",
+            params={"sdate": "01-01-2026", "edate": end}, headers=hdr, timeout=30)
+        rows = r.json().get("data_day") or []
+        out = _vnd([[str(x.get("t"))[:10], float(x["c"])] for x in rows if x.get("c") is not None])
+        if out:
+            return out, "KB Securities", errs
+    except Exception as e:  # noqa: BLE001
+        errs.append(f"KBS: {e}")
+    # 4) VNDirect
     try:
         r = requests.get(
             "https://finfo-api.vndirect.com.vn/v4/stock_prices",
             params={"sort": "date", "q": f"code:HPG~date:gte:{START}", "size": 400, "page": 1},
             headers=hdr, timeout=30)
         rows = r.json().get("data") or []
-        out = sorted([[x["date"][:10], float(x["close"]) * 1000] for x in rows if x.get("close") is not None])
+        out = _vnd([[x["date"][:10], float(x["close"])] for x in rows if x.get("close") is not None])
         if out:
-            return out, "VNDirect"
+            return out, "VNDirect", errs
     except Exception as e:  # noqa: BLE001
-        log(f"  HPG VNDirect 失敗：{e}")
-    return [], None
+        errs.append(f"VNDirect: {e}")
+    return [], None, errs
 
 
 def rnd(v, cur):
@@ -102,11 +139,13 @@ def main():
     now = dt.datetime.now(TPE).replace(microsecond=0).isoformat()
     touched_latest = False
     report = []
+    status = {"updated": now}
 
     for it in stocks["items"]:
         key, cur = it["key"], it["currency"]
         if key == "sea":
-            pts, src = fetch_hpg()
+            pts, src, errs = fetch_hpg()
+            status["sea_errors"] = errs
         else:
             sym = YAHOO.get(key)
             pts, src = (fetch_yahoo(sym), "Yahoo Finance " + sym) if sym else ([], None)
@@ -154,6 +193,9 @@ def main():
             json.dump(stocks, f, ensure_ascii=False, indent=1)
             f.write("\n")
     log("\n".join(report))
+    status["report"] = report
+    with open(os.path.join(HIST, "_status.json"), "w", encoding="utf-8") as f:
+        json.dump(status, f, ensure_ascii=False, indent=1)
     ok = sum(1 for k in stocks["items"] if os.path.exists(os.path.join(HIST, k["key"] + ".json")))
     log(f"完成：{ok}/21 檔有歷史資料")
     return 0 if ok else 1
