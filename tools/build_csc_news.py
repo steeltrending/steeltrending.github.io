@@ -67,6 +67,21 @@ def mentions_csc(s):
 
 MONTH = r"(1[0-2]|[1-9])"
 
+# 手動排除：內容含任一字串的條目不收錄（例如來源資料有誤時）
+EXCLUDE = [
+]
+
+
+def implausible(body, date, event):
+    """營收要到隔月才公布：報告日期還在該月（含）之前出現的「X 月營收」視為資料有誤。"""
+    if event and event.startswith("revenue-"):
+        month = int(event.split("-")[1])
+        m = int(date[5:7])
+        # 同月或更早（相差半年內）就出現 → 不合理；跨年的情況（如 1 月報 12 月營收）相差 ≥ 6，不受影響
+        if 0 <= month - m < 6:
+            return True
+    return any(x in body for x in EXCLUDE)
+
 
 def event_key(s):
     """同一事件的不同報導歸成同一組：X 月盤價、X 月營收、X 月出貨。"""
@@ -106,7 +121,10 @@ def main():
             m = SOURCE.search(it)
             src = m.group(1).strip() if m else ""
             body = SOURCE.sub("", it).strip(" ，。") + "。"
-            rows.append({"date": date, "text": body, "source": src, "key": norm(body), "event": event_key(body)})
+            ev = event_key(body)
+            if implausible(body, date, ev):
+                continue
+            rows.append({"date": date, "text": body, "source": src, "key": norm(body), "event": ev})
 
     def grams(k):
         return {k[i:i + 2] for i in range(len(k) - 1)}
