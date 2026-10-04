@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>AI 吃電也吃鋼：鋼鐵業的新需求與新工具 · 鋼鐵潮流 Steel Trending</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AI 資料中心帶動電網、變壓器與高階鋼材需求，方向性電磁鋼片成為瓶頸；鋼廠也用 AI 改造生產。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+article{max-width:760px}
+article h2{margin:56px 0 14px;font-size:26px;font-weight:900;line-height:1.35;padding-top:20px;border-top:1px solid #2A2F35}
+article p{margin:0 0 16px;font-size:17px;line-height:1.9;color:#D5D7DA}
+article p.lead{font-size:19px;color:#E8E6E1}
+article ul{margin:0 0 20px;padding-left:1.2em}
+article li{margin:0 0 12px;font-size:16px;line-height:1.85;color:#C9CDD2}
+article li::marker{color:#FF6A1A}
+article li b{color:#E8E6E1}
+article .watch li::marker{content:'□  ';color:#9AA0A6}
+.tbl{overflow-x:auto;border:1px solid #2A2F35;margin:8px 0 24px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th,td{padding:12px 14px;border-bottom:1px solid #22262B;text-align:left;vertical-align:top}
+th{background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody th[scope=row]{width:9em;background:#15181B;font-size:13px;letter-spacing:.04em;white-space:nowrap}
+td.num{font-family:'IBM Plex Mono',monospace;white-space:nowrap;color:#E8E6E1}
+figure{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 12px;font-size:13px;line-height:1.7;color:#C9CDD2;border-top:1px solid #2A2F35}
+figcaption small{display:block;margin-top:2px;font-size:12px;color:#9AA0A6}
+.tlfig{border:1px solid #2A2F35;background:#121417;padding:24px 16px 4px;margin:8px 0 24px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.tl::before{content:'';position:absolute;left:6%;right:6%;top:31px;height:2px;background:linear-gradient(90deg,#FF6A1A 0,#FF6A1A 84%,#3A3F46 84%)}
+.tl .ev{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px;position:relative}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9CDD2;height:20px;white-space:nowrap}
+.tl .dot{width:14px;height:14px;border-radius:50%;background:#FF6A1A;border:3px solid #121417;box-sizing:content-box;margin:2px 0 10px;position:relative;z-index:1}
+.tl .t{font-size:13px;line-height:1.6;color:#C9CDD2}
+.tl .x .dot{background:#8DB4D6}.tl .x .d{color:#8DB4D6}
+.tl .k .dot{width:20px;height:20px;margin:-1px 0 7px;box-shadow:0 0 0 4px rgba(255,106,26,.25)}.tl .k .t{color:#E8E6E1;font-weight:700}.tl .k .d{color:#FF8A47}
+.tl .f .dot{background:#121417;border:2px dashed #9AA0A6;width:14px;height:14px}.tl .f .d,.tl .f .t{color:#9AA0A6}
+.tlkey{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;padding:18px 0 14px !important;border-top:0 !important;font-size:12px !important;color:#9AA0A6 !important}
+.tlkey i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.tlkey .k1{background:#FF6A1A}.tlkey .k2{background:#8DB4D6}.tlkey .k3{border:2px dashed #9AA0A6;width:8px;height:8px}
+@media (max-width:720px){
+.tlfig{padding:20px 16px 4px}
+.tl{grid-template-columns:1fr}
+.tl::before{left:9px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,#FF6A1A 0,#FF6A1A 86%,#3A3F46 86%)}
+.tl .ev{display:grid;grid-template-columns:20px 92px 1fr;align-items:start;text-align:left;padding:0 0 14px;gap:0 10px}
+.tl .dot{grid-column:1;grid-row:1;margin:3px 0 0 0;justify-self:center}
+.tl .k .dot{margin:0}
+.tl .d{grid-column:2;grid-row:1;height:auto;padding-top:2px}
+.tl .t{grid-column:3;grid-row:1}
+}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;margin:8px 0 24px}
+.fact{background:#121417;padding:18px 16px;display:flex;gap:12px;align-items:flex-start}
+.fact .ic{flex:none;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid #3A3F46;background:#181B1F;color:#FF6A1A}
+.fact .fl{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#9AA0A6;margin-bottom:4px}
+.fact .fv{display:block;font-size:16px;font-weight:700;color:#E8E6E1;line-height:1.5}
+.fact .fs{display:block;font-size:13px;color:#9AA0A6;line-height:1.6;margin-top:2px}
+.pies{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 8px}
+.pie{margin:0;border:1px solid #2A2F35;background:#121417;padding:16px}
+.pie .ph{font-size:14px;font-weight:700;color:#E8E6E1;margin-bottom:10px;padding:0;border:0}
+.pw{display:flex;align-items:center;gap:16px}
+.pw svg{width:150px;height:150px;flex:none;overflow:visible}
+.pw path{cursor:default;transition:opacity .15s}
+.pw svg:hover path{opacity:.45}.pw svg path:hover{opacity:1}
+.c1{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;fill:#E8E6E1}
+.c2{font-size:12px;fill:#9AA0A6}
+.lg{list-style:none;margin:0;padding:0;flex:1}
+.lg li{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:14px;color:#C9CDD2}
+.lg li::marker{content:''}
+.lg i{width:10px;height:10px;border-radius:2px;flex:none}
+.lg .ln{flex:1}.lg .lv{font-family:'IBM Plex Mono',monospace;color:#E8E6E1}
+.note{font-size:13px !important;color:#9AA0A6 !important;margin:6px 0 18px !important}
+.tip{position:fixed;z-index:10;pointer-events:none;background:#1C2024;border:1px solid #3A3F46;color:#E8E6E1;font-size:13px;padding:6px 10px;white-space:nowrap}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}.pies{grid-template-columns:1fr}}
+@media (max-width:420px){.facts{grid-template-columns:1fr}}
+.sources li{font-size:14px}
+@media (max-width:640px){.wrap{padding:0 16px}article p{font-size:16px}article p.lead{font-size:17px}}
+</style>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="../assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="../#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="../stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<a href="../archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="../#topics" style="text-decoration:none">關注主題</a> <span aria-hidden="true">›</span> 下游需求觀察 <span aria-hidden="true">›</span> 專題</nav>
+
+<article>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">DOWNSTREAM DEMAND · AI · 2026.10</p>
+<h1 style="margin:12px 0 10px;font-size:clamp(30px,5vw,46px);font-weight:900;line-height:1.25">AI 吃電也吃鋼：鋼鐵業的新需求與新工具</h1>
+<p style="font-size:14px;color:#9AA0A6">鋼鐵潮流工作室 · 發布 2026.10.04 · 資料截至 2026.09.30</p>
+
+<figure>
+<img src="../assets/articles/2026-10-ai-steel-datacenter.jpg" alt="資料中心機房走道，兩側是整排白色網孔門的伺服器機櫃，地面是通風地板" width="960" height="640">
+<figcaption>資料中心機房內整排的伺服器機櫃。機櫃、高架地板、建築鋼構到背後的變電站與冷卻設備，都是鋼材的用武之地。<small>照片：PiDatacenters，2021 年攝，<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:Racks_Amravati_Data_Center.jpg">Wikimedia Commons</a></small></figcaption>
+</figure>
+
+<h2>本期重點</h2>
+<p class="lead">AI 和鋼鐵業的關係是雙向的：一方面，AI 資料中心吃電，帶動電網、變壓器、建築與冷卻設備的高階鋼材需求；另一方面，鋼廠也用 AI 改造煉鐵、品管與巡檢。對鋼鐵業來說，AI 帶來的是高附加價值的利基需求，量不大但利潤高，撐不起整體鋼市的總量，卻會改寫鋼廠的獲利結構。</p>
+<ul>
+<li><b>最大瓶頸在變壓器。</b> 美國大型變壓器交期最長 4 年、五年漲價約 80%，方向性電磁鋼片供應不足是主因之一。</li>
+<li><b>台灣政策加持。</b> 行政院「AI 新十大建設」2025–2028 年投入約 1,900 億元，帶動機房、電網與公共工程用鋼。</li>
+<li><b>從拚量到拚值。</b> 中鋼精緻鋼品銷量僅約 11.5%，獲利貢獻卻達九成，AI 相關鋼品是延伸方向。</li>
+<li><b>鋼廠也在用 AI。</b> 高爐爐況預測、鋼捲表面瑕疵檢測、預知保養，以及中鋼「牽狗放鷹」巡檢機器人。</li>
+</ul>
+
+<h2>AI 帶動哪些鋼材需求</h2>
+<div class="facts"><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><div><span class="fl">電網與變壓器</span><span class="fv">方向性電磁鋼片</span><span class="fs">最大瓶頸：美國大型變壓器交期最長 4 年</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M5 8h14"/></svg></span><div><span class="fl">資料中心建築</span><span class="fv">結構鋼、耐震鋼構</span><span class="fs">機房、變電站與廠房鋼構</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6l14.2 12M19.1 6L4.9 18"/><path d="M9 4l3 2 3-2M9 20l3-2 3 2"/></svg></span><div><span class="fl">冷卻系統</span><span class="fv">不鏽鋼</span><span class="fs">液冷模組、管路與熱交換器</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v5M12 15v5M4 12h5M15 12h5"/></svg></span><div><span class="fl">馬達與機電</span><span class="fv">無方向性電磁鋼片</span><span class="fs">冷卻風扇、泵浦用高效率馬達</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12v10"/><path d="M12 12L6 4"/><path d="M12 12l9 2"/><path d="M12 12L4 17"/><circle cx="12" cy="12" r="1.5"/></svg></span><div><span class="fl">再生能源與儲能</span><span class="fv">厚板、鍍鋅鋼</span><span class="fs">離岸風電基礎、太陽能支架、儲能櫃</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="1"/><path d="M8 6h8M8 10h8M8 14h8"/><circle cx="12" cy="18" r=".8"/></svg></span><div><span class="fl">伺服器機櫃</span><span class="fv">冷軋、鍍鋅鋼板</span><span class="fs">機櫃、機殼與高架地板</span></div></div></div>
+<p>資料中心本體用鋼量有限，真正放大鋼材需求的是「電」：AI 運算的用電要靠新電廠、新電網、新變電站支撐，每一段都是鋼材密集的基礎建設。</p>
+
+<h2>最大瓶頸：變壓器與方向性電磁鋼片</h2>
+<figure>
+<img src="../assets/articles/2026-10-ai-steel-transformer.jpg" alt="變電站內一具灰色大型電力變壓器，頂部有多支白色套管，側面是散熱片" width="960" height="720" loading="lazy">
+<figcaption>變電站內的電力變壓器（138 kV 降壓至 12.5 kV）。變壓器外殼內的鐵芯由方向性電磁鋼片疊成，是電網擴建最缺的材料之一。<small>照片：Yoshieslunchbox，2024 年攝，<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:Substation_Power_Transformer_1.jpg">Wikimedia Commons</a></small></figcaption>
+</figure>
+<p>根據 pv magazine USA 2026 年 5 月的報導，美國變壓器市場已陷入嚴重缺貨：</p>
+<div class="tbl"><table>
+<caption style="position:absolute;left:-9999px">美國變壓器供需數據</caption>
+<thead><tr><th scope="col">指標</th><th scope="col">數據</th></tr></thead>
+<tbody>
+<tr><td>大型電力變壓器交期</td><td class="num">最長約 4 年</td></tr>
+<tr><td>發電升壓變壓器需求（2019→2025）</td><td class="num">+274%</td></tr>
+<tr><td>變電站變壓器需求（2019→2025）</td><td class="num">+116%</td></tr>
+<tr><td>變壓器價格（五年）</td><td class="num">約 +80%</td></tr>
+<tr><td>新增產能</td><td>Hitachi Energy 投資逾 10 億美元（含 2028 年啟用的維吉尼亞州新廠）、Siemens 4.21 億美元北卡新廠</td></tr>
+</tbody></table></div>
+<p>缺貨原因除了需求暴增，報導也點名方向性電磁鋼片與銅的供應受限。美國本土的方向性電磁鋼片幾乎只有 Cleveland-Cliffs 生產，高度仰賴進口。</p>
+
+<figure style="max-width:420px">
+<img src="../assets/articles/2026-10-ai-steel-core.jpg" alt="博物館展示的變壓器單相剖面模型，中央鐵芯外包覆層層銅線圈，部分線圈被切開展示內部" width="600" height="800" loading="lazy">
+<figcaption>維也納技術博物館收藏的電力變壓器單相剖面，中央鐵芯由矽鋼片疊成，外圍是被剖開的線圈。<small>照片：公有領域，經 <a href="https://commons.wikimedia.org/wiki/File:TMW_50971_Transformatorschenkel_eines_Leistungstransformators_mit_aufgeschnittenen_Wicklungen.jpg">Wikimedia Commons</a></small></figcaption>
+</figure>
+
+<h2>方向性與無方向性：兩種電磁鋼片</h2>
+<div class="tbl"><table>
+<caption style="position:absolute;left:-9999px">方向性與無方向性電磁鋼片比較</caption>
+<thead><tr><th scope="col"></th><th scope="col">方向性（GO）</th><th scope="col">無方向性（NO）</th></tr></thead>
+<tbody>
+<tr><td>晶粒</td><td>晶粒沿軋延方向排列（高斯織構）</td><td>晶粒方位隨機</td></tr>
+<tr><td>磁性</td><td>軋延方向導磁極佳、鐵損極低</td><td>各方向磁性相近</td></tr>
+<tr><td>用途</td><td>變壓器鐵芯（磁場方向固定）</td><td>馬達、發電機（磁場旋轉）</td></tr>
+<tr><td>AI 相關需求</td><td>電網、變電站、資料中心供電</td><td>冷卻風扇、泵浦、機器人與無人機馬達</td></tr>
+<tr><td>生產門檻</td><td>需二次再結晶、高溫長時間退火，全球少數鋼廠能量產</td><td>門檻較低，但極薄、高磁通等頂規產品仍屬高階</td></tr>
+</tbody></table></div>
+<p>就公開資料來看，中鋼電磁鋼片的主力是無方向性，近年推進到 0.1 mm 頂規薄片。AI 電網這波最缺的方向性鋼片，台灣目前較難直接受惠，但資料中心冷卻與機器人、無人機用的高效率馬達，則是中鋼的主場。</p>
+
+<h2>鋼廠內部：用 AI 煉鋼</h2>
+<ul>
+<li><b>煉鐵：</b>預測高爐爐況、優化風口與配料，讓爐況更穩、焦比更低。</li>
+<li><b>品質檢測：</b>影像 AI 即時檢出鋼捲表面瑕疵，取代人工目視。</li>
+<li><b>預知保養：</b>從振動、溫度數據預判軋機與風機故障時間，減少非計畫停機。</li>
+<li><b>巡檢機器人：</b>中鋼以「<a href="2026-10-csc-drones-robot-dogs.html">牽狗放鷹</a>」派機器狗巡檢高溫與有毒氣體區、無人機巡料場；POSCO 也引進 Boston Dynamics 的 Spot 機器狗，其光陽廠 2019 年獲世界經濟論壇評為「燈塔工廠」。</li>
+<li><b>排程與能源調度：</b>優化生產排程與用電時段，降低能源成本。</li>
+</ul>
+
+<h2>較少人談的負面連動</h2>
+<ul>
+<li><b>電價與供電。</b> AI 資料中心搶電、推高電價，電爐鋼廠成本直接受影響；台灣夏季尖峰供電限制也會更明顯。</li>
+<li><b>人才與資本。</b> 半導體與 AI 產業吸走工程人才與資金，傳統鋼廠招募與投資排序更難。</li>
+<li><b>量的支撐有限。</b> 中國營建需求下滑對鋼市總量的影響，遠大於 AI 帶來的增量。</li>
+</ul>
+
+<h2>台灣鋼廠的 AI 布局</h2>
+<div class="tbl"><table>
+<caption style="position:absolute;left:-9999px">台灣鋼鐵業者 AI 相關布局</caption>
+<thead><tr><th scope="col">公司</th><th scope="col">布局方向</th></tr></thead>
+<tbody>
+<tr><td>中鋼（2002）</td><td>高效率電磁鋼片（低鐵損、高磁通）供應 AI 伺服器冷卻、無人機、機器人；0.1 mm 頂規薄片；精緻鋼品銷量約 11.5%、獲利貢獻約九成</td></tr>
+<tr><td>中鋼構（2013）</td><td>AI 設施高強度耐震鋼構，訂單排到 2027 年</td></tr>
+<tr><td>新光鋼（2031）</td><td>能源基建、太陽能支架與物流倉儲用鋼，承接 AI 新十大建設與前瞻基建</td></tr>
+<tr><td>燁輝</td><td>聚焦 AI 基建利基市場的鍍面鋼品</td></tr>
+<tr><td>榮剛</td><td>不鏽鋼材料打入 AI 伺服器液冷模組供應鏈</td></tr>
+</tbody></table></div>
+
+<h2>對台灣鋼鐵業的觀察</h2>
+<ul>
+<li><b>AI 是「值」的故事，不是「量」的故事。</b> 能吃到 AI 紅利的是電磁鋼片、耐震鋼構、特殊不鏽鋼等高階品項，一般碳鋼仍受大環境牽動。</li>
+<li><b>方向性電磁鋼片是缺口也是機會。</b> 全球變壓器缺貨短期難解，但方向性鋼片的技術與設備門檻極高，投資回收期長，須審慎評估。</li>
+<li><b>電力是雙面刃。</b> 台灣 AI 用電成長若推高工業電價，對電爐業者與高耗能製程的成本壓力不容忽視。</li>
+<li><b>智慧製造是降本關鍵。</b> 在需求疲弱、碳成本上升的環境下，AI 改善良率、能耗與安全，是鋼廠維持競爭力的務實工具。</li>
+</ul>
+
+<h2>觀察重點</h2>
+<ul class="watch">
+<li>美國與全球變壓器交期是否縮短，方向性電磁鋼片新增產能何時到位。</li>
+<li>行政院 AI 新十大建設的發包進度與鋼材用量。</li>
+<li>中鋼高階電磁鋼片的出貨量與在精緻鋼品中的占比。</li>
+<li>台灣工業電價調整與夏季供電狀況。</li>
+</ul>
+
+<h2>資料來源</h2>
+<ul class="sources">
+<li><a href="https://pv-magazine-usa.com/2026/05/11/u-s-transformer-market-faces-severe-supply-constraints-as-lead-times-extend-to-four-years/">U.S. transformer market faces severe supply constraints as lead times extend to four years</a>（pv magazine USA，2026-05-11）</li>
+<li><a href="https://blog.adafruit.com/2026/04/22/the-ai-power-bottleneck-data-centers-meet-the-steel-monopoly/">The AI Power Bottleneck: Data Centers Meet the Steel Monopoly</a>（Adafruit，2026-04-22）</li>
+<li><a href="https://udn.com/news/story/7241/9652349">AI 基建、新能源 扮鋼市成長引擎</a>（經濟日報，2026-07-27）</li>
+<li><a href="https://money.udn.com/money/story/10871/9525016">鋼鐵業者瞄準 AI 基建商機</a>（經濟日報，2026-05-26）</li>
+<li><a href="https://www.ctee.com.tw/news/20260325700282-430503">中鋼等鋼廠迎利多！行政院千億資金造AI新十大建設</a>（工商時報，2026-03-25）</li>
+<li><a href="https://money.udn.com/money/story/5612/9680871">中鋼導入 AI 打造護國神鋼「牽狗放鷹」</a>（經濟日報，2026-08-10）</li>
+<li><a href="https://newsroom.posco.com/en/posco-the-lighthouse-factory-3-factors-that-make-it-exceptional/">POSCO the Lighthouse Factory</a>（POSCO Newsroom）</li>
+<li><a href="https://steelindustry.news/robotics-ai-steel-how-boston-dynamics-spot-robot-revolutionizes-poscos-smart-steel-making-and-manufacturing-future/">Robotics, AI &amp; Steel: Boston Dynamics' Spot at POSCO</a>（Steel Industry News）</li>
+</ul>
+<p style="font-size:13px;color:#9AA0A6;margin-top:32px">內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</p>
+</article>
+
+<p style="margin-top:48px"><a href="../#topics" style="display:inline-flex;align-items:center;border:1px solid #4A5058;color:#E8E6E1;text-decoration:none;padding:12px 20px">← 回到下游需求觀察</a></p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+</body>
+</html>

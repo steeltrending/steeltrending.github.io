@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-ai-steel",
+   "category": "demand",
+   "title": "AI 吃電也吃鋼：鋼鐵業的新需求與新工具",
+   "period": "2026-10",
+   "published": "2026-10-04",
+   "summary": "AI 資料中心帶動電網、變壓器與高階鋼材需求，方向性電磁鋼片成為瓶頸；鋼廠也用 AI 改造煉鐵、品管與巡檢。",
+   "tags": [
+    "AI",
+    "資料中心",
+    "變壓器",
+    "電磁鋼片",
+    "智慧製造"
+   ],
+   "image": "assets/articles/2026-10-ai-steel-datacenter.jpg",
+   "url": "articles/2026-10-ai-steel.html"
+  },
+  {
    "id": "2026-10-hyundai-steel-louisiana",
    "category": "mills",
    "title": "現代製鐵路易斯安那廠：韓國鋼廠的美國突圍戰",
