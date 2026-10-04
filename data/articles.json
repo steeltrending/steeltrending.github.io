@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-arcelormittal-kryvyi-rih",
+   "category": "mills",
+   "title": "烽火下熄爐：ArcelorMittal 烏克蘭克里維里赫鋼廠無限期停產",
+   "period": "2026-10",
+   "published": "2026-10-05",
+   "summary": "五週內遭飛彈直接擊中四次，ArcelorMittal 宣布烏克蘭克里維里赫鋼廠無法安全復工、無限期停產，認列約 10 億美元減損。",
+   "tags": [
+    "ArcelorMittal",
+    "烏克蘭",
+    "克里維里赫",
+    "高爐",
+    "減損"
+   ],
+   "image": "assets/articles/2026-10-arcelormittal-kryvyi-rih-towers.jpg",
+   "url": "articles/2026-10-arcelormittal-kryvyi-rih.html"
+  },
+  {
    "id": "2026-10-trump-shipbuilding",
    "category": "trade",
    "title": "川普重振美國造船業：港口費、韓國資金與鋼板商機",
