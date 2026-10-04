@@ -1,1 +1,555 @@
-{}
+{
+ "Kimitsu Works filetype:bitmap": [
+  {
+   "title": "File:Nippon Steel Kimitsu Works.jpg",
+   "thumb": "00_0.jpg",
+   "w": 3008,
+   "h": 2000,
+   "license": "CC BY-SA 2.0",
+   "artist": "takato marui from Osaka, Japan",
+   "date": "2007-10-23 13:10",
+   "desc": "Nippon Steel Kimitsu Works (Kimitsu, Chiba, Japan)"
+  },
+  {
+   "title": "File:Kimitsu 20200114 072629.jpg",
+   "thumb": "00_1.jpg",
+   "w": 4608,
+   "h": 2592,
+   "license": "CC BY-SA 4.0",
+   "artist": "Ka23 13",
+   "date": "2020-01-14 07:26:29",
+   "desc": "Nippon Steel East Nippon Works Kimitsu area in Kimitsu City, Chiba Prefecture, Japan, seen from Tokyo Bay in 2020."
+  },
+  {
+   "title": "File:Nipponsteel kimitsu.jpg",
+   "thumb": "00_2.jpg",
+   "w": 3648,
+   "h": 2736,
+   "license": "CC BY-SA 4.0",
+   "artist": "ブルーノ・プラス",
+   "date": "2023-02",
+   "desc": "日本製鉄東日本製鉄所君津地区を空撮"
+  },
+  {
+   "title": "File:Kimitsu iron and steel works Aerial photograph.2009.jpg",
+   "thumb": "00_3.jpg",
+   "w": 11699,
+   "h": 8722,
+   "license": "Attribution",
+   "artist": "国土地理院",
+   "date": "2009-08-29",
+   "desc": "Kimitsu iron and steel works Aerial photograph.2009"
+  },
+  {
+   "title": "File:Industrial Landscapes －Kimitsu－ 2.jpg",
+   "thumb": "00_4.jpg",
+   "w": 6043,
+   "h": 4029,
+   "license": "CC BY-SA 2.0",
+   "artist": "hoshner sigmaniax",
+   "date": "2017-12-29 19:57:56",
+   "desc": "日本製鉄君津製鉄所の夜景"
+  },
+  {
+   "title": "File:Industrial Landscapes －Kimitsu－ 4.jpg",
+   "thumb": "00_5.jpg",
+   "w": 5210,
+   "h": 3473,
+   "license": "CC BY-SA 2.0",
+   "artist": "hoshner sigmaniax",
+   "date": "2017-12-29 21:01:05",
+   "desc": "日本製鉄君津製鉄所の夜景"
+  },
+  {
+   "title": "File:Industrial Landscapes －Kimitsu－ 1.jpg",
+   "thumb": "00_6.jpg",
+   "w": 5998,
+   "h": 3999,
+   "license": "CC BY-SA 2.0",
+   "artist": "hoshner sigmaniax",
+   "date": "2017-12-09 19:14:56",
+   "desc": "日本製鉄君津製鉄所の夜景"
+  },
+  {
+   "title": "File:君津製鉄所 (Kimitsu Iron Works).jpg",
+   "thumb": "00_7.jpg",
+   "w": 4452,
+   "h": 2968,
+   "license": "CC BY 2.0",
+   "artist": "y.ganden",
+   "date": "2015-08-15 05:24:32",
+   "desc": "日本製鉄君津製鉄所（千葉県君津市）"
+  },
+  {
+   "title": "File:Industrial Landscapes －Kimitsu－ 3.jpg",
+   "thumb": "00_8.jpg",
+   "w": 6192,
+   "h": 4128,
+   "license": "CC BY-SA 2.0",
+   "artist": "hoshner sigmaniax",
+   "date": "2017-12-09 21:03:18",
+   "desc": "日本製鉄君津製鉄所の夜景"
+  },
+  {
+   "title": "File:NipponSteelKimitsu.jpg",
+   "thumb": "00_9.jpg",
+   "w": 3648,
+   "h": 2736,
+   "license": "CC BY-SA 3.0",
+   "artist": "Mayuno",
+   "date": "2008-07-19",
+   "desc": "Nippon Steel Corporation Kimitsu Works"
+  }
+ ],
+ "君津製鐵所 filetype:bitmap": [
+  {
+   "title": "File:Nippon Steel Kimitsu Works.jpg",
+   "thumb": "01_0.jpg",
+   "w": 3008,
+   "h": 2000,
+   "license": "CC BY-SA 2.0",
+   "artist": "takato marui from Osaka, Japan",
+   "date": "2007-10-23 13:10",
+   "desc": "Nippon Steel Kimitsu Works (Kimitsu, Chiba, Japan)"
+  },
+  {
+   "title": "File:Nipponsteel kimitsu.jpg",
+   "thumb": "01_1.jpg",
+   "w": 3648,
+   "h": 2736,
+   "license": "CC BY-SA 4.0",
+   "artist": "ブルーノ・プラス",
+   "date": "2023-02",
+   "desc": "日本製鉄東日本製鉄所君津地区を空撮"
+  },
+  {
+   "title": "File:Kimitsu 20200114 072629.jpg",
+   "thumb": "01_2.jpg",
+   "w": 4608,
+   "h": 2592,
+   "license": "CC BY-SA 4.0",
+   "artist": "Ka23 13",
+   "date": "2020-01-14 07:26:29",
+   "desc": "Nippon Steel East Nippon Works Kimitsu area in Kimitsu City, Chiba Prefecture, Japan, seen from Tokyo Bay in 2020."
+  },
+  {
+   "title": "File:Kisarazu-port.JPG",
+   "thumb": "01_3.jpg",
+   "w": 640,
+   "h": 480,
+   "license": "Public domain",
+   "artist": "Kentagon",
+   "date": "2006-08-15",
+   "desc": "This place is north direction of Kisarazu port in Chiba prefecture. It is photographed at Egawa seaside in Kisarazu city, Chiba, Japan. The background has industrial facilities of Kimitsu Steel Works."
+  },
+  {
+   "title": "File:Industrial Landscapes －Kimitsu－ 2.jpg",
+   "thumb": "01_4.jpg",
+   "w": 6043,
+   "h": 4029,
+   "license": "CC BY-SA 2.0",
+   "artist": "hoshner sigmaniax",
+   "date": "2017-12-29 19:57:56",
+   "desc": "日本製鉄君津製鉄所の夜景"
+  },
+  {
+   "title": "File:Industrial Landscapes －Kimitsu－ 1.jpg",
+   "thumb": "01_5.jpg",
+   "w": 5998,
+   "h": 3999,
+   "license": "CC BY-SA 2.0",
+   "artist": "hoshner sigmaniax",
+   "date": "2017-12-09 19:14:56",
+   "desc": "日本製鉄君津製鉄所の夜景"
+  },
+  {
+   "title": "File:Industrial Landscapes －Kimitsu－ 4.jpg",
+   "thumb": "01_6.jpg",
+   "w": 5210,
+   "h": 3473,
+   "license": "CC BY-SA 2.0",
+   "artist": "hoshner sigmaniax",
+   "date": "2017-12-29 21:01:05",
+   "desc": "日本製鉄君津製鉄所の夜景"
+  },
+  {
+   "title": "File:Industrial Landscapes －Kimitsu－ 3.jpg",
+   "thumb": "01_7.jpg",
+   "w": 6192,
+   "h": 4128,
+   "license": "CC BY-SA 2.0",
+   "artist": "hoshner sigmaniax",
+   "date": "2017-12-09 21:03:18",
+   "desc": "日本製鉄君津製鉄所の夜景"
+  },
+  {
+   "title": "File:Kimitsu iron and steel works Aerial photograph.2009.jpg",
+   "thumb": "01_8.jpg",
+   "w": 11699,
+   "h": 8722,
+   "license": "Attribution",
+   "artist": "国土地理院",
+   "date": "2009-08-29",
+   "desc": "Kimitsu iron and steel works Aerial photograph.2009"
+  },
+  {
+   "title": "File:NipponSteelKimitsu.jpg",
+   "thumb": "01_9.jpg",
+   "w": 3648,
+   "h": 2736,
+   "license": "CC BY-SA 3.0",
+   "artist": "Mayuno",
+   "date": "2008-07-19",
+   "desc": "Nippon Steel Corporation Kimitsu Works"
+  }
+ ],
+ "Nippon Steel blast furnace filetype:bitmap": [
+  {
+   "title": "File:Armco Bulletin, July 1929 - DPLA - 679feb7f4cd488566ab8711793837a4a (page 13).jpg",
+   "thumb": "02_0.jpg",
+   "w": 900,
+   "h": 1355,
+   "license": "Public domain",
+   "artist": "American Rolling Mill Company",
+   "date": "July 1929date QS:P571,+1929-07-00T00:00:00Z/10",
+   "desc": "\nThis is the July 1929 issue of the Armco Bulletin, once again a monthly publication \"published at Middletown, Ohio, in the interest of 'ARMCO MEN.'\" This bulletin is untitled, but the leading article"
+  },
+  {
+   "title": "File:Armco Bulletin, July 1929 - DPLA - 679feb7f4cd488566ab8711793837a4a (page 35).jpg",
+   "thumb": "02_1.jpg",
+   "w": 898,
+   "h": 1355,
+   "license": "Public domain",
+   "artist": "American Rolling Mill Company",
+   "date": "July 1929date QS:P571,+1929-07-00T00:00:00Z/10",
+   "desc": "\nThis is the July 1929 issue of the Armco Bulletin, once again a monthly publication \"published at Middletown, Ohio, in the interest of 'ARMCO MEN.'\" This bulletin is untitled, but the leading article"
+  },
+  {
+   "title": "File:Armco Bulletin, July 1929 - DPLA - 679feb7f4cd488566ab8711793837a4a (page 19).jpg",
+   "thumb": "02_2.jpg",
+   "w": 900,
+   "h": 1355,
+   "license": "Public domain",
+   "artist": "American Rolling Mill Company",
+   "date": "July 1929date QS:P571,+1929-07-00T00:00:00Z/10",
+   "desc": "\nThis is the July 1929 issue of the Armco Bulletin, once again a monthly publication \"published at Middletown, Ohio, in the interest of 'ARMCO MEN.'\" This bulletin is untitled, but the leading article"
+  },
+  {
+   "title": "File:Armco Bulletin, July 1929 - DPLA - 679feb7f4cd488566ab8711793837a4a (page 33).jpg",
+   "thumb": "02_3.jpg",
+   "w": 900,
+   "h": 1350,
+   "license": "Public domain",
+   "artist": "American Rolling Mill Company",
+   "date": "July 1929date QS:P571,+1929-07-00T00:00:00Z/10",
+   "desc": "\nThis is the July 1929 issue of the Armco Bulletin, once again a monthly publication \"published at Middletown, Ohio, in the interest of 'ARMCO MEN.'\" This bulletin is untitled, but the leading article"
+  },
+  {
+   "title": "File:Armco Bulletin, July 1929 - DPLA - 679feb7f4cd488566ab8711793837a4a (page 17).jpg",
+   "thumb": "02_4.jpg",
+   "w": 900,
+   "h": 1350,
+   "license": "Public domain",
+   "artist": "American Rolling Mill Company",
+   "date": "July 1929date QS:P571,+1929-07-00T00:00:00Z/10",
+   "desc": "\nThis is the July 1929 issue of the Armco Bulletin, once again a monthly publication \"published at Middletown, Ohio, in the interest of 'ARMCO MEN.'\" This bulletin is untitled, but the leading article"
+  },
+  {
+   "title": "File:Armco Bulletin, July 1929 - DPLA - 679feb7f4cd488566ab8711793837a4a (page 43).jpg",
+   "thumb": "02_5.jpg",
+   "w": 900,
+   "h": 1378,
+   "license": "Public domain",
+   "artist": "American Rolling Mill Company",
+   "date": "July 1929date QS:P571,+1929-07-00T00:00:00Z/10",
+   "desc": "\nThis is the July 1929 issue of the Armco Bulletin, once again a monthly publication \"published at Middletown, Ohio, in the interest of 'ARMCO MEN.'\" This bulletin is untitled, but the leading article"
+  },
+  {
+   "title": "File:Armco Bulletin, July 1929 - DPLA - 679feb7f4cd488566ab8711793837a4a (page 3).jpg",
+   "thumb": "02_6.jpg",
+   "w": 900,
+   "h": 1355,
+   "license": "Public domain",
+   "artist": "American Rolling Mill Company",
+   "date": "July 1929date QS:P571,+1929-07-00T00:00:00Z/10",
+   "desc": "\nThis is the July 1929 issue of the Armco Bulletin, once again a monthly publication \"published at Middletown, Ohio, in the interest of 'ARMCO MEN.'\" This bulletin is untitled, but the leading article"
+  },
+  {
+   "title": "File:Armco Bulletin, July 1929 - DPLA - 679feb7f4cd488566ab8711793837a4a (page 38).jpg",
+   "thumb": "02_7.jpg",
+   "w": 903,
+   "h": 1355,
+   "license": "Public domain",
+   "artist": "American Rolling Mill Company",
+   "date": "July 1929date QS:P571,+1929-07-00T00:00:00Z/10",
+   "desc": "\nThis is the July 1929 issue of the Armco Bulletin, once again a monthly publication \"published at Middletown, Ohio, in the interest of 'ARMCO MEN.'\" This bulletin is untitled, but the leading article"
+  },
+  {
+   "title": "File:Armco Bulletin, July 1929 - DPLA - 679feb7f4cd488566ab8711793837a4a (page 29).jpg",
+   "thumb": "02_8.jpg",
+   "w": 898,
+   "h": 1350,
+   "license": "Public domain",
+   "artist": "American Rolling Mill Company",
+   "date": "July 1929date QS:P571,+1929-07-00T00:00:00Z/10",
+   "desc": "\nThis is the July 1929 issue of the Armco Bulletin, once again a monthly publication \"published at Middletown, Ohio, in the interest of 'ARMCO MEN.'\" This bulletin is untitled, but the leading article"
+  },
+  {
+   "title": "File:Armco Bulletin, July 1929 - DPLA - 679feb7f4cd488566ab8711793837a4a (page 1).jpg",
+   "thumb": "02_9.jpg",
+   "w": 898,
+   "h": 1355,
+   "license": "Public domain",
+   "artist": "American Rolling Mill Company",
+   "date": "July 1929date QS:P571,+1929-07-00T00:00:00Z/10",
+   "desc": "\nThis is the July 1929 issue of the Armco Bulletin, once again a monthly publication \"published at Middletown, Ohio, in the interest of 'ARMCO MEN.'\" This bulletin is untitled, but the leading article"
+  }
+ ],
+ "blast furnace tuyere filetype:bitmap": [
+  {
+   "title": "File:Tuyere, being seen from inside of a blast furnace — Фурма, вигляд зсередини доменної печі 2.png",
+   "thumb": "03_0.jpg",
+   "w": 3264,
+   "h": 2448,
+   "license": "CC BY-SA 3.0",
+   "artist": "Blast furnace chip worker",
+   "date": "2016",
+   "desc": "Blast furnace tuyere, view from inside of a blast furnace."
+  },
+  {
+   "title": "File:Tuyere, being seen from inside of a blast furnace — Фурма, вигляд зсередини доменної печі 1.png",
+   "thumb": "03_1.jpg",
+   "w": 3264,
+   "h": 2448,
+   "license": "CC BY-SA 3.0",
+   "artist": "Blast furnace chip worker",
+   "date": "2016",
+   "desc": "Blast furnace tuyere, view from inside of blast furnace."
+  },
+  {
+   "title": "File:Blast furnace tuyeres.jpg",
+   "thumb": "03_2.jpg",
+   "w": 3264,
+   "h": 1840,
+   "license": "CC BY-SA 3.0",
+   "artist": "Mohanrajnp",
+   "date": "2013-08-10",
+   "desc": "Tuyeres connected to the Blast Furnace at GErdau Steel India Limited"
+  },
+  {
+   "title": "File:Blast Furnace, Arrium Onesteel, Whyalla.jpg",
+   "thumb": "03_3.jpg",
+   "w": 1024,
+   "h": 680,
+   "license": "CC BY-SA 2.0",
+   "artist": "UCL Engineering",
+   "date": "2014-04-01 14:06:31",
+   "desc": "Tuyere area, or tuyere zone of a blast furnace in Whyalla Steelworks, Australia."
+  },
+  {
+   "title": "File:Blast Furnace, Arrium Onesteel, Whyalla 2.jpg",
+   "thumb": "03_4.jpg",
+   "w": 1024,
+   "h": 680,
+   "license": "CC BY-SA 2.0",
+   "artist": "UCL Engineering",
+   "date": "2014-04-01 13:40:12",
+   "desc": "Tuyere area, or tuyere zone of a blast furnace in Whyalla Steelworks, Australia. Looking into the heart of a blast furnace."
+  },
+  {
+   "title": "File:Raceway in a blast furnace — Зона циркуляції.PNG",
+   "thumb": "03_5.jpg",
+   "w": 1810,
+   "h": 1365,
+   "license": "CC BY-SA 3.0",
+   "artist": "Blast furnace chip worker",
+   "date": "2016",
+   "desc": "The raceway, hurtling coke particles, in a blast furnace, gorizontal section."
+  },
+  {
+   "title": "File:Materials in tuyere level zone being seen when a tuyere is taken out from a tuyere apparatus — Плавильні матеріали, що їх видно через фурменний прилад при знятій фурмі.jpg",
+   "thumb": "03_6.jpg",
+   "w": 3264,
+   "h": 2448,
+   "license": "CC BY-SA 3.0",
+   "artist": "Blast furnace chip worker",
+   "date": "2009",
+   "desc": "Materials in blast furnace's tuyere level zone being seen in the moment when a tuyere is taken out from a tuyere apparatus."
+  },
+  {
+   "title": "File:Cardan-type tuyere stock — Фурменний рукав сильфонний з компенсатором карданного типу.png",
+   "thumb": "03_7.jpg",
+   "w": 2700,
+   "h": 2556,
+   "license": "CC BY-SA 4.0",
+   "artist": "Blast furnace chip worker",
+   "date": "2017-02-09",
+   "desc": "Cardan-type tuyere stock."
+  },
+  {
+   "title": "File:IRON RUNNERS FOR CARRIE FURNACE No. 6 THE TUBES IN THE FOREGROUND ARE PART OF THE TUYERE ASSEMBLY. - U.S. Steel Homestead Works, Blast Furnace Plant, Along Monongahela River, HAER PA,2-HOME,2A-50.tif",
+   "thumb": "03_8.jpg",
+   "w": 4041,
+   "h": 5000,
+   "license": "Public domain",
+   "artist": "\nStupich, Martin, creator",
+   "date": "1989date QS:P571,+1989-00-00T00:00:00Z/9",
+   "desc": "\nU.S. Steel Corporation; Brown, James S; Clark, E L; Fownes, H C; Fownes, W C; Brown Hoisting Machinery Company; Massicks and Crooke; Pollock Company; Westinghouse Electric Company; Wilson-Snyder; All"
+  },
+  {
+   "title": "File:Looking north inside of casthouse no. 6 at iron trough and iron notch of blast furnace no. 6. - U.S. Steel Edgar Thomson Works, Blast Furnace Plant, Along Monongahela River, HAER PA,2-BRAD,2A-12.tif",
+   "thumb": "03_9.jpg",
+   "w": 5000,
+   "h": 3600,
+   "license": "Public domain",
+   "artist": "\nMcWilliams, John, creator",
+   "date": "1989date QS:P571,+1989-00-00T00:00:00Z/9",
+   "desc": "\nU.S. Steel Corporation; Ingersoll-Rand Corporation; Dravo Corporation; American Bridge Company; Defense Plant Corporation; McWilliams, John, photographer"
+  }
+ ],
+ "高炉 羽口 filetype:bitmap": [],
+ "hydrogen tank industrial filetype:bitmap": [
+  {
+   "title": "File:Compressed hydrogen tube trailer.jpg",
+   "thumb": "05_0.jpg",
+   "w": 200,
+   "h": 111,
+   "license": "Public domain",
+   "artist": "EERE",
+   "date": "Dont know\n\nType IV Hydrogen Tube trailer",
+   "desc": "Compressed hydrogen tube trailer."
+  },
+  {
+   "title": "File:Industrial gas calorimetry. (1914) (14579413660).jpg",
+   "thumb": "05_1.jpg",
+   "w": 3408,
+   "h": 2224,
+   "license": "No restrictions",
+   "artist": "Waidner, C.W.; Mueller, E.F.",
+   "date": "1914",
+   "desc": "\nIdentifier: industrialgasca191436waid (find matches)\nTitle: Industrial gas calorimetry.\nYear: 1914 (1910s)\nAuthors:  Waidner, C.W. Mueller, E.F.\nSubjects: \nPublisher:  National Bureau of Standards\nCo"
+  },
+  {
+   "title": "File:Oxygen Generator.jpg",
+   "thumb": "05_2.jpg",
+   "w": 6593,
+   "h": 5136,
+   "license": "CC BY-SA 4.0",
+   "artist": "mentis engineering",
+   "date": "2022-08-01",
+   "desc": "Pressure Swing Adsorption Oxygen Generator\nPressure Swing Adsorption (PSA) is the most common method of producing oxygen at an industrial scale. PSA generators separate nitrogen from ambient air insid"
+  },
+  {
+   "title": "File:CAR WITH HYDRO POWER ENGINE.jpg",
+   "thumb": "05_3.jpg",
+   "w": 1624,
+   "h": 2076,
+   "license": "CC BY 4.0",
+   "artist": "Luigi Antonio Pezone",
+   "date": "2016-09-14",
+   "desc": "THE DESCRIPTION IS REPORTED ON THE FIGURE"
+  }
+ ],
+ "blast furnace hot metal tapping filetype:bitmap": [
+  {
+   "title": "File:Layout of Trumbull-Cliffs Blast Furnace.jpg",
+   "thumb": "06_0.jpg",
+   "w": 2363,
+   "h": 2286,
+   "license": "Public domain",
+   "artist": "\"New Trumbull-Cliffs 600-Ton Blast Furance\", The Iron Age, September 15, 1921, p. 675",
+   "date": "1926-09-15",
+   "desc": "Longitudinal (overhead) schematic of the Trumbull-Cliffs Blast Furnace in Warren, Ohio, in the United States in 1921.\nThe boiler house is at left, where steam for the power plant is generated. To its "
+  },
+  {
+   "title": "File:Iron runners - Trumbull-Cliffs Blast Furnace.jpg",
+   "thumb": "06_1.jpg",
+   "w": 1835,
+   "h": 1382,
+   "license": "Public domain",
+   "artist": "\"New Trumbull-Cliffs 600-Ton Blast Furance\", The Iron Age, September 15, 1921, p. 676",
+   "date": "1921-09-15",
+   "desc": "Bosh and hearth of the Trumbull-Cliffs Blast Furnace in Warren, Ohio, in the United States in 1921.\nThe stack of the blast furnace widens toward the bottom to create the \"bosh\", where iron ore becomes"
+  },
+  {
+   "title": "File:Side schematic - Trumbull-Cliffs Blast Furnace.jpg",
+   "thumb": "06_2.jpg",
+   "w": 2256,
+   "h": 1499,
+   "license": "Public domain",
+   "artist": "\"New Trumbull-Cliffs 600-Ton Blast Furance\", The Iron Age, September 15, 1921, p. 675",
+   "date": "1926-09-15",
+   "desc": "Side schematic of the iron-making portion of the Trumbull-Cliffs Blast Furnace in Warren, Ohio, in the United States in 1921.\nAt left is the gas cleaning plant, where smoke and fumes from the smelting"
+  },
+  {
+   "title": "File:Full overhead schematic of Trumbull-Cliffs Blast Furnace.jpg",
+   "thumb": "06_3.jpg",
+   "w": 5245,
+   "h": 3780,
+   "license": "Public domain",
+   "artist": "\"New 600-Ton Blast Furnace Plant\". The Blast Furnace &amp; Steel Plant, October 1921, p. 592",
+   "date": "1921-10",
+   "desc": "Longitudinal (overhead) schematic of the Trumbull-Cliffs Blast Furnace in Warren, Ohio, in the United States in 1921.\nThe boiler house is at left, where steam for the power plant is generated. To its "
+  },
+  {
+   "title": "File:Full side schematic - Trumbull-Cliffs Blast Furnace.jpg",
+   "thumb": "06_4.jpg",
+   "w": 5241,
+   "h": 2451,
+   "license": "Public domain",
+   "artist": "\"New 600-Ton Blast Furnace Plant\". The Blast Furnace &amp; Steel Plant, October 1921, p. 588",
+   "date": "1921-10",
+   "desc": "Side schematic of the iron-making portion of the Trumbull-Cliffs Blast Furnace in Warren, Ohio, in the United States in 1921.\nAt left is the gas cleaning plant, where smoke and fumes from the smelting"
+  },
+  {
+   "title": "File:Annual report of the State Mineralogist for the year ending (1883) (p. 822).png",
+   "thumb": "06_5.jpg",
+   "w": 627,
+   "h": 473,
+   "license": "Public domain",
+   "artist": "California State Mining Bureau",
+   "date": "1883",
+   "desc": "Castillan blast furnace used for lead smelting.\nText Appearing Before Image:\nLEAD SMELTING IN SPAIN THE CASTILIAN BLAST FURNACE.\nThis blast furnace is quite small in comparison to those used in this c"
+  },
+  {
+   "title": "File:The Gatekeeper (34794503522).jpg",
+   "thumb": "06_6.jpg",
+   "w": 4107,
+   "h": 3286,
+   "license": "CC BY-SA 2.0",
+   "artist": "Thomas from Philadelphia Area, USA",
+   "date": "2017-04-08 17:10",
+   "desc": "Carrie Furnace, Pittsburgh PA\nJim Kapusta thought the molten metal would flow forever, down the runners from the tap hole and into the cinder ladles, where the iron would pool before it crossed the Ho"
+  },
+  {
+   "title": "File:Annual report of the State Mineralogist for the year ending (1883) (p. 827).png",
+   "thumb": "06_7.jpg",
+   "w": 597,
+   "h": 845,
+   "license": "Public domain",
+   "artist": "California State Mining Bureau",
+   "date": "1883",
+   "desc": "Reverberatory furnace used for the smelting of lead ores. This furnace was used in France, at Pont Gibaud, to roast and smelt pretty pure ores.\nText Appearing Before Image:\nTHE PROCESS APPLIED AT PONT"
+  },
+  {
+   "title": "File:Industries of War - Metals - Steel - Miscellaneous - Manufacturing steel for War Department and United States Shipping Board at the Donner Steel Co., Inc., Plant, Buffalo, New York - NARA - 45488052.jpg",
+   "thumb": "06_8.jpg",
+   "w": 9182,
+   "h": 6302,
+   "license": "Public domain",
+   "artist": "\nUnknown authorUnknown author or not provided",
+   "date": "1917 – 1918",
+   "desc": "\nScope and content:  Original Caption: Manufacturing steel for War Department and United States Shipping Board at the Donner Steel Co., Inc., Plant, Buffalo, New York. Blast furnace casting iron from "
+  },
+  {
+   "title": "File:Tuyères du haut fourneau.jpg",
+   "thumb": "06_9.jpg",
+   "w": 2048,
+   "h": 1359,
+   "license": "CC BY 2.0",
+   "artist": "Stephane Gaudry",
+   "date": "2012-06-24 09:33:33",
+   "desc": "Blast furnace\nA blast furnace is a type of metallurgical furnace used for smelting to produce industrial metals, generally iron.\n\nIn a blast furnace, fuel, ore, and flux (limestone) are continuously s"
+  }
+ ]
+}
