@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-nippon-steel-hydrogen-bf",
+   "category": "decarb",
+   "title": "高爐吹氫減碳 43%：日本製鐵 Super COURSE50 試驗全解析",
+   "period": "2026-10",
+   "published": "2026-10-05",
+   "summary": "日本製鐵在 12 立方公尺試驗高爐吹入加熱氫氣，高爐 CO₂ 減量從 22% 推進到 43%；解析原理、試驗歷程、43% 的意義與放大到實爐的挑戰。",
+   "tags": [
+    "日本製鐵",
+    "Super COURSE50",
+    "氫還原",
+    "高爐",
+    "君津"
+   ],
+   "image": "assets/articles/2026-10-nippon-steel-hydrogen-bf-kimitsu.jpg",
+   "url": "articles/2026-10-nippon-steel-hydrogen-bf.html"
+  },
+  {
    "id": "2026-10-arcelormittal-kryvyi-rih",
    "category": "mills",
    "title": "烽火下熄爐：ArcelorMittal 烏克蘭克里維里赫鋼廠無限期停產",
