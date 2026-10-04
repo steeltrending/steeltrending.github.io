@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "2026-10-iron-ore-mining",
+   "category": "steel101",
+   "title": "鐵礦砂從哪裡來：全球礦區分布與開採技術",
+   "period": "2026-10",
+   "published": "2026-10-04",
+   "summary": "鋼鐵小學堂：鐵礦砂的形成、全球主要礦區分布，以及露天開採、地下崩落法、無卡車採礦、自動化與選礦造粒等主流技術。",
+   "tags": [
+    "鐵礦砂",
+    "採礦",
+    "皮爾巴拉",
+    "卡拉加斯",
+    "Simandou",
+    "選礦"
+   ],
+   "image": "assets/articles/2026-10-iron-ore-mining-pit.jpg",
+   "url": "articles/2026-10-iron-ore-mining.html"
+  },
+  {
    "id": "2026-10-taiwan-carbon",
    "category": "carbon",
    "title": "碳有價元年：台灣碳中和 2026 進度與鋼鐵業壓力",
