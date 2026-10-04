@@ -1,1 +1,596 @@
-{}
+{
+ "ArcelorMittal Kryvyi Rih filetype:bitmap": [
+  {
+   "title": "File:ArcelorMittal Kryvyi Rih 01.jpg",
+   "thumb": "00_0.jpg",
+   "w": 2592,
+   "h": 1936,
+   "license": "CC BY-SA 4.0",
+   "artist": "Andrew J.Kurbiko",
+   "date": "2015-05-29",
+   "desc": "ArcelorMittal Kryvyi Rih"
+  },
+  {
+   "title": "File:ArcelorMittal Kryvyi Rih 02.jpg",
+   "thumb": "00_1.jpg",
+   "w": 2592,
+   "h": 1641,
+   "license": "CC BY-SA 4.0",
+   "artist": "Andrew J.Kurbiko",
+   "date": "2015-05-29",
+   "desc": "ArcelorMittal Kryvyi Rih"
+  },
+  {
+   "title": "File:ArcelorMittal Kryvyi Rih.jpg",
+   "thumb": "00_2.jpg",
+   "w": 2592,
+   "h": 1608,
+   "license": "CC BY-SA 4.0",
+   "artist": "Andrew J.Kurbiko",
+   "date": "2015-05-29",
+   "desc": "ArcelorMittal Kryvyi Rih"
+  },
+  {
+   "title": "File:Kryvyi Rih 2014 - 02.jpg",
+   "thumb": "00_3.jpg",
+   "w": 3005,
+   "h": 1996,
+   "license": "CC BY 2.0",
+   "artist": "Alan Turgutoglu",
+   "date": "2014-06-03 15:51:20",
+   "desc": "OLYMPUS DIGITAL CAMERA\n\nKryvyi Rih 2014\n\nEurope's largest iron mining city. I was fascinated by the contrast between the red dust, the byproduct of the iron extraction process, and the green of the na"
+  },
+  {
+   "title": "File:Градирні Криворіжсталі.jpg",
+   "thumb": "00_4.jpg",
+   "w": 2272,
+   "h": 1704,
+   "license": "CC BY-SA 3.0",
+   "artist": "Dogvillan",
+   "date": "2012-09-28 10:28:03",
+   "desc": "Класичний вид на градирні Криворіжсталі з проспекту Металургів"
+  },
+  {
+   "title": "File:ArcelorMittal bluming unit2.jpg",
+   "thumb": "00_5.jpg",
+   "w": 1024,
+   "h": 768,
+   "license": "CC BY-SA 3.0",
+   "artist": "Rino ap Codkelden",
+   "date": "2009-07-07",
+   "desc": "Территория блюминга №2, промплощадка предприятия"
+  },
+  {
+   "title": "File:Машина непрерывного литья заготовок.jpg",
+   "thumb": "00_6.jpg",
+   "w": 3272,
+   "h": 4907,
+   "license": "CC BY-SA 4.0",
+   "artist": "ArcelorMittal Kryvyi Rih",
+   "date": "2017-11-06 11:48:56",
+   "desc": "ArcelorMittal Kryvyi Rih Continuous Casting Machine"
+  },
+  {
+   "title": "File:Коксовая батарея №6.jpg",
+   "thumb": "00_7.jpg",
+   "w": 2352,
+   "h": 1568,
+   "license": "CC BY-SA 4.0",
+   "artist": "ArcelorMittal Kryvyi Rih",
+   "date": "2016-12-25 21:36:26",
+   "desc": "Coke oven battery №6 \"ArcelorMittal Kryvyi Rih\""
+  },
+  {
+   "title": "File:Арматурный прокат.jpg",
+   "thumb": "00_8.jpg",
+   "w": 3861,
+   "h": 2574,
+   "license": "CC BY-SA 4.0",
+   "artist": "ArcelorMittal Kryvyi Rih",
+   "date": "2016-03-29 10:44:27",
+   "desc": "Reinforcing bars manufactured by ArcelorMittal Kryvyi Rih"
+  },
+  {
+   "title": "File:Производство катанки.jpg",
+   "thumb": "00_9.jpg",
+   "w": 5477,
+   "h": 3651,
+   "license": "CC BY-SA 4.0",
+   "artist": "ArcelorMittal Kryvyi Rih",
+   "date": "2017-04-12 09:07:34",
+   "desc": "Wire rod production at ArcelorMittal Kryvyi Rih"
+  }
+ ],
+ "Kryvorizhstal filetype:bitmap": [
+  {
+   "title": "File:Градирні Криворіжсталі.jpg",
+   "thumb": "01_0.jpg",
+   "w": 2272,
+   "h": 1704,
+   "license": "CC BY-SA 3.0",
+   "artist": "Dogvillan",
+   "date": "2012-09-28 10:28:03",
+   "desc": "Класичний вид на градирні Криворіжсталі з проспекту Металургів"
+  },
+  {
+   "title": "File:Zen-Amkr (1).jpg",
+   "thumb": "01_1.jpg",
+   "w": 720,
+   "h": 1050,
+   "license": "CC BY-SA 3.0",
+   "artist": "Вячеслав Евдокимов",
+   "date": "2016-08-27 19:06:04",
+   "desc": "Mikhail Kerzhakov"
+  },
+  {
+   "title": "File:Zen-Amkr (2).jpg",
+   "thumb": "01_2.jpg",
+   "w": 293,
+   "h": 572,
+   "license": "CC BY-SA 3.0",
+   "artist": "Вячеслав Евдокимов",
+   "date": "2016-08-27 18:29:31",
+   "desc": "Georgi Dzhikiya"
+  },
+  {
+   "title": "File:Производство катанки.jpg",
+   "thumb": "01_3.jpg",
+   "w": 5477,
+   "h": 3651,
+   "license": "CC BY-SA 4.0",
+   "artist": "ArcelorMittal Kryvyi Rih",
+   "date": "2017-04-12 09:07:34",
+   "desc": "Wire rod production at ArcelorMittal Kryvyi Rih"
+  },
+  {
+   "title": "File:Стела Криворожсталь.jpg",
+   "thumb": "01_4.jpg",
+   "w": 3998,
+   "h": 2666,
+   "license": "CC BY-SA 4.0",
+   "artist": "Половко Сергей Николаевич",
+   "date": "2021-09-25",
+   "desc": "Стела Криворожсталь"
+  },
+  {
+   "title": "File:Будівля відділу кадрів Арселор Міттал Кривий Ріг (cropped).jpg",
+   "thumb": "01_5.jpg",
+   "w": 4000,
+   "h": 2466,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2015-09-28 16:09:25",
+   "desc": "Пам’ятний знак на споруді, в якій працював керівник будівництва та перший директор Криворізького металургійного заводу ім. Леніна Я.І.Вєснік, Кривий Ріг, вул. Орджонікідзе, 1. Нині вулиця Криворіжстал"
+  },
+  {
+   "title": "File:Машина непрерывного литья заготовок.jpg",
+   "thumb": "01_6.jpg",
+   "w": 3272,
+   "h": 4907,
+   "license": "CC BY-SA 4.0",
+   "artist": "ArcelorMittal Kryvyi Rih",
+   "date": "2017-11-06 11:48:56",
+   "desc": "ArcelorMittal Kryvyi Rih Continuous Casting Machine"
+  },
+  {
+   "title": "File:Арматурный прокат.jpg",
+   "thumb": "01_7.jpg",
+   "w": 3861,
+   "h": 2574,
+   "license": "CC BY-SA 4.0",
+   "artist": "ArcelorMittal Kryvyi Rih",
+   "date": "2016-03-29 10:44:27",
+   "desc": "Reinforcing bars manufactured by ArcelorMittal Kryvyi Rih"
+  },
+  {
+   "title": "File:Kryvyi Rih 2014 - 02.jpg",
+   "thumb": "01_8.jpg",
+   "w": 3005,
+   "h": 1996,
+   "license": "CC BY 2.0",
+   "artist": "Alan Turgutoglu",
+   "date": "2014-06-03 15:51:20",
+   "desc": "OLYMPUS DIGITAL CAMERA\n\nKryvyi Rih 2014\n\nEurope's largest iron mining city. I was fascinated by the contrast between the red dust, the byproduct of the iron extraction process, and the green of the na"
+  },
+  {
+   "title": "File:Будівля відділу кадрів Арселор Міттал Кривий Ріг.jpg",
+   "thumb": "01_9.jpg",
+   "w": 4000,
+   "h": 3000,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2015-09-28 16:09:25",
+   "desc": "Пам’ятний знак на споруді, в якій працював керівник будівництва та перший директор Криворізького металургійного заводу ім. Леніна Я.І.Вєснік, Кривий Ріг, вул. Орджонікідзе, 1. Нині вулиця Криворіжстал"
+  }
+ ],
+ "Kryvyi Rih blast furnace filetype:bitmap": [
+  {
+   "title": "File:Пам’ятний знак на честь будівництва дев’ятої доменної печі.JPG",
+   "thumb": "02_0.jpg",
+   "w": 3000,
+   "h": 4000,
+   "license": "CC BY-SA 4.0",
+   "artist": "AntonovD",
+   "date": "2014-03-10 12:55:21",
+   "desc": "Пам’ятний знак на честь будівництва дев’ятої доменної печі"
+  },
+  {
+   "title": "File:Construction work on a new giant blast furnace ... iron-melting unit ... at Lenin Metallurgical Works in Krivoi Rog nearing completion.JPG",
+   "thumb": "02_1.jpg",
+   "w": 486,
+   "h": 500,
+   "license": "Public domain",
+   "artist": "Photo by A. Zapari (TASS).",
+   "date": "1960",
+   "desc": "Title: Construction work on a new giant blast furnace ... iron-melting unit ... at Lenin Metallurgical Works in Krivoi Rog nearing completion\nDate Created/Published: 1960 Dec.\nMedium: 1 photographic p"
+  },
+  {
+   "title": "File:Krivoi-Rog Iron Mining Company Stocks 08.jpg",
+   "thumb": "02_2.jpg",
+   "w": 942,
+   "h": 688,
+   "license": "Public domain",
+   "artist": "KR Mining Company",
+   "date": "2014-11-18",
+   "desc": "Krivoi Rog French Iron Mining Company Stocks"
+  },
+  {
+   "title": "File:Krivoi-Rog Iron Mining Company Stocks 05.jpg",
+   "thumb": "02_3.jpg",
+   "w": 834,
+   "h": 771,
+   "license": "Public domain",
+   "artist": "KR Mining Company",
+   "date": "2014-11-18",
+   "desc": "Krivoi Rog French Iron Mining Company Stocks"
+  },
+  {
+   "title": "File:Krivoi-Rog Iron Mining Company Stocks 01.JPG",
+   "thumb": "02_4.jpg",
+   "w": 1100,
+   "h": 800,
+   "license": "Public domain",
+   "artist": "KR Mining Company",
+   "date": "2014-11-18",
+   "desc": "Krivoi Rog French Iron Mining Company Stocks"
+  },
+  {
+   "title": "File:Вид доменного цеха завода Криворожсталь, разрушенного немцами.jpg",
+   "thumb": "02_5.jpg",
+   "w": 800,
+   "h": 262,
+   "license": "Public domain",
+   "artist": "Василий Малышев (ТАСС)",
+   "date": "1944-02",
+   "desc": "Вид доменного цеха металлургического завода \"Криворожсталь\", разрушенного немцами."
+  }
+ ],
+ "Kryvyi Rih iron ore quarry filetype:bitmap": [
+  {
+   "title": "File:Біогліфів Кривого Рогу.jpg",
+   "thumb": "03_0.jpg",
+   "w": 5472,
+   "h": 3648,
+   "license": "CC BY 4.0",
+   "artist": "Александр Водолазский",
+   "date": "2023-05-07 12:49:32",
+   "desc": "The name of the species comes from the Latin nodosus, meaning knotted. Type specimen No. TS-01/01, Geological Museum of the National University of Kryvyi Rih. Gleiavatsky quarry, Kryvyi Rih, Ukraine. "
+  },
+  {
+   "title": "File:Shakhta severnaya1.jpg",
+   "thumb": "03_1.jpg",
+   "w": 5800,
+   "h": 1992,
+   "license": "CC BY-SA 3.0",
+   "artist": "Pelex",
+   "date": "2009-09-01 18:14:09",
+   "desc": "Open pit mine for iron ore, Severnaya near Krivoi Rog, Ukraine."
+  }
+ ],
+ "Кривий Ріг металургійний комбінат filetype:bitmap": [
+  {
+   "title": "File:Градирні Криворіжсталі.jpg",
+   "thumb": "04_0.jpg",
+   "w": 2272,
+   "h": 1704,
+   "license": "CC BY-SA 3.0",
+   "artist": "Dogvillan",
+   "date": "2012-09-28 10:28:03",
+   "desc": "Класичний вид на градирні Криворіжсталі з проспекту Металургів"
+  },
+  {
+   "title": "File:Zen-Amkr (1).jpg",
+   "thumb": "04_1.jpg",
+   "w": 720,
+   "h": 1050,
+   "license": "CC BY-SA 3.0",
+   "artist": "Вячеслав Евдокимов",
+   "date": "2016-08-27 19:06:04",
+   "desc": "Mikhail Kerzhakov"
+  },
+  {
+   "title": "File:Zen-Amkr (2).jpg",
+   "thumb": "04_2.jpg",
+   "w": 293,
+   "h": 572,
+   "license": "CC BY-SA 3.0",
+   "artist": "Вячеслав Евдокимов",
+   "date": "2016-08-27 18:29:31",
+   "desc": "Georgi Dzhikiya"
+  },
+  {
+   "title": "File:Производство катанки.jpg",
+   "thumb": "04_3.jpg",
+   "w": 5477,
+   "h": 3651,
+   "license": "CC BY-SA 4.0",
+   "artist": "ArcelorMittal Kryvyi Rih",
+   "date": "2017-04-12 09:07:34",
+   "desc": "Wire rod production at ArcelorMittal Kryvyi Rih"
+  },
+  {
+   "title": "File:Стела Криворожсталь.jpg",
+   "thumb": "04_4.jpg",
+   "w": 3998,
+   "h": 2666,
+   "license": "CC BY-SA 4.0",
+   "artist": "Половко Сергей Николаевич",
+   "date": "2021-09-25",
+   "desc": "Стела Криворожсталь"
+  },
+  {
+   "title": "File:Будівля відділу кадрів Арселор Міттал Кривий Ріг (cropped).jpg",
+   "thumb": "04_5.jpg",
+   "w": 4000,
+   "h": 2466,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2015-09-28 16:09:25",
+   "desc": "Пам’ятний знак на споруді, в якій працював керівник будівництва та перший директор Криворізького металургійного заводу ім. Леніна Я.І.Вєснік, Кривий Ріг, вул. Орджонікідзе, 1. Нині вулиця Криворіжстал"
+  },
+  {
+   "title": "File:Машина непрерывного литья заготовок.jpg",
+   "thumb": "04_6.jpg",
+   "w": 3272,
+   "h": 4907,
+   "license": "CC BY-SA 4.0",
+   "artist": "ArcelorMittal Kryvyi Rih",
+   "date": "2017-11-06 11:48:56",
+   "desc": "ArcelorMittal Kryvyi Rih Continuous Casting Machine"
+  },
+  {
+   "title": "File:Арматурный прокат.jpg",
+   "thumb": "04_7.jpg",
+   "w": 3861,
+   "h": 2574,
+   "license": "CC BY-SA 4.0",
+   "artist": "ArcelorMittal Kryvyi Rih",
+   "date": "2016-03-29 10:44:27",
+   "desc": "Reinforcing bars manufactured by ArcelorMittal Kryvyi Rih"
+  },
+  {
+   "title": "File:Kryvyi Rih 2014 - 02.jpg",
+   "thumb": "04_8.jpg",
+   "w": 3005,
+   "h": 1996,
+   "license": "CC BY 2.0",
+   "artist": "Alan Turgutoglu",
+   "date": "2014-06-03 15:51:20",
+   "desc": "OLYMPUS DIGITAL CAMERA\n\nKryvyi Rih 2014\n\nEurope's largest iron mining city. I was fascinated by the contrast between the red dust, the byproduct of the iron extraction process, and the green of the na"
+  },
+  {
+   "title": "File:Будівля відділу кадрів Арселор Міттал Кривий Ріг.jpg",
+   "thumb": "04_9.jpg",
+   "w": 4000,
+   "h": 3000,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2015-09-28 16:09:25",
+   "desc": "Пам’ятний знак на споруді, в якій працював керівник будівництва та перший директор Криворізького металургійного заводу ім. Леніна Я.І.Вєснік, Кривий Ріг, вул. Орджонікідзе, 1. Нині вулиця Криворіжстал"
+  }
+ ],
+ "Криворіжсталь filetype:bitmap": [
+  {
+   "title": "File:Стела ВВв Криворіжсталі 03.JPG",
+   "thumb": "05_0.jpg",
+   "w": 4000,
+   "h": 3000,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2014-09-19 11:47:49",
+   "desc": "Complex of monuments for employees of Krivorizhstal, that died in Great Patriotic war. Kryvyi Rih, Ukraine"
+  },
+  {
+   "title": "File:Пам'ятник службовцям і робітникам комбінату \"Криворіжсталь\" полеглим на фронтах ВВВ.jpg",
+   "thumb": "05_1.jpg",
+   "w": 3888,
+   "h": 2592,
+   "license": "CC BY-SA 3.0",
+   "artist": "Mogway30",
+   "date": "2012-09-29 17:30:26",
+   "desc": "\n\n\n\n\nThis is a photo of a monument in Ukraine, number: 12-110-0061\n\n"
+  },
+  {
+   "title": "File:Градирні Криворіжсталі.jpg",
+   "thumb": "05_2.jpg",
+   "w": 2272,
+   "h": 1704,
+   "license": "CC BY-SA 3.0",
+   "artist": "Dogvillan",
+   "date": "2012-09-28 10:28:03",
+   "desc": "Класичний вид на градирні Криворіжсталі з проспекту Металургів"
+  },
+  {
+   "title": "File:Стела ВВв Криворіжсталі 01.JPG",
+   "thumb": "05_3.jpg",
+   "w": 4000,
+   "h": 3000,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2014-09-19 11:47:05",
+   "desc": "Complex of monuments for employees of Krivorizhstal, that died in Great Patriotic war. Kryvyi Rih, Ukraine"
+  },
+  {
+   "title": "File:Стела ВВв Криворіжсталі 21.JPG",
+   "thumb": "05_4.jpg",
+   "w": 3000,
+   "h": 4000,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2014-09-19 11:50:51",
+   "desc": "Complex of monuments for employees of Krivorizhstal, that died in Great Patriotic war. Kryvyi Rih, Ukraine"
+  },
+  {
+   "title": "File:Стела ВВв Криворіжсталі 02.JPG",
+   "thumb": "05_5.jpg",
+   "w": 4000,
+   "h": 3000,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2014-09-19 11:47:22",
+   "desc": "Complex of monuments for employees of Krivorizhstal, that died in Great Patriotic war. Kryvyi Rih, Ukraine"
+  },
+  {
+   "title": "File:Стела ВВв Криворіжсталі 06.JPG",
+   "thumb": "05_6.jpg",
+   "w": 3000,
+   "h": 4000,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2014-09-19 11:48:25",
+   "desc": "Complex of monuments for employees of Krivorizhstal, that died in Great Patriotic war. Kryvyi Rih, Ukraine"
+  },
+  {
+   "title": "File:Стела ВВв Криворіжсталі 08.JPG",
+   "thumb": "05_7.jpg",
+   "w": 3000,
+   "h": 4000,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2014-09-19 11:48:44",
+   "desc": "Complex of monuments for employees of Krivorizhstal, that died in Great Patriotic war. Kryvyi Rih, Ukraine"
+  },
+  {
+   "title": "File:Стела ВВв Криворіжсталі 16.JPG",
+   "thumb": "05_8.jpg",
+   "w": 3000,
+   "h": 4000,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2014-09-19 11:50:08",
+   "desc": "Complex of monuments for employees of Krivorizhstal, that died in Great Patriotic war. Kryvyi Rih, Ukraine"
+  },
+  {
+   "title": "File:Стела ВВв Криворіжсталі 07.JPG",
+   "thumb": "05_9.jpg",
+   "w": 3000,
+   "h": 4000,
+   "license": "CC BY-SA 4.0",
+   "artist": "WDKeeper",
+   "date": "2014-09-19 11:48:35",
+   "desc": "Complex of monuments for employees of Krivorizhstal, that died in Great Patriotic war. Kryvyi Rih, Ukraine"
+  }
+ ],
+ "coke oven battery filetype:bitmap": [
+  {
+   "title": "File:Appleby Coke Ovens - the battery - geograph.org.uk - 7466128.jpg",
+   "thumb": "06_0.jpg",
+   "w": 640,
+   "h": 427,
+   "license": "CC BY-SA 2.0",
+   "artist": "Chris Allen ",
+   "date": "2023-04-22",
+   "desc": "Appleby Coke Ovens - the battery "
+  },
+  {
+   "title": "File:Leetonia Bee Hive Coke Ovens Park 04.jpg",
+   "thumb": "06_1.jpg",
+   "w": 6000,
+   "h": 4000,
+   "license": "CC BY-SA 2.0",
+   "artist": "Tim Evanson",
+   "date": "2022-11-07 13:45:24",
+   "desc": "The Leetonia Beehive Coke Ovens in Leetonia, Ohio.\nThis is the second-largest coke oven facility still remaining in the United States.\nCoal and iron ore were right under the surface of Columbiana Coun"
+  },
+  {
+   "title": "File:Leetonia Bee Hive Coke Ovens Park 01.jpg",
+   "thumb": "06_2.jpg",
+   "w": 6000,
+   "h": 4000,
+   "license": "CC BY-SA 2.0",
+   "artist": "Tim Evanson",
+   "date": "2022-11-07 14:15:32",
+   "desc": "The Leetonia Beehive Coke Ovens in Leetonia, Ohio.\nThis is the second-largest coke oven facility still remaining in the United States.\nCoal and iron ore were right under the surface of Columbiana Coun"
+  },
+  {
+   "title": "File:Leetonia Bee Hive Coke Ovens Park 03.jpg",
+   "thumb": "06_3.jpg",
+   "w": 6000,
+   "h": 4000,
+   "license": "CC BY-SA 2.0",
+   "artist": "Tim Evanson",
+   "date": "2022-11-07 13:45:50",
+   "desc": "The Leetonia Beehive Coke Ovens in Leetonia, Ohio.\nThis is the second-largest coke oven facility still remaining in the United States.\nCoal and iron ore were right under the surface of Columbiana Coun"
+  },
+  {
+   "title": "File:Leetonia Bee Hive Coke Ovens Park 02.jpg",
+   "thumb": "06_4.jpg",
+   "w": 6000,
+   "h": 4000,
+   "license": "CC BY-SA 2.0",
+   "artist": "Tim Evanson",
+   "date": "2022-11-07 14:02:07",
+   "desc": "The Leetonia Beehive Coke Ovens in Leetonia, Ohio.\nThis is the second-largest coke oven facility still remaining in the United States.\nCoal and iron ore were right under the surface of Columbiana Coun"
+  },
+  {
+   "title": "File:Dunlap-coke-ovens-amphitheater-tn1.jpg",
+   "thumb": "06_5.jpg",
+   "w": 1841,
+   "h": 1353,
+   "license": "CC BY 3.0",
+   "artist": "Brian Stansberry (photographer)",
+   "date": "2008-11-30",
+   "desc": "Amphitheater at Dunlap Coke Ovens Park in Dunlap, Tennessee, USA.  A battery of coke ovens spans the photo behind the amphitheater.  The amphitheater, built using wood from a dismantled railroad trest"
+  },
+  {
+   "title": "File:FRONT (SOUTH SIDE) OF COKE OVEN BATTERY. - Lombard Coke Ovens, North Bank of Missouri River near Toston Dam Reservoir, Toston, Broadwater County, MT HAER MONT,4-TOS.V,1-3.tif",
+   "thumb": "06_6.jpg",
+   "w": 5000,
+   "h": 3984,
+   "license": "Public domain",
+   "artist": "\nRelated names:\n\nWestern Coal and Coke Company",
+   "date": "Documentation compiled after 1968",
+   "desc": ""
+  },
+  {
+   "title": "File:SOUTH AND WEST SIDES OF COKE OVEN BATTERY, LOOKING EAST. - Lombard Coke Ovens, North Bank of Missouri River near Toston Dam Reservoir, Toston, Broadwater County, MT HAER MONT,4-TOS.V,1-4.tif",
+   "thumb": "06_7.jpg",
+   "w": 4998,
+   "h": 4020,
+   "license": "Public domain",
+   "artist": "",
+   "date": "",
+   "desc": ""
+  },
+  {
+   "title": "File:20260425 Coke plant of Völklingen Ironworks 04.jpg",
+   "thumb": "06_8.jpg",
+   "w": 5791,
+   "h": 3257,
+   "license": "CC BY-SA 4.0",
+   "artist": "Flocci Nivis",
+   "date": "Taken on 25 April 2026, 15:47:49",
+   "desc": "Coke oven battery of the coke plant of Völklingen Ironworks in Völklingen, Germany, from above."
+  },
+  {
+   "title": "File:COKE OVEN BATTERIES AT A COKE PLANT OWNED BY THE UNITED STATES STEEL CORPORATION. IT IS LOCATED ALONG THE MONONGAHELA... - NARA - 557221.jpg",
+   "thumb": "06_9.jpg",
+   "w": 2022,
+   "h": 3000,
+   "license": "Public domain",
+   "artist": "John L. Alexandrowicz",
+   "date": "May 1973date QS:P571,+1973-05-00T00:00:00Z/10",
+   "desc": ""
+  }
+ ]
+}
