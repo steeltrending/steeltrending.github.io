@@ -1,13 +1,34 @@
 {
  "items": [
   {
+   "id": "2026-10-us-canada-tariffs",
+   "category": "trade",
+   "title": "美加關稅戰升級：鋼鋁互課 50%，談判凍結",
+   "period": "2026-10",
+   "published": "2026-10-04",
+   "summary": "8 月談判破局後美加互加 50% 關稅，加拿大對美鋼鋁加倍到 50%，美國再禁止約 10 億美元加拿大商品進口。",
+   "tags": [
+    "美國",
+    "加拿大",
+    "232 條款",
+    "鋼鋁關稅"
+   ],
+   "image": "assets/articles/2026-10-us-canada-tariffs.jpg",
+   "url": "articles/2026-10-us-canada-tariffs.html"
+  },
+  {
    "id": "2026-09-raw-materials",
    "category": "materials",
    "title": "2026年9月 鋼鐵原物料月報",
    "period": "2026-09",
    "published": "2026-10-04",
    "summary": "煤強礦弱：冶金煤因供給偏緊漲到約每噸 275 美元（中鋼），鐵礦砂在中國減產壓力下滑到五週低點，台灣廢鋼中旬起連三週上漲。",
-   "tags": ["鐵礦砂", "焦煤", "廢鋼", "能源與碳成本"],
+   "tags": [
+    "鐵礦砂",
+    "焦煤",
+    "廢鋼",
+    "能源與碳成本"
+   ],
    "url": "articles/2026-09-raw-materials.html"
   }
  ]
