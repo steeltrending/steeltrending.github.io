@@ -28,6 +28,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 </a>
 <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 15px">
 <a href="#daily" style="color: #C9CDD2; text-decoration: none; padding: 12px 12px">每日速報</a>
+<a href="stocks.html" style="color: #C9CDD2; text-decoration: none; padding: 12px 12px">全球鋼鐵股</a>
 <a href="archive.html" style="color: #C9CDD2; text-decoration: none; padding: 12px 12px">過去詳情</a>
 <a href="#topics" style="color: #C9CDD2; text-decoration: none; padding: 12px 12px">關注主題</a>
 <a href="#about" style="color: #C9CDD2; text-decoration: none; padding: 12px 12px">關於</a>
@@ -65,6 +66,7 @@ Facebook 粉專</a>
 <div style="padding: 12px 20px; border-top: 1px solid #2A2F35; display: flex; flex-direction: column; gap: 4px">
 <span id="stocks-updated" style="font-size: 14px; color: #C9CDD2">資料更新：—</span>
 <span style="font-size: 12px; line-height: 1.6; color: #9AA0A6">收盤價以各交易所當地幣別計；日期為該股最近交易日。僅供參考，不構成投資建議。</span>
+<a href="stocks.html" style="align-self: flex-start; color: #FF8A47; text-decoration: none; font-size: 14px; padding: 8px 0 0">查看七大地區 21 檔明細 →</a>
 </div>
 </section>
 </section>
@@ -283,7 +285,7 @@ document.getElementById('mail-btn').addEventListener('click', function () {
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) {
       box.textContent = '';
-      var list = d.items || [];
+      var list = (d.items || []).filter(function (it) { return !it.rank || it.rank === 1; });
       list.forEach(function (it, i) {
         var row = el('div', 'display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 20px' + (i < list.length - 1 ? '; border-bottom: 1px solid #22262B' : ''));
         row.appendChild(el('span', 'font-size: 13px; color: #9AA0A6', it.region));

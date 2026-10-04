@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>全球鋼鐵股 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="七大地區、21 檔鋼鐵業代表股的最新收盤價與漲跌幅，每日更新。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.up{color:#FF8A47}.down{color:#8DB4D6}.flat{color:#9AA0A6}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+
+/* overview */
+.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid #2A2F35;border-left:1px solid #2A2F35}
+.ov{padding:16px 18px;border-right:1px solid #2A2F35;border-bottom:1px solid #2A2F35;background:#15181B;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit}
+.ov:hover,.ov:focus-visible{background:#1A1E22;outline:none}
+.ov .r{font-size:15px;font-weight:700;color:#E8E6E1}
+.ov .v{font-size:22px;font-weight:600}
+.ov .s{font-size:12px;color:#9AA0A6}
+
+/* bars */
+.bars{display:flex;flex-direction:column;gap:2px}
+.bar-row{display:grid;grid-template-columns:150px minmax(0,1fr) 72px;gap:12px;align-items:center;min-height:28px}
+.bar-row .n{font-size:13px;color:#C9CDD2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-track{position:relative;height:14px}
+.bar-track::before{content:"";position:absolute;left:50%;top:-4px;bottom:-4px;border-left:1px solid #3A3F46}
+.bar{position:absolute;top:0;height:100%}
+.bar.up{background:#FF6A1A}.bar.down{background:#5E8DB8}
+.bar-row .p{text-align:right;font-size:13px}
+.bar-group{font-size:12px;letter-spacing:.12em;color:#9AA0A6;padding:12px 0 4px;border-top:1px solid #22262B;margin-top:6px}
+.bar-group:first-child{border-top:0;margin-top:0;padding-top:0}
+
+/* region tables */
+.region{margin-top:48px;scroll-margin-top:24px}
+.region h3{margin:0 0 4px;font-size:24px;font-weight:900;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.region h3 small{font-size:14px;font-weight:500}
+.tbl-wrap{overflow-x:auto;border:1px solid #2A2F35;margin-top:14px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:720px}
+th,td{padding:14px 16px;border-bottom:1px solid #22262B;text-align:right;white-space:nowrap}
+th{background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+th:nth-child(-n+3),td:nth-child(-n+3){text-align:left}
+tbody tr:last-child td{border-bottom:0}
+td .nm{font-weight:700;font-size:15px;color:#E8E6E1;display:flex;align-items:center;gap:8px}
+td .tk{font-size:12px;color:#9AA0A6;margin-top:3px}
+.lead{font-size:11px;border:1px solid #FF6A1A;color:#FFB07F;padding:1px 6px;font-weight:500;letter-spacing:.04em}
+.stale{font-size:11px;border:1px solid #6B5A2E;color:#D9B66A;padding:1px 6px;margin-left:6px}
+@media (max-width:640px){.wrap{padding:0 16px}.bar-row{grid-template-columns:96px minmax(0,1fr) 60px;gap:8px}}
+</style>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="stocks.html" aria-current="page" style="color:#FF8A47;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<a href="archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:64px;padding-bottom:96px">
+<p class="mono" style="margin:0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">GLOBAL STEEL STOCKS</p>
+<h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">全球鋼鐵股</h1>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:44em">七大地區、21 檔鋼鐵業代表股的最新收盤價與漲跌幅。各股以當地交易所幣別計價，日期為該股最近交易日。</p>
+<p id="updated" style="margin:16px 0 0;font-size:14px;color:#C9CDD2">資料更新：—</p>
+
+<section aria-labelledby="ov-h" style="margin-top:48px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="ov-h" style="margin:0;font-size:20px;font-weight:900">地區平均漲跌幅</h2>
+<span class="lbl">REGION AVERAGE</span>
+</div>
+<div id="overview" class="overview"><p style="margin:0;padding:16px;color:#9AA0A6">載入中…</p></div>
+<p style="margin:10px 0 0;font-size:13px;color:#9AA0A6">各地區三檔漲跌幅的簡單平均，點選可跳到該地區明細。</p>
+</section>
+
+<section aria-labelledby="bars-h" style="margin-top:56px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="bars-h" style="margin:0;font-size:20px;font-weight:900">21 檔漲跌幅比較</h2>
+<span class="lbl">DAILY CHANGE %</span>
+</div>
+<div style="border:1px solid #2A2F35;background:#15181B;padding:20px">
+<div id="bars" class="bars"></div>
+<p style="margin:14px 0 0;font-size:13px;line-height:1.7;color:#9AA0A6">各股幣別不同，這裡只比較當日漲跌幅（%），股價水準請見下方明細。<span class="up">橘色 ▲</span> 為上漲，<span class="down">藍色 ▼</span> 為下跌。</p>
+</div>
+</section>
+
+<section aria-labelledby="detail-h" style="margin-top:56px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
+<h2 id="detail-h" style="margin:0;font-size:20px;font-weight:900">各地區明細</h2>
+<span class="lbl">DETAIL BY REGION</span>
+</div>
+<div id="regions"></div>
+</section>
+
+<p style="margin:56px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6">註：ArcelorMittal 以紐約證交所美元報價，因總部與主要產能在歐洲，歸類為歐洲代表股；東南亞跨越南、印尼、馬來西亞各取一檔。標示「資料較舊」者為該股可查得之最近收盤日明顯早於其他個股。各市場遇假日休市時沿用最近交易日資料。內容僅供參考，不構成投資建議。</p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+
+<script>
+(function () {
+  var ORDER = ['台灣', '中國', '日韓', '美國', '歐洲', '東南亞', '印度'];
+  var SLUG = { '台灣': 'tw', '中國': 'cn', '日韓': 'jpkr', '美國': 'us', '歐洲': 'eu', '東南亞': 'sea', '印度': 'in' };
+  var DEC = { KRW: 0, VND: 0, IDR: 0, MYR: 3 };
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function isNum(v) { return typeof v === 'number' && isFinite(v); }
+  function dir(p) { return !isNum(p) ? 'flat' : p > 0 ? 'up' : p < 0 ? 'down' : 'flat'; }
+  function pct(p) {
+    if (!isNum(p)) return '—';
+    return (p > 0 ? '▲ ' : p < 0 ? '▼ ' : '— ') + Math.abs(p).toFixed(2) + '%';
+  }
+  function num(v, cur, signed) {
+    if (!isNum(v)) return '—';
+    var d = DEC[cur] != null ? DEC[cur] : 2;
+    var s = Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+    if (signed) s = (v > 0 ? '+' : v < 0 ? '−' : '') + s;
+    return s;
+  }
+  function md(iso) { return iso ? iso.slice(5, 10).replace('-', '/') : '—'; }
+
+  fetch('data/stocks.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(render)
+    .catch(function () {
+      document.getElementById('overview').textContent = '股價資料暫時無法載入，請稍後再試。';
+    });
+
+  function render(d) {
+    var items = d.items || [];
+    var u = d.updated;
+    document.getElementById('updated').textContent =
+      '資料更新：' + (u ? String(u).slice(0, 10).replace(/-/g, '.') + ' ' + String(u).slice(11, 16) + '（台北）' : '—');
+
+    // newest trading date across all stocks, for staleness tags
+    var newest = items.reduce(function (m, it) { return it.asof && it.asof > m ? it.asof : m; }, '');
+    function stale(it) {
+      if (!it.asof || !newest) return false;
+      return (new Date(newest) - new Date(it.asof)) / 86400000 >= 5;
+    }
+
+    var groups = ORDER.map(function (r) {
+      return { region: r, list: items.filter(function (it) { return it.region === r; })
+        .sort(function (a, b) { return (a.rank || 9) - (b.rank || 9); }) };
+    }).filter(function (g) { return g.list.length; });
+
+    // overview
+    var ov = document.getElementById('overview');
+    ov.textContent = '';
+    groups.forEach(function (g) {
+      var ps = g.list.map(function (it) { return it.change_pct; }).filter(isNum);
+      var avg = ps.length ? ps.reduce(function (a, b) { return a + b; }, 0) / ps.length : null;
+      var a = el('a', 'ov');
+      a.href = '#' + SLUG[g.region];
+      a.appendChild(el('span', 'r', g.region));
+      a.appendChild(el('span', 'v mono ' + dir(avg), pct(avg)));
+      var up = ps.filter(function (p) { return p > 0; }).length;
+      var dn = ps.filter(function (p) { return p < 0; }).length;
+      a.appendChild(el('span', 's', '漲 ' + up + '・跌 ' + dn + '・平 ' + (ps.length - up - dn)));
+      ov.appendChild(a);
+    });
+
+    // bars
+    var bars = document.getElementById('bars');
+    bars.textContent = '';
+    var maxAbs = items.reduce(function (m, it) { return isNum(it.change_pct) ? Math.max(m, Math.abs(it.change_pct)) : m; }, 0) || 1;
+    maxAbs = Math.ceil(maxAbs);
+    groups.forEach(function (g) {
+      bars.appendChild(el('div', 'bar-group', g.region));
+      g.list.forEach(function (it) {
+        var row = el('div', 'bar-row');
+        row.appendChild(el('span', 'n', it.name));
+        var tr = el('div', 'bar-track');
+        tr.setAttribute('role', 'img');
+        tr.setAttribute('aria-label', it.name + ' 漲跌幅 ' + pct(it.change_pct));
+        if (isNum(it.change_pct) && it.change_pct !== 0) {
+          var b = el('span', 'bar ' + dir(it.change_pct));
+          var w = Math.abs(it.change_pct) / maxAbs * 50;
+          b.style.width = Math.max(w, 0.6) + '%';
+          b.style.left = it.change_pct > 0 ? '50%' : (50 - w) + '%';
+          tr.appendChild(b);
+        }
+        row.appendChild(tr);
+        row.appendChild(el('span', 'p mono ' + dir(it.change_pct), pct(it.change_pct)));
+        bars.appendChild(row);
+      });
+    });
+
+    // region tables
+    var wrap = document.getElementById('regions');
+    wrap.textContent = '';
+    groups.forEach(function (g) {
+      var sec = el('section', 'region');
+      sec.id = SLUG[g.region];
+      var h = el('h3', null, g.region + '代表股');
+      var countries = g.list.map(function (it) { return it.country; })
+        .filter(function (c, i, a) { return c && a.indexOf(c) === i; }).join('・');
+      h.appendChild(el('small', 'flat', countries));
+      sec.appendChild(h);
+
+      var tw = el('div', 'tbl-wrap');
+      var t = el('table');
+      var cap = el('caption', null, g.region + '代表股明細');
+      cap.style.cssText = 'position:absolute;left:-9999px';
+      t.appendChild(cap);
+      var thead = el('thead'), hr = el('tr');
+      ['個股', '國家', '交易所', '收盤價', '漲跌', '漲跌幅', '交易日'].forEach(function (x) {
+        var th = el('th', null, x); th.scope = 'col'; hr.appendChild(th);
+      });
+      thead.appendChild(hr); t.appendChild(thead);
+      var tb = el('tbody');
+      g.list.forEach(function (it) {
+        var r = el('tr');
+        var c1 = el('td');
+        var nm = el('div', 'nm', it.name);
+        if (it.rank === 1) nm.appendChild(el('span', 'lead', '首頁代表'));
+        c1.appendChild(nm);
+        c1.appendChild(el('div', 'tk mono', it.ticker));
+        r.appendChild(c1);
+        r.appendChild(el('td', null, it.country || '—'));
+        r.appendChild(el('td', null, it.exchange || '—'));
+        var cp = el('td', 'mono');
+        cp.appendChild(el('span', null, num(it.price, it.currency)));
+        cp.appendChild(el('span', 'flat', ' ' + it.currency));
+        r.appendChild(cp);
+        r.appendChild(el('td', 'mono ' + dir(it.change), num(it.change, it.currency, true)));
+        r.appendChild(el('td', 'mono ' + dir(it.change_pct), pct(it.change_pct)));
+        var dt = el('td', 'mono', it.asof || '—');
+        if (stale(it)) dt.appendChild(el('span', 'stale', '資料較舊'));
+        r.appendChild(dt);
+        tb.appendChild(r);
+      });
+      t.appendChild(tb); tw.appendChild(t); sec.appendChild(tw);
+      wrap.appendChild(sec);
+    });
+  }
+})();
+</script>
+</body>
+</html>
