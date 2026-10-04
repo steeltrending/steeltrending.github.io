@@ -1,0 +1,42 @@
+name: 彙整中鋼新聞
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/report/**
+      - tools/build_csc_news.py
+      - .github/workflows/csc-news.yml
+  schedule:
+    # 每天台北時間 09:20（UTC 01:20），在每日速報更新之後補跑一次
+    - cron: "20 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: csc-news
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 tools/build_csc_news.py
+      - name: 提交更新
+        run: |
+          git config user.name "steeltrending"
+          git config user.email "noreply@steeltrending.github.io"
+          git add data/csc_news.json
+          if git diff --cached --quiet; then echo "沒有新資料"; exit 0; fi
+          git commit -m "中鋼新聞自動彙整 $(TZ=Asia/Taipei date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep 5
+          done
+          exit 1

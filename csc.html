@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>中鋼新聞專區 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="中鋼盤價、營運、貿易救濟與集團動態，從鋼鐵潮流每日速報自動彙整。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+.up{color:#FF8A47}.down{color:#8DB4D6}.flat{color:#9AA0A6}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:48px;align-items:start;margin-top:48px}
+.month{margin:0 0 4px;font-size:20px;font-weight:900;display:flex;align-items:baseline;gap:10px;padding-top:28px}
+.month:first-child{padding-top:0}
+.news{display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid #22262B}
+.news .d{font-family:'IBM Plex Mono',monospace;font-size:15px;color:#FF6A1A;padding-top:2px}
+.news p{margin:0 0 8px;font-size:16px;line-height:1.85;color:#E8E6E1}
+.news .meta{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13px;color:#9AA0A6;align-items:center}
+.news .rep{border:1px solid #3A3F46;padding:1px 8px;font-size:12px;color:#C9CDD2}
+.side{border:1px solid #2A2F35;background:#15181B;position:sticky;top:24px}
+.side .hd{display:flex;justify-content:space-between;align-items:baseline;padding:16px 18px;border-bottom:1px solid #2A2F35}
+.side .bd{padding:18px;display:flex;flex-direction:column;gap:10px}
+.side svg{display:block;width:100%;height:90px}
+.search{width:100%;box-sizing:border-box;background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;min-height:44px;padding:0 12px}
+.search:focus{outline:2px solid #FF6A1A;outline-offset:-1px}
+@media (max-width:900px){.layout{grid-template-columns:1fr}.side{position:static;order:-1}}
+@media (max-width:640px){.wrap{padding:0 16px}.news{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<a href="archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="./#topics" style="text-decoration:none">關注主題</a> <span aria-hidden="true">›</span> 中鋼新聞專區</nav>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">CHINA STEEL NEWS</p>
+<h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">中鋼新聞專區</h1>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:44em">中鋼盤價、營運、貿易救濟與集團動態。內容從鋼鐵潮流每日速報自動彙整，同一事件被多家媒體重複報導時只列最早的一則。</p>
+
+<div class="layout">
+<section aria-labelledby="news-h">
+<h2 id="news-h" style="position:absolute;left:-9999px">中鋼新聞列表</h2>
+<label for="q" style="position:absolute;left:-9999px">搜尋中鋼新聞</label>
+<input id="q" class="search" type="search" placeholder="搜尋，例如：盤價、營收、反傾銷">
+<p id="count" class="lbl" style="margin:14px 0 20px"></p>
+<div id="list"><p style="color:#9AA0A6">載入中…</p></div>
+</section>
+
+<aside class="side" aria-labelledby="stk-h">
+<div class="hd"><h2 id="stk-h" style="margin:0;font-size:16px;font-weight:700"><a href="stock.html?k=tw" style="color:#E8E6E1;text-decoration:none">中鋼股價</a></h2><span class="lbl">2002.TW</span></div>
+<div class="bd">
+<div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><span id="px" class="mono" style="font-size:30px;font-weight:600">—</span><span class="mono flat">TWD</span><span id="chg" class="mono"></span></div>
+<div id="spark" aria-hidden="true"></div>
+<span id="ytd" style="font-size:13px;color:#9AA0A6"></span>
+<a href="stock.html?k=tw" style="font-size:14px;text-decoration:none;padding:6px 0">看完整走勢 →</a>
+</div>
+</aside>
+</div>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+
+<script>
+(function () {
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function isNum(v) { return typeof v === 'number' && isFinite(v); }
+  var ALL = [];
+
+  fetch('data/csc_news.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) { ALL = d.items || []; render(''); })
+    .catch(function () { document.getElementById('list').textContent = '新聞資料暫時無法載入，請稍後再試。'; });
+
+  document.getElementById('q').addEventListener('input', function (e) { render(e.target.value.trim()); });
+
+  function render(q) {
+    var list = document.getElementById('list'); list.textContent = '';
+    var items = q ? ALL.filter(function (it) { return (it.text + it.source).indexOf(q) >= 0; }) : ALL;
+    document.getElementById('count').textContent = (q ? '找到 ' : '共 ') + items.length + ' 則';
+    if (!items.length) { list.appendChild(el('p', 'flat', '沒有符合的新聞。')); return; }
+    var cur = '';
+    items.forEach(function (it) {
+      var ym = it.date.slice(0, 7);
+      if (ym !== cur) {
+        cur = ym;
+        var h = el('h3', 'month', Number(ym.slice(5)) + ' 月');
+        h.appendChild(el('span', 'lbl', ym.slice(0, 4)));
+        list.appendChild(h);
+      }
+      var row = el('article', 'news');
+      row.appendChild(el('span', 'd', it.date.slice(5).replace('-', '/')));
+      var body = el('div');
+      body.appendChild(el('p', null, it.text));
+      var meta = el('div', 'meta');
+      if (it.source) meta.appendChild(el('span', null, '來源：' + it.source));
+      if (it.repeats) meta.appendChild(el('span', 'rep', '後續 ' + it.repeats + ' 則相關報導' + (it.last_seen ? '・至 ' + it.last_seen.slice(5).replace('-', '/') : '')));
+      var a = el('a', null, '當日速報 →'); a.href = it.report; a.style.textDecoration = 'none';
+      meta.appendChild(a);
+      body.appendChild(meta);
+      row.appendChild(body);
+      list.appendChild(row);
+    });
+  }
+
+  Promise.all([
+    fetch('data/stocks.json', { cache: 'no-store' }).then(function (r) { return r.json(); }),
+    fetch('data/history/tw.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+  ]).then(function (res) {
+    var it = (res[0].items || []).filter(function (x) { return x.key === 'tw'; })[0];
+    if (!it) return;
+    document.getElementById('px').textContent = isNum(it.price) ? it.price.toFixed(2) : '—';
+    var c = document.getElementById('chg'), p = it.change_pct;
+    if (isNum(p)) { c.textContent = (p > 0 ? '▲ ' : p < 0 ? '▼ ' : '— ') + Math.abs(p).toFixed(2) + '%'; c.className = 'mono ' + (p > 0 ? 'up' : p < 0 ? 'down' : 'flat'); }
+    var pts = res[1] && res[1].points;
+    if (pts && pts.length > 1) {
+      var vals = pts.map(function (x) { return x[1]; }), lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals), sp = hi - lo || 1;
+      var d = vals.map(function (v, i) { return (i ? 'L' : 'M') + (i / (vals.length - 1) * 300).toFixed(1) + ' ' + (4 + (1 - (v - lo) / sp) * 82).toFixed(1); }).join('');
+      var ret = (vals[vals.length - 1] - vals[0]) / vals[0] * 100, col = ret >= 0 ? '#FF6A1A' : '#5E8DB8';
+      document.getElementById('spark').innerHTML = '<svg viewBox="0 0 300 90" preserveAspectRatio="none"><path d="' + d + 'L300 90L0 90Z" fill="' + col + '" fill-opacity=".12"/><path d="' + d + '" fill="none" stroke="' + col + '" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>';
+      document.getElementById('ytd').textContent = '今年以來 ' + (ret >= 0 ? '▲ ' : '▼ ') + Math.abs(ret).toFixed(2) + '%（' + pts[0][0].slice(5).replace('-', '/') + ' 起）・收盤日 ' + it.asof;
+    }
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>
