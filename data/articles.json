@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-csc-drones-robot-dogs",
+   "category": "vehicles",
+   "title": "牽狗放鷹：中鋼的無人機與機器狗布局",
+   "period": "2026-10",
+   "published": "2026-10-04",
+   "summary": "中鋼一邊用機器狗與無人機巡檢鋼廠，一邊把 0.20 到 0.10 mm 的極薄電磁鋼片賣進無人機與機器人馬達。",
+   "tags": [
+    "中鋼",
+    "無人機",
+    "機器狗",
+    "電磁鋼片",
+    "機器人"
+   ],
+   "image": "assets/articles/2026-10-csc-drones-robot-dogs-spot.jpg",
+   "url": "articles/2026-10-csc-drones-robot-dogs.html"
+  },
+  {
    "id": "2026-10-eu-green-steel",
    "category": "decarb",
    "title": "歐洲綠鋼進度：氫氣退潮、電爐接棒",
