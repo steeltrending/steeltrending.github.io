@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "2026-10-hyundai-steel-louisiana",
+   "category": "mills",
+   "title": "現代製鐵路易斯安那廠：韓國鋼廠的美國突圍戰",
+   "period": "2026-10",
+   "published": "2026-10-04",
+   "summary": "現代製鐵聯手 POSCO 與現代、起亞，投資 58 億美元在路易斯安那建 DRI＋電爐一貫廠，年產 270 萬噸汽車鋼板，2029 年投產。",
+   "tags": [
+    "現代製鐵",
+    "POSCO",
+    "路易斯安那",
+    "DRI",
+    "電弧爐",
+    "232 條款"
+   ],
+   "image": "assets/articles/2026-10-hyundai-steel-louisiana-eaf.jpg",
+   "url": "articles/2026-10-hyundai-steel-louisiana.html"
+  },
+  {
    "id": "2026-10-csc-drones-robot-dogs",
    "category": "vehicles",
    "title": "牽狗放鷹：中鋼的無人機與機器狗布局",
