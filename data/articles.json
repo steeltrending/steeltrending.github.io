@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "2026-10-taiwan-carbon",
+   "category": "carbon",
+   "title": "碳有價元年：台灣碳中和 2026 進度與鋼鐵業壓力",
+   "period": "2026-10",
+   "published": "2026-10-04",
+   "summary": "2026 年台灣碳費首次收費 49.7 億元，第二階段費率與 2028 年碳交易試辦接續登場；綠電落後目標，鋼鐵業碳成本壓力在後頭。",
+   "tags": [
+    "碳費",
+    "碳交易",
+    "NDC 3.0",
+    "CBAM",
+    "中鋼",
+    "再生能源"
+   ],
+   "image": "assets/articles/2026-10-taiwan-carbon-csc.jpg",
+   "url": "articles/2026-10-taiwan-carbon.html"
+  },
+  {
    "id": "2026-10-ai-steel",
    "category": "demand",
    "title": "AI 吃電也吃鋼：鋼鐵業的新需求與新工具",
