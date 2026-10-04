@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>個股走勢 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鋼鐵業代表股自 2026 年初以來的每日收盤走勢。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.up{color:#FF8A47}.down{color:#8DB4D6}.flat{color:#9AA0A6}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-top:1px solid #2A2F35;border-left:1px solid #2A2F35}
+.stat{padding:16px 18px;border-right:1px solid #2A2F35;border-bottom:1px solid #2A2F35;background:#15181B;display:flex;flex-direction:column;gap:6px}
+.stat .k{font-size:13px;color:#9AA0A6}
+.stat .v{font-size:22px;font-weight:600}
+.stat .s{font-size:12px;color:#9AA0A6}
+.chip{background:transparent;border:1px solid #3A3F46;color:#C9CDD2;font:inherit;font-size:14px;min-height:40px;min-width:56px;padding:0 14px;cursor:pointer}
+.chip:hover{border-color:#FF6A1A}
+.chip[aria-pressed="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+.chart-box{border:1px solid #2A2F35;background:#121417;padding:16px 12px 8px}
+.chart-wrap{position:relative;height:420px}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px}
+.pager a{display:inline-flex;flex-direction:column;gap:4px;border:1px solid #2A2F35;padding:14px 18px;text-decoration:none;color:#E8E6E1;min-width:200px}
+.pager a:hover{border-color:#FF6A1A}
+.pager a span:first-child{font-size:12px;color:#9AA0A6}
+details{margin-top:40px;border:1px solid #2A2F35}
+summary{cursor:pointer;padding:16px 18px;font-weight:700;background:#15181B;min-height:24px}
+.tbl-wrap{max-height:420px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:10px 16px;border-bottom:1px solid #22262B;text-align:right;white-space:nowrap}
+th{position:sticky;top:0;background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+th:first-child,td:first-child{text-align:left}
+@media (max-width:640px){.wrap{padding:0 16px}.chart-wrap{height:300px}.pager a{min-width:0;flex:1}}
+</style>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="stocks.html" style="color:#FF8A47;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<a href="archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="stocks.html" style="text-decoration:none">全球鋼鐵股</a> <span aria-hidden="true">›</span> <a id="crumb-region" href="stocks.html" style="text-decoration:none">—</a> <span aria-hidden="true">›</span> <span id="crumb">—</span></nav>
+
+<p id="eyebrow" class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">—</p>
+<h1 id="title" style="margin:10px 0 6px;font-size:clamp(30px,5vw,48px);font-weight:900;line-height:1.2">載入中…</h1>
+<p id="sub" style="margin:0;font-size:15px;color:#9AA0A6"></p>
+
+<div style="margin-top:28px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+<span id="last" class="mono" style="font-size:44px;font-weight:600">—</span>
+<span id="cur" class="mono" style="font-size:16px;color:#9AA0A6"></span>
+<span id="chg" class="mono" style="font-size:20px"></span>
+<span id="asof" style="font-size:14px;color:#9AA0A6"></span>
+</div>
+
+<section aria-labelledby="chart-h" style="margin-top:40px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="chart-h" style="margin:0;font-size:20px;font-weight:900">每日收盤走勢</h2>
+<div id="ranges" role="group" aria-label="時間範圍" style="display:flex;gap:8px;flex-wrap:wrap">
+<button class="chip" type="button" data-r="1M" aria-pressed="false">1 月</button>
+<button class="chip" type="button" data-r="3M" aria-pressed="false">3 月</button>
+<button class="chip" type="button" data-r="6M" aria-pressed="false">6 月</button>
+<button class="chip" type="button" data-r="YTD" aria-pressed="true">今年以來</button>
+</div>
+</div>
+<div class="chart-box">
+<div class="chart-wrap"><canvas id="chart" role="img" aria-label="每日收盤走勢圖"></canvas></div>
+<p id="empty" hidden style="margin:0;padding:120px 16px;text-align:center;color:#9AA0A6">這檔股票的歷史資料尚在建立中，之後每個交易日會自動累積。</p>
+</div>
+<p id="note" style="margin:10px 0 0;font-size:13px;line-height:1.7;color:#9AA0A6"></p>
+</section>
+
+<section aria-labelledby="stats-h" style="margin-top:40px">
+<h2 id="stats-h" style="margin:0 0 14px;font-size:20px;font-weight:900">區間統計 <span id="stats-range" class="lbl" style="margin-left:8px"></span></h2>
+<div id="stats" class="stats"></div>
+</section>
+
+<details>
+<summary>每日收盤明細</summary>
+<div class="tbl-wrap">
+<table>
+<caption style="position:absolute;left:-9999px">每日收盤明細</caption>
+<thead><tr><th scope="col">日期</th><th scope="col">收盤價</th><th scope="col">漲跌</th><th scope="col">漲跌幅</th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+</div>
+</details>
+
+<div id="pager" class="pager"></div>
+
+<p style="margin:48px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6">註：收盤價為未還原權息之原始收盤價，以交易所當地幣別計；除權息、分割等事件可能使走勢出現跳動。資料每個交易日自動累積。內容僅供參考，不構成投資建議。</p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function () {
+  var DEC = { KRW: 0, VND: 0, IDR: 0, MYR: 3 };
+  var ORDER = ['台灣', '中國', '日韓', '美國', '歐洲', '東南亞', '印度'];
+  var SLUG = { '台灣': 'tw', '中國': 'cn', '日韓': 'jpkr', '美國': 'us', '歐洲': 'eu', '東南亞': 'sea', '印度': 'in' };
+  var key = new URLSearchParams(location.search).get('k') || 'tw';
+  var $ = function (id) { return document.getElementById(id); };
+  var chart, info, pts = [];
+
+  function isNum(v) { return typeof v === 'number' && isFinite(v); }
+  function dir(v) { return !isNum(v) ? 'flat' : v > 0 ? 'up' : v < 0 ? 'down' : 'flat'; }
+  function num(v, signed) {
+    if (!isNum(v)) return '—';
+    var d = DEC[info.currency] != null ? DEC[info.currency] : 2;
+    var s = Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+    return signed ? (v > 0 ? '+' : v < 0 ? '−' : '') + s : s;
+  }
+  function pct(p) { return isNum(p) ? (p > 0 ? '▲ ' : p < 0 ? '▼ ' : '— ') + Math.abs(p).toFixed(2) + '%' : '—'; }
+  function dot(iso) { return iso ? iso.replace(/-/g, '.') : '—'; }
+
+  Promise.all([
+    fetch('data/stocks.json?ts=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }),
+    fetch('data/history/' + encodeURIComponent(key) + '.json?ts=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+  ]).then(function (res) {
+    var all = res[0].items || [];
+    info = all.filter(function (it) { return it.key === key; })[0];
+    if (!info) { $('title').textContent = '找不到這檔股票'; return; }
+    pts = (res[1] && res[1].points) || [];
+    // 若歷史檔尚未收進最新報價，補上 stocks.json 的最新一筆
+    if (info.asof && isNum(info.price) && (!pts.length || pts[pts.length - 1][0] < info.asof)) pts = pts.concat([[info.asof, info.price]]);
+    header(res[1]);
+    pager(all);
+    draw('YTD');
+  }).catch(function () { $('title').textContent = '資料暫時無法載入，請稍後再試。'; });
+
+  function header(h) {
+    document.title = info.name + '（' + info.ticker + '）走勢 · 鋼鐵潮流';
+    $('crumb').textContent = info.name;
+    $('crumb-region').textContent = info.region;
+    $('crumb-region').href = 'stocks.html#' + SLUG[info.region];
+    $('eyebrow').textContent = info.region + ' · ' + info.ticker;
+    $('title').textContent = info.name;
+    $('sub').textContent = [info.country, info.exchange, info.currency + ' 計價', info.rank === 1 ? '地區代表股' : null].filter(Boolean).join('・');
+    $('last').textContent = num(info.price);
+    $('cur').textContent = info.currency;
+    $('chg').className = 'mono ' + dir(info.change_pct);
+    $('chg').textContent = num(info.change, true) + '（' + pct(info.change_pct) + '）';
+    $('asof').textContent = '收盤日 ' + dot(info.asof);
+    var src = h && h.source ? '資料來源：' + h.source + '。' : '';
+    var upd = h && h.updated ? '最後抓取：' + String(h.updated).slice(0, 16).replace('T', ' ') + '（台北）。' : '';
+    $('note').textContent = src + upd + '自 2026-01-01 起共 ' + pts.length + ' 個交易日。';
+  }
+
+  function slice(range) {
+    if (!pts.length || range === 'YTD') return pts.slice();
+    var last = new Date(pts[pts.length - 1][0]);
+    var m = { '1M': 1, '3M': 3, '6M': 6 }[range];
+    var from = new Date(last); from.setMonth(from.getMonth() - m);
+    var f = from.toISOString().slice(0, 10);
+    return pts.filter(function (p) { return p[0] >= f; });
+  }
+
+  function draw(range) {
+    Array.prototype.forEach.call(document.querySelectorAll('#ranges .chip'), function (b) {
+      b.setAttribute('aria-pressed', b.dataset.r === range ? 'true' : 'false');
+    });
+    var s = slice(range);
+    stats(s, range);
+    table();
+    if (s.length < 2) { $('empty').hidden = false; document.querySelector('.chart-wrap').hidden = true; return; }
+    $('empty').hidden = true; document.querySelector('.chart-wrap').hidden = false;
+    var first = s[0][1], lastV = s[s.length - 1][1];
+    var color = lastV >= first ? '#FF6A1A' : '#5E8DB8';
+    var ctx = $('chart').getContext('2d');
+    var g = ctx.createLinearGradient(0, 0, 0, 420);
+    g.addColorStop(0, lastV >= first ? 'rgba(255,106,26,.28)' : 'rgba(94,141,184,.28)');
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    var data = {
+      labels: s.map(function (p) { return p[0]; }),
+      datasets: [{
+        data: s.map(function (p) { return p[1]; }),
+        borderColor: color, backgroundColor: g, fill: true, borderWidth: 2,
+        pointRadius: 0, pointHoverRadius: 4, pointHoverBackgroundColor: color, tension: 0.15
+      }, {
+        data: s.map(function () { return first; }),
+        borderColor: '#3A3F46', borderDash: [4, 4], borderWidth: 1, pointRadius: 0, pointHoverRadius: 0, fill: false
+      }]
+    };
+    if (chart) { chart.data = data; chart.update(); return; }
+    chart = new Chart(ctx, {
+      type: 'line', data: data,
+      options: {
+        responsive: true, maintainAspectRatio: false, animation: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            filter: function (i) { return i.datasetIndex === 0; },
+            backgroundColor: '#0B0C0E', borderColor: '#3A3F46', borderWidth: 1,
+            titleColor: '#E8E6E1', bodyColor: '#E8E6E1', displayColors: false,
+            titleFont: { family: 'IBM Plex Mono' }, bodyFont: { family: 'IBM Plex Mono', size: 14 },
+            callbacks: {
+              title: function (it) { return dot(it[0].label); },
+              label: function (it) {
+                var base = it.chart.data.datasets[0].data[0];
+                var v = it.parsed.y;
+                return [num(v) + ' ' + info.currency, '較區間起點 ' + pct((v - base) / base * 100)];
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: {
+              color: '#9AA0A6', maxRotation: 0, autoSkip: true, maxTicksLimit: window.innerWidth < 640 ? 4 : 8,
+              callback: function (v) { var l = this.getLabelForValue(v); return l.slice(5).replace('-', '/'); }
+            }
+          },
+          y: {
+            position: 'right', grid: { color: '#22262B' },
+            ticks: { color: '#9AA0A6', callback: function (v) { return Number(v).toLocaleString('en-US'); } }
+          }
+        }
+      }
+    });
+  }
+
+  function stats(s, range) {
+    var labels = { '1M': '近 1 個月', '3M': '近 3 個月', '6M': '近 6 個月', 'YTD': '今年以來' };
+    $('stats-range').textContent = labels[range] + (s.length ? '・' + dot(s[0][0]) + ' – ' + dot(s[s.length - 1][0]) : '');
+    var box = $('stats'); box.textContent = '';
+    if (!s.length) return;
+    var vals = s.map(function (p) { return p[1]; });
+    var hi = Math.max.apply(null, vals), lo = Math.min.apply(null, vals);
+    var hiD = s[vals.indexOf(hi)][0], loD = s[vals.indexOf(lo)][0];
+    var first = vals[0], last = vals[vals.length - 1];
+    var ret = (last - first) / first * 100;
+    var avg = vals.reduce(function (a, b) { return a + b; }, 0) / vals.length;
+    [
+      ['區間漲跌', pct(ret), 'mono ' + dir(ret), '起點 ' + num(first)],
+      ['區間最高', num(hi), 'mono', dot(hiD)],
+      ['區間最低', num(lo), 'mono', dot(loD)],
+      ['區間均價', num(avg), 'mono', s.length + ' 個交易日'],
+      ['距最高', pct((last - hi) / hi * 100), 'mono ' + dir((last - hi) / hi * 100), '最新 ' + num(last)]
+    ].forEach(function (x) {
+      var d = document.createElement('div'); d.className = 'stat';
+      var k = document.createElement('span'); k.className = 'k'; k.textContent = x[0];
+      var v = document.createElement('span'); v.className = 'v ' + x[2]; v.textContent = x[1];
+      var t = document.createElement('span'); t.className = 's'; t.textContent = x[3];
+      d.appendChild(k); d.appendChild(v); d.appendChild(t); box.appendChild(d);
+    });
+  }
+
+  function table() {
+    var tb = $('rows'); if (tb.childNodes.length) return;
+    for (var i = pts.length - 1; i >= 0; i--) {
+      var c = pts[i][1], p = i > 0 ? pts[i - 1][1] : null;
+      var ch = isNum(p) ? c - p : null, cp = isNum(p) && p ? (c - p) / p * 100 : null;
+      var tr = document.createElement('tr');
+      [[dot(pts[i][0]), 'mono'], [num(c), 'mono'], [num(ch, true), 'mono ' + dir(ch)], [pct(cp), 'mono ' + dir(cp)]].forEach(function (x) {
+        var td = document.createElement('td'); td.className = x[1]; td.textContent = x[0]; tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    }
+  }
+
+  function pager(all) {
+    var list = ORDER.flatMap(function (r) {
+      return all.filter(function (it) { return it.region === r; }).sort(function (a, b) { return a.rank - b.rank; });
+    });
+    var i = list.indexOf(info), box = $('pager');
+    [[list[i - 1], '← 上一檔'], [list[i + 1], '下一檔 →']].forEach(function (x, n) {
+      if (!x[0]) { box.appendChild(document.createElement('span')); return; }
+      var a = document.createElement('a');
+      a.href = 'stock.html?k=' + encodeURIComponent(x[0].key);
+      if (n) a.style.textAlign = 'right';
+      var s1 = document.createElement('span'); s1.textContent = n ? x[0].region + '・' + x[1] : x[1] + '・' + x[0].region;
+      var s2 = document.createElement('span'); s2.textContent = x[0].name;
+      a.appendChild(s1); a.appendChild(s2); box.appendChild(a);
+    });
+  }
+
+  document.getElementById('ranges').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-r]'); if (b && info) draw(b.dataset.r);
+  });
+})();
+</script>
+</body>
+</html>
