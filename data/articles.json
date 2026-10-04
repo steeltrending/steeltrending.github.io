@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "2026-10-trump-shipbuilding",
+   "category": "trade",
+   "title": "川普重振美國造船業：港口費、韓國資金與鋼板商機",
+   "period": "2026-10",
+   "published": "2026-10-05",
+   "summary": "川普以 301 港口費、海事行動計畫與外國造艦備忘錄重振美國造船業，韓國 1,500 億美元 MASGA 入局；鋼鐵關稅與造船厚板需求是鋼鐵業觀察重點。",
+   "tags": [
+    "川普",
+    "造船",
+    "301 條款",
+    "MASGA",
+    "韓華",
+    "厚板"
+   ],
+   "image": "assets/articles/2026-10-trump-shipbuilding-philly.jpg",
+   "url": "articles/2026-10-trump-shipbuilding.html"
+  },
+  {
    "id": "2026-10-iron-ore-mining",
    "category": "steel101",
    "title": "鐵礦砂從哪裡來：全球礦區分布與開採技術",
