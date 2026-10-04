@@ -1,0 +1,43 @@
+name: 更新鋼鐵股歷史股價
+
+on:
+  schedule:
+    # 每天台北時間 07:20 與 16:20（UTC 23:20、08:20）：前者收進美歐收盤，後者收進亞洲收盤
+    - cron: "20 23 * * *"
+    - cron: "20 8 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/fetch_history.py
+      - .github/workflows/stock-history.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stock-history
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet yfinance requests
+      - run: python3 tools/fetch_history.py
+      - name: 提交更新
+        run: |
+          git config user.name "steeltrending"
+          git config user.email "noreply@steeltrending.github.io"
+          git add data/history data/stocks.json
+          if git diff --cached --quiet; then echo "沒有新資料"; exit 0; fi
+          git commit -m "股價歷史自動更新 $(TZ=Asia/Taipei date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep 5
+          done
+          exit 1
