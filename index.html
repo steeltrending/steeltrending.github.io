@@ -53,22 +53,20 @@ Facebook 粉專</a>
 </div>
 </div>
 
-<!-- Hero side: brief schedule card -->
-<div style="border: 1px solid #2A2F35; background: #15181B">
-<div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #2A2F35; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #9AA0A6">
-<span>DAILY SCHEDULE</span><span>UTC+8 台北</span>
+<!-- Hero side: 七大地區龍頭鋼鐵股（資料：data/stocks.json，每日更新） -->
+<section aria-labelledby="stocks-title" style="border: 1px solid #2A2F35; background: #15181B; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 20px; border-bottom: 1px solid #2A2F35">
+<h2 id="stocks-title" style="margin: 0; font-size: 16px; font-weight: 700">七大地區龍頭鋼鐵股</h2>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #9AA0A6">STEEL STOCKS</span>
 </div>
-<div style="display: flex; flex-direction: column">
-<div style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; padding: 20px; border-bottom: 1px solid #22262B">
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600">08:30</span>
-<span style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 700; font-size: 16px">整理</span><span style="font-size: 14px; color: #9AA0A6; line-height: 1.6">彙整全球鋼廠、原料、政策與市場消息，篩選當日重點</span></span>
+<div id="stock-rows" style="display: flex; flex-direction: column">
+<p style="margin: 0; padding: 20px; color: #9AA0A6; font-size: 15px">股價載入中…</p>
 </div>
-<div style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; padding: 20px">
-<span style="font-family: 'IBM Plex Mono', monospace; font-size: 26px; font-weight: 600; color: #FF6A1A">08:45</span>
-<span style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 700; font-size: 16px">發布</span><span style="font-size: 14px; color: #9AA0A6; line-height: 1.6">速報圖卡同步發布於 Facebook 粉專與 YouTube 社群</span></span>
+<div style="padding: 12px 20px; border-top: 1px solid #2A2F35; display: flex; flex-direction: column; gap: 4px">
+<span id="stocks-updated" style="font-size: 14px; color: #C9CDD2">資料更新：—</span>
+<span style="font-size: 12px; line-height: 1.6; color: #9AA0A6">收盤價以各交易所當地幣別計；日期為該股最近交易日。僅供參考，不構成投資建議。</span>
 </div>
-</div>
-</div>
+</section>
 </section>
 
 <!-- HEAT COLOR STRIP -->
@@ -267,6 +265,55 @@ document.getElementById('mail-btn').addEventListener('click', function () {
       var box = document.getElementById('price-rows');
       box.textContent = '';
       box.appendChild(el('p', 'margin: 0; padding: 20px; color: #9AA0A6; font-size: 15px', '價格資料暫時無法載入，請稍後再試。'));
+    });
+})();
+</script>
+<script>
+(function () {
+  function el(tag, style, text) {
+    var e = document.createElement(tag);
+    if (style) e.setAttribute('style', style);
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function md(iso) { return iso ? String(iso).slice(5, 10).replace('-', '/') : '—'; }
+  var noDec = { KRW: 1, VND: 1, IDR: 1 };
+  var box = document.getElementById('stock-rows');
+  fetch('data/stocks.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      box.textContent = '';
+      var list = d.items || [];
+      list.forEach(function (it, i) {
+        var row = el('div', 'display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 20px' + (i < list.length - 1 ? '; border-bottom: 1px solid #22262B' : ''));
+        row.appendChild(el('span', 'font-size: 13px; color: #9AA0A6', it.region));
+        var mid = el('div', 'display: flex; flex-direction: column; gap: 2px; min-width: 0');
+        mid.appendChild(el('span', 'font-size: 15px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap', it.name));
+        mid.appendChild(el('span', "font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9AA0A6", it.ticker + ' · ' + md(it.asof)));
+        var right = el('div', 'display: flex; flex-direction: column; align-items: flex-end; gap: 2px');
+        var has = typeof it.price === 'number';
+        var dec = noDec[it.currency] ? 0 : 2;
+        right.appendChild(el('span', "font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; white-space: nowrap",
+          has ? it.price.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + ' ' + it.currency : '—'));
+        var p = it.change_pct, txt = '', color = '#9AA0A6';
+        if (typeof p === 'number') {
+          if (p > 0) { txt = '▲ ' + p.toFixed(2) + '%'; color = '#FF8A47'; }
+          else if (p < 0) { txt = '▼ ' + Math.abs(p).toFixed(2) + '%'; color = '#8DB4D6'; }
+          else txt = '— 0.00%';
+        }
+        right.appendChild(el('span', "font-family: 'IBM Plex Mono', monospace; font-size: 13px; white-space: nowrap; color: " + color, txt));
+        row.appendChild(mid);
+        row.appendChild(right);
+        box.appendChild(row);
+      });
+      if (!list.length) box.appendChild(el('p', 'margin: 0; padding: 20px; color: #9AA0A6; font-size: 15px', '股價資料準備中。'));
+      var u = d.updated;
+      document.getElementById('stocks-updated').textContent =
+        '資料更新：' + (u ? String(u).slice(0, 10).replace(/-/g, '.') + ' ' + String(u).slice(11, 16) + '（台北）' : '—');
+    })
+    .catch(function () {
+      box.textContent = '';
+      box.appendChild(el('p', 'margin: 0; padding: 20px; color: #9AA0A6; font-size: 15px', '股價資料暫時無法載入，請稍後再試。'));
     });
 })();
 </script>

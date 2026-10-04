@@ -1,0 +1,12 @@
+{
+  "updated": "2026-10-04T09:55:00+08:00",
+  "items": [
+    { "key": "tw",    "region": "台灣",   "name": "中鋼",           "ticker": "2002.TW",      "currency": "TWD", "price": 19.00,  "change": 0.05,  "change_pct": 0.26,  "asof": "2026-10-02" },
+    { "key": "cn",    "region": "中國",   "name": "寶鋼股份",       "ticker": "600019.SH",    "currency": "CNY", "price": 5.93,   "change": 0.08,  "change_pct": 1.37,  "asof": "2026-09-30" },
+    { "key": "jpkr",  "region": "日韓",   "name": "日本製鐵",       "ticker": "5401.T",       "currency": "JPY", "price": 684.70, "change": -0.80, "change_pct": -0.12, "asof": "2026-09-28" },
+    { "key": "us",    "region": "美國",   "name": "Nucor",          "ticker": "NUE",          "currency": "USD", "price": 240.39, "change": 4.41,  "change_pct": 1.87,  "asof": "2026-10-02" },
+    { "key": "eu",    "region": "歐洲",   "name": "ArcelorMittal",  "ticker": "MT",           "currency": "USD", "price": 64.51,  "change": -0.05, "change_pct": -0.08, "asof": "2026-10-02" },
+    { "key": "sea",   "region": "東南亞", "name": "Hoa Phat Group", "ticker": "HPG",          "currency": "VND", "price": 20050,  "change": 0,     "change_pct": 0.00,  "asof": "2026-10-02" },
+    { "key": "in",    "region": "印度",   "name": "Tata Steel",     "ticker": "TATASTEEL.NS", "currency": "INR", "price": 178.30, "change": -6.07, "change_pct": -3.26, "asof": "2026-10-01" }
+  ]
+}
