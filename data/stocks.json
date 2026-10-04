@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T10:05:00+08:00",
+ "updated": "2026-10-04T10:27:17+08:00",
  "items": [
   {
    "key": "tw",
@@ -94,10 +94,10 @@
    "country": "日本",
    "exchange": "東證",
    "currency": "JPY",
-   "price": 684.7,
-   "change": -0.8,
-   "change_pct": -0.12,
-   "asof": "2026-09-28"
+   "price": 642.5,
+   "change": -7.5,
+   "change_pct": -1.15,
+   "asof": "2026-10-02"
   },
   {
    "key": "jpkr2",
@@ -122,8 +122,8 @@
    "country": "韓國",
    "exchange": "KRX",
    "currency": "KRW",
-   "price": 311000,
-   "change": 4500,
+   "price": 311000.0,
+   "change": 4500.0,
    "change_pct": 1.47,
    "asof": "2026-10-02"
   },
@@ -192,9 +192,9 @@
    "country": "德國",
    "exchange": "XETRA",
    "currency": "EUR",
-   "price": 14.0,
-   "change": 0.28,
-   "change_pct": 2.08,
+   "price": 14.01,
+   "change": 0.29,
+   "change_pct": 2.11,
    "asof": "2026-10-02"
   },
   {
@@ -234,8 +234,8 @@
    "country": "印尼",
    "exchange": "IDX",
    "currency": "IDR",
-   "price": 216,
-   "change": 2,
+   "price": 216.0,
+   "change": 2.0,
    "change_pct": 0.93,
    "asof": "2026-10-02"
   },
@@ -262,9 +262,9 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 178.3,
-   "change": -6.07,
-   "change_pct": -3.26,
+   "price": 178.0,
+   "change": -6.3,
+   "change_pct": -3.42,
    "asof": "2026-10-01"
   },
   {
@@ -276,9 +276,9 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 1226.2,
-   "change": -27.2,
-   "change_pct": -2.17,
+   "price": 1233.0,
+   "change": -20.4,
+   "change_pct": -1.63,
    "asof": "2026-10-01"
   },
   {
@@ -290,9 +290,9 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 174.0,
-   "change": -7.6,
-   "change_pct": -4.19,
+   "price": 174.5,
+   "change": -6.99,
+   "change_pct": -3.85,
    "asof": "2026-10-01"
   }
  ]
