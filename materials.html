@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>原物料 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鋼鐵原物料最新期貨報價與每月原物料月報：鐵礦砂、焦煤、廢鋼與能源成本。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+.up{color:#FF8A47}.down{color:#8DB4D6}.flat{color:#9AA0A6}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-top:1px solid #2A2F35;border-left:1px solid #2A2F35}
+.pc{padding:18px;border-right:1px solid #2A2F35;border-bottom:1px solid #2A2F35;background:#15181B;display:flex;flex-direction:column;gap:6px}
+.pc .n{font-size:16px;font-weight:700}
+.pc .c{font-size:12px;color:#9AA0A6;line-height:1.5;min-height:36px}
+.pc .v{font-size:24px;font-weight:600}
+.pc .s{font-size:13px}
+.art{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;padding:28px 0;border-top:1px solid #2A2F35;text-decoration:none;color:inherit}
+.art:last-child{border-bottom:1px solid #2A2F35}
+.art:hover h3,.art:focus-visible h3{color:#FF8A47}
+.art .when{display:flex;flex-direction:column;gap:4px}
+.art .when b{font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:600;color:#FF6A1A;line-height:1}
+.art h3{margin:0 0 10px;font-size:22px;font-weight:900;line-height:1.4}
+.art p{margin:0 0 12px;font-size:15px;line-height:1.8;color:#9AA0A6}
+.tag{display:inline-block;border:1px solid #3A3F46;color:#C9CDD2;font-size:12px;padding:2px 8px;margin:0 6px 6px 0}
+@media (max-width:640px){.wrap{padding:0 16px}.art{grid-template-columns:1fr;gap:10px}}
+</style>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="materials.html" aria-current="page" style="color:#FF8A47;text-decoration:none;padding:12px">原物料</a>
+<a href="stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<a href="archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:64px;padding-bottom:96px">
+<p class="mono" style="margin:0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">RAW MATERIALS</p>
+<h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">原物料</h1>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:44em">鐵礦砂、焦煤、廢鋼決定每一噸鋼的成本。這裡有最新的期貨報價，以及每月整理的原物料月報。</p>
+
+<section aria-labelledby="px-h" style="margin-top:48px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="px-h" style="margin:0;font-size:20px;font-weight:900">最新原料報價</h2>
+<span class="lbl">FUTURES</span>
+</div>
+<div id="prices" class="prices"><p style="margin:0;padding:18px;color:#9AA0A6">價格載入中…</p></div>
+<p id="px-upd" style="margin:12px 0 0;font-size:14px;color:#C9CDD2">資料更新：—</p>
+<p style="margin:4px 0 0;font-size:13px;line-height:1.7;color:#9AA0A6">註：交易所期貨結算價，各品項以其最近交易日為準；中國交易所遇國定假日休市。僅供參考，不構成投資建議。</p>
+</section>
+
+<section aria-labelledby="art-h" style="margin-top:64px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px">
+<h2 id="art-h" style="margin:0;font-size:20px;font-weight:900">原物料月報</h2>
+<span class="lbl">MONTHLY REPORTS</span>
+</div>
+<div id="articles"><p style="color:#9AA0A6">載入中…</p></div>
+</section>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+
+<script>
+(function () {
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function isNum(v) { return typeof v === 'number' && isFinite(v); }
+  function fmt(n) { return Number(n).toLocaleString('en-US', { minimumFractionDigits: n % 1 ? 1 : 0, maximumFractionDigits: 2 }); }
+  function dot(iso) { return iso ? String(iso).slice(0, 10).replace(/-/g, '.') : ''; }
+
+  fetch('data/latest.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      var box = document.getElementById('prices'); box.textContent = '';
+      (d.items || []).forEach(function (it) {
+        var c = el('div', 'pc');
+        c.appendChild(el('span', 'n', it.name));
+        c.appendChild(el('span', 'c', it.contract));
+        c.appendChild(el('span', 'v mono', isNum(it.price) ? fmt(it.price) : '—'));
+        var ch = it.change, txt = it.unit || '', cls = 's mono flat';
+        if (isNum(ch)) {
+          if (ch > 0) { txt = '▲ ' + fmt(ch) + '  ' + txt; cls = 's mono up'; }
+          else if (ch < 0) { txt = '▼ ' + fmt(Math.abs(ch)) + '  ' + txt; cls = 's mono down'; }
+          else txt = '— 0  ' + txt;
+        }
+        c.appendChild(el('span', cls, txt));
+        c.appendChild(el('span', 'c', it.asof ? '交易日 ' + dot(it.asof) : '尚無資料'));
+        box.appendChild(c);
+      });
+      document.getElementById('px-upd').textContent = '資料更新：' + (d.updated ? dot(d.updated) + ' ' + String(d.updated).slice(11, 16) + '（台北）' : '—');
+    })
+    .catch(function () { document.getElementById('prices').textContent = '價格資料暫時無法載入，請稍後再試。'; });
+
+  fetch('data/articles.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var box = document.getElementById('articles'); box.textContent = '';
+      var list = (d.items || []).filter(function (a) { return a.category === 'materials'; })
+        .sort(function (a, b) { return a.period < b.period ? 1 : -1; });
+      if (!list.length) { box.appendChild(el('p', 'flat', '月報準備中。')); return; }
+      list.forEach(function (a) {
+        var link = el('a', 'art'); link.href = a.url;
+        var when = el('div', 'when');
+        var p = a.period.split('-');
+        when.appendChild(el('b', null, String(Number(p[1])) + ' 月'));
+        when.appendChild(el('span', 'lbl', p[0]));
+        link.appendChild(when);
+        var body = el('div');
+        body.appendChild(el('h3', null, a.title));
+        body.appendChild(el('p', null, a.summary));
+        var tags = el('div');
+        (a.tags || []).forEach(function (t) { tags.appendChild(el('span', 'tag', t)); });
+        body.appendChild(tags);
+        body.appendChild(el('span', 'lbl', '發布 ' + dot(a.published) + ' · 閱讀全文 →'));
+        link.appendChild(body);
+        box.appendChild(link);
+      });
+    })
+    .catch(function () { document.getElementById('articles').textContent = '月報清單暫時無法載入。'; });
+})();
+</script>
+</body>
+</html>
