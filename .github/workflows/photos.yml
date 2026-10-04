@@ -1,0 +1,19 @@
+name: tmp-photos
+on:
+  push:
+    branches: [tmp-photos]
+    paths: [queries.json]
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 fetch.py
+      - run: |
+          git config user.name steeltrending
+          git config user.email noreply@steeltrending.github.io
+          git add -A out
+          git commit -m "photo results" || true
+          git push
