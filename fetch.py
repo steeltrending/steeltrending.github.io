@@ -31,3 +31,10 @@ for t, name in q.get("download", {}).items():
     d = get({"action": "query", "format": "json", "titles": t, "prop": "imageinfo", "iiprop": "url", "iiurlwidth": 1280})
     p = list(d["query"]["pages"].values())[0]
     dl(p["imageinfo"][0]["thumburl"], "out/full/" + name)
+os.makedirs("out/raw", exist_ok=True)
+for name, url in q.get("urls", {}).items():
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        open("out/raw/" + name, "wb").write(urllib.request.urlopen(req, timeout=120).read())
+    except Exception as e:
+        open("out/raw/" + name + ".err", "w").write(str(e))
