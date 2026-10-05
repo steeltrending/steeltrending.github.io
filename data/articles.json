@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "2026-10-taiwan-construction-sep",
+   "category": "demand",
+   "title": "台灣營建業 9 月觀察：成交回溫、開工谷底，鋼筋漲價靠成本",
+   "period": "2026-09",
+   "published": "2026-10-05",
+   "summary": "9 月六都房市移轉 17,945 棟、年增 11.6%，但上半年住宅建照年減 28.2%、營造工資年增 8.12%；鋼筋漲價由廢鋼成本推動，營建用鋼呈現住宅弱、廠房與公共工程撐住的分化。",
+   "tags": [
+    "台灣營建",
+    "房市",
+    "建照",
+    "營造物價",
+    "鋼筋",
+    "豐興"
+   ],
+   "image": "assets/articles/2026-10-taiwan-construction-twins.jpg",
+   "url": "articles/2026-10-taiwan-construction-sep.html"
+  },
+  {
    "id": "carmarket-2026-09",
    "category": "demand",
    "series": "carmarket",
