@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-05T16:00:53+08:00",
+ "updated": "2026-10-05T16:40:43+08:00",
  "items": [
   {
    "key": "tw",
@@ -220,10 +220,10 @@
    "country": "越南",
    "exchange": "HOSE",
    "currency": "VND",
-   "price": 20050.0,
-   "change": 0.0,
-   "change_pct": 0.0,
-   "asof": "2026-10-02"
+   "price": 20500.0,
+   "change": 450.0,
+   "change_pct": 2.24,
+   "asof": "2026-10-05"
   },
   {
    "key": "sea2",
