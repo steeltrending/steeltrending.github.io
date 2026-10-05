@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-steel-scrap",
+   "category": "steel101",
+   "title": "廢鋼從哪裡來：全球規模、三種來源與處理流程",
+   "period": "2026-10",
+   "published": "2026-10-05",
+   "summary": "全球每年約 6 億噸廢鋼回到煉鋼爐。介紹廢鋼的三種來源、各國用量與貿易、從剪切破碎到分級的處理流程，以及殘留元素與輻射兩大品質風險。",
+   "tags": [
+    "廢鋼",
+    "電爐",
+    "回收",
+    "BIR",
+    "輻射鋼筋"
+   ],
+   "image": "assets/articles/2026-10-steel-scrap-scrapyard.jpg",
+   "url": "articles/2026-10-steel-scrap.html"
+  },
+  {
    "id": "2026-10-taiwan-construction-sep",
    "category": "demand",
    "title": "台灣營建業 9 月觀察：成交回溫、開工谷底，鋼筋漲價靠成本",
