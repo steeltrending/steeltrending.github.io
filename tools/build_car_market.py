@@ -114,11 +114,23 @@ def build(ym):
         card("up", "累計進口占比", f"{k['ytd_import_share']:.1f}%", "1 月起累計"),
     ])
 
-    split = (f'<div class="bars" role="img" aria-label="國產車 {n(k["domestic"])} 輛、進口車 {n(k["imported"])} 輛">'
-             f'<p class="bt">國產與進口（輛）</p>'
-             f'{bars([("國產車", k["domestic"])], color="#8A8F96", mx=max(k["domestic"], k["imported"]))}'
-             f'{bars([("進口車", k["imported"])], mx=max(k["domestic"], k["imported"]))}'
-             f'<p class="bn">進口車占 {k["import_share"]:.1f}%。</p></div>')
+    # 國產與進口：單一 100% 堆疊長條，兩段寬度即為占比（加總 = 100%）
+    dom_share = k["domestic"] / k["total"] * 100
+    imp_share = k["imported"] / k["total"] * 100
+    seg = ('<span style="display:block;height:100%;width:{w:.1f}%;background:{c};{r}" '
+           'title="{t}"></span>')
+    split = (f'<div class="bars" role="img" aria-label="新車掛牌 {n(k["total"])} 輛：國產車 {n(k["domestic"])} 輛（{dom_share:.1f}%）、'
+             f'進口車 {n(k["imported"])} 輛（{imp_share:.1f}%）">'
+             f'<p class="bt">國產與進口占比（總計 {n(k["total"])} 輛）</p>'
+             f'<div style="display:flex;height:28px;gap:2px;margin:4px 0 12px">'
+             + seg.format(w=dom_share, c="#8A8F96", r="border-radius:4px 0 0 4px", t=f"國產車：{n(k['domestic'])} 輛（{dom_share:.1f}%）")
+             + seg.format(w=imp_share, c="#FF6A1A", r="border-radius:0 4px 4px 0", t=f"進口車：{n(k['imported'])} 輛（{imp_share:.1f}%）")
+             + '</div>'
+             f'<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:#C9CDD2">'
+             f'<span><i style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#8A8F96;margin-right:6px"></i>'
+             f'國產車 <b class="mono" style="color:#E8E6E1">{n(k["domestic"])}</b> 輛（{dom_share:.1f}%）</span>'
+             f'<span><i style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#FF6A1A;margin-right:6px"></i>'
+             f'進口車 <b class="mono" style="color:#E8E6E1">{n(k["imported"])}</b> 輛（{imp_share:.1f}%）</span></div></div>')
 
     brand_html = (f'<div class="bars" role="img" aria-label="品牌掛牌前 {len(d["brands"])} 名">'
                   f'<p class="bt">品牌掛牌前 {len(d["brands"])} 名（輛）</p>{bars(d["brands"])}</div>')
