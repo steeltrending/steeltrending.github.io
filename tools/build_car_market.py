@@ -47,8 +47,9 @@ def ym_label(ym):
     return f"{int(y)} 年 {int(m)} 月"
 
 
-def bars(rows, unit="", highlight=None, color="#FF6A1A"):
-    mx = max(v for _, v in rows) or 1
+def bars(rows, unit="", highlight=None, color="#FF6A1A", mx=None):
+    """水平長條圖；同一張圖分次呼叫時務必傳入相同的 mx，長條長度才可比較。"""
+    mx = mx or max(v for _, v in rows) or 1
     out = []
     for name, v in rows:
         hi = " hi" if highlight and name == highlight else ""
@@ -115,7 +116,8 @@ def build(ym):
 
     split = (f'<div class="bars" role="img" aria-label="國產車 {n(k["domestic"])} 輛、進口車 {n(k["imported"])} 輛">'
              f'<p class="bt">國產與進口（輛）</p>'
-             f'{bars([("國產車", k["domestic"])], color="#8A8F96")}{bars([("進口車", k["imported"])])}'
+             f'{bars([("國產車", k["domestic"])], color="#8A8F96", mx=max(k["domestic"], k["imported"]))}'
+             f'{bars([("進口車", k["imported"])], mx=max(k["domestic"], k["imported"]))}'
              f'<p class="bn">進口車占 {k["import_share"]:.1f}%。</p></div>')
 
     brand_html = (f'<div class="bars" role="img" aria-label="品牌掛牌前 {len(d["brands"])} 名">'
