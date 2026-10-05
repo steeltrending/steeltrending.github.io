@@ -1,24 +1,28 @@
 #!/usr/bin/env python3
 """台股鋼鐵產業鏈：抓取上中下游九大類代表上市股的收盤價，計算當日、近 5 日、近 20 日與今年以來漲跌幅。
 
-由 GitHub Actions（.github/workflows/tw-chain.yml）每個交易日自動執行，也可手動跑：
+由 GitHub Actions（.github/workflows/tw-chain.yml）每天 07:20、16:20、18:40（台北）自動執行，也可手動跑：
   pip install yfinance
   python3 tools/fetch_tw_chain.py
 
-輸出 data/twchain.json：
-  {"updated", "asof", "groups": [{"key","name","role","steel","items":[{"code","name","industry","close","asof",
-    "d1","d5","d20","ytd"}]}], "errors": [...]}
-抓取失敗的個股保留上一版資料（若有），不會讓整檔變空。
+更新邏輯與全球鋼鐵股（tools/fetch_history.py）一致：
+- 台北時間 13:55 前視為尚未收盤，略過當日盤中資料，沿用前一交易日收盤價；已收盤則用當日收盤價。
+- data/twhistory/<代號>.json 逐日累積收盤價，只新增或修正日期，不刪除既有資料點。
+- data/twchain.json 的最新報價只在新交易日不早於現有 asof、且價格與現值差距合理（0.5～2 倍）時才覆寫；
+  抓不到新資料時沿用最近一次可取得的資料，不留空。
+- 漲跌幅由累積的歷史序列計算：當日、近 5 日、近 20 日、今年以來（以 2025 年最後一個交易日為基準）。
 """
 import datetime as dt
 import json
 import os
+import sys
 import time
 
 import yfinance as yf
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "data", "twchain.json")
+HIST = os.path.join(ROOT, "data", "twhistory")
 TPE = dt.timezone(dt.timedelta(hours=8))
 START = "2025-12-15"          # 抓到 2025 年最後一個交易日，作為今年以來的基準
 YEAR_BASE = "2026-01-01"
@@ -62,36 +66,55 @@ GROUPS = [
 ]
 
 
-def closes(code):
-    """回傳 [(date, close)]，已剔除尚未收盤的當日盤中資料。"""
+def log(*a):
+    print(*a, flush=True)
+
+
+def drop_unclosed(pts):
+    """台北今天尚未收盤時，移除今天（及以後）的資料點；已收盤則保留當日收盤價。"""
     now = dt.datetime.now(TPE)
-    today = now.date().isoformat()
+    today = now.strftime("%Y-%m-%d")
     closed = (now.hour, now.minute) >= CLOSE_HHMM
+    return [p for p in pts if p[0] < today or (p[0] == today and closed)]
+
+
+def fetch_yahoo(code):
     for attempt in range(3):
         try:
             df = yf.Ticker(code + ".TW").history(start=START, interval="1d", auto_adjust=False, actions=False)
-            pts = []
-            for idx, row in df.iterrows():
-                c = row.get("Close")
-                if c is None or c != c:
-                    continue
-                d = idx.date().isoformat()
-                if d == today and not closed:
-                    continue
-                pts.append((d, round(float(c), 2)))
-            if pts:
-                return pts
+            if df is not None and len(df):
+                out = []
+                for idx, row in df.iterrows():
+                    c = row.get("Close")
+                    if c is None or c != c:  # NaN
+                        continue
+                    out.append([idx.strftime("%Y-%m-%d"), round(float(c), 2)])
+                return out
         except Exception as e:  # noqa: BLE001
-            last = e
-        time.sleep(2 + attempt * 3)
-    raise RuntimeError("no data")
+            log(f"  {code} 第 {attempt + 1} 次失敗：{e}")
+        time.sleep(3)
+    return []
 
 
 def pct(a, b):
     return round((a - b) / b * 100, 2) if a is not None and b else None
 
 
+def returns(series):
+    """由歷史序列計算當日、近 5 日、近 20 日、今年以來漲跌幅。"""
+    c = [v for _, v in series]
+    base = [v for d, v in series if d < YEAR_BASE]
+    return {
+        "d1": pct(c[-1], c[-2]) if len(c) > 1 else None,
+        "d5": pct(c[-1], c[-6]) if len(c) > 5 else None,
+        "d20": pct(c[-1], c[-21]) if len(c) > 20 else None,
+        "ytd": pct(c[-1], base[-1]) if base else None,
+    }
+
+
 def main():
+    os.makedirs(HIST, exist_ok=True)
+    now = dt.datetime.now(TPE).replace(microsecond=0).isoformat()
     old = {}
     if os.path.exists(OUT):
         try:
@@ -100,38 +123,68 @@ def main():
                     old[it["code"]] = it
         except Exception:  # noqa: BLE001
             pass
-    errors, groups, latest = [], [], ""
+    errors, report, groups, latest = [], [], [], ""
     for key, name, role, steel, items in GROUPS:
         out = []
         for code, nm, industry in items:
             it = {"code": code, "name": nm, "industry": industry}
-            try:
-                pts = closes(code)
-                c = [p[1] for p in pts]
-                base = [p for p in pts if p[0] < YEAR_BASE]
-                it.update({
-                    "close": c[-1], "asof": pts[-1][0],
-                    "d1": pct(c[-1], c[-2]) if len(c) > 1 else None,
-                    "d5": pct(c[-1], c[-6]) if len(c) > 5 else None,
-                    "d20": pct(c[-1], c[-21]) if len(c) > 20 else None,
-                    "ytd": pct(c[-1], base[-1][1]) if base else None,
-                })
+            prev = old.get(code, {})
+            pts = drop_unclosed(fetch_yahoo(code))
+
+            # 歷史檔只新增或修正日期，不刪除既有資料點；舊檔若留有今天的盤中值且仍未收盤，一併移除
+            path = os.path.join(HIST, f"{code}.json")
+            oldh = {}
+            if os.path.exists(path):
+                try:
+                    oldh = json.load(open(path, encoding="utf-8"))
+                except Exception:  # noqa: BLE001
+                    oldh = {}
+            merged = {d: c for d, c in drop_unclosed(oldh.get("points") or [])}
+            for d, c in pts:
+                merged[d] = c
+            series = sorted(merged.items())
+            if series:
+                with open(path, "w", encoding="utf-8") as f:
+                    json.dump({"code": code, "name": nm, "ticker": code + ".TW", "currency": "TWD",
+                               "source": "Yahoo Finance " + code + ".TW",
+                               "updated": now if pts else oldh.get("updated"),
+                               "points": [[d, c] for d, c in series]},
+                              f, ensure_ascii=False, separators=(",", ":"))
+                    f.write("\n")
+
+            # 最新報價：新交易日不早於現有 asof、且價格與現值差距合理時才覆寫；否則沿用最近一次可取得的資料
+            use_new = False
+            if series:
+                d1, c1 = series[-1]
+                pc = prev.get("close")
+                sane = not isinstance(pc, (int, float)) or pc == 0 or 0.5 < c1 / pc < 2
+                use_new = (prev.get("asof") or "") <= d1 and sane
+                if not sane:
+                    log(f"  ！{nm} 新價 {c1} 與現值 {pc} 差距過大，未覆寫最新報價")
+            if use_new:
+                it.update({"close": series[-1][1], "asof": series[-1][0]})
+                it.update(returns(series))
+            elif prev:
+                it.update({k: prev.get(k) for k in ("close", "asof", "d1", "d5", "d20", "ytd")})
+            if not pts:
+                errors.append(f"{code} {nm}: 查無新資料，沿用 {it.get('asof') or '—'}")
+            if it.get("asof"):
                 latest = max(latest, it["asof"])
-            except Exception as e:  # noqa: BLE001
-                errors.append(f"{code} {nm}: {e}")
-                if code in old:
-                    it.update({k: old[code].get(k) for k in ("close", "asof", "d1", "d5", "d20", "ytd")})
+            report.append(f"{nm} {code}: {len(series)} 筆，最新 {it.get('asof') or '—'}")
             out.append(it)
             time.sleep(0.4)
         groups.append({"key": key, "name": name, "role": role, "steel": steel, "items": out})
-    data = {"updated": dt.datetime.now(TPE).isoformat(timespec="seconds"), "asof": latest,
-            "groups": groups, "errors": errors}
+    data = {"updated": now, "asof": latest, "groups": groups, "errors": errors}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
-    print(f"完成：{sum(len(g['items']) for g in groups)} 檔，最新交易日 {latest}，錯誤 {len(errors)}")
-    for e in errors:
-        print("  ", e)
+        f.write("\n")
+    with open(os.path.join(HIST, "_status.json"), "w", encoding="utf-8") as f:
+        json.dump({"updated": now, "report": report, "errors": errors}, f, ensure_ascii=False, indent=1)
+    log("\n".join(report))
+    n = sum(len(g["items"]) for g in groups)
+    log(f"完成：{n} 檔，最新交易日 {latest}，查無新資料 {len(errors)} 檔")
+    return 0 if latest else 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

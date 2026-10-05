@@ -105,7 +105,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 </div>
 </section>
 
-<p style="margin:56px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6">註：分類依本站「下游需求觀察」主題，括號內為證交所上市產業別；自行車廠歸入汽車類，散裝航運歸入上游。代表股由本站挑選，非完整成分股。收盤價來源為 Yahoo Finance，未經除權息調整，今年以來以 2025 年最後一個交易日收盤價為基準。內容僅供參考，不構成投資建議。</p>
+<p style="margin:56px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6">註：分類依本站「下游需求觀察」主題，括號內為證交所上市產業別；自行車廠歸入汽車類，散裝航運歸入上游。代表股由本站挑選，非完整成分股。收盤價來源為 Yahoo Finance，未經除權息調整，今年以來以 2025 年最後一個交易日收盤價為基準。台股收盤前沿用前一交易日收盤價，收盤後採當日收盤價；個股若查無最新資料則沿用最近可取得的收盤價，標示「舊」者為收盤日明顯早於其他個股。內容僅供參考，不構成投資建議。</p>
 </main>
 <footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
 <div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
@@ -127,6 +127,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
   function hex(c) { var n = parseInt(c.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
   function mix(a, b, t) { a = hex(a); b = hex(b); return a.map(function (v, i) { return Math.round(v + (b[i] - v) * t); }); }
   function lum(rgb) { var c = rgb.map(function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; }
+  function stale(it) { return !!(it.asof && DATA.asof) && (new Date(DATA.asof) - new Date(it.asof)) / 86400000 >= 5; }
   function cap() { return PER.filter(function (p) { return p[0] === cur; })[0][2]; }
   function label() { return PER.filter(function (p) { return p[0] === cur; })[0][1]; }
 
@@ -186,7 +187,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
         var a = el('a', 'tile'); a.href = 'https://tw.stock.yahoo.com/quote/' + it.code + '.TW'; a.target = '_blank'; a.rel = 'noopener';
         a.style.background = 'rgb(' + rgb.join(',') + ')'; a.style.color = dark ? '#0F1113' : '#F5F3EE';
         a.setAttribute('aria-label', g.name + ' ' + it.name + ' ' + it.code + '，' + label() + ' ' + pct(p));
-        var top = el('div'); top.appendChild(el('div', 'nm', it.name)); top.appendChild(el('div', 'cd mono', it.code)); a.appendChild(top);
+        var top = el('div'); top.appendChild(el('div', 'nm', it.name)); var cd = el('div', 'cd mono', it.code + (stale(it) ? ' ・舊' : '')); top.appendChild(cd); a.appendChild(top);
         a.appendChild(el('div', 'pc mono', pct(p)));
         a.addEventListener('mouseenter', function (e) { tip(e, g, it); });
         a.addEventListener('mousemove', move);
@@ -204,6 +205,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
     var h = el('div', null, it.name + ' ' + it.code); h.style.fontWeight = '700'; t.appendChild(h);
     t.appendChild(el('div', 'flat', g.name + '・' + it.industry));
     t.appendChild(el('div', 'mono', '收盤 ' + (isNum(it.close) ? it.close.toFixed(2) : '—') + '（' + (it.asof || '—') + '）'));
+    if (stale(it)) { var w = el('div', null, '資料較舊：最近可取得收盤日為 ' + it.asof); w.style.color = '#D9B66A'; t.appendChild(w); }
     PER.forEach(function (p) { var r = el('div', 'mono ' + dir(it[p[0]]), p[1] + ' ' + pct(it[p[0]])); t.appendChild(r); });
     t.hidden = false; move(e);
   }
