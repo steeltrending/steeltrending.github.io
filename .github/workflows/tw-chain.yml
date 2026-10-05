@@ -1,0 +1,43 @@
+name: 更新台股鋼鐵產業鏈
+
+on:
+  schedule:
+    # 台北時間週一至週五 14:25、16:45（UTC 06:25、08:45）
+    - cron: "25 6 * * 1-5"
+    - cron: "45 8 * * 1-5"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/fetch_tw_chain.py
+      - .github/workflows/tw-chain.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tw-chain
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet yfinance
+      - run: python3 tools/fetch_tw_chain.py
+      - name: 提交更新
+        run: |
+          git config user.name "steeltrending"
+          git config user.email "noreply@steeltrending.github.io"
+          git add data/twchain.json
+          if git diff --cached --quiet; then echo "沒有新資料"; exit 0; fi
+          git commit -m "台股產業鏈自動更新 $(TZ=Asia/Taipei date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep 5
+          done
+          exit 1
