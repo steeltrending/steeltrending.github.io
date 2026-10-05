@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>台股鋼鐵產業鏈 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="台股鋼鐵上中下游九大類、約 60 檔代表上市股的漲跌熱力圖，每個交易日更新。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.up{color:#FF8A47}.down{color:#8DB4D6}.flat{color:#9AA0A6}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+.chip{display:inline-flex;align-items:center;border:1px solid #3A3F46;color:#C9CDD2;font-size:14px;min-height:40px;padding:0 14px;text-decoration:none;background:none;font-family:inherit;cursor:pointer}
+.chip:hover{border-color:#FF6A1A;color:#E8E6E1}
+.chip[aria-current="true"],.chip[aria-pressed="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+.card{border:1px solid #2A2F35;background:#15181B;padding:20px}
+/* group averages */
+.avg{display:flex;flex-direction:column;gap:2px}
+.avg-row{display:grid;grid-template-columns:44px 110px minmax(0,1fr) 76px;gap:12px;align-items:center;min-height:32px}
+.avg-row .role{font-size:11px;color:#9AA0A6;border:1px solid #3A3F46;text-align:center;padding:1px 0}
+.avg-row .n{font-size:15px;font-weight:700;color:#E8E6E1}
+.avg-row .p{text-align:right;font-size:14px}
+.track{position:relative;height:16px}
+.track::before{content:"";position:absolute;left:50%;top:-6px;bottom:-6px;border-left:1px solid #3A3F46}
+.track .b{position:absolute;top:0;height:100%}
+.b.up{background:#FF6A1A}.b.down{background:#5E8DB8}
+.sep{border-top:1px dashed #2A2F35;margin:6px 0}
+/* heatmap */
+.hm{display:flex;flex-direction:column;gap:14px}
+.hm-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px;align-items:stretch}
+.hm-head{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:8px 10px 8px 0;border-right:1px solid #2A2F35}
+.hm-head .t{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.hm-head b{font-size:16px}
+.hm-head .avgv{font-size:13px}
+.hm-head .s{font-size:12px;color:#9AA0A6;line-height:1.5}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:6px}
+.tile{padding:9px 10px;min-height:66px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(255,255,255,.06);text-decoration:none;color:inherit}
+.tile:hover,.tile:focus-visible{outline:2px solid #E8E6E1;outline-offset:-2px}
+.tile .nm{font-size:13px;font-weight:700;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .cd{font-size:11px;opacity:.75;margin-top:1px}
+.tile .pc{font-size:15px;font-weight:600;margin-top:6px}
+.legend{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:12px;color:#9AA0A6}
+.legend .grad{flex:1;max-width:360px;height:10px;background:linear-gradient(to right,#5E8DB8,#22262B,#FF6A1A)}
+.flowline{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;margin-top:18px}
+.flowline span.k{border:1px solid #3A3F46;padding:4px 10px;color:#C9CDD2}
+@media (max-width:640px){.wrap{padding:0 16px}.avg-row{grid-template-columns:38px 72px minmax(0,1fr) 64px;gap:8px}.avg-row .n{font-size:14px}.hm-row{grid-template-columns:1fr}.hm-head{border-right:0;border-bottom:1px solid #2A2F35;padding:0 0 6px}.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.tile{padding:8px;min-height:58px}.tile .nm{font-size:12px}.tile .pc{font-size:14px}}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="stocks.html" aria-current="page" style="color:#FF8A47;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<a href="archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+<main class="wrap" style="padding-top:64px;padding-bottom:96px">
+<nav aria-label="股票分頁" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px">
+<a class="chip" href="stocks.html">全球鋼鐵股</a>
+<a class="chip" href="twchain.html" aria-current="true">台股鋼鐵產業鏈</a>
+</nav>
+<p class="mono" style="margin:0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">TAIWAN STEEL VALUE CHAIN</p>
+<h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">台股鋼鐵產業鏈</h1>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:46em">從上游原料運輸、中游鋼廠，到 AI、能源、營建、汽車、造船、家電、機械七大用鋼產業，約 60 檔代表上市股的漲跌一次看。看鋼價走向，也看需求端誰在轉強。</p>
+<p id="updated" style="margin:16px 0 0;font-size:14px;color:#C9CDD2">資料更新：—</p>
+<div class="flowline" aria-label="產業鏈順序"><span class="k">上游與周邊</span>→<span class="k">鋼鐵本業</span>→<span class="k">AI・能源・營建・汽車・造船・家電・機械</span></div>
+
+<div role="group" aria-label="期間" style="margin-top:28px;display:flex;gap:8px;flex-wrap:wrap" id="periods"></div>
+
+<section aria-labelledby="avg-h" style="margin-top:36px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="avg-h" style="margin:0;font-size:20px;font-weight:900">九大類平均漲跌幅</h2>
+<span class="lbl">GROUP AVERAGE</span>
+</div>
+<div class="card"><div id="avg" class="avg"><p style="margin:0;color:#9AA0A6">載入中…</p></div>
+<p style="margin:14px 0 0;font-size:13px;color:#9AA0A6">各類代表股漲跌幅的簡單平均，依產業鏈上游到下游排列。</p></div>
+</section>
+
+<section aria-labelledby="hm-h" style="margin-top:48px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="hm-h" style="margin:0;font-size:20px;font-weight:900">產業鏈熱力圖</h2>
+<span class="lbl">HEATMAP</span>
+</div>
+<div class="card">
+<div id="hm" class="hm"></div>
+<div class="legend" aria-hidden="true"><span class="mono" id="lg-lo">▼ 3%</span><span class="grad"></span><span class="mono" id="lg-hi">▲ 3%</span></div>
+<p style="margin:10px 0 0;font-size:13px;line-height:1.7;color:#9AA0A6">每格一檔個股，顏色深淺對應所選期間的漲跌幅，超過圖例上下限即為最深色。滑過或點選色塊可看收盤價、產業別與各期間漲跌。</p>
+</div>
+</section>
+
+<p style="margin:56px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6">註：分類依本站「下游需求觀察」主題，括號內為證交所上市產業別；自行車廠歸入汽車類，散裝航運歸入上游。代表股由本站挑選，非完整成分股。收盤價來源為 Yahoo Finance，未經除權息調整，今年以來以 2025 年最後一個交易日收盤價為基準。內容僅供參考，不構成投資建議。</p>
+</main>
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+<div id="tip" role="tooltip" hidden style="position:fixed;z-index:10;pointer-events:none;background:#1C2024;border:1px solid #3A3F46;color:#E8E6E1;font-size:13px;line-height:1.6;padding:8px 12px;max-width:260px"></div>
+<script>
+(function () {
+  var PER = [['d1', '當日', 3], ['d5', '近 5 日', 6], ['d20', '近 20 日', 10], ['ytd', '今年以來', 30]];
+  var cur = 'd1', DATA = null;
+  function $(id) { return document.getElementById(id); }
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function isNum(v) { return typeof v === 'number' && isFinite(v); }
+  function dir(p) { return !isNum(p) ? 'flat' : p > 0 ? 'up' : p < 0 ? 'down' : 'flat'; }
+  function pct(p) { return !isNum(p) ? '—' : (p > 0 ? '▲ ' : p < 0 ? '▼ ' : '— ') + Math.abs(p).toFixed(2) + '%'; }
+  function avg(list) { var v = list.map(function (i) { return i[cur]; }).filter(isNum); return v.length ? v.reduce(function (a, b) { return a + b; }, 0) / v.length : null; }
+  function hex(c) { var n = parseInt(c.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+  function mix(a, b, t) { a = hex(a); b = hex(b); return a.map(function (v, i) { return Math.round(v + (b[i] - v) * t); }); }
+  function lum(rgb) { var c = rgb.map(function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; }
+  function cap() { return PER.filter(function (p) { return p[0] === cur; })[0][2]; }
+  function label() { return PER.filter(function (p) { return p[0] === cur; })[0][1]; }
+
+  var pg = $('periods');
+  PER.forEach(function (p) {
+    var b = el('button', 'chip', p[1]); b.type = 'button'; b.dataset.k = p[0];
+    b.addEventListener('click', function () { cur = p[0]; render(); });
+    pg.appendChild(b);
+  });
+
+  fetch('data/twchain.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) { DATA = d; render(); })
+    .catch(function () { $('avg').textContent = '資料暫時無法載入，請稍後再試。'; });
+
+  function render() {
+    [].forEach.call(pg.children, function (b) { b.setAttribute('aria-pressed', b.dataset.k === cur ? 'true' : 'false'); });
+    var u = DATA.updated, a = DATA.asof;
+    $('updated').textContent = '資料更新：' + (u ? u.slice(0, 10).replace(/-/g, '.') + ' ' + u.slice(11, 16) + '（台北）' : '—') + (a ? '・最新交易日 ' + a.replace(/-/g, '.') : '');
+    var C = cap(); $('lg-lo').textContent = '▼ ' + C + '%'; $('lg-hi').textContent = '▲ ' + C + '%';
+    $('avg-h').textContent = '九大類平均漲跌幅（' + label() + '）';
+    $('hm-h').textContent = '產業鏈熱力圖（' + label() + '）';
+
+    // 平均長條
+    var box = $('avg'); box.textContent = '';
+    var avgs = DATA.groups.map(function (g) { return avg(g.items); });
+    var mx = Math.max.apply(null, avgs.filter(isNum).map(Math.abs).concat([0.5]));
+    DATA.groups.forEach(function (g, i) {
+      if (i > 0 && g.role !== DATA.groups[i - 1].role) box.appendChild(el('div', 'sep'));
+      var r = el('div', 'avg-row'), v = avgs[i];
+      r.appendChild(el('span', 'role', g.role));
+      r.appendChild(el('span', 'n', g.name));
+      var tr = el('div', 'track'); tr.setAttribute('role', 'img'); tr.setAttribute('aria-label', g.name + ' 平均 ' + pct(v));
+      if (isNum(v) && v !== 0) {
+        var w = Math.abs(v) / mx * 50, b = el('span', 'b ' + dir(v));
+        b.style.width = Math.max(w, 0.6) + '%'; b.style.left = v > 0 ? '50%' : (50 - w) + '%'; tr.appendChild(b);
+      }
+      r.appendChild(tr);
+      r.appendChild(el('span', 'p mono ' + dir(v), pct(v)));
+      box.appendChild(r);
+    });
+
+    // 熱力圖
+    var hm = $('hm'); hm.textContent = '';
+    DATA.groups.forEach(function (g, i) {
+      var row = el('div', 'hm-row'), hd = el('div', 'hm-head'), t = el('div', 't');
+      t.appendChild(el('b', null, g.name));
+      t.appendChild(el('span', 'avgv mono ' + dir(avgs[i]), pct(avgs[i])));
+      hd.appendChild(t);
+      hd.appendChild(el('span', 's', g.role + '｜' + g.steel));
+      row.appendChild(hd);
+      var tiles = el('div', 'tiles');
+      g.items.forEach(function (it) {
+        var p = it[cur], k = isNum(p) ? Math.max(-1, Math.min(1, p / C)) : 0;
+        var rgb = mix('#22262B', k >= 0 ? '#FF6A1A' : '#5E8DB8', Math.abs(k)), L = lum(rgb);
+        var dark = (L + 0.05) / (lum([15, 17, 19]) + 0.05) > (lum([245, 243, 238]) + 0.05) / (L + 0.05);
+        var a = el('a', 'tile'); a.href = 'https://tw.stock.yahoo.com/quote/' + it.code + '.TW'; a.target = '_blank'; a.rel = 'noopener';
+        a.style.background = 'rgb(' + rgb.join(',') + ')'; a.style.color = dark ? '#0F1113' : '#F5F3EE';
+        a.setAttribute('aria-label', g.name + ' ' + it.name + ' ' + it.code + '，' + label() + ' ' + pct(p));
+        var top = el('div'); top.appendChild(el('div', 'nm', it.name)); top.appendChild(el('div', 'cd mono', it.code)); a.appendChild(top);
+        a.appendChild(el('div', 'pc mono', pct(p)));
+        a.addEventListener('mouseenter', function (e) { tip(e, g, it); });
+        a.addEventListener('mousemove', move);
+        a.addEventListener('mouseleave', function () { $('tip').hidden = true; });
+        a.addEventListener('focus', function (e) { var r = a.getBoundingClientRect(); tip({ clientX: r.left, clientY: r.bottom }, g, it); });
+        a.addEventListener('blur', function () { $('tip').hidden = true; });
+        tiles.appendChild(a);
+      });
+      row.appendChild(tiles);
+      hm.appendChild(row);
+    });
+  }
+  function tip(e, g, it) {
+    var t = $('tip'); t.textContent = '';
+    var h = el('div', null, it.name + ' ' + it.code); h.style.fontWeight = '700'; t.appendChild(h);
+    t.appendChild(el('div', 'flat', g.name + '・' + it.industry));
+    t.appendChild(el('div', 'mono', '收盤 ' + (isNum(it.close) ? it.close.toFixed(2) : '—') + '（' + (it.asof || '—') + '）'));
+    PER.forEach(function (p) { var r = el('div', 'mono ' + dir(it[p[0]]), p[1] + ' ' + pct(it[p[0]])); t.appendChild(r); });
+    t.hidden = false; move(e);
+  }
+  function move(e) {
+    var t = $('tip'), x = e.clientX + 14, y = e.clientY + 14;
+    if (x + t.offsetWidth > innerWidth - 8) x = e.clientX - t.offsetWidth - 14;
+    if (y + t.offsetHeight > innerHeight - 8) y = e.clientY - t.offsetHeight - 14;
+    t.style.left = x + 'px'; t.style.top = y + 'px';
+  }
+})();
+</script>
+</body>
+</html>
