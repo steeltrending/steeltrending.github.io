@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "carmarket-2026-09",
+   "category": "demand",
+   "series": "carmarket",
+   "title": "2026 年 9 月台灣車市：進口車占五成五、Model Y 單月封王",
+   "period": "2026-09",
+   "published": "2026-10-05",
+   "summary": "9 月新車掛牌 37,054 輛、年增 15%，進口車占比衝上 55.5%；Tesla Model Y 單月 5,154 輛奪冠，國產車失去過半市占，國內汽車鋼板需求未隨總量成長。",
+   "tags": [
+    "台灣車市",
+    "新車掛牌",
+    "進口車",
+    "電動車",
+    "汽車用鋼"
+   ],
+   "image": "assets/articles/carmarket-hero.jpg",
+   "url": "articles/carmarket-2026-09.html"
+  },
+  {
    "id": "2026-10-nippon-steel-hydrogen-bf",
    "category": "decarb",
    "title": "高爐吹氫減碳 43%：日本製鐵 Super COURSE50 試驗全解析",
