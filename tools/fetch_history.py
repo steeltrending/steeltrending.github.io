@@ -35,6 +35,43 @@ YAHOO = {
 }
 DEC = {"KRW": 0, "VND": 0, "IDR": 0, "MYR": 3}
 
+# 各市場當地時區與收盤時間（含約 20 分鐘緩衝，等收盤價定案）。
+# 當地「今天」尚未收盤時，丟掉今天的盤中 K 棒，只用最近一個已收盤交易日的收盤價；
+# 當地已收盤，就用當日收盤價。
+_TW = ("Asia/Taipei", "13:55")
+_CN = ("Asia/Shanghai", "15:20")
+_JP = ("Asia/Tokyo", "15:50")
+_KR = ("Asia/Seoul", "15:50")
+_US = ("America/New_York", "16:20")
+_DE = ("Europe/Berlin", "17:55")
+_AT = ("Europe/Vienna", "17:55")
+_VN = ("Asia/Ho_Chi_Minh", "15:05")
+_ID = ("Asia/Jakarta", "16:35")
+_MY = ("Asia/Kuala_Lumpur", "17:20")
+_IN = ("Asia/Kolkata", "15:50")
+MARKET_CLOSE = {
+    "tw": _TW, "tw2": _TW, "tw3": _TW,
+    "cn": _CN, "cn2": _CN, "cn3": _CN,
+    "jpkr": _JP, "jpkr2": _JP, "jpkr3": _KR,
+    "us": _US, "us2": _US, "us3": _US,
+    "eu": _US, "eu2": _DE, "eu3": _AT,  # ArcelorMittal 用 NYSE 的 MT
+    "sea": _VN, "sea2": _ID, "sea3": _MY,
+    "in": _IN, "in2": _IN, "in3": _IN,
+}
+
+
+def drop_unclosed(key, pts, quiet=False):
+    """當地今天尚未收盤時，移除今天（及以後）的資料點。"""
+    from zoneinfo import ZoneInfo
+    tz, hm = MARKET_CLOSE.get(key, ("Asia/Taipei", "23:59"))
+    now = dt.datetime.now(ZoneInfo(tz))
+    today = now.strftime("%Y-%m-%d")
+    closed = now.strftime("%H:%M") >= hm
+    keep = [p for p in pts if p[0] < today or (p[0] == today and closed)]
+    if len(keep) != len(pts) and not quiet:
+        log(f"  {key}: 當地 {today} 尚未收盤，略過盤中資料")
+    return keep
+
 
 def log(*a):
     print(*a, flush=True)
@@ -150,12 +187,15 @@ def main():
             sym = YAHOO.get(key)
             pts, src = (fetch_yahoo(sym), "Yahoo Finance " + sym) if sym else ([], None)
 
+        pts = drop_unclosed(key, pts)
+
         path = os.path.join(HIST, f"{key}.json")
         old = {}
         if os.path.exists(path):
             with open(path, encoding="utf-8") as f:
                 old = json.load(f)
-        merged = {d: c for d, c in (old.get("points") or [])}
+        # 舊檔若留有當地今天的盤中值且現在仍未收盤，一併移除
+        merged = {d: c for d, c in drop_unclosed(key, old.get("points") or [], quiet=True)}
         for d, c in pts:
             merged[d] = rnd(c, cur)
         series = sorted(merged.items())
