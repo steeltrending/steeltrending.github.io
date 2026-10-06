@@ -28,6 +28,21 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 .side svg{display:block;width:100%;height:90px}
 .search{width:100%;box-sizing:border-box;background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;min-height:44px;padding:0 12px}
 .search:focus{outline:2px solid #FF6A1A;outline-offset:-1px}
+.dd{position:relative}
+.dd summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 16px;border:1px solid #3A3F46;background:#15181B;color:#E8E6E1;font-size:15px;font-weight:700;user-select:none}
+.dd summary::-webkit-details-marker{display:none}
+.dd summary:hover,.dd[open] summary{border-color:#FF6A1A}
+.dd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}
+.dd summary .ar{color:#FF6A1A;font-size:12px;transition:transform .2s}
+.dd[open] summary .ar{transform:rotate(180deg)}
+.dd .menu{position:absolute;top:calc(100% + 6px);left:0;z-index:30;min-width:240px;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45);padding:6px 0}
+.dd .menu a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 16px;color:#E8E6E1;text-decoration:none;font-size:15px}
+.dd .menu a:hover{background:#1C2024;color:#FF8A47}
+.dd .menu a span{color:#FF6A1A}
+.dd .menu .lbl{display:block;padding:6px 16px 8px}
+.ttl{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin:12px 0 12px}
+.ttl .acts{display:flex;gap:10px;flex-wrap:wrap}
+@media (max-width:640px){.dd .menu{min-width:220px}.ttl .acts .dd:last-child .menu{left:auto;right:0}}
 @media (max-width:900px){.layout{grid-template-columns:1fr}.side{position:static;order:-1}}
 @media (max-width:640px){.wrap{padding:0 16px}.news{grid-template-columns:1fr;gap:4px}}
 </style>
@@ -60,7 +75,12 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 <main class="wrap" style="padding-top:40px;padding-bottom:96px">
 <nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="./#topics" style="text-decoration:none">關注主題</a> <span aria-hidden="true">›</span> 中鋼新聞專區</nav>
 <p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">CHINA STEEL NEWS</p>
-<h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">中鋼新聞專區</h1>
+<div class="ttl"><h1 style="margin:0;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">中鋼新聞專區</h1>
+<div class="acts">
+<details class="dd"><summary>永續報告書<span class="ar" aria-hidden="true">▼</span></summary><div class="menu"><span class="lbl">ESG REPORT · 逐年導讀</span><a href="articles/2026-10-csc-esg-2025.html">2025 年永續報告書<span aria-hidden="true">→</span></a><a href="articles/2026-10-csc-esg-2024.html">2024 年永續報告書<span aria-hidden="true">→</span></a></div></details>
+<details class="dd"><summary>財務分析<span class="ar" aria-hidden="true">▼</span></summary><div class="menu"><span class="lbl">FINANCIALS · 逐年分析</span><a href="articles/2026-10-csc-fin-2025.html">2025 年財報分析<span aria-hidden="true">→</span></a><a href="articles/2026-10-csc-fin-2024.html">2024 年財報分析<span aria-hidden="true">→</span></a></div></details>
+</div></div>
+<script>(function(){var d=document.querySelectorAll(".dd");d.forEach(function(x){x.addEventListener("toggle",function(){if(x.open)d.forEach(function(y){if(y!==x)y.open=false})})});document.addEventListener("click",function(e){d.forEach(function(x){if(x.open&&!x.contains(e.target))x.open=false})});document.addEventListener("keydown",function(e){if(e.key==="Escape")d.forEach(function(x){if(x.open){x.open=false;x.querySelector("summary").focus()}})})})();</script>
 <p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:44em">中鋼盤價、營運、貿易救濟與集團動態。內容從鋼鐵潮流每日速報自動彙整，同一事件被多家媒體重複報導時只列最早的一則。</p>
 
 <div class="layout">
