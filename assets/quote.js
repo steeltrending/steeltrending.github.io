@@ -1,5 +1,5 @@
-/* 今日鋼語：首頁標題旁每日一則與鋼鐵、冶煉、鍛造相關的詩句或格言。
-   依台北日期輪替，同一天所有訪客看到同一則；新增條目直接加在 Q 陣列即可。
+/* 鋼語：首頁標題旁每次載入隨機一則與鋼鐵、冶煉、鍛造相關的詩句或格言。
+   每次重新整理隨機換一則（不與上一次重複）；新增條目直接加在 Q 陣列即可。
    t：中文（外文則為譯文）；o：外文原文（可省略）；by：出處（詩句須含作品與作者） */
 (function () {
   var Q = [
@@ -28,9 +28,13 @@
   ];
   var el = document.getElementById('steel-quote');
   if (!el) return;
-  // 以台北時間（UTC+8）計算日序
-  var day = Math.floor((Date.now() + 8 * 3600e3) / 86400e3);
-  var q = Q[((day % Q.length) + Q.length) % Q.length];
+  // 每次載入隨機挑一則，並避開上一次看到的那則
+  var last = -1;
+  try { last = parseInt(sessionStorage.getItem('sq-last'), 10); } catch (e) {}
+  var i = Math.floor(Math.random() * Q.length);
+  if (Q.length > 1 && i === last) i = (i + 1 + Math.floor(Math.random() * (Q.length - 1))) % Q.length;
+  try { sessionStorage.setItem('sq-last', String(i)); } catch (e) {}
+  var q = Q[i];
   el.querySelector('.sq-t').textContent = '「' + q.t + '」';
   var o = el.querySelector('.sq-o');
   if (q.o) { o.textContent = q.o; o.hidden = false; } else { o.hidden = true; }
