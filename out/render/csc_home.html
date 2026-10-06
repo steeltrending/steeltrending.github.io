@@ -1,0 +1,1281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CSC</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <link href="css_new/idx.css?v=1" rel="stylesheet" type="text/css">
+    <link href="css_new/all_style_ch.css?v=1" rel="stylesheet" type="text/css">
+    <link href="css_new/layout.css?v=1" rel="stylesheet" type="text/css">
+    <!--menu-->
+    <link href="css_new/menu.css?v=1" rel="stylesheet" type="text/css">
+    <link href="css_new/menu_layout_ch.css?v=1" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-03N604T55S&amp;cx=c&amp;_slc=1"></script><script src="https://connect.facebook.net/en_US/all.js?hash=dcaed4bb0e61c092931e4c68704d7deb" async="" crossorigin="anonymous"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/en_US/all.js#xfbml=1"></script><script type="text/javascript" src="js_new/jquery.js?v=1"></script>
+	<script type="text/javascript" src="js_new/jquery-migrate-1.4.1.js?v=1"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+    </style>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/xpedia.css">
+    <!--slider-->
+    <link rel="stylesheet" type="text/css" href="css_new/styles.css">
+    <link rel="stylesheet" href="css_new/slider_style.css" type="text/css" media="screen">
+    <!--活動影像-->
+    <link rel="stylesheet" href="css_new/blueberry.css">
+    <script src="js_new/jquery.blueberry.js"></script>
+    <script>
+        $( window ).load( function() {
+            $( '.blueberry' ).blueberry();
+        } );
+    </script>
+    <!--Animation-->
+    <!-- <script src="js_new/wow.min.js"></script> -->
+    <link href="css_new/animate.css?v=1" rel="stylesheet" type="text/css">
+    <!--menu_mob-->
+    <link type="text/css" href="css_new/menu_mob.css?v=1" rel="stylesheet">
+    <!--lightbox-->
+    <link href="style/colorbox.css?v=1" rel="stylesheet">
+    <script src="js/jquery.colorbox.js?v=1"></script>
+    <script>
+        $(function() {
+            $(".iframe").colorbox({
+                iframe: true,
+                width: "750",
+                height: "600"
+            });
+            $(".iframe2").colorbox({
+                iframe: true,
+                width: "95%",
+                height: "95%"
+            });
+        });
+
+        function showCB(url) {
+            var w = $(window).width() * 0.95;
+            var h = $(window).height() * 0.95;
+            console.log($(window).width());
+            /*手機大小*/
+            if (w <= 320) {
+                w = 320;
+                h = 480;
+            } else if (w >= 1200) {
+                w = 1200 * 0.8;
+                h = 800 * 0.8;
+            }
+            $.colorbox({
+                iframe: true,
+                width: w,
+                height: h,
+                href: url,
+                fixed: true
+            });
+        }
+
+        function showCB2(url) {
+            $.colorbox({
+                iframe: true,
+                width: "95%",
+                height: "95%",
+                href: url,
+                fixed: true
+            });
+        }
+    </script>
+<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/y2/r/onuUJj0tCqE.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style></head>
+
+<body style="overflow-y: hidden;">
+    <div class="">
+        <div class="csc_menuBg">
+            <div class="menu">
+                <div class="cover"></div>
+                <div id="header" class="container"><div class="headerDiv">
+    <div id="rs-header" class="rs-header">
+        <div class="menu-area">
+            <div class="menu_block row align-items-center justify-content-center m-0">
+                <div class="col-lg-2 col-md-2 col-3" style="box-sizing: border-box;">
+                    <div class="logo-area">
+                        <a href="https://www.csc.com.tw/indexe.html"><img class="logo_img" src="https://www.csc.com.tw/images_new/csc_logo_e.png" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10 scrollDownMenu" style="box-sizing: border-box;">
+                    <ul class="">
+                        <li class="main_menu2" data-count="00">
+                            <a href="javascript:void(0)">About CSC</a>
+                        </li>
+                        <li class="main_menu2" data-count="01">
+                            <a onclick="sessionStorage.setItem('lastPage', '');" href="https://www.csc.com.tw/csc_e/esg/index.html">ESG</a>
+                        </li>
+                        <li class="main_menu2" data-count="02">
+                            <a href="javascript:void(0)">Customer Service</a>
+                        </li>
+                        <li class="main_menu2" data-count="03">
+                            <a href="javascript:void(0)">Investor Relations</a>
+                        </li>
+                        <li class="main_menu2" data-count="04">
+                            <a href="javascript:void(0)">Stakeholder</a>
+                        </li>
+                        <li class="main_menu2" data-count="05">
+                            <a href="javascript:void(0)">Links</a>
+                        </li>
+                        <li class="main_menu2 link menu_bg">
+                            <a href="https://cs.csc.com.tw/qss/portal/qss01" target="_blank">e-Sales+</a>
+                        </li>
+                        <i class="icon-earth menuIcon main_menu2 link">
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="https://www.csc.com.tw/index.html">繁體</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.csc.com.tw/indexc.html">简体</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.csc.com.tw/indexe.html">English</a>
+                                </li>
+                            </ul>
+                        </i>
+                        <i class="menuIcon main_menu2 link">
+                            <a href="https://search.csc.com.tw/mis/cscweb/search_new/search_e.asp" target="_blank">
+                                <i class="icon-search"></i>
+                            </a>
+                        </i>
+                    </ul>
+                </div>
+                <div class="col-md-1 col-sm-1 col-1 d-flex cus-nav deskNone mob_link" style="box-sizing: border-box;">
+                    <i class="menuIcon main_menu2 link">
+                        <a href="https://search.csc.com.tw/mis/cscweb/search_new/search_e.asp" target="_blank">
+                            <i class="icon-search"></i>
+                        </a>
+                    </i>
+                </div>
+                <div class="col-lg-10 col-md-10 col-9 d-flex cus-nav deskNone" style="box-sizing: border-box;">
+                    <ul class="user_nav">
+                        <li id="nav-expander">
+                            <a class="nav-expander">
+                                <i class="icon-menuIcon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg_cover">
+            <nav class="right_menu_togle hidden-md">
+                <div class="noAnimation">
+                    <div class="close-btn">
+                    <span id="nav-close" class="text-center"><i class="icon-close"></i></span>
+                    </div>
+                    <div class="row mx-0 menuBlock" style="box-sizing: border-box;">
+                    <div class="menulogo">
+                        <div class="logo-area">
+                            <a href="https://www.csc.com.tw/indexe.html"><img class="logo_img" src="https://www.csc.com.tw/images_new/csc_logo_e.png" alt="Logo"></a>
+                        </div>
+                    </div>
+
+                    <div class="menu-l">
+                        <ul>
+                            <li class="main_menu list">
+                                <a href="javascript:void(0)" class="main_menuTitle" data-count="00">About CSC</a>
+                                <div class="sec_menu_mob"></div>
+                            </li>
+                            <li class="main_menu list">
+                                <a onclick="sessionStorage.setItem('lastPage', '');" href="https://www.csc.com.tw/csc_e/esg/index.html" class="main_menuTitle" data-count="01">ESG
+                                    <img class="arrow" src="https://www.csc.com.tw/images/arrow_right.png">
+                                </a>
+                                <div class="sec_menu_mob"></div>
+                            </li>
+                            <li class="main_menu list">
+                                <a href="javascript:void(0)" class="main_menuTitle" data-count="02">Customer Service</a>
+                                <div class="sec_menu_mob"></div>
+                            </li>
+                            <li class="main_menu list">
+                                <a href="javascript:void(0)" class="main_menuTitle" data-count="03">Investor Relations</a>
+                                <div class="sec_menu_mob"></div>
+                            </li>
+                            <li class="main_menu list">
+                                <a href="javascript:void(0)" class="main_menuTitle" data-count="04">Stakeholder</a>
+                                <div class="sec_menu_mob"></div>
+                            </li>
+                            <li class="main_menu list">
+                                <a href="javascript:void(0)" class="main_menuTitle" data-count="05">Links</a>
+                                <div class="sec_menu_mob"></div>
+                            </li>
+                            <li class="main_menu">
+                                <a href="https://cs.csc.com.tw/qss/portal/qss01" target="_blank" data-count="06">e-Sales+</a>
+                                <div class="sec_menu_mob"></div>
+                            </li>
+                            <li class="main_menu hide-lg">
+                                <div class="center row p-3 m-0">
+                                    <a href="https://www.csc.com.tw/index.html" class="lang">繁</a>
+                                    <a href="https://www.csc.com.tw/indexc.html" class="lang">简</a>
+                                    <a href="https://www.csc.com.tw/indexe.html" class="lang">EN</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-r">
+                        <div class="sec_menu">
+                            <!-- 關於中鋼 -->
+                            <ul class="cart">
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('00', ''); location.href='https://www.csc.com.tw/csc_e/ch/ch.html'; event.stopPropagation();">CSC Profile</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('00', '1'); location.href='https://www.csc.com.tw/csc_e/ch/ifo/ifo.html'">Basic Information</a></li>
+                                        <li><a onclick="ClickMenu('00', '1'); location.href='https://www.csc.com.tw/csc_e/ch/team/team.html'">Managing Team</a></li>
+                                        <li><a onclick="ClickMenu('00', '1'); location.href='https://www.csc.com.tw/csc_e/ch/spt/spt.html'">CSC Values</a></li>
+                                        <li><a onclick="ClickMenu('00', '1'); location.href='https://www.csc.com.tw/csc_e/ch/cns/cns.html'">Operation Concepts</a></li>
+                                        <li><a onclick="ClickMenu('00', '1'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/ch/ch.html#vis';">CSC Vision</a></li>
+                                        <li><a onclick="ClickMenu('00', '1'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/ch/ch.html#str';">Operation Strategies</a></li>
+                                        <li><a onclick="ClickMenu('00', '1'); location.href='https://www.csc.com.tw/csc_e/ch/mst/mst.html'">Chronology of Major Events</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('00', ''); location.href='https://www.csc.com.tw/csc_e/hr/hr.html'; event.stopPropagation();">Corporate Citizen</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('00', '2'); location.href='https://www.csc.com.tw/csc_e/hr/nbr/nbr.html'">Community Friendliness</a></li>
+                                        <li><a onclick="ClickMenu('00', '2'); location.href='https://www.csc.com.tw/csc_e/hr/safe/safe.html'">Environment Protection &amp; Conservation</a></li>
+                                        <li><a onclick="ClickMenu('00', '2'); location.href='https://www.csc.com.tw/csc_e/hr/wef/wef.html'">Outreach Programs</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('00', ''); location.href='https://www.csc.com.tw/csc_e/ts/ts.html'; event.stopPropagation();">Technology Innovation</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('00', '3'); location.href='https://www.csc.com.tw/csc_e/ts/ts.html'">Research Concept</a></li>
+                                        <li><a onclick="ClickMenu('00', '3'); location.href='https://www.csc.com.tw/csc_e/ts/org/org.html'">Organizational Resources</a></li>
+                                        <li><a onclick="ClickMenu('00', '3'); location.href='https://www.csc.com.tw/csc_e/ts/redi/redi.html'">Research Fields and Directions</a></li>
+                                        <li><a onclick="ClickMenu('00', '3'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/ts/ts.html#equ';">Advanced Analysis Equipments</a></li>
+                                        <li><a onclick="ClickMenu('00', '3'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/ts/ts.html#ena';">Activities and Awards</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('00', ''); location.href='https://www.csc.com.tw/CS/CSC_e/NC/nc.aspx'; event.stopPropagation();">News Center</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('00', '4'); $('.icon-close').click(); location.href='https://www.csc.com.tw/CS/CSC_e/NC/nc.aspx#cta';">News Contacts</a></li>
+                                        <li><a onclick="ClickMenu('00', '4'); location.href='https://www.csc.com.tw/CS/CSC_e/NC/neli/neli.aspx'">News Summaries</a></li>
+                                        <li><a onclick="ClickMenu('00', '4'); $('.icon-close').click(); location.href='https://www.csc.com.tw/CS/CSC_e/NC/nc.aspx#cta';">Multimedia Display</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('00', ''); location.href='https://www.csc.com.tw/csc_e/wb/wb.html'; event.stopPropagation();">Web Service</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('00', '5'); location.href='https://www.csc.com.tw/csc_e/wb/wb.html'">Links</a></li>
+                                        <li><a onclick="ClickMenu('00', '5'); location.href='https://www.csc.com.tw/csc_e/wb/map.html'">Site Map</a></li>
+                                        <li><a onclick="ClickMenu('00', '5'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/wb/wb.html#maco';">Contact Us</a></li>
+                                        <li><a onclick="ClickMenu('00', '5'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/wb/wb.html#copy';">Copyright Notice</a></li>
+                                        <li><a onclick="ClickMenu('00', '5'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/privacy.html';">Privacy Policy</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- ESG -->
+                            <ul class="cart" style="display: none;">
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a style="cursor: pointer;">Overview</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('01', '1'); location.href='https://www.csc.com.tw/csc_e/esg/ov/ov1.html'">Awards and Recognitions</a></li>
+
+                                        <li><a href="https://www.facebook.com/csc.tw.csr/" target="_blank">CSC ESG Fan Page</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '1'); location.href='https://www.csc.com.tw/CS/CSC_e/ESG/Question2025.aspx'">CSC Materiality Survey on Sustainability Topics</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '1'); location.href='https://www.csc.com.tw/csc_e/esg/ov/ov3.html'">CSC Sustainability Targets</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '1'); location.href='https://www.csc.com.tw/csc_e/esg/ov/ov5.html'">Material Topics</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '1'); location.href='https://www.csc.com.tw/csc_e/esg/ov/sus.html'">Stakeholder Engagement</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '1'); location.href='https://www.csc.com.tw/csc_e/esg/ov/ov2_eco.html'">Sustainability Performance Overview</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '1'); location.href='https://www.csc.com.tw/csc_e/esg/ov/ov4.html'">Sustainability Report</a></li>
+
+                                         <li><a onclick="ClickMenu('01', '1'); location.href='https://www.csc.com.tw/csc_e/esg/ov/ov6.html'">UN SDGs</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a style="cursor: pointer;">Environmental</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env4.html'">Biodiversity</a></li>
+
+                                        <!-- <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env10.html'">Climate Position and Advocacy</a></li>-->
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.
+                                        href='https://www.csc.com.tw/csc_e/esg/env/env7.html'">Circular Economy</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env11.html'">Eco-friendly</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env15.html'">EHS Concept</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env2.html'">Energy</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env17.html'">Environmental Accounting</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env16.html'">Environmental Loading Reduction Commitment</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env1.html'">Low Carbon Transition</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env5.html'">Pollution and Waste Management</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env6.html'">Smart Production Lines</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env8_1.html'">Sustainable Taxonomy and Green Revenues</a></li>
+
+                                        <!--<li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env9.html'">Green Revenues</a></li>-->
+
+                                        <li><a onclick="ClickMenu('01', '2'); location.href='https://www.csc.com.tw/csc_e/esg/env/env3.html'">Water Resource</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a style="cursor: pointer;">Social</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('01', '3'); location.href='https://www.csc.com.tw/csc_e/esg/soc/soc4.html'">Customer Services</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '3'); location.href='https://www.csc.com.tw/csc_e/esg/soc/soc5.html'">Customer Technical Services</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '3'); location.href='https://www.csc.com.tw/csc_e/esg/soc/soc7_hd.html'">Human Capital Management</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '3'); location.href='https://www.csc.com.tw/csc_e/esg/soc/soc2_ibh.html'">Human Rights</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '3'); location.href='https://www.csc.com.tw/csc_e/esg/soc/soc8_le.html'">Occupational Safety and Health</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '3'); location.href='https://www.csc.com.tw/csc_e/esg/soc/soc6.html'">Organization: From Engagement to Impact</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '3'); location.href='https://www.csc.com.tw/csc_e/esg/soc/soc3_cc.html'">Social Participation</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '3'); location.href='https://www.csc.com.tw/csc_e/esg/soc/soc1_ta.html'">Talent Attraction &amp; Retention</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a style="cursor: pointer;">Governance</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('01', '4'); location.href='https://www.csc.com.tw/csc_e/esg/cg/cg8.html'">Artificial Intelligence</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '4'); location.href='https://www.csc.com.tw/csc_e/esg/cg/cg1.html'">Board of Directors and Committees</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '4'); location.href='https://www.csc.com.tw/csc_e/esg/cg/is/is_pol.html'">Cybersecurity</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '4'); location.href='https://www.csc.com.tw/csc_e/esg/cg/cg2.html'">Integrity Management</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '4'); location.href='https://www.csc.com.tw/csc_e/esg/cg/cg6.html'">Management of Suppliers</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '4'); location.href='https://www.csc.com.tw/csc_e/esg/cg/cg7.html'">Pay Link to Sustainability</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '4'); location.href='https://www.csc.com.tw/csc_e/esg/cg/cg4.html'">Quality Control</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '4'); location.href='https://www.csc.com.tw/csc_e/esg/cg/cg3.html'">Risk Management</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '4'); location.href='https://www.csc.com.tw/csc_e/esg/cg/cg5.html'">Shareholder Rights and Tax Management</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="cartTitle2">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('01', ''); location.href='https://www.csc.com.tw/csc_e/esg/ov/ov.html'" class="non_category" style="cursor: pointer;">Operation and Development Strategies</a>
+                                    </div>
+                                </li>
+                                <li class="cartTitle2">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('01', ''); location.href='https://www.csc.com.tw/csc_e/esg/ov/movie.html'" class="non_category" style="cursor: pointer;">Video</a>
+                                    </div>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a style="cursor: pointer;">Report</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+
+                                        <li><a onclick="ClickMenu('01', '5'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/esg/ov/dow.html#dow2';">ESG Insight</a></li>
+
+                                        <li><a onclick="ClickMenu('01', '5'); location.href='https://www.csc.com.tw/csc_e/esg/ov/dow.html'">Report Download</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- 客戶服務 -->
+                            <ul class="cart" style="display: none;">
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('02', ''); location.href='https://www.csc.com.tw/csc_e/cs/cs.html'; event.stopPropagation();">Customer Service</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('02', '1'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cs/cs.html#serv';">Sales Service</a></li>
+                                        <li><a onclick="ClickMenu('02', '1'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cs/cs.html#eng';">Engineering Service</a></li>
+                                        <!-- <li><a onclick="$('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cs/cs.html#c3';">Miscellaneous Service</a></li> -->
+                                        <li><a href="https://cscqs01.csc.com.tw/qs_home/cts/web/index/en/index.asp" target="_blank">Metallurgical Technical Service</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('02', ''); location.href='https://www.csc.com.tw/csc_e/pd/pd.html'; event.stopPropagation();">Production</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('02', '3'); location.href='https://www.csc.com.tw/csc_e/pd/prs.htm'">Production Flow Chart</a></li>
+                                        <li><a onclick="ClickMenu('02', '3'); location.href='https://www.csc.com.tw/csc_e/pd/inta/inta.html'">Product Introduction</a></li>
+                                        <li><a onclick="ClickMenu('02', '3'); location.href='https://www.csc.com.tw/csc_e/pd/mlg/mlg.html'">Product Specification</a></li>
+                                        <li><a onclick="ClickMenu('02', '3'); location.href='https://www.csc.com.tw/csc_e/pd/pdeq/pdeq.html'">Major Operational Facilities</a></li>
+                                        <li><a onclick="ClickMenu('02', '3'); location.href='https://www.csc.com.tw/csc_e/pd/size/size.html'">Available Product Size &amp; Further Information</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- 投資人關係 -->
+                            <ul class="cart" style="display: none;">
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('03', ''); location.href='https://www.csc.com.tw/csc_e/ss/ss.html'; event.stopPropagation();">Stockholder Service</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('03', '1'); location.href='https://www.csc.com.tw/csc_e/ss/sh/sh_index.html'">Stock Information</a></li>
+                                        <li><a onclick="ClickMenu('03', '1'); location.href='https://www.csc.com.tw/csc_e/ss/fin/fin.html'">Financial Information</a></li>
+                                        <li><a onclick="ClickMenu('03', '1'); location.href='https://www.csc.com.tw/csc_e/ss/stp/stp_index.html'">Information on Stock Price</a></li>
+                                        <li><a onclick="ClickMenu('03', '1'); location.href='https://www.csc.com.tw/csc_e/ss/qa/sqa_index.html'">Q&amp;A for Stockholders</a></li>
+                                        <li><a onclick="ClickMenu('03', '1'); location.href='https://www.csc.com.tw/csc_e/ss/pst/pst_index.html'">CSC Presentation</a></li>
+                                        <li><a onclick="ClickMenu('03', '1'); location.href='https://www.csc.com.tw/csc_e/ss/bd/bd_index.html'">Information for Shareholder Meeting</a></li>
+                                        <li><a onclick="ClickMenu('03', '1'); location.href='https://www.csc.com.tw/csc_e/ss/sinf/sinf_index.html'">Material Information</a></li>
+                                        <li><a href="https://emops.twse.com.tw/server-java/t58query" target="_blank">Market Observation Post System</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('03', ''); location.href='https://www.csc.com.tw/csc_e/cg/cg.html'; event.stopPropagation();">Corporate Governance</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('03', '2'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cg/bi.html';">Board of Directors</a></li>
+                                        <li><a onclick="ClickMenu('03', '2'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cg/cg.html#bi';">Election of Independent Directors</a></li>
+                                        <li><a onclick="ClickMenu('03', '2'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cg/bof.html';">Committees of the Board</a></li>
+                                        <li><a onclick="ClickMenu('03', '2'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cg/cg.html#Con';">Continuing Education for Directors</a></li>
+                                        <li><a onclick="ClickMenu('03', '2'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cg/boa.html';">Board Press Release</a></li>
+                                        <li><a onclick="ClickMenu('03', '2'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cg/cg.html#cg_sup';">Corporate Governance Officer</a></li>
+                                        <li><a onclick="ClickMenu('03', '2'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cg/cg.html#law';">Corporate Governance Regulations</a></li>
+                                        <li><a onclick="ClickMenu('03', '2'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/cg/ia.html';">Internal Auditing</a></li>
+                                        <li><a onclick="ClickMenu('03', '2'); $('.icon-close').click(); location.href='https://www.csc.com.tw/csc_e/is/is.html';">Information Security Risk Management</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('03', ''); location.href='https://www.csc.com.tw/csc_e/gc/gc.html'; event.stopPropagation();">Investments</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a onclick="ClickMenu('03', '3'); location.href='https://www.csc.com.tw/csc_e/gc/gro.html'">Subsidiaries and Affiliates</a></li>
+                                        <li><a onclick="ClickMenu('03', '3'); location.href='https://www.csc.com.tw/csc_e/gc/goth.html'">Other Businesses</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!-- 利害關係人溝通 -->
+                            <ul class="cart" style="display: none;">
+                                <li class="cartTitle2">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('05', ''); location.href='https://www.csc.com.tw/csc_e/esg/ov/sus.html'" class="non_category" style="cursor: pointer;">Communication with stakeholders</a>
+                                    </div>
+                                </li>
+                                <li class="cartTitle2">
+                                    <div class="TitleLink">
+                                        <a href="https://www.csc.com.tw/CS/CSC_e/ESG/Question2025.aspx" target="_blank" class="non_category">Questionnaire</a>
+                                    </div>
+                                </li>
+                                <li class="cartTitle2">
+                                    <div class="TitleLink">
+                                        <a onclick="ClickMenu('04', ''); location.href='https://www.csc.com.tw/csc_e/allContact.html'" class="non_category" style="cursor: pointer;">Stakeholder Contacts</a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- 專區網站 -->
+                            <ul class="cart" style="display: none;">
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a style="cursor: pointer;">Customer</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a href="https://www.csc.com.tw/csc/gef/index.aspx" target="_blank">CSC Group Education Foundation</a></li>
+                                        <li><a href="https://cs.csc.com.tw/qss/portal/qss01" target="_blank">e-Sales+</a></li>
+                                        <li><a href="https://cscqs01.csc.com.tw/qs_home/cts/web/index/en/index.html" target="_blank">Metallurgical Technical Service</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a href="#">Supplier</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a href="https://cs.csc.com.tw/qss/ec/qssec" target="blank">E-purchases</a></li>
+                                    </ul>
+                                </li>
+                                <li class="cartTitle">
+                                    <div class="TitleLink">
+                                        <a href="#">Employee</a>
+                                    </div>
+
+                                    <ul class="third_menu">
+                                        <li><a href="https://glr.csc.com.tw/hkz/elearning/hkz00" target="blank">E-learning</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //靜態讀取後讀選單套件
+        $.getScript("https://www.csc.com.tw/js/main_e.js");
+    });
+
+    $(function () {
+        if (!('ontouchstart' in window)) {
+            let hoverTimer;
+
+            $(".main_menuTitle").on("mouseover", function (e) {
+                const $this = $(this);
+                // 設定延遲 0.1 秒（100 毫秒）執行
+                hoverTimer = setTimeout(function () {
+                    $this.trigger("click"); // 模擬點擊
+                }, 100);
+            });
+
+            $(".main_menuTitle").on("mouseout", function () {
+                // 滑鼠離開時清除計時器
+                clearTimeout(hoverTimer);
+            });
+        }
+    });
+
+    $(document).on('click', '.arrow', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    });
+</script></div>
+            </div>
+            <div class="mob"></div>
+            <!--end of mob-->
+            <div class="menu_btn"><a href="http://search.csc.com.tw/mis/cscweb/search_new/searchV2.asp" target="_blank">
+    <div class="search"></div>
+</a>
+<select class="lang" onchange="if(this.selectedIndex!=0) self.location=this.options[this.selectedIndex].value">
+      <option selected="">Language</option>
+      <option value="https://www.csc.com.tw/index.html">繁體中文</option>
+      <option value="https://www.csc.com.tw/indexc.html">简体中文</option>
+      <option value="https://www.csc.com.tw/indexe.html">English</option>
+</select>
+</div>
+        </div>
+
+        <!-- header part end -->
+
+    <section class="En swiper mySwiper swiper-creative swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events swiper-watch-progress" style="box-sizing: border-box;">
+        <div class="swiper-wrapper" id="swiper-wrapper-368671061005634a93" aria-live="off" style="transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="5" role="group" aria-label="6 / 6" style="width: 1400px; transition-duration: 0ms; z-index: 5; transform: translate3d(calc(0px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 0;">
+                <div class="bannerWrap banner-6 animate-slideInUp fullCover2" style="background-image: url(./images/banner/csc/CSC_idx_banner8_text.jpg);">
+                    <div class="fullPart">
+                        <div class="bannerInfo">
+                            <a class="bannerTitle iframe cboxElement" onclick="showCB('banner/csc_e/banner6_pop.html'); event.stopPropagation();" style="cursor: pointer;">
+                                <h2>Danjiang Bridge - Constructed with CSC Steel</h2>
+                                <span class="btn-grow btn-grow_w">
+                                    <span class="btn-title btn2">More</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1 / 6" style="width: 1400px; transition-duration: 0ms; z-index: 6; transform: translate3d(calc(-1400px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 0;">
+                <div class="bannerWrap animate-slideInUp fullCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner1_text.jpg);">
+                    <div class="bannerWrap fullTableCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner1_text_m.jpg);">
+                    </div>
+                    <div class="bannerWrap fullMobCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner1_text_s.jpg);">
+                    </div>
+                    <a href="csc_e/ch/ch.html#str">
+                        <div class="fullPart">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" role="group" aria-label="2 / 6" style="width: 1400px; transition-duration: 0ms; z-index: 99; transform: translate3d(calc(-2800px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 0.5;">
+                <div class="bannerWrap banner-1 animate-slideInUp fullCover2" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner7_text.jpg);">
+                    <div class="fullPart">
+                        <div class="bannerInfo">
+                            <a class="bannerTitle" href="javascript:void(0)">
+                                <h4>Global Steel Sustainability Leader</h4>
+                            </a>
+                            <a class="bannerTitle" href="https://www.csc.com.tw/csc_e/esg/ov/ov1.html">
+                                <h2>
+                                    Retained position in the Dow Jones Best-in-Class (DJBIC) World &amp; Emerging Markets Indices
+                                </h2>
+                                <h2>
+                                    Ranked in the Top 5% of the S&amp;P Global Sustainability Yearbook 2026
+                                </h2>
+                                <h2>
+                                    Recognized as a 2026 Sustainability Champion by the World Steel Association
+                                </h2>
+                                <span class="btn-grow btn-grow_w">
+                                    <span class="btn-title btn2">More</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-visible swiper-slide-active" data-swiper-slide-index="2" role="group" aria-label="3 / 6" style="width: 1400px; transition-duration: 0ms; z-index: 100; transform: translate3d(calc(-4200px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 1;">
+                <div class="bannerWrap animate-slideInUp fullCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner2_text.jpg);">
+                    <div class="bannerWrap fullTableCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner2_text_m.jpg);">
+                    </div>
+                    <div class="bannerWrap fullMobCover full-kv-tb" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner2_text_s.jpg);">
+                    </div>
+                    <!-- <a href="https://www.csc.com.tw/CS/CSC/NC/neli/neli_content.aspx?newid=66CA5E3A51CDDE16">
+                        <div class="fullPart">
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="3" role="group" aria-label="4 / 6" style="width: 1400px; transition-duration: 0ms; z-index: 7; transform: translate3d(calc(-5600px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 0;">
+                <div class="bannerWrap animate-slideInUp fullCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner3_1_text.jpg?v=2);">
+                    <div class="bannerWrap fullTableCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner3_1_text_m.jpg?v=2);">
+                    </div>
+                    <div class="bannerWrap fullMobCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner3_1_text_s.jpg?v=2);"></div>
+                    <!-- <a href="csc_e/gc/gro_ser_p5.html">
+                        <div class="fullPart">
+                        </div>
+                    </a> -->
+                    <a class="iframe cboxElement" onclick="showCB('csc_e/gc/gro_ser_p5.html'); event.stopPropagation();" style="cursor: pointer;">
+                        <div class="fullPart">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide" data-swiper-slide-index="4" role="group" aria-label="5 / 6" style="width: 1400px; transition-duration: 0ms; z-index: 6; transform: translate3d(calc(-7000px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 0;">
+                <div class="bannerWrap animate-slideInUp fullCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner5_text.jpg);">
+                    <div class="bannerWrap fullTableCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner5_text_m.jpg);">
+                    </div>
+                    <div class="bannerWrap fullMobCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner5_text_s.jpg);">
+                    </div>
+                    <a href="csc_e/esg/env/env7.html">
+                        <div class="fullPart">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="swiper-slide">
+                <div class="bannerWrap animate-slideInUp fullCover"
+                    style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner6_text.jpg);">
+                    <div class="bannerWrap fullTableCover"
+                        style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner6_text_m.jpg);">
+                    </div>
+                    <div class="bannerWrap fullMobCover"
+                        style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner6_text_s.jpg);"></div>
+                    <a href="#">
+                        <div class="fullPart">
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+            <div class="swiper-slide" data-swiper-slide-index="5" role="group" aria-label="6 / 6" style="width: 1400px; transition-duration: 0ms; z-index: 5; transform: translate3d(calc(-8400px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 0;">
+                <div class="bannerWrap banner-6 animate-slideInUp fullCover2" style="background-image: url(./images/banner/csc/CSC_idx_banner8_text.jpg);">
+                    <div class="fullPart">
+                        <div class="bannerInfo">
+                            <a class="bannerTitle iframe cboxElement" onclick="showCB('banner/csc_e/banner6_pop.html'); event.stopPropagation();" style="cursor: pointer;">
+                                <h2>Danjiang Bridge - Constructed with CSC Steel</h2>
+                                <span class="btn-grow btn-grow_w">
+                                    <span class="btn-title btn2">More</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="swiper-slide">
+                <div class="bannerWrap">
+                    <div class="rightPart animate-slideInRight">
+                        <img src="./images/banner/csc_e/永續報告書resize.jpg" class="hide-md"
+                            alt="AUO Recognized as Top 100 Global Innovator 2024">
+                        <img src="./images/banner/csc_e/永續報告書resize_s.jpg" class="hide-lg"
+                            alt="AUO Recognized as Top 100 Global Innovator 2024">
+                    </div>
+                    <div class="leftPart animate-slideInLeft pattern_blue">
+                        <div class="bannerInfo">
+                            <div class="bannerTitle Title">
+                                <h2 class="bold transform font">2023 Sustainability Report</h2>
+                            </div>
+                            <div class="bannerText">參與高雄市綠色軌道的新篇章，亦實踐企業ESG永續承諾。
+                            </div>
+                            <div class="btn-block">
+                                <a href="csc_e/esg/ov/dow.html" class="btn-grow">
+                                    <span class="btn-title">More</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1 / 6" style="width: 1400px; transition-duration: 0ms; z-index: 4; transform: translate3d(calc(-9800px), calc(0px), calc(0px)) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); opacity: 0;">
+                <div class="bannerWrap animate-slideInUp fullCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner1_text.jpg);">
+                    <div class="bannerWrap fullTableCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner1_text_m.jpg);">
+                    </div>
+                    <div class="bannerWrap fullMobCover" style="background-image: url(./images/banner/csc_e/CSC_e_idx_banner1_text_s.jpg);">
+                    </div>
+                    <a href="csc_e/ch/ch.html#str">
+                        <div class="fullPart">
+                        </div>
+                    </a>
+                </div>
+            </div></div>
+        <div class="swiper-pagination hide-md swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><div class="swiper-pagination-bullet" tabindex="0"><span></span></div><div class="swiper-pagination-bullet" tabindex="0"><span></span></div><div class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" aria-current="true"><span></span></div><div class="swiper-pagination-bullet" tabindex="0"><span></span></div><div class="swiper-pagination-bullet" tabindex="0"><span></span></div><div class="swiper-pagination-bullet" tabindex="0"><span></span></div></div>
+        <div class="swiper-button-next hide-lg" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-368671061005634a93"></div>
+        <div class="swiper-button-prev hide-lg" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-368671061005634a93"></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></section>
+
+        <!--end of csc_topBg-->
+        <div class="idx_newsBg">
+            <div class="title"><img src="images_new/idx_tit_1.png"></div>
+            <div class="idx_news c3 wow fadeInRight" data-wow-delay="0.3s">
+                <a href="//www.csc.com.tw/CS/CSC_E/NC/nc.aspx">
+                    <div class="tit">News Center</div>
+                    <div class="blockBtn"></div>
+                </a>
+                <ul><li><div class="date">24<br><span>Sep</span></div><div class="text"><span onclick="showCB('cs/csc_e/nc/neli/neli_content.aspx?newid=BE555EB01354055E');" style="cursor:pointer">China Steel Corporation Preliminary Resu...</span></div></li><li><div class="date">20<br><span>Aug</span></div><div class="text"><span onclick="showCB('cs/csc_e/nc/neli/neli_content.aspx?newid=15247B9ED5A6FD28');" style="cursor:pointer">China Steel Corporation Preliminary Resu...</span></div></li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </ul>
+                <!--Ajax NEWS-->
+                <script type="text/javascript">
+                    $.get('cs/data/index_news.ashx', {
+                        LANGID: '2',
+                        PAGE: 'new'
+                    }, function(x) {
+                        $('.idx_news ul').empty();
+                        $('.idx_news ul').append(x);
+                    });
+                </script>
+                <!--Ajax NEWS-->
+            </div>
+            <!--end of idx_news-->
+            <div class="idx_comp c3 wow rotateInDownLeft" data-wow-delay="0.4s">
+                <div class="tit">Exhibitions</div>
+                <div class="blockBtn"></div>
+                <ul>
+                    <!-- <li><a href="//www.csc.com.tw/csc_e/hr/csr/index.htm" target="_blank">CSR Officially Online</a></li>
+                    <li><a href="//www.csc.com.tw/csc_e/nc/medi/medi.html">CSR's Video Public Release</a></li> -->
+                </ul>
+            </div>
+            <!--end of idx_comp-->
+            <a href="//www.csc.com.tw/csc_e/nc/medi/medi_p2.html">
+                </a><div class="idx_photo c3 wow fadeInLeft" data-wow-delay="0.5s"><a href="//www.csc.com.tw/csc_e/nc/medi/medi_p2.html">
+                    <div class="tit orgBg">Albums</div>
+                    <div class="blockBtn_w"></div>
+                    <div class="alb_tit">2024<br>
+                    </div>
+                    <div class="cover_photo"></div>
+            </a>
+            <!-- blueberry -->
+            <div class="blueberry" style="height:280px; overflow:hidden;">
+                <!--<ul class="slides">-->
+                <ul>
+                    <li><img src="images_new/idx_pho_img_24.jpg?V=1" width="100%"></li>
+                </ul>
+            <ul class="pager"></ul></div>
+            <!-- blueberry -->
+            </div>
+            
+            <!--end of idx_photo-->
+
+            <div class="idx_fin c3 wow fadeInLeft" data-wow-delay="0.6s">
+                <a href="https://www.csc.com.tw/csc_e/ss/fin/fin.html">
+                    <div class="tit">Financial Information</div>
+                    <div class="blockBtn"></div>
+                </a>
+                <ul>
+                    <li><a href="//www.csc.com.tw/csc_e/ss/pst/pst_index.html">Latest Presentation September 23, 2026.</a></li>
+                    <li> <a href="csc_e/ss/fin/fin.html">Consolidated Preliminary Result August 2026</a></li>
+                    <li> <a href="csc_e/ss/fin/fin.html#fin_ctn_box">Consolidated Sales Revenue Breakdown (August)</a></li>
+                    <li> <a href="csc_e/ss/fin/fin_p3.html">Financial Report (Q2, 2026)  </a></li>
+                </ul>
+            </div>
+
+            <!--end of idx_fin-->
+        </div>
+        <!--end of idx_newsBg-->
+        <div class="idx_prodBg">
+            <div class="title deco1"><img src="images_new/idx_tit_2.png"></div>
+            <a href="//www.csc.com.tw/csc_e/pd/pd.html">
+                <div class="idx_appl c6 wow rotateInUpRight" data-wow-delay="0.4s">
+                    <div class="tit">Product Application</div>
+                    <div class="blockBtn_w"></div>
+                    <div class="appl_cover"></div>
+                    <div id="slider_prod" class="blueberry">
+                        <!-- <ul class="slides"> -->
+                        <ul>
+                            <li><img src="images_new/idx_prod_slid_1.jpg" alt="" width="100%"></li>
+                            <!-- <li><img src="images_new/idx_prod_slid_2e.jpg" alt=""></li>
+        <li><img src="images_new/idx_prod_slid_3.jpg" alt="" data-transition="slideInLeft" /></li> -->
+                        </ul>
+                    <ul class="pager"></ul></div>
+                </div>
+            </a>
+            <!--end of idx_appl-->
+            <a href="//www.csc.com.tw/csc_e/ts/ts.html">
+                <div class="idx_futu c6 wow rotateInUpLeft" data-wow-delay="0.4s">
+                    <div class="tit">Research Concept</div>
+                    <div class="blockBtn_w"></div>
+                    <div class="futu_text">China Steel Corporation (CSC) adopted the policies of lowering cost, enhancing product quality, saving energy and differentiating customer services to create competitive advantages.</div>
+                    <div class="futu_cover"></div>
+                    <img src="images_new/idx_fur_slid_1.jpg"> </div>
+            </a>
+            <!--end of idx_futu-->
+        </div>
+        <!--end of idx_prodBg-->
+        <div class="idx_techBg">
+            <div class="title deco2"><img src="images_new/idx_tit_3.png"></div>
+            <a href="//www.csc.com.tw/csc_e/ts/redi/redi.html">
+                <div class="idx_IT c3 wow rollIn" data-wow-delay="0.3s">
+                    <div class="tit">IT News</div>
+                    <div class="blockBtn"></div>
+                    <ul>
+                        <li>High Resolution Field Emission Scanning Electron Microscope (HRFE-SEM)</li>
+                        <li>Electron Probe Micro-analyzer (EPMA)</li>
+                        <li>Internal Friction Machine (IFM)</li>
+                    </ul>
+                </div>
+            </a>
+            <!--end of idx_IT-->
+            <a href="//www.csc.com.tw/csc_e/ts/redi/redi_dev_p2.html" class="iframe cboxElement">
+                <div class="idx_IT_text c3 wow lightSpeedIn" data-wow-delay="0.4s">
+                    <p class="tit">Advanced High Strength Steels</p>
+                    <p>According to the study undertaken by the World Steel Association (worldsteel), the use of AHSS to replace the plain carbon steel can reduce the body weight by 25%, save 5.1% fuel consumption, and reduce 5.7% greenhouse gas emissions
+                        without...
+                    </p>
+                </div>
+            </a>
+            <!--end of idx_IT_text-->
+            <a href="https://cscqs01.csc.com.tw/qs_home/cts/web/index/en/index.html">
+                <div class="idx_sem c3 wow slideInLeft" data-wow-delay="0.5s">
+                    <div class="sem_text"><span>Metallurgical<br>
+      Technical Service</span></div>
+                    <div class="blockBtn_w"></div>
+                    <div class="sem_cover"></div>
+                    <img src="images_new/idx_sem_img.png"> </div>
+            </a>
+            <!--end of idx_sem-->
+            <div class="idx_ved c3 wow slideInRight" data-wow-delay="0.6s">
+                <!--<div class="tit">技術分享</div>-->
+                <div class="ved_cover"></div>
+                <div class="videoContainer">
+                    <video controls="">
+        <source src="//www.csc.com.tw/csc/nc/medi/video/CSC_Chinese5.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+      </video>
+                </div>
+            </div>
+            <!--end of idx_ved-->
+        </div>
+        <!--end of idx_techBg-->
+        <div class="idx_greBg">
+            <div class="title deco3"><img src="images_new/idx_tit_4.png"></div>
+            <!-- <a href="//www.csc.com.tw/csc_e/wp/wp.html">
+    <div class="idx_wp c3 wow bounceIn" data-wow-delay="0.3s">
+      <div class="img">
+        <div class="circle"></div>
+        <img src="images_new/idx_gre_img_1.jpg"></div>
+      <div class="tit_sub"><img src="images_new/idx_btn_3.png"> WP Business Development Committee</div>
+      <div class="text">Renewable energy is sustainable use of natural resources, mainly contains solar energy, wind power, biomass energy, hydro energy, geothermal energy and ocean energy...</div>
+    </div>
+  </a> -->
+            <!--end of idx_wp
+  <a href="http://www.csc.com.tw/csc/hr/index.htm">
+  <div class="idx_eng c3 wow bounceIn" data-wow-delay="0.4s">
+    <div class="img"><img src="images_new/idx_gre_img_2.jpg"></div>
+    <div class="tit_sub"><img src="images_new/idx_btn_4.png"> Energy Saving & Environment Protection</div>
+    <div class="text">The strategies and action plans for energy saving in CSC includes process energy saving, utilities energy saving, office energy saving, energy service team and five years projects.</div>
+  </div>
+  </a>-->
+            <!--end of idx_eng-->
+            <!-- <a href="//www.csc.com.tw/csc_e/hr/csr/index.htm">
+                <div class="idx_csr c3 wow bounceIn" data-wow-delay="0.5s">
+                    <div class="img"><img src="images_new/idx_gre_img_3.jpg"></div>
+                    <div class="tit_sub"><img src="images_new/idx_btn_3.png"> CSC Corporate Social Responsibility</div>
+                    <div class="text">To effectively perform our responsibility for environmental protection, energy conservation, and emission reduction, under the Production Division (W) we have established...</div>
+                </div>
+            </a> -->
+            <!--end of idx_csr-->
+            <a href="https://www.csc.com.tw/csc/gef/index.aspx" target="_blank">
+                <div class="idx_edu c3 wow bounceIn" data-wow-delay="0.6s">
+                    <div class="img"><img src="images_new/idx_gre_img_4.jpg" border="0"></div>
+                    <div class="tit_sub"><img src="images_new/idx_btn_4.png"> CSC Group Education Foundation</div>
+                    <div class="text">CSC Group Education Foundation aims to promote steel education and talent cultivation, ecology conservation, humanistic education, and sustainable development...</div>
+                </div>
+            </a>
+            <!--end of idx_edu-->
+        </div>
+        <!--end of idx_greBg-->
+        <a href="#">
+            <div class="csc_foot_top">
+                <p align="center"><img src="images_new/csc_foot_btn_top.png" border="0"></p>
+            </div>
+        </a>
+        <!--end of csc_foot_top-->
+        <div class="csc_footBg wow fadeInDown" data-wow-delay="0.4s">	<div class="foot_menu_ab c1-5">
+		<div class="tit2"><img src="https://www.csc.com.tw/images_new/csc_foot_list.png">About CSC</div>
+		<ul>
+			<li><a href="https://www.csc.com.tw/csc_e/ch/ch.html">CSC Profile</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/hr/hr.html">Corporate Citizen</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/ts/ts.html">Technology Innovation</a></li>
+			<li><a href="https://www.csc.com.tw/CS/CSC_E/NC/nc.aspx'&gt;News Center&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=" https:="" www.csc.com.tw="" csc_e="" wb="" wb.html"="">Web-Service</a></li>
+		</ul>
+	</div> <!--end of foot_menu_ab-->
+
+	<div class="foot_menu_cs c1-5">
+		<div class="tit2"><img src="https://www.csc.com.tw/images_new/csc_foot_list.png">Customer Service</div>
+		<ul>
+			<li><a href="https://www.csc.com.tw/csc_e/cs/cs.html">Customer Service</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/pd/pd.html">Production</a></li>
+			<li><a href="https://cs.csc.com.tw/qss/ec/qssec' target=" blank"="">E-Commerce</a></li>
+		</ul>
+	</div> <!--end of foot_menu_cs-->
+
+	<div class="foot_menu_ss c1-5">
+		<div class="tit2"><img src="https://www.csc.com.tw/images_new/csc_foot_list.png">Investor Relations</div>
+		<ul>
+			<li><a href="https://www.csc.com.tw/csc_e/ss/ss.html">Stockholder Service</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/cg/cg.html">Corporate Governance</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/gc/gc.html">Investments</a></li>
+		</ul>
+	</div> <!--end of foot_menu_cs-->
+
+	<div class="foot_menu_sta c1-5">
+		<div class="tit2"><img src="https://www.csc.com.tw/images_new/csc_foot_list.png">Stakeholders</div>
+		<ul>
+			<li><a href="https://www.csc.com.tw/csc_e/esg/ov/sus.html">Communication with stakeholders</a></li>
+			<li><a href="https://www.csc.com.tw/CS/CSC_e/ESG/Question2024.aspx" target="blank">Survey</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/allContact.html">Stakeholder Contacts</a></li>
+		</ul>
+	</div> <!--end of foot_menu_cs-->
+
+	<div class="foot_menu_dw c1-5">
+		<div class="tit2"><img src="https://www.csc.com.tw/images_new/csc_foot_list.png">Download</div>
+		<ul>
+			<li><a href="https://www.csc.com.tw/csc_e/esg/ov/dow.html" target="blank">Sustainability Report</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/ss/fin/fin.html">Financial Information</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/ss/pst/pst_index.html">Latest Presentation</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/ss/bd/bd_index.html">Information for Shareholder Meeting</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/pd/mlg/mlg.html">Product Specification</a></li>
+			<li><a href="https://www.csc.com.tw/csc_e/pd/size/size.html">Available product size &amp; further information</a></li>
+		</ul>
+	</div> <!--end of foot_menu_dw-->
+</div>
+        <!--end of csc_footBg-->
+        <div class="csc_foot_cont wow fadeInDown" data-wow-delay="0.6s">	<div class="foot_share c1-5">
+		<ul>
+			<li><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+<script>
+(function(d, s, id) {
+　var js, fjs = d.getElementsByTagName(s)[0];
+　if (d.getElementById(id)) return;
+　js = d.createElement(s); js.id = id;
+　js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+　fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+$(function(){
+$.get('https://www.csc.com.tw/cs/data/H_filetime.ashx?pn=2&f=yyyy.MM.dd',null,function(x){
+$('#filetime').empty();
+$('#filetime').append(x);
+});
+});
+</script>
+<div class="fb-like fb_iframe_widget" data-send="true" data-width="150" data-show-faces="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=239&amp;href=https%3A%2F%2Fwww.csc.com.tw%2Findexe.html&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;show_faces=true&amp;width=150"><span style="vertical-align: bottom; width: 0px; height: 0px;"><iframe name="f7b4db65ba288490c" width="150px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df926d690077b75a74%26domain%3Dwww.csc.com.tw%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.csc.com.tw%252Ffddf4cce2c1464893%26relation%3Dparent.parent&amp;container_width=239&amp;href=https%3A%2F%2Fwww.csc.com.tw%2Findexe.html&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;show_faces=true&amp;width=150" style="border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: visible; width: 0px; height: 0px;" class=""></iframe></span></div></li>
+			<li>Last Updated</li>
+			<li id="filetime">2026.09.29                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </li>
+		</ul>
+
+	</div> <!--end of foot_share-->
+	<div class="foot_view c1-5">
+		<ul>
+			<li class="tit">Best View</li>
+			<li>1280*1024 </li>
+			<!--<li class="tit" style="display:none">Visitors</li>-->
+			<li><label id="count" style="display:none">
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<link href="../style/content2.css" rel="stylesheet" type="text/css">
+<link href="../../style/link.css" rel="stylesheet" type="text/css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56164862-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<table width="100%" height="25" border="0" cellpadding="0" cellspacing="0" class="text-s">
+  <tbody><tr>
+    <td>37,751,561</td>
+  </tr>
+</tbody></table>
+
+
+<script id="f5_cspm">(function(){var f5_cspm={f5_p:'MECFEMPLAKDOFFPMHIKEDELGEHCOECJDDEHFFGMLJJBJKGLOILHPCKIGAEEIHFDNONABJEJGAAINJHJCMNOACOJJAAMNCGBLDPFIKDMMBIILODBAOGJOFKBLIKFPPJCF',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,40,(latency>>8));str=f5_cspm.set_byte(str,41,(latency&0xff));str=f5_cspm.set_byte(str,35,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr0630923811aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/;'+'';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;'+';';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script></label></li>
+		</ul>
+	</div> <!--end of foot_view-->
+	<div class="foot_site c7">
+		<div class="c6">
+			<div class="img"><img src="https://www.csc.com.tw/images_new/csc_foot_map.png"></div>
+			<ul>
+				<li class="tit">Head Office</li>
+				<li>1, Chung Kang Rd., Hsiao Kang, Kaohsiung 81233, Taiwan, Republic of China</li>
+				<li>TEL:(886)7-802-1111</li>
+				<li>FAX:(886)7-537-3570</li>
+			</ul>
+		</div>
+		<div class="c6">
+			<div class="img"><img src="https://www.csc.com.tw/images_new/csc_foot_map.png"></div>
+			<ul>
+				<li class="tit">CSC Building</li>
+				<li>No.88, Chenggong 2nd Rd., Qianzhen Dist., Kaohsiung City 806, Taiwan(R.O.C)</li>
+				<li>TEL:(886)7-337-1111</li>
+				<li>FAX:(886)7-537-3570</li>
+			</ul>
+		</div>
+	</div> <!--end of foot_site-->
+</div>
+        <!--end of csc_foot_cont-->
+        <div class="copyBg wow fadeInDown" data-wow-delay="0.8s">©<span id="copyrightYear">2026</span> ChinaSteel All Rights Reserved.Designed by <a href="http://www.spadej.com.tw" target="_blank">SpadeJ</a>.
+
+<script>
+    $(function () {
+        $("#copyrightYear").text(new Date().getFullYear());
+    });
+</script></div>
+    </div>
+
+    <div id="div_background" style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 9999; background-image: url(&quot;images/blurred.png&quot;);">
+        <div id="privacyBottomBar" class="pri_pro_box">
+            <p>This website instituted the privacy policy to protect your privacy on the website, please click the "Agree" button if you agree to our privacy policy. <br> For more details, please click <a style="cursor:pointer" onclick="showCB3('csc_e/privacyPolicy.html'); HideArea();">The Privacy Policy of China Steel Corporation Website</a>.</p>
+            <div class="text-center">
+                <a style="cursor:pointer" class="btn_agree" onclick="ActionCookie();">Agree</a>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+        .pri_pro_box {
+            width: 300px;
+            background: #fff;
+            border: 2px solid #005aad;
+            padding: 0 15px 15px;
+            position: fixed;
+            right: 5px;
+            bottom: 5px;
+            z-index: 999;
+            transition: .3s;
+        }
+
+        .pri_pro_box:hover {
+            border-radius: 20px;
+            transition: .3s;
+        }
+
+        .pri_pro_box a {
+            color: #005aad;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .pri_pro_box a.btn_agree {
+            background: #005aad;
+            padding: 15px;
+            color: #fff;
+            transition: .3s;
+        }
+
+        .pri_pro_box a.btn_agree:hover {
+            border-radius: 10px;
+            transition: .3s;
+        }
+
+        .blur {
+            -webkit-filter: blur(5px);
+            /* Chrome, Opera */
+            -moz-filter: blur(5px);
+            -ms-filter: blur(5px);
+            filter: blur(5px);
+        }
+    </style>
+
+    <!-- <script src="js/LoadingJS.js"></script> -->
+    <!--menu-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper( ".mySwiper",{
+            loop: true,
+            perspective: true,
+            allowTouchMove: true,
+            slidesPerView: 1,
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    // shadow: true,
+                    opacity: 0,
+                },
+                next: {
+                    opacity: 0,
+                },
+            },
+            autoplay: {
+                delay: 6000,
+                // disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return'<div class="'+ className +'"><span></span></div>';
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            runCallbacksOnInit: false,
+            on: {
+                slideChange: function() {
+                    switchEffect();
+                    //改變前一個和當前的opacity和z-index
+                    function switchEffect() {
+                        swiper.slides[ swiper.previousIndex ].style.zIndex = 99;
+                        swiper.slides[ swiper.previousIndex ].style.opacity = 0.5;
+                        swiper.slides[ swiper.activeIndex ].style.zIndex = 100;
+                        swiper.slides[ swiper.activeIndex ].style.opacity = 1;
+                    }
+                },
+            },
+        } );
+    </script>
+
+
+
+<script src="js_new/Privacy.js"></script>
+<script>
+    function showCB3(url) {
+        $.colorbox({
+            iframe: true,
+            width: "95%",
+            height: "95%",
+            href: url,
+            fixed: true,
+            closeButton: false,
+            overlayClose: false
+        });
+    }
+</script>
+<!--Animation-->
+<script>
+    //new WOW().init();
+</script>
+<!--menu-->
+<script type="text/javascript">
+    $(function() {
+        $.get('js_new/menu.txt?v=1.1', null, function(x) {
+            $('.menu #header').empty();
+            $('.menu #header').append(x);
+        });
+        $.get('js_new/menu_s.txt?v=1.1', null, function(x) {
+            $('.mob').empty();
+            $('.mob').append(x);
+        });
+
+        $.get('js_new/menu_btn.txt', null, function(x) {
+            $('.menu_btn').empty();
+            $('.menu_btn').append(x);
+        });
+        $.get('js_new/foot_menu.txt', null, function(x) {
+            $('.csc_footBg').empty();
+            $('.csc_footBg').append(x);
+        });
+        $.get('js_new/foot_cont.txt', null, function(x) {
+            $('.csc_foot_cont').empty();
+            $('.csc_foot_cont').append(x);
+            $('#count').load('include/counter.asp?count_name=counter_index_ALL.txt&D=');
+            $.get('include/counter.asp?count_name=counter_index.txt&D=x');
+        });
+        $.get('js_new/foot_copy.txt', null, function(x) {
+            $('.copyBg').empty();
+            $('.copyBg').append(x);
+        });
+    });
+</script>
+
+<!--<script type="text/javascript" src="scroll.js"></script>-->
+<script type="text/javascript">
+    function AutoScroll(obj) {
+        $(obj).find("ul:first").animate({
+            marginTop: "-30px"
+        }, 500, function() {
+            $(this).css({
+                marginTop: "0px"
+            }).find("li:first").appendTo(this);
+        });
+    }
+    $(function() {
+        /* setInterval('AutoScroll("#scrollDivs1")', 5000); */
+    });
+</script><script id="f5_cspm">(function(){var f5_cspm={f5_p:'PMKGLAPPHIPHKAHDPPOHMAEMHLJGJLIBINMIGEODELEKMDHEMBGNIHJCIJDENGIMLBLBBHKFAABEHHHKAHEAHINDAAPIDHJPMNIBLKLMMFKIIBAOGMACDOMHAKNOAGMK',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,40,(latency>>8));str=f5_cspm.set_byte(str,41,(latency&0xff));str=f5_cspm.set_byte(str,35,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr0630923811aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/;'+'';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;'+';';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>
