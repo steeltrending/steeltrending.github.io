@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T07:26:48+08:00",
+ "updated": "2026-10-06T16:38:13+08:00",
  "items": [
   {
    "key": "tw",
@@ -10,10 +10,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 18.9,
-   "change": -0.1,
-   "change_pct": -0.53,
-   "asof": "2026-10-05"
+   "price": 18.95,
+   "change": 0.05,
+   "change_pct": 0.26,
+   "asof": "2026-10-06"
   },
   {
    "key": "tw2",
@@ -24,10 +24,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 16.85,
-   "change": -0.25,
-   "change_pct": -1.46,
-   "asof": "2026-10-05"
+   "price": 16.95,
+   "change": 0.1,
+   "change_pct": 0.59,
+   "asof": "2026-10-06"
   },
   {
    "key": "tw3",
@@ -38,10 +38,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 6.91,
-   "change": -0.09,
-   "change_pct": -1.29,
-   "asof": "2026-10-05"
+   "price": 6.95,
+   "change": 0.04,
+   "change_pct": 0.58,
+   "asof": "2026-10-06"
   },
   {
    "key": "cn",
@@ -94,10 +94,10 @@
    "country": "日本",
    "exchange": "東證",
    "currency": "JPY",
-   "price": 639.0,
-   "change": -3.5,
-   "change_pct": -0.54,
-   "asof": "2026-10-05"
+   "price": 650.5,
+   "change": 11.5,
+   "change_pct": 1.8,
+   "asof": "2026-10-06"
   },
   {
    "key": "jpkr2",
@@ -108,10 +108,10 @@
    "country": "日本",
    "exchange": "東證",
    "currency": "JPY",
-   "price": 1704.0,
-   "change": -7.0,
-   "change_pct": -0.41,
-   "asof": "2026-10-05"
+   "price": 1722.5,
+   "change": 18.5,
+   "change_pct": 1.09,
+   "asof": "2026-10-06"
   },
   {
    "key": "jpkr3",
@@ -122,10 +122,10 @@
    "country": "韓國",
    "exchange": "KRX",
    "currency": "KRW",
-   "price": 311000.0,
-   "change": 4500.0,
-   "change_pct": 1.47,
-   "asof": "2026-10-02"
+   "price": 318000.0,
+   "change": 7000.0,
+   "change_pct": 2.25,
+   "asof": "2026-10-06"
   },
   {
    "key": "us",
@@ -192,10 +192,10 @@
    "country": "德國",
    "exchange": "XETRA",
    "currency": "EUR",
-   "price": 14.01,
-   "change": 0.29,
-   "change_pct": 2.11,
-   "asof": "2026-10-02"
+   "price": 13.72,
+   "change": -0.29,
+   "change_pct": -2.07,
+   "asof": "2026-10-05"
   },
   {
    "key": "eu3",
@@ -206,10 +206,10 @@
    "country": "奧地利",
    "exchange": "維也納證交所",
    "currency": "EUR",
-   "price": 44.32,
-   "change": 0.58,
-   "change_pct": 1.33,
-   "asof": "2026-10-02"
+   "price": 43.92,
+   "change": -0.4,
+   "change_pct": -0.9,
+   "asof": "2026-10-05"
   },
   {
    "key": "sea",
@@ -221,9 +221,9 @@
    "exchange": "HOSE",
    "currency": "VND",
    "price": 20500.0,
-   "change": 450.0,
-   "change_pct": 2.24,
-   "asof": "2026-10-05"
+   "change": 0.0,
+   "change_pct": 0.0,
+   "asof": "2026-10-06"
   },
   {
    "key": "sea2",
