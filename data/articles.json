@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-china-steel-aug",
+   "category": "mills",
+   "title": "中國鋼鐵 8 月觀察：產量降到年內低點，出口連四月破千萬噸",
+   "period": "2026-08",
+   "published": "2026-10-06",
+   "summary": "8 月中國粗鋼產量 7,461 萬噸、年減 3.7%，日均產量降到年內最低；鋼材出口 1,016 萬噸、年增 6.8%，鋼胚出口前 8 月年增 52%。解析生產、出口、內需與產能政策。",
+   "tags": [
+    "中國鋼鐵",
+    "粗鋼產量",
+    "鋼材出口",
+    "鋼胚",
+    "產能置換"
+   ],
+   "image": "assets/articles/2026-10-china-steel-aug-wisco.jpg",
+   "url": "articles/2026-10-china-steel-aug.html"
+  },
+  {
    "id": "2026-10-steel-scrap",
    "category": "steel101",
    "title": "廢鋼從哪裡來：全球規模、三種來源與處理流程",
