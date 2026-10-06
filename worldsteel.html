@@ -80,6 +80,29 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
 .mstats div{display:flex;flex-direction:column}
 .mstats b{font-size:24px;font-weight:900}
 .mstats span{font-size:13px;color:#9AA0A6}
+/* map */
+.map-wrap{position:relative;margin-top:14px}
+.map-wrap svg{display:block;width:100%;height:auto}
+.map-wrap path.c{stroke:#0F1113;stroke-width:.5;cursor:pointer;transition:fill .25s ease}
+.map-wrap path.c:hover,.map-wrap path.c.on{stroke:#E8E6E1;stroke-width:1.2}
+.mlg{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;font-size:12px;color:#C9CDD2;margin-top:10px}
+.mlg span{display:inline-flex;align-items:center;gap:5px}
+.mlg i{width:14px;height:10px;display:inline-block;border-radius:2px}
+.toprow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;margin-top:14px}
+.toprow div{background:#121417;padding:10px 12px;font-size:13px;display:flex;flex-direction:column;gap:2px}
+.toprow b{font-size:16px}
+/* eaf */
+.eaf-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.eb{display:grid;grid-template-columns:76px minmax(0,1fr) 52px;gap:8px;align-items:center;height:24px;font-size:13px}
+.eb .n{text-align:right;color:#C9CDD2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.eb.tw .n{color:#FF8A47;font-weight:700}
+.eb .t{display:flex;height:14px;gap:2px}
+.eb .e{background:#E8590C;border-radius:4px 0 0 4px}
+.eb .b{background:#4A5058;border-radius:0 4px 4px 0;flex:1}
+.eb .e.full{border-radius:4px}
+.eb .v{font-family:'IBM Plex Mono',monospace;font-size:12px;text-align:right;color:#E8E6E1}
+.eb:hover .e{filter:brightness(1.2)}
+@media (max-width:900px){.eaf-grid{grid-template-columns:1fr}.toprow{grid-template-columns:repeat(2,minmax(0,1fr))}.toprow div:last-child:nth-child(odd){grid-column:span 2}}
 @media (max-width:820px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.wrap{padding:0 16px}.kpi .v{font-size:24px}.rb{grid-template-columns:64px minmax(0,1fr);gap:8px}.rb .n{font-size:12px}.race-year{font-size:32px}.card{padding:16px 12px}}
 </style>
@@ -138,6 +161,43 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
 </div>
 </section>
 
+<!-- 地圖 -->
+<section class="sec" aria-labelledby="map-h">
+<div class="sec-h"><h2 id="map-h">世界鋼鐵地圖</h2><span class="lbl">WORLD MAP</span></div>
+<div class="card">
+<div class="row" role="group" aria-label="地圖指標" id="mapMet"></div>
+<div class="ctrl" style="margin-top:12px">
+<input type="range" id="mapYr" aria-label="地圖年份">
+<span class="mono muted" id="mapYrLbl" style="min-width:44px">—</span>
+</div>
+<div class="map-wrap" id="map" role="img" aria-label="世界鋼鐵地圖"></div>
+<div class="mlg" id="mapLg"></div>
+<div class="toprow" id="mapTop"></div>
+<p class="note" id="mapNote">滑過國家可看數值與排名；點一下國家會加入下方「國家比較」。</p>
+</div>
+</section>
+
+<!-- 電爐鋼 -->
+<section class="sec" aria-labelledby="eaf-h">
+<div class="sec-h"><h2 id="eaf-h">電爐鋼：誰用廢鋼煉鋼</h2><span class="lbl">EAF ROUTE</span></div>
+<div class="card">
+<p style="margin:0 0 14px;font-size:15px;line-height:1.8;color:#C9CDD2">粗鋼有兩條主要路線：高爐－轉爐以鐵礦砂、焦煤煉鐵再煉鋼；電爐以廢鋼（或直接還原鐵）為原料，以廢鋼為主的電爐，每噸碳排約為高爐－轉爐的三分之一到四分之一。電爐鋼比例高低，反映各國的廢鋼存量、電價、天然氣（直接還原鐵）資源與發展階段。</p>
+<div class="eaf-grid">
+<div>
+<div class="row" style="justify-content:space-between"><b style="font-size:15px">電爐鋼比例走勢</b><span class="lbl">%</span></div>
+<div class="chart" id="eafLine"></div>
+<div class="legend" id="eafLg"></div>
+</div>
+<div>
+<div class="row" style="justify-content:space-between"><b style="font-size:15px">前 20 大產鋼國的煉鋼路線</b><select id="eafYr" aria-label="年份"></select></div>
+<div id="eafBars" style="margin-top:14px"></div>
+<div class="legend"><span><i style="background:#E8590C;height:10px;width:10px"></i>電爐</span><span><i style="background:#4A5058;height:10px;width:10px"></i>轉爐及其他</span></div>
+</div>
+</div>
+<p class="note" id="eafNote"></p>
+</div>
+</section>
+
 <!-- 2. 國家比較 -->
 <section class="sec" aria-labelledby="cmp-h">
 <div class="sec-h"><h2 id="cmp-h">國家比較</h2><span class="lbl">COMPARE</span></div>
@@ -171,7 +231,7 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
 </div>
 </section>
 
-<p style="margin:56px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6">資料來源：<a href="https://worldsteel.org/data/annual-production-steel-data/">World Steel Association（worldsteel）</a>，本站每週自動擷取其數據檢視器公布的數值，未做任何調整。年度數據隨 worldsteel 統計年鑑更新，月度粗鋼產量約於次月下旬公布，後續可能修正。粗鋼為鋼的第一個固態形式（鋼錠、鋼胚與鑄件用鋼液）；表觀鋼材消費＝成品鋼材產量＋進口－出口；電爐鋼比例＝電爐鋼產量÷粗鋼產量。各指標涵蓋國家與年份不同，缺值以空白表示。</p>
+<p style="margin:56px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6">資料來源：<a href="https://worldsteel.org/data/annual-production-steel-data/">World Steel Association（worldsteel）</a>，本站每週自動擷取其數據檢視器公布的數值，未做任何調整。年度數據隨 worldsteel 統計年鑑更新，月度粗鋼產量約於次月下旬公布，後續可能修正。粗鋼為鋼的第一個固態形式（鋼錠、鋼胚與鑄件用鋼液）；表觀鋼材消費＝成品鋼材產量＋進口－出口；電爐鋼比例＝電爐鋼產量÷粗鋼產量。各指標涵蓋國家與年份不同，缺值以空白表示。數據檢視器的數值會隨 worldsteel 修正而更新，可能與較早發布的《World Steel in Figures》或新聞稿略有差異；月度統計涵蓋約 70 國（約占全球 98%），全球年初至今採新聞稿公布的合計。地圖底圖：Natural Earth（公有領域），經 world-atlas 轉換。</p>
 </main>
 <div class="tip" id="tip" hidden></div>
 <script>
@@ -216,10 +276,13 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
     var mw = D.monthly.crude.WORLD_ALL || {};
     var ytd = 0, ytdP = 0;
     for (var m = 1; m <= mM; m++) { var k = (m < 10 ? '0' : '') + m; ytd += mw[mY + k] || 0; ytdP += mw[(+mY - 1) + k] || 0; }
+    // 全球年初至今採 worldsteel 新聞稿的官方合計（約 70 國），年增率以去年同期月度合計為基準
+    var off = D.regions_ytd && D.regions_ytd.WORLD && D.regions_ytd.WORLD[mY];
+    if (off) ytd = off * 1e3;
     var rank = ranking(ya, false), twR = rank.findIndex(function (r) { return r.c === 'TWN'; }) + 1;
     var K = [
       ['全球粗鋼產量（' + ya + '）', fmt(w[ya] / 1e6, 2), '十億噸', '年增 ' + pct((w[ya] / w[yp] - 1) * 100), cls(w[ya] - w[yp])],
-      ['全球 ' + mY + ' 年 1–' + mM + ' 月', fmt(ytd / 1e3, 0), '百萬噸', '年增 ' + pct((ytd / ytdP - 1) * 100), cls(ytd - ytdP)],
+      ['全球 ' + mY + ' 年 1–' + mM + ' 月（70 國）', fmt(ytd / 1e3, 0), '百萬噸', '年增 ' + pct((ytd / ytdP - 1) * 100), cls(ytd - ytdP)],
       ['中國占全球（' + ya + '）', fmt(crude.CHN[ya] / w[ya] * 100, 1), '%', '產量 ' + fmt(crude.CHN[ya] / 1e3, 0) + ' 百萬噸', ''],
       ['台灣（' + ya + '）', fmt(crude.TWN[ya] / 1e3, 1), '百萬噸', '全球第 ' + twR + ' 名，年增 ' + pct((crude.TWN[ya] / crude.TWN[yp] - 1) * 100), cls(crude.TWN[ya] - crude.TWN[yp])]
     ];
@@ -230,8 +293,8 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
       b.appendChild(el('span', 's ' + k[4], k[3])); kp.appendChild(b);
     });
 
-    initRace(); initCompare(); initMonthly();
-    var rt; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { drawCompare(); drawMonthly(); }, 150); });
+    initRace(); initCompare(); initMonthly(); initMap(); initEaf();
+    var rt; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { drawCompare(); drawMonthly(); drawEafLine(); }, 150); });
   }
 
   // ================= 1. 排行競賽 =================
@@ -360,11 +423,12 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
   }
   function setMode(m) { MODE = m; }
   function addCty(c) {
-    if (SEL.indexOf(c) >= 0) return;
-    if (SEL.length >= 6) { alertNote('最多同時比較 6 個國家，請先移除一個。'); return; }
+    if (SEL.indexOf(c) >= 0) return 'dup';
+    if (SEL.length >= 6) { alertNote('最多同時比較 6 個國家，請先移除一個。'); return 'full'; }
     var used = SEL.map(function (x) { return SLOT[x]; });
     for (var i = 0; i < PAL.length; i++) if (used.indexOf(i) < 0) { SLOT[c] = i; break; }
     SEL.push(c); drawSel(); drawCompare();
+    return 'ok';
   }
   function rmCty(c) { SEL.splice(SEL.indexOf(c), 1); delete SLOT[c]; drawSel(); drawCompare(); }
   function alertNote(t) { $('cmpNote').textContent = t; }
@@ -511,13 +575,180 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
     return fmt(v, 1) + (short ? '' : ' 百萬噸');
   }
 
+
+  // ================= 地圖 =================
+  var SEQ = ['#3B2A22', '#5C3420', '#86401C', '#B34E16', '#E0620F', '#FF8A47', '#FFC49A'];      // 單一橘色系，數值越大越亮
+  var DIV = ['#B9D3EA', '#7FA8CF', '#4A6F96', '#3A3F46', '#B34E16', '#FF8A47', '#FFC49A'];      // 淨進口（藍）← 中性灰 → 淨出口（橘）
+  var MAPM = [
+    { k: 'crude', t: '粗鋼產量', ind: 'crude', unit: '百萬噸', cuts: [1, 5, 10, 20, 50, 100], pal: SEQ, f: function (c, y) { var v = g('crude', c, y); return v == null ? null : v / 1e3; }, d: 1 },
+    { k: 'eafs', t: '電爐鋼比例', ind: 'eaf', unit: '%', cuts: [10, 25, 40, 55, 70, 85], pal: SEQ, f: function (c, y) { var e = g('eaf', c, y), t = g('crude', c, y); return e != null && t ? e / t * 100 : null; }, d: 1 },
+    { k: 'asupc', t: '人均鋼材消費', ind: 'asupc', unit: '公斤／人', cuts: [50, 100, 200, 300, 500, 800], pal: SEQ, f: function (c, y) { return g('asupc', c, y); }, d: 0 },
+    { k: 'net', t: '鋼材淨出口', ind: 'exp', unit: '百萬噸', cuts: [-10, -3, -0.5, 0.5, 3, 10], pal: DIV, signed: true, f: function (c, y) { var a = g('exp', c, y), b = g('imp', c, y); return a != null && b != null ? (a - b) / 1e3 : null; }, d: 1 }
+  ];
+  var MM = MAPM[0], MY, GEO = null, PATHS = {};
+  function initMap() {
+    var box = $('mapMet');
+    MAPM.forEach(function (m, i) {
+      var b = el('button', 'chip', m.t); b.setAttribute('aria-pressed', i ? 'false' : 'true');
+      b.addEventListener('click', function () { MM = m; box.querySelectorAll('.chip').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); setMapYears(); drawMap(); });
+      box.appendChild(b);
+    });
+    $('mapYr').addEventListener('input', function () { MY = this.value; drawMap(); });
+    fetch('assets/world-paths.json').then(function (r) { return r.json(); }).then(function (gj) {
+      GEO = gj;
+      var svg = svgEl('svg', { viewBox: '0 24 1000 452' }), gEl = svgEl('g', {});
+      svg.appendChild(gEl);
+      Object.keys(gj.paths).forEach(function (c) {
+        var p = svgEl('path', { d: gj.paths[c], class: 'c' }); p.dataset.c = c;
+        p.addEventListener('mousemove', function (e) { mapTip(e, c); p.classList.add('on'); });
+        p.addEventListener('mouseleave', function () { hideTip(); p.classList.remove('on'); });
+        p.addEventListener('click', function (e) {
+          if (D.annual.crude[c] || D.annual.exp[c]) {
+            var r = addCty(c);
+            $('mapNote').textContent = r === 'ok' ? '已將「' + nm(c) + '」加入下方國家比較。' : r === 'dup' ? '「' + nm(c) + '」已在下方國家比較中。' : '國家比較最多 6 個，請先在下方移除一個再加入「' + nm(c) + '」。';
+          }
+          mapTip(e, c);
+        });
+        PATHS[c] = p; gEl.appendChild(p);
+      });
+      $('map').appendChild(svg);
+      setMapYears(); drawMap();
+    }).catch(function () { $('map').textContent = '地圖載入失敗。'; });
+  }
+  function yearsOf(ind) { var set = {}, s = D.annual[ind]; for (var c in s) for (var y in s[c]) set[y] = 1; return Object.keys(set).sort(); }
+  function setMapYears() {
+    var ys = yearsOf(MM.ind), r = $('mapYr');
+    if (MM.k === 'eafs') ys = ys.filter(function (y) { return y >= '2006'; });
+    r.min = ys[0]; r.max = ys[ys.length - 1];
+    if (!MY || MY > r.max || MY < r.min) MY = r.max;
+    r.value = MY; MY = String(r.value);
+  }
+  function binOf(v) { var i = 0; while (i < MM.cuts.length && v >= MM.cuts[i]) i++; return i; }
+  function mapVal(c) { return EXCL[c] ? null : MM.f(c, MY); }
+  function drawMap() {
+    if (!GEO) return;
+    $('mapYrLbl').textContent = MY;
+    Object.keys(PATHS).forEach(function (c) {
+      var v = mapVal(c);
+      PATHS[c].setAttribute('fill', v == null || isNaN(v) ? '#1E2226' : MM.pal[binOf(v)]);
+    });
+    // 圖例
+    var lg = $('mapLg'); lg.textContent = '';
+    lg.appendChild(el('span', 'muted', MM.t + '（' + MM.unit + '）'));
+    var cuts = MM.cuts;
+    MM.pal.forEach(function (col, i) {
+      var sg = function (v) { return String(v).replace('-', '−'); };
+      var lab = i === 0 ? '< ' + sg(cuts[0]) : i === cuts.length ? '≥ ' + sg(cuts[cuts.length - 1]) : sg(cuts[i - 1]) + ' ~ ' + sg(cuts[i]);
+      if (MM.signed && i === 3) lab = '約略平衡';
+      var s = el('span'), b = el('i'); b.style.background = col; s.appendChild(b); s.appendChild(document.createTextNode(lab)); lg.appendChild(s);
+    });
+    var s0 = el('span'), b0 = el('i'); b0.style.background = '#1E2226'; b0.style.border = '1px solid #3A3F46'; s0.appendChild(b0); s0.appendChild(document.createTextNode('無資料')); lg.appendChild(s0);
+    // 前五名
+    var list = [];
+    for (var c in D.annual[MM.ind]) { var v = mapVal(c); if (v != null && !isNaN(v)) list.push({ c: c, v: v }); }
+    if (MM.k === 'eafs') list = list.filter(function (r) { return (g('crude', r.c, MY) || 0) >= 5000; });   // 電爐比例只排粗鋼 500 萬噸以上國家
+    list.sort(function (a, b) { return b.v - a.v; });
+    var top = $('mapTop'); top.textContent = '';
+    var head = MM.signed ? '淨出口前五' : MM.k === 'eafs' ? '電爐比例前五（粗鋼 ≥ 5 百萬噸）' : '前五名';
+    list.slice(0, 5).forEach(function (r, i) {
+      var d = el('div'); d.appendChild(el('span', 'muted', (i ? '' : head + '　') + '#' + (i + 1)));
+      var b = el('b', null, nm(r.c)); if (r.c === 'TWN') b.style.color = '#FF8A47'; d.appendChild(b);
+      d.appendChild(el('span', 'mono', fmt(r.v, MM.d) + ' ' + MM.unit)); top.appendChild(d);
+    });
+    $('map').setAttribute('aria-label', MY + ' 年' + MM.t + '世界地圖；前五名：' + list.slice(0, 5).map(function (r) { return nm(r.c) + ' ' + fmt(r.v, MM.d) + MM.unit; }).join('、'));
+  }
+  function mapTip(e, c) {
+    var v = mapVal(c), nodes = [el('div', 'h', (D.names[c] || c) + '　' + MY)];
+    if (v == null || isNaN(v)) nodes.push(el('div', 'muted', 'worldsteel 無此項資料'));
+    else {
+      nodes.push(trow(MM.t, fmt(v, MM.d) + ' ' + MM.unit, null, MM.signed ? cls(v) : ''));
+      if (MM.signed) { nodes.push(trow('出口', fmt(g('exp', c, MY) / 1e3, 1) + ' 百萬噸')); nodes.push(trow('進口', fmt(g('imp', c, MY) / 1e3, 1) + ' 百萬噸')); }
+      if (MM.k === 'eafs') { nodes.push(trow('電爐鋼', fmt(g('eaf', c, MY) / 1e3, 1) + ' 百萬噸')); nodes.push(trow('粗鋼', fmt(g('crude', c, MY) / 1e3, 1) + ' 百萬噸')); }
+      if (MM.k === 'crude') { var r = ranking(MY, false).findIndex(function (x) { return x.c === c; }) + 1; if (r) nodes.push(trow('全球排名', '第 ' + r + ' 名')); }
+    }
+    showTip(e, nodes);
+  }
+
+  // ================= 電爐鋼 =================
+  function initEaf() {
+    var ys = yearsOf('eaf').filter(function (y) { return D.annual.crude.WORLD_ALL[y] != null; }), s = $('eafYr');
+    ys.slice().reverse().forEach(function (y) { s.appendChild(new Option(y + ' 年', y)); });
+    s.addEventListener('change', drawEafBars);
+    drawEafLine(); drawEafBars();
+    var ly = ys[ys.length - 1], w = share('WORLD_ALL', ly), c = share('CHN', ly), xc = shareExChn(ly), tw = share('TWN', ly);
+    $('eafNote').textContent = 'worldsteel 的電爐／轉爐分項目前公布至 ' + ly + ' 年。' + ly + ' 年全球電爐鋼比例 ' + fmt(w, 1) + '%，中國只有 ' + fmt(c, 1) + '%，扣除中國後全球達 ' + fmt(xc, 1) + '%；台灣為 ' + fmt(tw, 1) + '%。電爐鋼比例＝電爐鋼產量÷粗鋼產量；長條依粗鋼產量取前 20 大，再依電爐比例排序。';
+  }
+  function share(c, y) { var e = g('eaf', c, y), t = g('crude', c, y); return e != null && t ? e / t * 100 : null; }
+  function shareExChn(y) { var we = g('eaf', 'WORLD_ALL', y), wt = g('crude', 'WORLD_ALL', y), ce = g('eaf', 'CHN', y), ct = g('crude', 'CHN', y); return we != null && wt && ce != null && ct ? (we - ce) / (wt - ct) * 100 : null; }
+  function drawEafLine() {
+    if (!D) return;
+    var ys = yearsOf('eaf').filter(function (y) { return D.annual.crude.WORLD_ALL[y] != null; });
+    var S = [
+      { n: '全球不含中國', c: '#3D8BD9', v: ys.map(shareExChn) },
+      { n: '全球', c: '#B08A1E', v: ys.map(function (y) { return share('WORLD_ALL', y); }) },
+      { n: '台灣', c: '#E8590C', v: ys.map(function (y) { return share('TWN', y); }) },
+      { n: '中國', c: '#9B7FD1', v: ys.map(function (y) { return share('CHN', y); }) }
+    ];
+    var box = $('eafLine'), W = Math.max(280, box.clientWidth), narrow = W < 460, H = narrow ? 260 : 300;
+    var m = { l: 36, r: narrow ? 10 : 92, t: 12, b: 28 }, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var X = function (i) { return m.l + i / (ys.length - 1) * iw; }, Y = function (v) { return m.t + ih - v / 60 * ih; };
+    box.textContent = '';
+    var svg = svgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': '電爐鋼比例走勢：' + S.map(function (s) { return s.n + ' ' + fmt(s.v[s.v.length - 1], 1) + '%'; }).join('、') });
+    box.appendChild(svg);
+    [0, 20, 40, 60].forEach(function (t) {
+      svg.appendChild(svgEl('line', { x1: m.l, x2: m.l + iw, y1: Y(t), y2: Y(t), class: t ? 'gl' : 'zero' }));
+      var lb = svgEl('text', { x: m.l - 6, y: Y(t) + 4, 'text-anchor': 'end', class: 'ax' }); lb.textContent = t; svg.appendChild(lb);
+    });
+    ys.forEach(function (y, i) { if (i % (narrow ? 5 : 4) && i !== ys.length - 1) return; var lb = svgEl('text', { x: X(i), y: H - 6, 'text-anchor': 'middle', class: 'ax' }); lb.textContent = y; svg.appendChild(lb); });
+    var ends = [];
+    S.forEach(function (s) {
+      var d = ''; s.v.forEach(function (v, i) { if (v == null) return; d += (d ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(v).toFixed(1); });
+      svg.appendChild(svgEl('path', { d: d, fill: 'none', stroke: s.c, 'stroke-width': 2, 'stroke-linejoin': 'round' }));
+      ends.push({ s: s, y: Y(s.v[s.v.length - 1]) });
+    });
+    if (!narrow) {
+      ends.sort(function (a, b) { return a.y - b.y; });
+      for (var i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 14) ends[i].y = ends[i - 1].y + 14;
+      ends.forEach(function (e) { var t = svgEl('text', { x: m.l + iw + 6, y: e.y + 4, fill: '#C9CDD2', 'font-size': 12 }); t.textContent = e.s.n; svg.appendChild(t); });
+    }
+    var cross = svgEl('line', { y1: m.t, y2: m.t + ih, stroke: '#4A5058', 'stroke-dasharray': '3 3', visibility: 'hidden' }); svg.appendChild(cross);
+    var hit = svgEl('rect', { x: m.l, y: m.t, width: iw, height: ih, fill: 'transparent' }); svg.appendChild(hit);
+    function at(ev) {
+      var r = svg.getBoundingClientRect(), px = (ev.clientX - r.left) * W / r.width, i = Math.max(0, Math.min(ys.length - 1, Math.round((px - m.l) / iw * (ys.length - 1))));
+      cross.setAttribute('x1', X(i)); cross.setAttribute('x2', X(i)); cross.setAttribute('visibility', 'visible');
+      showTip(ev, [el('div', 'h', ys[i] + ' 年電爐鋼比例')].concat(S.slice().sort(function (a, b) { return (b.v[i] || 0) - (a.v[i] || 0); }).map(function (s) { return trow(s.n, s.v[i] == null ? '—' : fmt(s.v[i], 1) + '%', s.c); })));
+    }
+    hit.addEventListener('mousemove', at);
+    hit.addEventListener('touchstart', function (ev) { at(ev.touches[0]); }, { passive: true });
+    hit.addEventListener('mouseleave', function () { cross.setAttribute('visibility', 'hidden'); hideTip(); });
+    var lg = $('eafLg'); lg.textContent = '';
+    S.forEach(function (s) { var a = el('span'), i = el('i'); i.style.background = s.c; a.appendChild(i); a.appendChild(document.createTextNode(s.n)); lg.appendChild(a); });
+  }
+  function drawEafBars() {
+    var y = $('eafYr').value, list = ranking(y, false).slice(0, 20).map(function (r) { return { c: r.c, t: r.v, e: g('eaf', r.c, y) }; }).filter(function (r) { return r.e != null; });
+    list.sort(function (a, b) { return b.e / b.t - a.e / a.t; });
+    var box = $('eafBars'); box.textContent = '';
+    list.forEach(function (r) {
+      var sh = Math.min(100, r.e / r.t * 100), row = el('div', 'eb' + (r.c === 'TWN' ? ' tw' : ''));
+      row.appendChild(el('span', 'n', nm(r.c)));
+      var t = el('span', 't'), e = el('span', 'e' + (sh >= 99.5 ? ' full' : '')); e.style.width = sh + '%';
+      t.appendChild(e); if (sh < 99.5) t.appendChild(el('span', 'b')); row.appendChild(t);
+      row.appendChild(el('span', 'v', fmt(sh, 0) + '%'));
+      row.addEventListener('mousemove', function (ev) {
+        showTip(ev, [el('div', 'h', nm(r.c) + '　' + y), trow('電爐鋼比例', fmt(sh, 1) + '%', '#E8590C'), trow('電爐鋼', fmt(r.e / 1e3, 1) + ' 百萬噸'), trow('轉爐鋼', g('bof', r.c, y) == null ? '—' : fmt(g('bof', r.c, y) / 1e3, 1) + ' 百萬噸'), trow('粗鋼合計', fmt(r.t / 1e3, 1) + ' 百萬噸')]);
+      });
+      row.addEventListener('mouseleave', hideTip);
+      box.appendChild(row);
+    });
+  }
+
   // ================= 3. 月度 =================
   var MC = 'WORLD_ALL';
   function initMonthly() {
     var s = $('mCty'), mc = D.monthly.crude, last = D.asof.monthly, y = last.slice(0, 4);
     var list = Object.keys(mc).filter(function (c) { return !EXCL[c] && mc[c][last] != null; });
     list.sort(function (a, b) { return (mc[b][last] || 0) - (mc[a][last] || 0); });
-    s.appendChild(new Option('全球', 'WORLD_ALL'));
+    s.appendChild(new Option('全球（約 70 國）', 'WORLD_ALL'));
     list.forEach(function (c) { s.appendChild(new Option(nm(c), c)); });
     s.value = MC;
     s.addEventListener('change', function () { MC = s.value; drawMonthly(); });
@@ -566,6 +797,8 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
     // 年初至今
     var n = +last.slice(4), a = 0, b = 0, ok = true;
     for (var j = 0; j < n; j++) { if (cur[j] == null || prv[j] == null) ok = false; a += cur[j] || 0; b += prv[j] || 0; }
+    var off = MC === 'WORLD_ALL' && D.regions_ytd && D.regions_ytd.WORLD && D.regions_ytd.WORLD[String(y)];
+    if (off) a = off;   // 全球採 worldsteel 新聞稿官方合計
     var lm = cur[n - 1], lp = prv[n - 1];
     var st = $('mStats'); st.textContent = '';
     [[fmt(a, 1), y + ' 年 1–' + n + ' 月（百萬噸）'], [ok ? pct((a / b - 1) * 100) : '—', '年初至今年增率', ok ? cls(a - b) : ''], [lm != null && lp ? pct((lm / lp - 1) * 100) : '—', n + ' 月單月年增率', lm != null && lp ? cls(lm - lp) : '']].forEach(function (s) {
