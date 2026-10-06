@@ -25,3 +25,19 @@ with sync_playwright() as p:
         pg.screenshot(path=f"out/render/{name}.png", full_page=True)
         json.dump(caps, open(f"out/render/{name}.net.json", "w"), ensure_ascii=False)
     b.close()
+
+# 在頁面同源環境中呼叫 API（需瀏覽器 cookie / referer）
+if q.get("api"):
+    with sync_playwright() as p:
+        b = p.chromium.launch()
+        pg = b.new_page()
+        pg.goto(q["api"]["page"], wait_until="networkidle", timeout=90000)
+        pg.wait_for_timeout(4000)
+        os.makedirs("out/api", exist_ok=True)
+        for name, url in q["api"]["urls"].items():
+            try:
+                txt = pg.evaluate("u => fetch(u, {credentials:'include'}).then(r => r.text())", url)
+            except Exception as e:
+                txt = "ERR " + str(e)
+            open("out/api/" + name, "w").write(txt)
+        b.close()
