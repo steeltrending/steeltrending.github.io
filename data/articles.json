@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-china-pmi-sep",
+   "category": "demand",
+   "title": "中國 9 月 PMI：重回擴張，但靠生產與漲價撐起，鋼鐵業仍在收縮",
+   "period": "2026-09",
+   "published": "2026-10-06",
+   "summary": "9 月中國製造業 PMI 50.1%、非製造業 50.2%，同步回到擴張；但回升來自生產與原材料漲價，新訂單走平，黑色金屬冶煉業仍低於臨界點。",
+   "tags": [
+    "中國",
+    "PMI",
+    "製造業",
+    "建築業",
+    "原材料價格"
+   ],
+   "image": "assets/articles/2026-10-china-pmi-sep-port.jpg",
+   "url": "articles/2026-10-china-pmi-sep.html"
+  },
+  {
    "id": "2026-10-china-steel-aug",
    "category": "mills",
    "title": "中國鋼鐵 8 月觀察：產量降到年內低點，出口連四月破千萬噸",
