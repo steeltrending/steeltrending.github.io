@@ -18,6 +18,13 @@
     { t: '然而鐵——冰冷的鐵——才是萬物之主。', o: 'But Iron—Cold Iron—is master of them all.', by: '吉卜林〈冷鐵〉（Cold Iron）' },
     { t: '相信你自己：每一顆心都隨著那根鐵弦震動。', o: 'Trust thyself: every heart vibrates to that iron string.', by: '愛默生〈自立〉（Self-Reliance）' },
     { t: '人是使用工具的動物……沒有工具，他一無所是；有了工具，他無所不能。', o: 'Man is a Tool-using Animal… Without Tools he is nothing, with Tools he is all.', by: '卡萊爾《衣裳哲學》（Sartor Resartus）' },
+    { t: '堅不可摧的岩石不夠堅固，鋼鐵的城門也不夠牢靠，終究都會被時間侵蝕。', o: 'When rocks impregnable are not so stout, / Nor gates of steel so strong, but Time decays?', by: '莎士比亞《十四行詩》第 65 首' },
+    { t: '除非我的神經是黃銅或鍛打過的鋼，否則只能在自己的過錯面前低頭。', o: 'Needs must I under my transgression bow, / Unless my nerves were brass or hammer’d steel.', by: '莎士比亞《十四行詩》第 120 首' },
+    { t: '理直者有三重盔甲；良心不正的人，即使全身包在鋼裡，也形同赤裸。', o: 'Thrice is he arm’d that hath his quarrel just, / And he but naked, though lock’d up in steel, / Whose conscience with injustice is corrupted.', by: '莎士比亞《亨利六世》中篇 第三幕第二景' },
+    { t: '如鋼一般真，如刃一般直，偉大的工匠造就了我的伴侶。', o: 'Steel-true and blade-straight, / The great artificer / Made my mate.', by: '史蒂文生〈我的妻子〉（My Wife）' },
+    { t: '我們從礦床與礦坑裡被取出，在熔爐與坩堝中熔化；我們被鑄造、鍛打，依設計成形。', o: 'We were taken from the ore-bed and the mine, / We were melted in the furnace and the pit— / We were cast and wrought and hammered to design.', by: '吉卜林〈機器的祕密〉（The Secret of the Machines）' },
+    { t: '腳下穿著鋼，我們在光滑的冰面上嘶嘶滑行。', o: 'All shod with steel, / We hiss’d along the polish’d ice.', by: '華茲華斯《序曲》第一卷（The Prelude）' },
+    { t: '像鋼一樣真。（形容忠誠可靠）', o: 'True as steel.', by: '英語俗語' },
     { t: '當代的重大問題，不是靠演說與多數決來解決……而是靠鐵與血。', o: 'Nicht durch Reden und Majoritätsbeschlüsse werden die großen Fragen der Zeit entschieden … sondern durch Eisen und Blut.', by: '俾斯麥，1862 年普魯士下議院預算委員會演說' },
     { t: '如此富有而死的人，死得可恥。', o: 'The man who dies thus rich dies disgraced.', by: '鋼鐵大王卡內基《財富的福音》（The Gospel of Wealth）' },
     { t: '趁熱打鐵。', o: 'Strike while the iron is hot.', by: '英語諺語' }
