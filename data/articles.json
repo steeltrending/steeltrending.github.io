@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-cbam-101",
+   "category": "carbon",
+   "title": "CBAM 一次看懂：歐盟碳邊境調整機制的由來、規則與時程",
+   "period": "2026-10",
+   "published": "2026-10-06",
+   "summary": "歐盟碳邊境調整機制（CBAM）2026 年進入正式期，2027 年 2 月起進口商須為 2026 年進口購買憑證，2026 年第三季價格每噸 82.32 歐元。整理 CBAM 的由來、精神、法規、具體措施、時程與對台灣鋼鐵業的意義。",
+   "tags": [
+    "CBAM",
+    "歐盟",
+    "碳邊境",
+    "碳價",
+    "台灣出口"
+   ],
+   "image": "assets/articles/2026-10-cbam-101-duisburg.jpg",
+   "url": "articles/2026-10-cbam-101.html"
+  },
+  {
    "id": "2026-10-csc-if-rc30",
    "category": "vehicles",
    "title": "中鋼 IF 汽車用鋼 RC30：把三成廢鋼煉進汽車外板",

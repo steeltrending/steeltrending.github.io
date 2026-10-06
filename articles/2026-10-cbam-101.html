@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>CBAM 一次看懂：歐盟碳邊境調整機制的由來、規則與時程 · 鋼鐵潮流 Steel Trending</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="歐盟碳邊境調整機制（CBAM）2026 年進入正式期，2027 年起進口商須購買憑證。本文整理 CBAM 的由來、精神、法規架構、具體措施與時程，以及對台灣鋼鐵業的意義。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+article{max-width:760px}
+article h2{margin:56px 0 14px;font-size:26px;font-weight:900;line-height:1.35;padding-top:20px;border-top:1px solid #2A2F35}
+article p{margin:0 0 16px;font-size:17px;line-height:1.9;color:#D5D7DA}
+article p.lead{font-size:19px;color:#E8E6E1}
+article ul{margin:0 0 20px;padding-left:1.2em}
+article li{margin:0 0 12px;font-size:16px;line-height:1.85;color:#C9CDD2}
+article li::marker{color:#FF6A1A}
+article li b{color:#E8E6E1}
+article .watch li::marker{content:'□  ';color:#9AA0A6}
+.tbl{overflow-x:auto;border:1px solid #2A2F35;margin:8px 0 24px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th,td{padding:12px 14px;border-bottom:1px solid #22262B;text-align:left;vertical-align:top}
+th{background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody th[scope=row]{width:9em;background:#15181B;font-size:13px;letter-spacing:.04em;white-space:nowrap}
+td.num{font-family:'IBM Plex Mono',monospace;white-space:nowrap;color:#E8E6E1}
+figure{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 12px;font-size:13px;line-height:1.7;color:#C9CDD2;border-top:1px solid #2A2F35}
+figcaption small{display:block;margin-top:2px;font-size:12px;color:#9AA0A6}
+.tlfig{border:1px solid #2A2F35;background:#121417;padding:24px 16px 4px;margin:8px 0 24px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.tl::before{content:'';position:absolute;left:6%;right:6%;top:31px;height:2px;background:linear-gradient(90deg,#FF6A1A 0,#FF6A1A 84%,#3A3F46 84%)}
+.tl .ev{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px;position:relative}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9CDD2;height:20px;white-space:nowrap}
+.tl .dot{width:14px;height:14px;border-radius:50%;background:#FF6A1A;border:3px solid #121417;box-sizing:content-box;margin:2px 0 10px;position:relative;z-index:1}
+.tl .t{font-size:13px;line-height:1.6;color:#C9CDD2}
+.tl .x .dot{background:#8DB4D6}.tl .x .d{color:#8DB4D6}
+.tl .k .dot{width:20px;height:20px;margin:-1px 0 7px;box-shadow:0 0 0 4px rgba(255,106,26,.25)}.tl .k .t{color:#E8E6E1;font-weight:700}.tl .k .d{color:#FF8A47}
+.tl .f .dot{background:#121417;border:2px dashed #9AA0A6;width:14px;height:14px}.tl .f .d,.tl .f .t{color:#9AA0A6}
+.tlkey{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;padding:18px 0 14px !important;border-top:0 !important;font-size:12px !important;color:#9AA0A6 !important}
+.tlkey i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.tlkey .k1{background:#FF6A1A}.tlkey .k2{background:#8DB4D6}.tlkey .k3{border:2px dashed #9AA0A6;width:8px;height:8px}
+@media (max-width:720px){
+.tlfig{padding:20px 16px 4px}
+.tl{grid-template-columns:1fr}
+.tl::before{left:9px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,#FF6A1A 0,#FF6A1A 86%,#3A3F46 86%)}
+.tl .ev{display:grid;grid-template-columns:20px 92px 1fr;align-items:start;text-align:left;padding:0 0 14px;gap:0 10px}
+.tl .dot{grid-column:1;grid-row:1;margin:3px 0 0 0;justify-self:center}
+.tl .k .dot{margin:0}
+.tl .d{grid-column:2;grid-row:1;height:auto;padding-top:2px}
+.tl .t{grid-column:3;grid-row:1}
+}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;margin:8px 0 24px}
+.fact{background:#121417;padding:18px 16px;display:flex;gap:12px;align-items:flex-start}
+.fact .ic{flex:none;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid #3A3F46;background:#181B1F;color:#FF6A1A}
+.fact .fl{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#9AA0A6;margin-bottom:4px}
+.fact .fv{display:block;font-size:16px;font-weight:700;color:#E8E6E1;line-height:1.5}
+.fact .fs{display:block;font-size:13px;color:#9AA0A6;line-height:1.6;margin-top:2px}
+.pies{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 8px}
+.pie{margin:0;border:1px solid #2A2F35;background:#121417;padding:16px}
+.pie .ph{font-size:14px;font-weight:700;color:#E8E6E1;margin-bottom:10px;padding:0;border:0}
+.pw{display:flex;align-items:center;gap:16px}
+.pw svg{width:150px;height:150px;flex:none;overflow:visible}
+.pw path{cursor:default;transition:opacity .15s}
+.pw svg:hover path{opacity:.45}.pw svg path:hover{opacity:1}
+.c1{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;fill:#E8E6E1}
+.c2{font-size:12px;fill:#9AA0A6}
+.lg{list-style:none;margin:0;padding:0;flex:1}
+.lg li{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:14px;color:#C9CDD2}
+.lg li::marker{content:''}
+.lg i{width:10px;height:10px;border-radius:2px;flex:none}
+.lg .ln{flex:1}.lg .lv{font-family:'IBM Plex Mono',monospace;color:#E8E6E1}
+.note{font-size:13px !important;color:#9AA0A6 !important;margin:6px 0 18px !important}
+.tip{position:fixed;z-index:10;pointer-events:none;background:#1C2024;border:1px solid #3A3F46;color:#E8E6E1;font-size:13px;padding:6px 10px;white-space:nowrap}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}.pies{grid-template-columns:1fr}}
+@media (max-width:420px){.facts{grid-template-columns:1fr}}
+.bars{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.bars .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.bar{display:grid;grid-template-columns:7.5em 1fr 4.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.bar .tr{height:14px;background:#1C2024;border-radius:0 4px 4px 0}
+.bar .fi{height:14px;background:#8A8F96;border-radius:0 4px 4px 0}
+.bar.hi .fi{background:#FF6A1A}.bar.hi{color:#E8E6E1;font-weight:700}
+.bar .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1}
+.bars .bn{font-size:12px;color:#9AA0A6;margin:8px 0 0}
+.flow{list-style:none;margin:8px 0 24px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;counter-reset:st}
+.flow li{background:#121417;padding:14px 12px;margin:0;counter-increment:st;font-size:13px;line-height:1.6;color:#9AA0A6}
+.flow li::marker{content:''}
+.flow li b{display:block;font-size:15px;color:#E8E6E1;margin-bottom:2px}
+.flow li b::before{content:counter(st,decimal-leading-zero) '  ';font-family:'IBM Plex Mono',monospace;font-size:12px;color:#FF6A1A;font-weight:500}
+.flow li.mine{border-top:2px solid #FF6A1A}.flow li.proc{border-top:2px solid #8DB4D6}.flow li.log{border-top:2px solid #9AA0A6}
+.flowkey{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#9AA0A6;margin:-14px 0 24px}
+.flowkey i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:6px}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tlfig{border:1px solid #2A2F35;background:#121417;padding:24px 16px 4px;margin:8px 0 24px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.tl::before{content:'';position:absolute;left:6%;right:6%;top:31px;height:2px;background:linear-gradient(90deg,#FF6A1A 0,#FF6A1A 84%,#3A3F46 84%)}
+.tl .ev{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px;position:relative}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9CDD2;height:20px;white-space:nowrap}
+.tl .dot{width:14px;height:14px;border-radius:50%;background:#FF6A1A;border:3px solid #121417;box-sizing:content-box;margin:2px 0 10px;position:relative;z-index:1}
+.tl .t{font-size:13px;line-height:1.6;color:#C9CDD2}
+.tl .x .dot{background:#8DB4D6}.tl .x .d{color:#8DB4D6}
+.tl .k .dot{width:20px;height:20px;margin:-1px 0 7px;box-shadow:0 0 0 4px rgba(255,106,26,.25)}.tl .k .t{color:#E8E6E1;font-weight:700}.tl .k .d{color:#FF8A47}
+.tl .f .dot{background:#121417;border:2px dashed #9AA0A6;width:14px;height:14px}.tl .f .d,.tl .f .t{color:#9AA0A6}
+.tlkey{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;padding:18px 0 14px !important;border-top:0 !important;font-size:12px !important;color:#9AA0A6 !important}
+.tlkey i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.tlkey .k1{background:#FF6A1A}.tlkey .k2{background:#8DB4D6}.tlkey .k3{border:2px dashed #9AA0A6;width:8px;height:8px}
+@media (max-width:720px){
+.tlfig{padding:20px 16px 4px}
+.tl{grid-template-columns:1fr}
+.tl::before{left:9px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,#FF6A1A 0,#FF6A1A 86%,#3A3F46 86%)}
+.tl .ev{display:grid;grid-template-columns:20px 92px 1fr;align-items:start;text-align:left;padding:0 0 14px;gap:0 10px}
+.tl .dot{grid-column:1;grid-row:1;margin:3px 0 0 0;justify-self:center}
+.tl .k .dot{margin:0}
+.tl .d{grid-column:2;grid-row:1;height:auto;padding-top:2px}
+.tl .t{grid-column:3;grid-row:1}
+}
+.tl.past::before{background:#FF6A1A}
+.diag{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:16px;overflow-x:auto}
+.diag svg{display:block;width:100%;height:auto;max-width:720px;min-width:560px;margin:0 auto}
+.diag .dc{font-size:13px;color:#9AA0A6;margin:10px 0 0;text-align:center}
+.sources li{font-size:14px}
+@media (max-width:640px){.wrap{padding:0 16px}article p{font-size:16px}article p.lead{font-size:17px}}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="../assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="../#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="../stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<a href="../worldsteel.html" style="color:#C9CDD2;text-decoration:none;padding:12px">世界鋼鐵數據</a>
+<a href="../archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="../trends.html" style="color:#C9CDD2;text-decoration:none;padding:12px">關鍵字熱度</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="../#topics" style="text-decoration:none">關注主題</a> <span aria-hidden="true">›</span> 碳中和 <span aria-hidden="true">›</span> 小學堂</nav>
+
+<article>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">CARBON NEUTRALITY · EU CBAM · 101</p>
+<h1 style="margin:12px 0 10px;font-size:clamp(30px,5vw,46px);font-weight:900;line-height:1.25">CBAM 一次看懂：歐盟碳邊境調整機制的由來、規則與時程</h1>
+<p style="font-size:14px;color:#9AA0A6">鋼鐵潮流工作室 · 發布 2026.10.06</p>
+
+<figure>
+<img src="../assets/articles/2026-10-cbam-101-duisburg.jpg" alt="黃昏時從杜伊斯堡北景觀公園的舊高爐遠眺魯爾區工業天際線" width="960" height="640">
+<figcaption>從德國杜伊斯堡北景觀公園的 5 號高爐（已停用，現為工業遺址公園）遠眺魯爾區天際線。歐盟鋼廠自 2005 年起就在碳排放交易體系（EU ETS）下為排放付費，CBAM 要讓進口鋼材負擔同樣的碳價。<small>照片：Dietmar Rabich，2024 年，<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:Duisburg,_Landschaftspark_Duisburg-Nord,_Hochofen_5,_Ausblick_--_2024_--_4241.jpg">Wikimedia Commons</a></small></figcaption>
+</figure>
+
+<h2>本期重點</h2>
+<p class="lead">CBAM（Carbon Border Adjustment Mechanism，碳邊境調整機制）是歐盟對進口的鋼鐵、鋁、水泥、肥料、電力與氫，依產品生產過程的碳排放收取費用的制度。它在 2023 年 10 月起以「只申報、不繳費」試行，2026 年 1 月 1 日進入正式期；2027 年 2 月起，歐盟進口商要為 2026 年的進口量購買 CBAM 憑證，價格與歐盟碳市場連動，2026 年第三季為每噸 82.32 歐元。</p>
+<ul>
+<li><b>為什麼要做：</b>防止「碳洩漏」，也就是歐盟產業因碳價外移，或被碳成本較低的進口品取代。</li>
+<li><b>怎麼收：</b>進口商依產品的「隱含碳排放」購買憑證；原產國已實際支付的碳價可以扣除。</li>
+<li><b>收多少：</b>和歐盟鋼廠的免費配額同步退場，2026 年應付比例約 2.5%，逐年提高，2034 年全額計費。</li>
+<li><b>對台灣：</b>輸歐鋼品已在範圍內；台灣碳費能否抵扣、2028 年起是否擴及下游產品，是下一階段的重點。</li>
+</ul>
+
+<h2>關鍵數字</h2>
+<div class="facts"><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="1"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span><div><span class="fl">正式期起算</span><span class="fv">2026.01.01</span><span class="fs">2023.10–2025.12 為過渡期，只申報</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 16v-5M10 16V8M14 16v-6M18 16V5"/></svg></span><div><span class="fl">涵蓋產業</span><span class="fv">6 大類</span><span class="fs">鋼鐵、鋁、水泥、肥料、電力、氫</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9.5a3.5 3.5 0 1 0 0 5M7.5 11h5M7.5 13.5h5"/></svg></span><div><span class="fl">2026 Q3 憑證價格</span><span class="fv">€82.32</span><span class="fs">每噸 CO₂；Q1 €75.36、Q2 €75.28</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span><div><span class="fl">豁免門檻</span><span class="fv">每年 50 噸</span><span class="fs">豁免約九成進口商，仍涵蓋約 99% 排放</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span><div><span class="fl">首次購買憑證</span><span class="fv">2027.02</span><span class="fs">首次年度申報期限 2027.09.30</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><div><span class="fl">全額計費</span><span class="fv">2034 年</span><span class="fs">歐盟免費配額同步歸零</span></div></div></div>
+
+<h2>一、來源：為什麼會有 CBAM</h2>
+<p>歐盟自 2005 年起實施碳排放交易體系（EU ETS），鋼廠、水泥廠、電廠等排放大戶必須持有排放配額，配額可以在市場上買賣，形成碳價。碳價越高，歐盟產品的成本就越高，於是出現兩個風險：一是生產移到碳價較低的地區，二是歐盟市場被沒有碳成本的進口品取代。這兩種情況都會讓全球排放沒有減少，只是換了地方，稱為「碳洩漏」。</p>
+<p>過去歐盟用「免費配額」保護這些產業，但免費發放等於減弱了減碳誘因。2019 年 12 月，歐盟在《歐洲綠色政綱》中提出碳邊境調整的構想；2021 年 7 月 14 日，執委會在「Fit for 55」氣候立法包中正式提案，與 EU ETS 改革一起推動：免費配額逐年退場，CBAM 同步接手防止碳洩漏的任務。</p>
+
+<h2>二、精神：讓進口品付同樣的碳價</h2>
+<ul>
+<li><b>碳價對等。</b> CBAM 不是一般關稅，而是把歐盟境內的碳價延伸到進口品：歐盟鋼廠每排一噸二氧化碳要付多少，進口鋼材的隱含排放就付多少。</li>
+<li><b>已付可抵。</b> 出口國若已實際支付碳價（碳稅、碳交易或碳費），可以從應購買的憑證中扣除，避免重複負擔。</li>
+<li><b>與境內同步。</b> 進口品的負擔隨歐盟產業免費配額退場的速度逐步增加，不會讓進口品比歐盟產品付得更多。</li>
+<li><b>推動全球碳定價。</b> 歐盟希望藉此鼓勵貿易夥伴建立自己的碳定價制度；這也是 CBAM 在世界貿易組織（WTO）層面最具爭議的地方，部分國家認為它是變相的貿易壁壘。</li>
+</ul>
+
+<figure>
+<img src="../assets/articles/2026-10-cbam-101-parliament.jpg" alt="歐洲議會史特拉斯堡全會表決，議員舉手投票" width="960" height="640" loading="lazy">
+<figcaption>歐洲議會在史特拉斯堡的全會。CBAM 法規於 2023 年 4 月 18 日經歐洲議會通過、4 月 25 日經理事會通過，5 月 17 日生效。<small>照片：European Parliament，2024 年 9 月全會，<a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:Voting_session_at_the_European_Parliament_-_54008505449.jpg">Wikimedia Commons</a></small></figcaption>
+</figure>
+
+<h2>三、法規架構</h2>
+<div class="tbl"><table>
+<caption style="position:absolute;left:-9999px">CBAM 主要法規</caption>
+<thead><tr><th scope="col">法規</th><th scope="col">生效</th><th scope="col">重點</th></tr></thead>
+<tbody>
+<tr><td>CBAM 規則（EU）2023/956</td><td class="num">2023.05.17</td><td>母法：涵蓋產品、隱含排放計算、憑證、申報人授權、罰則與過渡期</td></tr>
+<tr><td>ETS 指令修正（EU）2023/959</td><td class="num">2023.06</td><td>歐盟產業免費配額自 2026 年起逐年削減，2034 年歸零，與 CBAM 同步</td></tr>
+<tr><td>過渡期申報規則（EU）2023/1773</td><td class="num">2023.08</td><td>2023.10–2025.12 每季申報隱含排放的格式與方法</td></tr>
+<tr><td>簡化修正（EU）2025/2083</td><td class="num">2025.10.20</td><td>改採每年 50 噸豁免門檻；憑證 2027 年 2 月開賣；年度申報延至次年 9 月 30 日</td></tr>
+<tr><td>正式期執行規則（8 項）</td><td class="num">2025.12</td><td>預設值、查證、登錄系統、授權程序、憑證價格與免費配額扣減方法</td></tr>
+<tr><td>下游產品擴大提案 COM(2025)989</td><td class="num">審議中</td><td>新增約 180 項鋼鋁含量高的下游產品，並加入反規避條款，目標 2028 年實施</td></tr>
+</tbody></table></div>
+
+<h2>四、具體措施：進口商要做什麼</h2>
+<ol class="flow">
+<li class="log"><b>取得授權</b>年進口量超過 50 噸者，須先成為「授權 CBAM 申報人」；2026 年 3 月 31 日前申請者可先行進口。</li>
+<li class="mine"><b>取得排放數據</b>向海外工廠取得經第三方查證的實際排放；拿不到就用歐盟公布的預設值，可能偏高。</li>
+<li class="proc"><b>購買憑證</b>在歐盟共同平台購買，價格依 EU ETS 拍賣均價：2026 年按季、2027 年起按週公布。</li>
+<li class="proc"><b>年度申報</b>每年 9 月 30 日前申報前一年的進口量、隱含排放與可扣除的原產國碳價。</li>
+<li class="mine"><b>繳回憑證</b>扣除免費配額對應量與已付碳價後，繳回相應數量的憑證；未依規定者罰款。</li>
+</ol>
+<div class="flowkey"><span><i style="background:#9AA0A6"></i>行政程序</span><span><i style="background:#FF6A1A"></i>排放與義務</span><span><i style="background:#8DB4D6"></i>憑證交易與申報</span></div>
+<ul>
+<li><b>隱含排放怎麼算。</b> 鋼鐵、鋁與氫只計生產過程的直接排放；水泥與肥料另計外購電力的間接排放。鋼鐵的間接排放仍須監測申報，但不必購買憑證。</li>
+<li><b>預設值的代價。</b> 若出口國沒有可靠數據，預設值取排放最高的十個出口國的平均，等於懲罰拿不出實際數據的供應商。</li>
+<li><b>季末持有義務。</b> 每季末帳戶內須持有當年度至今進口隱含排放（扣除免費配額後）50% 的憑證。</li>
+<li><b>罰則。</b> 未繳回足額憑證，比照 EU ETS 每噸 100 歐元（隨物價調整）的超額排放罰款；未經授權進口者，罰款為其 3 到 5 倍。</li>
+</ul>
+
+<h2>五、時程</h2>
+<figure class="tlfig" aria-label="CBAM 時程：2021 年 7 月提案、2023 年 5 月生效、2023 年 10 月過渡期、2025 年 10 月簡化修正、2026 年 1 月正式期、2027 年 2 月開賣憑證、2027 年 9 月首次申報、2034 年全額計費">
+<ol class="tl"><li class="ev x"><span class="d">2021.07</span><span class="dot" aria-hidden="true"></span><span class="t">執委會於 Fit for 55 提案</span></li><li class="ev x"><span class="d">2023.05</span><span class="dot" aria-hidden="true"></span><span class="t">法規（EU）2023/956 生效</span></li><li class="ev p"><span class="d">2023.10</span><span class="dot" aria-hidden="true"></span><span class="t">過渡期開始，每季只申報不繳費</span></li><li class="ev x"><span class="d">2025.10</span><span class="dot" aria-hidden="true"></span><span class="t">簡化修正生效，50 噸門檻</span></li><li class="ev k"><span class="d">2026.01</span><span class="dot" aria-hidden="true"></span><span class="t">正式期開始，進口即產生義務</span></li><li class="ev f"><span class="d">2027.02</span><span class="dot" aria-hidden="true"></span><span class="t">憑證開賣，涵蓋 2026 年進口</span></li><li class="ev f"><span class="d">2027.09</span><span class="dot" aria-hidden="true"></span><span class="t">首次年度申報與繳回</span></li><li class="ev f"><span class="d">2034</span><span class="dot" aria-hidden="true"></span><span class="t">免費配額歸零，全額計費</span></li></ol>
+<figcaption class="tlkey"><span><i class="k2"></i>立法與修法</span><span><i class="k1"></i>實施階段</span><span><i class="k3"></i>未來預定</span></figcaption>
+</figure>
+
+<div class="bars" role="img" aria-label="進口商應付比例：2026 年 2.5%、2027 年 5%、2028 年 10%、2029 年 22.5%、2030 年 48.5%、2031 年 61%、2032 年 73.5%、2033 年 86%、2034 年 100%">
+<p class="bt">CBAM 應付比例（隨歐盟免費配額退場，%）</p>
+<div class="bar hi" title="2026 年：2.5%"><span>2026</span><span class="tr"><span class="fi" style="display:block;width:2.5%"></span></span><span class="v">2.5</span></div><div class="bar" title="2027 年：5%"><span>2027</span><span class="tr"><span class="fi" style="display:block;width:5%"></span></span><span class="v">5</span></div><div class="bar" title="2028 年：10%"><span>2028</span><span class="tr"><span class="fi" style="display:block;width:10%"></span></span><span class="v">10</span></div><div class="bar" title="2029 年：22.5%"><span>2029</span><span class="tr"><span class="fi" style="display:block;width:22.5%"></span></span><span class="v">22.5</span></div><div class="bar" title="2030 年：48.5%"><span>2030</span><span class="tr"><span class="fi" style="display:block;width:48.5%"></span></span><span class="v">48.5</span></div><div class="bar" title="2031 年：61%"><span>2031</span><span class="tr"><span class="fi" style="display:block;width:61%"></span></span><span class="v">61</span></div><div class="bar" title="2032 年：73.5%"><span>2032</span><span class="tr"><span class="fi" style="display:block;width:73.5%"></span></span><span class="v">73.5</span></div><div class="bar" title="2033 年：86%"><span>2033</span><span class="tr"><span class="fi" style="display:block;width:86%"></span></span><span class="v">86</span></div><div class="bar" title="2034 年：100%"><span>2034</span><span class="tr"><span class="fi" style="display:block;width:100%"></span></span><span class="v">100</span></div>
+<p class="bn">歐盟鋼廠 2026 年仍保有 97.5% 的免費配額，因此進口品也只就約 2.5% 計費；扣減量依歐盟同類產品的排放基準值計算，排放高於基準的部分仍須全額購買憑證。資料來源：（EU）2023/959、（EU）2023/956 第 31 條。</p>
+</div>
+
+<div class="bars" role="img" aria-label="2026 年 CBAM 憑證價格：第一季 75.36 歐元、第二季 75.28 歐元、第三季 82.32 歐元">
+<p class="bt">2026 年 CBAM 憑證價格（歐元／噸 CO₂）</p>
+<div class="bar" title="第一季：€75.36（4 月 7 日公布）"><span>第一季</span><span class="tr"><span class="fi" style="display:block;width:91.5%"></span></span><span class="v">75.36</span></div><div class="bar" title="第二季：€75.28（7 月 6 日公布）"><span>第二季</span><span class="tr"><span class="fi" style="display:block;width:91.4%"></span></span><span class="v">75.28</span></div><div class="bar hi" title="第三季：€82.32（10 月初公布）"><span>第三季</span><span class="tr"><span class="fi" style="display:block;width:100%"></span></span><span class="v">82.32</span></div>
+<p class="bn">依該季 EU ETS 配額拍賣結清價的加權平均計算。第一、二季為歐盟執委會公告值，第三季依 SteelOrbis 等媒體報導，第四季預定 2027 年 1 月 4 日公布。</p>
+</div>
+
+<figure>
+<img src="../assets/articles/2026-10-cbam-101-coiltrain.jpg" alt="英國貨運列車載運封閉式鋼捲車廂，經英法海底隧道運往歐陸" width="960" height="720" loading="lazy">
+<figcaption>英國威爾斯 Margam 鋼廠的鋼捲以封閉式貨車運往英法海底隧道，再轉往荷蘭鹿特丹或法國莫伯日。脫歐後的英國與歐盟分屬不同碳市場，英國鋼材輸往歐盟同樣在 CBAM 範圍內；雙方自 2026 年 1 月起正式談判連結碳市場，若談成可望相互豁免。<small>照片：Train Photos，2015 年，<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:66162_and_66_number_076_Margam_to_Dollands_Moor_6O32_(then_to_Rotterdam_Botlek_for_Broekman_Group_or_to_Myriad_in_Maubeuge_France)_(18680658100).jpg">Wikimedia Commons</a></small></figcaption>
+</figure>
+
+<h2>六、對台灣鋼鐵業的意義</h2>
+<ul>
+<li><b>已經在範圍內。</b> 鋼鐵是 CBAM 首批涵蓋產業，從鋼胚、鋼捲到部分螺絲、管件等鋼製品都要申報隱含排放。台灣輸歐鋼品的歐盟買家從 2026 年起就要計入 CBAM 成本。</li>
+<li><b>數據就是競爭力。</b> 能提供經查證的實際排放數據、排放又低於預設值的供應商，買家的 CBAM 成本較低。電爐鋼、高廢鋼比例或低碳製程的產品因此更有優勢。</li>
+<li><b>碳費抵扣待確認。</b> 台灣碳費一般費率每噸新台幣 300 元，約只有 CBAM 第一季憑證價格的九分之一；環境部持續與歐盟協商碳費能否抵扣，並爭取國內查驗機構獲得歐盟認可。</li>
+<li><b>下游擴大的壓力。</b> 若 2028 年納入約 180 項下游產品，機械、家電、汽車零組件等以鋼材為主的台灣出口品也可能被要求申報。</li>
+</ul>
+
+<h2>觀察重點</h2>
+<ul class="watch">
+<li>下游產品擴大提案在歐洲議會與理事會的審議進度，以及最終納入的產品清單。</li>
+<li>台灣碳費能否被歐盟認可抵扣，以及國內查驗機構的認可進度。</li>
+<li>2026 年第四季與 2027 年起每週公布的憑證價格走勢。</li>
+<li>歐盟公布的國別預設值，對台灣鋼品是有利還是不利。</li>
+<li>英國 CBAM 2027 年 1 月上路，以及英歐碳市場連結談判的結果。</li>
+</ul>
+
+<h2>延伸閱讀</h2>
+<ul>
+<li><a href="2026-10-eu-steel-quota.html">歐盟鋼鐵新制：配額砍半、關稅 50%、追查熔鑄地，台灣怎麼應對</a></li>
+<li><a href="2026-10-taiwan-carbon.html">碳有價元年：台灣碳中和 2026 進度與鋼鐵業壓力</a></li>
+<li><a href="2026-10-csc-if-rc30.html">中鋼 IF 汽車用鋼 RC30：把三成廢鋼煉進汽車外板</a></li>
+<li><a href="../worldsteel.html#eaf">世界鋼鐵數據：各國電爐鋼比例</a></li>
+</ul>
+
+<h2>資料來源</h2>
+<ul class="sources">
+<li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en">Price of CBAM certificates</a>（歐盟執委會稅務與關務總署）</li>
+<li><a href="https://www.steelorbis.com/steel-news/latest-news/eu-cbam-certificate-price-rises-to-8232-for-q3-2026-1481786.htm">EU CBAM certificate price rises to €82.32 for Q3 2026</a>（SteelOrbis，2026-10-06）</li>
+<li><a href="https://www.fastmarkets.com/insights/european-commission-publishes-first-cbam-certificate-price/">European Commission publishes first CBAM certificate price</a>（Fastmarkets，2026-04-07）</li>
+<li><a href="https://www.ey.com/en_gl/technical/tax-alerts/eu-adopts-cbam-omnibus-regulation">EU adopts CBAM Omnibus Regulation</a>（EY，2025-10-22）</li>
+<li><a href="https://www.mayerbrown.com/en/insights/publications/2025/10/eu-adopts-cbam-simplification-regulation-10-key-amendments-and-challenges-ahead">EU adopts CBAM simplification regulation: 10 key amendments</a>（Mayer Brown，2025-10-17）</li>
+<li><a href="https://www.akingump.com/en/insights/alerts/eu-carbon-border-adjustment-mechanism-financial-obligations-commence-amid-proposed-scope-expansion-to-include-new-downstream-products">EU CBAM financial obligations commence amid proposed scope expansion</a>（Akin Gump）</li>
+<li><a href="https://eprs.europarl.europa.eu/contents/publications/EPRS/2026/07/EPRS_BRI(2026)789314.html">CBAM: extension to downstream products</a>（歐洲議會研究服務處，2026-07）</li>
+<li><a href="https://greensutra.in/question/why-cbam-payable-share-2026/">Why do importers pay only 2.5 per cent of CBAM emissions in 2026?</a>（GreenSutra）</li>
+<li><a href="https://greensutra.in/?p=237170">Does CBAM count indirect electricity emissions for steel?</a>（GreenSutra）</li>
+<li><a href="https://taxation-customs.ec.europa.eu/news/commission-adopts-detailed-reporting-rules-carbon-border-adjustment-mechanisms-transitional-phase-2023-08-17_en">Commission adopts detailed reporting rules for the CBAM's transitional phase</a>（歐盟執委會，2023-08-17）</li>
+<li><a href="https://www.jonesday.com/en/insights/2026/06/the-new-uk-carbon-border-adjustment-mechanism">The new UK Carbon Border Adjustment Mechanism</a>（Jones Day，2026-06）</li>
+<li><a href="https://en.wikipedia.org/wiki/EU_Carbon_Border_Adjustment_Mechanism">EU Carbon Border Adjustment Mechanism</a>（Wikipedia）</li>
+<li><a href="https://www.reccessary.com/zh-tw/news/EU-CBAM-Allow-Carbon-Price-Credit-Deductions">歐盟 CBAM 碳價抵扣規定</a>（RECCESSARY）</li>
+<li><a href="https://www.reccessary.com/zh-tw/news/EU-CBAM-UPDATE-and-TW-CBAM">歐盟 CBAM 最新進展與台版 CBAM</a>（RECCESSARY）</li>
+</ul>
+<p style="font-size:13px;color:#9AA0A6;margin-top:32px">內容僅供產業資訊參考，不構成法律或投資建議；CBAM 實際義務以歐盟公告的法規與執行規則為準。新聞版權屬原出處所有。</p>
+</article>
+
+<p style="margin-top:48px"><a href="../#topics" style="display:inline-flex;align-items:center;border:1px solid #4A5058;color:#E8E6E1;text-decoration:none;padding:12px 20px">← 回到碳中和</a></p>
+</main>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+<script src="../assets/hover.js" defer></script>
+</body>
+</html>
