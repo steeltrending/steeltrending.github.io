@@ -80,6 +80,18 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
 .mstats div{display:flex;flex-direction:column}
 .mstats b{font-size:24px;font-weight:900}
 .mstats span{font-size:13px;color:#9AA0A6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px;padding-bottom:4px}
+.tabs .chip[aria-selected="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+.tabp > .sec-h:first-child{margin-top:0}
+.tabp.sec{margin-top:32px}
+#tab-home .kpis{margin-top:24px}
+.ovs{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:20px}
+.ov{position:relative;text-align:left;border:1px solid #2A2F35;background:#15181B;color:#E8E6E1;font-family:inherit;padding:18px 18px 40px;cursor:pointer;display:flex;flex-direction:column;gap:6px;transition:border-color .18s ease,transform .18s ease}
+.ov b{font-size:19px;font-weight:900}
+.ov span{font-size:13px;line-height:1.6;color:#9AA0A6}
+.ov .go{position:absolute;right:16px;bottom:12px;color:#FF6A1A;font-size:18px}
+.ov:hover,.ov:focus-visible{border-color:#FF6A1A;transform:translateY(-2px)}
+.ov:hover b{color:#FF8A47}
 /* map */
 .map-wrap{position:relative;margin-top:14px}
 .map-wrap svg{display:block;width:100%;height:auto}
@@ -136,10 +148,27 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
 <p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:48em">以世界鋼鐵協會（worldsteel）公布的數據，看各國粗鋼產量 20 年的消長、電爐與轉爐的路線差異、鋼材進出口與消費，以及最新的月度產量。</p>
 <p id="updated" style="margin:16px 0 0;font-size:14px;color:#C9CDD2">資料載入中…</p>
 
+<nav class="tabs" role="tablist" aria-label="世界鋼鐵數據分頁" id="tabs">
+<button class="chip" role="tab" data-go="home" aria-selected="true">總覽</button>
+<button class="chip" role="tab" data-go="race" aria-selected="false">排行競賽</button>
+<button class="chip" role="tab" data-go="map" aria-selected="false">世界地圖</button>
+<button class="chip" role="tab" data-go="eaf" aria-selected="false">電爐鋼</button>
+<button class="chip" role="tab" data-go="compare" aria-selected="false">國家比較</button>
+<button class="chip" role="tab" data-go="monthly" aria-selected="false">月度產量</button>
+</nav>
+<section class="tabp" id="tab-home" data-tab="home" role="tabpanel" aria-label="總覽">
 <div class="kpis" id="kpis" aria-live="polite"></div>
+<div class="ovs">
+<button class="ov" data-go="race"><span class="lbl">01</span><b>排行競賽</b><span>產鋼國 20 年排名消長，按播放逐年重排</span><span class="go" aria-hidden="true">→</span></button>
+<button class="ov" data-go="map"><span class="lbl">02</span><b>世界地圖</b><span>粗鋼產量、電爐比例、人均消費、淨出口分布</span><span class="go" aria-hidden="true">→</span></button>
+<button class="ov" data-go="eaf"><span class="lbl">03</span><b>電爐鋼</b><span>各國煉鋼路線與電爐鋼比例走勢</span><span class="go" aria-hidden="true">→</span></button>
+<button class="ov" data-go="compare"><span class="lbl">04</span><b>國家比較</b><span>最多 6 國，8 項指標並列比較</span><span class="go" aria-hidden="true">→</span></button>
+<button class="ov" data-go="monthly"><span class="lbl">05</span><b>月度產量</b><span>最新月度粗鋼產量，今年與去年同月</span><span class="go" aria-hidden="true">→</span></button>
+</div>
+</section>
 
 <!-- 1. 排行競賽 -->
-<section class="sec" aria-labelledby="race-h">
+<section class="sec tabp" id="tab-race" data-tab="race" role="tabpanel" aria-labelledby="race-h" hidden>
 <div class="sec-h"><h2 id="race-h">產鋼國排行，20 年消長</h2><span class="lbl">CRUDE STEEL RANKING</span></div>
 <div class="card">
 <div class="race-top">
@@ -162,7 +191,7 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
 </section>
 
 <!-- 地圖 -->
-<section class="sec" aria-labelledby="map-h">
+<section class="sec tabp" id="tab-map" data-tab="map" role="tabpanel" aria-labelledby="map-h" hidden>
 <div class="sec-h"><h2 id="map-h">世界鋼鐵地圖</h2><span class="lbl">WORLD MAP</span></div>
 <div class="card">
 <div class="row" role="group" aria-label="地圖指標" id="mapMet"></div>
@@ -178,7 +207,7 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
 </section>
 
 <!-- 電爐鋼 -->
-<section class="sec" aria-labelledby="eaf-h">
+<section class="sec tabp" id="tab-eaf" data-tab="eaf" role="tabpanel" aria-labelledby="eaf-h" hidden>
 <div class="sec-h"><h2 id="eaf-h">電爐鋼：誰用廢鋼煉鋼</h2><span class="lbl">EAF ROUTE</span></div>
 <div class="card">
 <p style="margin:0 0 14px;font-size:15px;line-height:1.8;color:#C9CDD2">粗鋼有兩條主要路線：高爐－轉爐以鐵礦砂、焦煤煉鐵再煉鋼；電爐以廢鋼（或直接還原鐵）為原料，以廢鋼為主的電爐，每噸碳排約為高爐－轉爐的三分之一到四分之一。電爐鋼比例高低，反映各國的廢鋼存量、電價、天然氣（直接還原鐵）資源與發展階段。</p>
@@ -199,7 +228,7 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
 </section>
 
 <!-- 2. 國家比較 -->
-<section class="sec" aria-labelledby="cmp-h">
+<section class="sec tabp" id="tab-compare" data-tab="compare" role="tabpanel" aria-labelledby="cmp-h" hidden>
 <div class="sec-h"><h2 id="cmp-h">國家比較</h2><span class="lbl">COMPARE</span></div>
 <div class="card">
 <div class="row" role="group" aria-label="指標" id="metrics" style="margin-bottom:12px"></div>
@@ -218,7 +247,7 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
 </section>
 
 <!-- 3. 月度 -->
-<section class="sec" aria-labelledby="mon-h">
+<section class="sec tabp" id="tab-monthly" data-tab="monthly" role="tabpanel" aria-labelledby="mon-h" hidden>
 <div class="sec-h"><h2 id="mon-h">月度粗鋼產量：今年與去年同月</h2><span class="lbl">MONTHLY</span></div>
 <div class="card">
 <div class="row" style="justify-content:space-between">
@@ -294,8 +323,31 @@ details summary{cursor:pointer;color:#9AA0A6;font-size:13px;margin-top:12px}
     });
 
     initRace(); initCompare(); initMonthly(); initMap(); initEaf();
+    showTab(location.hash.slice(1), false);
     var rt; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { drawCompare(); drawMonthly(); drawEafLine(); }, 150); });
   }
+
+
+  // ================= 分頁 =================
+  var TABIDS = ['home', 'race', 'map', 'eaf', 'compare', 'monthly'];
+  function showTab(t, push) {
+    if (TABIDS.indexOf(t) < 0) t = 'home';
+    document.querySelectorAll('.tabp').forEach(function (p) { p.hidden = p.dataset.tab !== t; });
+    document.querySelectorAll('#tabs [data-go]').forEach(function (b) { b.setAttribute('aria-selected', b.dataset.go === t ? 'true' : 'false'); });
+    if (push) history.replaceState(null, '', t === 'home' ? location.pathname : '#' + t);
+    if (t !== 'race') stop();
+    hideTip();
+    // 隱藏時寬度為 0，切換後重畫
+    if (D) { if (t === 'compare') drawCompare(); if (t === 'monthly') drawMonthly(); if (t === 'eaf') drawEafLine(); }
+  }
+  document.querySelectorAll('[data-go]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      showTab(b.dataset.go, true);
+      if (b.classList.contains('ov')) $('tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  addEventListener('hashchange', function () { showTab(location.hash.slice(1), false); });
+  showTab(location.hash.slice(1), false);
 
   // ================= 1. 排行競賽 =================
   var TOP = 15, NOCHN = false, YEAR, timer = null;
