@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-csc-electrical-steel",
+   "category": "vehicles",
+   "title": "中鋼與電磁鋼片：從冷氣壓縮機到電動車、無人機的 37 年",
+   "period": "2026-10",
+   "published": "2026-10-06",
+   "summary": "中鋼 1989 年起供應電磁鋼片，自主發展製程，2017 年打入 Tesla Model 3 供應鏈，如今推進到 0.1 mm。整理起源、技術、全球布局、銷售實績與反傾銷挑戰。",
+   "tags": [
+    "中鋼",
+    "電磁鋼片",
+    "電動車",
+    "無人機",
+    "反傾銷"
+   ],
+   "image": "assets/articles/2026-10-csc-electrical-steel-core.jpg",
+   "url": "articles/2026-10-csc-electrical-steel.html"
+  },
+  {
    "id": "2026-10-china-pmi-sep",
    "category": "demand",
    "title": "中國 9 月 PMI：重回擴張，但靠生產與漲價撐起，鋼鐵業仍在收縮",
