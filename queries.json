@@ -1,1 +1,14 @@
-{"download": {"File:ECSC Financial report 1994 Arvedi Cremona ISP thin slab casting and rolling 1.jpg": "g_arvedi", "File:Rolled coil in Oulu Jun2009 001.jpg": "g_oulu", "File:Steel coil and machinery - geograph.org.uk - 8200249.jpg": "g_geo", "File:Steel Coil and Slab for Llanwern - geograph.org.uk - 1140514.jpg": "g_llan"}}
+{"urls": {
+ "sina_I0.txt": "https://stock2.finance.sina.com.cn/futures/api/jsonp.php/var%20_I0=/InnerFuturesNewService.getDailyKLine?symbol=I0",
+ "sina_JM0.txt": "https://stock2.finance.sina.com.cn/futures/api/jsonp.php/var%20_JM0=/InnerFuturesNewService.getDailyKLine?symbol=JM0",
+ "sina_HC0.txt": "https://stock2.finance.sina.com.cn/futures/api/jsonp.php/var%20_HC0=/InnerFuturesNewService.getDailyKLine?symbol=HC0",
+ "yh_TIO.json": "https://query1.finance.yahoo.com/v8/finance/chart/TIO=F?period1=1767225600&period2=1791331200&interval=1d",
+ "yh_HRC.json": "https://query1.finance.yahoo.com/v8/finance/chart/HRC=F?period1=1767225600&period2=1791331200&interval=1d",
+ "sgx_fef.json": "https://api.sgx.com/derivatives/v1.0/contract-code/FEF?order=asc&orderby=delivery-month&category=futures&session=-1&t=1&showTAICTrades=false",
+ "sgx_hist.json": "https://api.sgx.com/derivatives/v1.0/history/symbol/FEFX26?days=1y&category=futures&params=base-date,total-volume,daily-settlement-price-abs"
+},
+ "render": {
+  "inv_fe": "https://www.investing.com/commodities/iron-ore-62-cfr-futures-historical-data",
+  "inv_scrap": "https://www.investing.com/commodities/lme-steel-scrap-futures-historical-data",
+  "sgx_fef_page": "https://www.sgx.com/derivatives/products/iron-ore?cc=FEF"
+ }}
