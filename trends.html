@@ -19,7 +19,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 .card{border:1px solid #2A2F35;background:#15181B;padding:20px}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .kw{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-.kw input{background:#0F1113;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;padding:0 12px;min-height:40px;width:150px}
+.kw input{box-sizing:border-box;background:#0F1113;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;padding:0 12px;min-height:40px;width:150px}
 .kw input:focus{outline:2px solid #FF6A1A;outline-offset:-1px}
 .frame{margin-top:16px;min-height:120px;padding:10px;background:linear-gradient(#2A2F35,#22262B);border:1px solid #3A3F46;border-radius:8px;box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 8px 24px rgba(0,0,0,.35)}
 .frame .bar{display:flex;align-items:center;gap:6px;padding:0 4px 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#9AA0A6}
@@ -29,6 +29,10 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 .frame .mat{background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
 .frame iframe{display:block;width:100%;border:0}
 @media (max-width:640px){.frame{padding:6px;border-radius:6px}.frame .bar{padding-bottom:6px}}
+.open{display:none;margin-top:10px;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid #FF6A1A;color:#FFB07F;text-decoration:none;font-size:15px;font-weight:700;background:rgba(255,106,26,.08)}
+.open:hover{background:rgba(255,106,26,.16);color:#FFD2B8}
+.open-tip{display:none;font-size:12px;color:#9AA0A6;margin:6px 2px 0;line-height:1.6}
+@media (max-width:760px),(hover:none){.open{display:flex}.open-tip{display:block}}
 .note{font-size:13px;line-height:1.7;color:#9AA0A6;margin:12px 0 0}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media (max-width:760px){.grid2{grid-template-columns:1fr}}
@@ -121,7 +125,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
   function exploreURL(kws) {
     return 'https://trends.google.com/trends/explore?date=' + encodeURIComponent(cur.time) + (cur.geo ? '&geo=' + cur.geo : '') + '&q=' + encodeURIComponent(kws.join(',')) + '&hl=zh-TW';
   }
-  function frame(box, src, h, title) {
+  function frame(box, src, h, title, openURL) {
     box.textContent = '';
     var bar = el('div', 'bar'); bar.setAttribute('aria-hidden', 'true');
     bar.appendChild(el('i')); bar.appendChild(el('i')); bar.appendChild(el('i'));
@@ -130,6 +134,9 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
     var f = document.createElement('iframe');
     f.src = src; f.height = h; f.loading = 'lazy'; f.title = title; f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
     mat.appendChild(f); box.appendChild(bar); box.appendChild(mat);
+    var a = el('a', 'open', '圖表沒出現？在 Google Trends 開啟 ↗'); a.href = openURL; a.target = '_blank'; a.rel = 'noopener';
+    box.appendChild(a);
+    box.appendChild(el('p', 'open-tip', '部分手機瀏覽器（如 iPhone Safari、LINE／Facebook 內建瀏覽器）會擋下 Google 嵌入圖表，可點上方按鈕直接查看。'));
   }
   function render() {
     [].forEach.call($('presets').children, function (b, i) { b.setAttribute('aria-pressed', i === cur.p ? 'true' : 'false'); });
@@ -139,14 +146,14 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
     [].forEach.call(ins, function (inp, i) { inp.value = cur.kw[i] || ''; });
     var area = cur.geo === 'TW' ? '台灣' : '全球';
     var per = PERIODS.filter(function (p) { return p[0] === cur.time; })[0][1];
-    frame($('ts'), embedURL('TIMESERIES', cur.kw), 420, '搜尋熱度趨勢：' + cur.kw.join('、'));
+    frame($('ts'), embedURL('TIMESERIES', cur.kw), 420, '搜尋熱度趨勢：' + cur.kw.join('、'), exploreURL(cur.kw));
     var n = $('ts-note'); n.textContent = area + '・過去 ' + per + '・' + cur.kw.join('、') + '　';
     var a = el('a', null, '在 Google Trends 開啟 ↗'); a.href = exploreURL(cur.kw); a.target = '_blank'; a.rel = 'noopener'; n.appendChild(a);
     var first = [cur.kw[0]];
     $('geo-h').textContent = '地區熱度：' + cur.kw[0] + '（' + area + '）';
     $('rq-h').textContent = '相關搜尋：' + cur.kw[0];
-    frame($('geo'), embedURL('GEO_MAP', first), 420, '地區熱度：' + cur.kw[0]);
-    frame($('rq'), embedURL('RELATED_QUERIES', first), 420, '相關搜尋：' + cur.kw[0]);
+    frame($('geo'), embedURL('GEO_MAP', first), 420, '地區熱度：' + cur.kw[0], exploreURL(first));
+    frame($('rq'), embedURL('RELATED_QUERIES', first), 420, '相關搜尋：' + cur.kw[0], exploreURL(first));
   }
   PRESETS.forEach(function (p, i) {
     var b = el('button', 'chip', p.name); b.type = 'button';
