@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-eu-steel-quota",
+   "category": "trade",
+   "title": "歐盟鋼鐵新制：配額砍半、關稅 50%、追查熔鑄地，台灣怎麼應對",
+   "period": "2026-10",
+   "published": "2026-10-06",
+   "summary": "歐盟 2026 年 7 月起以常設配額取代鋼鐵防衛措施，免稅配額削減 47%、配額外關稅 50%，10 月起申報熔鑄地。台灣配額增至 67 萬噸，但品項不均與分配爭議浮現。",
+   "tags": [
+    "歐盟",
+    "鋼鐵配額",
+    "關稅",
+    "熔鑄地",
+    "台灣出口"
+   ],
+   "image": "assets/articles/2026-10-eu-steel-quota-berlaymont.jpg",
+   "url": "articles/2026-10-eu-steel-quota.html"
+  },
+  {
    "id": "2026-10-csc-electrical-steel",
    "category": "vehicles",
    "title": "中鋼與電磁鋼片：從冷氣壓縮機到電動車、無人機的 37 年",
