@@ -1,0 +1,494 @@
+{
+ "power transformer substation filetype:bitmap": [
+  {
+   "title": "File:Substation Power Transformer 1.jpg",
+   "thumb": "00_0.jpg",
+   "w": 4896,
+   "h": 3672,
+   "license": "CC BY-SA 4.0",
+   "artist": "Yoshieslunchbox",
+   "date": "2024-06-16 20:45:22",
+   "desc": "138 - 12.5kV Power Transformer"
+  },
+  {
+   "title": "File:Power Transformer 02.jpg",
+   "thumb": "00_1.jpg",
+   "w": 8064,
+   "h": 3840,
+   "license": "CC BY-SA 4.0",
+   "artist": "Sonia Budini",
+   "date": "2020-09-27 16:34:02",
+   "desc": "The power substation was built in the XX century. It is a building functioning under the substation as an integral part of the electricity generation, transmission, and distribution system."
+  },
+  {
+   "title": "File:Power Transformer 01.jpg",
+   "thumb": "00_2.jpg",
+   "w": 3971,
+   "h": 5141,
+   "license": "CC BY-SA 4.0",
+   "artist": "Sonia Budini",
+   "date": "2020-09-27 16:34:02",
+   "desc": "The power substation was built in the XX century. It is a building functioning under the substation as an integral part of the electricity generation, transmission, and distribution system."
+  },
+  {
+   "title": "File:Power Transformer 03.jpg",
+   "thumb": "00_3.jpg",
+   "w": 6016,
+   "h": 4000,
+   "license": "CC BY-SA 4.0",
+   "artist": "Sonia Budini",
+   "date": "2020-09-27 16:34:02",
+   "desc": "The power substation was built in the XX century. It is a building functioning under the substation as an integral part of the electricity generation, transmission, and distribution system."
+  },
+  {
+   "title": "File:Pont-l'Abbé high-voltage substation 14 - Transformer connections.jpg",
+   "thumb": "00_4.jpg",
+   "w": 3699,
+   "h": 2759,
+   "license": "CC0",
+   "artist": "PtiBzh",
+   "date": "2022-03-03 17:53:46",
+   "desc": "63kV (up) and 20kV (down) power lines connecting to one of the two main transformer of Pont-l'Abbé high-voltage substation"
+  },
+  {
+   "title": "File:Transformer by Mulbarton Primary Electricity Substation - geograph.org.uk - 1583908.jpg",
+   "thumb": "00_5.jpg",
+   "w": 480,
+   "h": 640,
+   "license": "CC BY-SA 2.0",
+   "artist": "Evelyn Simak",
+   "date": "2009-11-16",
+   "desc": "Transformer by Mulbarton Primary Electricity Substation"
+  },
+  {
+   "title": "File:Chubu Electric Power Company Sunadabashi transformer substation 20130813.JPG",
+   "thumb": "00_6.jpg",
+   "w": 4288,
+   "h": 3216,
+   "license": "CC BY-SA 3.0",
+   "artist": "円周率３パーセント",
+   "date": "Taken on 13 August 2013 17:01:09",
+   "desc": "名古屋市東区砂田橋に所在する中部電力砂田橋変電所"
+  },
+  {
+   "title": "File:Chubu Electric Power Company Shimpo transformer substation 20130813.JPG",
+   "thumb": "00_7.jpg",
+   "w": 4288,
+   "h": 3216,
+   "license": "CC BY-SA 3.0",
+   "artist": "円周率３パーセント",
+   "date": "Taken on 13 August 2013 16:24:05",
+   "desc": "名古屋市千種区下方町に所在する中部電力振甫変電所"
+  },
+  {
+   "title": "File:Chubu Electric Power Company Ozone transformer substation 20130809.JPG",
+   "thumb": "00_8.jpg",
+   "w": 2057,
+   "h": 1536,
+   "license": "CC BY-SA 3.0",
+   "artist": "円周率３パーセント",
+   "date": "Taken on 9 August 2013 17:21:13",
+   "desc": "名古屋市北区芦辺町に所在する中部電力大曽根変電所を北側から写す"
+  },
+  {
+   "title": "File:Chubu Electric Power Company Hagino transformer substation 20130802.JPG",
+   "thumb": "00_9.jpg",
+   "w": 2057,
+   "h": 1536,
+   "license": "CC BY-SA 3.0",
+   "artist": "円周率３パーセント",
+   "date": "Taken on 2 August 2013 16:45:15",
+   "desc": "名古屋市北区大野町の中部電力萩野変電所を北側公道から写す"
+  }
+ ],
+ "transformer core laminations filetype:bitmap": [
+  {
+   "title": "File:EI-transformer core interleaved with flux paths.png",
+   "thumb": "01_0.jpg",
+   "w": 8656,
+   "h": 3200,
+   "license": "CC0",
+   "artist": "Constant314",
+   "date": "2019-10-20",
+   "desc": "Interleaved E and I transformer laminations showing how the magnetic flux bypasses the inherent gap where the laminations are butted together."
+  },
+  {
+   "title": "File:Magnetic flux around air-gap in transformer core made from E and I laminations.png",
+   "thumb": "01_1.jpg",
+   "w": 6938,
+   "h": 4988,
+   "license": "CC0",
+   "artist": "Constant314",
+   "date": "2018-08-15",
+   "desc": "Magnetic flux path around the air gap in a transformer core made from E and I laminations.  A:air gap. B: magnetic flux (blue dashed lines). E: E lamination. I: I lamination. G: Effective gap. S: surf"
+  },
+  {
+   "title": "File:Arc Furnace transformer bus.jpg",
+   "thumb": "01_2.jpg",
+   "w": 1600,
+   "h": 1200,
+   "license": "CC BY-SA 3.0",
+   "artist": "Wtshymanski",
+   "date": "2006-04-14 10:31:33",
+   "desc": "Bus work, core and coils of an arc furnace transformer, rated 8 megavoltamperes. This transformer had been in service for approximately 40 years. Visible is part of the heavy copper low voltage bus, t"
+  },
+  {
+   "title": "File:Transformer.filament.agr.jpg",
+   "thumb": "01_3.jpg",
+   "w": 769,
+   "h": 550,
+   "license": "CC BY-SA 3.0",
+   "artist": "Original uploader was ArnoldReinhold at en.wikipedia",
+   "date": "9 November 2004 (original upload date)",
+   "desc": "Transformer, 115 VAC to 6.3 VAC with laminated core. Typically used to power vacuum tube filaments. Mounting holes are 6 cm apart.I took this picture.--agr 14:45, 9 Nov 2004 (UTC)"
+  },
+  {
+   "title": "File:A theoretical investigation of transformer design (1912) (14780543201).jpg",
+   "thumb": "01_4.jpg",
+   "w": 2504,
+   "h": 3570,
+   "license": "No restrictions",
+   "artist": "Colville, John Robert;\n\nConnell, Edwin Lewis",
+   "date": "1912",
+   "desc": "\nIdentifier: theoreticalinves00colv (find matches)\nTitle: A theoretical investigation of transformer design\nYear: 1912 (1910s)\nAuthors:  Colville, John Robert Connell, Edwin Lewis\nSubjects:  Electric "
+  },
+  {
+   "title": "File:TMW 50971 Transformatorschenkel eines Leistungstransformators mit aufgeschnittenen Wicklungen.jpg",
+   "thumb": "01_5.jpg",
+   "w": 1704,
+   "h": 2272,
+   "license": "Public domain",
+   "artist": "",
+   "date": "19 March 2011",
+   "desc": "Internal construction of one phase of a TMW 50971 electric utility power transformer for three-phase alternating current. The iron core in the center consists of a stack of silicon steel laminations. "
+  },
+  {
+   "title": "File:B-H loops.png",
+   "thumb": "01_6.jpg",
+   "w": 2000,
+   "h": 2091,
+   "license": "CC BY-SA 4.0",
+   "artist": "Nikolas Ojala",
+   "date": "2016-01-12",
+   "desc": "Flux-current loops of transformer grade (1) and magnetic amplifier (2) core materials.\nThe transformer grade (1) is oriented some cheap silicon-steel transformer lamination.\n\nThe magnetic amplifier (2"
+  },
+  {
+   "title": "File:A manual of X-ray technic (1917) (14754726901).jpg",
+   "thumb": "01_7.jpg",
+   "w": 1166,
+   "h": 1638,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1917",
+   "desc": "\nIdentifier: manualofxraytech1917chri (find matches)\nTitle: A manual of X-ray technic\nYear: 1917 (1910s)\nAuthors:  Christie, Arthur Carlisle, 1879-\nSubjects:  Radiography, Medical Diagnosis, Radioscop"
+  }
+ ],
+ "data center server racks filetype:bitmap": [
+  {
+   "title": "File:Duga-1 radar data center inside empty server racks 2018.jpg",
+   "thumb": "02_0.jpg",
+   "w": 5346,
+   "h": 3559,
+   "license": "CC BY-SA 4.0",
+   "artist": "Joël van der Loo",
+   "date": "2018-08-12 13:29:51",
+   "desc": "Disclaimer of best intentions[edit]\nTraveling to the Chernobyl exclusion zone 'as a tourist' is often frowned upon and has recently received a lot of bad rep because of attention or thrill seeking ind"
+  },
+  {
+   "title": "File:Racks Amravati Data Center.jpg",
+   "thumb": "02_1.jpg",
+   "w": 6000,
+   "h": 4004,
+   "license": "CC BY-SA 4.0",
+   "artist": "PiDatacenters",
+   "date": "2021-08-17",
+   "desc": "Data Storage Racks at Pi Data Centers"
+  },
+  {
+   "title": "File:DALL·E 2025-01-31 21.58.22 - A realistic image of the interior of a modern data center. The scene features long rows of tall, sleek server racks filled with blinking LED lights. T.webp",
+   "thumb": "02_2.jpg",
+   "w": 1024,
+   "h": 1024,
+   "license": "CC BY-SA 4.0",
+   "artist": "Cbrasil0",
+   "date": "2025-01-31",
+   "desc": "Imagem de Datacenter gerada por IA para ilustrar o que é um datacenter e ambientar que não está familiarizado com o conceito de forma ilustrativa."
+  },
+  {
+   "title": "File:Datacenter Server Racks (22370909788).jpg",
+   "thumb": "02_3.jpg",
+   "w": 6000,
+   "h": 4000,
+   "license": "CC BY 2.0",
+   "artist": "Carl Lender from Sunrise, USA",
+   "date": "2015-11-04 11:52",
+   "desc": "Real Estate"
+  },
+  {
+   "title": "File:Rear of rack at NERSC data center - closeup.jpg",
+   "thumb": "02_4.jpg",
+   "w": 2860,
+   "h": 4304,
+   "license": "CC0",
+   "artist": "Derrick Coetzee from Berkeley, CA, USA",
+   "date": "2011-10-14 13:54",
+   "desc": "Showing blue LED screens giving MAC address and serial number. White cables are Ethernet cables. Each server features commodity PC outlets including a serial port, VGA port, PS/2 ports, and USB ports."
+  },
+  {
+   "title": "File:EFTA00002518 - Server rack with multiple hard drives and network cables connected in a data center environment.jpg",
+   "thumb": "02_5.jpg",
+   "w": 1152,
+   "h": 768,
+   "license": "Public domain",
+   "artist": "Federal Bureau of Investigation",
+   "date": "12 August 2019 (FBI search of Jeffrey Epstein's private island of Little St. James)",
+   "desc": "Part of Epstein Files released by the DOJ on December 19 2025"
+  },
+  {
+   "title": "File:EFTA00002629 - Server rack with multiple networking devices and cables connected showing a typical data center setup.jpg",
+   "thumb": "02_6.jpg",
+   "w": 1152,
+   "h": 768,
+   "license": "Public domain",
+   "artist": "Federal Bureau of Investigation",
+   "date": "12 August 2019 (FBI search of Jeffrey Epstein's private island of Little St. James)",
+   "desc": "Part of Epstein Files released by the DOJ on December 19 2025"
+  },
+  {
+   "title": "File:Technician with laptop working on server rack at NERSC.jpg",
+   "thumb": "02_7.jpg",
+   "w": 4288,
+   "h": 2848,
+   "license": "CC0",
+   "artist": "Derrick Coetzee from Berkeley, CA, USA",
+   "date": "Taken on 14 October 2011, 13:22",
+   "desc": "CC0 waiver: To the extent possible under law, I waive all copyright and related or neighboring rights to this work."
+  },
+  {
+   "title": "File:Wikimedia racks ULSFO 2013 06 20 05 servers.jpg",
+   "thumb": "02_8.jpg",
+   "w": 2448,
+   "h": 3264,
+   "license": "CC BY-SA 3.0",
+   "artist": "Mutante",
+   "date": "2013-06-20 15:57:45",
+   "desc": "racks in Wikimedia's ULSFO caching center in San Francisco during setup on June 20th 2013"
+  },
+  {
+   "title": "File:Wikimedia racks ULSFO 2013 06 20 03 servers.jpg",
+   "thumb": "02_9.jpg",
+   "w": 2448,
+   "h": 3264,
+   "license": "CC BY-SA 3.0",
+   "artist": "Mutante",
+   "date": "2013-06-20 15:58:09",
+   "desc": "racks in Wikimedia's ULSFO caching center in San Francisco during setup on June 20th 2013"
+  }
+ ],
+ "data center construction steel filetype:bitmap": [
+  {
+   "title": "File:Security portals with BR3 rated glass and steel construction for ballistics and burglary protection in a data center environment.jpg",
+   "thumb": "03_0.jpg",
+   "w": 320,
+   "h": 240,
+   "license": "CC BY-SA 4.0",
+   "artist": "McGov1258",
+   "date": "2024-10-18",
+   "desc": "security portals with BR3 rated glass and steel construction for ballistics and burglary protection in a data center environment. Often handwave readers or other biometric authentication is used for e"
+  },
+  {
+   "title": "File:CAMPUS - Military Data Center (52106762896).jpg",
+   "thumb": "03_1.jpg",
+   "w": 5332,
+   "h": 3000,
+   "license": "CC BY 2.0",
+   "artist": "Kecko from Eastern Switzerland",
+   "date": "2022-05-27 12:45",
+   "desc": "One of three new army data centers that has started operations. It's in the country, but that's a military training area. The other two facilities are secret, one is not yet built. Because &lt;a href="
+  },
+  {
+   "title": "File:Aerial of Operations & Checkout Building high bay steel construction.jpg",
+   "thumb": "03_2.jpg",
+   "w": 2280,
+   "h": 1824,
+   "license": "Public domain",
+   "artist": "NASA",
+   "date": "Taken on 29 July 1963",
+   "desc": "Aerial of Operations &amp; Checkout Building high bay steel construction."
+  },
+  {
+   "title": "File:New York City (New York, USA), Manhattan, WTC Construction Site -- 2012 -- 6573.jpg",
+   "thumb": "03_3.jpg",
+   "w": 3456,
+   "h": 5184,
+   "license": "CC BY-SA 4.0",
+   "artist": "Dietmar Rabich",
+   "date": "Taken on 30 July 2012, 09:27",
+   "desc": "Sign at the World Trade Center construction site, New York City, New York, USA"
+  },
+  {
+   "title": "File:A-3 steel work completed (SSC-20090409-S00509).jpg",
+   "thumb": "03_4.jpg",
+   "w": 1714,
+   "h": 2560,
+   "license": "Public domain",
+   "artist": "NASA Stennis Space Center",
+   "date": "2009-04-09",
+   "desc": "Stennis Space Center engineers celebrated a key milestone in construction of the A-3 Test Stand on April 9 - completion of structural steel work. Workers with Lafayette (La.) Steel Erector Inc. placed"
+  },
+  {
+   "title": "File:Civic Center construction - DPLA - 9ad1ac9d31e7e68d86637ca3a8965816.jpg",
+   "thumb": "03_5.jpg",
+   "w": 6001,
+   "h": 4324,
+   "license": "Public domain",
+   "artist": "",
+   "date": "unknown",
+   "desc": "Steel girders at the Civic Center construction site."
+  },
+  {
+   "title": "File:Steel erected at A-3 Test Stand (SSC-20081029-S01872H).jpg",
+   "thumb": "03_6.jpg",
+   "w": 3000,
+   "h": 2400,
+   "license": "Public domain",
+   "artist": "NASA Stennis Space Center",
+   "date": "2008-10-29",
+   "desc": "Workers erect the first fabricated steel girders to arrive at the A-3 Test Stand at Stennis Space Center. Steel work began at the construction site Oct. 29 and is scheduled to continue into next sprin"
+  },
+  {
+   "title": "File:Zvezda Service Module under construction.jpg",
+   "thumb": "03_7.jpg",
+   "w": 1265,
+   "h": 855,
+   "license": "Public domain",
+   "artist": "NASA",
+   "date": "Taken on 1 October 1997",
+   "desc": "Zvezda Service Module under construction (NASA)\nThe Zvezda Service Module, the first fully Russian contribution and third element to the International Space Station (ISS), is shown under construction "
+  },
+  {
+   "title": "File:New York City (New York, USA), One World Trade Center -- 2012 -- 6566.jpg",
+   "thumb": "03_8.jpg",
+   "w": 3111,
+   "h": 4978,
+   "license": "CC BY-SA 4.0",
+   "artist": "Dietmar Rabich",
+   "date": "Taken on 30 July 2012, 09:06",
+   "desc": "One World Trade Center, New York City, New York, USA"
+  },
+  {
+   "title": "File:Steel erected at A-3 Test Stand (SSC-20081024-S01872).jpg",
+   "thumb": "03_9.jpg",
+   "w": 3000,
+   "h": 2400,
+   "license": "Public domain",
+   "artist": "NASA Stennis Space Center",
+   "date": "2008-10-24",
+   "desc": "Fabricated steel began arriving by truck Oct. 24 for construction of the A-3 Test Stand that will be used to test the engine for the nation's next generation of moon rockets. Within days workers from "
+  }
+ ],
+ "liquid cooling server filetype:bitmap": [],
+ "steel strip surface inspection camera filetype:bitmap": [],
+ "high voltage substation transformers filetype:bitmap": [
+  {
+   "title": "File:High-voltage transformer 750 kV Трансформатор 750 кВ.jpg",
+   "thumb": "06_0.jpg",
+   "w": 3648,
+   "h": 2736,
+   "license": "CC0",
+   "artist": "Novoklimov",
+   "date": "2010-05-02 13:53:50",
+   "desc": "A high-voltage transformer 750 kV within the territory of electrical substation (the standby transformer)."
+  },
+  {
+   "title": "File:Pont-l'Abbé high-voltage substation 09 - Eastern transformer.jpg",
+   "thumb": "06_1.jpg",
+   "w": 3445,
+   "h": 2584,
+   "license": "CC0",
+   "artist": "PtiBzh",
+   "date": "2022-03-03 17:45:18",
+   "desc": "Eastern transformer of Pont-l'Abbé high-voltage substation"
+  },
+  {
+   "title": "File:Pont-l'Abbé high-voltage substation 07 - Western transformer.jpg",
+   "thumb": "06_2.jpg",
+   "w": 3322,
+   "h": 2495,
+   "license": "CC0",
+   "artist": "PtiBzh",
+   "date": "2022-03-03 17:47:11",
+   "desc": "Western transformer (63kV/20kV) of Pont-l'Abbé high-voltage substation"
+  },
+  {
+   "title": "File:Pont-l'Abbé high-voltage substation 14 - Transformer connections.jpg",
+   "thumb": "06_3.jpg",
+   "w": 3699,
+   "h": 2759,
+   "license": "CC0",
+   "artist": "PtiBzh",
+   "date": "2022-03-03 17:53:46",
+   "desc": "63kV (up) and 20kV (down) power lines connecting to one of the two main transformer of Pont-l'Abbé high-voltage substation"
+  },
+  {
+   "title": "File:Pont-l'Abbé high-voltage substation 02 - Surge protection.jpg",
+   "thumb": "06_4.jpg",
+   "w": 3712,
+   "h": 2784,
+   "license": "CC0",
+   "artist": "PtiBzh",
+   "date": "2022-03-03 17:51:51",
+   "desc": "Surge arresters and current transformer of Pont-l'Abbé high-voltage substation"
+  },
+  {
+   "title": "File:Pont-l'Abbé high-voltage substation 08 - Eastern transformer identification plaque.jpg",
+   "thumb": "06_5.jpg",
+   "w": 4016,
+   "h": 3016,
+   "license": "CC0",
+   "artist": "PtiBzh",
+   "date": "2022-03-03 17:45:32",
+   "desc": "Identification plaque of Pont-l'Abbé high-voltage substation eastern transformer (63kV/20kV)"
+  },
+  {
+   "title": "File:Pont-l'Abbé high-voltage substation 16 - Switches and connections.jpg",
+   "thumb": "06_6.jpg",
+   "w": 3649,
+   "h": 2686,
+   "license": "CC0",
+   "artist": "PtiBzh",
+   "date": "2022-03-03 17:53:01",
+   "desc": "Switches and connections between the switchgear and the main transformers of Pont-l'Abbé high-voltage substation"
+  },
+  {
+   "title": "File:Pont-l'Abbé high-voltage substation 03- Arrival portal and surge protection.jpg",
+   "thumb": "06_7.jpg",
+   "w": 3290,
+   "h": 2442,
+   "license": "CC0",
+   "artist": "PtiBzh",
+   "date": "2022-03-03 17:50:49",
+   "desc": "Arrival portal and surge protection of Pont-l'Abbé high-voltage substation"
+  },
+  {
+   "title": "File:Pont-l'Abbé high-voltage substation 04 - Arrival portal and switchgear.jpg",
+   "thumb": "06_8.jpg",
+   "w": 3326,
+   "h": 2465,
+   "license": "CC0",
+   "artist": "PtiBzh",
+   "date": "2022-03-03 17:49:34",
+   "desc": "Arrival portal and switchgear of Pont-l'Abbé high-voltage substation"
+  },
+  {
+   "title": "File:Pont-l'Abbé high-voltage substation 15 - Switches.jpg",
+   "thumb": "06_9.jpg",
+   "w": 3989,
+   "h": 2981,
+   "license": "CC0",
+   "artist": "PtiBzh",
+   "date": "2022-03-03 17:53:10",
+   "desc": "Disconectors (left) and circuits breakers (right) between the switchgear and the main transformers of Pont-l'Abbé high-voltage substation"
+  }
+ ]
+}
