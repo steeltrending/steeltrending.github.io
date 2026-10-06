@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>關鍵字熱度 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="以 Google 搜尋趨勢觀察鋼價、鋼筋、鐵礦砂、廢鋼等鋼鐵關鍵字的熱度變化。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+.chip{display:inline-flex;align-items:center;border:1px solid #3A3F46;color:#C9CDD2;font-size:14px;min-height:40px;padding:0 14px;text-decoration:none;background:none;font-family:inherit;cursor:pointer}
+.chip:hover{border-color:#FF6A1A;color:#E8E6E1}
+.chip[aria-pressed="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+.card{border:1px solid #2A2F35;background:#15181B;padding:20px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.kw{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.kw input{background:#0F1113;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;padding:0 12px;min-height:40px;width:150px}
+.kw input:focus{outline:2px solid #FF6A1A;outline-offset:-1px}
+.frame{background:#fff;margin-top:16px;min-height:120px}
+.frame iframe{display:block;width:100%;border:0}
+.note{font-size:13px;line-height:1.7;color:#9AA0A6;margin:12px 0 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+@media (max-width:640px){.wrap{padding:0 16px}.kw input{width:calc(50% - 4px)}}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<a href="archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="trends.html" aria-current="page" style="color:#FF8A47;text-decoration:none;padding:12px">關鍵字熱度</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+<main class="wrap" style="padding-top:64px;padding-bottom:96px">
+<p class="mono" style="margin:0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">SEARCH TRENDS</p>
+<h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">關鍵字熱度</h1>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:46em">用 Google 搜尋趨勢看市場關注什麼：鋼價、鋼筋、廢鋼的搜尋熱度，往往比統計數據更早反映需求與情緒的變化。圖表由 Google Trends 即時提供，數值為相對熱度（期間內最高點 = 100）。</p>
+
+<section aria-labelledby="t1" style="margin-top:44px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="t1" style="margin:0;font-size:20px;font-weight:900">關鍵字比較</h2>
+<span class="lbl">INTEREST OVER TIME</span>
+</div>
+<div class="card">
+<div class="row" role="group" aria-label="主題" id="presets"></div>
+<div class="row" style="margin-top:10px;gap:16px"><div class="row" role="group" aria-label="地區" id="geos"></div><div class="row" role="group" aria-label="期間" id="periods"></div></div>
+<form class="kw" id="kwform" aria-label="自訂關鍵字">
+<input name="k" aria-label="關鍵字 1"><input name="k" aria-label="關鍵字 2"><input name="k" aria-label="關鍵字 3"><input name="k" aria-label="關鍵字 4"><input name="k" aria-label="關鍵字 5">
+<button class="chip" type="submit">比較</button>
+</form>
+<div class="frame" id="ts"></div>
+<p class="note" id="ts-note"></p>
+</div>
+</section>
+
+<section aria-labelledby="t2" style="margin-top:44px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="t2" style="margin:0;font-size:20px;font-weight:900">地區分布與相關搜尋</h2>
+<span class="lbl">BY REGION · RELATED</span>
+</div>
+<div class="grid2">
+<div class="card"><p style="margin:0;font-weight:700" id="geo-h">地區熱度</p><div class="frame" id="geo"></div></div>
+<div class="card"><p style="margin:0;font-weight:700" id="rq-h">相關搜尋</p><div class="frame" id="rq"></div></div>
+</div>
+<p class="note">地區熱度與相關搜尋以目前比較組的第一個關鍵字為準。</p>
+</section>
+
+<p style="margin:56px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6">註：資料來源為 Google Trends。熱度為相對指數，不代表實際搜尋次數；搜尋量過低的關鍵字可能顯示「資料不足」。若圖表未顯示，可能是瀏覽器擋下第三方內容或 Google 暫時限制，可點「在 Google Trends 開啟」查看。內容僅供參考。</p>
+</main>
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+<script>
+(function () {
+  var PRESETS = [
+    { name: '台灣鋼鐵', geo: 'TW', kw: ['鋼價', '鋼筋', '中鋼', '廢鋼', '鐵礦砂'] },
+    { name: '台灣營建與房市', geo: 'TW', kw: ['鋼筋', '房價', '建照', '營建', '缺工'] },
+    { name: '台灣下游產業', geo: 'TW', kw: ['電動車', '資料中心', '離岸風電', '造船', '工具機'] },
+    { name: '全球原料（英文）', geo: '', kw: ['steel price', 'iron ore', 'scrap metal', 'coking coal'] },
+    { name: '全球鋼鐵議題（英文）', geo: '', kw: ['green steel', 'steel tariffs', 'CBAM', 'hydrogen steel'] }
+  ];
+  var PERIODS = [['today 3-m', '3 個月'], ['today 12-m', '12 個月'], ['today 5-y', '5 年']];
+  var cur = { p: 0, time: 'today 12-m', kw: PRESETS[0].kw.slice(), geo: 'TW' };
+  function $(id) { return document.getElementById(id); }
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+
+  function embedURL(type, kws) {
+    var req = { comparisonItem: kws.map(function (k) { return { keyword: k, geo: cur.geo, time: cur.time }; }), category: 0, property: '' };
+    var q = 'date=' + encodeURIComponent(cur.time) + (cur.geo ? '&geo=' + cur.geo : '') + '&q=' + encodeURIComponent(kws.join(','));
+    return 'https://trends.google.com/trends/embed/explore/' + type + '?req=' + encodeURIComponent(JSON.stringify(req)) + '&tz=-480&hl=zh-TW&eq=' + encodeURIComponent(q);
+  }
+  function exploreURL(kws) {
+    return 'https://trends.google.com/trends/explore?date=' + encodeURIComponent(cur.time) + (cur.geo ? '&geo=' + cur.geo : '') + '&q=' + encodeURIComponent(kws.join(',')) + '&hl=zh-TW';
+  }
+  function frame(box, src, h, title) {
+    box.textContent = '';
+    var f = document.createElement('iframe');
+    f.src = src; f.height = h; f.loading = 'lazy'; f.title = title; f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+    box.appendChild(f);
+  }
+  function render() {
+    [].forEach.call($('presets').children, function (b, i) { b.setAttribute('aria-pressed', i === cur.p ? 'true' : 'false'); });
+    [].forEach.call($('periods').children, function (b) { b.setAttribute('aria-pressed', b.dataset.t === cur.time ? 'true' : 'false'); });
+    [].forEach.call($('geos').children, function (b) { b.setAttribute('aria-pressed', b.dataset.g === cur.geo ? 'true' : 'false'); });
+    var ins = $('kwform').querySelectorAll('input');
+    [].forEach.call(ins, function (inp, i) { inp.value = cur.kw[i] || ''; });
+    var area = cur.geo === 'TW' ? '台灣' : '全球';
+    var per = PERIODS.filter(function (p) { return p[0] === cur.time; })[0][1];
+    frame($('ts'), embedURL('TIMESERIES', cur.kw), 420, '搜尋熱度趨勢：' + cur.kw.join('、'));
+    var n = $('ts-note'); n.textContent = area + '・過去 ' + per + '・' + cur.kw.join('、') + '　';
+    var a = el('a', null, '在 Google Trends 開啟 ↗'); a.href = exploreURL(cur.kw); a.target = '_blank'; a.rel = 'noopener'; n.appendChild(a);
+    var first = [cur.kw[0]];
+    $('geo-h').textContent = '地區熱度：' + cur.kw[0] + '（' + area + '）';
+    $('rq-h').textContent = '相關搜尋：' + cur.kw[0];
+    frame($('geo'), embedURL('GEO_MAP', first), 420, '地區熱度：' + cur.kw[0]);
+    frame($('rq'), embedURL('RELATED_QUERIES', first), 420, '相關搜尋：' + cur.kw[0]);
+  }
+  PRESETS.forEach(function (p, i) {
+    var b = el('button', 'chip', p.name); b.type = 'button';
+    b.addEventListener('click', function () { cur.p = i; cur.kw = p.kw.slice(); cur.geo = p.geo; render(); });
+    $('presets').appendChild(b);
+  });
+  PERIODS.forEach(function (p) {
+    var b = el('button', 'chip', p[1]); b.type = 'button'; b.dataset.t = p[0];
+    b.addEventListener('click', function () { cur.time = p[0]; render(); });
+    $('periods').appendChild(b);
+  });
+  [['TW', '台灣'], ['', '全球']].forEach(function (g) {
+    var b = el('button', 'chip', g[1]); b.type = 'button'; b.dataset.g = g[0];
+    b.addEventListener('click', function () { cur.geo = g[0]; render(); });
+    $('geos').appendChild(b);
+  });
+  $('kwform').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var kws = [].map.call(this.querySelectorAll('input'), function (i) { return i.value.trim(); }).filter(Boolean).slice(0, 5);
+    if (!kws.length) return;
+    cur.kw = kws; cur.p = -1; render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>
