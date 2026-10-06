@@ -1,0 +1,46 @@
+name: 更新世界鋼鐵數據
+
+on:
+  schedule:
+    # worldsteel 約於每月 22–25 日公布前一個月粗鋼產量：每月 22–28 日每天檢查一次，其餘時間每週一檢查
+    # 台北時間 09:10（UTC 01:10）
+    - cron: "10 1 22-28 * *"
+    - cron: "10 1 * * 1"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/fetch_worldsteel.py
+      - .github/workflows/worldsteel.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: worldsteel
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          pip install --quiet playwright opencc-python-reimplemented
+          python3 -m playwright install --with-deps chromium
+      - run: python3 tools/fetch_worldsteel.py
+      - name: 提交更新
+        run: |
+          git config user.name "steeltrending"
+          git config user.email "noreply@steeltrending.github.io"
+          git add data/worldsteel.json
+          if git diff --cached --quiet; then echo "沒有新資料"; exit 0; fi
+          git commit -m "世界鋼鐵數據自動更新 $(TZ=Asia/Taipei date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep 5
+          done
+          exit 1
