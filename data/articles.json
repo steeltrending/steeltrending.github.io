@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-csc-if-rc30",
+   "category": "vehicles",
+   "title": "中鋼 IF 汽車用鋼 RC30：把三成廢鋼煉進汽車外板",
+   "period": "2026-10",
+   "published": "2026-10-06",
+   "summary": "中鋼以三項轉爐增用廢鋼技術，把 IF 鋼的廢鋼比從約 10% 提高到 30%，IF 汽車用鋼 RC30 取得經濟部綠色產品認證。高再生料鋼品 2025 年接單 8.3 萬噸、年增 68%，2026 年前 8 月近 7.4 萬噸。",
+   "tags": [
+    "中鋼",
+    "IF 鋼",
+    "再生料",
+    "廢鋼",
+    "汽車用鋼"
+   ],
+   "image": "assets/articles/2026-10-csc-if-rc30-biw.jpg",
+   "url": "articles/2026-10-csc-if-rc30.html"
+  },
+  {
    "id": "2026-10-eu-steel-quota",
    "category": "trade",
    "title": "歐盟鋼鐵新制：配額砍半、關稅 50%、追查熔鑄地，台灣怎麼應對",
