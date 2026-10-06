@@ -10,7 +10,7 @@ with sync_playwright() as p:
         def on_resp(r):
             try:
                 ct = r.headers.get("content-type", "")
-                if "json" in ct or r.url.endswith(".json") or "csv" in ct:
+                if r.request.resource_type in ("xhr", "fetch") or "json" in ct or "csv" in ct:
                     caps.append({"url": r.url, "status": r.status, "body": r.text()[:400000]})
             except Exception as e:
                 pass
