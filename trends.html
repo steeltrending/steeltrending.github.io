@@ -21,8 +21,14 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 .kw{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 .kw input{background:#0F1113;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;padding:0 12px;min-height:40px;width:150px}
 .kw input:focus{outline:2px solid #FF6A1A;outline-offset:-1px}
-.frame{background:#fff;margin-top:16px;min-height:120px}
+.frame{margin-top:16px;min-height:120px;padding:10px;background:linear-gradient(#2A2F35,#22262B);border:1px solid #3A3F46;border-radius:8px;box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 8px 24px rgba(0,0,0,.35)}
+.frame .bar{display:flex;align-items:center;gap:6px;padding:0 4px 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#9AA0A6}
+.frame .bar i{width:8px;height:8px;border-radius:50%;background:#4A5058;display:inline-block}
+.frame .bar i:first-child{background:#FF6A1A}
+.frame .bar span{margin-left:6px}
+.frame .mat{background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
 .frame iframe{display:block;width:100%;border:0}
+@media (max-width:640px){.frame{padding:6px;border-radius:6px}.frame .bar{padding-bottom:6px}}
 .note{font-size:13px;line-height:1.7;color:#9AA0A6;margin:12px 0 0}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media (max-width:760px){.grid2{grid-template-columns:1fr}}
@@ -117,9 +123,13 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
   }
   function frame(box, src, h, title) {
     box.textContent = '';
+    var bar = el('div', 'bar'); bar.setAttribute('aria-hidden', 'true');
+    bar.appendChild(el('i')); bar.appendChild(el('i')); bar.appendChild(el('i'));
+    bar.appendChild(el('span', null, 'GOOGLE TRENDS'));
+    var mat = el('div', 'mat');
     var f = document.createElement('iframe');
     f.src = src; f.height = h; f.loading = 'lazy'; f.title = title; f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
-    box.appendChild(f);
+    mat.appendChild(f); box.appendChild(bar); box.appendChild(mat);
   }
   function render() {
     [].forEach.call($('presets').children, function (b, i) { b.setAttribute('aria-pressed', i === cur.p ? 'true' : 'false'); });
