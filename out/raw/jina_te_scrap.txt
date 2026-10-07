@@ -1,0 +1,127 @@
+Title: 20 Million Indicators for 196 Countries
+
+URL Source: https://tradingeconomics.com/commodity/steel-scrap
+
+Markdown Content:
+*   [Commodity](https://tradingeconomics.com/commodity/steel-scrap#Commodity)
+*   [Index](https://tradingeconomics.com/commodity/steel-scrap#Index)
+*   [Stocks](https://tradingeconomics.com/commodity/steel-scrap#Share)
+*   [Forex](https://tradingeconomics.com/commodity/steel-scrap#FX)
+*   [Crypto](https://tradingeconomics.com/commodity/steel-scrap#Crypto)
+*   [Bond](https://tradingeconomics.com/commodity/steel-scrap#Bond)
+
+|  | Actual | Chg | %Chg |
+| --- | --- | --- | --- |
+| [Crude Oil](https://tradingeconomics.com/commodity/crude-oil) | 90.119 | 0.69 | 0.77% |
+| [Brent](https://tradingeconomics.com/commodity/brent-crude-oil) | 101.347 | 1.03 | 1.02% |
+| [Natural gas](https://tradingeconomics.com/commodity/natural-gas) | 3.1201 | 0.05 | 1.76% |
+| [Gasoline](https://tradingeconomics.com/commodity/gasoline) | 3.3257 | 0.08 | 2.45% |
+| [Heating Oil](https://tradingeconomics.com/commodity/heating-oil) | 4.6034 | 0.06 | 1.28% |
+| [Gold](https://tradingeconomics.com/commodity/gold) | 4165.09 | 25.34 | 0.61% |
+| [Silver](https://tradingeconomics.com/commodity/silver) | 61.333 | 0.28 | 0.46% |
+| [Copper](https://tradingeconomics.com/commodity/copper) | 6.6016 | 0.02 | 0.24% |
+| [Soybeans](https://tradingeconomics.com/commodity/soybeans) | 1302.09 | 21.34 | 1.67% |
+| [Wheat](https://tradingeconomics.com/commodity/wheat) | 702.08 | 9.83 | 1.42% |
+| [Coal](https://tradingeconomics.com/commodity/coal) | 152.20 | 2.20 | 1.47% |
+| [Steel](https://tradingeconomics.com/commodity/steel) | 3109.00 | 9.00 | 0.29% |
+| [EU Gas](https://tradingeconomics.com/commodity/eu-natural-gas) | 76.40 | 2.89 | 3.92% |
+| [Lumber](https://tradingeconomics.com/commodity/lumber) | 525.00 | 1.50 | 0.29% |
+| [Iron Ore CNY](https://tradingeconomics.com/commodity/iron-ore-cny) | 702.50 | 3.50 | 0.50% |
+| [More](https://tradingeconomics.com/commodities) |
+
+|  | Actual | Chg | %Chg |
+| --- | --- | --- | --- |
+| [EURUSD](https://tradingeconomics.com/euro-area/currency) | 1.12530 | 0.0030 | 0.27% |
+| [GBPUSD](https://tradingeconomics.com/united-kingdom/currency) | 1.32669 | 0.0045 | 0.34% |
+| [AUDUSD](https://tradingeconomics.com/australia/currency) | 0.69814 | 0.0010 | 0.14% |
+| [NZDUSD](https://tradingeconomics.com/new-zealand/currency) | 0.56235 | 0.0025 | 0.44% |
+| [USDJPY](https://tradingeconomics.com/japan/currency) | 158.382 | 0.4740 | 0.30% |
+| [USDCNY](https://tradingeconomics.com/china/currency) | 6.70289 | 0.0009 | -0.01% |
+| [USDCHF](https://tradingeconomics.com/switzerland/currency) | 0.83235 | 0.0018 | 0.22% |
+| [USDCAD](https://tradingeconomics.com/canada/currency) | 1.42108 | 0.0050 | -0.35% |
+| [USDMXN](https://tradingeconomics.com/mexico/currency) | 17.9691 | 0.1114 | -0.62% |
+| [USDINR](https://tradingeconomics.com/india/currency) | 96.5560 | 0.2419 | 0.25% |
+| [USDBRL](https://tradingeconomics.com/brazil/currency) | 4.98010 | 0.0139 | -0.28% |
+| [USDRUB](https://tradingeconomics.com/russia/currency) | 84.7500 | 0.5600 | -0.66% |
+| [USDKRW](https://tradingeconomics.com/south-korea/currency) | 1338.24 | 3.5500 | -0.26% |
+| [DXY](https://tradingeconomics.com/united-states/currency) | 101.924 | 0.2435 | -0.24% |
+| [USDTRY](https://tradingeconomics.com/turkey/currency) | 49.2005 | 0.0637 | 0.13% |
+| [More](https://tradingeconomics.com/currencies) |
+
+|  | Actual | Chg | %Chg |  |
+| --- | --- | --- | --- | --- |
+| [US500](https://tradingeconomics.com/united-states/stock-market) | 7828.94 | 55 | 0.71% |  |
+| [US30](https://tradingeconomics.com/indu:ind) | 51546 | 278 | 0.54% |  |
+| [US100](https://tradingeconomics.com/us100:ind) | 31256 | 179 | 0.58% |  |
+| [JP225](https://tradingeconomics.com/japan/stock-market) | 70725 | 778 | 1.11% |  |
+| [GB100](https://tradingeconomics.com/united-kingdom/stock-market) | 10542 | 44 | 0.42% |  |
+| [DE40](https://tradingeconomics.com/germany/stock-market) | 25449 | 195 | 0.77% |  |
+| [FR40](https://tradingeconomics.com/france/stock-market) | 7865 | 31 | 0.40% |  |
+| [IT40](https://tradingeconomics.com/italy/stock-market) | 51261 | 443 | 0.87% |  |
+| [ES35](https://tradingeconomics.com/spain/stock-market) | 19444 | 145 | 0.75% |  |
+| [ASX200](https://tradingeconomics.com/australia/stock-market) | 8712 | 26 | 0.30% |  |
+| [SHANGHAI](https://tradingeconomics.com/china/stock-market) | 3842 | 12 | 0.31% |  |
+| [SENSEX](https://tradingeconomics.com/india/stock-market) | 73068 | 685 | 0.95% |  |
+| [TSX](https://tradingeconomics.com/canada/stock-market) | 35650 | 131 | 0.37% |  |
+| [MOEX](https://tradingeconomics.com/russia/stock-market) | 2325 | 4 | 0.16% |  |
+| [IBOVESPA](https://tradingeconomics.com/brazil/stock-market) | 205835 | 1,077 | -0.52% |  |
+| [More](https://tradingeconomics.com/stocks) |
+
+|  | Actual | Chg | %Chg |
+| --- | --- | --- | --- |
+| [Apple](https://tradingeconomics.com/aapl:us) | 333.59 | 0.70 | 0.21% |
+| [Tesla](https://tradingeconomics.com/tsla:us) | 380.68 | 1.95 | 0.51% |
+| [Microsoft](https://tradingeconomics.com/msft:us) | 529.30 | 4.12 | 0.78% |
+| [Amazon](https://tradingeconomics.com/amzn:us) | 256.29 | 4.89 | 1.95% |
+| [Meta](https://tradingeconomics.com/fb:us) | 738.88 | 3.02 | -0.41% |
+| [Nvidia](https://tradingeconomics.com/nvda:us) | 239.24 | 0.34 | 0.14% |
+| [Visa](https://tradingeconomics.com/v:us) | 370.64 | 0.93 | 0.25% |
+| [Oracle](https://tradingeconomics.com/orcl:us) | 144.77 | 2.29 | 1.61% |
+| [JPMorgan](https://tradingeconomics.com/jpm:us) | 331.28 | 1.10 | -0.33% |
+| [J&J](https://tradingeconomics.com/jnj:us) | 254.78 | 1.85 | 0.73% |
+| [SpaceX](https://tradingeconomics.com/spcx:us) | 171.92 | 0.83 | 0.49% |
+| [Exxon Mobil](https://tradingeconomics.com/xom:us) | 164.48 | 0.48 | 0.29% |
+| [Alphabet](https://tradingeconomics.com/goog:us) | 347.68 | 1.21 | 0.35% |
+| [Goldman Sachs](https://tradingeconomics.com/gs:us) | 897.18 | 3.72 | 0.42% |
+| [Caterpillar](https://tradingeconomics.com/cat:us) | 863.42 | 15.28 | 1.80% |
+| [More](https://tradingeconomics.com/stocks) |
+
+|  | Actual | Chg | %Chg |
+| --- | --- | --- | --- |
+| [United States](https://tradingeconomics.com/united-states/government-bond-yield) | 5.2920 | 0.020 | -0.02% |
+| [United Kingdom](https://tradingeconomics.com/united-kingdom/government-bond-yield) | 5.4020 | 0.008 | 0.00% |
+| [Japan](https://tradingeconomics.com/japan/government-bond-yield) | 3.1080 | 0.010 | 0.01% |
+| [Australia](https://tradingeconomics.com/australia/government-bond-yield) | 5.3790 | 0.033 | 0.03% |
+| [Germany](https://tradingeconomics.com/germany/government-bond-yield) | 3.4808 | 0.011 | -0.01% |
+| [Brazil](https://tradingeconomics.com/brazil/government-bond-yield) | 12.9120 | 0.053 | -0.05% |
+| [Russia](https://tradingeconomics.com/russia/government-bond-yield) | 16.8100 | 0.010 | 0.01% |
+| [India](https://tradingeconomics.com/india/government-bond-yield) | 7.2060 | 0.007 | -0.01% |
+| [Canada](https://tradingeconomics.com/canada/government-bond-yield) | 3.9280 | 0.024 | -0.02% |
+| [Italy](https://tradingeconomics.com/italy/government-bond-yield) | 4.5350 | 0.103 | -0.10% |
+| [France](https://tradingeconomics.com/france/government-bond-yield) | 4.7550 | 0.112 | -0.11% |
+| [South Africa](https://tradingeconomics.com/south-africa/government-bond-yield) | 8.9700 | 0.080 | -0.08% |
+| [China](https://tradingeconomics.com/china/government-bond-yield) | 1.6978 | 0.000 | 0.00% |
+| [Switzerland](https://tradingeconomics.com/switzerland/government-bond-yield) | 0.5090 | 0.018 | -0.02% |
+| [Chile](https://tradingeconomics.com/chile/government-bond-yield) | 6.0900 | 0.010 | -0.01% |
+| [More](https://tradingeconomics.com/bonds) |
+
+|  | Actual | Chg | %Chg |
+| --- | --- | --- | --- |
+| [Bitcoin](https://tradingeconomics.com/btcusd:cur) | 85522 | 267 | -0.31% |
+| [Ether](https://tradingeconomics.com/ethusd:cur) | 2695.84 | 15.4158 | -0.57% |
+| [Binance](https://tradingeconomics.com/bnbusd:cur) | 779.8 | 7.2400 | -0.92% |
+| [Cardano](https://tradingeconomics.com/adausd:cur) | 0.26717 | 0.0033 | -1.23% |
+| [Solana](https://tradingeconomics.com/solusd:cur) | 120.5496 | 0.2297 | -0.19% |
+| [XRP](https://tradingeconomics.com/xrpusd:cur) | 1.49695 | 0.0103 | -0.68% |
+| [Polkadot](https://tradingeconomics.com/dotusd:cur) | 1.20 | 0.0326 | -2.65% |
+| [Avalanche](https://tradingeconomics.com/avxusd:cur) | 11.59 | 0.4480 | 4.02% |
+| [Polygon](https://tradingeconomics.com/mtcusd:cur) | 0.11 | 0.0019 | -1.73% |
+| [Cosmos](https://tradingeconomics.com/atmusd:cur) | 1.78 | 0.0280 | -1.55% |
+| [Dai](https://tradingeconomics.com/daiusd:cur) | 1.00000 | 0.0002 | 0.02% |
+| [Litecoin](https://tradingeconomics.com/ltcusd:cur) | 69.016 | 1.0882 | -1.55% |
+| [Uniswap](https://tradingeconomics.com/uniusd:cur) | 8.55 | 0.5310 | -5.84% |
+| [Algorand](https://tradingeconomics.com/algusd:cur) | 0.12 | 0.0043 | -3.36% |
+| [Bitcoin Cash](https://tradingeconomics.com/bchusd:cur) | 311.57 | 5.2800 | -1.67% |
+| [More](https://tradingeconomics.com/crypto) |
+
+News
