@@ -40,7 +40,9 @@ def main():
         u = a.get("url")
         if u and os.path.exists(os.path.join(ROOT, u)):
             urls.append((BASE + u, lastmod(u), "0.7"))
-    xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    xml = ['<?xml version="1.0" encoding="UTF-8"?>',
+           # 瀏覽器開啟時套用樣式（XML + CSS；Chrome 將移除 XSLT，故不用 XSL）
+           '<?xml-stylesheet type="text/css" href="/assets/sitemap.css"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for loc, mod, pr in urls:
         xml.append("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (loc, mod, pr))
     xml.append("</urlset>")

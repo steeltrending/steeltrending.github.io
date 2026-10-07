@@ -8,6 +8,7 @@ on:
       - "articles/**"
       - "data/articles.json"
       - tools/build_sitemap.py
+      - assets/sitemap.css
   workflow_dispatch:
 
 permissions:

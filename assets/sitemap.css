@@ -1,0 +1,9 @@
+/* sitemap.xml 以瀏覽器開啟時的樣式（XML + CSS；不影響搜尋引擎讀取） */
+urlset{display:block;max-width:1100px;margin:0 auto;padding:48px 24px 72px;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;counter-reset:n}
+urlset::before{display:block;white-space:pre-wrap;content:"STEEL TRENDING · SITEMAP\A鋼鐵潮流 sitemap.xml\A這是提供給 Google 等搜尋引擎讀取的網址清單。想瀏覽網站內容，請回到首頁 steeltrending.github.io 或頁尾的「網站導覽」。";font-size:15px;line-height:1.8;color:#9AA0A6;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid #2A2F35}
+url{display:grid;grid-template-columns:3em 1fr 7em 3.5em;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid #22262B;counter-increment:n}
+url::before{content:counter(n,decimal-leading-zero);font-family:'IBM Plex Mono',Consolas,monospace;font-size:12px;color:#FF6A1A}
+loc{display:block;font-family:'IBM Plex Mono',Consolas,monospace;font-size:14px;color:#E8E6E1;word-break:break-all}
+lastmod{display:block;font-family:'IBM Plex Mono',Consolas,monospace;font-size:13px;color:#9AA0A6}
+priority{display:block;font-family:'IBM Plex Mono',Consolas,monospace;font-size:12px;color:#7A7F86;text-align:right}
+@media (max-width:640px){urlset{padding:28px 16px 48px}url{grid-template-columns:2.4em 1fr;gap:4px 10px}lastmod{grid-column:2}priority{display:none}}
