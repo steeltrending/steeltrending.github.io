@@ -1,0 +1,39 @@
+name: 更新 sitemap.xml
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "articles/**"
+      - "data/articles.json"
+      - tools/build_sitemap.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sitemap
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: python3 tools/build_sitemap.py
+      - name: 提交更新
+        run: |
+          git config user.name "steeltrending"
+          git config user.email "noreply@steeltrending.github.io"
+          git add sitemap.xml robots.txt
+          if git diff --cached --quiet; then echo "沒有變動"; exit 0; fi
+          git commit -m "sitemap.xml 自動更新 $(TZ=Asia/Taipei date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep 5
+          done
+          exit 1
