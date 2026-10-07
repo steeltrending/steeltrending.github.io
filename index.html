@@ -130,6 +130,7 @@ Facebook 粉專</a>
 <div style="padding: 14px 20px; border-top: 1px solid #2A2F35; display: flex; flex-direction: column; gap: 6px">
 <span id="price-updated" style="font-size: 14px; color: #C9CDD2">資料更新：—</span>
 <span style="font-size: 13px; line-height: 1.7; color: #9AA0A6">註：交易所期貨結算價，各品項以其最近交易日為準；中國交易所遇國定假日休市。僅供參考，不構成投資建議。</span>
+<a href="futures.html" style="align-self: flex-start; color: #FF8A47; text-decoration: none; font-size: 14px; padding: 6px 0 0">查看 2026 年以來歷史紀錄 →</a>
 </div>
 </article>
 
@@ -257,7 +258,9 @@ document.getElementById('mail-btn').addEventListener('click', function () {
       var box = document.getElementById('price-rows');
       box.textContent = '';
       (d.items || []).forEach(function (it, i, arr) {
-        var row = el('div', 'display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 16px 20px' + (i < arr.length - 1 ? '; border-bottom: 1px solid #22262B' : ''));
+        var row = el('a', 'display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 16px 20px; color: #E8E6E1; text-decoration: none' + (i < arr.length - 1 ? '; border-bottom: 1px solid #22262B' : ''));
+        row.href = 'future.html?k=' + encodeURIComponent(it.key);
+        row.setAttribute('aria-label', it.name + '：' + (typeof it.price === 'number' ? fmt(it.price) + ' ' + (it.unit || '') : '—') + '，查看歷史紀錄');
         var left = el('div', 'display: flex; flex-direction: column; gap: 3px; min-width: 0');
         left.appendChild(el('span', 'font-size: 16px; font-weight: 700', it.name));
         left.appendChild(el('span', 'font-size: 13px; color: #9AA0A6; line-height: 1.5', it.contract + (it.asof ? ' · ' + fmtDate(it.asof).slice(5) : '')));

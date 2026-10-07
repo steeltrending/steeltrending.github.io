@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>原料與鋼價歷史紀錄 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鐵礦砂、鐵礦石、焦煤、廢鋼與熱軋卷板期貨自 2026 年起的每日價格紀錄與走勢。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.up{color:#FF8A47}.down{color:#8DB4D6}.flat{color:#9AA0A6}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+
+/* overview */
+.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid #2A2F35;border-left:1px solid #2A2F35}
+.ov{padding:16px 18px;border-right:1px solid #2A2F35;border-bottom:1px solid #2A2F35;background:#15181B;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit}
+.ov:hover,.ov:focus-visible{background:#1A1E22;outline:none}
+.ov .r{font-size:15px;font-weight:700;color:#E8E6E1}
+.ov .v{font-size:22px;font-weight:600}
+.ov .s{font-size:12px;color:#9AA0A6}
+
+/* bars */
+.bars{display:flex;flex-direction:column;gap:2px}
+.bar-row{display:grid;grid-template-columns:150px minmax(0,1fr) 72px;gap:12px;align-items:center;min-height:28px}
+.bar-row .n{font-size:13px;color:#C9CDD2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-track{position:relative;height:14px}
+.bar-track::before{content:"";position:absolute;left:50%;top:-4px;bottom:-4px;border-left:1px solid #3A3F46}
+.bar{position:absolute;top:0;height:100%}
+.bar.up{background:#FF6A1A}.bar.down{background:#5E8DB8}
+.bar-row .p{text-align:right;font-size:13px}
+.bar-group{font-size:12px;letter-spacing:.12em;color:#9AA0A6;padding:12px 0 4px;border-top:1px solid #22262B;margin-top:6px}
+.bar-group:first-child{border-top:0;margin-top:0;padding-top:0}
+
+/* region tables */
+.region{margin-top:48px;scroll-margin-top:24px}
+.region h3{margin:0 0 4px;font-size:24px;font-weight:900;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.region h3 small{font-size:14px;font-weight:500}
+.tbl-wrap{overflow-x:auto;border:1px solid #2A2F35;margin-top:14px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:720px}
+th,td{padding:14px 16px;border-bottom:1px solid #22262B;text-align:right;white-space:nowrap}
+th{background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+th:nth-child(-n+3),td:nth-child(-n+3){text-align:left}
+tbody tr:last-child td{border-bottom:0}
+td .nm{font-weight:700;font-size:15px;color:#E8E6E1;display:flex;align-items:center;gap:8px}
+td .tk{font-size:12px;color:#9AA0A6;margin-top:3px}
+.nm-link{color:#E8E6E1;text-decoration:none;border-bottom:1px solid #4A5058}.nm-link:hover{color:#FF8A47;border-color:#FF8A47}
+.bar-row a.n{text-decoration:none}.bar-row a.n:hover{color:#FF8A47}
+.chip{display:inline-flex;align-items:center;border:1px solid #3A3F46;color:#C9CDD2;font-size:14px;min-height:40px;padding:0 14px;text-decoration:none}
+.chip:hover{border-color:#FF6A1A;color:#E8E6E1}
+.chip[aria-current="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+.trend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.tcard{border:1px solid #2A2F35;background:#15181B;padding:18px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit}
+.tcard:hover,.tcard:focus-visible{border-color:#FF6A1A;outline:none}
+.tcard .t1{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.tcard .t1 b{font-size:17px}
+.tcard svg{display:block;width:100%;height:80px}
+.tcard .t2{display:flex;justify-content:space-between;font-size:13px;color:#9AA0A6}
+.lead{font-size:11px;border:1px solid #FF6A1A;color:#FFB07F;padding:1px 6px;font-weight:500;letter-spacing:.04em}
+.stale{font-size:11px;border:1px solid #6B5A2E;color:#D9B66A;padding:1px 6px;margin-left:6px}
+/* heatmap */
+.hm{display:flex;flex-direction:column;gap:6px}
+.hm-row{display:flex;align-items:stretch;gap:6px}
+.hm-row .rg{flex:0 0 72px;display:flex;align-items:center;font-size:14px;font-weight:700;color:#C9CDD2;text-decoration:none}
+.hm-row .rg:hover{color:#FF8A47}
+.hm-row .tiles{flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.hm-tile{padding:10px 12px;min-height:68px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(255,255,255,.06);text-decoration:none;color:inherit}
+.hm-tile:hover,.hm-tile:focus-visible{outline:2px solid #E8E6E1;outline-offset:-2px}
+.hm-tile .t-name{font-size:13px;font-weight:700;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hm-tile .t-tk{font-size:11px;opacity:.75;margin-top:2px}
+.hm-tile .t-pct{font-size:16px;font-weight:600;margin-top:6px}
+.hm-legend{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:12px;color:#9AA0A6}
+.hm-legend .grad{flex:1;max-width:360px;height:10px;background:linear-gradient(to right,#5E8DB8,#22262B,#FF6A1A)}
+@media (max-width:640px){.hm-row{flex-direction:column;gap:4px}.hm-row .rg{flex:none;margin-top:6px}.hm-tile{padding:8px;min-height:60px}.hm-tile .t-name{font-size:12px}.hm-tile .t-pct{font-size:14px}}
+@media (max-width:640px){.wrap{padding:0 16px}.bar-row{grid-template-columns:96px minmax(0,1fr) 60px;gap:8px}}
+.filters{margin-top:28px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.search{flex:0 1 340px;box-sizing:border-box;background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;min-height:44px;padding:0 12px}
+.search:focus{outline:2px solid #FF6A1A;outline-offset:-1px}
+.tcard .meta{font-size:12px;color:#9AA0A6}
+.tcard .px{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.tcard .px b{font-size:24px;font-weight:600}
+@media (max-width:640px){.search{flex:1 1 100%}}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<a href="worldsteel.html" style="color:#C9CDD2;text-decoration:none;padding:12px">世界鋼鐵數據</a>
+<a href="archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="trends.html" style="color:#C9CDD2;text-decoration:none;padding:12px">關鍵字熱度</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="./#daily" style="text-decoration:none">每日速報</a> <span aria-hidden="true">›</span> 原料與鋼價</nav>
+<p id="eyebrow" class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">RAW MATERIALS &amp; STEEL FUTURES</p>
+<h1 id="page-h" style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">原料與鋼價</h1>
+<p id="intro" style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:46em">首頁看板五項期貨自 2026 年 1 月起的每日價格紀錄：鐵礦砂、鐵礦石、焦煤、廢鋼與熱軋卷板。點選品項可查看完整走勢、區間統計與每日明細。</p>
+<p id="updated" style="margin:16px 0 0;font-size:14px;color:#C9CDD2">資料更新：—</p>
+
+<div class="filters">
+<nav id="group-nav" aria-label="分類篩選" style="display:flex;gap:8px;flex-wrap:wrap"></nav>
+<label for="q" style="position:absolute;left:-9999px">搜尋品項</label>
+<input id="q" class="search" type="search" placeholder="搜尋品項或交易所，例如：鐵礦、SGX、熱軋">
+</div>
+
+<section aria-labelledby="trend-h" style="margin-top:40px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="trend-h" style="margin:0;font-size:20px;font-weight:900">今年以來走勢</h2>
+<span class="lbl">YEAR TO DATE</span>
+</div>
+<div id="trends" class="trend-grid"><p style="margin:0;color:#9AA0A6">載入中…</p></div>
+<p style="margin:10px 0 0;font-size:13px;color:#9AA0A6">點選卡片可看完整走勢圖與每日明細。</p>
+</section>
+
+<section aria-labelledby="detail-h" style="margin-top:56px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
+<h2 id="detail-h" style="margin:0;font-size:20px;font-weight:900">品項明細</h2>
+<span class="lbl">DETAIL</span>
+</div>
+<div class="tbl-wrap">
+<table>
+<caption style="position:absolute;left:-9999px">原料與鋼價品項明細</caption>
+<thead><tr><th scope="col">品項</th><th scope="col">交易所</th><th scope="col">最新價</th><th scope="col">漲跌</th><th scope="col">漲跌幅</th><th scope="col">今年以來</th><th scope="col">今年高 / 低</th><th scope="col">交易日</th></tr></thead>
+<tbody id="rows"></tbody>
+</table>
+</div>
+<p id="none" hidden style="margin:16px 0 0;color:#9AA0A6">沒有符合條件的品項。</p>
+</section>
+
+<p style="margin:56px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6">註：SGX 鐵礦砂取每日結算價，近月合約每月換月時價格會出現跳動；大連、上海期貨取主力連續合約收盤價，主力換月時也可能跳動；LME 廢鋼因交易所不開放程式讀取歷史資料，自 2026-10-02 起依本站每日看板逐日累積。中國交易所遇國定假日休市。內容僅供參考，不構成投資建議。</p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+
+<script>
+(function () {
+  var GROUPS = [['全部品項', ''], ['原料', 'raw'], ['鋼材', 'steel']];
+  var GNAME = { raw: '原料', steel: '鋼材' };
+  var DATA = [], IDX = null;
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function isNum(v) { return typeof v === 'number' && isFinite(v); }
+  function dir(p) { return !isNum(p) ? 'flat' : p > 0 ? 'up' : p < 0 ? 'down' : 'flat'; }
+  function pct(p) { return isNum(p) ? (p > 0 ? '▲ ' : p < 0 ? '▼ ' : '— ') + Math.abs(p).toFixed(2) + '%' : '—'; }
+  // USD 計價取兩位小數；CNY 計價最多一位小數
+  function num(v, u, signed) {
+    if (!isNum(v)) return '—';
+    var usd = /^USD/.test(u || '');
+    var s = Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: usd ? 2 : 0, maximumFractionDigits: usd ? 2 : 1 });
+    return signed ? (v > 0 ? '+' : v < 0 ? '−' : '') + s : s;
+  }
+  function dot(iso) { return iso ? iso.replace(/-/g, '.') : '—'; }
+
+  fetch('data/futures/index.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (idx) {
+      IDX = idx;
+      return Promise.all(idx.items.map(function (it) {
+        return fetch('data/futures/' + it.key + '.json?ts=' + Date.now(), { cache: 'no-store' })
+          .then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+          .then(function (h) { return summarize(it, h); });
+      }));
+    })
+    .then(function (list) { DATA = list; apply(); })
+    .catch(function () { $('trends').textContent = '價格資料暫時無法載入，請稍後再試。'; });
+
+  function summarize(it, h) {
+    var pts = (h && h.points) || [];
+    var o = Object.assign({}, it, { pts: pts, updated: h && h.updated });
+    if (pts.length) {
+      o.price = pts[pts.length - 1][1]; o.asof = pts[pts.length - 1][0];
+      if (pts.length > 1) { o.change = o.price - pts[pts.length - 2][1]; o.change_pct = o.change / pts[pts.length - 2][1] * 100; }
+      var vals = pts.map(function (p) { return p[1]; });
+      o.hi = Math.max.apply(null, vals); o.lo = Math.min.apply(null, vals);
+      o.ytd = pts.length > 1 ? (o.price - pts[0][1]) / pts[0][1] * 100 : null;
+    }
+    return o;
+  }
+
+  window.addEventListener('hashchange', apply);
+  $('q').addEventListener('input', apply);
+
+  function apply() {
+    var g = location.hash.slice(1); if (!GNAME[g]) g = '';
+    var q = $('q').value.trim().toLowerCase();
+    var nav = $('group-nav'); nav.textContent = '';
+    GROUPS.forEach(function (x) {
+      var a = el('a', 'chip', x[0]); a.href = x[1] ? '#' + x[1] : 'futures.html';
+      if (g === x[1]) a.setAttribute('aria-current', 'true');
+      if (!x[1]) a.addEventListener('click', function (e) { e.preventDefault(); history.pushState(null, '', 'futures.html'); apply(); });
+      nav.appendChild(a);
+    });
+    var list = DATA.filter(function (it) {
+      if (g && it.group !== GNAME[g]) return false;
+      if (!q) return true;
+      return [it.name, it.contract, it.exchange, it.unit].join(' ').toLowerCase().indexOf(q) >= 0;
+    });
+    $('page-h').textContent = g ? GNAME[g] + '價格' : '原料與鋼價';
+    document.title = (g ? GNAME[g] + '價格' : '原料與鋼價') + '歷史紀錄 · 鋼鐵潮流 Steel Trending';
+    var newest = DATA.reduce(function (m, it) { return it.updated && it.updated > m ? it.updated : m; }, '');
+    $('updated').textContent = '資料更新：' + (newest ? dot(newest.slice(0, 10)) + ' ' + newest.slice(11, 16) + '（台北）' : '—');
+
+    var box = $('trends'); box.textContent = '';
+    list.forEach(function (it) {
+      var a = el('a', 'tcard'); a.href = 'future.html?k=' + encodeURIComponent(it.key);
+      var t1 = el('div', 't1');
+      t1.appendChild(el('b', null, it.name));
+      t1.appendChild(el('span', 'mono ' + dir(it.ytd), isNum(it.ytd) ? '今年 ' + pct(it.ytd) : '累積中'));
+      a.appendChild(t1);
+      a.appendChild(el('span', 'meta', it.contract));
+      var px = el('div', 'px');
+      px.appendChild(el('b', 'mono', num(it.price, it.unit)));
+      px.appendChild(el('span', 'mono flat', it.unit));
+      px.appendChild(el('span', 'mono ' + dir(it.change_pct), pct(it.change_pct)));
+      a.appendChild(px);
+      var sv = el('div'); sv.style.height = '80px'; a.appendChild(sv);
+      if (it.pts.length > 1) sv.appendChild(spark(it.pts.map(function (p) { return p[1]; }), it.ytd >= 0 ? '#FF6A1A' : '#5E8DB8'));
+      else { sv.className = 'flat'; sv.style.fontSize = '13px'; sv.textContent = '歷史資料逐日累積中'; }
+      var t2 = el('div', 't2');
+      t2.appendChild(el('span', 'mono', it.pts.length ? dot(it.pts[0][0]).slice(5) + ' 起 ' + num(it.pts[0][1], it.unit) : ''));
+      t2.appendChild(el('span', 'mono', it.asof ? dot(it.asof).slice(5) : ''));
+      a.appendChild(t2);
+      a.setAttribute('aria-label', it.name + '，最新 ' + num(it.price, it.unit) + ' ' + it.unit + '，點選查看歷史走勢');
+      box.appendChild(a);
+    });
+
+    var tb = $('rows'); tb.textContent = '';
+    list.forEach(function (it) {
+      var r = el('tr');
+      var c1 = el('td');
+      var nm = el('a', 'nm-link', it.name); nm.href = 'future.html?k=' + encodeURIComponent(it.key);
+      var d1 = el('div', 'nm'); d1.appendChild(nm); c1.appendChild(d1);
+      c1.appendChild(el('div', 'tk', it.contract));
+      r.appendChild(c1);
+      r.appendChild(el('td', null, it.exchange));
+      var cp = el('td', 'mono'); cp.appendChild(el('span', null, num(it.price, it.unit))); cp.appendChild(el('span', 'flat', ' ' + it.unit)); r.appendChild(cp);
+      r.appendChild(el('td', 'mono ' + dir(it.change), num(it.change, it.unit, true)));
+      r.appendChild(el('td', 'mono ' + dir(it.change_pct), pct(it.change_pct)));
+      r.appendChild(el('td', 'mono ' + dir(it.ytd), pct(it.ytd)));
+      r.appendChild(el('td', 'mono', num(it.hi, it.unit) + ' / ' + num(it.lo, it.unit)));
+      r.appendChild(el('td', 'mono', it.asof || '—'));
+      tb.appendChild(r);
+    });
+    $('none').hidden = list.length > 0;
+  }
+
+  function spark(vals, color) {
+    var W = 300, H = 80, P = 4;
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals), span = hi - lo || 1;
+    var pts = vals.map(function (v, i) { return [(i / (vals.length - 1)) * W, P + (1 - (v - lo) / span) * (H - 2 * P)]; });
+    var d = pts.map(function (p, i) { return (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join('');
+    var ns = 'http://www.w3.org/2000/svg', svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H); svg.setAttribute('preserveAspectRatio', 'none'); svg.setAttribute('aria-hidden', 'true');
+    var base = document.createElementNS(ns, 'line');
+    base.setAttribute('x1', 0); base.setAttribute('x2', W); base.setAttribute('y1', pts[0][1]); base.setAttribute('y2', pts[0][1]);
+    base.setAttribute('stroke', '#3A3F46'); base.setAttribute('stroke-dasharray', '3 3'); base.setAttribute('vector-effect', 'non-scaling-stroke');
+    var area = document.createElementNS(ns, 'path');
+    area.setAttribute('d', d + 'L' + W + ' ' + H + 'L0 ' + H + 'Z'); area.setAttribute('fill', color); area.setAttribute('fill-opacity', '0.12');
+    var line = document.createElementNS(ns, 'path');
+    line.setAttribute('d', d); line.setAttribute('fill', 'none'); line.setAttribute('stroke', color); line.setAttribute('stroke-width', '2'); line.setAttribute('vector-effect', 'non-scaling-stroke');
+    svg.appendChild(base); svg.appendChild(area); svg.appendChild(line);
+    return svg;
+  }
+})();
+</script>
+<script src="assets/hover.js" defer></script>
+</body>
+</html>
