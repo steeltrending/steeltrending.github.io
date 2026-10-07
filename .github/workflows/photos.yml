@@ -10,6 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 fetch.py
+      - run: if [ -f extra.py ]; then python3 extra.py; fi
       - run: |
           if grep -q '"render"\|"api"' queries.json; then pip install playwright && python3 -m playwright install --with-deps chromium && python3 render.py; fi
       - run: |
