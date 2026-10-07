@@ -29,7 +29,7 @@ def lastmod(path):
 def main():
     urls = []
     for f in sorted(os.listdir(ROOT)):
-        if f.endswith(".html") and f not in SKIP:
+        if f.endswith(".html") and f not in SKIP and not f.startswith("google"):  # google*.html 為 Search Console 驗證檔
             loc = BASE if f == "index.html" else BASE + f
             urls.append((loc, lastmod(f), PRIORITY.get(f, "0.8")))
     try:
