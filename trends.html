@@ -21,18 +21,27 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 .kw{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 .kw input{box-sizing:border-box;background:#0F1113;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;padding:0 12px;min-height:40px;width:150px}
 .kw input:focus{outline:2px solid #FF6A1A;outline-offset:-1px}
-.frame{margin-top:16px;min-height:120px;padding:10px;background:linear-gradient(#2A2F35,#22262B);border:1px solid #3A3F46;border-radius:8px;box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 8px 24px rgba(0,0,0,.35)}
-.frame .bar{display:flex;align-items:center;gap:6px;padding:0 4px 8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#9AA0A6}
-.frame .bar i{width:8px;height:8px;border-radius:50%;background:#4A5058;display:inline-block}
-.frame .bar i:first-child{background:#FF6A1A}
-.frame .bar span{margin-left:6px}
-.frame .mat{background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
-.frame iframe{display:block;width:100%;border:0}
-@media (max-width:640px){.frame{padding:6px;border-radius:6px}.frame .bar{padding-bottom:6px}}
-.open{display:none;margin-top:10px;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid #FF6A1A;color:#FFB07F;text-decoration:none;font-size:15px;font-weight:700;background:rgba(255,106,26,.08)}
-.open:hover{background:rgba(255,106,26,.16);color:#FFD2B8}
-.open-tip{display:none;font-size:12px;color:#9AA0A6;margin:6px 2px 0;line-height:1.6}
-@media (max-width:760px),(hover:none){.open{display:flex}.open-tip{display:block}}
+.chartbox{position:relative;height:380px;margin-top:16px}
+@media (max-width:640px){.chartbox{height:300px}}
+.keys{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:14px}
+.key{display:flex;flex-direction:column;gap:2px;border:1px solid #2A2F35;background:#0F1113;padding:10px 12px;text-align:left;font:inherit;color:#C9CDD2;cursor:pointer}
+.key[aria-pressed="false"]{opacity:.4}
+.key b{display:flex;align-items:center;gap:8px;font-size:15px;color:#E8E6E1}
+.key b i{width:12px;height:3px;display:inline-block;border-radius:2px}
+.key span{font-size:12px;color:#9AA0A6}
+.key span em{font-style:normal;font-family:'IBM Plex Mono',monospace;color:#E8E6E1}
+.empty{margin-top:16px;padding:40px 16px;border:1px dashed #3A3F46;text-align:center;color:#9AA0A6;font-size:14px;line-height:1.8}
+.gbar{display:grid;grid-template-columns:6.5em 1fr 2.6em;gap:10px;align-items:center;font-size:14px;margin:0 0 7px;color:#C9CDD2}
+.gbar .tr{height:10px;background:#1C2024}.gbar .fi{display:block;height:10px;background:#FF6A1A}
+.gbar .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1}
+.gbar .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tabs{display:flex;gap:6px;margin:12px 0}
+.rq{margin:0;padding:0;list-style:none;counter-reset:r}
+.rq li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #22262B;font-size:14px;counter-increment:r}
+.rq li::before{content:counter(r,decimal-leading-zero);font-family:'IBM Plex Mono',monospace;color:#FF6A1A;font-size:12px;width:2em;flex:none;padding-top:2px}
+.rq li a{flex:1;color:#E8E6E1;text-decoration:none}.rq li a:hover{color:#FF8A47}
+.rq li span{font-family:'IBM Plex Mono',monospace;color:#9AA0A6;font-size:12px;white-space:nowrap}
+.kwhint{font-size:12px;color:#9AA0A6;margin:6px 0 0}
 .note{font-size:13px;line-height:1.7;color:#9AA0A6;margin:12px 0 0}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media (max-width:760px){.grid2{grid-template-columns:1fr}}
@@ -64,7 +73,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 <main class="wrap" style="padding-top:64px;padding-bottom:96px">
 <p class="mono" style="margin:0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">SEARCH TRENDS</p>
 <h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">關鍵字熱度</h1>
-<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:46em">用 Google 搜尋趨勢看市場關注什麼：鋼價、鋼筋、廢鋼的搜尋熱度，往往比統計數據更早反映需求與情緒的變化。圖表由 Google Trends 即時提供，數值為相對熱度（期間內最高點 = 100）。</p>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:46em">用 Google 搜尋趨勢看市場關注什麼：鋼價、鋼筋、廢鋼的搜尋熱度，往往比統計數據更早反映需求與情緒的變化。數據取自 Google Trends，每天更新；數值為相對熱度（同一張圖、同一期間內的最高點 = 100）。</p>
 
 <section aria-labelledby="t1" style="margin-top:44px">
 <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px">
@@ -74,11 +83,8 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 <div class="card">
 <div class="row" role="group" aria-label="主題" id="presets"></div>
 <div class="row" style="margin-top:10px;gap:16px"><div class="row" role="group" aria-label="地區" id="geos"></div><div class="row" role="group" aria-label="期間" id="periods"></div></div>
-<form class="kw" id="kwform" aria-label="自訂關鍵字">
-<input name="k" aria-label="關鍵字 1"><input name="k" aria-label="關鍵字 2"><input name="k" aria-label="關鍵字 3"><input name="k" aria-label="關鍵字 4"><input name="k" aria-label="關鍵字 5">
-<button class="chip" type="submit">比較</button>
-</form>
-<div class="frame" id="ts"></div>
+<div id="ts-wrap"><div class="chartbox"><canvas id="ts" aria-label="搜尋熱度趨勢圖" role="img"></canvas></div></div>
+<div class="keys" id="keys"></div>
 <p class="note" id="ts-note"></p>
 </div>
 </section>
@@ -89,13 +95,29 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 <span class="lbl">BY REGION · RELATED</span>
 </div>
 <div class="grid2">
-<div class="card"><p style="margin:0;font-weight:700" id="geo-h">地區熱度</p><div class="frame" id="geo"></div></div>
-<div class="card"><p style="margin:0;font-weight:700" id="rq-h">相關搜尋</p><div class="frame" id="rq"></div></div>
+<div class="card"><p style="margin:0 0 12px;font-weight:700" id="geo-h">地區熱度</p><div id="geo"></div></div>
+<div class="card"><p style="margin:0;font-weight:700" id="rq-h">相關搜尋</p>
+<div class="tabs" role="group" aria-label="相關搜尋類型"><button class="chip" type="button" data-r="top" aria-pressed="true">熱門</button><button class="chip" type="button" data-r="rising" aria-pressed="false">竄升</button></div>
+<ol class="rq" id="rq"></ol></div>
 </div>
-<p class="note">地區熱度與相關搜尋以目前比較組的第一個關鍵字為準。</p>
+<p class="note">地區熱度與相關搜尋以目前主題的第一個關鍵字為準；「竄升」為搜尋量增幅，「飆升」表示增幅超過 5,000%。</p>
 </section>
 
-<p style="margin:56px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6">註：資料來源為 Google Trends。熱度為相對指數，不代表實際搜尋次數；搜尋量過低的關鍵字可能顯示「資料不足」。若圖表未顯示，可能是瀏覽器擋下第三方內容或 Google 暫時限制，可點「在 Google Trends 開啟」查看。內容僅供參考。</p>
+<section aria-labelledby="t3" style="margin-top:44px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="t3" style="margin:0;font-size:20px;font-weight:900">自訂關鍵字</h2>
+<span class="lbl">YOUR OWN COMPARISON</span>
+</div>
+<div class="card">
+<p style="margin:0;font-size:14px;line-height:1.7;color:#C9CDD2">想比較其他關鍵字？輸入最多 5 個，會在 Google Trends 開新分頁查看（地區與期間沿用上方選擇）。</p>
+<form class="kw" id="kwform" aria-label="自訂關鍵字">
+<input name="k" aria-label="關鍵字 1"><input name="k" aria-label="關鍵字 2"><input name="k" aria-label="關鍵字 3"><input name="k" aria-label="關鍵字 4"><input name="k" aria-label="關鍵字 5">
+<button class="chip" type="submit">在 Google Trends 比較 ↗</button>
+</form>
+</div>
+</section>
+
+<p id="src" style="margin:56px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6"></p>
 </main>
 <footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
 <div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
@@ -103,80 +125,158 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 <span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
 </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
 (function () {
-  var PRESETS = [
-    { name: '台灣鋼鐵', geo: 'TW', kw: ['鋼價', '鋼筋', '中鋼', '廢鋼', '鐵礦砂'] },
-    { name: '台灣營建與房市', geo: 'TW', kw: ['鋼筋', '房價', '建照', '營建', '缺工'] },
-    { name: '台灣下游產業', geo: 'TW', kw: ['電動車', '資料中心', '離岸風電', '造船', '工具機'] },
-    { name: '全球原料（英文）', geo: '', kw: ['steel price', 'iron ore', 'scrap metal', 'coking coal'] },
-    { name: '全球鋼鐵議題（英文）', geo: '', kw: ['green steel', 'steel tariffs', 'CBAM', 'hydrogen steel'] }
-  ];
+  // 資料由 tools/fetch_trends.py 每天自 Google Trends 抓取（Google 會擋網站內嵌的趨勢圖表，改為自行繪圖）
+  var COLORS = ['#FF6A1A', '#8DB4D6', '#E8C547', '#7FC8A9', '#C79BD8'];
   var PERIODS = [['today 3-m', '3 個月'], ['today 12-m', '12 個月'], ['today 5-y', '5 年']];
-  var cur = { p: 0, time: 'today 12-m', kw: PRESETS[0].kw.slice(), geo: 'TW' };
+  var D = null, chart = null, rqMode = 'top', hidden = {};
+  var cur = { p: 0, time: 'today 12-m', geo: 'TW' };
   function $(id) { return document.getElementById(id); }
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
-
-  function embedURL(type, kws) {
-    var req = { comparisonItem: kws.map(function (k) { return { keyword: k, geo: cur.geo, time: cur.time }; }), category: 0, property: '' };
-    var q = 'date=' + encodeURIComponent(cur.time) + (cur.geo ? '&geo=' + cur.geo : '') + '&q=' + encodeURIComponent(kws.join(','));
-    return 'https://trends.google.com/trends/embed/explore/' + type + '?req=' + encodeURIComponent(JSON.stringify(req)) + '&tz=-480&hl=zh-TW&eq=' + encodeURIComponent(q);
-  }
+  function preset() { return D.presets[cur.p]; }
+  function setKey() { return preset().id + '|' + (cur.geo || 'WW') + '|' + cur.time; }
   function exploreURL(kws) {
     return 'https://trends.google.com/trends/explore?date=' + encodeURIComponent(cur.time) + (cur.geo ? '&geo=' + cur.geo : '') + '&q=' + encodeURIComponent(kws.join(',')) + '&hl=zh-TW';
   }
-  function frame(box, src, h, title, openURL) {
-    box.textContent = '';
-    var bar = el('div', 'bar'); bar.setAttribute('aria-hidden', 'true');
-    bar.appendChild(el('i')); bar.appendChild(el('i')); bar.appendChild(el('i'));
-    bar.appendChild(el('span', null, 'GOOGLE TRENDS'));
-    var mat = el('div', 'mat');
-    var f = document.createElement('iframe');
-    f.src = src; f.height = h; f.loading = 'lazy'; f.title = title; f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
-    mat.appendChild(f); box.appendChild(bar); box.appendChild(mat);
-    var a = el('a', 'open', '圖表沒出現？在 Google Trends 開啟 ↗'); a.href = openURL; a.target = '_blank'; a.rel = 'noopener';
-    box.appendChild(a);
-    box.appendChild(el('p', 'open-tip', '部分手機瀏覽器（如 iPhone Safari、LINE／Facebook 內建瀏覽器）會擋下 Google 嵌入圖表，可點上方按鈕直接查看。'));
+  function dot(d) { return d.replace(/-/g, '.'); }
+  function fmtDate(iso) { return iso ? iso.slice(0, 10).replace(/-/g, '.') : '—'; }
+
+  function chips() {
+    D.presets.forEach(function (p, i) {
+      var b = el('button', 'chip', p.name); b.type = 'button';
+      b.addEventListener('click', function () { cur.p = i; cur.geo = p.geo; hidden = {}; render(); });
+      $('presets').appendChild(b);
+    });
+    [['TW', '台灣'], ['', '全球']].forEach(function (g) {
+      var b = el('button', 'chip', g[1]); b.type = 'button'; b.dataset.g = g[0];
+      b.addEventListener('click', function () { cur.geo = g[0]; render(); });
+      $('geos').appendChild(b);
+    });
+    PERIODS.forEach(function (p) {
+      var b = el('button', 'chip', p[1]); b.type = 'button'; b.dataset.t = p[0];
+      b.addEventListener('click', function () { cur.time = p[0]; render(); });
+      $('periods').appendChild(b);
+    });
+    [].forEach.call(document.querySelectorAll('.tabs button'), function (b) {
+      b.addEventListener('click', function () { rqMode = b.dataset.r; related(D.sets[setKey()]); });
+    });
+    $('kwform').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var kws = [].map.call(this.querySelectorAll('input'), function (i) { return i.value.trim(); }).filter(Boolean).slice(0, 5);
+      if (kws.length) window.open(exploreURL(kws), '_blank', 'noopener');
+    });
   }
+
   function render() {
     [].forEach.call($('presets').children, function (b, i) { b.setAttribute('aria-pressed', i === cur.p ? 'true' : 'false'); });
     [].forEach.call($('periods').children, function (b) { b.setAttribute('aria-pressed', b.dataset.t === cur.time ? 'true' : 'false'); });
     [].forEach.call($('geos').children, function (b) { b.setAttribute('aria-pressed', b.dataset.g === cur.geo ? 'true' : 'false'); });
+    var s = D.sets[setKey()], kw = preset().kw;
     var ins = $('kwform').querySelectorAll('input');
-    [].forEach.call(ins, function (inp, i) { inp.value = cur.kw[i] || ''; });
-    var area = cur.geo === 'TW' ? '台灣' : '全球';
-    var per = PERIODS.filter(function (p) { return p[0] === cur.time; })[0][1];
-    frame($('ts'), embedURL('TIMESERIES', cur.kw), 420, '搜尋熱度趨勢：' + cur.kw.join('、'), exploreURL(cur.kw));
-    var n = $('ts-note'); n.textContent = area + '・過去 ' + per + '・' + cur.kw.join('、') + '　';
-    var a = el('a', null, '在 Google Trends 開啟 ↗'); a.href = exploreURL(cur.kw); a.target = '_blank'; a.rel = 'noopener'; n.appendChild(a);
-    var first = [cur.kw[0]];
-    $('geo-h').textContent = '地區熱度：' + cur.kw[0] + '（' + area + '）';
-    $('rq-h').textContent = '相關搜尋：' + cur.kw[0];
-    frame($('geo'), embedURL('GEO_MAP', first), 420, '地區熱度：' + cur.kw[0], exploreURL(first));
-    frame($('rq'), embedURL('RELATED_QUERIES', first), 420, '相關搜尋：' + cur.kw[0], exploreURL(first));
+    [].forEach.call(ins, function (inp, i) { if (!inp.dataset.touched) inp.value = kw[i] || ''; });
+    timeseries(s, kw); geomap(s, kw); related(s);
   }
-  PRESETS.forEach(function (p, i) {
-    var b = el('button', 'chip', p.name); b.type = 'button';
-    b.addEventListener('click', function () { cur.p = i; cur.kw = p.kw.slice(); cur.geo = p.geo; render(); });
-    $('presets').appendChild(b);
-  });
-  PERIODS.forEach(function (p) {
-    var b = el('button', 'chip', p[1]); b.type = 'button'; b.dataset.t = p[0];
-    b.addEventListener('click', function () { cur.time = p[0]; render(); });
-    $('periods').appendChild(b);
-  });
-  [['TW', '台灣'], ['', '全球']].forEach(function (g) {
-    var b = el('button', 'chip', g[1]); b.type = 'button'; b.dataset.g = g[0];
-    b.addEventListener('click', function () { cur.geo = g[0]; render(); });
-    $('geos').appendChild(b);
-  });
-  $('kwform').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var kws = [].map.call(this.querySelectorAll('input'), function (i) { return i.value.trim(); }).filter(Boolean).slice(0, 5);
-    if (!kws.length) return;
-    cur.kw = kws; cur.p = -1; render();
-  });
-  render();
+
+  function noData(box, msg) { box.appendChild(el('div', 'empty', msg)); }
+
+  function timeseries(s, kw) {
+    var wrap = $('ts-wrap'), keys = $('keys'), note = $('ts-note');
+    keys.textContent = ''; note.textContent = '';
+    if (chart) { chart.destroy(); chart = null; }
+    wrap.innerHTML = '<div class="chartbox"><canvas id="ts" role="img" aria-label="搜尋熱度趨勢圖"></canvas></div>';
+    var area = cur.geo === 'TW' ? '台灣' : '全球', per = PERIODS.filter(function (p) { return p[0] === cur.time; })[0][1];
+    if (!s || !s.ts || !s.ts.length) {
+      wrap.textContent = ''; noData(wrap, '這組關鍵字暫時沒有取得資料，可點下方連結在 Google Trends 查看。');
+    } else {
+      var labels = s.ts.map(function (r) { return r[0]; });
+      var partial = s.ts.length && s.ts[s.ts.length - 1][2] === 1;
+      var sets = kw.map(function (k, i) {
+        return {
+          label: k, data: s.ts.map(function (r) { return r[1][i]; }), borderColor: COLORS[i], backgroundColor: COLORS[i],
+          borderWidth: i === 0 ? 2.4 : 1.8, pointRadius: 0, pointHoverRadius: 4, tension: 0.25, spanGaps: true, hidden: !!hidden[k],
+          segment: { borderDash: function (c) { return partial && c.p1DataIndex === labels.length - 1 ? [4, 4] : undefined; } }
+        };
+      });
+      chart = new Chart($('ts').getContext('2d'), {
+        type: 'line', data: { labels: labels, datasets: sets },
+        options: {
+          responsive: true, maintainAspectRatio: false, animation: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: '#0B0C0E', borderColor: '#3A3F46', borderWidth: 1, titleColor: '#E8E6E1', bodyColor: '#E8E6E1',
+              titleFont: { family: 'IBM Plex Mono' }, bodyFont: { family: 'Noto Sans TC', size: 13 }, boxWidth: 10, boxHeight: 3,
+              itemSort: function (a, b) { return (b.parsed.y || 0) - (a.parsed.y || 0); },
+              callbacks: {
+                title: function (it) { var i = it[0].dataIndex; return (cur.time === 'today 5-y' || cur.time === 'today 12-m' ? '當週 ' : '') + dot(it[0].label) + (partial && i === labels.length - 1 ? '（未完整）' : ''); },
+                label: function (it) { return ' ' + it.dataset.label + '　' + (it.parsed.y == null ? '—' : it.parsed.y); }
+              }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: '#9AA0A6', maxRotation: 0, autoSkip: true, maxTicksLimit: window.innerWidth < 640 ? 4 : 8,
+              callback: function (v) { var l = this.getLabelForValue(v); return cur.time === 'today 5-y' ? l.slice(0, 7).replace('-', '/') : l.slice(2, 10).replace(/-/g, '/'); } } },
+            y: { min: 0, max: 100, position: 'right', grid: { color: '#22262B' }, ticks: { color: '#9AA0A6', stepSize: 25 } }
+          }
+        }
+      });
+      // 各關鍵字摘要卡：可點選隱藏／顯示線條
+      kw.forEach(function (k, i) {
+        var v = s.ts.map(function (r) { return r[1][i]; }).filter(function (x) { return x != null; });
+        var full = s.ts.filter(function (r) { return !r[2]; }), last = full.length ? full[full.length - 1][1][i] : null;
+        var mean = v.length ? v.reduce(function (a, b) { return a + b; }, 0) / v.length : null, avg = mean == null ? null : mean > 0 && mean < 0.5 ? '<1' : Math.round(mean);
+        var pk = -1, pd = '';
+        s.ts.forEach(function (r) { if (r[1][i] != null && r[1][i] > pk) { pk = r[1][i]; pd = r[0]; } });
+        var b = el('button', 'key'); b.type = 'button'; b.setAttribute('aria-pressed', hidden[k] ? 'false' : 'true');
+        var t = el('b'); var sw = el('i'); sw.style.background = COLORS[i]; t.appendChild(sw); t.appendChild(document.createTextNode(k)); b.appendChild(t);
+        var sp = el('span'); sp.innerHTML = '';
+        sp.appendChild(document.createTextNode('平均 ')); sp.appendChild(el('em', null, avg == null ? '—' : avg));
+        sp.appendChild(document.createTextNode('・最新 ')); sp.appendChild(el('em', null, last == null ? '—' : last === 0 && mean > 0 ? '<1' : last));
+        b.appendChild(sp);
+        b.appendChild(el('span', null, pk > 0 ? '高峰 ' + dot(pd) + (cur.time === 'today 3-m' ? '' : ' 當週') : '期間內搜尋量不足'));
+        b.addEventListener('click', function () { hidden[k] = !hidden[k]; b.setAttribute('aria-pressed', hidden[k] ? 'false' : 'true'); chart.data.datasets[i].hidden = hidden[k]; chart.update(); });
+        keys.appendChild(b);
+      });
+    }
+    note.appendChild(document.createTextNode(area + '・過去 ' + per + '・' + kw.join('、') + '・資料日期 ' + fmtDate(s && s.fetched) +
+      (s && s.ts && s.ts.length && s.ts[s.ts.length - 1][2] ? '・最後一段虛線為尚未完整的當期' : '') + '　'));
+    var a = el('a', null, '在 Google Trends 開啟 ↗'); a.href = exploreURL(kw); a.target = '_blank'; a.rel = 'noopener'; note.appendChild(a);
+  }
+
+  function geomap(s, kw) {
+    var box = $('geo'); box.textContent = '';
+    $('geo-h').textContent = '地區熱度：' + kw[0] + '（' + (cur.geo === 'TW' ? '台灣各縣市' : '全球各國') + '）';
+    var rows = (s && s.geomap) || [];
+    if (!rows.length) { noData(box, '搜尋量不足，暫無地區資料。'); return; }
+    rows.slice(0, 15).forEach(function (r) {
+      var d = el('div', 'gbar'); d.appendChild(el('span', 'nm', r[0]));
+      var tr = el('span', 'tr'), fi = el('span', 'fi'); fi.style.width = r[1] + '%'; tr.appendChild(fi); d.appendChild(tr);
+      d.appendChild(el('span', 'v', r[1])); box.appendChild(d);
+    });
+    if (rows.length > 15) box.appendChild(el('p', 'note', '另有 ' + (rows.length - 15) + ' 個地區，數值以熱度最高的地區 = 100。'));
+    else box.appendChild(el('p', 'note', '數值以熱度最高的地區 = 100。'));
+  }
+
+  function related(s) {
+    [].forEach.call(document.querySelectorAll('.tabs button'), function (b) { b.setAttribute('aria-pressed', b.dataset.r === rqMode ? 'true' : 'false'); });
+    var kw = preset().kw[0], box = $('rq'); box.textContent = '';
+    $('rq-h').textContent = '相關搜尋：' + kw;
+    var rows = (s && s.related && s.related[rqMode]) || [];
+    if (!rows.length) { var li = el('li'); li.style.cssText = 'display:block;color:#9AA0A6'; li.textContent = '搜尋量不足，暫無' + (rqMode === 'top' ? '熱門' : '竄升') + '相關搜尋。'; box.appendChild(li); return; }
+    rows.forEach(function (r) {
+      var li = el('li'), a = el('a', null, r[0]); a.href = exploreURL([r[0]]); a.target = '_blank'; a.rel = 'noopener';
+      li.appendChild(a); li.appendChild(el('span', null, rqMode === 'rising' && r[1] === 'Breakout' ? '飆升' : r[1])); box.appendChild(li);
+    });
+  }
+
+  [].forEach.call(document.querySelectorAll('#kwform input'), function (i) { i.addEventListener('input', function () { i.dataset.touched = '1'; }); });
+  fetch('data/trends.json?ts=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (d) {
+    D = d; chips(); render();
+    $('src').textContent = '註：資料來源為 Google Trends，由鋼鐵潮流每天抓取一次（最近更新 ' + fmtDate(d.updated) + '）。熱度為相對指數，不代表實際搜尋次數；同一張圖內的關鍵字可互相比較，不同主題、地區或期間之間不能直接比較。搜尋量過低的關鍵字會顯示為 0 或資料不足。內容僅供參考。';
+  }).catch(function () { $('ts-wrap').textContent = ''; noData($('ts-wrap'), '熱度資料暫時無法載入，請稍後再試。'); });
 })();
 </script>
 <script src="assets/hover.js" defer></script>
