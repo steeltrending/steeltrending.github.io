@@ -1,10 +1,9 @@
 {"search": [
- "filetype:bitmap residential buildings under construction China",
- "filetype:bitmap Evergrande unfinished buildings",
- "filetype:bitmap Kangbashi apartments",
- "filetype:bitmap high-rise housing construction Shenzhen cranes",
- "filetype:bitmap residential complex Wuhan high-rise",
- "filetype:bitmap 在建 住宅 楼盘",
- "filetype:bitmap Chinese apartment blocks construction tower cranes",
- "filetype:bitmap housing estate China high-rise residential"
-]}
+ "filetype:bitmap Kangbashi",
+ "filetype:bitmap Ordos new town",
+ "filetype:bitmap Evergrande",
+ "filetype:bitmap Chongqing residential",
+ "filetype:bitmap Pudong residential",
+ "filetype:bitmap Shenzhen residential towers"
+],
+"download": {"File:Dalian China Construction-site-01.jpg": "dalian.jpg", "File:Rebar Tying in Beijing.jpg": "rebar.jpg"}}
