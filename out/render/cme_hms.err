@@ -1,0 +1,3 @@
+Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.cmegroup.com/markets/metals/ferrous/hms-80-20-ferrous-scrap-platts.settlements.html
+Call log:
+  - navigating to "https://www.cmegroup.com/markets/metals/ferrous/hms-80-20-ferrous-scrap-platts.settlements.html", waiting until "networkidle"
