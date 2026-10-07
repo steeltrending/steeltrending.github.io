@@ -102,6 +102,14 @@ def rq_rows(d):
     return {"top": pick(0), "rising": pick(1)}
 
 
+def empty(v):
+    if isinstance(v, dict):
+        return not v.get("top") and not v.get("rising")
+    if v and isinstance(v[0], list) and len(v[0]) == 3 and isinstance(v[0][1], list):
+        return not any(x for r in v for x in r[1])
+    return not v
+
+
 def main():
     try:
         old = json.load(open(OUT, encoding="utf-8"))
@@ -124,20 +132,22 @@ def main():
                     for kind, api, kws, fn, field in (("TIMESERIES", "multiline", pr["kw"], ts_rows, "ts"),
                                                       ("GEO_MAP", "comparedgeo", pr["kw"][:1], geo_rows, "geomap"),
                                                       ("RELATED_QUERIES", "relatedsearches", pr["kw"][:1], rq_rows, "related")):
-                        d = None
+                        val, prev = None, oldsets.get(key, {}).get(field)
                         for attempt in range(3):
                             try:
                                 st, d = grab(page, kind, kws, geo, per, api)
                             except Exception as e:  # noqa: BLE001
                                 st, d = "ERR " + str(e)[:80], None
-                            if d:
+                            val = fn(d) if d else None
+                            # Google 偶爾回傳空的清單；前一次有資料時視為失敗重試
+                            if val is not None and not (empty(val) and prev and not empty(prev)):
                                 break
-                            log("  %s %s 第 %d 次失敗（%s）" % (key, kind, attempt + 1, st))
+                            log("  %s %s 第 %d 次失敗（%s）" % (key, kind, attempt + 1, st if not d else "空資料"))
                             time.sleep(15 * (attempt + 1))
-                        if d:
-                            rec[field] = fn(d); parts += 1
-                        elif field in oldsets.get(key, {}):
-                            rec[field] = oldsets[key][field]; rec.setdefault("stale", []).append(field)
+                        if val is not None and not (empty(val) and prev and not empty(prev)):
+                            rec[field] = val; parts += 1
+                        elif prev is not None:
+                            rec[field] = prev; rec.setdefault("stale", []).append(field)
                         time.sleep(random.uniform(2.5, 4.5))
                     rec["fetched"] = dt.datetime.now(TPE).replace(microsecond=0).isoformat() if parts == 3 else oldsets.get(key, {}).get("fetched")
                     sets[key] = rec
