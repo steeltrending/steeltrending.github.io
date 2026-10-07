@@ -1,0 +1,178 @@
+{
+ "direct": {
+  "err": "<HTTPError 429: 'unknown'>",
+  "body": "<html lang=\"zh-TW\" dir=ltr><meta charset=utf-8><meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\"><title>Error 429 (Too Many Requests)!!1</title><style nonce=\"ZTjzDwM3fvdxi6_DOFqWiQ\">*{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{color:#222;text-align:unset;margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px;}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}pre{white-space:pre-wrap;}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}</style><main id=\"af-error-container\" role=\"main\"><a href=//www.google.com><span id=logo aria-label=Google role=img></span></a><p><b>429.</b> <ins>That’s an error.</ins><p>We're sorry, but you have sent too many requests to us recently. Please try again later. <ins>That’s all we know.</ins></main>"
+ },
+ "net": [
+  [
+   200,
+   "stylesheet",
+   "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+  ],
+  [
+   429,
+   "document",
+   "https://trends.google.com/trends/embed/explore/TIMESERIES?req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22%E9%8B%BC%E5%83%B9%22%2C%22geo%22%3A%22TW%22%2C%22time%22%3A%22today%2012-m%22%7D%2C%7B%22keyword%22%3A%22%E9%8B%BC%E7%AD%8B%22%2C%22geo%22%3A%22TW%22%2C%22time%22%3A%22today%2012-m%22%7D"
+  ],
+  [
+   429,
+   "document",
+   "https://trends.google.com/trends/embed/explore/RELATED_QUERIES?req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22%E9%8B%BC%E5%83%B9%22%2C%22geo%22%3A%22TW%22%2C%22time%22%3A%22today%2012-m%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D&tz=-480&hl=zh-TW&eq=date%3Dtoday%252012-m%26geo"
+  ],
+  [
+   429,
+   "document",
+   "https://trends.google.com/trends/embed/explore/GEO_MAP?req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22%E9%8B%BC%E5%83%B9%22%2C%22geo%22%3A%22TW%22%2C%22time%22%3A%22today%2012-m%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D&tz=-480&hl=zh-TW&eq=date%3Dtoday%252012-m%26geo%3DTW%26"
+  ]
+ ],
+ "console": [
+  "error: Failed to load resource: the server responded with a status of 429 ()",
+  "error: Refused to display 'https://trends.google.com/' in a frame because it set 'X-Frame-Options' to 'sameorigin'.",
+  "error: Failed to load resource: the server responded with a status of 429 ()",
+  "error: Refused to display 'https://trends.google.com/' in a frame because it set 'X-Frame-Options' to 'sameorigin'.",
+  "error: Failed to load resource: the server responded with a status of 429 ()",
+  "error: Refused to display 'https://trends.google.com/' in a frame because it set 'X-Frame-Options' to 'sameorigin'."
+ ],
+ "frames": [
+  {
+   "url": "chrome-error://chromewebdata/",
+   "text": ""
+  },
+  {
+   "url": "chrome-error://chromewebdata/",
+   "text": ""
+  },
+  {
+   "url": "chrome-error://chromewebdata/",
+   "text": ""
+  }
+ ],
+ "embed_net": [
+  [
+   200,
+   "document",
+   "https://trends.google.com/trends/embed/explore/TIMESERIES?req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22%E9%8B%BC%E5%83%B9%22%2C%22geo%22%3A%22TW%22%2C%22time%22%3A%22today%2012-m%22%7D%5D%2C"
+  ],
+  [
+   200,
+   "stylesheet",
+   "https://fonts.googleapis.com/css?family=Roboto:100%2C300%2C400%2C500"
+  ],
+  [
+   200,
+   "stylesheet",
+   "https://fonts.googleapis.com/css?family=Google+Sans+Display:100%2C300%2C400%2C500"
+  ],
+  [
+   200,
+   "stylesheet",
+   "https://fonts.googleapis.com/icon?family=Material+Icons+Extended"
+  ],
+  [
+   200,
+   "stylesheet",
+   "https://ssl.gstatic.com/trends_nrtr/4564_RC01/embed_fe_line_chart_v1_css_bin.css"
+  ],
+  [
+   200,
+   "stylesheet",
+   "https://fonts.googleapis.com/css?family=Heebo:100%2C300%2C400%2C500"
+  ],
+  [
+   200,
+   "stylesheet",
+   "https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+  ],
+  [
+   200,
+   "script",
+   "https://www.gstatic.com/charts/loader.js"
+  ],
+  [
+   200,
+   "script",
+   "https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc4/angular-material.min.js"
+  ],
+  [
+   200,
+   "script",
+   "https://ssl.gstatic.com/trends_nrtr/4564_RC01/third_parties_min.js"
+  ],
+  [
+   200,
+   "script",
+   "https://ssl.gstatic.com/trends_nrtr/4564_RC01/embed_fe_line_chart_v1_js_bin__zh_tw.js"
+  ],
+  [
+   200,
+   "stylesheet",
+   "https://fonts.googleapis.com/css?family=Roboto+Mono:500"
+  ],
+  [
+   200,
+   "font",
+   "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2"
+  ],
+  [
+   200,
+   "script",
+   "https://ssl.google-analytics.com/ga.js"
+  ],
+  [
+   200,
+   "image",
+   "https://ssl.google-analytics.com/__utm.gif?utmwv=5.7.2&utms=2&utmn=421800478&utmhn=trends.google.com&utmt=event&utme=5(Embed*fe_line_chart_v1)&utmcs=UTF-8&utmsr=1400x1000&utmvp=1400x1000&utmsc=24-bit&"
+  ],
+  [
+   200,
+   "image",
+   "https://ssl.google-analytics.com/r/__utm.gif?utmwv=5.7.2&utms=1&utmn=1121050023&utmhn=trends.google.com&utmcs=UTF-8&utmsr=1400x1000&utmvp=1400x1000&utmsc=24-bit&utmul=zh-tw&utmje=0&utmfl=-&utmdt=Googl"
+  ],
+  [
+   200,
+   "xhr",
+   "https://trends.google.com/trends/api/widgetdata/multiline?req=%7B%22time%22:%222025-10-07+2026-10-07%22,%22resolution%22:%22WEEK%22,%22locale%22:%22zh-TW%22,%22comparisonItem%22:%5B%7B%22geo%22:%7B%22"
+  ],
+  [
+   200,
+   "image",
+   "https://www.gstatic.com/images/branding/lockups/1x/lockup_trends_color_142x24dp.png"
+  ],
+  [
+   200,
+   "script",
+   "https://www.gstatic.com/charts/pre-45/loader.js"
+  ],
+  [
+   200,
+   "stylesheet",
+   "https://www.gstatic.com/charts/44/css/core/tooltip.css"
+  ],
+  [
+   200,
+   "stylesheet",
+   "https://www.gstatic.com/charts/44/css/util/util.css"
+  ],
+  [
+   200,
+   "script",
+   "https://www.gstatic.com/charts/44/js/jsapi_compiled_format_module.js"
+  ],
+  [
+   200,
+   "script",
+   "https://www.gstatic.com/charts/44/js/jsapi_compiled_corechart_module.js"
+  ],
+  [
+   200,
+   "script",
+   "https://www.gstatic.com/charts/44/js/jsapi_compiled_default_module.js"
+  ],
+  [
+   200,
+   "script",
+   "https://www.gstatic.com/charts/44/js/jsapi_compiled_ui_module.js"
+  ]
+ ],
+ "embed_text": "搜尋熱度的趨勢變化\n鋼價\n‪2025年10月5日‬\n‪2026年1月11日‬\n‪2026年4月19日‬\n‪2026年7月26日‬\n25\n50\n75\n100\nx\ty1\n‪2025年10月5日‬\t22\n‪2025年10月12日‬\t26\n‪2025年10月19日‬\t29\n‪2025年10月26日‬\t44\n‪2025年11月2日‬\t35\n‪2025年11月9日‬\t35\n‪2025年11月16日‬\t27\n‪2025年11月23日‬\t38\n‪2025年11月30日‬\t28\n‪2025年12月7日‬\t25\n‪2025年12月14日‬\t36\n‪2025年12月21日‬\t34\n‪2025年12月28日‬\t31\n‪2026年1月4日‬\t43\n‪2026年1月11日‬\t48\n‪2026年1月18日‬\t44\n‪2026年1月25日‬\t68\n‪2026年2月1日‬\t63\n‪2026年2月8日‬\t30\n‪2026年2月15日‬\t0\n‪2026年2月22日‬\t49\n‪2026年3月1日‬\t36\n‪2026年3月8日‬\t72\n‪2026年3月15日‬\t81\n‪2026年3月22日‬\t72\n‪2026年3月29日‬\t64\n‪2026年4月5日‬\t57\n‪2026年4月12日‬\t80\n‪2026年4月19日‬\t58\n‪2026年4月26日‬\t58\n‪2026年5月3日‬\t51\n‪2026年5月10日‬\t65\n‪2026年5月17日‬\t68\n‪2026年5月24日‬\t100\n‪2026年5月31日‬\t78\n‪2026年6月7日‬\t49\n‪2026年6月14日‬\t75\n‪2026年6月21日‬\t70\n‪2026年6月28日‬\t41\n‪2026年7月5日‬\t35\n‪2026年7月12日‬\t47\n‪2026年7月19日‬\t50\n‪2026年7月26日‬\t44\n‪2026年8月2日‬\t34\n‪2026年8月9日‬\t53\n‪2026年8月16日‬\t48\n‪2026年8月23日‬\t50\n‪2026年8月30日‬\t37\n‪2026年9月6日‬\t40\n‪2026年9月13日‬\t30\n‪2026年9月20日‬\t33\n‪2026年9月27日‬\t36\n‪2026年10月4日‬\t43\n台灣. 過去 12 個月."
+}
