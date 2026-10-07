@@ -1,1 +1,1 @@
-{"urls": {"dg_search1.json": "https://data.gov.tw/api/v2/rest/dataset?q=%E5%85%A8%E5%9C%8B%E5%B7%A5%E5%BB%A0%E7%99%BB%E8%A8%98", "dg_search2.json": "https://data.gov.tw/api/v2/rest/dataset?q=%E5%B7%A5%E5%BB%A0%E7%99%BB%E8%A8%98%E6%B8%85%E5%86%8A", "dg_6569.json": "https://data.gov.tw/api/v2/rest/dataset/6569"}}
+{"urls":{"sdd6569.csv":"https://www.ida.gov.tw/opendata/02/SDD6569.csv"}}
