@@ -1,7 +1,14 @@
-{"urls": {
- "jina_inv_scrap.txt": "https://r.jina.ai/https://www.investing.com/commodities/lme-steel-scrap-futures-historical-data",
- "jina_te_scrap.txt": "https://r.jina.ai/https://tradingeconomics.com/commodity/steel-scrap",
- "te_scrap.html": "https://tradingeconomics.com/commodity/steel-scrap",
- "lme_api.json": "https://www.lme.com/api/trading-data/day-delayed?datasourceId=bd5ab9a7-6dac-4e2c-a4ac-3a5c18bd6eb1",
- "inv_api.json": "https://api.investing.com/api/financialdata/historical/1177160?start-date=2026-01-01&end-date=2026-10-06&time-frame=Daily&add-missing-rows=false"
-}}
+{
+ "urls": {
+  "dg_138381.json": "https://data.gov.tw/api/v2/rest/dataset/138381",
+  "dg_108337.json": "https://data.gov.tw/api/v2/rest/dataset/108337",
+  "dg_108339.json": "https://data.gov.tw/api/v2/rest/dataset/108339",
+  "dg_22296.json": "https://data.gov.tw/api/v2/rest/dataset/22296",
+  "dg_22294.json": "https://data.gov.tw/api/v2/rest/dataset/22294",
+  "dg_108349.json": "https://data.gov.tw/api/v2/rest/dataset/108349",
+  "dg_154956.json": "https://data.gov.tw/api/v2/rest/dataset/154956",
+  "dg_13861.json": "https://data.gov.tw/api/v2/rest/dataset/13861",
+  "twse_L.json": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+  "tpex_O.json": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O"
+ }
+}
