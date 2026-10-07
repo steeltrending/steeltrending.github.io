@@ -1,9 +1,7 @@
 {"urls": {
- "sgx_V26.json": "https://api.sgx.com/derivatives/v1.0/history/symbol/FEFV26?days=1y&category=futures&params=base-date,total-volume,daily-settlement-price-abs",
- "yh_scrap.json": "https://query1.finance.yahoo.com/v8/finance/chart/SCR=F?period1=1767225600&period2=1791331200&interval=1d"
-},
- "render": {
-  "lme_scrap": "https://www.lme.com/en/metals/ferrous/lme-steel-scrap-cfr-turkey-platts",
-  "barchart_scrap": "https://www.barchart.com/futures/quotes/SAZ26/overview",
-  "cme_hms": "https://www.cmegroup.com/markets/metals/ferrous/hms-80-20-ferrous-scrap-platts.settlements.html"
- }}
+ "jina_inv_scrap.txt": "https://r.jina.ai/https://www.investing.com/commodities/lme-steel-scrap-futures-historical-data",
+ "jina_te_scrap.txt": "https://r.jina.ai/https://tradingeconomics.com/commodity/steel-scrap",
+ "te_scrap.html": "https://tradingeconomics.com/commodity/steel-scrap",
+ "lme_api.json": "https://www.lme.com/api/trading-data/day-delayed?datasourceId=bd5ab9a7-6dac-4e2c-a4ac-3a5c18bd6eb1",
+ "inv_api.json": "https://api.investing.com/api/financialdata/historical/1177160?start-date=2026-01-01&end-date=2026-10-06&time-frame=Daily&add-missing-rows=false"
+}}
