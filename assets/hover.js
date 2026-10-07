@@ -69,3 +69,26 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
+
+/* 上方主選單「鋼鐵數字」下拉選單：點選單外或按 Esc 時收合；窄螢幕時避免選單超出畫面右緣 */
+(function () {
+  Array.prototype.forEach.call(document.querySelectorAll('details.nvdd'), function (d) {
+    d.addEventListener('toggle', function () {
+      var m = d.querySelector('.nvdd-m'); if (!m || !d.open) return;
+      m.style.left = '0px';
+      var r = m.getBoundingClientRect(), over = r.right - (document.documentElement.clientWidth - 8);
+      if (over > 0) m.style.left = -Math.min(over, r.left - 8) + 'px';
+    });
+  });
+  document.addEventListener('click', function (e) {
+    Array.prototype.forEach.call(document.querySelectorAll('details.nvdd[open]'), function (d) {
+      if (!d.contains(e.target)) d.open = false;
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    Array.prototype.forEach.call(document.querySelectorAll('details.nvdd[open]'), function (d) {
+      d.open = false; d.querySelector('summary').focus();
+    });
+  });
+})();
