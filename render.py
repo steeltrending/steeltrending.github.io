@@ -20,10 +20,12 @@ with sync_playwright() as p:
             pg.wait_for_timeout(6000)
         except Exception as e:
             open(f"out/render/{name}.err", "w").write(str(e))
-        open(f"out/render/{name}.html", "w").write(pg.content())
-        open(f"out/render/{name}.txt", "w").write(pg.inner_text("body"))
-        json.dump(pg.eval_on_selector_all("a", "els => els.map(e => [e.innerText.trim().slice(0,80), e.href])"), open(f"out/render/{name}.links.json", "w"), ensure_ascii=False)
-        pg.screenshot(path=f"out/render/{name}.png", full_page=True)
+        for fn in (lambda: open(f"out/render/{name}.html", "w").write(pg.content()),
+                   lambda: open(f"out/render/{name}.txt", "w").write(pg.inner_text("body")),
+                   lambda: json.dump(pg.eval_on_selector_all("a", "els => els.map(e => [e.innerText.trim().slice(0,80), e.href])"), open(f"out/render/{name}.links.json", "w"), ensure_ascii=False),
+                   lambda: pg.screenshot(path=f"out/render/{name}.png", full_page=True)):
+            try: fn()
+            except Exception as e: open(f"out/render/{name}.err2", "a").write(str(e) + "\n")
         json.dump(caps, open(f"out/render/{name}.net.json", "w"), ensure_ascii=False)
     b.close()
 
