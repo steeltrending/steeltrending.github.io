@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>台灣鋼鐵地圖 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="全台生產中鋼鐵工廠分布點點圖：依經濟部工廠登記與商工登記資本額，標示中游鋼鐵製造工廠與主要聚落。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.up{color:#FF8A47}.down{color:#8DB4D6}.flat{color:#9AA0A6}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+
+/* overview */
+.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid #2A2F35;border-left:1px solid #2A2F35}
+.ov{padding:16px 18px;border-right:1px solid #2A2F35;border-bottom:1px solid #2A2F35;background:#15181B;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit}
+.ov:hover,.ov:focus-visible{background:#1A1E22;outline:none}
+.ov .r{font-size:15px;font-weight:700;color:#E8E6E1}
+.ov .v{font-size:22px;font-weight:600}
+.ov .s{font-size:12px;color:#9AA0A6}
+
+/* bars */
+.bars{display:flex;flex-direction:column;gap:2px}
+.bar-row{display:grid;grid-template-columns:150px minmax(0,1fr) 72px;gap:12px;align-items:center;min-height:28px}
+.bar-row .n{font-size:13px;color:#C9CDD2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-track{position:relative;height:14px}
+.bar-track::before{content:"";position:absolute;left:50%;top:-4px;bottom:-4px;border-left:1px solid #3A3F46}
+.bar{position:absolute;top:0;height:100%}
+.bar.up{background:#FF6A1A}.bar.down{background:#5E8DB8}
+.bar-row .p{text-align:right;font-size:13px}
+.bar-group{font-size:12px;letter-spacing:.12em;color:#9AA0A6;padding:12px 0 4px;border-top:1px solid #22262B;margin-top:6px}
+.bar-group:first-child{border-top:0;margin-top:0;padding-top:0}
+
+/* region tables */
+.region{margin-top:48px;scroll-margin-top:24px}
+.region h3{margin:0 0 4px;font-size:24px;font-weight:900;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.region h3 small{font-size:14px;font-weight:500}
+.tbl-wrap{overflow-x:auto;border:1px solid #2A2F35;margin-top:14px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:720px}
+th,td{padding:14px 16px;border-bottom:1px solid #22262B;text-align:right;white-space:nowrap}
+th{background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+th:nth-child(-n+3),td:nth-child(-n+3){text-align:left}
+tbody tr:last-child td{border-bottom:0}
+td .nm{font-weight:700;font-size:15px;color:#E8E6E1;display:flex;align-items:center;gap:8px}
+td .tk{font-size:12px;color:#9AA0A6;margin-top:3px}
+.nm-link{color:#E8E6E1;text-decoration:none;border-bottom:1px solid #4A5058}.nm-link:hover{color:#FF8A47;border-color:#FF8A47}
+.bar-row a.n{text-decoration:none}.bar-row a.n:hover{color:#FF8A47}
+.chip{display:inline-flex;align-items:center;border:1px solid #3A3F46;color:#C9CDD2;font-size:14px;min-height:40px;padding:0 14px;text-decoration:none}
+.chip:hover{border-color:#FF6A1A;color:#E8E6E1}
+.chip[aria-current="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+.trend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.tcard{border:1px solid #2A2F35;background:#15181B;padding:18px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit}
+.tcard:hover,.tcard:focus-visible{border-color:#FF6A1A;outline:none}
+.tcard .t1{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.tcard .t1 b{font-size:17px}
+.tcard svg{display:block;width:100%;height:80px}
+.tcard .t2{display:flex;justify-content:space-between;font-size:13px;color:#9AA0A6}
+.lead{font-size:11px;border:1px solid #FF6A1A;color:#FFB07F;padding:1px 6px;font-weight:500;letter-spacing:.04em}
+.stale{font-size:11px;border:1px solid #6B5A2E;color:#D9B66A;padding:1px 6px;margin-left:6px}
+/* heatmap */
+.hm{display:flex;flex-direction:column;gap:6px}
+.hm-row{display:flex;align-items:stretch;gap:6px}
+.hm-row .rg{flex:0 0 72px;display:flex;align-items:center;font-size:14px;font-weight:700;color:#C9CDD2;text-decoration:none}
+.hm-row .rg:hover{color:#FF8A47}
+.hm-row .tiles{flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.hm-tile{padding:10px 12px;min-height:68px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(255,255,255,.06);text-decoration:none;color:inherit}
+.hm-tile:hover,.hm-tile:focus-visible{outline:2px solid #E8E6E1;outline-offset:-2px}
+.hm-tile .t-name{font-size:13px;font-weight:700;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hm-tile .t-tk{font-size:11px;opacity:.75;margin-top:2px}
+.hm-tile .t-pct{font-size:16px;font-weight:600;margin-top:6px}
+.hm-legend{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:12px;color:#9AA0A6}
+.hm-legend .grad{flex:1;max-width:360px;height:10px;background:linear-gradient(to right,#5E8DB8,#22262B,#FF6A1A)}
+@media (max-width:640px){.hm-row{flex-direction:column;gap:4px}.hm-row .rg{flex:none;margin-top:6px}.hm-tile{padding:8px;min-height:60px}.hm-tile .t-name{font-size:12px}.hm-tile .t-pct{font-size:14px}}
+@media (max-width:640px){.wrap{padding:0 16px}.bar-row{grid-template-columns:96px minmax(0,1fr) 60px;gap:8px}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));border-top:1px solid #2A2F35;border-left:1px solid #2A2F35;margin-top:28px}
+.kpi{padding:16px 18px;border-right:1px solid #2A2F35;border-bottom:1px solid #2A2F35;background:#15181B;display:flex;flex-direction:column;gap:6px}
+.kpi .k{font-size:13px;color:#9AA0A6}.kpi .v{font-size:26px;font-weight:600;white-space:nowrap}.kpi .v small{font-size:16px;font-weight:500;margin-left:6px;font-family:inherit;color:#C9CDD2}.kpi .s{font-size:12px;color:#9AA0A6}
+.map-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;margin-top:28px;align-items:start}
+.map-box{border:1px solid #2A2F35;background:#121417;padding:14px}
+.map-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.chip{background:transparent;border:1px solid #3A3F46;color:#C9CDD2;font:inherit;font-size:14px;min-height:40px;min-width:44px;padding:0 12px;cursor:pointer}
+.chip:hover{border-color:#FF6A1A;color:#E8E6E1}
+#map{display:block;width:100%;height:auto;max-height:78vh;touch-action:none;cursor:grab;background:#0F1113}
+#map.drag{cursor:grabbing}
+#g-county path{fill:#181C20;stroke:#4A5058;stroke-width:.8;vector-effect:non-scaling-stroke}
+#g-county path.on{fill:#20252A}
+#g-mesh{vector-effect:non-scaling-stroke}
+#g-dots circle.hit{fill:transparent;cursor:pointer}
+#g-dots circle.hit:hover,#g-dots circle.hit.sel{fill:rgba(255,255,255,.08);stroke:#E8E6E1;stroke-width:1;vector-effect:non-scaling-stroke}
+#g-label text{fill:#E8E6E1;paint-order:stroke;stroke:#0F1113;pointer-events:none;font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:12px;color:#C9CDD2}
+.legend button{display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid transparent;color:inherit;font:inherit;padding:4px 6px;cursor:pointer}
+.legend button[aria-pressed="false"]{opacity:.35}
+.legend svg{display:block}
+.note{margin:10px 0 0;font-size:12px;line-height:1.7;color:#9AA0A6}
+.side{display:flex;flex-direction:column;gap:12px}
+.search,.sel{width:100%;box-sizing:border-box;background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;min-height:44px;padding:0 12px}
+.search:focus,.sel:focus{outline:2px solid #FF6A1A;outline-offset:-1px}
+.sel-row{display:flex;align-items:center;gap:10px}.sel-row .lbl{flex:none}
+.stage{position:relative}
+.info{position:absolute;right:10px;bottom:10px;z-index:5;width:min(320px,calc(100% - 20px));max-height:calc(100% - 20px);overflow:auto;box-sizing:border-box;border:1px solid #3A3F46;background:rgba(21,24,27,.94);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 12px 32px rgba(0,0,0,.5);padding:14px 16px}
+.info[hidden]{display:none}
+.info .x{position:absolute;top:6px;right:6px;width:32px;height:32px;background:none;border:0;color:#9AA0A6;font-size:18px;cursor:pointer}
+.info .x:hover{color:#FF8A47}
+.info .lbl{padding-right:28px}
+.info h3{margin:0 0 4px;padding-right:24px;font-size:17px;font-weight:900;line-height:1.4}
+.info dl{margin:10px 0 0;display:grid;grid-template-columns:72px 1fr;gap:4px 10px;font-size:13px;line-height:1.6}
+.info dt{color:#9AA0A6}.info dd{margin:0;color:#E8E6E1}
+.info .more{margin:10px 0 0;font-size:13px;color:#9AA0A6}
+.results{border:1px solid #2A2F35;max-height:280px;overflow:auto}
+.results button{display:block;width:100%;text-align:left;background:#15181B;border:0;border-bottom:1px solid #22262B;color:#E8E6E1;font:inherit;font-size:14px;padding:10px 12px;cursor:pointer}
+.results button:hover{background:#1C2024;color:#FF8A47}
+.results small{display:block;color:#9AA0A6;font-size:12px;margin-top:2px}
+.clusters{margin:0;padding:0;list-style:none;border-top:1px solid #2A2F35}
+.clusters>li>button{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid #22262B;color:#E8E6E1;font:inherit;font-size:14px;padding:10px 2px;cursor:pointer}
+.clusters>li>button:hover{color:#FF8A47}
+.clusters .r{font-family:'IBM Plex Mono',monospace;color:#FF6A1A;font-size:12px}
+.clusters>li>button small{display:block;color:#9AA0A6;font-size:12px;margin-top:2px}
+.cbars{padding:4px 0 0}
+.cbar{display:grid;grid-template-columns:5em 1fr 5.6em;align-items:center;gap:10px;margin:0 0 8px;font-size:14px;color:#C9CDD2;background:none;border:0;width:100%;font-family:inherit;cursor:pointer;padding:0}
+.cbar:hover{color:#FF8A47}
+.cbar .tr{height:12px;background:#1C2024;display:flex}.cbar .fi{display:block;height:12px;background:#FF6A1A;flex:none}.cbar .fi.nb{background:#5E8DB8}
+.cbar .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1}
+@media (max-width:900px){.map-layout{grid-template-columns:1fr}}
+@media (max-width:640px){.wrap{padding:0 16px}#map{max-height:none}}
+.chip.mode[aria-pressed="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+.ckey{display:flex;gap:16px;margin:0 0 12px;font-size:13px}.ckey span{display:inline-flex;align-items:center;gap:6px}.ckey i{display:inline-block;width:12px;height:12px}
+.chip.mode.cc{color:#FF8A47}.chip.mode.nc{color:#8DB4D6}.chip.mode.nc[aria-pressed="true"]{background:#5E8DB8;border-color:#5E8DB8;color:#0F1113}.chip.mode.cc[aria-pressed="true"]{color:#0F1113}
+.cos{padding:8px 0 12px 30px;border-bottom:1px solid #22262B}
+.cos-h{margin:0 0 6px;font-size:12px;color:#9AA0A6}
+.cos ul{margin:0;padding:0;list-style:none;max-height:420px;overflow:auto}
+.cos li{padding:8px 0;border-top:1px dashed #2A2F35}
+.cos li:first-child{border-top:0}
+.co-t{display:flex;justify-content:space-between;gap:8px;align-items:baseline;font-size:14px}
+.co-t b{font-weight:700}
+.co-t .mono{font-size:12px;color:#C9CDD2;white-space:nowrap}
+.co-p{margin:2px 0 4px;font-size:12px;color:#9AA0A6;line-height:1.5}
+.co-f{display:flex;flex-wrap:wrap;gap:4px 10px}
+.co-f button{background:none;border:0;padding:0;font:inherit;font-size:12px;cursor:pointer;text-decoration:underline;text-decoration-color:#3A4047;text-underline-offset:3px}
+.co-f button:hover{text-decoration-color:currentColor}
+.co-more{margin-top:8px;background:none;border:1px solid #2A2F35;color:#C9CDD2;font:inherit;font-size:12px;padding:6px 10px;cursor:pointer}
+.co-more:hover{border-color:#FF6A1A;color:#FF8A47}
+.ttl{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin:12px 0 12px}
+.dd{position:relative}
+.dd summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 16px;border:1px solid #3A3F46;background:#15181B;color:#E8E6E1;font-size:15px;font-weight:700;user-select:none}
+.dd summary::-webkit-details-marker{display:none}
+.dd summary:hover,.dd[open] summary{border-color:#FF6A1A}
+.dd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}
+.dd summary .ar{color:#FF6A1A;font-size:12px;transition:transform .2s}
+.dd[open] summary .ar{transform:rotate(180deg)}
+.dd .menu{position:absolute;top:calc(100% + 6px);left:0;z-index:30;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45)}
+.ct-panel{width:min(820px,calc(100vw - 32px));max-height:min(78vh,760px);overflow:auto;box-sizing:border-box;padding:12px 16px 14px}
+.ct-panel>.lbl{display:block;margin-bottom:10px}
+@media (max-width:640px){.info{width:calc(100% - 16px);right:8px;bottom:8px;max-height:46%;padding:10px 12px}.info h3{font-size:15px}.info dl{grid-template-columns:5.6em 1fr;font-size:12px;gap:2px 8px;margin-top:6px}.info .more{font-size:12px;margin-top:6px}}
+@media (pointer:coarse){.cbar{min-height:32px;margin:0 0 2px}}
+@media (min-width:901px) and (max-width:1180px){.info{width:280px;padding:12px 14px}.info h3{font-size:15px}.info dl{font-size:12px;grid-template-columns:5.6em 1fr;gap:2px 8px}.info .more{font-size:12px}}
+@media (max-width:640px){.map-box{padding:8px}.kpi{padding:14px}.kpi .v{font-size:22px}.kpi .v small{font-size:14px;margin-left:4px}}
+@media (max-height:520px) and (min-width:641px){.info{width:280px;padding:10px 12px}.info h3{font-size:14px}.info dl{font-size:12px;grid-template-columns:5.6em 1fr;gap:1px 8px;margin-top:4px}.info .more{display:none}}
+.map-tools .hint{flex-basis:100%;order:3}
+@media (min-width:1181px){.map-tools .hint{flex-basis:auto;order:0;margin-left:auto}}
+.clusters>li{border-bottom:1px solid #22262B}
+.clusters>li>button{border-bottom:0!important;padding-bottom:2px!important}
+.cl-sub{display:flex;flex-wrap:wrap;align-items:center;gap:2px 4px;padding:0 2px 10px 32px;font-size:12px;color:#9AA0A6}
+.cl-sub button{background:none;border:1px solid transparent;font:inherit;font-size:12px;padding:2px 6px;margin:-2px 0;cursor:pointer;border-radius:2px}
+.cl-sub button:hover{border-color:currentColor}
+.cl-sub button[aria-pressed="true"]{border-color:currentColor;background:rgba(255,255,255,.06);font-weight:700}
+.cl-sub button:disabled{opacity:.4;cursor:default;border-color:transparent}
+@media (pointer:coarse){.cl-sub button{padding:6px 8px;margin:-6px 0}}
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<style>.nvdd{position:relative}.nvdd summary{list-style:none;cursor:pointer;color:#C9CDD2;padding:12px;display:flex;align-items:center;gap:6px;font-size:15px;user-select:none}.nvdd summary::-webkit-details-marker{display:none}.nvdd summary span{font-size:11px;color:#FF6A1A;transition:transform .2s}.nvdd[open] summary span{transform:rotate(180deg)}.nvdd summary:hover,.nvdd[open] summary,.nvdd.cur summary{color:#FF8A47}.nvdd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}.nvdd-m{position:absolute;top:100%;left:0;z-index:50;min-width:180px;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45);padding:6px 0;display:flex;flex-direction:column}.nvdd-m a{padding:12px 16px;color:#E8E6E1;text-decoration:none;font-size:15px;white-space:nowrap}.nvdd-m a:hover{background:#1C2024;color:#FF8A47}.nvdd-m a[aria-current]{color:#FF8A47}</style><details class="nvdd cur"><summary>鋼鐵數字<span aria-hidden="true">▾</span></summary><div class="nvdd-m"><a href="worldsteel.html">世界鋼鐵數據</a><a href="twmap.html" aria-current="page">台灣鋼鐵地圖</a><a href="trends.html">關鍵字熱度</a></div></details>
+<a href="archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6">鋼鐵數字 <span aria-hidden="true">›</span> 台灣鋼鐵地圖</nav>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">TAIWAN STEEL MAP</p>
+<div class="ttl"><h1 style="margin:0;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">台灣鋼鐵地圖</h1>
+<details class="dd" id="dd-ct"><summary>各縣市鋼鐵工廠<span class="ar" aria-hidden="true">▼</span></summary><div class="menu ct-panel"><span class="lbl">BY COUNTY · 點縣市可在地圖上定位</span>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+<h2 id="ct-h" style="margin:0;font-size:18px;font-weight:900">各縣市鋼鐵工廠家數</h2>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><div id="bar-cls" role="group" aria-label="工廠類別" style="display:flex;gap:6px"><button class="chip mode" type="button" data-c="all" aria-pressed="true">全部</button><button class="chip mode cc" type="button" data-c="core" aria-pressed="false">鋼鐵本業</button><button class="chip mode nc" type="button" data-c="non" aria-pressed="false">非鋼鐵本業</button></div><div id="bar-mode" role="group" aria-label="長條圖數值" style="display:flex;gap:6px"><button class="chip mode" type="button" data-m="n" aria-pressed="true">工廠家數</button><button class="chip mode" type="button" data-m="cap" aria-pressed="false">資本額</button></div></div></div>
+<div class="cbars"><p class="ckey"><span><i style="background:#FF6A1A"></i><b style="color:#FF8A47">鋼鐵本業</b></span><span><i style="background:#5E8DB8"></i><b style="color:#8DB4D6">非鋼鐵本業</b></span></p><div id="bycounty"></div><p id="ct-note" class="note" style="margin-top:6px"></p></div>
+</div></details></div>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:46em">全台登記「主要產品：241 鋼鐵」且仍在生產中的工廠，涵蓋煉鋼、軋延、鋼管、鋼線與鋼品加工等中游製造。<span style="color:#FF8A47;font-weight:700">橘色為鋼鐵本業</span>，<span style="color:#8DB4D6;font-weight:700">藍色為非鋼鐵本業</span>。每座工廠以一群點表示：公司資本額越高，點越多、聚得越密。點選點群可查看工廠資訊。資料每年元旦更新。</p>
+
+<div id="kpis" class="kpis"></div>
+
+<div class="map-layout">
+<section class="map-box" aria-label="台灣鋼鐵工廠分布圖">
+<div class="map-tools">
+<div role="group" aria-label="縮放" style="display:flex;gap:6px">
+<button class="chip" type="button" id="zin" aria-label="放大">＋</button>
+<button class="chip" type="button" id="zout" aria-label="縮小">－</button>
+<button class="chip" type="button" id="zreset">全台</button>
+</div>
+<div id="map-cls" role="group" aria-label="工廠類別" style="display:flex;gap:6px"><button class="chip mode" type="button" data-c="all" aria-pressed="true">全部</button><button class="chip mode cc" type="button" data-c="core" aria-pressed="false">鋼鐵本業</button><button class="chip mode nc" type="button" data-c="non" aria-pressed="false">非鋼鐵本業</button></div>
+<span id="zoom-hint" class="lbl hint">點選點群看工廠資訊・滾輪或雙指縮放・拖曳移動</span>
+</div>
+<div class="stage"><svg id="map" viewBox="0 0 600 820" role="img" aria-label="台灣鋼鐵工廠點點分布圖"><g id="vp"><g id="g-county"></g><path id="g-mesh" fill="none" stroke="#262B31" stroke-width=".5"/><g id="g-dots"></g><g id="g-hit"></g><g id="g-label"></g></g></svg>
+<div id="info" class="info" hidden role="region" aria-label="工廠資訊" aria-live="polite"></div>
+</div>
+<div class="legend" id="legend" aria-label="資本額圖例"></div>
+<p class="note">橘色為鋼鐵本業（工廠登記的主要產品第一項為 241 鋼鐵），藍色為非鋼鐵本業（主要產品另有本業，241 鋼鐵列為兼營）。點的位置為工廠登記地址所在村里的中心點（找不到村里時取鄉鎮區中心），並非精確廠址；同一村里的多座工廠會重疊。金門、連江縣目前沒有登記鋼鐵工廠，地圖未納入。</p>
+</section>
+
+<aside class="side">
+<label for="q" style="position:absolute;left:-9999px">搜尋工廠或公司</label>
+<input id="q" class="search" type="search" placeholder="搜尋工廠、公司或鄉鎮，例如：中鋼、小港、岡山">
+<div class="sel-row">
+<label for="county" class="lbl">縣市</label>
+<select id="county" class="sel"><option value="">全部縣市</option></select>
+</div>
+<div id="results" class="results" hidden></div>
+<section aria-labelledby="cl-h" style="margin-top:20px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><h2 id="cl-h" style="margin:0;font-size:17px;font-weight:900">主要聚落</h2><span class="lbl">CLUSTERS</span></div>
+<p id="cl-sub" class="flat" style="margin:6px 0 8px;font-size:12px;line-height:1.6">以鄉鎮區彙整工廠家數，依家數排序；點聚落可展開個別公司。</p>
+<ol id="clusters" class="clusters"></ol>
+</section>
+</aside>
+</div>
+
+
+
+<p id="src" style="margin:48px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6"></p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending</span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+
+<script>
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  // 點數與聚攏程度依資本額分級；顏色依類別：鋼鐵本業橘色系、非鋼鐵本業藍色系（資本額越高越亮）
+  var TIERS = [
+    { max: 1e7, label: '未滿 1,000 萬元', n: 2, r: 5.5, core: '#A65A2E', non: '#46698A' },
+    { max: 1e8, label: '1,000 萬－1 億元', n: 4, r: 4.6, core: '#CC6326', non: '#5279A0' },
+    { max: 1e9, label: '1－10 億元', n: 7, r: 3.8, core: '#F06A1C', non: '#5E8DB8' },
+    { max: 1e10, label: '10－100 億元', n: 11, r: 3.0, core: '#FF8A47', non: '#86AED6' },
+    { max: Infinity, label: '100 億元以上', n: 18, r: 2.4, core: '#FFC199', non: '#BCD5EE' }
+  ];
+  var UNKNOWN = { label: '資本額未查得', n: 2, r: 5.5, core: '#7A6455', non: '#4F6275' };
+  var ORANGE = '#FF8A47', BLUE = '#8DB4D6';
+  var cls = { core: true, non: true }, barMode = 'n', barCls = 'all';
+  var $ = function (id) { return document.getElementById(id); };
+  var svg = $('map'), vp = $('vp');
+  var D = null, G = null, on = TIERS.map(function () { return true; }).concat([true]);
+  var view = { x: 0, y: 0, w: 600, h: 820 }, full = { x: 0, y: 0, w: 600, h: 820 };
+  var sel = null, hits = [];
+
+  function el(tag, attrs, parent) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function h(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function tierOf(cap) { if (!cap) return TIERS.length; for (var i = 0; i < TIERS.length; i++) if (cap < TIERS[i].max) return i; return TIERS.length - 1; }
+  function T(i) { return i === TIERS.length ? UNKNOWN : TIERS[i]; }
+  function money(v) {
+    if (!v) return '未查得';
+    if (v >= 1e8) return (v / 1e8).toLocaleString('zh-TW', { maximumFractionDigits: v >= 1e10 ? 0 : 1 }) + ' 億元';
+    return Math.round(v / 1e4).toLocaleString('zh-TW') + ' 萬元';
+  }
+  function hash(s) { var x = 2166136261; for (var i = 0; i < s.length; i++) { x ^= s.charCodeAt(i); x = Math.imul(x, 16777619); } return (x >>> 0) / 4294967296; }
+  function dateROC(s) { return s && s.length >= 7 ? (parseInt(s.slice(0, s.length - 4), 10) + 1911) + '.' + s.slice(-4, -2) + '.' + s.slice(-2) : '—'; }
+
+  Promise.all([
+    fetch('assets/twmap-geo.json').then(function (r) { return r.json(); }),
+    fetch('data/twsteelmap.json?ts=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); })
+  ]).then(function (res) { G = res[0]; D = res[1]; init(); })
+    .catch(function () { var i = $('info'); i.hidden = false; i.textContent = '地圖資料暫時無法載入，請稍後再試。'; });
+
+  function init() {
+    G.counties.forEach(function (c) { var p = el('path', { d: c.d }, $('g-county')); p.dataset.n = c.n; p.appendChild(el('title', {})).textContent = c.n; });
+    $('g-mesh').setAttribute('d', G.mesh);
+    // 每座工廠：位置加上依統編雜湊的小偏移，避免同村里工廠完全重疊
+    D.factories.forEach(function (f, i) {
+      var t = tierOf(f.cap), cfg = T(t), a = hash(f.n + f.tid) * Math.PI * 2, off = (D.factories.length > 1 ? 1.2 + hash(f.a) * 2.2 : 0);
+      f.i = i; f.tier = t; f.cx = f.x + Math.cos(a) * off; f.cy = f.y + Math.sin(a) * off;
+    });
+    drawDots(); legend(); kpis(); clusters(); bycounty(); counties(); bindDropdown();
+    $('map-cls').addEventListener('click', function (e) { var b = e.target.closest('button[data-c]'); if (b) setCls(b.dataset.c); });
+    var lastW = svg.clientWidth;
+    window.addEventListener('resize', function () { if (Math.abs(svg.clientWidth - lastW) > 20) { lastW = svg.clientWidth; clusters(); } });
+    $('bar-mode').addEventListener('click', function (e) { var b = e.target.closest('button[data-m]'); if (b) { barMode = b.dataset.m; bycounty(); } });
+    $('bar-cls').addEventListener('click', function (e) { var b = e.target.closest('button[data-c]'); if (b) { barCls = b.dataset.c; bycounty(); } });
+    var s = D.summary;
+    var ver = D.asof && D.asof.length === 5 ? '工廠清冊為民國 ' + D.asof.slice(0, 3) + ' 年 ' + (+D.asof.slice(3)) + ' 月版，每年元旦更新。' : '每年元旦更新。';
+    $('src').textContent = '資料來源：' + D.source + '；' + ver + '共 ' + s.factories.toLocaleString() + ' 座工廠，其中 ' + s.with_cap.toLocaleString() + ' 座查得所屬公司或商號資本額' + (s.unlocated ? '；' + s.unlocated + ' 座因地址無法對應村里而未標示' : '') + '。資本額為公司實收資本額（有限公司為資本總額），同一公司多座工廠皆以公司資本額表示。地圖底圖：內政部國土測繪中心村里界（taiwan-atlas）。';
+    bindZoom(); bindSearch();
+  }
+
+  // 每座工廠一個群組：點群與可點選的熱區放在同一群組，縮放時以 scale 抵銷，讓點群在螢幕上維持固定大小
+  var groups = [];
+  function drawDots() {
+    var g = $('g-dots'); g.textContent = ''; $('g-hit').textContent = ''; hits = []; groups = [];
+    D.factories.slice().sort(function (a, b) { return (a.cap || 0) - (b.cap || 0); }).forEach(function (f) {
+      if (!on[f.tier] || !cls[f.core ? 'core' : 'non']) return;
+      var cfg = T(f.tier), gold = 2.39996, col = f.core ? cfg.core : cfg.non;
+      var fg = el('g', {}, g); fg.dataset.x = f.cx; fg.dataset.y = f.cy;
+      for (var k = 0; k < cfg.n; k++) {
+        var rr = cfg.r * Math.sqrt((k + 0.5) / cfg.n), th = k * gold + hash(f.tid) * 6.28;
+        el('circle', { cx: (rr * Math.cos(th)).toFixed(2), cy: (rr * Math.sin(th)).toFixed(2), r: 1.15, fill: col, 'fill-opacity': 0.92 }, fg);
+      }
+      var hc = el('circle', { cx: 0, cy: 0, r: cfg.r + 1.5, 'class': 'hit' }, fg);
+      hc.appendChild(el('title', {})).textContent = f.n + '｜' + (f.core ? '鋼鐵本業' : '非鋼鐵本業') + '｜' + money(f.cap);
+      fg.style.cursor = 'pointer';
+      fg.addEventListener('click', function (e) { e.stopPropagation(); select(f, false); });
+      hits[f.i] = hc; groups.push(fg);
+    });
+    if (sel && hits[sel.i]) hits[sel.i].classList.add('sel');
+    rescale();
+  }
+  // 窄螢幕（手機）地圖較小：標籤與點群放大，維持可讀
+  function kf() { var w = svg.clientWidth || 600; return Math.min(1.7, Math.max(1, 520 / w)); }
+  function rescale() {
+    var k = kf(), z = view.w / full.w, s = Math.max(Math.pow(z, 0.75), 0.12) * Math.sqrt(k), ls = z * k;
+    groups.forEach(function (fg) { fg.setAttribute('transform', 'translate(' + fg.dataset.x + ' ' + fg.dataset.y + ') scale(' + s.toFixed(4) + ')'); });
+    Array.prototype.forEach.call($('g-label').children, function (t) { t.setAttribute('font-size', (11 * ls).toFixed(2)); t.setAttribute('stroke-width', (3 * ls).toFixed(2)); t.setAttribute('x', +t.dataset.x + t.dataset.dx * ls); t.setAttribute('y', +t.dataset.y + t.dataset.dy * ls); });
+  }
+
+  function legend() {
+    var box = $('legend'); box.textContent = '';
+    var nCore = D.factories.filter(function (f) { return f.core; }).length;
+    [['core', '鋼鐵本業', ORANGE, nCore], ['non', '非鋼鐵本業', BLUE, D.factories.length - nCore]].forEach(function (x) {
+      var b = h('button'); b.type = 'button'; b.setAttribute('aria-pressed', cls[x[0]] ? 'true' : 'false');
+      var sw = h('span'); sw.style.cssText = 'display:inline-block;width:12px;height:12px;border-radius:50%;background:' + x[2];
+      b.appendChild(sw); var t = h('span', null, x[1] + '（' + x[3] + ' 座）'); t.style.color = x[2]; t.style.fontWeight = '700'; b.appendChild(t);
+      b.addEventListener('click', function () { cls[x[0]] = !cls[x[0]]; if (sel && !cls[sel.core ? 'core' : 'non']) closeInfo(); legend(); drawDots(); clusters(); syncSeg(); });
+      box.appendChild(b);
+    });
+    var br = h('span'); br.style.cssText = 'flex-basis:100%;height:0'; box.appendChild(br);
+    box.appendChild(h('span', 'lbl', '公司資本額'));
+    TIERS.concat([UNKNOWN]).forEach(function (cfg, i) {
+      var b = h('button'); b.type = 'button'; b.setAttribute('aria-pressed', on[i] ? 'true' : 'false');
+      var s = el('svg', { width: 22, height: 22, viewBox: '-11 -11 22 22', 'aria-hidden': 'true' });
+      for (var k = 0; k < cfg.n; k++) { var rr = cfg.r * 1.6 * Math.sqrt((k + 0.5) / cfg.n), th = k * 2.39996; el('circle', { cx: rr * Math.cos(th), cy: rr * Math.sin(th), r: 1.4, fill: i === TIERS.length ? '#7A7F86' : '#C9CDD2' }, s); }
+      b.appendChild(s); b.appendChild(document.createTextNode(cfg.label + '（' + D.factories.filter(function (f) { return f.tier === i; }).length + '）'));
+      b.addEventListener('click', function () { on[i] = !on[i]; legend(); drawDots(); });
+      box.appendChild(b);
+    });
+  }
+
+  function kpis() {
+    var s = D.summary, cc = {};
+    D.factories.forEach(function (f) { cc[f.c] = (cc[f.c] || 0) + 1; });
+    var top = Object.keys(cc).sort(function (a, b) { return cc[b] - cc[a]; })[0];
+    var box = $('kpis'); box.textContent = '';
+    [['鋼鐵工廠', s.factories.toLocaleString() + ' 座', '鋼鐵本業 ' + s.core.toLocaleString() + '・非鋼鐵本業 ' + (s.factories - s.core).toLocaleString()],
+     ['所屬公司／商號', s.companies.toLocaleString() + ' 家', '以統一編號計'],
+     ['資本額合計', Math.round(s.capital / 1e8).toLocaleString() + ' 億元', '同一公司只計一次'],
+     ['工廠最多的縣市', top, cc[top] + ' 座，' + s.counties + ' 個縣市有鋼鐵工廠']].forEach(function (x) {
+      var d = h('div', 'kpi'); d.appendChild(h('span', 'k', x[0])); var v = h('span', 'v mono'), sp = x[1].lastIndexOf(' '); if (sp > 0) { v.appendChild(document.createTextNode(x[1].slice(0, sp))); v.appendChild(h('small', null, x[1].slice(sp + 1))); } else v.textContent = x[1]; d.appendChild(v); d.appendChild(h('span', 's', x[2])); box.appendChild(d);
+    });
+  }
+
+  var openTown = null;
+  // 類別篩選（地圖上方「全部／鋼鐵本業／非鋼鐵本業」、圖例、聚落列的本業／非本業共用同一狀態）
+  function fmode() { return cls.core && !cls.non ? 'core' : cls.non && !cls.core ? 'non' : 'all'; }
+  function okF(f, m) { m = m || fmode(); return m === 'all' || (m === 'core') === f.core; }
+  function setCls(m) {
+    cls.core = m !== 'non'; cls.non = m !== 'core';
+    if (sel && !okF(sel)) closeInfo();
+    legend(); drawDots(); clusters(); syncSeg();
+  }
+  function syncSeg() {
+    var m = cls.core || cls.non ? fmode() : '';
+    Array.prototype.forEach.call($('map-cls').children, function (b) { b.setAttribute('aria-pressed', b.dataset.c === m ? 'true' : 'false'); });
+  }
+  // 各聚落依類別統計（家數、資本額同一公司只計一次）
+  function tstat(t, m) {
+    if (!t._s) {
+      var s = { all: [0, {}], core: [0, {}], non: [0, {}] };
+      D.factories.forEach(function (f) {
+        if (f.c !== t.c || f.t !== t.t) return;
+        [ 'all', f.core ? 'core' : 'non' ].forEach(function (k) { s[k][0]++; if (f.cap) s[k][1][f.tid] = f.cap; });
+      });
+      t._s = {};
+      Object.keys(s).forEach(function (k) { t._s[k] = { n: s[k][0], cap: Object.keys(s[k][1]).reduce(function (a, id) { return a + s[k][1][id]; }, 0) }; });
+    }
+    return t._s[m];
+  }
+  function clusters() {
+    var c = $('county').value, m = fmode(), LBL = { all: '工廠', core: '鋼鐵本業工廠', non: '非鋼鐵本業工廠' }[m];
+    var all = D.towns.filter(function (t) { return (!c || t.c === c) && tstat(t, m).n > 0; })
+      .sort(function (a, b) { return tstat(b, m).n - tstat(a, m).n || tstat(b, m).cap - tstat(a, m).cap; });
+    var list = all.slice(0, c ? 15 : 10);
+    var nf = all.reduce(function (s, t) { return s + tstat(t, m).n; }, 0);
+    $('cl-h').textContent = (c ? c + '・' : '') + '主要聚落' + (m === 'all' ? '' : '（' + (m === 'core' ? '鋼鐵本業' : '非鋼鐵本業') + '）');
+    $('cl-sub').textContent = (c ? c + '共 ' + nf.toLocaleString() + ' 座' + LBL + '，分布於 ' + all.length + ' 個鄉鎮區' + (all.length > list.length ? '，列出前 ' + list.length + ' 個' : '') + '。'
+      : '全台前 ' + list.length + ' 大聚落，依' + LBL + '數排序。') + '點聚落展開個別公司；點「本業／非本業」可篩選。';
+    if (openTown && list.indexOf(openTown) < 0) openTown = null;
+    var ol = $('clusters'); ol.textContent = '';
+    list.forEach(function (t, i) {
+      var st = tstat(t, m), li = h('li'), b = h('button'); b.type = 'button';
+      b.setAttribute('aria-expanded', openTown === t ? 'true' : 'false');
+      b.appendChild(h('span', 'r', String(i + 1).padStart(2, '0')));
+      b.appendChild(h('span', null, t.c === c ? t.t : t.c + t.t));
+      var rt = h('span', 'mono', st.n + ' 座 ' + (openTown === t ? '▴' : '▾')); rt.style.color = m === 'core' ? ORANGE : m === 'non' ? BLUE : '#C9CDD2'; b.appendChild(rt);
+      b.addEventListener('click', function () {
+        openTown = openTown === t ? null : t;
+        if (openTown) { zoomTo(t.x - 40, t.y - 49, 80, 98); showTown(t); }
+        clusters();
+      });
+      li.appendChild(b);
+      // 本業／非本業：可點選篩選（再點一次回到全部），並展開該聚落
+      var sub = h('div', 'cl-sub');
+      [['core', '本業 ' + t.nc, ORANGE, t.nc], ['non', '非本業 ' + (t.n - t.nc), BLUE, t.n - t.nc]].forEach(function (x, j) {
+        if (j) sub.appendChild(document.createTextNode('・'));
+        var fb = h('button', null, x[1]); fb.type = 'button'; fb.style.color = x[2];
+        fb.setAttribute('aria-pressed', m === x[0] ? 'true' : 'false');
+        fb.title = m === x[0] ? '顯示全部' : '只看' + (x[0] === 'core' ? '鋼鐵本業' : '非鋼鐵本業');
+        if (!x[3]) fb.disabled = true;
+        fb.addEventListener('click', function () { openTown = t; if (m !== x[0]) { zoomTo(t.x - 40, t.y - 49, 80, 98); showTown(t); } setCls(m === x[0] ? 'all' : x[0]); });
+        sub.appendChild(fb);
+      });
+      sub.appendChild(document.createTextNode('｜資本額 ' + money(st.cap)));
+      li.appendChild(sub);
+      if (openTown === t) li.appendChild(companies(t));
+      ol.appendChild(li);
+    });
+    // 地圖標籤：前 6 大聚落（全台）或所選縣市前 4
+    var gl = $('g-label'); gl.textContent = '';
+    // 簡易避讓：依序嘗試右、左、右下、右上、左下、左上，避免相鄰聚落標籤重疊
+    var placed = [], OFF = [[9, 4, 'start'], [-9, 4, 'end'], [9, 17, 'start'], [9, -9, 'start'], [-9, 17, 'end'], [-9, -9, 'end']];
+    list.slice(0, c ? 4 : 6).forEach(function (t) {
+      var K = kf(), w = t.t.length * 11 * K, o = OFF[0];
+      for (var k = 0; k < OFF.length; k++) {
+        var x0 = OFF[k][2] === 'start' ? t.x + OFF[k][0] * K : t.x + OFF[k][0] * K - w, y0 = t.y + (OFF[k][1] - 11) * K;
+        var hit = placed.some(function (b) { return x0 < b[2] + 2 && x0 + w > b[0] - 2 && y0 < b[3] + 1 && y0 + 13 * K > b[1] - 1; });
+        if (!hit) { o = OFF[k]; placed.push([x0, y0, x0 + w, y0 + 13 * K]); break; }
+      }
+      var tx = el('text', { x: t.x + o[0], y: t.y + o[1], 'text-anchor': o[2] }, gl);
+      tx.dataset.x = t.x; tx.dataset.y = t.y; tx.dataset.dx = o[0]; tx.dataset.dy = o[1]; tx.textContent = t.t;
+    });
+    rescale();
+  }
+
+  // 聚落內個別公司：同一統一編號合併，依資本額排序；點工廠名稱可在地圖上定位
+  function OK_ST(st) { return !st || st === '核准設立' || st === '核准登記'; }
+  // 定位工廠後，若地圖右下角的資訊卡不在畫面內，捲動到能同時看見地圖與資訊卡
+  function locate(f) {
+    select(f, true);
+    var i = $('info'), r = i.getBoundingClientRect(), m = svg.getBoundingClientRect();
+    if (r.top < 0 || r.bottom > window.innerHeight) window.scrollBy({ top: Math.max(m.top - 8, r.bottom - window.innerHeight + 12), behavior: 'smooth' });
+  }
+
+  function companies(t) {
+    var by = {};
+    D.factories.forEach(function (f) {
+      if (f.c !== t.c || f.t !== t.t || !okF(f)) return;
+      var k = f.tid || f.n;
+      (by[k] = by[k] || { name: f.co || f.n.replace(/(第?[一二三四五六七八九十0-9０-９]+(工)?廠|[一二三四五六七八九十]?分廠)$/, ''), cap: f.cap, st: f.st, biz: !f.co, fs: [] }).fs.push(f);
+    });
+    var cos = Object.keys(by).map(function (k) { return by[k]; }).sort(function (a, b) { return (b.cap || 0) - (a.cap || 0) || b.fs.length - a.fs.length; });
+    var box = h('div', 'cos'), LIM = 12;
+    var m = fmode(), nfac = cos.reduce(function (a, c) { return a + c.fs.length; }, 0);
+    box.appendChild(h('p', 'cos-h', (m === 'all' ? '' : (m === 'core' ? '鋼鐵本業：' : '非鋼鐵本業：')) + cos.length + ' 家公司／商號・' + nfac + ' 座工廠（依資本額排序）'));
+    var ul = h('ul'); box.appendChild(ul);
+    function row(co) {
+      var li = h('li'), core = co.fs.some(function (f) { return f.core; });
+      var top = h('div', 'co-t');
+      var nm = h('b', null, co.name); nm.style.color = core ? ORANGE : BLUE; top.appendChild(nm);
+      top.appendChild(h('span', 'mono', co.biz ? '資本額未查得' : money(co.cap)));
+      li.appendChild(top);
+      var pr = co.fs[0].prod || [];
+      li.appendChild(h('p', 'co-p', (pr.slice(0, 3).join('、') || '—') + (pr.length > 3 ? ' 等' : '') + (OK_ST(co.st) ? '' : '｜公司狀態：' + co.st)));
+      var fl = h('div', 'co-f');
+      co.fs.forEach(function (f) {
+        var fb = h('button', null, f.n); fb.type = 'button'; fb.style.color = f.core ? ORANGE : BLUE;
+        fb.title = f.a; fb.addEventListener('click', function () { locate(f); });
+        fl.appendChild(fb);
+      });
+      li.appendChild(fl); ul.appendChild(li);
+    }
+    cos.slice(0, LIM).forEach(row);
+    if (cos.length > LIM) {
+      var more = h('button', 'co-more', '顯示其餘 ' + (cos.length - LIM) + ' 家'); more.type = 'button';
+      more.addEventListener('click', function () { more.remove(); cos.slice(LIM).forEach(row); });
+      box.appendChild(more);
+    }
+    return box;
+  }
+
+  function showTown(t) {
+    var box = openInfo();
+    box.appendChild(h('p', 'lbl', '聚落'));
+    box.appendChild(h('h3', null, t.c + t.t));
+    var dl = h('dl');
+    [['鋼鐵工廠', t.n + ' 座（鋼鐵本業 ' + t.nc + '・非鋼鐵本業 ' + (t.n - t.nc) + '）'], ['資本額合計', money(t.cap)], ['主要公司', (t.top || []).join('、') || '—']].forEach(function (x) { dl.appendChild(h('dt', null, x[0])); dl.appendChild(h('dd', null, x[1])); });
+    box.appendChild(dl);
+    box.appendChild(h('p', 'more', '個別公司列於「主要聚落」清單；點工廠名稱可在地圖上定位。'));
+  }
+
+  // 資訊卡：嵌在地圖右下角，可關閉（✕ 或 Esc）
+  function openInfo() {
+    var box = $('info'); box.textContent = ''; box.hidden = false;
+    var x = h('button', 'x', '✕'); x.type = 'button'; x.setAttribute('aria-label', '關閉資訊');
+    x.addEventListener('click', closeInfo); box.appendChild(x);
+    box.scrollTop = 0;
+    return box;
+  }
+  function closeInfo() {
+    $('info').hidden = true;
+    if (sel && hits[sel.i]) hits[sel.i].classList.remove('sel');
+    sel = null;
+  }
+  // 標題旁「各縣市鋼鐵工廠」下拉：點外面或 Esc 收合；面板超出視窗右緣時往左移
+  function bindDropdown() {
+    var dd = $('dd-ct'), m = dd.querySelector('.menu');
+    dd.addEventListener('toggle', function () {
+      m.style.left = '0px';
+      if (!dd.open) return;
+      var r = m.getBoundingClientRect(), over = r.right - (document.documentElement.clientWidth - 16);
+      if (over > 0) m.style.left = -Math.min(over, dd.getBoundingClientRect().left - 16) + 'px';
+      m.style.maxHeight = Math.max(320, window.innerHeight - m.getBoundingClientRect().top - 16) + 'px';
+    });
+    document.addEventListener('click', function (e) { if (dd.open && !dd.contains(e.target)) dd.open = false; });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (dd.open) { dd.open = false; dd.querySelector('summary').focus(); } else if (!$('info').hidden) closeInfo();
+    });
+  }
+
+  function select(f, zoom) {
+    if (sel && hits[sel.i]) hits[sel.i].classList.remove('sel');
+    sel = f; if (hits[f.i]) hits[f.i].classList.add('sel');
+    // 資訊卡在右下角：把工廠放在地圖上半部（手機卡片較高，放更上面）
+    if (zoom) zoomTo(f.cx - 30, f.cy - 74 * (svg.clientWidth < 641 ? 0.24 : 0.36), 60, 74);
+    var box = openInfo();
+    box.appendChild(h('p', 'lbl', f.c + ' · ' + f.t));
+    var h3 = h('h3', null, f.n); h3.style.color = f.core ? ORANGE : BLUE; box.appendChild(h3);
+    var tag = h('p', null, f.core ? '鋼鐵本業（主要產品第一項為 241 鋼鐵）' : '非鋼鐵本業（241 鋼鐵為兼營產品）'); tag.style.cssText = 'margin:0;font-size:13px;color:' + (f.core ? ORANGE : BLUE); box.appendChild(tag);
+    var dl = h('dl');
+    var same = D.factories.filter(function (x) { return x.tid === f.tid; }).length;
+    [['地址', f.a], ['主要產品', (f.prod || []).slice(0, 5).join('、') + ((f.prod || []).length > 5 ? ' 等 ' + f.prod.length + ' 項' : '')], ['組織型態', f.org || '—'],
+     ['公司資本額', money(f.cap) + (f.co && f.co !== f.n ? '（' + f.co + '）' : '') + (OK_ST(f.st) ? '' : '・公司狀態：' + f.st)],
+     ['登記核准', dateROC(f.reg)], ['同公司工廠', same + ' 座']].forEach(function (x) { dl.appendChild(h('dt', null, x[0])); dl.appendChild(h('dd', null, x[1])); });
+    box.appendChild(dl);
+    box.appendChild(h('p', 'more', '位置為登記地址所在' + (f.p || '村里') + '的中心點。'));
+  }
+
+  // 各縣市長條圖：可切換工廠家數／資本額，橘色鋼鐵本業、藍色非鋼鐵本業堆疊
+  function bycounty() {
+    var agg = {};
+    D.factories.forEach(function (f) {
+      var a = agg[f.c] || (agg[f.c] = { n: [0, 0], cap: [0, 0], seen: {} });
+      var k = f.core ? 0 : 1; a.n[k]++;
+      var key = f.tid + '|' + k;
+      if (f.cap && !a.seen[key]) { a.seen[key] = 1; a.cap[k] += f.cap; }
+    });
+    var key = barMode === 'cap' ? 'cap' : 'n';
+    var w0 = barCls !== 'non' ? 1 : 0, w1 = barCls !== 'core' ? 1 : 0;
+    var tot = function (k) { return agg[k][key][0] * w0 + agg[k][key][1] * w1; };
+    var ks = Object.keys(agg).filter(function (k) { return tot(k) > 0; }).sort(function (a, b) { return tot(b) - tot(a); });
+    var mx = Math.max.apply(null, ks.map(tot)) || 1;
+    var fmt = function (v) { return barMode === 'cap' ? (v >= 1e8 ? Math.round(v / 1e8).toLocaleString() + ' 億' : v >= 1e7 ? (v / 1e8).toFixed(1) + ' 億' : Math.round(v / 1e4).toLocaleString() + ' 萬') : v.toLocaleString(); };
+    var box = $('bycounty'); box.textContent = '';
+    ks.forEach(function (k) {
+      var v = [agg[k][key][0] * w0, agg[k][key][1] * w1], sum = v[0] + v[1];
+      var b = h('button', 'cbar'); b.type = 'button';
+      b.title = k + '：' + [w0 ? '鋼鐵本業 ' + fmt(v[0]) : '', w1 ? '非鋼鐵本業 ' + fmt(v[1]) : ''].filter(Boolean).join('、') + (barMode === 'cap' ? '元' : ' 座');
+      b.appendChild(h('span', null, k));
+      var tr = h('span', 'tr');
+      var f1 = h('span', 'fi'); f1.style.width = (v[0] / mx * 100).toFixed(2) + '%';
+      var f2 = h('span', 'fi nb'); f2.style.width = (v[1] / mx * 100).toFixed(2) + '%';
+      tr.appendChild(f1); tr.appendChild(f2); b.appendChild(tr);
+      b.appendChild(h('span', 'v', fmt(sum)));
+      b.addEventListener('click', function () { $('county').value = k; onCounty(); $('dd-ct').open = false; $('map').scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+      box.appendChild(b);
+    });
+    $('ct-h').textContent = '各縣市' + ({ all: '鋼鐵工廠', core: '鋼鐵本業工廠', non: '非鋼鐵本業工廠' })[barCls] + (barMode === 'cap' ? '資本額' : '家數');
+    Array.prototype.forEach.call(document.querySelectorAll('#bar-cls button'), function (x) { x.setAttribute('aria-pressed', x.dataset.c === barCls ? 'true' : 'false'); });
+    $('ct-note').textContent = barMode === 'cap' ? '資本額單位：億元（未滿 1,000 萬元以萬元表示）。同一縣市內同一公司（同一類別）只計一次；同一公司在不同縣市都有工廠時，各縣市都會計入。' : '單位：座。';
+    Array.prototype.forEach.call(document.querySelectorAll('#bar-mode button'), function (x) { x.setAttribute('aria-pressed', x.dataset.m === barMode ? 'true' : 'false'); });
+  }
+
+  function counties() {
+    var s = $('county'), have = {};
+    D.factories.forEach(function (f) { have[f.c] = 1; });
+    G.counties.map(function (c) { return c.n; }).filter(function (n) { return have[n]; }).sort().forEach(function (n) { var o = h('option', null, n); o.value = n; s.appendChild(o); });
+    s.addEventListener('change', onCounty);
+  }
+  function onCounty() {
+    var c = $('county').value;
+    Array.prototype.forEach.call($('g-county').children, function (p) { p.classList.toggle('on', p.dataset.n === c); });
+    clusters(); search(); closeInfo();
+    if (!c) { reset(); return; }
+    var p = Array.prototype.filter.call($('g-county').children, function (p) { return p.dataset.n === c; })[0];
+    if (p) { var b = p.getBBox(); zoomTo(b.x - 6, b.y - 6, b.width + 12, b.height + 12); }
+  }
+
+  function bindSearch() { $('q').addEventListener('input', search); }
+  function search() {
+    var q = $('q').value.trim(), c = $('county').value, box = $('results');
+    if (!q) { box.hidden = true; return; }
+    var list = D.factories.filter(function (f) { return (!c || f.c === c) && (f.n + (f.co || '') + f.c + f.t + f.a).indexOf(q) >= 0; })
+      .sort(function (a, b) { return (b.cap || 0) - (a.cap || 0); });
+    box.textContent = ''; box.hidden = false;
+    if (!list.length) { box.appendChild(h('p', 'flat', '沒有符合的工廠。')).style.cssText = 'margin:0;padding:12px;font-size:14px'; return; }
+    list.slice(0, 60).forEach(function (f) {
+      var b = h('button'); b.type = 'button'; var nm = h('span', null, f.n); nm.style.color = f.core ? ORANGE : BLUE; b.appendChild(nm);
+      b.appendChild(h('small', null, f.c + f.t + '・' + money(f.cap)));
+      b.addEventListener('click', function () { locate(f); });
+      box.appendChild(b);
+    });
+    if (list.length > 60) box.appendChild(h('p', 'flat', '另有 ' + (list.length - 60) + ' 座，請輸入更精確的關鍵字。')).style.cssText = 'margin:0;padding:10px 12px;font-size:12px';
+  }
+
+  // —— 縮放與拖曳（調整 viewBox）——
+  function apply() { svg.setAttribute('viewBox', [view.x, view.y, view.w, view.h].map(function (v) { return v.toFixed(2); }).join(' ')); if (groups.length) rescale(); }
+  function zoomTo(x, y, w, hh) {
+    var ar = full.w / full.h;
+    if (w / hh > ar) { var nh = w / ar; y -= (nh - hh) / 2; hh = nh; } else { var nw = hh * ar; x -= (nw - w) / 2; w = nw; }
+    view = { x: x, y: y, w: w, h: hh }; apply();
+  }
+  function reset() { view = { x: 0, y: 0, w: full.w, h: full.h }; apply(); }
+  function zoomBy(k, cx, cy) {
+    var nw = Math.max(20, Math.min(full.w * 1.2, view.w * k)), r = nw / view.w;
+    if (cx == null) { cx = view.x + view.w / 2; cy = view.y + view.h / 2; }
+    view = { x: cx - (cx - view.x) * r, y: cy - (cy - view.y) * r, w: nw, h: view.h * r }; apply();
+  }
+  function pt(e) { var r = svg.getBoundingClientRect(); return { x: view.x + (e.clientX - r.left) / r.width * view.w, y: view.y + (e.clientY - r.top) / r.height * view.h }; }
+  function bindZoom() {
+    $('zin').onclick = function () { zoomBy(0.6); };
+    $('zout').onclick = function () { zoomBy(1 / 0.6); };
+    $('zreset').onclick = function () { $('county').value = ''; onCounty(); };
+    svg.addEventListener('wheel', function (e) { e.preventDefault(); var p = pt(e); zoomBy(e.deltaY > 0 ? 1.2 : 1 / 1.2, p.x, p.y); }, { passive: false });
+    var ptrs = {}, last = null, pinch = null, moved = false;
+    svg.addEventListener('pointerdown', function (e) { ptrs[e.pointerId] = e; last = e; moved = false; });
+    svg.addEventListener('pointermove', function (e) {
+      if (!ptrs[e.pointerId]) return;
+      ptrs[e.pointerId] = e;
+      var ids = Object.keys(ptrs), r = svg.getBoundingClientRect();
+      if (ids.length === 2) {
+        var a = ptrs[ids[0]], b = ptrs[ids[1]], d = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
+        if (pinch) { var m = pt({ clientX: (a.clientX + b.clientX) / 2, clientY: (a.clientY + b.clientY) / 2 }); zoomBy(pinch / d, m.x, m.y); }
+        pinch = d; moved = true; return;
+      }
+      if (last) {
+        var dx = (e.clientX - last.clientX) / r.width * view.w, dy = (e.clientY - last.clientY) / r.height * view.h;
+        if (!moved && Math.abs(e.clientX - last.clientX) + Math.abs(e.clientY - last.clientY) > 3) { moved = true; try { svg.setPointerCapture(e.pointerId); } catch (x) {} svg.classList.add('drag'); }
+        if (!moved) return;
+        view.x -= dx; view.y -= dy; apply();
+      }
+      last = e;
+    });
+    function up(e) { delete ptrs[e.pointerId]; if (Object.keys(ptrs).length < 2) pinch = null; last = null; svg.classList.remove('drag'); }
+    svg.addEventListener('pointerup', up); svg.addEventListener('pointercancel', up);
+    svg.addEventListener('click', function (e) { if (moved) { e.stopPropagation(); e.preventDefault(); } }, true);
+  }
+})();
+</script>
+<script src="assets/hover.js" defer></script>
+</body>
+</html>

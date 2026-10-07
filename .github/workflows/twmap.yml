@@ -1,0 +1,37 @@
+name: 更新台灣鋼鐵地圖
+
+on:
+  schedule:
+    # 每年元旦台北時間 00:10（UTC 12 月 31 日 16:10）
+    - cron: "10 16 31 12 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: twmap
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 tools/build_twmap.py
+      - name: 提交更新
+        run: |
+          git config user.name "steeltrending"
+          git config user.email "noreply@steeltrending.github.io"
+          git add data/twsteelmap.json
+          if git diff --cached --quiet; then echo "沒有新資料"; exit 0; fi
+          git commit -m "台灣鋼鐵地圖年度更新 $(TZ=Asia/Taipei date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep 5
+          done
+          exit 1
