@@ -1,3 +1,0 @@
-Page.goto: Timeout 90000ms exceeded.
-Call log:
-  - navigating to "https://www.lme.com/en/metals/ferrous/lme-steel-scrap-cfr-turkey-platts", waiting until "networkidle"
