@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "2026-10-china-property-q3",
+   "category": "demand",
+   "title": "中國房市第三季：新開工跌兩成五、二手房反超新房，8·28 新政改寫遊戲規則",
+   "period": "2026-Q3",
+   "published": "2026-10-07",
+   "summary": "前 8 月中國房地產開發投資年減 19.9%、新開工年減 24.8%，二手房網簽面積首度超過新房；8·28 銷售與房貸制度改革、首套房貸貼息上路，建築用鋼持續縮減。",
+   "tags": [
+    "中國",
+    "房地產",
+    "新開工",
+    "現房銷售",
+    "房貸貼息",
+    "螺紋鋼"
+   ],
+   "image": "assets/articles/2026-10-china-property-q3-dalian.jpg",
+   "url": "articles/2026-10-china-property-q3.html"
+  },
+  {
    "id": "2026-10-csc-fin-2025",
    "category": "csc",
    "title": "中鋼 2025 財報分析：營收少一成二、本業轉虧，每股虧損 0.29 元",
