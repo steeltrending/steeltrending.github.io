@@ -1,14 +1,1 @@
-{
- "urls": {
-  "dg_138381.json": "https://data.gov.tw/api/v2/rest/dataset/138381",
-  "dg_108337.json": "https://data.gov.tw/api/v2/rest/dataset/108337",
-  "dg_108339.json": "https://data.gov.tw/api/v2/rest/dataset/108339",
-  "dg_22296.json": "https://data.gov.tw/api/v2/rest/dataset/22296",
-  "dg_22294.json": "https://data.gov.tw/api/v2/rest/dataset/22294",
-  "dg_108349.json": "https://data.gov.tw/api/v2/rest/dataset/108349",
-  "dg_154956.json": "https://data.gov.tw/api/v2/rest/dataset/154956",
-  "dg_13861.json": "https://data.gov.tw/api/v2/rest/dataset/13861",
-  "twse_L.json": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
-  "tpex_O.json": "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O"
- }
-}
+{"urls": {"gcis_redirect.json": "https://data.gcis.nat.gov.tw/resources/swagger/redirect.json", "gcis_swagger.json": "https://data.gcis.nat.gov.tw/resources/swagger/swagger.json", "gcis_api_doc.html": "https://data.gcis.nat.gov.tw/od/rule"}}
