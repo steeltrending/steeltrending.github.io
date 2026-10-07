@@ -1,0 +1,44 @@
+name: 更新原料與鋼價歷史
+
+on:
+  schedule:
+    # 台北時間 15:50（大連、上海收盤後）、20:50（SGX 結算價公布後）、隔日 07:50（補收 LME 與看板更新）
+    - cron: "50 7 * * *"
+    - cron: "50 12 * * *"
+    - cron: "50 23 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/fetch_futures.py
+      - .github/workflows/futures-history.yml
+      - data/latest.json
+
+permissions:
+  contents: write
+
+concurrency:
+  group: futures-history
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 tools/fetch_futures.py
+      - name: 提交更新
+        run: |
+          git config user.name "steeltrending"
+          git config user.email "noreply@steeltrending.github.io"
+          git add data/futures
+          if git diff --cached --quiet; then echo "沒有新資料"; exit 0; fi
+          git commit -m "原料與鋼價歷史自動更新 $(TZ=Asia/Taipei date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep 5
+          done
+          exit 1
