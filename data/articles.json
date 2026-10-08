@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "2026-10-csc-fastener-ife",
+   "category": "trade",
+   "title": "從台灣製造到台灣創造：中鋼在鳳凰城談扣件業的五個轉變",
+   "period": "2026-10",
+   "published": "2026-10-08",
+   "summary": "中鋼技術部門助理副總經理吳崇勇隨台灣扣件國家隊赴美國鳳凰城 IFE，提出扣件業五個轉變；台灣對美出口創新高，扣件卻仍受 232 條款 50% 關稅壓制，量縮價升。",
+   "tags": [
+    "中鋼",
+    "扣件",
+    "螺絲",
+    "IFE",
+    "232 條款",
+    "台美貿易"
+   ],
+   "image": "assets/articles/2026-10-csc-fastener-ife-wu.jpg",
+   "url": "articles/2026-10-csc-fastener-ife.html"
+  },
+  {
    "id": "2026-10-china-property-q3",
    "category": "demand",
    "title": "中國房市第三季：新開工跌兩成五、二手房反超新房，8·28 新政改寫遊戲規則",
