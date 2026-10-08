@@ -9,6 +9,7 @@ on:
       - "data/articles.json"
       - tools/build_sitemap.py
       - assets/sitemap.css
+      - tools/article_qr.py
   workflow_dispatch:
 
 permissions:
@@ -25,14 +26,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: 文章文末 QR Code
+        run: |
+          pip install -q segno pillow zxing-cpp
+          python3 tools/article_qr.py
       - run: python3 tools/build_sitemap.py
       - name: 提交更新
         run: |
           git config user.name "steeltrending"
           git config user.email "noreply@steeltrending.github.io"
-          git add sitemap.xml robots.txt
+          git add sitemap.xml robots.txt articles assets/qr
           if git diff --cached --quiet; then echo "沒有變動"; exit 0; fi
-          git commit -m "sitemap.xml 自動更新 $(TZ=Asia/Taipei date +%F)"
+          git commit -m "sitemap.xml／文章 QR 自動更新 $(TZ=Asia/Taipei date +%F)"
           for i in 1 2 3; do
             git pull --rebase origin main && git push origin main && exit 0
             sleep 5
