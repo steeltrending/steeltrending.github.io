@@ -1,12 +1,5 @@
-{"search": [
- "filetype:bitmap Valemax ore carrier",
- "filetype:bitmap capesize bulk carrier iron ore",
- "filetype:bitmap Port Hedland ship loader",
- "filetype:bitmap Ponta da Madeira port ship",
- "filetype:bitmap Hay Point coal terminal",
- "filetype:bitmap scrap metal loading ship port",
- "filetype:bitmap scrap metal bulk carrier",
- "filetype:bitmap Dampier iron ore ship",
- "filetype:bitmap Westshore Terminals coal",
- "filetype:bitmap Kaohsiung port bulk carrier"
-]}
+{"download": {
+ "File:Vale Sohar in Nantong.jpg": "valemax.jpg",
+ "File:Alpha Millennium departs Port Hedland, 2012 (1).JPG": "hedland.jpg",
+ "File:Atilla (IMO 9579339) in Liverpool.jpg": "scrapship.jpg"
+}}
