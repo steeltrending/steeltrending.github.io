@@ -1,7 +1,7 @@
 name: tmp-photos
 on:
   push:
-    branches: [tmp-photos]
+    branches: [tmp-photos-ship]
 permissions:
   contents: write
 jobs:
