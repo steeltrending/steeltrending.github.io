@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-08T18:38:13+08:00",
+  "updated": "2026-10-08T18:42:51+08:00",
   "social": { "date": "2026-10-08" },
   "items": [
     { "key": "sgx_iron_ore", "name": "鐵礦砂", "contract": "SGX 62% Fe 鐵礦砂期貨 近月", "price": 91.15, "change": -0.13, "unit": "USD/t", "asof": "2026-10-07" },
     { "key": "dce_iron_ore", "name": "鐵礦石", "contract": "大連商品交易所 鐵礦石期貨 主力", "price": 682.5, "change": -22, "unit": "CNY/t", "asof": "2026-10-08" },
     { "key": "dce_coking_coal", "name": "焦煤", "contract": "大連商品交易所 焦煤期貨 主力", "price": 1476, "change": 30, "unit": "CNY/t", "asof": "2026-10-08" },
-    { "key": "lme_scrap", "name": "廢鋼", "contract": "LME 廢鋼期貨（土耳其 HMS 1&2 80:20 CFR）近月", "price": 395, "change": -2.5, "unit": "USD/t", "asof": "2026-10-05" },
+    { "key": "lme_scrap", "name": "廢鋼", "contract": "LME 廢鋼期貨（土耳其 HMS 1&2 80:20 CFR）近月", "price": 396.5, "change": 1.5, "unit": "USD/t", "asof": "2026-10-07" },
     { "key": "shfe_hrc", "name": "熱軋卷板", "contract": "上海期貨交易所 熱軋卷板期貨 主力", "price": 3242, "change": -40, "unit": "CNY/t", "asof": "2026-10-08" }
   ]
 }
