@@ -14,6 +14,12 @@
 
 輸出格式：{"key","name","contract","unit","price_type","source","updated","points":[["YYYY-MM-DD", price], ...]}
 只新增或修正日期，不刪除既有資料點；抓取失敗時保留既有檔案。
+
+收盤後同步首頁看板（data/latest.json）：歷史資料若出現比看板更新的交易日，
+就把看板該品項換成最新一筆，讓看板在收盤後自動更新，不必等隔天早上的排程任務。
+- 大連／上海：price = 收盤價，change = 收盤價 − 前一交易日結算價（新浪 K 線的 s 欄；缺值時改用前一日收盤價）
+- SGX：price = 官方每日結算價，change = 與前一交易日結算價之差
+- LME 廢鋼無程式來源，不由此處更新。
 """
 import datetime as dt
 import json
@@ -46,6 +52,7 @@ META = {
 }
 ORDER = ["sgx_iron_ore", "dce_iron_ore", "dce_coking_coal", "lme_scrap", "shfe_hrc"]
 MONTH_CODE = "FGHJKMNQUVXZ"
+SETTLE = {}  # 新浪 K 線的每日結算價，{symbol: {date: settle}}，供看板計算漲跌
 
 
 def log(*a):
@@ -62,7 +69,9 @@ def sina(symbol):
            "InnerFuturesNewService.getDailyKLine?symbol={0}").format(symbol)
     txt = get(url)
     rows = json.loads(txt[txt.index("(") + 1:txt.rindex(")")])
-    return {r["d"]: round(float(r["c"]), 2) for r in rows if r["d"] >= START and float(r["c"]) > 0}
+    rows = [r for r in rows if r["d"] >= START and float(r["c"]) > 0]
+    SETTLE[symbol] = {r["d"]: round(float(r["s"]), 2) for r in rows if r.get("s") and float(r["s"]) > 0}
+    return {r["d"]: round(float(r["c"]), 2) for r in rows}
 
 
 def sgx_front_month(today):
@@ -135,8 +144,65 @@ def save(key, pts):
     log("  %s：%d 筆，最後 %s" % (key, len(out["points"]), out["points"][-1] if out["points"] else "—"))
 
 
+def num(v):
+    return int(v) if isinstance(v, float) and v.is_integer() else v
+
+
+def board_json(board):
+    """沿用 latest.json 原本的排版：每個品項一行。"""
+    lines = ["{", '  "updated": %s,' % json.dumps(board.get("updated")),
+             '  "social": %s,' % json.dumps(board.get("social", {}), ensure_ascii=False, separators=(", ", ": ")).replace("{", "{ ").replace("}", " }"),
+             '  "items": [']
+    items = board.get("items", [])
+    for i, it in enumerate(items):
+        it = {k: num(v) for k, v in it.items()}
+        body = json.dumps(it, ensure_ascii=False, separators=(", ", ": "))
+        lines.append("    { " + body[1:-1] + " }" + ("," if i < len(items) - 1 else ""))
+    lines += ["  ]", "}"]
+    extra = {k: v for k, v in board.items() if k not in ("updated", "social", "items")}
+    if extra:  # 若日後新增欄位，退回一般格式以免遺失
+        return json.dumps(board, ensure_ascii=False, indent=2) + "\n"
+    return "\n".join(lines) + "\n"
+
+
+def sync_board(series):
+    """把歷史資料中比看板更新的交易日寫回 data/latest.json（只動 price／change／asof 與 updated）。"""
+    try:
+        board = json.load(open(LATEST, encoding="utf-8"))
+    except Exception as e:  # noqa: BLE001
+        log("  看板讀取失敗，略過同步：%s" % e)
+        return
+    changed = []
+    for it in board.get("items", []):
+        key = it.get("key")
+        pts = series.get(key)
+        if key == "lme_scrap" or not pts:
+            continue
+        dates = sorted(pts)
+        last = dates[-1]
+        if it.get("asof") and str(it["asof"])[:10] >= last:
+            continue
+        price = pts[last]
+        prev = dates[-2] if len(dates) > 1 else None
+        change = None
+        if prev:
+            sym = META[key].get("sina")
+            base = SETTLE.get(sym, {}).get(prev) if sym else None
+            change = round(price - (base if base else pts[prev]), 2)
+        it.update(price=price, change=change, asof=last)
+        changed.append("%s %s %s" % (key, last, price))
+    if not changed:
+        log("  看板無需更新")
+        return
+    board["updated"] = dt.datetime.now(TPE).replace(microsecond=0).isoformat()
+    with open(LATEST, "w", encoding="utf-8") as f:
+        f.write(board_json(board))
+    log("  看板已更新：" + "；".join(changed))
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
+    series = {}
     today = dt.datetime.now(TPE).date()
     for key in ORDER:
         m = META[key]
@@ -162,6 +228,7 @@ def main():
                 continue
             pts[d] = v
         save(key, pts)
+        series[key] = pts
     # 索引：品項順序與中繼資料，供列表頁使用
     idx = {"updated": dt.datetime.now(TPE).replace(microsecond=0).isoformat(),
            "items": [dict(key=k, **{x: META[k][x] for x in ("name", "contract", "unit", "group", "exchange", "price_type")})
@@ -169,6 +236,7 @@ def main():
     with open(os.path.join(OUT, "index.json"), "w", encoding="utf-8") as f:
         json.dump(idx, f, ensure_ascii=False, indent=1)
         f.write("\n")
+    sync_board(series)
 
 
 if __name__ == "__main__":

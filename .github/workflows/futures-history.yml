@@ -2,8 +2,11 @@ name: 更新原料與鋼價歷史
 
 on:
   schedule:
-    # 台北時間 15:50（大連、上海收盤後）、20:50（SGX 結算價公布後）、隔日 07:50（補收 LME 與看板更新）
+    # 台北時間 15:50、17:20（大連、上海收盤後；新浪日 K 有時較晚更新，17:20 補抓）、
+    # 20:50（SGX 結算價公布後）、隔日 07:50（補收 LME 與看板更新）
+    # 每次執行後若有新交易日，會同步更新首頁看板 data/latest.json
     - cron: "50 7 * * *"
+    - cron: "20 9 * * *"
     - cron: "50 12 * * *"
     - cron: "50 23 * * *"
   workflow_dispatch:
@@ -34,7 +37,7 @@ jobs:
         run: |
           git config user.name "steeltrending"
           git config user.email "noreply@steeltrending.github.io"
-          git add data/futures
+          git add data/futures data/latest.json
           if git diff --cached --quiet; then echo "沒有新資料"; exit 0; fi
           git commit -m "原料與鋼價歷史自動更新 $(TZ=Asia/Taipei date +%F)"
           for i in 1 2 3; do
