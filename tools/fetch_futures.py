@@ -9,8 +9,9 @@
   每個交易日取「當月到期」那一口合約（即近月），串成連續序列。
 - 大連鐵礦石、大連焦煤、上海熱軋卷板（主力）：新浪財經期貨主力連續日 K 線的收盤價
   （與首頁看板一致）。
-- LME 廢鋼（近月）：LME 與各大報價網站不開放程式讀取，無法回補歷史；
-  改為每天從首頁看板 data/latest.json 收進當日價格，逐日累積。
+- LME 廢鋼（近月）：Metal Radar 公開頁面的 LME Steel Scrap CFR Turkey 當月合約 Official close
+  （頁面顯示前一個 LME 交易日的價格，日期取自頁面說明「price of <日期>」）；無法回補歷史，
+  逐日累積，另外也從首頁看板 data/latest.json 收進當日價格。
 
 輸出格式：{"key","name","contract","unit","price_type","source","updated","points":[["YYYY-MM-DD", price], ...]}
 只新增或修正日期，不刪除既有資料點；抓取失敗時保留既有檔案。
@@ -19,7 +20,7 @@
 就把看板該品項換成最新一筆，讓看板在收盤後自動更新，不必等隔天早上的排程任務。
 - 大連／上海：price = 收盤價，change = 收盤價 − 前一交易日結算價（新浪 K 線的 s 欄；缺值時改用前一日收盤價）
 - SGX：price = 官方每日結算價，change = 與前一交易日結算價之差
-- LME 廢鋼無程式來源，不由此處更新。
+- LME 廢鋼：price = Metal Radar Official close，change = 與歷史前一筆的差
 """
 import datetime as dt
 import json
@@ -45,7 +46,7 @@ META = {
                         "source": "新浪財經 大連焦煤期貨主力連續（JM0）日 K 線收盤價"},
     "lme_scrap": {"name": "廢鋼", "contract": "LME 廢鋼期貨（土耳其 HMS 1&2 80:20 CFR）近月", "unit": "USD/t", "group": "原料",
                   "exchange": "倫敦金屬交易所 LME", "price_type": "每日價格",
-                  "source": "鋼鐵潮流每日看板紀錄（LME 不開放程式讀取歷史資料，自 2026-10-02 起逐日累積）"},
+                  "source": "Metal Radar 公開頁面 LME 廢鋼當月合約 Official close（自 2026-10-02 起逐日累積）"},
     "shfe_hrc": {"name": "熱軋卷板", "contract": "上海期貨交易所 熱軋卷板期貨 主力", "unit": "CNY/t", "group": "鋼材",
                  "exchange": "上海期貨交易所 SHFE", "price_type": "收盤價", "sina": "HC0",
                  "source": "新浪財經 上海熱軋卷板期貨主力連續（HC0）日 K 線收盤價"},
@@ -102,6 +103,28 @@ def sgx_front_month(today):
         if m > 12:
             y, m = y + 1, 1
     return pts
+
+
+MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august",
+          "september", "october", "november", "december"]
+
+
+def metalradar_scrap(today):
+    """LME 廢鋼當月合約 Official close：回傳 {交易日: 價格}。"""
+    import re
+    url = ("https://metalradar.com/price/steel-scrap-cfr-turkey/lme/%s-%d-forward/official-close"
+           % (MONTHS[today.month - 1], today.year))
+    html = get(url)
+    m = re.search(r'price of ([A-Z][a-z]{2}) (\d{1,2}), (\d{4})', html)
+    v = re.search(r'data-test="seo-current-price">\$([\d,]+(?:\.\d+)?)<', html)
+    if not m or not v:
+        raise ValueError("Metal Radar 頁面格式改變，找不到日期或價格")
+    d = dt.datetime.strptime("%s %s %s" % m.groups(), "%b %d %Y").date()
+    price = float(v.group(1).replace(",", ""))
+    if not 100 < price < 1500 or (today - d).days > 10:
+        raise ValueError("Metal Radar 數值不合理：%s %s" % (d, price))
+    log("  Metal Radar LME 廢鋼：%s %s" % (d, price))
+    return {d.isoformat(): price}
 
 
 def from_latest(key):
@@ -176,7 +199,7 @@ def sync_board(series):
     for it in board.get("items", []):
         key = it.get("key")
         pts = series.get(key)
-        if key == "lme_scrap" or not pts:
+        if not pts:
             continue
         dates = sorted(pts)
         last = dates[-1]
@@ -212,6 +235,8 @@ def main():
                 new = sgx_front_month(today)
             elif m.get("sina"):
                 new = sina(m["sina"])
+            elif key == "lme_scrap":
+                new = metalradar_scrap(today)
             else:
                 new = {}
         except Exception as e:  # noqa: BLE001
