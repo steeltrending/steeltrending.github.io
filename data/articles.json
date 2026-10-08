@@ -1,6 +1,25 @@
 {
  "items": [
   {
+   "id": "2026-10-raw-material-shipping",
+   "category": "steel101",
+   "title": "原料怎麼漂洋過海：鐵礦砂、廢鋼、焦煤的海運路線與進出口版圖",
+   "period": "2026-10",
+   "published": "2026-10-08",
+   "summary": "鋼鐵小學堂：2025 年海運鐵礦砂 17.7 億噸，澳洲、巴西供應近八成、中國吃下四分之三。一張地圖看懂鐵礦砂、廢鋼、焦煤的出口國、進口國、主要航線、船型與運費，以及好望角、龍目海峽等咽喉點。",
+   "tags": [
+    "鐵礦砂",
+    "廢鋼",
+    "焦煤",
+    "海運",
+    "海岬型",
+    "Valemax",
+    "土耳其"
+   ],
+   "image": "assets/articles/2026-10-raw-material-shipping-valemax.jpg",
+   "url": "articles/2026-10-raw-material-shipping.html"
+  },
+  {
    "id": "2026-10-csc-fastener-ife",
    "category": "trade",
    "title": "從台灣製造到台灣創造：中鋼在鳳凰城談扣件業的五個轉變",
