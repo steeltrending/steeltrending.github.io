@@ -10,6 +10,8 @@ on:
       - tools/build_sitemap.py
       - assets/sitemap.css
       - tools/article_qr.py
+      - tools/article_tts.py
+      - assets/tts.js
   workflow_dispatch:
 
 permissions:
@@ -30,6 +32,8 @@ jobs:
         run: |
           pip install -q segno pillow zxing-cpp
           python3 tools/article_qr.py
+      - name: 文章語音朗讀
+        run: python3 tools/article_tts.py
       - run: python3 tools/build_sitemap.py
       - name: 提交更新
         run: |
