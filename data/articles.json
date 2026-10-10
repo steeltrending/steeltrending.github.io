@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "2026-10-us-steel-sep",
+   "category": "mills",
+   "title": "美國鋼市 9 月觀察：產能利用率衝上四年高點，熱軋價格年初至今漲近三成",
+   "period": "2026-09",
+   "published": "2026-10-10",
+   "summary": "美國 9 月粗鋼產能利用率一度達 82.3%，為 2022 年 5 月以來最高；Nucor 熱軋現貨價 10 月 5 日升至每短噸 1,230 美元，較年初漲約 29%。232 關稅擋住進口，前 8 月成品鋼進口年減 18.5%，但 8 月進口已連兩月回升。",
+   "tags": [
+    "美國",
+    "Nucor",
+    "熱軋鋼捲",
+    "產能利用率",
+    "232關稅",
+    "進口"
+   ],
+   "image": "assets/articles/2026-10-us-steel-sep-gary.jpg",
+   "url": "articles/2026-10-us-steel-sep.html"
+  },
+  {
    "id": "2026-10-gfsec-milwaukee",
    "category": "trade",
    "title": "密爾瓦基框架：28 個經濟體聯手對付鋼鐵過剩，會議落幕、執法才開始",
