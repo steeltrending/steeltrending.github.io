@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "2026-10-gfsec-milwaukee",
+   "category": "trade",
+   "title": "密爾瓦基框架：28 個經濟體聯手對付鋼鐵過剩，會議落幕、執法才開始",
+   "period": "2026-10",
+   "published": "2026-10-10",
+   "summary": "全球鋼鐵過剩產能論壇 9 月 30 日在密爾瓦基通過《聯合行動綜合框架》，28 個成員將以主動反傾銷、轉運稽查與資料共享因應 2028 年恐達 7.45 億噸的過剩產能。台灣不是成員，出口要面對更嚴的原產地追查，內銷則可能承接被擋下的低價鋼材。",
+   "tags": [
+    "GFSEC",
+    "密爾瓦基框架",
+    "過剩產能",
+    "反傾銷",
+    "熔鑄地",
+    "轉運"
+   ],
+   "image": "assets/articles/2026-10-gfsec-milwaukee-lakefront.jpg",
+   "url": "articles/2026-10-gfsec-milwaukee.html"
+  },
+  {
    "id": "2026-10-raw-material-shipping",
    "category": "steel101",
    "title": "原料怎麼漂洋過海：鐵礦砂、廢鋼、焦煤的海運路線與進出口版圖",
