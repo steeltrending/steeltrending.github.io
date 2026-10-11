@@ -1,6 +1,25 @@
 {
  "items": [
   {
+   "id": "2026-10-port-to-blast-furnace",
+   "category": "steel101",
+   "title": "進爐之前：鐵礦、焦煤與石灰從港口到高爐的處理流程",
+   "period": "2026-10",
+   "published": "2026-10-12",
+   "summary": "鋼鐵小學堂：從港口卸船、堆置混勻，到鐵礦燒結與造球、煤煉成焦炭、石灰石與生石灰處理，再到爐前篩分與爐頂佈料，一次看懂高爐進料前的完整流程。",
+   "tags": [
+    "燒結",
+    "球團",
+    "焦炭",
+    "石灰",
+    "高爐",
+    "爐前料倉",
+    "中鋼"
+   ],
+   "image": "assets/articles/2026-10-port-to-blast-furnace-unload.jpg",
+   "url": "articles/2026-10-port-to-blast-furnace.html"
+  },
+  {
    "id": "2026-10-iran-steel-sep",
    "category": "mills",
    "title": "伊朗鋼鐵 9 月觀察：戰火七個月，中東產量降幅收斂，鋼胚出口改走陸路",
