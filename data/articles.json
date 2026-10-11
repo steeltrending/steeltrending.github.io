@@ -1,6 +1,25 @@
 {
  "items": [
   {
+   "id": "2026-10-eu-steel-sep",
+   "category": "mills",
+   "title": "歐洲鋼市 9 月觀察：熱軋價格一年多漲近三成，產量仍停在谷底",
+   "period": "2026-09",
+   "published": "2026-10-11",
+   "summary": "北歐熱軋鋼捲 9 月 28 日報每公噸 745 歐元，比一年前高約 29%；但歐盟 1–8 月粗鋼產量 8,450 萬噸、年減 0.3%，EUROFER 把今年用鋼量預測下修到僅增 0.1%。漲價來自配額新制、CBAM、鋼廠停產與能源成本，而非需求。",
+   "tags": [
+    "歐洲",
+    "歐盟",
+    "熱軋鋼捲",
+    "EUROFER",
+    "配額",
+    "CBAM",
+    "Taranto"
+   ],
+   "image": "assets/articles/2026-10-eu-steel-sep-eisen.jpg",
+   "url": "articles/2026-10-eu-steel-sep.html"
+  },
+  {
    "id": "2026-10-us-steel-sep",
    "category": "mills",
    "title": "美國鋼市 9 月觀察：產能利用率衝上四年高點，熱軋價格年初至今漲近三成",
