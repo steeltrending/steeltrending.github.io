@@ -1,12 +1,8 @@
-{"search": [
- "filetype:bitmap ship unloader bulk",
- "filetype:bitmap bucket wheel reclaimer",
- "filetype:bitmap stacker coal stockpile",
- "filetype:bitmap sinter strand iron ore",
- "filetype:bitmap coking plant coke oven",
- "filetype:bitmap coke oven door charging car",
- "filetype:bitmap coal handling terminal conveyor ship",
- "filetype:bitmap lime kiln shaft",
- "filetype:bitmap quicklime",
- "filetype:bitmap coke dry quenching"
-]}
+{"download": {
+ "File:Bulk cargo ship - geograph.org.uk - 1719945.jpg": "unload.jpg",
+ "File:ArcelorMittal Fos-sur-Mer Reclaimer à minerai.jpg": "reclaimer.jpg",
+ "File:Quenching coke at South Bank coking plant – 2004 - geograph.org.uk - 7748639.jpg": "quench.jpg",
+ "File:Lime plant, Wyoming.jpg": "limekiln.jpg",
+ "File:Ferrexpo pellets.jpg": "pellets.jpg",
+ "File:Material Supply to blast furnace 2012-06-23.jpg": "stockhouse.jpg"
+}}
