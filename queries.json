@@ -1,12 +1,12 @@
 {"search": [
- "filetype:bitmap grab ship unloader iron ore bulk carrier",
- "filetype:bitmap stacker reclaimer stockpile",
- "filetype:bitmap coke oven battery pushing coke",
- "filetype:bitmap coke quenching tower",
- "filetype:bitmap sinter plant sintering machine",
- "filetype:bitmap lime kiln rotary kiln",
- "filetype:bitmap iron ore pellets",
- "filetype:bitmap coke metallurgical lumps",
- "filetype:bitmap limestone quarry",
- "filetype:bitmap blast furnace stock house conveyor"
+ "filetype:bitmap ship unloader bulk",
+ "filetype:bitmap bucket wheel reclaimer",
+ "filetype:bitmap stacker coal stockpile",
+ "filetype:bitmap sinter strand iron ore",
+ "filetype:bitmap coking plant coke oven",
+ "filetype:bitmap coke oven door charging car",
+ "filetype:bitmap coal handling terminal conveyor ship",
+ "filetype:bitmap lime kiln shaft",
+ "filetype:bitmap quicklime",
+ "filetype:bitmap coke dry quenching"
 ]}
