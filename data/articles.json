@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "2026-10-iran-steel-sep",
+   "category": "mills",
+   "title": "伊朗鋼鐵 9 月觀察：戰火七個月，中東產量降幅收斂，鋼胚出口改走陸路",
+   "period": "2026-09",
+   "published": "2026-10-11",
+   "summary": "美以 2 月底空襲伊朗後，Mobarakeh、Khuzestan 兩大鋼廠受創、Mobarakeh 全面停產，中東 3 月粗鋼產量年減 33.5%，8 月降幅收斂到 4.6%。荷莫茲海峽受阻讓伊朗鋼胚改由陸路銷往伊拉克，海運鐵礦出口一度幾近停擺；10 月初電力與天然氣短缺又讓鋼胚報價走高。",
+   "tags": [
+    "伊朗",
+    "Mobarakeh",
+    "鋼胚",
+    "荷莫茲海峽",
+    "鐵礦",
+    "中東"
+   ],
+   "image": "assets/articles/2026-10-iran-steel-sep-mobarakeh.jpg",
+   "url": "articles/2026-10-iran-steel-sep.html"
+  },
+  {
    "id": "2026-10-eu-steel-sep",
    "category": "mills",
    "title": "歐洲鋼市 9 月觀察：熱軋價格一年多漲近三成，產量仍停在谷底",
