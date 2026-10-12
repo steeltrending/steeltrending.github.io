@@ -1,844 +1,818 @@
 {
- "auto shredder metal recycling plant": [
+ "filetype:bitmap electric arc furnace": [
   {
-   "title": "File:Federal Register 2012-12-28- Vol 77 Iss 249 (IA sim federal-register-find 2012-12-28 77 249).pdf",
+   "title": "File:Plasma torch auxiliary heating in electric arc furnace British Steel 1985.jpg",
    "thumb": "00_0.jpg",
-   "w": 1195,
-   "h": 1606,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nFederal Register 2012-12-28: Volume 77, Issue 249.Digitized from IA1532626-02.Previous issue: sim_federal-register-find_2012-12-27_77_248.Next issue: sim_federal-register-find_2012-12-31_77_250.\n\nSub"
-  },
-  {
-   "title": "File:FYP thesis final.pdf",
-   "thumb": "00_1.jpg",
-   "w": 1239,
-   "h": 1754,
+   "w": 1009,
+   "h": 1368,
    "license": "CC BY-SA 4.0",
-   "artist": "Voice of Rights",
-   "date": "2021-12-26",
-   "desc": "EFFECTS OF ADDING BURNT WASTE RUBBER \nPYROLYSIS OIL FOR MODIFICATION OF \n\nPROPERTIES OF BITUMEN."
+   "artist": "European Coal and Steel Community",
+   "date": "1991",
+   "desc": "Illustration of British Steel's trials to adopt a plasma torch on an electric arc furnace, circa 1985. Technical feasibility was confirmed, but profitability proved negative."
+  },
+  {
+   "title": "File:ECSC Financial report 1996 ProfilARBED Differdange Electric arc furnace 2.jpg",
+   "thumb": "00_1.jpg",
+   "w": 2112,
+   "h": 2126,
+   "license": "CC BY-SA 4.0",
+   "artist": "European Coal and Steel Community",
+   "date": "1996",
+   "desc": "The direct current electric arc furnace (DC-EAF) of Arbed steel mill at Differdange, Luxemburg, in 1996."
+  },
+  {
+   "title": "File:ECSC Financial report 1996 ProfilARBED Differdange Electric arc furnace 1.jpg",
+   "thumb": "00_2.jpg",
+   "w": 2109,
+   "h": 2125,
+   "license": "CC BY-SA 4.0",
+   "artist": "European Coal and Steel Community",
+   "date": "1996",
+   "desc": "The new direct current electric arc furnace (DC-EAF) of Arbed steel mill at Differdange, Luxemburg, during commissioning in November 1995."
+  },
+  {
+   "title": "File:Electric arc furnace at Magna - The Big Melt - geograph.org.uk - 2649408.jpg",
+   "thumb": "00_3.jpg",
+   "w": 3264,
+   "h": 2448,
+   "license": "CC BY-SA 2.0",
+   "artist": "M J Richardson ",
+   "date": "2011-10-11",
+   "desc": "Electric arc furnace at Magna - The Big Melt "
+  },
+  {
+   "title": "File:Electric Arc Furnace at Magna - geograph.org.uk - 7507.jpg",
+   "thumb": "00_4.jpg",
+   "w": 640,
+   "h": 480,
+   "license": "CC BY-SA 2.0",
+   "artist": "Chris J Dixon",
+   "date": "2001-09-08",
+   "desc": "Electric Arc Furnace at Magna. Once one of the largest steel plants to be found, now simply a museum."
+  },
+  {
+   "title": "File:DASA - electric arc furnace 04.jpg",
+   "thumb": "00_5.jpg",
+   "w": 4032,
+   "h": 3024,
+   "license": "CC BY-SA 3.0",
+   "artist": "Arnoldius",
+   "date": "2014-03-08",
+   "desc": "DASA - Innenansicht des Deckels des Lichtbogenofens, Ausmauerung mit Öffnungen für die Graphitelektroden"
+  },
+  {
+   "title": "File:Electric arc furnaces - geograph.org.uk - 517378.jpg",
+   "thumb": "00_6.jpg",
+   "w": 640,
+   "h": 427,
+   "license": "CC BY-SA 2.0",
+   "artist": "Alan Murray-Rust",
+   "date": "2007-08-05",
+   "desc": "Electric arc furnaces steel mill. Part of the Sheffield Forgemaster complex at Brightside. The furnaces are contained in the building at the rear. The tall buildings at the front filter the dust and g"
+  },
+  {
+   "title": "File:Electric arc furnace.jpg",
+   "thumb": "00_7.jpg",
+   "w": 2592,
+   "h": 1456,
+   "license": "CC BY-SA 4.0",
+   "artist": "Powerfox",
+   "date": "2016-10-19 16:45:56",
+   "desc": "Electric arc furnace in Varna Bulgaria"
+  },
+  {
+   "title": "File:DASA - electric arc furnace 01.jpg",
+   "thumb": "00_8.jpg",
+   "w": 3024,
+   "h": 4032,
+   "license": "CC BY-SA 3.0",
+   "artist": "Arnoldius",
+   "date": "2014-03-08",
+   "desc": "DASA - Elektrolichtbogenofen zur Stahlerstellung aus Schrott - Arbeiten in Hitz, Lärm und Staub"
+  },
+  {
+   "title": "File:DASA - electric arc furnace 02.jpg",
+   "thumb": "00_9.jpg",
+   "w": 4032,
+   "h": 2688,
+   "license": "CC BY-SA 3.0",
+   "artist": "Arnoldius",
+   "date": "2014-03-08",
+   "desc": "DASA - Elektrolichtbogenofen zur Stahlerstellung aus Schrott - Arbeiten in Hitz, Lärm und Staub"
   }
  ],
- "metal shredder machine rotor hammers": [
+ "filetype:bitmap scrap steel": [
   {
-   "title": "File:The Noise Emission in the Environment by Equipment for use Outdoors Regulations 2001 (UKSI 2001-1701 qp).pdf",
+   "title": "File:Steel Scrap Compacted.JPG",
    "thumb": "01_0.jpg",
-   "w": 1239,
-   "h": 1754,
-   "license": "OGL 3",
-   "artist": "",
-   "date": "",
-   "desc": "These Regulations implement the European Parliament and the Council Directive 2000-14-EC on the approximation of the laws of the Member States relating to the noise emission in the environment by equi"
+   "w": 4352,
+   "h": 3264,
+   "license": "CC BY-SA 4.0",
+   "artist": "TeWeBs",
+   "date": "2016-12-04 13:06:19",
+   "desc": "Stainless steel scrap shimmering in sunlight."
   },
   {
-   "title": "File:TM 5-666 Sewage Treatment Plants And Sewer Systems At Fixed Installations, 1945 (IA TM5-666).pdf",
+   "title": "File:Allegheny Ludlum Steel Corp Scrap Piles.jpg",
    "thumb": "01_1.jpg",
-   "w": 1150,
-   "h": 1595,
+   "w": 922,
+   "h": 708,
    "license": "Public domain",
-   "artist": "\nUnited States. War Department",
-   "date": "",
-   "desc": "\nTM 5-666 Sewage Treatment Plants And Sewer Systems At Fixed Installations, 1945-09-29\nAcknowledgement \nThe courtesy of the Federation of Sewage Works Associations and the publishers of Public Works, "
+   "artist": "Palmer, Alfred T.",
+   "date": "1941?; uploaded to flickr January 8, 2008",
+   "desc": "Palmer, Alfred T.,, photographer.\nBack into production go these carloads of scrap metal, Allegheny Ludlum Steel[e] Corp., Brackenridge, Pa. The melting of alloy steels for defense work requires that s"
   },
   {
-   "title": "File:Methods for separating pith-bearing plants into fiber and pith (IA methodsforsepara714lath).pdf",
+   "title": "File:Scrap in the storage of Nation's Scrap in Sörnäinen, Helsinki March 1941 (4903C; JOKAHBL3C B51-1).tif",
    "thumb": "01_2.jpg",
-   "w": 1112,
-   "h": 1535,
+   "w": 6388,
+   "h": 4602,
+   "license": "CC BY 4.0",
+   "artist": "Hugo Sundström",
+   "date": "kuvausaika 18.03.1941, julkaisuaika 19.03.1941",
+   "desc": "Scrap in the storage of Nation's Scrap in Sörnäinen, Helsinki March 1941."
+  },
+  {
+   "title": "File:A worker guides the magnet which unloads steel scrap 8b07775v.jpg",
+   "thumb": "01_3.jpg",
+   "w": 783,
+   "h": 1024,
    "license": "Public domain",
-   "artist": "\nLathrop, Elbert C. (Elbert Clyde), 1885-1971\nNaffziger, T. R. (Theodore Roosevelt), 1904-, joint author\nMahon, H. I., joint author",
-   "date": "",
-   "desc": "\nARS-71-4\n\"March 1955\"\nSubjects: Paper industry; Bagasse"
+   "artist": "Ann Rosener",
+   "date": "October 1942date QS:P571,+1942-10-00T00:00:00Z/10",
+   "desc": "\nTitle: Salvage. Scrap for steel mills. A worker guides the magnet which unloads steel scrap from open freight cars to the waiting charging boxes in a Chicago steel mill. Drawn by an engine, these box"
+  },
+  {
+   "title": "File:Dynamics of scrap collection and scrap consumption in Russia in 2019 - 2023.png",
+   "thumb": "01_4.jpg",
+   "w": 1110,
+   "h": 628,
+   "license": "CC BY-SA 4.0",
+   "artist": "Serpen wiki woker",
+   "date": "2026",
+   "desc": "Dynamics of scrap collection and scrap consumption in Russia in 2019 - 2023."
+  },
+  {
+   "title": "File:Unloading what looks like scrap steel at Keadby - geograph.org.uk - 4965457.jpg",
+   "thumb": "01_5.jpg",
+   "w": 640,
+   "h": 480,
+   "license": "CC BY-SA 2.0",
+   "artist": "Steve  Fareham ",
+   "date": "2016-05-24",
+   "desc": "Unloading what looks like scrap steel at Keadby "
+  },
+  {
+   "title": "File:ទិញអេតចាយ តម្លៃខ្ពស់ (金属回收).jpg",
+   "thumb": "01_6.jpg",
+   "w": 1280,
+   "h": 960,
+   "license": "CC0",
+   "artist": "CHHORN SEYHA99",
+   "date": "2025-02-17",
+   "desc": "beverage cans"
+  },
+  {
+   "title": "File:The scrap metal business! - geograph.org.uk - 2931333.jpg",
+   "thumb": "01_7.jpg",
+   "w": 5280,
+   "h": 2700,
+   "license": "CC BY-SA 2.0",
+   "artist": "Gareth James",
+   "date": "2012-05-06",
+   "desc": "The scrap metal business! View over Sims Metal and the scrap bay of Celsa's Tremorfa steel works."
+  },
+  {
+   "title": "File:Silver and gold scrap metal.jpg",
+   "thumb": "01_8.jpg",
+   "w": 2399,
+   "h": 2817,
+   "license": "CC BY 4.0",
+   "artist": "W.carter",
+   "date": "2018-03-27 13:56:10",
+   "desc": "Sterling silver (925) and 18K gold scrap metal, due for recycling. Scale: the two gold rings in the photo has an inner diameter of 18,5 mm. Studio photography in the workshop of Sophies Silver, Gåsebe"
+  },
+  {
+   "title": "File:Rusty scrap plates 1.jpg",
+   "thumb": "01_9.jpg",
+   "w": 4690,
+   "h": 3648,
+   "license": "CC0",
+   "artist": "W.carter",
+   "date": "2017-07-01 16:31:20",
+   "desc": "Rusty scrap plates outside a pipe welding firm in Gåseberg, Lysekil Municipality, Sweden. Photo taken outside in sunlight with fill-in flash."
   }
  ],
- "magnetic separator scrap conveyor": [
+ "filetype:bitmap shredder": [
   {
-   "title": "File:UN Treaty Series - vol 246.pdf",
+   "title": "File:Montreal Comiccon 2015 - Shredder (19271075318).jpg",
    "thumb": "02_0.jpg",
-   "w": 1050,
-   "h": 1500,
-   "license": "Public domain",
-   "artist": "Secretariat of the United Nations",
-   "date": "1956",
-   "desc": "Volume 246 of the United Nations Treaty Series"
+   "w": 2848,
+   "h": 4272,
+   "license": "CC BY-SA 2.0",
+   "artist": "Pikawil from Laval, Canada",
+   "date": "2015-07-04 09:46",
+   "desc": "Cosplay one day two of Montreal Comiccon 2015."
   },
   {
-   "title": "File:The Engineering and Mining Journal July-December 1904- Vol 78 Index (IA sim engineering-and-mining-journal july-december-1904 78 index).pdf",
+   "title": "File:WonderCon 2012 - Shredder (7019313861).jpg",
    "thumb": "02_1.jpg",
-   "w": 1427,
-   "h": 1941,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nThe Engineering and Mining Journal July-December 1904: Volume 78, Issue Index.Digitized from IA1532315-01.Previous issue: sim_engineering-and-mining-journal_1904-06-30_77_26.Next issue: sim_engineeri"
-  },
-  {
-   "title": "File:Engineering and Mining Journal 1920-10-02- Vol 110 Iss 14 (IA sim engineering-and-mining-journal 1920-10-02 110 14).pdf",
-   "thumb": "02_2.jpg",
-   "w": 1314,
-   "h": 1831,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nEngineering and Mining Journal 1920-10-02: Volume 110, Issue 14.Digitized from IA1532316-06.Previous issue: sim_engineering-and-mining-journal_1920-09-25_110_13.Next issue: sim_engineering-and-mining"
-  },
-  {
-   "title": "File:The Engineering and Mining Journal 1913-11-22- Vol 96 Iss 21 (IA sim engineering-and-mining-journal 1913-11-22 96 21).pdf",
-   "thumb": "02_3.jpg",
-   "w": 1316,
-   "h": 1831,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nThe Engineering and Mining Journal 1913-11-22: Volume 96, Issue 21.Digitized from IA1532316-06.Previous issue: sim_engineering-and-mining-journal_1913-11-15_96_20.Next issue: sim_engineering-and-mini"
-  },
-  {
-   "title": "File:Rendering inedible animal fats - analysis of practices in Pennsylvania and Minnesota (IA renderinginedibl283thom).pdf",
-   "thumb": "02_4.jpg",
-   "w": 1077,
-   "h": 1493,
-   "license": "Public domain",
-   "artist": "\nThompson, John W. (John William), 1931-",
-   "date": "",
-   "desc": "\nCover title\n\"November 1958.\"\nBibliography: p. 60\nSubjects: Rendering industry Pennsylvania; Rendering industry Minnesota; Oils and fats"
-  },
-  {
-   "title": "File:OJ L 202500401 of 2025 - EN English.pdf",
-   "thumb": "02_5.jpg",
-   "w": 1239,
-   "h": 1752,
-   "license": "Public domain",
-   "artist": "Publications Office of the European Union",
-   "date": "Published on 24 February 2025",
-   "desc": "Official Journal of the European Union - L_202500401 of 24 February 2025 - English edition "
-  },
-  {
-   "title": "File:Classification, with index (IA classificationwi00winc).pdf",
-   "thumb": "02_6.jpg",
-   "w": 1466,
-   "h": 2127,
-   "license": "Public domain",
-   "artist": "\nWinchester repeating arms co. [from old catalog]",
-   "date": "",
-   "desc": "\nSubjects: Classification, Decimal; Classification; Firearms"
-  },
-  {
-   "title": "File:The Engineering and Mining Journal January-June 1905- Vol 79 Index (IA sim engineering-and-mining-journal january-june-1905 79 index).pdf",
-   "thumb": "02_7.jpg",
-   "w": 1427,
-   "h": 1941,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nThe Engineering and Mining Journal January-June 1905: Volume 79, Issue Index.Digitized from IA1532315-01.Previous issue: sim_engineering-and-mining-journal_1904-12-29_78_26.Next issue: sim_engineerin"
-  },
-  {
-   "title": "File:The Engineering and Mining Journal 1905-08-19- Vol 80 Iss 7 (IA sim engineering-and-mining-journal 1905-08-19 80 7).pdf",
-   "thumb": "02_8.jpg",
-   "w": 1327,
-   "h": 1837,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nThe Engineering and Mining Journal 1905-08-19: Volume 80, Issue 7.Digitized from IA1532315-01.Previous issue: sim_engineering-and-mining-journal_1905-08-12_80_6.Next issue: sim_engineering-and-mining"
-  },
-  {
-   "title": "File:The Engineering and Mining Journal 1892-11-05- Vol 54 Iss 19 (IA sim engineering-and-mining-journal 1892-11-05 54 19).pdf",
-   "thumb": "02_9.jpg",
-   "w": 1441,
-   "h": 1964,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nThe Engineering and Mining Journal 1892-11-05: Volume 54, Issue 19.Digitized from IA1532315-02.Previous issue: sim_engineering-and-mining-journal_1892-10-29_54_18.Next issue: sim_engineering-and-mini"
-  }
- ],
- "steel mill scrap bay crane scrap bucket": [
-  {
-   "title": "File:History of the Alan Wood iron and steel company (IA historyofalanwoo00tayl).pdf",
-   "thumb": "03_0.jpg",
-   "w": 1414,
-   "h": 2237,
-   "license": "Public domain",
-   "artist": "\nTaylor, Frank Hamilton, 1846-",
-   "date": "",
-   "desc": "\nSubjects: Wood family; Alan Wood Iron and Steel Company; Iron industry and trade"
-  },
-  {
-   "title": "File:Engineering news-record (IA engineeringnewsr1919brow).pdf",
-   "thumb": "03_1.jpg",
-   "w": 1270,
-   "h": 1754,
-   "license": "Public domain",
-   "artist": "\nBrown, Burstis S. Details of the failure of a 90 foot Molasses tank",
-   "date": "",
-   "desc": "\nChemical abstracts\nVols. 78-89, Apr. 5, 1917-22. 1 v.; Vols. 90-99, 1923-27. 1 v.; 1928-43. 1 v\nFormed by the union of: Engineering news (New York. 1902), ISSN 0096-3690, and: Engineering record, ISS"
-  },
-  {
-   "title": "File:Port series no. 43- Port of Cleveland, OH - USACE-p16021coll2-3234.pdf",
-   "thumb": "03_2.jpg",
-   "w": 1275,
-   "h": 1650,
-   "license": "Public domain",
-   "artist": "United States. Army. Corps of Engineers; Institute for Water Resources (U.S.); Navigation Data Center (U.S.)",
-   "date": "",
-   "desc": ""
-  },
-  {
-   "title": "File:Low & Burgess - Catalogue and Price List of Supplies for Railroads and Steamboat Co.'s, Manufacturers, Locomotive and Car Builders, etc. (IA LowAndBurgessCatalogue1860).pdf",
-   "thumb": "03_3.jpg",
-   "w": 741,
-   "h": 1183,
-   "license": "Public domain",
-   "artist": "\nLow &amp; Burgess",
-   "date": "",
-   "desc": "\n118 p., illus., 21.0 cm, trade catalog\n\nSubjects: tool catalog; railroad tools; railroad equipment; wrenches; vises; jacks"
-  },
-  {
-   "title": "File:Campbell Interurban Press 1923-01-19 (IA cacblm 000691).pdf",
-   "thumb": "03_4.jpg",
-   "w": 1797,
-   "h": 2581,
-   "license": "Public domain",
-   "artist": "\nCampbell Press",
-   "date": "",
-   "desc": "\nNote for IA: Darkened images inherent to the nature of microfilm.Series Title: Campbell (Interurban) Press Newspaper.Description: This series of newspapers ranges from 1895 through 1980. The paper tr"
-  },
-  {
-   "title": "File:Board of Trade Journal. London. 1922-06- Vol 108 Index (IA sim great-britain-board-of-trade-board-of-trade-journal 1922-06 108 index).pdf",
-   "thumb": "03_5.jpg",
-   "w": 1108,
-   "h": 1879,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nBoard of Trade Journal. London. 1922-06: Volume 108, Issue Index.Digitized from IA1534501-07.Previous issue: sim_great-britain-board-of-trade-board-of-trade-journal_1921-12-29_107_supplement.Next iss"
-  },
-  {
-   "title": "File:Annual report, passage of fish over Bonneville Dam, Columbia River, Oregon and Washington, 1953 - USACE-p16021coll3-16.pdf",
-   "thumb": "03_6.jpg",
-   "w": 1206,
-   "h": 1581,
-   "license": "Public domain",
-   "artist": "United States. Army. Corps of Engineers. Portland District",
-   "date": "",
-   "desc": ""
-  },
-  {
-   "title": "File:White lead from mine to battleship (IA whiteleadfrommin00rickrich).pdf",
-   "thumb": "03_7.jpg",
-   "w": 868,
-   "h": 1318,
-   "license": "Public domain",
-   "artist": "\nRickard, T. A. (Thomas Arthur), 1864-",
-   "date": "",
-   "desc": "\nSubjects: White lead; Lead mines and mining"
-  },
-  {
-   "title": "File:Paper Trade Journal 1923-08-02- Vol 77 Iss 5 (IA sim paper-trade-journal 1923-08-02 77 5).pdf",
-   "thumb": "03_8.jpg",
    "w": 1200,
    "h": 1600,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nPaper Trade Journal 1923-08-02: Volume 77, Issue 5.Digitized from IA1519426-01.Previous issue: sim_paper-trade-journal_1923-07-26_77_4.Next issue: sim_paper-trade-journal_1923-08-09_77_6.\n\nSubjects: "
+   "license": "CC BY 2.0",
+   "artist": "The Conmunity -  Pop Culture Geek from Los Angeles, CA, USA",
+   "date": "2012-03-17 11:03",
+   "desc": "photo 2012 Pop Culture Geek\ntaken by Doug Kline\n\nIf you're interested in higher resolution versions of my images, contact me via my profile page."
   },
   {
-   "title": "File:The Engineering and Mining Journal January 1-June 30, 1912- Vol 93 Index (IA sim engineering-and-mining-journal january-1-june-30-1912 93 index).pdf",
-   "thumb": "03_9.jpg",
-   "w": 1364,
-   "h": 1900,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nThe Engineering and Mining Journal January 1-June 30, 1912: Volume 93, Issue Index.Digitized from IA1532315-01.Previous issue: sim_engineering-and-mining-journal_1911-12-30_92_27.Next issue: sim_engi"
+   "title": "File:Paper shredder - detail-9839.jpg",
+   "thumb": "02_2.jpg",
+   "w": 3652,
+   "h": 2226,
+   "license": "CC BY-SA 4.0",
+   "artist": "Raimond Spekking",
+   "date": "2019-10-17",
+   "desc": "Paper shredder - detail"
+  },
+  {
+   "title": "File:Paper shredder - detail-9841.jpg",
+   "thumb": "02_3.jpg",
+   "w": 4843,
+   "h": 2952,
+   "license": "CC BY-SA 4.0",
+   "artist": "Raimond Spekking",
+   "date": "2019-10-17",
+   "desc": "Paper shredder - detail"
+  },
+  {
+   "title": "File:Först tree shredder in Tottenham, Haringey, London, England 4.jpg",
+   "thumb": "02_4.jpg",
+   "w": 4525,
+   "h": 3393,
+   "license": "CC BY-SA 4.0",
+   "artist": "Acabashi",
+   "date": "2020-04-15 14:50:12",
+   "desc": "Först tree shredder on The Roundway at Tottenham, in Haringey, London, England.Mobile device view: Wikimedia (April 2020) makes it difficult to immediately view photo groups related to this image. To "
+  },
+  {
+   "title": "File:Först tree shredder in Tottenham, Haringey, London, England 2.jpg",
+   "thumb": "02_5.jpg",
+   "w": 4179,
+   "h": 3134,
+   "license": "CC BY-SA 4.0",
+   "artist": "Acabashi",
+   "date": "2020-04-15 14:49:55",
+   "desc": "Först tree shredder on The Roundway at Tottenham, in Haringey, London, England.Mobile device view: Wikimedia (April 2020) makes it difficult to immediately view photo groups related to this image. To "
+  },
+  {
+   "title": "File:Först tree shredder in Tottenham, Haringey, London, England 1.jpg",
+   "thumb": "02_6.jpg",
+   "w": 4140,
+   "h": 3312,
+   "license": "CC BY-SA 4.0",
+   "artist": "Acabashi",
+   "date": "2020-04-15 14:49:34",
+   "desc": "Först tree shredder on The Roundway at Tottenham, in Haringey, London, England.Mobile device view: Wikimedia (April 2020) makes it difficult to immediately view photo groups related to this image. To "
+  },
+  {
+   "title": "File:Först tree shredder in Tottenham, Haringey, London, England 3.jpg",
+   "thumb": "02_7.jpg",
+   "w": 4608,
+   "h": 3456,
+   "license": "CC BY-SA 4.0",
+   "artist": "Acabashi",
+   "date": "2020-04-15 14:50:10",
+   "desc": "Först tree shredder on The Roundway at Tottenham, in Haringey, London, England.Mobile device view: Wikimedia (April 2020) makes it difficult to immediately view photo groups related to this image. To "
+  },
+  {
+   "title": "File:Först tree shredder in Tottenham, Haringey, London, England 5.jpg",
+   "thumb": "02_8.jpg",
+   "w": 4530,
+   "h": 3398,
+   "license": "CC BY-SA 4.0",
+   "artist": "Acabashi",
+   "date": "2020-04-15 14:50:16",
+   "desc": "Först tree shredder on The Roundway at Tottenham, in Haringey, London, England.Mobile device view: Wikimedia (April 2020) makes it difficult to immediately view photo groups related to this image. To "
+  },
+  {
+   "title": "File:How industrial shredder works.jpg",
+   "thumb": "02_9.jpg",
+   "w": 1000,
+   "h": 478,
+   "license": "CC BY-SA 4.0",
+   "artist": "Soddaa",
+   "date": "2020-12-12",
+   "desc": "2018 Wiscon Envirotech Single-shaft shredder processes plastic waste in Ohio, USA"
   }
  ],
- "scrap basket electric arc furnace loading": [
+ "filetype:bitmap Schrott": [
   {
-   "title": "File:Electric Railway Journal Vol 67 (IA electricrailwayj67mcgrrich).pdf",
-   "thumb": "04_0.jpg",
-   "w": 1272,
-   "h": 1806,
-   "license": "Public domain",
-   "artist": "\nMcGraw-Hill",
-   "date": "",
-   "desc": "\nSubjects:"
-  },
-  {
-   "title": "File:WWS Loadingsteelscrapandalloy.ogg",
-   "thumb": "04_1.jpg",
-   "w": 0,
-   "h": 0,
-   "license": "CC BY 4.0",
-   "artist": "Work With Sounds / Technical Museum of Slovenia",
-   "date": "2014-12-11",
-   "desc": "The sound of steel and alloy scrap being loaded.\nThe grab bucket can be used for lifting and loading any type of scrap steel, but in particular is good for lifting long round bars and wide flats. In a"
-  },
-  {
-   "title": "File:Census of Manufactures. 1909. Classification by industries (IA censusofmanufact1909unse).pdf",
-   "thumb": "04_2.jpg",
-   "w": 1318,
-   "h": 1766,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nSubjects: Manufacturing industries; Classification"
-  },
-  {
-   "title": "File:Country life (IA countrylife15gard).pdf",
-   "thumb": "04_3.jpg",
-   "w": 1427,
-   "h": 2070,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nTitle varies: Nov. 1901-Jan. 1917, Country life in America; Feb. 1917-Sept. 1918, The New country life; Oct.-Dec. 1918, Country life in the war; Jan. 1919-Oct. 1937, Country life; Nov. 1937-Dec. 1938"
-  },
-  {
-   "title": "File:Consumer notes (IA CAT11081231 008).pdf",
-   "thumb": "04_4.jpg",
-   "w": 1364,
-   "h": 1850,
-   "license": "Public domain",
-   "artist": "\nUnited States. Department of Agriculture. Consumers' Counsel Division",
-   "date": "",
-   "desc": "\nClip sheet issued weekly by Consumers' counsel division ..\n\nSubjects: Agriculture United States Periodicals"
-  },
-  {
-   "title": "File:Lucky Bag (IA luckybag1900unse).pdf",
-   "thumb": "04_5.jpg",
-   "w": 1020,
-   "h": 1383,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\n1 vol.\n\nSubjects: United States Naval Academy; United States. Navy--Officers--Education--Maryland"
-  },
-  {
-   "title": "File:Popular science monthly (IA popularsciencemo91newyuoft).pdf",
-   "thumb": "04_6.jpg",
-   "w": 756,
-   "h": 1116,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nAbsorbed Sanitarian, July 1904, World's advance, Oct. 1915 and Mechanics and handicraft, Feb. 1939. Cf. Can. MARC data sheet\n14\nSubjects: Science"
-  },
-  {
-   "title": "File:Popular Science Monthly Volume 90.djvu",
-   "thumb": "04_7.jpg",
-   "w": 2482,
-   "h": 3718,
-   "license": "Public domain",
-   "artist": "Various",
-   "date": "1917",
-   "desc": "Popular science monthly"
-  },
-  {
-   "title": "File:Hints to inventors (IA hintstoinventors00grim).pdf",
-   "thumb": "04_8.jpg",
-   "w": 681,
-   "h": 1083,
-   "license": "Public domain",
-   "artist": "\nGrimshaw, Robert, 1850- [from old catalog]",
-   "date": "",
-   "desc": "\nSubjects: Inventions"
-  },
-  {
-   "title": "File:Popular science monthly (IA popularsciencemo90newyuoft).pdf",
-   "thumb": "04_9.jpg",
-   "w": 929,
-   "h": 1393,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nAbsorbed Sanitarian, July 1904, World's advance, Oct. 1915 and Mechanics and handicraft, Feb. 1939. Cf. Can. MARC data sheet\n14\nSubjects: Science"
-  }
- ],
- "electric arc furnace steelmaking melting scrap": [
-  {
-   "title": "File:HyperCOG - definitive Version Training -8- LC5-m3-D1.4 Operators recommendations for the future solution.pdf",
-   "thumb": "05_0.jpg",
-   "w": 1237,
-   "h": 1754,
-   "license": "Public domain",
-   "artist": "Michel Bakni",
-   "date": "2023",
-   "desc": "D1.4 Operators recommendations for the future solution"
-  },
-  {
-   "title": "File:HyperCOG - definitive Version Training -8- LC5-m3-D5.1 Data collection for the three use cases.pdf",
-   "thumb": "05_1.jpg",
-   "w": 1237,
-   "h": 1754,
-   "license": "Public domain",
-   "artist": "Michel Bakni",
-   "date": "2023",
-   "desc": "D5.1 Data collection for the three use cases"
-  },
-  {
-   "title": "File:The Climate Change Levy (Fuel Use and Recycling Processes) Regulations 2005 (UKSI 2005-1715).pdf",
-   "thumb": "05_2.jpg",
-   "w": 1239,
-   "h": 1752,
-   "license": "OGL 3",
-   "artist": "",
-   "date": "",
-   "desc": "Climate change levy is charged on supplies of electricity, gas and solid fuels that are not for domestic or charity use. Supplies for non-fuel use are exempt, as are supplies for fuel use in a prescri"
-  },
-  {
-   "title": "File:The electro-metallurgy of steel; (IA electrometallurg00gowcrich).pdf",
-   "thumb": "05_3.jpg",
-   "w": 733,
-   "h": 1227,
-   "license": "Public domain",
-   "artist": "\nGow, C. C. (Colin Clarence)",
-   "date": "",
-   "desc": "\nSubjects: Steel -- Electrometallurgy"
-  },
-  {
-   "title": "File:2001-379-EC- Council Decision of 4 April 2001 on the approval, on behalf of the European Community, of the Protocol to the 1979 Convention on Long-range Transboundary Air Pollution on Heavy Metals (EUD 2001-379).pdf",
-   "thumb": "05_4.jpg",
-   "w": 1239,
-   "h": 1754,
-   "license": "OGL 3",
-   "artist": "",
-   "date": "",
-   "desc": "2001-379-EC- Council Decision of 4 April 2001 on the approval, on behalf of the European Community, of the Protocol to the 1979 Convention on Long-range Transboundary Air Pollution on Heavy Metals"
-  },
-  {
-   "title": "File:EUD 2002-271.pdf",
-   "thumb": "05_5.jpg",
-   "w": 1239,
-   "h": 1754,
-   "license": "OGL 3",
-   "artist": "",
-   "date": "",
-   "desc": "2002-271-EC- Commission Decision of 18 July 2001 relating to a proceeding under Article 81 of the EC Treaty and Article 53 of the EEA Agreement — Case COMP-E-1-36.490 — Graphite electrodes (Text with "
-  },
-  {
-   "title": "File:The steel foundry (IA cu31924004633636).pdf",
-   "thumb": "05_6.jpg",
-   "w": 756,
-   "h": 1270,
-   "license": "Public domain",
-   "artist": "\nHall, John Howe",
-   "date": "",
-   "desc": "\nThe metadata below describe the original scanning. Follow the \"All Files: HTTP\" link in the \"View the book\" box to the left to find XML files that contain more metadata about the original images and "
-  },
-  {
-   "title": "File:NBS research reports (IA nbsresearchrepor6802unse).pdf",
-   "thumb": "05_7.jpg",
-   "w": 1233,
-   "h": 1650,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nSubjects:"
-  },
-  {
-   "title": "File:EUR 2005-772.pdf",
-   "thumb": "05_8.jpg",
-   "w": 1239,
-   "h": 1752,
-   "license": "OGL 3",
-   "artist": "",
-   "date": "",
-   "desc": "Commission Regulation (EC) No 772-2005 of 20 May 2005 concerning the specifications for the coverage of the characteristics and the definition of the technical format for the production of annual Comm"
-  },
-  {
-   "title": "File:The Climate Change Levy (Fuel Use and Recycling Processes) Regulations 2005 (UKSI 2005-1715 qp).pdf",
-   "thumb": "05_9.jpg",
-   "w": 1239,
-   "h": 1754,
-   "license": "OGL 3",
-   "artist": "",
-   "date": "",
-   "desc": "Climate change levy is charged on supplies of electricity, gas and solid fuels that are not for domestic or charity use. Supplies for non-fuel use are exempt, as are supplies for fuel use in a prescri"
-  }
- ],
- "scrap steel loading furnace charging": [
-  {
-   "title": "File:Steel; the diary of a furnace worker (IA cu31924002409195).pdf",
-   "thumb": "06_0.jpg",
-   "w": 710,
-   "h": 1181,
-   "license": "Public domain",
-   "artist": "\nWalker, Charles Rumford, 1893-",
-   "date": "",
-   "desc": "\nThe metadata below describe the original scanning. Follow the \"All Files: HTTP\" link in the \"View the book\" box to the left to find XML files that contain more metadata about the original images and "
-  },
-  {
-   "title": "File:Steel construction- a text and reference book covering the design of steel framework for buildings (IA steelconstructio00burt 0).pdf",
-   "thumb": "06_1.jpg",
-   "w": 1018,
-   "h": 1637,
-   "license": "Public domain",
-   "artist": "\nBurt, Henry Jackson. [from old catalog]",
-   "date": "",
-   "desc": "\n3 p.l., 372 p., 18 cm\n\nSubjects: Building, Iron and steel -- Tables; Steel, Structural"
-  },
-  {
-   "title": "File:Electric furnaces in the iron and steel industry (IA electricfurnaces00roderich).pdf",
-   "thumb": "06_2.jpg",
-   "w": 845,
-   "h": 1356,
-   "license": "Public domain",
-   "artist": "\nRodenhauser, W. (Wilhelm), 1880-\nSchoenawa, I\nVom Baur, C. H. (Carl Hans), 1878-",
-   "date": "",
-   "desc": "\nSubjects: Electric furnaces; Iron -- Metallurgy; Steel -- Metallurgy"
-  },
-  {
-   "title": "File:Electric furnaces in the iron and steel industry (IA cu31924004434928).pdf",
-   "thumb": "06_3.jpg",
-   "w": 797,
-   "h": 1287,
-   "license": "Public domain",
-   "artist": "\nRodenhauser, Wilhelm, 1880-\nSchoenawa, I., joint author\nVom Baur, Carl Hans, 1878- tr",
-   "date": "",
-   "desc": "\nThe metadata below describe the original scanning. Follow the \"All Files: HTTP\" link in the \"View the book\" box to the left to find XML files that contain more metadata about the original images and "
-  },
-  {
-   "title": "File:Electric furnaces in the iron and steel industry (IA cu31924004434886).pdf",
-   "thumb": "06_4.jpg",
-   "w": 860,
-   "h": 1327,
-   "license": "Public domain",
-   "artist": "\nRodenhauser, Wilhelm, 1880-\nSchoenawa, I., joint author\nVom Baur, Carl Hans, 1878- tr",
-   "date": "",
-   "desc": "\nThe metadata below describe the original scanning. Follow the \"All Files: HTTP\" link in the \"View the book\" box to the left to find XML files that contain more metadata about the original images and "
-  },
-  {
-   "title": "File:Electric furnaces in the iron and steel industry (IA cu31924004641712).pdf",
-   "thumb": "06_5.jpg",
-   "w": 870,
-   "h": 1339,
-   "license": "Public domain",
-   "artist": "\nRodenhauser, Wilhelm, 1880-\nSchoenawa, I., joint author\nVom Baur, Carl Hans, 1878- tr",
-   "date": "",
-   "desc": "\nThe metadata below describe the original scanning. Follow the \"All Files: HTTP\" link in the \"View the book\" box to the left to find XML files that contain more metadata about the original images and "
-  },
-  {
-   "title": "File:Electric furnaces in the iron and steel industry (IA electricfurnaces00rodeiala).pdf",
-   "thumb": "06_6.jpg",
-   "w": 683,
-   "h": 1064,
-   "license": "Public domain",
-   "artist": "\nRodenhauser, W. (Wilhelm), b. 1880\nSchoenawa, I\nVom Baur, Carl Hans, b. 1878",
-   "date": "",
-   "desc": "\nSubjects: Electric furnaces; Iron -- Metallurgy; Steel -- Metallurgy"
-  },
-  {
-   "title": "File:The production of steel-hardening metals, (IA productionofstee00prat).pdf",
-   "thumb": "06_7.jpg",
-   "w": 1341,
-   "h": 2200,
-   "license": "Public domain",
-   "artist": "\nPratt, Joseph Hyde, 1870- [from old catalog]",
-   "date": "",
-   "desc": "\n30 p. 23 cm\n\nSubjects: Steel -- Metallurgy"
-  },
-  {
-   "title": "File:The cupola furnace; (IA cupolafurnace01kirk).pdf",
-   "thumb": "06_8.jpg",
-   "w": 775,
-   "h": 1287,
-   "license": "Public domain",
-   "artist": "\nKirk, Edward. [from old catalog]",
-   "date": "",
-   "desc": "\nSubjects: Cupola-furnaces. [from old catalog]"
-  },
-  {
-   "title": "File:The cupola furnace; (IA cupolafurnace00kirk).pdf",
-   "thumb": "06_9.jpg",
-   "w": 793,
-   "h": 1295,
-   "license": "Public domain",
-   "artist": "\nKirk, Edward. [from old catalog]",
-   "date": "",
-   "desc": "\nSubjects: Cupola-furnaces. [from old catalog]"
-  }
- ],
- "Stahlwerk Schrott Elektrolichtbogenofen": [],
- "scrap metal recycling plant conveyor sorting": [
-  {
-   "title": "File:SPIKE IN METAL PRICES- WHAT DOES IT MEAN FOR SMALL MANUFACTURERS (IA gov.gpo.fdsys.CHRG-108hhrg93202).pdf",
-   "thumb": "08_0.jpg",
-   "w": 1275,
-   "h": 1650,
-   "license": "Public domain",
-   "artist": "\nCommittee on Small Business",
-   "date": "",
-   "desc": "\nGovernment Publishing OfficeU.S. CongressHouse of RepresentativesCommittee on Small BusinessSPIKE IN METAL PRICES: WHAT DOES IT MEAN FOR SMALL MANUFACTURERSDate(s) Held: 2004-03-10 108th Congress, 2n"
-  },
-  {
-   "title": "File:OJ L 202500401 of 2025 - EN English.pdf",
-   "thumb": "08_1.jpg",
-   "w": 1239,
-   "h": 1752,
-   "license": "Public domain",
-   "artist": "Publications Office of the European Union",
-   "date": "Published on 24 February 2025",
-   "desc": "Official Journal of the European Union - L_202500401 of 24 February 2025 - English edition "
-  },
-  {
-   "title": "File:EUD 2012-135.pdf",
-   "thumb": "08_2.jpg",
-   "w": 1239,
-   "h": 1752,
-   "license": "OGL 3",
-   "artist": "",
-   "date": "",
-   "desc": "Commission Implementing Decision of 28 February 2012 establishing the best available techniques (BAT) conclusions under Directive 2010-75-EU of the European Parliament and of the Council on industrial"
-  },
-  {
-   "title": "File:Federal Register 1981-12-11- Vol 46 Iss 238 (IA sim federal-register-find 1981-12-11 46 238 1).pdf",
-   "thumb": "08_3.jpg",
-   "w": 1095,
-   "h": 1504,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nFederal Register 1981-12-11: Volume 46, Issue 238.Digitized from IA1532615-07.Previous issue: sim_federal-register-find_1981-12-11_46_238_0.Next issue: sim_federal-register-find_1981-12-11_46_238_2.\n"
-  },
-  {
-   "title": "File:Municipal Waste Incinerator Public Works Center, Yokosuka, Japan- evaluation and recommendations. (IA municipalwastein00wilh).pdf",
-   "thumb": "08_4.jpg",
-   "w": 1181,
-   "h": 1568,
-   "license": "Public domain",
-   "artist": "\nWilhelm, Wade B.",
-   "date": "",
-   "desc": "\nAD-A265 899\nThesis (M.S. in Mechanical Engineering) University of Illinois at Urbana-Champaign, April 1993\nBibliography: leaf 74\nSubjects:"
-  },
-  {
-   "title": "File:Formerly Utilized Sites Remedial Action Program update- Fiscal year 2019 - USACE-p16021coll11-4287.pdf",
-   "thumb": "08_5.jpg",
-   "w": 1275,
-   "h": 1650,
-   "license": "Public domain",
-   "artist": "United States. Army. Corps of Engineers",
-   "date": "",
-   "desc": ""
-  },
-  {
-   "title": "File:OJ L 202500398 of 2025 - EN English.pdf",
-   "thumb": "08_6.jpg",
-   "w": 1239,
-   "h": 1752,
-   "license": "Public domain",
-   "artist": "Publications Office of the European Union",
-   "date": "Published on 24 February 2025",
-   "desc": "Official Journal of the European Union - L_202500398 of 24 February 2025 - English edition "
-  }
- ],
- "ferrous scrap shredded pile magnet": [],
- "steel scrap inspection truck yard": [
-  {
-   "title": "File:Steel axles and forgings (IA steelaxlesforgin00camb).pdf",
-   "thumb": "10_0.jpg",
-   "w": 600,
-   "h": 960,
-   "license": "Public domain",
-   "artist": "\nCambria steel company. [from old catalog]",
-   "date": "",
-   "desc": "\nSubjects: Steel"
-  },
-  {
-   "title": "File:Site inspection report- Elk Creek Dam - USACE-p16021coll7-20330.pdf",
-   "thumb": "10_1.jpg",
-   "w": 1275,
-   "h": 1650,
-   "license": "Public domain",
-   "artist": "United States. Army. Corps of Engineers. Portland District",
-   "date": "",
-   "desc": ""
-  },
-  {
-   "title": "File:Steel; the diary of a furnace worker (IA cu31924002409195).pdf",
-   "thumb": "10_2.jpg",
-   "w": 710,
-   "h": 1181,
-   "license": "Public domain",
-   "artist": "\nWalker, Charles Rumford, 1893-",
-   "date": "",
-   "desc": "\nThe metadata below describe the original scanning. Follow the \"All Files: HTTP\" link in the \"View the book\" box to the left to find XML files that contain more metadata about the original images and "
-  },
-  {
-   "title": "File:Design of the freight yard of the Delaware, Lackawanna & Western Railroad at Scranton, Pa. (IA designoffreighty00will).pdf",
-   "thumb": "10_3.jpg",
-   "w": 1179,
-   "h": 1591,
-   "license": "Public domain",
-   "artist": "\nWilliams, Clement C. (Clement Clarence), 1882-1947",
-   "date": "",
-   "desc": "\nLeaves ii and iii are bound in reverse order\nThesis (B.S.)--University of Illinois, 1907\nTypescript\nSubjects: Delaware, Lackawanna and Western Railroad Company; Railroad yards; Theses"
-  },
-  {
-   "title": "File:The Brier Hill reference book (IA brierhillreferen00brie).pdf",
-   "thumb": "10_4.jpg",
-   "w": 664,
-   "h": 1097,
-   "license": "Public domain",
-   "artist": "\nBrier Hill steel company, Youngstown, O. [from old catalog]",
-   "date": "",
-   "desc": "\nSubjects: Steel industry and trade; Steel, Structural"
-  },
-  {
-   "title": "File:The Locomotive (IA locomotive26hart).pdf",
-   "thumb": "10_5.jpg",
-   "w": 856,
-   "h": 1333,
-   "license": "Public domain",
-   "artist": "\nHartford Steam Boiler Inspection and Insurance Company",
-   "date": "",
-   "desc": "\nDescription based on: Vol. 1, no. 6 (Apr. 1868); title from caption\nSubtitle varies\nSubjects: Locomotives; Steam-boiler explosions"
-  },
-  {
-   "title": "File:Iron trade review. (IA irontradereview6219unse).pdf",
-   "thumb": "10_6.jpg",
-   "w": 1372,
-   "h": 1818,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\n86 v. 31-38 cm\n\nSubjects: Iron industry and trade; Steel industry and trade; Machinery; Iron industry and trade; Machinery; Steel industry and trade"
-  },
-  {
-   "title": "File:EUD 2012-135.pdf",
-   "thumb": "10_7.jpg",
-   "w": 1239,
-   "h": 1752,
-   "license": "OGL 3",
-   "artist": "",
-   "date": "",
-   "desc": "Commission Implementing Decision of 28 February 2012 establishing the best available techniques (BAT) conclusions under Directive 2010-75-EU of the European Parliament and of the Council on industrial"
-  },
-  {
-   "title": "File:Semi-annual wholesale trade list - spring 1908 for nurserymen only (IA CAT31305992).pdf",
-   "thumb": "10_8.jpg",
-   "w": 895,
-   "h": 1258,
-   "license": "Public domain",
-   "artist": "\nShenandoah Nurseries\nLake, D. S\nHenry G. Gilbert Nursery and Seed Trade Catalog Collection",
-   "date": "",
-   "desc": "\nCover title\n\nSubjects: Nursery stock Iowa Shenandoah Catalogs; Truck farming Equipment and supplies Catalogs; Plants, ornamental Catalogs; Fruit trees Catalogs; Berries Seedlings Catalogs; Trees Cata"
-  },
-  {
-   "title": "File:Engineering news-record (IA engineeringnewsr1919brow).pdf",
-   "thumb": "10_9.jpg",
-   "w": 1270,
-   "h": 1754,
-   "license": "Public domain",
-   "artist": "\nBrown, Burstis S. Details of the failure of a 90 foot Molasses tank",
-   "date": "",
-   "desc": "\nChemical abstracts\nVols. 78-89, Apr. 5, 1917-22. 1 v.; Vols. 90-99, 1923-27. 1 v.; 1928-43. 1 v\nFormed by the union of: Engineering news (New York. 1902), ISSN 0096-3690, and: Engineering record, ISS"
-  }
- ],
- "Steel recycling bales": [
-  {
-   "title": "File:Steel recycling bales.jpg",
-   "thumb": "11_0.jpg",
-   "w": 2288,
-   "h": 1712,
-   "license": "CC BY-SA 2.5",
-   "artist": "blahedo",
-   "date": "2004-04-24",
-   "desc": "Steel crushed and baled for recycling in a recycling plant outside Galva, Illinois."
-  },
-  {
-   "title": "File:Straw Bale Construction.pdf",
-   "thumb": "11_1.jpg",
-   "w": 1239,
-   "h": 1752,
+   "title": "File:Schrott in Schrambach Feldthurns.jpg",
+   "thumb": "03_0.jpg",
+   "w": 6481,
+   "h": 4326,
    "license": "CC BY-SA 3.0",
-   "artist": "Dirk Hünniger",
-   "date": "2013-12-29 11:58:19",
-   "desc": "pdf version of english wikibooks on straw bale construction"
+   "artist": "\n\n\n  This Photo was taken by Wolfgang Moroder.  \n\nFeel free to use my photos, but please mention me as the author and send me a  message. \n\n\n\nThis image is not in the public domain. Please respect the",
+   "date": "2014-05-03",
+   "desc": "The farmhouse \"Schrott\"  in Feldthurns in South Tyrol"
   },
   {
-   "title": "File:Solid waste recycling- a proposal for Texas A (IA solidwasterecycl00pott).pdf",
-   "thumb": "11_2.jpg",
-   "w": 1143,
-   "h": 1577,
-   "license": "Public domain",
-   "artist": "\nPotter, John M.",
-   "date": "",
-   "desc": "\nADA228503\nThesis (Master of Engineering) Texas A&amp;M University, July 1990\nSubjects:"
+   "title": "File:Beate Schrott Prokop Memorial 2012.jpg",
+   "thumb": "03_1.jpg",
+   "w": 1200,
+   "h": 1800,
+   "license": "CC BY-SA 3.0",
+   "artist": "Christian Jansky",
+   "date": "2012-06-07",
+   "desc": "Austrian hurdle runner Beate Schrott at the Liese-Prokop-Memorial 2012 in St. Pölten."
   },
   {
-   "title": "File:Planning for agricultural stabilization and conservation - report of 1955 annual ASC Conference, April 5-6, 1955, Hotel Vermont, Burlington, Vermont (IA CAT31339161).pdf",
-   "thumb": "11_3.jpg",
-   "w": 1120,
-   "h": 1539,
-   "license": "Public domain",
-   "artist": "\nUnited States. Agricultural Stabilization and Conservation Service. Vermont ASCS State Office",
-   "date": "",
-   "desc": "\nMimeograph\nCover title\n\"Conference theme: Planning for agricultural stabilization and conservation.\"\nSubjects: Agricultural conservation Vermont Congresses; Agricultural Conservation Program Vermont "
+   "title": "File:Erwin Schrott (DFDB).JPG",
+   "thumb": "03_2.jpg",
+   "w": 2107,
+   "h": 2809,
+   "license": "CC BY-SA 4.0",
+   "artist": "Dein Freund der Baum",
+   "date": "2014-02-07 15:03:04",
+   "desc": "Bassbariton Erwin Schrott in Linz, 2014"
   },
   {
-   "title": "File:Historic data inventory of the Shasta County Interlakes Special Recreation Management Area (IA historicdatainve00smit).pdf",
-   "thumb": "11_4.jpg",
-   "w": 1206,
-   "h": 1597,
-   "license": "Public domain",
-   "artist": "\nSmith, D. Dottie\nRitter, Eric W\nUnited States. Bureau of Land Management. Redding Area Office\nUnited States. Bureau of Land Management. California State Office\nUnited States. Forest Service. Pacific ",
-   "date": "",
-   "desc": "\nThis study area includes private and public lands managed by Forest Service, Bureau of Land Management, Bureau of Reclamation, and National Park Service. --P. iii\n\"A historic information compilation "
+   "title": "File:Mühle bei Schrott in Schrambach.jpg",
+   "thumb": "03_3.jpg",
+   "w": 5510,
+   "h": 4217,
+   "license": "CC BY-SA 3.0",
+   "artist": "\n\n\n  This Photo was taken by Wolfgang Moroder.  \n\nFeel free to use my photos, but please mention me as the author and send me a  message. \n\n\n\nThis image is not in the public domain. Please respect the",
+   "date": "2014-05-03",
+   "desc": "Mill at the farmhouse \"Schrott\"  in Feldthurns in South Tyrol"
   },
   {
-   "title": "File:Federal Register 2005-06-20- Vol 70 Iss 117 (IA sim federal-register-find 2005-06-20 70 117).pdf",
-   "thumb": "11_5.jpg",
-   "w": 1135,
-   "h": 1585,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nFederal Register 2005-06-20: Volume 70, Issue 117.Digitized from IA1532622-04.Previous issue: sim_federal-register-find_2005-06-17_70_116.Next issue: sim_federal-register-find_2005-06-21_70_118.\n\nSub"
+   "title": "File:Feldthurns Schrott (14788).jpg",
+   "thumb": "03_4.jpg",
+   "w": 2000,
+   "h": 3000,
+   "license": "CC BY-SA 3.0 de",
+   "artist": "Oliver Abels (SBT)",
+   "date": "2014-07-01 12:58",
+   "desc": "This image was uploaded as part of Wiki Loves Monuments 2014."
   },
   {
-   "title": "File:Public notice- Permit application no. SAJ-2017-01315 (SP-TMM) - USACE-p16021coll15-3037.pdf",
-   "thumb": "11_6.jpg",
-   "w": 1275,
-   "h": 1650,
+   "title": "File:Raoul Schrott 2019 - 01.jpg",
+   "thumb": "03_5.jpg",
+   "w": 6000,
+   "h": 4000,
+   "license": "CC BY-SA 4.0",
+   "artist": "Amrei-Marie",
+   "date": "2019-12-17 21:01:34",
+   "desc": "Raoul Schrott hält beim Tukan-Preis 2019 die Laudatio auf Herbert Kapfer im Literaturhaus München"
+  },
+  {
+   "title": "File:Raoul Schrott 2019.jpg",
+   "thumb": "03_6.jpg",
+   "w": 3264,
+   "h": 5677,
+   "license": "CC BY-SA 4.0",
+   "artist": "Amrei-Marie",
+   "date": "2019-12-17 22:29:28",
+   "desc": "Das Foto entstand am Rande des Tukan-Preises 2019, bei dem Raoul Schrott die Laudatio auf Herbert Kapfer hielt. Ort: Literaturhaus München"
+  },
+  {
+   "title": "File:Raoul Schrott 2019 in München.jpg",
+   "thumb": "03_7.jpg",
+   "w": 3085,
+   "h": 5214,
+   "license": "CC BY-SA 4.0",
+   "artist": "Amrei-Marie",
+   "date": "2019-12-17 22:29:27",
+   "desc": "Raoul Schrott. Das Foto entstand 2019 im Münchner Literaturhaus"
+  },
+  {
+   "title": "File:Raoul Schrott 2019 - 02.jpg",
+   "thumb": "03_8.jpg",
+   "w": 6000,
+   "h": 4000,
+   "license": "CC BY-SA 4.0",
+   "artist": "Amrei-Marie",
+   "date": "2019-12-17 21:01:00",
+   "desc": "Raoul Schrott hält beim Tukan-Preis 2019 die Laudatio auf Herbert Kapfer im Literaturhaus München"
+  },
+  {
+   "title": "File:Raoul Schrott auf dem Erlanger Poetenfest 2015 02.JPG",
+   "thumb": "03_9.jpg",
+   "w": 2816,
+   "h": 2112,
+   "license": "CC BY-SA 4.0",
+   "artist": "Kritzolina",
+   "date": "2015-08-29 17:21:28",
+   "desc": "Raoul Schrott auf dem Erlanger Poetenfest 2015"
+  }
+ ],
+ "filetype:bitmap scrap magnet": [
+  {
+   "title": "File:A worker guides the magnet which unloads steel scrap 8b07775v.jpg",
+   "thumb": "04_0.jpg",
+   "w": 783,
+   "h": 1024,
    "license": "Public domain",
-   "artist": "",
-   "date": "",
+   "artist": "Ann Rosener",
+   "date": "October 1942date QS:P571,+1942-10-00T00:00:00Z/10",
+   "desc": "\nTitle: Salvage. Scrap for steel mills. A worker guides the magnet which unloads steel scrap from open freight cars to the waiting charging boxes in a Chicago steel mill. Drawn by an engine, these box"
+  },
+  {
+   "title": "File:NSRW Magnet Lifting Pig Iron.jpg",
+   "thumb": "04_1.jpg",
+   "w": 724,
+   "h": 1095,
+   "license": "Public domain",
+   "artist": "Unknown authorUnknown author",
+   "date": "1914",
    "desc": ""
   },
   {
-   "title": "File:Federal Register 2002-05-24- Vol 67 Iss 101 (IA sim federal-register-find 2002-05-24 67 101).pdf",
-   "thumb": "11_7.jpg",
-   "w": 1158,
-   "h": 1597,
-   "license": "Public domain",
-   "artist": "",
-   "date": "",
-   "desc": "\nFederal Register 2002-05-24: Volume 67, Issue 101.Digitized from IA1532620-04.Previous issue: sim_federal-register-find_2002-05-23_67_100.Next issue: sim_federal-register-find_2002-05-28_67_102.\n\nSub"
+   "title": "File:Loading Machine Scrap 01.jpg",
+   "thumb": "04_2.jpg",
+   "w": 4000,
+   "h": 3000,
+   "license": "CC BY-SA 3.0",
+   "artist": "Zwergelstern",
+   "date": "2009-05-22",
+   "desc": "Loading machine with hydraulic raisable cab loads scrap rails."
   },
   {
-   "title": "File:Courier, Newsmagazine of the National Park Service (IA doi-report i-299637-4).pdf",
-   "thumb": "11_8.jpg",
-   "w": 1220,
-   "h": 1693,
+   "title": "File:Industrial lifting magnet.jpg",
+   "thumb": "04_3.jpg",
+   "w": 508,
+   "h": 898,
    "license": "Public domain",
-   "artist": "\nDepartment of the Interior",
-   "date": "",
-   "desc": "\nI 29.96:37/4Digitized from &lt;a href=\"https://archive.org/details/microfiche-scan_IA1177301-18/IA1177301-18-0059/page/n0\" rel=\"ugc nofollow\"&gt;IA1177301-18-0059&lt;/a&gt;.\n\nSubjects:"
+   "artist": "Cyril Methodius Jansky",
+   "date": "1914",
+   "desc": "Photo of an industrial electromagnet lifting some scrap iron, from around 1914. The wires supplying the magnet with current can be seen emerging from its top.  Alterations to image: removed figure num"
   },
   {
-   "title": "File:Re- Correction of nationwide permits CWA §401 certification,denial, Illinois EPA log no. C-0210-20 - USACE-p16021coll9-2815.pdf",
-   "thumb": "11_9.jpg",
-   "w": 1275,
-   "h": 1650,
+   "title": "File:Westwood magnet grab.jpg",
+   "thumb": "04_4.jpg",
+   "w": 814,
+   "h": 1100,
+   "license": "CC0",
+   "artist": "State Library of New South Wales",
+   "date": "1954-09-10",
+   "desc": "Westwood magnet grab, unloads scrap from a ship at B.H.P., 10/9/1954"
+  },
+  {
+   "title": "File:Victory Program. Electro-magnet loads metal scrap 8c34729v.jpg",
+   "thumb": "04_5.jpg",
+   "w": 999,
+   "h": 1024,
    "license": "Public domain",
-   "artist": "Illinois. Environmental Protection Agency",
-   "date": "",
+   "artist": "Marjory Collins",
+   "date": "May 1942date QS:P571,+1942-05-00T00:00:00Z/10",
+   "desc": "\nWashington, D.C. Scrap salvage campaign, Victory Program. Electro-magnet loads metal scrap onto freight car in wholesale junkyard"
+  },
+  {
+   "title": "File:Allegheny Ludlum Steel Corp Scrap Piles.jpg",
+   "thumb": "04_6.jpg",
+   "w": 922,
+   "h": 708,
+   "license": "Public domain",
+   "artist": "Palmer, Alfred T.",
+   "date": "1941?; uploaded to flickr January 8, 2008",
+   "desc": "Palmer, Alfred T.,, photographer.\nBack into production go these carloads of scrap metal, Allegheny Ludlum Steel[e] Corp., Brackenridge, Pa. The melting of alloy steels for defense work requires that s"
+  },
+  {
+   "title": "File:SCRAP METAL YARD ON WATERFRONT - NARA - 547615.jpg",
+   "thumb": "04_7.jpg",
+   "w": 2034,
+   "h": 3000,
+   "license": "Public domain",
+   "artist": "Hope Alexander",
+   "date": "April 1973date QS:P571,+1973-04-00T00:00:00Z/10",
    "desc": ""
+  },
+  {
+   "title": "File:Back into production go these carloads of scrap metal, Allegheny Ludlum Steel1a35061v.jpg",
+   "thumb": "04_8.jpg",
+   "w": 1024,
+   "h": 824,
+   "license": "Public domain",
+   "artist": "Alfred T. Palmer",
+   "date": "[1941?]",
+   "desc": "Title: Back into production go these carloads of scrap metal, Allegheny Ludlum Steel[e] Corp., Brackenridge, Pa. The melting of alloy steels for defense work requires that steel mill scrapyards such a"
+  },
+  {
+   "title": "File:Back into production go these carloads of scrap metal, Allegheny Ludlum Steel(e) Corp., Brackenridge, Pa. The melting of alloy steels for defense work requires that steel mill scrapyards LCCN2017878222.tif",
+   "thumb": "04_9.jpg",
+   "w": 9063,
+   "h": 7296,
+   "license": "Public domain",
+   "artist": "Palmer, Alfred T., photographer",
+   "date": "circa 1941date QS:P,+1941-00-00T00:00:00Z/9,P1480,Q5727902",
+   "desc": "Title: Back into production go these carloads of scrap metal, Allegheny Ludlum Steel[e] Corp., Brackenridge, Pa. The melting of alloy steels for defense work requires that steel mill scrapyards such a"
+  }
+ ],
+ "filetype:bitmap steel scrap bucket": [
+  {
+   "title": "File:LD converter operation Scrap bucket car 1.png",
+   "thumb": "05_0.jpg",
+   "w": 818,
+   "h": 1134,
+   "license": "CC BY-SA 4.0",
+   "artist": "European Commission, European Coal and Steel Community",
+   "date": "1971-04-01",
+   "desc": "Scrap loader able to handle 2 buckets of 6 m3 each."
+  },
+  {
+   "title": "File:LD converter operation Scrap bucket car 2.png",
+   "thumb": "05_1.jpg",
+   "w": 811,
+   "h": 1137,
+   "license": "CC BY-SA 4.0",
+   "artist": "European Commission, European Coal and Steel Community",
+   "date": "1971-04-01",
+   "desc": "Scrap loader able to handle 4 buckets of 10 m3 each."
+  },
+  {
+   "title": "File:LD converter operation Scrap loading.png",
+   "thumb": "05_2.jpg",
+   "w": 733,
+   "h": 1017,
+   "license": "CC BY-SA 4.0",
+   "artist": "European Commission, European Coal and Steel Community",
+   "date": "1971-04-01",
+   "desc": "Unloading of a scrap bucket in a converter."
+  },
+  {
+   "title": "File:Inside the Northwest Steel Rolling Mills, November 7, 1927 (MOHAI 5146).jpg",
+   "thumb": "05_3.jpg",
+   "w": 700,
+   "h": 889,
+   "license": "Public domain",
+   "artist": "\nWebster &amp; Stevens",
+   "date": "Taken on 7 November 1927",
+   "desc": "Northwest Steel Rolling Mills was one of several steel companies in Seattle in the late 1920s. In their Ballard mill, they melted scrap metal and made it into steel bars and cylinders for use by other"
+  },
+  {
+   "title": "File:Factory and industrial management (1891) (14778891764).jpg",
+   "thumb": "05_4.jpg",
+   "w": 2172,
+   "h": 3242,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1891",
+   "desc": "\nIdentifier: factoryindustria35newy (find matches)\nTitle: Factory and industrial management\nYear: 1891 (1890s)\nAuthors: \nSubjects:  Engineering Factory management Industrial efficiency\nPublisher:  New"
+  },
+  {
+   "title": "File:Transactions (1871) (14586357378).jpg",
+   "thumb": "05_5.jpg",
+   "w": 2800,
+   "h": 1700,
+   "license": "No restrictions",
+   "artist": "American Institute of Mining, Metallurgical, and Petroleum Engineers",
+   "date": "1871",
+   "desc": "\nIdentifier: transactionsmining23amer (find matches)\nTitle: Transactions\nYear: 1871 (1870s)\nAuthors:  American Institute of Mining, Metallurgical, and Petroleum Engineers\nSubjects:  Mineral industries"
+  },
+  {
+   "title": "File:Material handling cyclopedia; a reference book covering definitions, descriptions, illustrations and methods of use of material handling machines employed in industry (1921) (14773778622).jpg",
+   "thumb": "05_6.jpg",
+   "w": 1936,
+   "h": 1234,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1921",
+   "desc": "\nIdentifier: cu31924004680017 (find matches)\nTitle: Material handling cyclopedia; a reference book covering definitions, descriptions, illustrations and methods of use of material handling machines em"
+  },
+  {
+   "title": "File:Railway and Locomotive Engineering (1904) (14782397765).jpg",
+   "thumb": "05_7.jpg",
+   "w": 2092,
+   "h": 1358,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1904",
+   "desc": "\nIdentifier: railwaylocomotiv29newyuoft (find matches)\nTitle: Railway and Locomotive Engineering\nYear: 1904 (1900s)\nAuthors: \nSubjects: \nPublisher:  New York\nContributing Library:  Gerstein - Universi"
+  },
+  {
+   "title": "File:Railway and locomotive engineering - a practical journal of railway motive power and rolling stock (1916) (14780977773).jpg",
+   "thumb": "05_8.jpg",
+   "w": 2100,
+   "h": 1362,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1916",
+   "desc": "\nIdentifier: railwaylocomotiv29newy (find matches)\nTitle: Railway and locomotive engineering : a practical journal of railway motive power and rolling stock\nYear: 1901 (1900s)\nAuthors: \nSubjects:  Rai"
+  },
+  {
+   "title": "File:Cactus bedding in Fairmont Park, c. 1902.jpg",
+   "thumb": "05_9.jpg",
+   "w": 1282,
+   "h": 876,
+   "license": "No restrictions",
+   "artist": "Internet Archive Book Images",
+   "date": "1902",
+   "desc": "Cactus bedding in Fairmont Park, c. 1902\nTitle: The American florist : a weekly journal for the trade\nIdentifier: americanfloristw24amer (find matches)\nYear: 1885 (1880s)\nAuthors: American Florists Co"
+  }
+ ],
+ "filetype:bitmap scrap yard crane": [
+  {
+   "title": "File:Crane at metal scrap yard on Daikoku Pier.jpg",
+   "thumb": "06_0.jpg",
+   "w": 3072,
+   "h": 4080,
+   "license": "CC0",
+   "artist": "Syced",
+   "date": "2 April 2023 (according to Exif data)",
+   "desc": "Crane at metal scrap yard on Daikoku Pier "
+  },
+  {
+   "title": "File:Scrap metal yard.jpg",
+   "thumb": "06_1.jpg",
+   "w": 4896,
+   "h": 3672,
+   "license": "CC0",
+   "artist": "Digitura",
+   "date": "2024-11-09",
+   "desc": "Scrap metal yard in harbour. Purpose built container ships dock alongside the yard and the scrap metal is loaded by mechanical crane."
+  },
+  {
+   "title": "File:Newtown scrap crane jeh.JPG",
+   "thumb": "06_2.jpg",
+   "w": 1362,
+   "h": 1518,
+   "license": "Public domain",
+   "artist": "Jim.henderson",
+   "date": "Taken on 26 February 2009",
+   "desc": "Looking northeast across en:Newtown Creek from Greenpoint as a claw crane in Queens loads an automobile onto a scrap barge on a sunny early afternoon."
+  },
+  {
+   "title": "File:Vietnamese laborers use a crane to load scrap metal at the property disposal yard at Long Binh.jpg",
+   "thumb": "06_3.jpg",
+   "w": 1045,
+   "h": 1043,
+   "license": "Public domain",
+   "artist": "PFC Patrick A. Grohs",
+   "date": "1971-06-20",
+   "desc": "Vietnamese laborers use a crane mounted on a five ton truck to load scrap metal at the property disposal yard at Long Binh during property disposal operations. NARA 111-CCV-442-CC77133"
+  },
+  {
+   "title": "File:Scrap Yard - Tehran (10559344096).jpg",
+   "thumb": "06_4.jpg",
+   "w": 1000,
+   "h": 662,
+   "license": "CC BY 2.0",
+   "artist": "Kamyar Adl from Oxford, UK",
+   "date": "2013-08-18 09:06",
+   "desc": "Scrap Yard - Tehran"
+  },
+  {
+   "title": "File:02010024 scrap yard in Goiânia.jpg",
+   "thumb": "06_5.jpg",
+   "w": 1600,
+   "h": 1200,
+   "license": "CC BY 2.0",
+   "artist": "IAEA Imagebank",
+   "date": "2007-10-06",
+   "desc": "In 1987 a piece of an old radioactive source was sold to this scrap metal yard on Rua 19 in Goiânia, Brazil. Fortunately it was discovered before it was melted and recycled. (Goiânia, Brazil, 6 Octobe"
+  },
+  {
+   "title": "File:Scrap metal yard, Eccles - geograph.org.uk - 3667408.jpg",
+   "thumb": "06_6.jpg",
+   "w": 640,
+   "h": 511,
+   "license": "CC BY-SA 2.0",
+   "artist": "William Starkey ",
+   "date": "2013-09-21",
+   "desc": "Scrap metal yard, Eccles "
+  },
+  {
+   "title": "File:THIS SCRAP METAL STORAGE YARD IS LOCATED DIRECTLY BEHIND THE NEW ORLEANS CITY HALL - NARA - 546030.jpg",
+   "thumb": "06_7.jpg",
+   "w": 2024,
+   "h": 3000,
+   "license": "Public domain",
+   "artist": "John Messina",
+   "date": "March 1973date QS:P571,+1973-03-00T00:00:00Z/10",
+   "desc": ""
+  },
+  {
+   "title": "File:Victory Program. Crane loads blocks of scrap metal 8c34696v.jpg",
+   "thumb": "06_8.jpg",
+   "w": 1024,
+   "h": 1015,
+   "license": "Public domain",
+   "artist": "Marjory Collins",
+   "date": "May 1942date QS:P571,+1942-05-00T00:00:00Z/10",
+   "desc": "\nWashington, D.C. Scrap salvage campaign, Victory Program. Crane loads blocks of scrap metal onto a freight car in yard of wholesale junk company"
+  },
+  {
+   "title": "File:Sydney ferry CRANE at launch.jpg",
+   "thumb": "06_9.jpg",
+   "w": 899,
+   "h": 691,
+   "license": "Public domain",
+   "artist": "Unknown authorUnknown author",
+   "date": "1934",
+   "desc": "Launch of the waterbus \"Crane\" at Mort's Balmain yard 1934. One of three identical sister boats, these were capable of running at 13 knots and were Sydney Ferries' first purpose built diesel boats. Un"
+  }
+ ],
+ "filetype:bitmap Schrottplatz": [
+  {
+   "title": "File:Schrottplatz der Firma Zerssen zwischen Werftstraße und Hörn (Kiel 56.438).jpg",
+   "thumb": "07_0.jpg",
+   "w": 1024,
+   "h": 679,
+   "license": "CC BY-SA 3.0 de",
+   "artist": "Magnussen, Friedrich (1914-1987)",
+   "date": "1974-03",
+   "desc": "Schrottplatz der Firma Zerssen zwischen Werftstraße und Hörn"
+  },
+  {
+   "title": "File:Schrottplatz der Firma Michael Radomski am Poppenbrügger Weg in Wellsee (Kiel 40.212).jpg",
+   "thumb": "07_1.jpg",
+   "w": 1024,
+   "h": 674,
+   "license": "CC BY-SA 3.0 de",
+   "artist": "Magnussen, Friedrich (1914-1987)",
+   "date": "1966-09",
+   "desc": "Schrottplatz der Firma Michael Radomski am Poppenbrügger Weg in Wellsee"
+  },
+  {
+   "title": "File:Schrottplatz der Firma Michael Radomski am Poppenbrügger Weg in Wellsee (Kiel 40.213).jpg",
+   "thumb": "07_2.jpg",
+   "w": 1024,
+   "h": 674,
+   "license": "CC BY-SA 3.0 de",
+   "artist": "Magnussen, Friedrich (1914-1987)",
+   "date": "1966-09",
+   "desc": "Schrottplatz der Firma Michael Radomski am Poppenbrügger Weg in Wellsee"
+  },
+  {
+   "title": "File:Schrottplatz der Firma Zerssen zwischen Werftstraße und Hörn (Kiel 55.811).jpg",
+   "thumb": "07_3.jpg",
+   "w": 998,
+   "h": 1493,
+   "license": "CC BY-SA 3.0 de",
+   "artist": "Magnussen, Friedrich (1914-1987)",
+   "date": "1973-10-09",
+   "desc": "Aufbau eines neuen Krans. Er ersetzt den bei einem Wirbelsturm im Mai 1973 zerstörten Zerssen-Kran."
+  },
+  {
+   "title": "File:Schrottplatz der Firma Zerssen zwischen Werftstraße und Hörn (Kiel 65.636).jpg",
+   "thumb": "07_4.jpg",
+   "w": 1024,
+   "h": 1546,
+   "license": "CC BY-SA 3.0 de",
+   "artist": "Magnussen, Friedrich (1914-1987)",
+   "date": "1975-02",
+   "desc": "Schrottplatz der Firma Zerssen zwischen Werftstraße und Hörn"
+  },
+  {
+   "title": "File:Schrottplatz Max Becker, Köln-Ehrenfeld - Luftaufnahme-0137.jpg",
+   "thumb": "07_5.jpg",
+   "w": 5293,
+   "h": 3526,
+   "license": "CC BY-SA 4.0",
+   "artist": "Raimond Spekking",
+   "date": "2020-11-26 13:33:58",
+   "desc": "Schrottplatz Max Becker, Köln-Ehrenfeld - Luftaufnahme"
+  },
+  {
+   "title": "File:Ochtrup, Schrottplatz -- 2014 -- 9494.jpg",
+   "thumb": "07_6.jpg",
+   "w": 5184,
+   "h": 3456,
+   "license": "CC BY-SA 4.0",
+   "artist": "Dietmar Rabich",
+   "date": "Taken on 7 June 2014, 11:26",
+   "desc": "Schrottplatz, Ochtrup, North Rhine-Westphalia, Germany"
+  },
+  {
+   "title": "File:Schrottplatz Max Becker, Köln-Ehrenfeld - Luftaufnahme-0167.jpg",
+   "thumb": "07_7.jpg",
+   "w": 5459,
+   "h": 3637,
+   "license": "CC BY-SA 4.0",
+   "artist": "Raimond Spekking",
+   "date": "2020-11-26 13:46:45",
+   "desc": "Schrottplatz Max Becker, Köln-Ehrenfeld - Luftaufnahme"
+  },
+  {
+   "title": "File:Großbrand auf dem Schrottplatz der Firma Zerssen zwischen Werftstraße und Hörn (Kiel 57.459).jpg",
+   "thumb": "07_8.jpg",
+   "w": 1024,
+   "h": 682,
+   "license": "CC BY-SA 3.0 de",
+   "artist": "Magnussen, Friedrich (1914-1987)",
+   "date": "1974-09-03",
+   "desc": "Autowracks, Plastik und Reifen brennen. Die Berufsfeuerwehr von der Hauptwache und dem Ostring sowie die Freiwillige Feuerwehr Elmschenhagen mussten den ganzen Tag löschen."
+  },
+  {
+   "title": "File:Brand auf dem Schrottplatz der Firma Zerssen zwischen Werftstraße und Hörn (Kiel 47.512).jpg",
+   "thumb": "07_9.jpg",
+   "w": 990,
+   "h": 662,
+   "license": "CC BY-SA 3.0 de",
+   "artist": "Magnussen, Friedrich (1914-1987)",
+   "date": "1970-09-11",
+   "desc": "Brand auf dem Schrottplatz der Firma Zerssen zwischen Werftstraße und Hörn"
   }
  ]
 }
