@@ -1,6 +1,25 @@
 {
  "items": [
   {
+   "id": "2026-10-scrap-prep",
+   "category": "steel101",
+   "title": "廢鋼進爐之前：從廢料場到電爐料籃的檢查、破碎、分選與配料",
+   "period": "2026-10",
+   "published": "2026-10-12",
+   "summary": "鋼鐵小學堂：一車廢鋼進廠之後，如何過輻射與密閉容器檢查、經剪切打包破碎減容、磁選與感測分選，再靠配料稀釋殘留元素，最後分層裝進電爐料籃或轉爐廢鋼箱。",
+   "tags": [
+    "廢鋼",
+    "破碎機",
+    "分選",
+    "電爐",
+    "料籃",
+    "殘留元素",
+    "DRI"
+   ],
+   "image": "assets/articles/2026-10-scrap-prep-cars.jpg",
+   "url": "articles/2026-10-scrap-prep.html"
+  },
+  {
    "id": "2026-10-port-to-blast-furnace",
    "category": "steel101",
    "title": "進爐之前：鐵礦、焦煤與石灰從港口到高爐的處理流程",

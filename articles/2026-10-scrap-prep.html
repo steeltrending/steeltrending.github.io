@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>廢鋼進爐之前：從廢料場到電爐料籃的檢查、破碎、分選與配料 · 鋼鐵潮流 Steel Trending</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鋼鐵小學堂：一車廢鋼進廠之後，如何過輻射與密閉容器檢查、經剪切打包破碎減容、磁選與感測分選，再靠配料稀釋殘留元素，最後分層裝進電爐料籃或轉爐廢鋼箱。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+article{max-width:760px}
+article h2{margin:56px 0 14px;font-size:26px;font-weight:900;line-height:1.35;padding-top:20px;border-top:1px solid #2A2F35}
+article p{margin:0 0 16px;font-size:17px;line-height:1.9;color:#D5D7DA}
+article p.lead{font-size:19px;color:#E8E6E1}
+article ul{margin:0 0 20px;padding-left:1.2em}
+article li{margin:0 0 12px;font-size:16px;line-height:1.85;color:#C9CDD2}
+article li::marker{color:#FF6A1A}
+article li b{color:#E8E6E1}
+article .watch li::marker{content:'□  ';color:#9AA0A6}
+.tbl{overflow-x:auto;border:1px solid #2A2F35;margin:8px 0 24px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th,td{padding:12px 14px;border-bottom:1px solid #22262B;text-align:left;vertical-align:top}
+th{background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody th[scope=row]{width:9em;background:#15181B;font-size:13px;letter-spacing:.04em;white-space:nowrap}
+td.num{font-family:'IBM Plex Mono',monospace;white-space:nowrap;color:#E8E6E1}
+figure{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 12px;font-size:13px;line-height:1.7;color:#C9CDD2;border-top:1px solid #2A2F35}
+figcaption small{display:block;margin-top:2px;font-size:12px;color:#9AA0A6}
+.tlfig{border:1px solid #2A2F35;background:#121417;padding:24px 16px 4px;margin:8px 0 24px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.tl::before{content:'';position:absolute;left:6%;right:6%;top:31px;height:2px;background:linear-gradient(90deg,#FF6A1A 0,#FF6A1A 84%,#3A3F46 84%)}
+.tl .ev{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px;position:relative}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9CDD2;height:20px;white-space:nowrap}
+.tl .dot{width:14px;height:14px;border-radius:50%;background:#FF6A1A;border:3px solid #121417;box-sizing:content-box;margin:2px 0 10px;position:relative;z-index:1}
+.tl .t{font-size:13px;line-height:1.6;color:#C9CDD2}
+.tl .x .dot{background:#8DB4D6}.tl .x .d{color:#8DB4D6}
+.tl .k .dot{width:20px;height:20px;margin:-1px 0 7px;box-shadow:0 0 0 4px rgba(255,106,26,.25)}.tl .k .t{color:#E8E6E1;font-weight:700}.tl .k .d{color:#FF8A47}
+.tl .f .dot{background:#121417;border:2px dashed #9AA0A6;width:14px;height:14px}.tl .f .d,.tl .f .t{color:#9AA0A6}
+.tlkey{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;padding:18px 0 14px !important;border-top:0 !important;font-size:12px !important;color:#9AA0A6 !important}
+.tlkey i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.tlkey .k1{background:#FF6A1A}.tlkey .k2{background:#8DB4D6}.tlkey .k3{border:2px dashed #9AA0A6;width:8px;height:8px}
+@media (max-width:720px){
+.tlfig{padding:20px 16px 4px}
+.tl{grid-template-columns:1fr}
+.tl::before{left:9px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,#FF6A1A 0,#FF6A1A 86%,#3A3F46 86%)}
+.tl .ev{display:grid;grid-template-columns:20px 92px 1fr;align-items:start;text-align:left;padding:0 0 14px;gap:0 10px}
+.tl .dot{grid-column:1;grid-row:1;margin:3px 0 0 0;justify-self:center}
+.tl .k .dot{margin:0}
+.tl .d{grid-column:2;grid-row:1;height:auto;padding-top:2px}
+.tl .t{grid-column:3;grid-row:1}
+}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;margin:8px 0 24px}
+.fact{background:#121417;padding:18px 16px;display:flex;gap:12px;align-items:flex-start}
+.fact .ic{flex:none;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid #3A3F46;background:#181B1F;color:#FF6A1A}
+.fact .fl{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#9AA0A6;margin-bottom:4px}
+.fact .fv{display:block;font-size:16px;font-weight:700;color:#E8E6E1;line-height:1.5}
+.fact .fs{display:block;font-size:13px;color:#9AA0A6;line-height:1.6;margin-top:2px}
+.pies{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 8px}
+.pie{margin:0;border:1px solid #2A2F35;background:#121417;padding:16px}
+.pie .ph{font-size:14px;font-weight:700;color:#E8E6E1;margin-bottom:10px;padding:0;border:0}
+.pw{display:flex;align-items:center;gap:16px}
+.pw svg{width:150px;height:150px;flex:none;overflow:visible}
+.pw path{cursor:default;transition:opacity .15s}
+.pw svg:hover path{opacity:.45}.pw svg path:hover{opacity:1}
+.c1{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;fill:#E8E6E1}
+.c2{font-size:12px;fill:#9AA0A6}
+.lg{list-style:none;margin:0;padding:0;flex:1}
+.lg li{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:14px;color:#C9CDD2}
+.lg li::marker{content:''}
+.lg i{width:10px;height:10px;border-radius:2px;flex:none}
+.lg .ln{flex:1}.lg .lv{font-family:'IBM Plex Mono',monospace;color:#E8E6E1}
+.note{font-size:13px !important;color:#9AA0A6 !important;margin:6px 0 18px !important}
+.tip{position:fixed;z-index:10;pointer-events:none;background:#1C2024;border:1px solid #3A3F46;color:#E8E6E1;font-size:13px;padding:6px 10px;white-space:nowrap}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}.pies{grid-template-columns:1fr}}
+@media (max-width:420px){.facts{grid-template-columns:1fr}}
+.bars{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.bars .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.bar{display:grid;grid-template-columns:7.5em 1fr 4.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.bar .tr{height:14px;background:#1C2024;border-radius:0 4px 4px 0}
+.bar .fi{height:14px;background:#8A8F96;border-radius:0 4px 4px 0}
+.bar.hi .fi{background:#FF6A1A}.bar.hi{color:#E8E6E1;font-weight:700}
+.bar .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1}
+.bars .bn{font-size:12px;color:#9AA0A6;margin:8px 0 0}
+.flow{list-style:none;margin:8px 0 24px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;counter-reset:st}
+.flow li{background:#121417;padding:14px 12px;margin:0;counter-increment:st;font-size:13px;line-height:1.6;color:#9AA0A6}
+.flow li::marker{content:''}
+.flow li b{display:block;font-size:15px;color:#E8E6E1;margin-bottom:2px}
+.flow li b::before{content:counter(st,decimal-leading-zero) '  ';font-family:'IBM Plex Mono',monospace;font-size:12px;color:#FF6A1A;font-weight:500}
+.flow li.mine{border-top:2px solid #FF6A1A}.flow li.proc{border-top:2px solid #8DB4D6}.flow li.log{border-top:2px solid #9AA0A6}
+.flowkey{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#9AA0A6;margin:-14px 0 24px}
+.flowkey i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:6px}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mapfig{margin:8px 0 8px;border:1px solid #2A2F35;background:#121417;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mapfig .mi{min-width:680px}
+.mapfig svg path[stroke-opacity]:hover{stroke-opacity:1;filter:drop-shadow(0 0 3px rgba(255,255,255,.35))}
+.mapkey{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:#C9CDD2;margin:10px 0 6px}
+.mapkey i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.mapkey .ds{background:none;border-top:2px dashed #FF6A1A;height:0}
+.mapkey .ck{width:10px;height:10px;border-radius:50%;border:1.5px solid #E8E6E1;background:none}
+.rt td:first-child{white-space:nowrap}
+.bars2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 24px}
+.bars2 .bars{margin:0}
+@media (max-width:720px){.bars2{grid-template-columns:1fr}}
+.rng{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.rng .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.rng .rw{display:grid;grid-template-columns:8em 1fr 5.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.rng .tr{position:relative;height:14px;background:#1C2024;border-radius:2px}
+.rng .fi{position:absolute;top:0;height:14px;border-radius:2px}
+.rng .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1;white-space:nowrap}
+.rng .ax{display:grid;grid-template-columns:8em 1fr 5.2em;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9AA0A6}
+.rng .ax .sc{position:relative;height:14px}
+.rng .ax .sc span{position:absolute;transform:translateX(-50%)}
+.rng .bn{font-size:12px;color:#9AA0A6;margin:10px 0 0}
+@media (max-width:560px){.rng .rw,.rng .ax{grid-template-columns:6.2em 1fr 4.6em}}
+.flow.f5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:900px){.flow.f5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0 8px;align-items:start}
+.pair figure{margin:0}
+@media (max-width:620px){.pair{grid-template-columns:1fr}}
+.sources li{font-size:14px}
+@media (max-width:640px){.wrap{padding:0 16px}article p{font-size:16px}article p.lead{font-size:17px}}
+</style>
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="../assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="../#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="../stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<style>.nvdd{position:relative}.nvdd summary{list-style:none;cursor:pointer;color:#C9CDD2;padding:12px;display:flex;align-items:center;gap:6px;font-size:15px;user-select:none}.nvdd summary::-webkit-details-marker{display:none}.nvdd summary span{font-size:11px;color:#FF6A1A;transition:transform .2s}.nvdd[open] summary span{transform:rotate(180deg)}.nvdd summary:hover,.nvdd[open] summary,.nvdd.cur summary{color:#FF8A47}.nvdd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}.nvdd-m{position:absolute;top:100%;left:0;z-index:50;min-width:180px;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45);padding:6px 0;display:flex;flex-direction:column}.nvdd-m a{padding:12px 16px;color:#E8E6E1;text-decoration:none;font-size:15px;white-space:nowrap}.nvdd-m a:hover{background:#1C2024;color:#FF8A47}.nvdd-m a[aria-current]{color:#FF8A47}</style><details class="nvdd"><summary>鋼鐵數字<span aria-hidden="true">▾</span></summary><div class="nvdd-m"><a href="../worldsteel.html">世界鋼鐵數據</a><a href="../twmap.html">台灣鋼鐵地圖</a><a href="../trends.html">關鍵字熱度</a></div></details>
+<a href="../archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="../#topics" style="text-decoration:none">關注主題</a> <span aria-hidden="true">›</span> 鋼鐵小學堂 <span aria-hidden="true">›</span> 專題</nav>
+
+<article>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">STEEL 101 · SCRAP PREP · 2026.10</p>
+<h1 style="margin:12px 0 10px;font-size:clamp(30px,5vw,46px);font-weight:900;line-height:1.25">廢鋼進爐之前：從廢料場到電爐料籃的檢查、破碎、分選與配料</h1>
+<p style="font-size:14px;color:#9AA0A6">鋼鐵潮流工作室 · 發布 2026.10.12</p>
+
+<figure><img src="../assets/articles/2026-10-scrap-prep-cars.jpg" alt="金屬回收場裡，壓扁的報廢車一層層疊成小山，前方有一輛紅色貨卡與幾個油桶" width="960" height="720"><figcaption>金屬回收場裡等待破碎的報廢車（2010 年）。車子先壓扁、疊放，再依序送進破碎機，打成拳頭大小的碎片。<small>照片：dave_7，2010 年攝，<a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:Cars_awaiting_shredding_(5053506216).jpg">Wikimedia Commons</a></small></figcaption></figure>
+
+<h2>本期重點</h2>
+<p class="lead">上一課〈廢鋼從哪裡來〉談了廢鋼的規模與來源，也概略介紹處理流程。這一課把鏡頭拉近，沿著一車廢鋼進廠之後的路線，看它怎麼過檢查、減容、分選，最後配進料籃或廢鋼箱，才變成煉鋼爐裡能用的爐料。</p>
+<ul>
+<li><b>先檢查，再處理。</b> 門框式輻射偵測器是廢鋼場最主要的偵測手段；密閉的鋼瓶等容器也必須在入爐前挑出，否則進了破碎機或爐子都可能爆炸。</li>
+<li><b>減容靠三種機器。</b> 剪切、打包、破碎，把形狀與密度整理成鋼廠能接受的樣子；破碎料尺寸均勻、密度高，回收業者組織 BIR 指出電爐可以用到 80–90%。</li>
+<li><b>分選決定乾淨程度。</b> 磁選取出鐵，渦電流與感測器把銅、鋁等非鐵金屬分出去；但銅一旦熔進鋼水就去不掉。</li>
+<li><b>最後靠配料與裝料。</b> 殘留元素只能靠搭配 DRI、生鐵稀釋；裝料時輕重料分層，才能熔得快、少傷爐體，也少開幾次爐蓋。</li>
+</ul>
+<div class="facts"><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l7 7-3 3-7-7z"/><path d="M12 8L3 17l4 4 9-9"/></svg></span><div><span class="fl">破碎機規模</span><span class="fv">最大 6,000 馬力</span><span class="fs">每小時約 180–250 噸；超大型機種 200–350 噸</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17L17 3l4 4L7 21z"/><path d="M8 12l2 2M11 9l2 2M14 6l2 2"/></svg></span><div><span class="fl">破碎料規格（歐盟 E40）</span><span class="fv">95% 不超過 200 mm</span><span class="fs">其餘不超過 1,000 mm；密度高於 0.9 噸／立方公尺</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></span><div><span class="fl">電爐料籃平均密度</span><span class="fv">約 0.75 噸／立方公尺</span><span class="fs">實測範圍 0.5–1.5；輕料太蓬，一籃裝不了多少噸</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3 0-6 1-9z"/></svg></span><div><span class="fl">連續加料預熱溫度</span><span class="fv">400–600°C</span><span class="fs">Consteel 製程以爐氣預熱輸送中的廢鋼</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4-3 7-8 9-5-2-8-5-8-9V6z"/></svg></span><div><span class="fl">DRI 稀釋銅</span><span class="fv">0.25–0.45% → 約 0.20–0.30%</span><span class="fs">全廢鋼與 70% 廢鋼加 30% DRI 煉出的鋼，含銅量比較</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h8l-2-3M17 17H9l2 3"/><path d="M5 12a7 7 0 0 1 2-5M19 12a7 7 0 0 1-2 5"/></svg></span><div><span class="fl">每回收 1 噸廢鋼</span><span class="fv">少用 1.4 噸鐵礦砂</span><span class="fs">同時少用 740 公斤煤、120 公斤石灰石，避免 1.5 噸 CO₂</span></div></div></div>
+
+<h2>流程總覽：一車廢鋼進廠之後</h2>
+<p>折舊廢鋼要變成鋼廠能直接投料的爐料，目標只有三個：<b>尺寸合適、密度夠高、雜質夠少</b>。下面十個步驟，前兩個是把關，中間五個是加工，最後三個是配料與入爐。實際流程依各廠設備而異，這裡是最常見的順序。</p>
+<ol class="flow"><li class="mine"><b>進場偵檢</b>門框式偵測器掃描整車，異常車輛隔離</li><li class="mine"><b>目視檢查</b>挑出鋼瓶等密閉容器</li><li class="proc"><b>分類堆置</b>依來源、厚薄與品質分堆</li><li class="proc"><b>剪切</b>大型厚料切成可入爐尺寸</li><li class="proc"><b>打包</b>薄輕料壓成方塊，提高密度</li><li class="proc"><b>破碎</b>混合輕薄料打成拳頭大小碎片</li><li class="proc"><b>分選</b>磁選、渦電流、感測器分出雜質</li><li class="log"><b>配料</b>依鋼種允許的殘留量搭配爐料</li><li class="log"><b>裝籃</b>輕重料分層，裝入料籃或廢鋼箱</li><li class="log"><b>入爐</b>電爐批次或連續加料；轉爐先裝廢鋼</li></ol>
+<div class="flowkey"><span><i style="background:#FF6A1A"></i>進場檢查</span><span><i style="background:#8DB4D6"></i>前處理</span><span><i style="background:#9AA0A6"></i>配料與入爐</span></div>
+
+<h2>第一關：進場檢查，輻射與密閉容器</h2>
+<p>廢鋼進廠的第一件事不是處理，而是檢查。檢查的對象有兩類：放射性物質，與密閉容器。</p>
+<h3 style="margin:32px 0 12px;font-size:20px;font-weight:700;color:#E8E6E1">輻射：門框式偵測器是第一道防線</h3>
+<p>紐西蘭衛生部的指引指出，在入口設置門框式偵測器（portal monitor），監測進場貨物，是偵測廢鋼裡放射性物質的主要方式：超過預設門檻就會警報；貨車重新過一次，或以手持儀器確認，確認有放射源就把整車隔離，直到物品被找出並移除。</p>
+<p>廢鋼裡的放射源，多半是「孤兒源」，也就是脫離監管的放射性物質。該指引列出的例子包括：量測儀表常含銫-137、鈷-60 或鎇-241，工業射線檢測用銥-192 或硒-75，另有含鐳-226 的夜光錶面。美國環保署（EPA）則提到，石油與天然氣工業的管線積垢含有天然放射性物質（NORM），也可能混入廢料。</p>
+<p>偵測並非萬無一失。EPA 明說，監測「不保證能偵測到放射源」，廢鋼本身或放射源的外殼都可能把輻射遮住。放射源一旦被熔進爐裡，代價極高：EPA 記載，佛羅里達一座鋼廠熔掉一顆銫源，蒸氣進入排放控制系統，估計清理費用達 2,500 萬美元，除污與健康物理人員在酷熱中連續三週以上日夜作業。台灣 1980 年代的輻射鋼筋事件，已在〈廢鋼從哪裡來〉介紹，此處不再重述。</p>
+<h3 style="margin:32px 0 12px;font-size:20px;font-weight:700;color:#E8E6E1">密閉容器：進了破碎機或爐子都會爆</h3>
+<p>另一類危險是密閉容器：瓦斯鋼瓶等密封容器。ISRI（美國廢料回收工業協會，現名 ReMA）的刊物引用業者估算：一只 2,000 psi（約 138 bar）的鋼瓶，所含能量接近 1.5 磅 TNT。同一篇文章提到，有業者的可燃氣瓶在破碎機裡爆炸，整條產線停了好幾天；該文並提到，據報導曾有卸閥時閥門飛出、造成員工死亡的案例。</p>
+<p>即使是氮氣這類無毒氣體，也因為儲存壓力高而危險，閥門一斷，鋼瓶就會被氣體推著飛出去。看起來空的鋼瓶，還可能殘留氣體或其他物質。所以廢料場的做法是先「卸閥」（de-valving），洩壓並確認之後，鋼瓶才進入一般廢鋼流程。</p>
+
+<h2>第二關：減容，剪切、打包、破碎</h2>
+<p>廢鋼的天敵是體積。大塊構件塞不進爐，薄輕料又太蓬鬆，一個料籃裝不了幾噸，每爐就得多開幾次爐蓋。轉爐煉鋼的資料指出，處理方式依料型而定：超大件以剪切、火焰切割或氧氣燒割處理；薄板剪屑、沖孔料則以液壓機壓成包。太大、太重的料熔得慢，沒熔化的廢鋼會讓製程控制出問題。</p>
+<div class="tbl"><table>
+<caption style="position:absolute;left:-9999px">三種減容設備比較</caption>
+<thead><tr><th scope="col">設備</th><th scope="col">處理對象</th><th scope="col">成品</th><th scope="col">重點</th></tr></thead>
+<tbody>
+<tr><td><b>剪切機</b>（鱷魚剪、門式剪）</td><td>厚板、型鋼、鋼軌、拆除鋼構等大型料</td><td>短料，尺寸可直接入爐</td><td>超大構件另以火焰切割或氧氣燒割</td></tr>
+<tr><td><b>打包機</b></td><td>薄板剪屑、沖壓下腳料等輕薄鬆散料</td><td>方塊狀壓縮包</td><td>液壓壓縮提高堆積密度，減少加料次數</td></tr>
+<tr><td><b>破碎機</b></td><td>報廢車、家電、混合輕薄料</td><td>拳頭大小的破碎料</td><td>同一條線上分出鐵與非鐵金屬，殘渣另外處理</td></tr>
+</tbody></table></div>
+<figure><img src="../assets/articles/2026-10-scrap-prep-bales.jpg" alt="室內倉庫裡，一落落壓成方塊的廢金屬包堆疊成牆，包面可見各色壓扁的罐體與鋼片" width="960" height="718" loading="lazy"><figcaption>美國伊利諾州 Galva 附近回收廠裡，壓成方塊的廢鋼包。薄、輕、鬆散的料壓縮之後，密度提高，才方便運輸與入爐。<small>照片：blahedo，2004 年攝，<a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>，經 <a href="https://commons.wikimedia.org/wiki/File:Steel_recycling_bales.jpg">Wikimedia Commons</a></small></figcaption></figure>
+<h3 style="margin:32px 0 12px;font-size:20px;font-weight:700;color:#E8E6E1">破碎機：靠擺錘把車打成碎片</h3>
+<p>廢鋼破碎機是錘擊式（hammermill）：轉子上裝著重型擺錘，高速旋轉，把進料打碎。擺錘通常是四臂結構，磨損後可以翻面再用。Recycling Today 列出的規格：超大型破碎機的擺錘重約 950–1,200 磅（約 430–540 公斤），擺幅約 120 英寸（約 3 公尺）；標準機種擺幅約 98 英寸（約 2.5 公尺）。</p>
+<p>進料包括整台或壓扁的報廢車（不含油箱）、家電，以及厚度不超過 1/4 英寸（約 6.4 毫米）的二級廢鋼；重型機種可處理輕型一級廢鋼，厚度可到 1/2 英寸（約 12.7 毫米）以上，也包括鑄鐵。進料由直徑約 36 英寸（約 0.9 公尺）的雙進料輥壓住送入。規劃產能時，業界以每立方英尺 70 磅（約 1.12 噸／立方公尺）的成品密度為基準。</p>
+<div class="rng" role="img" aria-label="錘擊式破碎機：馬力與每小時產量（噸／小時）：1,500 馬力・720 rpm 25–30 噸／小時、2,500 馬力・600 rpm 60–70 噸／小時、4,000 馬力・500 rpm 120–140 噸／小時、6,000 馬力・450 rpm 180–250 噸／小時、超大型機種 200–350 噸／小時"><p class="bt">錘擊式破碎機：馬力與每小時產量（噸／小時）</p><div class="rw" title="1,500 馬力・720 rpm：25–30 噸／小時"><span>1,500 馬力・720 rpm</span><span class="tr"><span class="fi" style="left:7.1%;width:1.4%;background:#FF6A1A"></span></span><span class="v">25–30</span></div><div class="rw" title="2,500 馬力・600 rpm：60–70 噸／小時"><span>2,500 馬力・600 rpm</span><span class="tr"><span class="fi" style="left:17.1%;width:2.9%;background:#FF6A1A"></span></span><span class="v">60–70</span></div><div class="rw" title="4,000 馬力・500 rpm：120–140 噸／小時"><span>4,000 馬力・500 rpm</span><span class="tr"><span class="fi" style="left:34.3%;width:5.7%;background:#FF6A1A"></span></span><span class="v">120–140</span></div><div class="rw" title="6,000 馬力・450 rpm：180–250 噸／小時"><span>6,000 馬力・450 rpm</span><span class="tr"><span class="fi" style="left:51.4%;width:20.0%;background:#FF6A1A"></span></span><span class="v">180–250</span></div><div class="rw" title="超大型機種：200–350 噸／小時"><span>超大型機種</span><span class="tr"><span class="fi" style="left:57.1%;width:42.9%;background:#8DB4D6"></span></span><span class="v">200–350</span></div><div class="ax"><span></span><span class="sc"><span style="left:0.0%">0</span><span style="left:14.3%">50</span><span style="left:28.6%">100</span><span style="left:42.9%">150</span><span style="left:57.1%">200</span><span style="left:71.4%">250</span><span style="left:85.7%">300</span><span style="left:100.0%">350</span></span><span></span></div><p class="bn">資料來源：Recycling Today〈Automobile Shredders〉的機型範例；原文單位為 tons／hour（美國業界慣例多指短噸，約 907 公斤），為總產出量。各機型實際產量依進料與廠房配置而異。</p></div>
+<p>破碎料有明確規格。依 BIR 所引用的歐盟 27 國規格（E40 級），破碎料有 95% 的料任一方向不超過 200 毫米，其餘單件不超過 1,000 毫米；密度高於 0.9 噸／立方公尺；土、塑膠、非鐵金屬等不要的雜質要壓在 2% 以下，有的可低到 0.75%，礦物性雜質（steriles）低於 0.4%。BIR 同時主張，電爐可以用到 80–90% 的破碎料，加料時間可能縮短一半以上，產渣量可能比剪切料、打包料少一半以上，料場的搬運效率可高到兩倍。這些是回收業者組織的說法，鋼廠實際用量依鋼種與設備而異。</p>
+
+<h2>第三關：分選，把鐵和其他東西分開</h2>
+<p>破碎只是把車打成碎片，鐵、銅、鋁、塑膠、橡膠還混在一起。接下來一連串的分選設備，就是破碎線的後半段。下圖是簡化的流程，實際配置依各廠而異。手機上可左右滑動看全圖。</p>
+<div class="mapfig"><div class="mi" style="min-width:760px"><svg viewBox="0 0 960 372" role="img" aria-label="報廢車破碎線簡化流程圖：進料、錘擊破碎機、磁選之後分成鐵料線與非鐵線，鐵料經人工挑選與篩分成為破碎料，非鐵經渦電流與感測分選，剩下殘渣" style="display:block;width:100%;height:auto;font-family:'Noto Sans TC','PingFang TC',sans-serif"><defs><marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#FF6A1A"/></marker><marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#8DB4D6"/></marker><marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#9AA0A6"/></marker><marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#E8E6E1"/></marker></defs><rect width="960" height="372" fill="#121417"/><text x="20" y="22" font-size="12" letter-spacing="1.5" fill="#9AA0A6">進料與破碎</text><text x="590" y="22" font-size="12" letter-spacing="1.5" fill="#FF6A1A">鐵料線</text><text x="590" y="212" font-size="12" letter-spacing="1.5" fill="#8DB4D6">非鐵線</text><rect x="20" y="130" width="150" height="84" rx="3" fill="#181B1F" stroke="#E8E6E1" stroke-width="1.4"/><text x="95.0" y="159.0" text-anchor="middle" font-size="14" font-weight="700" fill="#E8E6E1">進料</text><text x="95.0" y="176.0" text-anchor="middle" font-size="12" fill="#C9CDD2">壓扁報廢車</text><text x="95.0" y="193.0" text-anchor="middle" font-size="12" fill="#C9CDD2">家電、輕薄廢鋼</text><rect x="205" y="130" width="150" height="84" rx="3" fill="#181B1F" stroke="#E8E6E1" stroke-width="1.4"/><text x="280.0" y="159.0" text-anchor="middle" font-size="14" font-weight="700" fill="#E8E6E1">錘擊破碎機</text><text x="280.0" y="176.0" text-anchor="middle" font-size="12" fill="#C9CDD2">轉子擺錘</text><text x="280.0" y="193.0" text-anchor="middle" font-size="12" fill="#C9CDD2">把料打成碎片</text><rect x="390" y="130" width="150" height="84" rx="3" fill="#181B1F" stroke="#E8E6E1" stroke-width="1.4"/><text x="465.0" y="159.0" text-anchor="middle" font-size="14" font-weight="700" fill="#E8E6E1">磁選</text><text x="465.0" y="176.0" text-anchor="middle" font-size="12" fill="#C9CDD2">鼓式磁鐵</text><text x="465.0" y="193.0" text-anchor="middle" font-size="12" fill="#C9CDD2">吸出鐵磁性碎片</text><rect x="590" y="32" width="170" height="74" rx="3" fill="#181B1F" stroke="#FF6A1A" stroke-width="1.4"/><text x="675.0" y="56.0" text-anchor="middle" font-size="14" font-weight="700" fill="#E8E6E1">挑選與篩分</text><text x="675.0" y="73.0" text-anchor="middle" font-size="12" fill="#C9CDD2">人工挑出大件雜物</text><text x="675.0" y="90.0" text-anchor="middle" font-size="12" fill="#C9CDD2">滾筒篩篩出細粒</text><rect x="790" y="32" width="150" height="74" rx="3" fill="#181B1F" stroke="#FF6A1A" stroke-width="1.4"/><text x="865.0" y="56.0" text-anchor="middle" font-size="14" font-weight="700" fill="#E8E6E1">破碎料</text><text x="865.0" y="73.0" text-anchor="middle" font-size="12" fill="#C9CDD2">送鋼廠當爐料</text><text x="865.0" y="90.0" text-anchor="middle" font-size="12" fill="#C9CDD2">（成品）</text><rect x="590" y="222" width="170" height="74" rx="3" fill="#181B1F" stroke="#8DB4D6" stroke-width="1.4"/><text x="675.0" y="246.0" text-anchor="middle" font-size="14" font-weight="700" fill="#E8E6E1">渦電流分選</text><text x="675.0" y="263.0" text-anchor="middle" font-size="12" fill="#C9CDD2">把銅、鋁等</text><text x="675.0" y="280.0" text-anchor="middle" font-size="12" fill="#C9CDD2">非鐵金屬推出來</text><rect x="790" y="222" width="150" height="74" rx="3" fill="#181B1F" stroke="#8DB4D6" stroke-width="1.4"/><text x="865.0" y="246.0" text-anchor="middle" font-size="14" font-weight="700" fill="#E8E6E1">感測分選</text><text x="865.0" y="263.0" text-anchor="middle" font-size="12" fill="#C9CDD2">依材質再細分</text><text x="865.0" y="280.0" text-anchor="middle" font-size="12" fill="#C9CDD2">銅、鋁、不銹鋼等</text><rect x="590" y="316" width="170" height="44" rx="3" fill="#181B1F" stroke="#9AA0A6" stroke-width="1.4"/><text x="675.0" y="333.5" text-anchor="middle" font-size="14" font-weight="700" fill="#E8E6E1">殘渣</text><text x="675.0" y="350.5" text-anchor="middle" font-size="12" fill="#C9CDD2">塑膠、橡膠、纖維</text><path d="M170 172L205 172" stroke="#E8E6E1" stroke-width="1.8" fill="none" marker-end="url(#arw)"/><path d="M355 172L390 172" stroke="#E8E6E1" stroke-width="1.8" fill="none" marker-end="url(#arw)"/><path d="M540 172L565 172L565 69L590 69" stroke="#FF6A1A" stroke-width="1.8" fill="none" marker-end="url(#aro)"/><path d="M540 172L565 172L565 259L590 259" stroke="#8DB4D6" stroke-width="1.8" fill="none" marker-end="url(#arb)"/><path d="M760 69L790 69" stroke="#FF6A1A" stroke-width="1.8" fill="none" marker-end="url(#aro)"/><path d="M760 259L790 259" stroke="#8DB4D6" stroke-width="1.8" fill="none" marker-end="url(#arb)"/><path d="M675 296L675 316" stroke="#9AA0A6" stroke-width="1.8" fill="none" marker-end="url(#arg)" stroke-dasharray="5 4"/><text x="548" y="152" font-size="11" fill="#9AA0A6" text-anchor="start"></text></svg></div></div>
+<div class="mapkey"><span><i style="background:#FF6A1A"></i>鐵料線</span><span><i style="background:#8DB4D6"></i>非鐵線</span><span><i style="background:none;border-top:2px dashed #9AA0A6;height:0"></i>殘渣</span></div>
+<p class="note">本站依 Recycling Today 與 Tomra 公開資料簡化繪製之示意圖；設備順序與數量依各廠而異。</p>
+<div class="tbl"><table>
+<caption style="position:absolute;left:-9999px">廢鋼分選技術比較</caption>
+<thead><tr><th scope="col">技術</th><th scope="col">原理</th><th scope="col">分出什麼</th></tr></thead>
+<tbody>
+<tr><td><b>磁選</b>（鼓式、橫帶、磁頭滾筒）</td><td>磁力吸住鐵磁性金屬</td><td>鋼鐵碎片與非磁性物分開；破碎線通常有一到三顆鼓式磁鐵</td></tr>
+<tr><td><b>人工挑選</b></td><td>在輸送帶旁目視挑出</td><td>大件雜物、明顯的非鐵金屬</td></tr>
+<tr><td><b>滾筒篩</b></td><td>依粒徑篩分</td><td>細粒碎屑，常見篩孔約 3/8 英寸（約 9.5 毫米）以下</td></tr>
+<tr><td><b>渦電流分選</b></td><td>導電的非鐵金屬在變動磁場中感應出電流，被推離輸送帶</td><td>銅、鋁等非鐵金屬</td></tr>
+<tr><td><b>X 光穿透（XRT）</b></td><td>依物體的「原子密度」判別</td><td>鋁與重金屬分開；鑄鋁、鍛造鋁與混合重金屬分開</td></tr>
+<tr><td><b>電磁感測</b></td><td>偵測導電金屬的訊號</td><td>找出渦電流機漏掉的銅線，即使外面包著 PVC、PP、PE 或橡膠</td></tr>
+</tbody></table></div>
+<p>非鐵金屬在回收業界有專屬名稱：破碎後混合的非鐵金屬稱 Zorba，混合的重金屬與不銹鋼則稱 Zurik；Tomra 的資料指出，感測分選能進一步產出銅、黃銅、鋁、不銹鋼等較單一的品項。對鋼廠來說，非鐵金屬被分出去，鋼的殘留銅就少一點；對回收業者來說，這些金屬本身也是收入。</p>
+<p>但分選只能處理「分得開」的雜質。真正麻煩的是銅線纏在鋼件上、塗層與焊接物等難以完全分離的部分，這些一旦熔進鋼水，就留在鋼裡了。下一關靠配料來補救。</p>
+
+<h2>第四關：配料，殘留元素去不掉，只能稀釋</h2>
+<p>Midrex 的技術文章指出，銅、鎳、鉻、錫、鉬在煉鋼過程中不會被氧化，所以會留在鋼裡累積；文中形容，還沒有人找到經濟可行的方法把銅、錫從鋼水裡去除。銅、錫、鎳、鉬等元素會讓鋼變硬、軋延困難，並造成「熱脆」，影響表面品質（熱脆機制見〈廢鋼從哪裡來〉）。廢鋼本身還夾帶油、油漆、塑膠、橡膠、泥砂、玻璃與混凝土，這些會增加硫，或讓爐渣變多。</p>
+<p>既然去不掉，就用「稀釋」。直接還原鐵（DRI）與生鐵幾乎不含這些殘留元素，把它們配進廢鋼，就能把煉出的鋼的殘留量拉下來。SteelOnTheNet 提到，這正是生產汽車外板等高要求產品時，電爐廠會搭配 DRI、生鐵的原因。</p>
+<div class="rng" role="img" aria-label="爐料裡的殘留元素含量（%）：各等級廢鋼 0.1–0.6 %、直接還原鐵（DRI） 微量–<0.1 %"><p class="bt">爐料裡的殘留元素含量（%）</p><div class="rw" title="各等級廢鋼：0.1–0.6 %"><span>各等級廢鋼</span><span class="tr"><span class="fi" style="left:16.7%;width:83.3%;background:#FF6A1A"></span></span><span class="v">0.1–0.6</span></div><div class="rw" title="直接還原鐵（DRI）：微量–<0.1 %"><span>直接還原鐵（DRI）</span><span class="tr"><span class="fi" style="left:0.0%;width:16.7%;background:#8DB4D6"></span></span><span class="v">微量–<0.1</span></div><div class="ax"><span></span><span class="sc"><span style="left:0.0%">0.0</span><span style="left:16.7%">0.1</span><span style="left:33.3%">0.2</span><span style="left:50.0%">0.3</span><span style="left:66.7%">0.4</span><span style="left:83.3%">0.5</span><span style="left:100.0%">0.6</span></span><span></span></div><p class="bn">資料來源：Midrex〈Diluent Effect of DRI〉所引用的殘留元素比較。Midrex 是 DRI 製程技術供應商，數字用來說明稀釋效果，並非所有廢鋼或 DRI 的通則。</p></div>
+<div class="rng" role="img" aria-label="煉出的鋼，含銅量範圍（%）：100% 一級重熔廢鋼（#1 HMS） 0.25–0.45 %、70% 廢鋼 + 30% DRI 約 0.20–0.30 %"><p class="bt">煉出的鋼，含銅量範圍（%）</p><div class="rw" title="100% 一級重熔廢鋼（#1 HMS）：0.25–0.45 %"><span>100% 一級重熔廢鋼（#1 HMS）</span><span class="tr"><span class="fi" style="left:50.0%;width:40.0%;background:#FF6A1A"></span></span><span class="v">0.25–0.45</span></div><div class="rw" title="70% 廢鋼 + 30% DRI：約 0.20–0.30 %"><span>70% 廢鋼 + 30% DRI</span><span class="tr"><span class="fi" style="left:40.0%;width:20.0%;background:#8DB4D6"></span></span><span class="v">約 0.20–0.30</span></div><div class="ax"><span></span><span class="sc"><span style="left:0.0%">0.0</span><span style="left:20.0%">0.1</span><span style="left:40.0%">0.2</span><span style="left:60.0%">0.3</span><span style="left:80.0%">0.4</span><span style="left:100.0%">0.5</span></span><span></span></div><p class="bn">資料來源：同上。原文寫「slightly more than 0.20–0.30%」，這裡取約略值；加入 DRI 後，含銅量的高低與波動幅度都降低。</p></div>
+<p>配料不只是「多放一點 DRI」。電爐廠要依鋼種可容許的殘留元素，混用不同等級的廢鋼：一般的做法是把低銅的新料用在要求高的鋼種，殘留較高的料留給要求較寬鬆的產品；各級廢鋼的規格與報價，反映的就是這種差別。</p>
+
+<h2>第五關：裝料，輕重分層、先後有序</h2>
+<h3 style="margin:32px 0 12px;font-size:20px;font-weight:700;color:#E8E6E1">電爐：料籃裡的廢鋼是一層一層排好的</h3>
+<p>ArcelorMittal 盧森堡 Differdange 廠與比利時研究機構 2008 年發表的論文指出，廢鋼要依尺寸分布與密度，一層一層排進料籃：目的是讓爐內盡快形成液態鋼池，同時保護爐壁與爐蓋，免受電弧輻射。一籃料最多可能有 20 層不同品質的廢鋼；該廠使用 100 噸級的料籃，雙爐殼的設計下，最多可同時備妥四個料籃。</p>
+<p>難處在密度。論文估算整籃料的平均密度約 0.75 噸／立方公尺，實測落在 0.5 到 1.5 之間；輕薄的歐盟 E1、E8 級平均約 0.65，較重的料則在 1 上下或更高。輕料太多，料堆就堆得很高，料籃裝不了多少噸。該廠研究的主題，就是在裝籃前以掃描量測料堆高度，估算填充情況與品質。</p>
+<p>料籃每裝完一籃就得掀開爐蓋，加料，再蓋回去，期間熱量不斷散失。美國礦務局（Bureau of Mines）早年的研究引用的數字是：40 短噸的電爐，每開一次爐蓋補料，約損失 489 度電的能量。這也是業界想把輕料壓成包、破碎成高密度料，以及改用連續加料的原因。</p>
+<div class="pair"><figure><img src="../assets/articles/2026-10-scrap-prep-magnet.jpg" alt="黑白照片：工人站在敞車旁，頭上懸著一盤圓形電磁吊盤，吊盤下堆著廢鋼，旁邊是等待裝料的料箱台車" width="640" height="835" loading="lazy"><figcaption>1942 年美國芝加哥一座鋼廠，工人引導磁盤吊車，把廢鋼從敞車卸進等候的裝料箱。<small>照片：Ann Rosener，1942 年 10 月攝，公有領域，經 <a href="https://commons.wikimedia.org/wiki/File:A_worker_guides_the_magnet_which_unloads_steel_scrap_8b07775v.jpg">Wikimedia Commons</a></small></figcaption></figure><figure><img src="../assets/articles/2026-10-scrap-prep-ldload.jpg" alt="黑白圖：吊車把裝滿廢鋼的大型廢鋼箱斜傾，倒入前方一座轉爐的爐口" width="640" height="888" loading="lazy"><figcaption>把廢鋼箱斜傾，倒進轉爐。圖為 1971 年歐洲煤鋼共同體（ECSC）出版物中的插圖，說明在垂直氧槍轉爐裡裝入廢鋼。<small>圖：歐盟執委會／ECSC，1971 年，<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:LD_converter_operation_Scrap_loading.png">Wikimedia Commons</a></small></figcaption></figure></div>
+<div class="tbl"><table>
+<caption style="position:absolute;left:-9999px">三種裝料方式比較</caption>
+<thead><tr><th scope="col">方式</th><th scope="col">作法</th><th scope="col">特點</th></tr></thead>
+<tbody>
+<tr><td><b>電爐料籃批次加料</b></td><td>吊車把料籃移到爐頂，掀開爐蓋，廢鋼由籃底落入爐內</td><td>設備單純；每開一次爐蓋就散熱，料籃分層是關鍵</td></tr>
+<tr><td><b>電爐連續加料</b>（Consteel）</td><td>廢鋼由慣性輸送機送進預熱隧道，爐氣逆向流過，邊預熱邊送入爐內</td><td>不必開爐蓋；廢鋼可預熱到約 400–600°C；輸送機寬度可達 4 公尺</td></tr>
+<tr><td><b>轉爐廢鋼箱</b></td><td>先把廢鋼由廢鋼箱裝入轉爐，再倒入鐵水、吹氧</td><td>廢鋼占金屬裝料約 10–35%；輕料裝箱前端、重料在後；重料要靠近氧槍吹入點，才熔得快</td></tr>
+</tbody></table></div>
+<h3 style="margin:32px 0 12px;font-size:20px;font-weight:700;color:#E8E6E1">預熱與連續加料：把爐氣的熱留住</h3>
+<p>歐盟創新中心（INCITE）的資料指出，Consteel 型電爐可達 350 噸爐容、每小時 450 噸產能；越南 Pomina 鋼廠在化學能不受限制的條件下，月平均電耗 321 度／噸。加拿大 Ivaco 軋鋼廠評估 Consteel 預熱時，用能源模型估算，廢鋼預熱溫度在 300 到 600°C 之間，可節省約 20–60 度／噸液態鋼；文獻回顧為 45–65 度，該廠申請書估計 38 度。這些數字依廠與條件而異，並非保證。</p>
+<h3 style="margin:32px 0 12px;font-size:20px;font-weight:700;color:#E8E6E1">轉爐：廢鋼先進，鐵水後到</h3>
+<p>轉爐的順序和電爐相反：ISPATGURU 說明，廢鋼是最先裝入的材料，從廢鋼箱倒進轉爐，之後才倒鐵水、開始吹氧。輕料放在箱子前端、重料放在後端，輕料就會先落在耐火內襯上，緩衝重料的撞擊。廢鋼箱也要秤重，因為料型與總重都會影響終點控制。廢鋼是轉爐的冷卻劑，也是第二大的鐵源，用得多就少用鐵水；世界鋼鐵協會（worldsteel）的資料指出，高爐轉爐流程每爐料通常含 15–25% 的廢鋼，電爐可以到 100%。</p>
+
+<h2>這麼費工，值得嗎？</h2>
+<p>世界鋼鐵協會的說法是：每回收一噸廢鋼，可避免 1.5 噸二氧化碳排放，並少用 1.4 噸鐵礦砂、740 公斤煤與 120 公斤石灰石。鋼製品平均壽命約 40 年，短的像包裝用鋼只有幾週，長的如建築與基礎設施可達 100 年。廢鋼因此是一座龐大的「城市礦山」。但要把它變成穩定、乾淨、可預期的爐料，每一關都不能省：檢查擋下危險，減容讓它進得了爐，分選與配料讓它煉得出好鋼，最後的裝料則決定熔化是否順利、耗電多寡。</p>
+<p>下一次看到廢鋼報價裡 HMS、破碎料、打包料的差別，不妨想想它們各自走過哪幾關：同樣是廢鋼，經過的處理不同，進了爐子的表現就不一樣。</p>
+
+<h2>延伸閱讀</h2>
+<ul>
+<li><a href="2026-10-steel-scrap.html">廢鋼從哪裡來：全球規模、三種來源與處理流程</a></li>
+<li><a href="2026-10-port-to-blast-furnace.html">進爐之前：鐵礦、焦煤與石灰從港口到高爐的處理流程</a></li>
+<li><a href="2026-10-raw-material-shipping.html">原料怎麼漂洋過海：鐵礦砂、廢鋼、焦煤的海運路線與進出口版圖</a></li>
+</ul>
+
+<h2>資料來源</h2>
+<ul class="sources">
+<li><a href="https://www.recyclingtoday.com/article/shredder-guide----high-speed-machinery-">Automobile Shredders</a>（Recycling Today）</li>
+<li><a href="https://archive.bir.org/publications/brochures/benefits-of-using-shredded-ferrous-scrap-in-steel-mills-and-foundries">Benefits of using shredded ferrous scrap in steel mills and foundries</a>（國際回收局 BIR）</li>
+<li><a href="https://imim.pl/files/archiwum/Vol2_2008/artykuly/Baumert.pdf">Automated assessment of scrap quality before loading into an EAF</a>（Baumert 等，Archives of Metallurgy and Materials 53(2)，2008）</li>
+<li><a href="https://www.midrex.com/tech-article/diluent-effect-of-dri-steelmaking-superpower/">Diluent Effect of DRI – Steelmaking Superpower</a>（Midrex）</li>
+<li><a href="https://steelonthenet.com/kb/metallics-residual-levels.html">Metallics Residual Levels</a>（SteelOnTheNet）</li>
+<li><a href="https://innovation-centre-for-industrial-transformation.ec.europa.eu/innovative-techniques/enhanced-eaf-steelmaking-through-continuous-charging-scrap-preheating-and">Enhanced EAF steelmaking through continuous charging, scrap preheating and electromagnetic stirring</a>（歐盟 INCITE）</li>
+<li><a href="https://www.aceee.org/files/proceedings/2013/data/papers/1_175.pdf">Innovative Energy Conservation through Scrap Pre-heating in an Electric Arc Furnace</a>（Dicion，ACEEE 2013）</li>
+<li><a href="https://www.911metallurgist.com/blog/electric-arc-furnace-steelmaking-scrap/">Electric Arc Furnace Steelmaking using Scrap</a>（美國礦務局研究，經 911Metallurgist 轉載）</li>
+<li><a href="https://www.ispatguru.com/?p=3163">Materials needed for Steel Production in Basic Oxygen Furnace</a>（ISPATGURU）</li>
+<li><a href="https://www.health.govt.nz/regulation-legislation/radiation/additional-information-and-guidance/radioactive-material-in-scrap-metal-recycling">Radioactive material in scrap metal recycling</a>（紐西蘭衛生部）</li>
+<li><a href="https://archive.epa.gov/radiation/source-reduction-management/web/html/scrapmetal.html">Contaminated Scrap Metal</a>（美國環保署 EPA）</li>
+<li><a href="https://isri.org/scrap-articles/turning-risk-into-reward">Turning Risk into Reward</a>（ISRI，2010 年 3/4 月）</li>
+<li><a href="https://www.tomra.com/en/sorting/recycling/your-application/metal-sorting/wire-recovery">Post Shredder &amp; Non-Ferrous Metals sorting</a>（Tomra）</li>
+<li><a href="https://www.saisi.org/wp-content/uploads/2024/02/Scrap-Fact-Sheet.pdf">Scrap use in the steel industry</a>（worldsteel 事實清單，2021 年 5 月，由 SAISI 網站轉載）</li>
+</ul>
+<p style="font-size:13px;color:#9AA0A6;margin-top:32px">內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</p>
+</article>
+<!-- article-qr -->
+<aside aria-label="本文連結 QR Code" style="max-width:760px;box-sizing:border-box;margin-top:48px;border:1px solid #2A2F35;background:#15181B;padding:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+<img src="../assets/qr/2026-10-scrap-prep.png" alt="本文連結 QR Code" width="132" height="132" loading="lazy" style="display:block;width:132px;height:132px;background:#FFFFFF;flex:none">
+<div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 220px">
+<p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;color:#FF6A1A">SHARE</p>
+<p style="margin:0;font-size:17px;font-weight:900;color:#E8E6E1">掃描 QR Code 開啟本文</p>
+<p style="margin:0;font-size:13px;line-height:1.7;color:#9AA0A6;word-break:break-all">https://steeltrending.github.io/articles/2026-10-scrap-prep.html</p>
+<a href="../assets/qr/2026-10-scrap-prep.png" download="steeltrending-2026-10-scrap-prep-qr.png" style="align-self:flex-start;margin-top:4px;font-size:14px;color:#FF8A47;text-decoration:none">下載 QR Code ↓</a>
+</div>
+</aside>
+<!-- /article-qr -->
+
+<p style="margin-top:48px"><a href="../#topics" style="display:inline-flex;align-items:center;border:1px solid #4A5058;color:#E8E6E1;text-decoration:none;padding:12px 20px">← 回到鋼鐵小學堂</a></p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending　·　<a href="../sitemap.html" style="color:#C9CDD2">網站導覽</a></span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+<div class="tip" id="tip" hidden></div>
+<script>
+(function(){var t=document.getElementById('tip');if(!t)return;
+document.querySelectorAll('.pw path[data-tip]').forEach(function(p){
+p.addEventListener('mousemove',function(e){t.textContent=p.getAttribute('data-tip');t.hidden=false;t.style.left=(e.clientX+12)+'px';t.style.top=(e.clientY+12)+'px';});
+p.addEventListener('mouseleave',function(){t.hidden=true;});});})();
+</script>
+<script src="../assets/hover.js" defer></script>
+<script src="../assets/tts.js" defer></script>
+</body>
+</html>
