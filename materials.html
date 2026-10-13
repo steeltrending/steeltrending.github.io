@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>原料與價格 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鐵礦砂、焦煤、廢鋼與海運，牽動每一噸鋼的成本。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+.up{color:#FF8A47}.down{color:#8DB4D6}.flat{color:#9AA0A6}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:48px;align-items:start;margin-top:48px}
+.article-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid #22262B;flex-direction:column}
+.article-item .meta{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13px;color:#9AA0A6;align-items:center}
+.article-item .date{font-family:'IBM Plex Mono',monospace;font-size:14px;color:#FF6A1A}
+.article-item h3{margin:0 0 8px;font-size:16px;font-weight:700;line-height:1.85}
+.article-item a{color:#FF8A47;text-decoration:none}
+.article-item a:hover{color:#FFB07F}
+.side{border:1px solid #2A2F35;background:#15181B;position:sticky;top:24px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.side .hd{margin:0 0 8px;font-size:16px;font-weight:700}
+.search{width:100%;box-sizing:border-box;background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;min-height:44px;padding:0 12px}
+.search:focus{outline:2px solid #FF6A1A;outline-offset:-1px}
+.ttl{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin:12px 0 12px}
+@media (max-width:900px){.layout{grid-template-columns:1fr}.side{position:static}}
+@media (max-width:640px){.wrap{padding:0 16px}}
+</style>
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<style>.nvdd{position:relative}.nvdd summary{list-style:none;cursor:pointer;color:#C9CDD2;padding:12px;display:flex;align-items:center;gap:6px;font-size:15px;user-select:none}.nvdd summary::-webkit-details-marker{display:none}.nvdd summary span{font-size:11px;color:#FF6A1A;transition:transform .2s}.nvdd[open] summary span{transform:rotate(180deg)}.nvdd summary:hover,.nvdd[open] summary,.nvdd.cur summary{color:#FF8A47}.nvdd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}.nvdd-m{position:absolute;top:100%;left:0;z-index:50;min-width:180px;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45);padding:6px 0;display:flex;flex-direction:column}.nvdd-m a{padding:12px 16px;color:#E8E6E1;text-decoration:none;font-size:15px;white-space:nowrap}.nvdd-m a:hover{background:#1C2024;color:#FF8A47}.nvdd-m a[aria-current]{color:#FF8A47}</style><details class="nvdd"><summary>鋼鐵數字<span aria-hidden="true">▾</span></summary><div class="nvdd-m"><a href="worldsteel.html">世界鋼鐵數據</a><a href="twmap.html">台灣鋼鐵地圖</a><a href="trends.html">關鍵字熱度</a></div></details>
+<a href="archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="./#topics" style="text-decoration:none">關注主題</a> <span aria-hidden="true">›</span> <span id="topic-name">原料與價格</span></nav>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A" id="topic-label">RAW MATERIALS</p>
+<div class="ttl"><h1 id="topic-title" style="margin:0;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">原料與價格</h1></div>
+<p style="margin:0 0 24px;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:44em" id="topic-desc">鐵礦砂、焦煤、廢鋼與海運，牽動每一噸鋼的成本。</p>
+
+<div class="layout">
+<section aria-labelledby="articles-h">
+<h2 id="articles-h" style="position:absolute;left:-9999px">文章列表</h2>
+<label for="q" style="position:absolute;left:-9999px">搜尋文章</label>
+<input id="q" class="search" type="search" placeholder="搜尋文章...">
+<p id="count" class="lbl" style="margin:14px 0 20px"></p>
+<div id="list"><p style="color:#9AA0A6">載入中…</p></div>
+</section>
+
+<aside class="side">
+<div class="hd">主題資訊</div>
+<p style="margin:0;font-size:14px;color:#9AA0A6;line-height:1.6">瀏覽此主題下的所有文章。輸入關鍵字可搜尋文章標題。</p>
+</aside>
+</div>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending　·　<a href="sitemap.html" style="color:#C9CDD2">網站導覽</a></span>
+<span>內容僅供產業資訊參考，不構成投資建議。</span>
+</div>
+</footer>
+
+<script>
+(function () {
+  var CATEGORY = 'materials';
+  var TOPIC_MAP = {
+    'materials': { label: 'RAW MATERIALS', title: '原料與價格', desc: '鐵礦砂、焦煤、廢鋼與海運，牽動每一噸鋼的成本。' },
+    'mills': { label: 'GLOBAL MILLS', title: '全球鋼廠動態', desc: '台灣、中國、日韓、印度、東南亞與歐美鋼廠的產能、報價與投資布局。' },
+    'vehicles': { label: 'ADVANCED VEHICLES', title: '先進載具與鋼材', desc: '無人機、電動車與航太載具的輕量化結構鋼、熱沖壓成形與電磁鋼片技術與市場。' },
+    'demand': { label: 'DOWNSTREAM DEMAND', title: '下游需求觀察', desc: 'AI、能源、營建、汽車、造船、家電與機械的景氣變化，從需求端看鋼價走向。' },
+    'trade': { label: 'TRADE & POLICY', title: '貿易與政策', desc: '歐盟 CBAM、反傾銷調查、關稅與產能政策的最新動向。' },
+    'carbon': { label: 'CARBON NEUTRALITY', title: '碳中和', desc: '碳費、碳權交易、產品碳足跡與鋼廠淨零路徑，掌握碳成本如何改寫鋼鐵競爭力。' },
+    'decarb': { label: 'DECARBONIZATION', title: '低碳冶金', desc: '氫氣直接還原、電爐轉型與碳捕捉，鋼鐵業邁向淨零的關鍵路徑。' },
+    'steel101': { label: 'STEEL 101', title: '鋼鐵小學堂', desc: '從高爐、轉爐、連鑄到熱軋與冷軋，把廠裡的事講得淺顯易懂。' }
+  };
+
+  var topic = TOPIC_MAP[CATEGORY];
+  document.getElementById('topic-label').textContent = topic.label;
+  document.getElementById('topic-title').textContent = topic.title;
+  document.getElementById('topic-name').textContent = topic.title;
+  document.getElementById('topic-desc').textContent = topic.desc;
+  document.title = topic.title + ' · 鋼鐵潮流 Steel Trending';
+
+  var ALL = [];
+  fetch('data/articles.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      ALL = (d.items || []).filter(function (a) { return a.category === CATEGORY; })
+        .sort(function (a, b) { return (a.published || a.period) < (b.published || b.period) ? 1 : -1; });
+      render('');
+    })
+    .catch(function () { document.getElementById('list').textContent = '文章資料暫時無法載入，請稍後再試。'; });
+
+  document.getElementById('q').addEventListener('input', function (e) { render(e.target.value.trim()); });
+
+  function render(q) {
+    var list = document.getElementById('list'); list.textContent = '';
+    var items = q ? ALL.filter(function (a) { return a.title.indexOf(q) >= 0; }) : ALL;
+    document.getElementById('count').textContent = (q ? '找到 ' : '共 ') + items.length + ' 篇';
+    if (!items.length) { list.appendChild(document.createElement('p')).textContent = q ? '沒有符合的文章。' : '此主題尚無文章。'; list.firstChild.className = 'flat'; return; }
+    items.forEach(function (a) {
+      var art = document.createElement('article'); art.className = 'article-item';
+      var hd = document.createElement('div');
+      var ttl = document.createElement('h3');
+      var lk = document.createElement('a'); lk.href = a.url; lk.textContent = a.title;
+      ttl.appendChild(lk);
+      hd.appendChild(ttl);
+      var meta = document.createElement('div'); meta.className = 'meta';
+      if (a.published) {
+        var d = document.createElement('span'); d.className = 'date'; d.textContent = a.published.slice(0, 10).replace(/-/g, '/');
+        meta.appendChild(d);
+      }
+      if (a.summary) {
+        var sm = document.createElement('span'); sm.textContent = a.summary;
+        meta.appendChild(sm);
+      }
+      hd.appendChild(meta);
+      art.appendChild(hd);
+      list.appendChild(art);
+    });
+  }
+})();
+</script>
+</body>
+</html>
