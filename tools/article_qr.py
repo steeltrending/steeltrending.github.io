@@ -7,8 +7,6 @@
 - 區塊插在 </article> 之後；已有區塊的文章會更新成最新版本，重複執行不會重複插入。
 - 由 GitHub Actions（.github/workflows/sitemap.yml）在文章有異動時自動執行，新文章不必手動處理。
 
-- 同一區塊內另附「分享本文」按鈕（手機開系統分享選單，否則複製連結）。
-
 用法：python3 tools/article_qr.py
 """
 import glob
@@ -81,30 +79,6 @@ def block(name):
 <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:4px"><a href="../assets/qr/{name[:-5]}.png" download="steeltrending-{name[:-5]}-qr.png" style="font-size:14px;color:#FF8A47;text-decoration:none">下載 QR Code ↓</a><button type="button" data-url="{url}" onclick="var b=this,u=this.dataset.url;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).catch(function(){{var t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}}).then(function(){{b.textContent='已複製本文網址';setTimeout(function(){{b.textContent='分享本文'}},2000)}})" style="font:inherit;font-size:14px;color:#FF8A47;background:none;border:0;padding:0;cursor:pointer">分享本文</button></div>
 </div>
 </aside>
-<div style="max-width:760px;box-sizing:border-box;margin-top:20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-<button type="button" class="share-btn" style="display:inline-flex;align-items:center;gap:8px;background:#FF6A1A;color:#0F1113;border:0;padding:14px 22px;font:700 16px 'Noto Sans TC','PingFang TC',sans-serif;cursor:pointer;min-height:48px">
-<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-4M8.6 13.5l6.8 4"/></svg>
-<span>分享本文</span></button>
-<span class="share-msg" role="status" aria-live="polite" style="font-size:14px;color:#9AA0A6"></span>
-</div>
-<script>
-(function(){{
-var b=document.querySelector('.share-btn'),m=document.querySelector('.share-msg');
-if(!b)return;
-var url='{url}',h=document.querySelector('h1'),title=h?h.textContent:document.title;
-function say(t){{m.textContent=t;setTimeout(function(){{m.textContent='';}},3000);}}
-function fallback(){{
- var ta=document.createElement('textarea');ta.value=url;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
- var ok=false;try{{ok=document.execCommand('copy');}}catch(e){{}}
- document.body.removeChild(ta);say(ok?'已複製連結':'請手動複製：'+url);
-}}
-b.addEventListener('click',function(){{
- if(navigator.share){{navigator.share({{title:title,text:title,url:url}}).catch(function(e){{if(e&&e.name!=='AbortError')fallback();}});return;}}
- if(navigator.clipboard&&navigator.clipboard.writeText){{navigator.clipboard.writeText(url).then(function(){{say('已複製連結');}},fallback);return;}}
- fallback();
-}});
-}})();
-</script>
 <!-- /article-qr -->
 """
 
