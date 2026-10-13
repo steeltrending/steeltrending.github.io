@@ -1,579 +1,599 @@
 {
- "items": [
-  {
-   "id": "2026-10-scrap-prep",
-   "category": "steel101",
-   "title": "廢鋼進爐之前：從廢料場到電爐料籃的檢查、破碎、分選與配料",
-   "period": "2026-10",
-   "published": "2026-10-12",
-   "summary": "鋼鐵小學堂：一車廢鋼進廠之後，如何過輻射與密閉容器檢查、經剪切打包破碎減容、磁選與感測分選，再靠配料稀釋殘留元素，最後分層裝進電爐料籃或轉爐廢鋼箱。",
-   "tags": [
-    "廢鋼",
-    "破碎機",
-    "分選",
-    "電爐",
-    "料籃",
-    "殘留元素",
-    "DRI"
-   ],
-   "image": "assets/articles/2026-10-scrap-prep-cars.jpg",
-   "url": "articles/2026-10-scrap-prep.html"
-  },
-  {
-   "id": "2026-10-port-to-blast-furnace",
-   "category": "steel101",
-   "title": "進爐之前：鐵礦、焦煤與石灰從港口到高爐的處理流程",
-   "period": "2026-10",
-   "published": "2026-10-12",
-   "summary": "鋼鐵小學堂：從港口卸船、堆置混勻，到鐵礦燒結與造球、煤煉成焦炭、石灰石與生石灰處理，再到爐前篩分與爐頂佈料，一次看懂高爐進料前的完整流程。",
-   "tags": [
-    "燒結",
-    "球團",
-    "焦炭",
-    "石灰",
-    "高爐",
-    "爐前料倉",
-    "中鋼"
-   ],
-   "image": "assets/articles/2026-10-port-to-blast-furnace-unload.jpg",
-   "url": "articles/2026-10-port-to-blast-furnace.html"
-  },
-  {
-   "id": "2026-10-iran-steel-sep",
-   "category": "mills",
-   "title": "伊朗鋼鐵 9 月觀察：戰火七個月，中東產量降幅收斂，鋼胚出口改走陸路",
-   "period": "2026-09",
-   "published": "2026-10-11",
-   "summary": "美以 2 月底空襲伊朗後，Mobarakeh、Khuzestan 兩大鋼廠受創、Mobarakeh 全面停產，中東 3 月粗鋼產量年減 33.5%，8 月降幅收斂到 4.6%。荷莫茲海峽受阻讓伊朗鋼胚改由陸路銷往伊拉克，海運鐵礦出口一度幾近停擺；10 月初電力與天然氣短缺又讓鋼胚報價走高。",
-   "tags": [
-    "伊朗",
-    "Mobarakeh",
-    "鋼胚",
-    "荷莫茲海峽",
-    "鐵礦",
-    "中東"
-   ],
-   "image": "assets/articles/2026-10-iran-steel-sep-mobarakeh.jpg",
-   "url": "articles/2026-10-iran-steel-sep.html"
-  },
-  {
-   "id": "2026-10-eu-steel-sep",
-   "category": "mills",
-   "title": "歐洲鋼市 9 月觀察：熱軋價格一年多漲近三成，產量仍停在谷底",
-   "period": "2026-09",
-   "published": "2026-10-11",
-   "summary": "北歐熱軋鋼捲 9 月 28 日報每公噸 745 歐元，比去年 8 月底高約 29%；但歐盟 1–8 月粗鋼產量 8,450 萬噸、年減 0.3%，EUROFER 把今年用鋼量預測下修到僅增 0.1%。漲價來自配額新制、CBAM、鋼廠停產與能源成本，而非需求。",
-   "tags": [
-    "歐洲",
-    "歐盟",
-    "熱軋鋼捲",
-    "EUROFER",
-    "配額",
-    "CBAM",
-    "Taranto"
-   ],
-   "image": "assets/articles/2026-10-eu-steel-sep-eisen.jpg",
-   "url": "articles/2026-10-eu-steel-sep.html"
-  },
-  {
-   "id": "2026-10-us-steel-sep",
-   "category": "mills",
-   "title": "美國鋼市 9 月觀察：產能利用率衝上四年高點，熱軋價格年初至今漲近三成",
-   "period": "2026-09",
-   "published": "2026-10-10",
-   "summary": "美國 9 月粗鋼產能利用率一度達 82.3%，為 2022 年 5 月以來最高；Nucor 熱軋現貨價 10 月 5 日升至每短噸 1,230 美元，較年初漲約 29%。232 關稅擋住進口，前 8 月成品鋼進口年減 18.5%，但 8 月進口已連兩月回升。",
-   "tags": [
-    "美國",
-    "Nucor",
-    "熱軋鋼捲",
-    "產能利用率",
-    "232關稅",
-    "進口"
-   ],
-   "image": "assets/articles/2026-10-us-steel-sep-gary.jpg",
-   "url": "articles/2026-10-us-steel-sep.html"
-  },
-  {
-   "id": "2026-10-gfsec-milwaukee",
-   "category": "trade",
-   "title": "密爾瓦基框架：28 個經濟體聯手對付鋼鐵過剩，會議落幕、執法才開始",
-   "period": "2026-10",
-   "published": "2026-10-10",
-   "summary": "全球鋼鐵過剩產能論壇 9 月 30 日在密爾瓦基通過《聯合行動綜合框架》，28 個成員將以主動反傾銷、轉運稽查與資料共享因應 2028 年恐達 7.45 億噸的過剩產能。台灣不是成員，出口要面對更嚴的原產地追查，內銷則可能承接被擋下的低價鋼材。",
-   "tags": [
-    "GFSEC",
-    "密爾瓦基框架",
-    "過剩產能",
-    "反傾銷",
-    "熔鑄地",
-    "轉運"
-   ],
-   "image": "assets/articles/2026-10-gfsec-milwaukee-lakefront.jpg",
-   "url": "articles/2026-10-gfsec-milwaukee.html"
-  },
-  {
-   "id": "2026-10-raw-material-shipping",
-   "category": "steel101",
-   "title": "原料怎麼漂洋過海：鐵礦砂、廢鋼、焦煤的海運路線與進出口版圖",
-   "period": "2026-10",
-   "published": "2026-10-08",
-   "summary": "鋼鐵小學堂：2025 年海運鐵礦砂 17.7 億噸，澳洲、巴西供應近八成、中國吃下四分之三。一張地圖看懂鐵礦砂、廢鋼、焦煤的出口國、進口國、主要航線、船型與運費，以及好望角、龍目海峽等咽喉點。",
-   "tags": [
-    "鐵礦砂",
-    "廢鋼",
-    "焦煤",
-    "海運",
-    "海岬型",
-    "Valemax",
-    "土耳其"
-   ],
-   "image": "assets/articles/2026-10-raw-material-shipping-valemax.jpg",
-   "url": "articles/2026-10-raw-material-shipping.html"
-  },
-  {
-   "id": "2026-10-csc-fastener-ife",
-   "category": "trade",
-   "title": "從台灣製造到台灣創造：中鋼在鳳凰城談扣件業的五個轉變",
-   "period": "2026-10",
-   "published": "2026-10-08",
-   "summary": "中鋼技術部門助理副總經理吳崇勇隨台灣扣件國家隊赴美國鳳凰城 IFE，提出扣件業五個轉變；台灣對美出口創新高，扣件卻仍受 232 條款 50% 關稅壓制，量縮價升。",
-   "tags": [
-    "中鋼",
-    "扣件",
-    "螺絲",
-    "IFE",
-    "232 條款",
-    "台美貿易"
-   ],
-   "image": "assets/articles/2026-10-csc-fastener-ife-wu.jpg",
-   "url": "articles/2026-10-csc-fastener-ife.html"
-  },
-  {
-   "id": "2026-10-china-property-q3",
-   "category": "demand",
-   "title": "中國房市第三季：新開工跌兩成五、二手房反超新房，8·28 新政改寫遊戲規則",
-   "period": "2026-Q3",
-   "published": "2026-10-07",
-   "summary": "前 8 月中國房地產開發投資年減 19.9%、新開工年減 24.8%，二手房網簽面積首度超過新房；8·28 銷售與房貸制度改革、首套房貸貼息上路，建築用鋼持續縮減。",
-   "tags": [
-    "中國",
-    "房地產",
-    "新開工",
-    "現房銷售",
-    "房貸貼息",
-    "螺紋鋼"
-   ],
-   "image": "assets/articles/2026-10-china-property-q3-dalian.jpg",
-   "url": "articles/2026-10-china-property-q3.html"
-  },
-  {
-   "id": "2026-10-csc-fin-2025",
-   "category": "csc",
-   "title": "中鋼 2025 財報分析：營收少一成二、本業轉虧，每股虧損 0.29 元",
-   "period": "2026-10",
-   "published": "2026-10-06",
-   "summary": "中鋼 2025 年（民國 114 年）合併財報：營收 3,172 億元減少 12%，營業損失 39.0 億元，歸屬母公司淨損 43.5 億元、EPS −0.29 元。以圖表拆解損益、存貨評價、部門、地區、業外、負債結構與現金流。",
-   "tags": [
-    "中鋼",
-    "財報",
-    "財報分析",
-    "2025"
-   ],
-   "image": "assets/articles/2026-10-csc-fin-2025-mill.jpg",
-   "url": "articles/2026-10-csc-fin-2025.html"
-  },
-  {
-   "id": "2026-10-csc-fin-2024",
-   "category": "csc",
-   "title": "中鋼 2024 財報分析：本業獲利腰斬，業外與非鋼事業撐住全年",
-   "period": "2026-10",
-   "published": "2026-10-06",
-   "summary": "中鋼 2024 年（民國 113 年）合併財報：營收 3,605 億元持平，營業利益 17.9 億元減半，歸屬母公司淨利 19.8 億元、EPS 0.13 元。以圖表拆解損益、部門、地區、業外、負債結構與現金流。",
-   "tags": [
-    "中鋼",
-    "財報",
-    "財報分析",
-    "2024"
-   ],
-   "image": "assets/articles/2026-10-csc-fin-2024-casting.jpg",
-   "url": "articles/2026-10-csc-fin-2024.html"
-  },
-  {
-   "id": "2026-10-csc-esg-2025",
-   "category": "csc",
-   "title": "中鋼 2025 永續報告書導讀：改設基準年、碳費上路，減碳路徑重新校準",
-   "period": "2026-10",
-   "published": "2026-10-06",
-   "summary": "中鋼 2025 年永續報告書重點：基準年改為 2021 年、2030 年減碳 25.3% 新目標與七大措施、排放較前一年減 6.7%、碳費自主減量計畫、綠電、循環經濟、職安與國際評比。",
-   "tags": [
-    "中鋼",
-    "永續報告書",
-    "ESG",
-    "減碳",
-    "碳費"
-   ],
-   "image": "assets/articles/2026-10-csc-esg-2025-hq.jpg",
-   "url": "articles/2026-10-csc-esg-2025.html"
-  },
-  {
-   "id": "2026-10-csc-esg-2024",
-   "category": "csc",
-   "title": "中鋼 2024 永續報告書導讀：減碳進度、綠能與循環的成績單",
-   "period": "2026-10",
-   "published": "2026-10-06",
-   "summary": "中鋼 2024 年永續報告書重點：二軸三轉策略、減碳行動累計 6.86%、2030 年減 25% 與 2050 碳中和路徑、綠電占比、循環經濟、職安與國際評比。",
-   "tags": [
-    "中鋼",
-    "永續報告書",
-    "ESG",
-    "減碳",
-    "碳中和"
-   ],
-   "image": "assets/articles/2026-10-csc-esg-2024-hq.jpg",
-   "url": "articles/2026-10-csc-esg-2024.html"
-  },
-  {
-   "id": "2026-10-cbam-101",
-   "category": "carbon",
-   "title": "CBAM 一次看懂：歐盟碳邊境調整機制的由來、規則與時程",
-   "period": "2026-10",
-   "published": "2026-10-06",
-   "summary": "歐盟碳邊境調整機制（CBAM）2026 年進入正式期，2027 年 2 月起進口商須為 2026 年進口購買憑證，2026 年第三季價格每噸 82.32 歐元。整理 CBAM 的由來、精神、法規、具體措施、時程與對台灣鋼鐵業的意義。",
-   "tags": [
-    "CBAM",
-    "歐盟",
-    "碳邊境",
-    "碳價",
-    "台灣出口"
-   ],
-   "image": "assets/articles/2026-10-cbam-101-duisburg.jpg",
-   "url": "articles/2026-10-cbam-101.html"
-  },
-  {
-   "id": "2026-10-csc-if-rc30",
-   "category": "vehicles",
-   "title": "中鋼 IF 汽車用鋼 RC30：把三成廢鋼煉進汽車外板",
-   "period": "2026-10",
-   "published": "2026-10-06",
-   "summary": "中鋼以三項轉爐增用廢鋼技術，把 IF 鋼的廢鋼比從約 10% 提高到 30%，IF 汽車用鋼 RC30 取得經濟部綠色產品認證。高再生料鋼品 2025 年接單 8.3 萬噸、年增 68%，2026 年前 8 月近 7.4 萬噸。",
-   "tags": [
-    "中鋼",
-    "IF 鋼",
-    "再生料",
-    "廢鋼",
-    "汽車用鋼"
-   ],
-   "image": "assets/articles/2026-10-csc-if-rc30-biw.jpg",
-   "url": "articles/2026-10-csc-if-rc30.html"
-  },
-  {
-   "id": "2026-10-eu-steel-quota",
-   "category": "trade",
-   "title": "歐盟鋼鐵新制：配額砍半、關稅 50%、追查熔鑄地，台灣怎麼應對",
-   "period": "2026-10",
-   "published": "2026-10-06",
-   "summary": "歐盟 2026 年 7 月起以常設配額取代鋼鐵防衛措施，免稅配額削減 47%、配額外關稅 50%，10 月起申報熔鑄地。台灣配額增至 67 萬噸，但品項不均與分配爭議浮現。",
-   "tags": [
-    "歐盟",
-    "鋼鐵配額",
-    "關稅",
-    "熔鑄地",
-    "台灣出口"
-   ],
-   "image": "assets/articles/2026-10-eu-steel-quota-berlaymont.jpg",
-   "url": "articles/2026-10-eu-steel-quota.html"
-  },
-  {
-   "id": "2026-10-csc-electrical-steel",
-   "category": "vehicles",
-   "title": "中鋼與電磁鋼片：從冷氣壓縮機到電動車、無人機的 37 年",
-   "period": "2026-10",
-   "published": "2026-10-06",
-   "summary": "中鋼 1989 年起供應電磁鋼片，自主發展製程，2017 年打入 Tesla Model 3 供應鏈，如今推進到 0.1 mm。整理起源、技術、全球布局、銷售實績與反傾銷挑戰。",
-   "tags": [
-    "中鋼",
-    "電磁鋼片",
-    "電動車",
-    "無人機",
-    "反傾銷"
-   ],
-   "image": "assets/articles/2026-10-csc-electrical-steel-core.jpg",
-   "url": "articles/2026-10-csc-electrical-steel.html"
-  },
-  {
-   "id": "2026-10-china-pmi-sep",
-   "category": "demand",
-   "title": "中國 9 月 PMI：重回擴張，但靠生產與漲價撐起，鋼鐵業仍在收縮",
-   "period": "2026-09",
-   "published": "2026-10-06",
-   "summary": "9 月中國製造業 PMI 50.1%、非製造業 50.2%，同步回到擴張；但回升來自生產與原材料漲價，新訂單走平，黑色金屬冶煉業仍低於臨界點。",
-   "tags": [
-    "中國",
-    "PMI",
-    "製造業",
-    "建築業",
-    "原材料價格"
-   ],
-   "image": "assets/articles/2026-10-china-pmi-sep-port.jpg",
-   "url": "articles/2026-10-china-pmi-sep.html"
-  },
-  {
-   "id": "2026-10-china-steel-aug",
-   "category": "mills",
-   "title": "中國鋼鐵 8 月觀察：產量降到年內低點，出口連四月破千萬噸",
-   "period": "2026-08",
-   "published": "2026-10-06",
-   "summary": "8 月中國粗鋼產量 7,461 萬噸、年減 3.7%，日均產量降到年內最低；鋼材出口 1,016 萬噸、年增 6.8%，鋼胚出口前 8 月年增 52%。解析生產、出口、內需與產能政策。",
-   "tags": [
-    "中國鋼鐵",
-    "粗鋼產量",
-    "鋼材出口",
-    "鋼胚",
-    "產能置換"
-   ],
-   "image": "assets/articles/2026-10-china-steel-aug-wisco.jpg",
-   "url": "articles/2026-10-china-steel-aug.html"
-  },
-  {
-   "id": "2026-10-steel-scrap",
-   "category": "steel101",
-   "title": "廢鋼從哪裡來：全球規模、三種來源與處理流程",
-   "period": "2026-10",
-   "published": "2026-10-05",
-   "summary": "全球每年約 6 億噸廢鋼回到煉鋼爐。介紹廢鋼的三種來源、各國用量與貿易、從剪切破碎到分級的處理流程，以及殘留元素與輻射兩大品質風險。",
-   "tags": [
-    "廢鋼",
-    "電爐",
-    "回收",
-    "BIR",
-    "輻射鋼筋"
-   ],
-   "image": "assets/articles/2026-10-steel-scrap-scrapyard.jpg",
-   "url": "articles/2026-10-steel-scrap.html"
-  },
-  {
-   "id": "2026-10-taiwan-construction-sep",
-   "category": "demand",
-   "title": "台灣營建業 9 月觀察：成交回溫、開工谷底，鋼筋漲價靠成本",
-   "period": "2026-09",
-   "published": "2026-10-05",
-   "summary": "9 月六都房市移轉 17,945 棟、年增 11.6%，但上半年住宅建照年減 28.2%、營造工資年增 8.12%；鋼筋漲價由廢鋼成本推動，營建用鋼呈現住宅弱、廠房與公共工程撐住的分化。",
-   "tags": [
-    "台灣營建",
-    "房市",
-    "建照",
-    "營造物價",
-    "鋼筋",
-    "豐興"
-   ],
-   "image": "assets/articles/2026-10-taiwan-construction-twins.jpg",
-   "url": "articles/2026-10-taiwan-construction-sep.html"
-  },
-  {
-   "id": "carmarket-2026-09",
-   "category": "demand",
-   "series": "carmarket",
-   "title": "2026 年 9 月台灣車市：進口車占五成五、Model Y 單月封王",
-   "period": "2026-09",
-   "published": "2026-10-05",
-   "summary": "9 月新車掛牌 37,054 輛、年增 15%，進口車占比衝上 55.5%；Tesla Model Y 單月 5,154 輛奪冠，國產車失去過半市占，國內汽車鋼板需求未隨總量成長。",
-   "tags": [
-    "台灣車市",
-    "新車掛牌",
-    "進口車",
-    "電動車",
-    "汽車用鋼"
-   ],
-   "image": "assets/articles/carmarket-hero.jpg",
-   "url": "articles/carmarket-2026-09.html"
-  },
-  {
-   "id": "2026-10-nippon-steel-hydrogen-bf",
-   "category": "decarb",
-   "title": "高爐吹氫減碳 43%：日本製鐵 Super COURSE50 試驗全解析",
-   "period": "2026-10",
-   "published": "2026-10-05",
-   "summary": "日本製鐵在 12 立方公尺試驗高爐吹入加熱氫氣，高爐 CO₂ 減量從 22% 推進到 43%；解析原理、試驗歷程、43% 的意義與放大到實爐的挑戰。",
-   "tags": [
-    "日本製鐵",
-    "Super COURSE50",
-    "氫還原",
-    "高爐",
-    "君津"
-   ],
-   "image": "assets/articles/2026-10-nippon-steel-hydrogen-bf-kimitsu.jpg",
-   "url": "articles/2026-10-nippon-steel-hydrogen-bf.html"
-  },
-  {
-   "id": "2026-10-arcelormittal-kryvyi-rih",
-   "category": "mills",
-   "title": "烽火下熄爐：ArcelorMittal 烏克蘭克里維里赫鋼廠無限期停產",
-   "period": "2026-10",
-   "published": "2026-10-05",
-   "summary": "五週內遭飛彈直接擊中四次，ArcelorMittal 宣布烏克蘭克里維里赫鋼廠無法安全復工、無限期停產，認列約 10 億美元減損。",
-   "tags": [
-    "ArcelorMittal",
-    "烏克蘭",
-    "克里維里赫",
-    "高爐",
-    "減損"
-   ],
-   "image": "assets/articles/2026-10-arcelormittal-kryvyi-rih-towers.jpg",
-   "url": "articles/2026-10-arcelormittal-kryvyi-rih.html"
-  },
-  {
-   "id": "2026-10-trump-shipbuilding",
-   "category": "trade",
-   "title": "川普重振美國造船業：港口費、韓國資金與鋼板商機",
-   "period": "2026-10",
-   "published": "2026-10-05",
-   "summary": "川普以 301 港口費、海事行動計畫與外國造艦備忘錄重振美國造船業，韓國 1,500 億美元 MASGA 入局；鋼鐵關稅與造船厚板需求是鋼鐵業觀察重點。",
-   "tags": [
-    "川普",
-    "造船",
-    "301 條款",
-    "MASGA",
-    "韓華",
-    "厚板"
-   ],
-   "image": "assets/articles/2026-10-trump-shipbuilding-philly.jpg",
-   "url": "articles/2026-10-trump-shipbuilding.html"
-  },
-  {
-   "id": "2026-10-iron-ore-mining",
-   "category": "steel101",
-   "title": "鐵礦砂從哪裡來：全球礦區分布與開採技術",
-   "period": "2026-10",
-   "published": "2026-10-04",
-   "summary": "鋼鐵小學堂：鐵礦砂的形成、全球主要礦區分布，以及露天開採、地下崩落法、無卡車採礦、自動化與選礦造粒等主流技術。",
-   "tags": [
-    "鐵礦砂",
-    "採礦",
-    "皮爾巴拉",
-    "卡拉加斯",
-    "Simandou",
-    "選礦"
-   ],
-   "image": "assets/articles/2026-10-iron-ore-mining-pit.jpg",
-   "url": "articles/2026-10-iron-ore-mining.html"
-  },
-  {
-   "id": "2026-10-taiwan-carbon",
-   "category": "carbon",
-   "title": "碳有價元年：台灣碳中和 2026 進度與鋼鐵業壓力",
-   "period": "2026-10",
-   "published": "2026-10-04",
-   "summary": "2026 年台灣碳費首次收費 49.7 億元，第二階段費率與 2028 年碳交易試辦接續登場；綠電落後目標，鋼鐵業碳成本壓力在後頭。",
-   "tags": [
-    "碳費",
-    "碳交易",
-    "NDC 3.0",
-    "CBAM",
-    "中鋼",
-    "再生能源"
-   ],
-   "image": "assets/articles/2026-10-taiwan-carbon-csc.jpg",
-   "url": "articles/2026-10-taiwan-carbon.html"
-  },
-  {
-   "id": "2026-10-ai-steel",
-   "category": "demand",
-   "title": "AI 吃電也吃鋼：鋼鐵業的新需求與新工具",
-   "period": "2026-10",
-   "published": "2026-10-04",
-   "summary": "AI 資料中心帶動電網、變壓器與高階鋼材需求，方向性電磁鋼片成為瓶頸；鋼廠也用 AI 改造煉鐵、品管與巡檢。",
-   "tags": [
-    "AI",
-    "資料中心",
-    "變壓器",
-    "電磁鋼片",
-    "智慧製造"
-   ],
-   "image": "assets/articles/2026-10-ai-steel-datacenter.jpg",
-   "url": "articles/2026-10-ai-steel.html"
-  },
-  {
-   "id": "2026-10-hyundai-steel-louisiana",
-   "category": "mills",
-   "title": "現代製鐵路易斯安那廠：韓國鋼廠的美國突圍戰",
-   "period": "2026-10",
-   "published": "2026-10-04",
-   "summary": "現代製鐵聯手 POSCO 與現代、起亞，投資 58 億美元在路易斯安那建 DRI＋電爐一貫廠，年產 270 萬噸汽車鋼板，2029 年投產。",
-   "tags": [
-    "現代製鐵",
-    "POSCO",
-    "路易斯安那",
-    "DRI",
-    "電弧爐",
-    "232 條款"
-   ],
-   "image": "assets/articles/2026-10-hyundai-steel-louisiana-eaf.jpg",
-   "url": "articles/2026-10-hyundai-steel-louisiana.html"
-  },
-  {
-   "id": "2026-10-csc-drones-robot-dogs",
-   "category": "vehicles",
-   "title": "牽狗放鷹：中鋼的無人機與機器狗布局",
-   "period": "2026-10",
-   "published": "2026-10-04",
-   "summary": "中鋼一邊用機器狗與無人機巡檢鋼廠，一邊把 0.20 到 0.10 mm 的極薄電磁鋼片賣進無人機與機器人馬達。",
-   "tags": [
-    "中鋼",
-    "無人機",
-    "機器狗",
-    "電磁鋼片",
-    "機器人"
-   ],
-   "image": "assets/articles/2026-10-csc-drones-robot-dogs-spot.jpg",
-   "url": "articles/2026-10-csc-drones-robot-dogs.html"
-  },
-  {
-   "id": "2026-10-eu-green-steel",
-   "category": "decarb",
-   "title": "歐洲綠鋼進度：氫氣退潮、電爐接棒",
-   "period": "2026-10",
-   "published": "2026-10-04",
-   "summary": "氫氣直接還原專案因綠氫太貴延後或改用天然氣，電弧爐專案 2027 年起陸續投產。",
-   "tags": [
-    "綠鋼",
-    "氫氣直接還原",
-    "電弧爐",
-    "Stegra",
-    "thyssenkrupp"
-   ],
-   "image": "assets/articles/2026-10-eu-green-steel-linz.jpg",
-   "url": "articles/2026-10-eu-green-steel.html"
-  },
-  {
-   "id": "2026-10-us-canada-tariffs",
-   "category": "trade",
-   "title": "美加關稅戰升級：鋼鋁互課 50%，談判凍結",
-   "period": "2026-10",
-   "published": "2026-10-04",
-   "summary": "8 月談判破局後美加互加 50% 關稅，加拿大對美鋼鋁加倍到 50%，美國再禁止約 10 億美元加拿大商品進口。",
-   "tags": [
-    "美國",
-    "加拿大",
-    "232 條款",
-    "鋼鋁關稅"
-   ],
-   "image": "assets/articles/2026-10-us-canada-tariffs-trump.jpg",
-   "url": "articles/2026-10-us-canada-tariffs.html"
-  },
-  {
-   "id": "2026-09-raw-materials",
-   "category": "materials",
-   "title": "2026年9月 鋼鐵原物料月報",
-   "period": "2026-09",
-   "published": "2026-10-04",
-   "summary": "煤強礦弱：冶金煤因供給偏緊漲到約每噸 275 美元（中鋼），鐵礦砂在中國減產壓力下滑到五週低點，台灣廢鋼中旬起連三週上漲。",
-   "tags": [
-    "鐵礦砂",
-    "焦煤",
-    "廢鋼",
-    "能源與碳成本"
-   ],
-   "url": "articles/2026-09-raw-materials.html"
-  }
- ]
+  "items": [
+    {
+      "id": "2026-10-japan-korea-steel-sep",
+      "category": "mills",
+      "title": "日韓鋼廠 9 月觀察：日本受颱風與出口疲弱拖累，韓國靠反傾銷稅守住內需",
+      "period": "2026-09",
+      "published": "2026-10-13",
+      "summary": "1–8 月日本粗鋼年減 0.2%、韓國年增 2.8%；9 月日本製鐵君津廠與 JFE 千葉地區受杜鵑颱風衝擊，JFE 預估減產約 60 萬噸。日本 1–8 月鋼材出口年減 5.8%，日韓兩國則相繼對中國等鋼品築起反傾銷牆（日本調查對象還包括韓國與台灣），韓國現代製鐵第二季重回獲利，日本製鐵上修全年淨利預測但下修國內本業。",
+      "tags": [
+        "日本",
+        "韓國",
+        "POSCO",
+        "日本製鐵",
+        "JFE",
+        "現代製鐵",
+        "颱風",
+        "反傾銷"
+      ],
+      "image": "assets/articles/2026-10-japan-korea-steel-sep-pohang.jpg",
+      "url": "articles/2026-10-japan-korea-steel-sep.html"
+    },
+    {
+      "id": "2026-10-scrap-prep",
+      "category": "steel101",
+      "title": "廢鋼進爐之前：從廢料場到電爐料籃的檢查、破碎、分選與配料",
+      "period": "2026-10",
+      "published": "2026-10-12",
+      "summary": "鋼鐵小學堂：一車廢鋼進廠之後，如何過輻射與密閉容器檢查、經剪切打包破碎減容、磁選與感測分選，再靠配料稀釋殘留元素，最後分層裝進電爐料籃或轉爐廢鋼箱。",
+      "tags": [
+        "廢鋼",
+        "破碎機",
+        "分選",
+        "電爐",
+        "料籃",
+        "殘留元素",
+        "DRI"
+      ],
+      "image": "assets/articles/2026-10-scrap-prep-cars.jpg",
+      "url": "articles/2026-10-scrap-prep.html"
+    },
+    {
+      "id": "2026-10-port-to-blast-furnace",
+      "category": "steel101",
+      "title": "進爐之前：鐵礦、焦煤與石灰從港口到高爐的處理流程",
+      "period": "2026-10",
+      "published": "2026-10-12",
+      "summary": "鋼鐵小學堂：從港口卸船、堆置混勻，到鐵礦燒結與造球、煤煉成焦炭、石灰石與生石灰處理，再到爐前篩分與爐頂佈料，一次看懂高爐進料前的完整流程。",
+      "tags": [
+        "燒結",
+        "球團",
+        "焦炭",
+        "石灰",
+        "高爐",
+        "爐前料倉",
+        "中鋼"
+      ],
+      "image": "assets/articles/2026-10-port-to-blast-furnace-unload.jpg",
+      "url": "articles/2026-10-port-to-blast-furnace.html"
+    },
+    {
+      "id": "2026-10-iran-steel-sep",
+      "category": "mills",
+      "title": "伊朗鋼鐵 9 月觀察：戰火七個月，中東產量降幅收斂，鋼胚出口改走陸路",
+      "period": "2026-09",
+      "published": "2026-10-11",
+      "summary": "美以 2 月底空襲伊朗後，Mobarakeh、Khuzestan 兩大鋼廠受創、Mobarakeh 全面停產，中東 3 月粗鋼產量年減 33.5%，8 月降幅收斂到 4.6%。荷莫茲海峽受阻讓伊朗鋼胚改由陸路銷往伊拉克，海運鐵礦出口一度幾近停擺；10 月初電力與天然氣短缺又讓鋼胚報價走高。",
+      "tags": [
+        "伊朗",
+        "Mobarakeh",
+        "鋼胚",
+        "荷莫茲海峽",
+        "鐵礦",
+        "中東"
+      ],
+      "image": "assets/articles/2026-10-iran-steel-sep-mobarakeh.jpg",
+      "url": "articles/2026-10-iran-steel-sep.html"
+    },
+    {
+      "id": "2026-10-eu-steel-sep",
+      "category": "mills",
+      "title": "歐洲鋼市 9 月觀察：熱軋價格一年多漲近三成，產量仍停在谷底",
+      "period": "2026-09",
+      "published": "2026-10-11",
+      "summary": "北歐熱軋鋼捲 9 月 28 日報每公噸 745 歐元，比去年 8 月底高約 29%；但歐盟 1–8 月粗鋼產量 8,450 萬噸、年減 0.3%，EUROFER 把今年用鋼量預測下修到僅增 0.1%。漲價來自配額新制、CBAM、鋼廠停產與能源成本，而非需求。",
+      "tags": [
+        "歐洲",
+        "歐盟",
+        "熱軋鋼捲",
+        "EUROFER",
+        "配額",
+        "CBAM",
+        "Taranto"
+      ],
+      "image": "assets/articles/2026-10-eu-steel-sep-eisen.jpg",
+      "url": "articles/2026-10-eu-steel-sep.html"
+    },
+    {
+      "id": "2026-10-us-steel-sep",
+      "category": "mills",
+      "title": "美國鋼市 9 月觀察：產能利用率衝上四年高點，熱軋價格年初至今漲近三成",
+      "period": "2026-09",
+      "published": "2026-10-10",
+      "summary": "美國 9 月粗鋼產能利用率一度達 82.3%，為 2022 年 5 月以來最高；Nucor 熱軋現貨價 10 月 5 日升至每短噸 1,230 美元，較年初漲約 29%。232 關稅擋住進口，前 8 月成品鋼進口年減 18.5%，但 8 月進口已連兩月回升。",
+      "tags": [
+        "美國",
+        "Nucor",
+        "熱軋鋼捲",
+        "產能利用率",
+        "232關稅",
+        "進口"
+      ],
+      "image": "assets/articles/2026-10-us-steel-sep-gary.jpg",
+      "url": "articles/2026-10-us-steel-sep.html"
+    },
+    {
+      "id": "2026-10-gfsec-milwaukee",
+      "category": "trade",
+      "title": "密爾瓦基框架：28 個經濟體聯手對付鋼鐵過剩，會議落幕、執法才開始",
+      "period": "2026-10",
+      "published": "2026-10-10",
+      "summary": "全球鋼鐵過剩產能論壇 9 月 30 日在密爾瓦基通過《聯合行動綜合框架》，28 個成員將以主動反傾銷、轉運稽查與資料共享因應 2028 年恐達 7.45 億噸的過剩產能。台灣不是成員，出口要面對更嚴的原產地追查，內銷則可能承接被擋下的低價鋼材。",
+      "tags": [
+        "GFSEC",
+        "密爾瓦基框架",
+        "過剩產能",
+        "反傾銷",
+        "熔鑄地",
+        "轉運"
+      ],
+      "image": "assets/articles/2026-10-gfsec-milwaukee-lakefront.jpg",
+      "url": "articles/2026-10-gfsec-milwaukee.html"
+    },
+    {
+      "id": "2026-10-raw-material-shipping",
+      "category": "steel101",
+      "title": "原料怎麼漂洋過海：鐵礦砂、廢鋼、焦煤的海運路線與進出口版圖",
+      "period": "2026-10",
+      "published": "2026-10-08",
+      "summary": "鋼鐵小學堂：2025 年海運鐵礦砂 17.7 億噸，澳洲、巴西供應近八成、中國吃下四分之三。一張地圖看懂鐵礦砂、廢鋼、焦煤的出口國、進口國、主要航線、船型與運費，以及好望角、龍目海峽等咽喉點。",
+      "tags": [
+        "鐵礦砂",
+        "廢鋼",
+        "焦煤",
+        "海運",
+        "海岬型",
+        "Valemax",
+        "土耳其"
+      ],
+      "image": "assets/articles/2026-10-raw-material-shipping-valemax.jpg",
+      "url": "articles/2026-10-raw-material-shipping.html"
+    },
+    {
+      "id": "2026-10-csc-fastener-ife",
+      "category": "trade",
+      "title": "從台灣製造到台灣創造：中鋼在鳳凰城談扣件業的五個轉變",
+      "period": "2026-10",
+      "published": "2026-10-08",
+      "summary": "中鋼技術部門助理副總經理吳崇勇隨台灣扣件國家隊赴美國鳳凰城 IFE，提出扣件業五個轉變；台灣對美出口創新高，扣件卻仍受 232 條款 50% 關稅壓制，量縮價升。",
+      "tags": [
+        "中鋼",
+        "扣件",
+        "螺絲",
+        "IFE",
+        "232 條款",
+        "台美貿易"
+      ],
+      "image": "assets/articles/2026-10-csc-fastener-ife-wu.jpg",
+      "url": "articles/2026-10-csc-fastener-ife.html"
+    },
+    {
+      "id": "2026-10-china-property-q3",
+      "category": "demand",
+      "title": "中國房市第三季：新開工跌兩成五、二手房反超新房，8·28 新政改寫遊戲規則",
+      "period": "2026-Q3",
+      "published": "2026-10-07",
+      "summary": "前 8 月中國房地產開發投資年減 19.9%、新開工年減 24.8%，二手房網簽面積首度超過新房；8·28 銷售與房貸制度改革、首套房貸貼息上路，建築用鋼持續縮減。",
+      "tags": [
+        "中國",
+        "房地產",
+        "新開工",
+        "現房銷售",
+        "房貸貼息",
+        "螺紋鋼"
+      ],
+      "image": "assets/articles/2026-10-china-property-q3-dalian.jpg",
+      "url": "articles/2026-10-china-property-q3.html"
+    },
+    {
+      "id": "2026-10-csc-fin-2025",
+      "category": "csc",
+      "title": "中鋼 2025 財報分析：營收少一成二、本業轉虧，每股虧損 0.29 元",
+      "period": "2026-10",
+      "published": "2026-10-06",
+      "summary": "中鋼 2025 年（民國 114 年）合併財報：營收 3,172 億元減少 12%，營業損失 39.0 億元，歸屬母公司淨損 43.5 億元、EPS −0.29 元。以圖表拆解損益、存貨評價、部門、地區、業外、負債結構與現金流。",
+      "tags": [
+        "中鋼",
+        "財報",
+        "財報分析",
+        "2025"
+      ],
+      "image": "assets/articles/2026-10-csc-fin-2025-mill.jpg",
+      "url": "articles/2026-10-csc-fin-2025.html"
+    },
+    {
+      "id": "2026-10-csc-fin-2024",
+      "category": "csc",
+      "title": "中鋼 2024 財報分析：本業獲利腰斬，業外與非鋼事業撐住全年",
+      "period": "2026-10",
+      "published": "2026-10-06",
+      "summary": "中鋼 2024 年（民國 113 年）合併財報：營收 3,605 億元持平，營業利益 17.9 億元減半，歸屬母公司淨利 19.8 億元、EPS 0.13 元。以圖表拆解損益、部門、地區、業外、負債結構與現金流。",
+      "tags": [
+        "中鋼",
+        "財報",
+        "財報分析",
+        "2024"
+      ],
+      "image": "assets/articles/2026-10-csc-fin-2024-casting.jpg",
+      "url": "articles/2026-10-csc-fin-2024.html"
+    },
+    {
+      "id": "2026-10-csc-esg-2025",
+      "category": "csc",
+      "title": "中鋼 2025 永續報告書導讀：改設基準年、碳費上路，減碳路徑重新校準",
+      "period": "2026-10",
+      "published": "2026-10-06",
+      "summary": "中鋼 2025 年永續報告書重點：基準年改為 2021 年、2030 年減碳 25.3% 新目標與七大措施、排放較前一年減 6.7%、碳費自主減量計畫、綠電、循環經濟、職安與國際評比。",
+      "tags": [
+        "中鋼",
+        "永續報告書",
+        "ESG",
+        "減碳",
+        "碳費"
+      ],
+      "image": "assets/articles/2026-10-csc-esg-2025-hq.jpg",
+      "url": "articles/2026-10-csc-esg-2025.html"
+    },
+    {
+      "id": "2026-10-csc-esg-2024",
+      "category": "csc",
+      "title": "中鋼 2024 永續報告書導讀：減碳進度、綠能與循環的成績單",
+      "period": "2026-10",
+      "published": "2026-10-06",
+      "summary": "中鋼 2024 年永續報告書重點：二軸三轉策略、減碳行動累計 6.86%、2030 年減 25% 與 2050 碳中和路徑、綠電占比、循環經濟、職安與國際評比。",
+      "tags": [
+        "中鋼",
+        "永續報告書",
+        "ESG",
+        "減碳",
+        "碳中和"
+      ],
+      "image": "assets/articles/2026-10-csc-esg-2024-hq.jpg",
+      "url": "articles/2026-10-csc-esg-2024.html"
+    },
+    {
+      "id": "2026-10-cbam-101",
+      "category": "carbon",
+      "title": "CBAM 一次看懂：歐盟碳邊境調整機制的由來、規則與時程",
+      "period": "2026-10",
+      "published": "2026-10-06",
+      "summary": "歐盟碳邊境調整機制（CBAM）2026 年進入正式期，2027 年 2 月起進口商須為 2026 年進口購買憑證，2026 年第三季價格每噸 82.32 歐元。整理 CBAM 的由來、精神、法規、具體措施、時程與對台灣鋼鐵業的意義。",
+      "tags": [
+        "CBAM",
+        "歐盟",
+        "碳邊境",
+        "碳價",
+        "台灣出口"
+      ],
+      "image": "assets/articles/2026-10-cbam-101-duisburg.jpg",
+      "url": "articles/2026-10-cbam-101.html"
+    },
+    {
+      "id": "2026-10-csc-if-rc30",
+      "category": "vehicles",
+      "title": "中鋼 IF 汽車用鋼 RC30：把三成廢鋼煉進汽車外板",
+      "period": "2026-10",
+      "published": "2026-10-06",
+      "summary": "中鋼以三項轉爐增用廢鋼技術，把 IF 鋼的廢鋼比從約 10% 提高到 30%，IF 汽車用鋼 RC30 取得經濟部綠色產品認證。高再生料鋼品 2025 年接單 8.3 萬噸、年增 68%，2026 年前 8 月近 7.4 萬噸。",
+      "tags": [
+        "中鋼",
+        "IF 鋼",
+        "再生料",
+        "廢鋼",
+        "汽車用鋼"
+      ],
+      "image": "assets/articles/2026-10-csc-if-rc30-biw.jpg",
+      "url": "articles/2026-10-csc-if-rc30.html"
+    },
+    {
+      "id": "2026-10-eu-steel-quota",
+      "category": "trade",
+      "title": "歐盟鋼鐵新制：配額砍半、關稅 50%、追查熔鑄地，台灣怎麼應對",
+      "period": "2026-10",
+      "published": "2026-10-06",
+      "summary": "歐盟 2026 年 7 月起以常設配額取代鋼鐵防衛措施，免稅配額削減 47%、配額外關稅 50%，10 月起申報熔鑄地。台灣配額增至 67 萬噸，但品項不均與分配爭議浮現。",
+      "tags": [
+        "歐盟",
+        "鋼鐵配額",
+        "關稅",
+        "熔鑄地",
+        "台灣出口"
+      ],
+      "image": "assets/articles/2026-10-eu-steel-quota-berlaymont.jpg",
+      "url": "articles/2026-10-eu-steel-quota.html"
+    },
+    {
+      "id": "2026-10-csc-electrical-steel",
+      "category": "vehicles",
+      "title": "中鋼與電磁鋼片：從冷氣壓縮機到電動車、無人機的 37 年",
+      "period": "2026-10",
+      "published": "2026-10-06",
+      "summary": "中鋼 1989 年起供應電磁鋼片，自主發展製程，2017 年打入 Tesla Model 3 供應鏈，如今推進到 0.1 mm。整理起源、技術、全球布局、銷售實績與反傾銷挑戰。",
+      "tags": [
+        "中鋼",
+        "電磁鋼片",
+        "電動車",
+        "無人機",
+        "反傾銷"
+      ],
+      "image": "assets/articles/2026-10-csc-electrical-steel-core.jpg",
+      "url": "articles/2026-10-csc-electrical-steel.html"
+    },
+    {
+      "id": "2026-10-china-pmi-sep",
+      "category": "demand",
+      "title": "中國 9 月 PMI：重回擴張，但靠生產與漲價撐起，鋼鐵業仍在收縮",
+      "period": "2026-09",
+      "published": "2026-10-06",
+      "summary": "9 月中國製造業 PMI 50.1%、非製造業 50.2%，同步回到擴張；但回升來自生產與原材料漲價，新訂單走平，黑色金屬冶煉業仍低於臨界點。",
+      "tags": [
+        "中國",
+        "PMI",
+        "製造業",
+        "建築業",
+        "原材料價格"
+      ],
+      "image": "assets/articles/2026-10-china-pmi-sep-port.jpg",
+      "url": "articles/2026-10-china-pmi-sep.html"
+    },
+    {
+      "id": "2026-10-china-steel-aug",
+      "category": "mills",
+      "title": "中國鋼鐵 8 月觀察：產量降到年內低點，出口連四月破千萬噸",
+      "period": "2026-08",
+      "published": "2026-10-06",
+      "summary": "8 月中國粗鋼產量 7,461 萬噸、年減 3.7%，日均產量降到年內最低；鋼材出口 1,016 萬噸、年增 6.8%，鋼胚出口前 8 月年增 52%。解析生產、出口、內需與產能政策。",
+      "tags": [
+        "中國鋼鐵",
+        "粗鋼產量",
+        "鋼材出口",
+        "鋼胚",
+        "產能置換"
+      ],
+      "image": "assets/articles/2026-10-china-steel-aug-wisco.jpg",
+      "url": "articles/2026-10-china-steel-aug.html"
+    },
+    {
+      "id": "2026-10-steel-scrap",
+      "category": "steel101",
+      "title": "廢鋼從哪裡來：全球規模、三種來源與處理流程",
+      "period": "2026-10",
+      "published": "2026-10-05",
+      "summary": "全球每年約 6 億噸廢鋼回到煉鋼爐。介紹廢鋼的三種來源、各國用量與貿易、從剪切破碎到分級的處理流程，以及殘留元素與輻射兩大品質風險。",
+      "tags": [
+        "廢鋼",
+        "電爐",
+        "回收",
+        "BIR",
+        "輻射鋼筋"
+      ],
+      "image": "assets/articles/2026-10-steel-scrap-scrapyard.jpg",
+      "url": "articles/2026-10-steel-scrap.html"
+    },
+    {
+      "id": "2026-10-taiwan-construction-sep",
+      "category": "demand",
+      "title": "台灣營建業 9 月觀察：成交回溫、開工谷底，鋼筋漲價靠成本",
+      "period": "2026-09",
+      "published": "2026-10-05",
+      "summary": "9 月六都房市移轉 17,945 棟、年增 11.6%，但上半年住宅建照年減 28.2%、營造工資年增 8.12%；鋼筋漲價由廢鋼成本推動，營建用鋼呈現住宅弱、廠房與公共工程撐住的分化。",
+      "tags": [
+        "台灣營建",
+        "房市",
+        "建照",
+        "營造物價",
+        "鋼筋",
+        "豐興"
+      ],
+      "image": "assets/articles/2026-10-taiwan-construction-twins.jpg",
+      "url": "articles/2026-10-taiwan-construction-sep.html"
+    },
+    {
+      "id": "carmarket-2026-09",
+      "category": "demand",
+      "series": "carmarket",
+      "title": "2026 年 9 月台灣車市：進口車占五成五、Model Y 單月封王",
+      "period": "2026-09",
+      "published": "2026-10-05",
+      "summary": "9 月新車掛牌 37,054 輛、年增 15%，進口車占比衝上 55.5%；Tesla Model Y 單月 5,154 輛奪冠，國產車失去過半市占，國內汽車鋼板需求未隨總量成長。",
+      "tags": [
+        "台灣車市",
+        "新車掛牌",
+        "進口車",
+        "電動車",
+        "汽車用鋼"
+      ],
+      "image": "assets/articles/carmarket-hero.jpg",
+      "url": "articles/carmarket-2026-09.html"
+    },
+    {
+      "id": "2026-10-nippon-steel-hydrogen-bf",
+      "category": "decarb",
+      "title": "高爐吹氫減碳 43%：日本製鐵 Super COURSE50 試驗全解析",
+      "period": "2026-10",
+      "published": "2026-10-05",
+      "summary": "日本製鐵在 12 立方公尺試驗高爐吹入加熱氫氣，高爐 CO₂ 減量從 22% 推進到 43%；解析原理、試驗歷程、43% 的意義與放大到實爐的挑戰。",
+      "tags": [
+        "日本製鐵",
+        "Super COURSE50",
+        "氫還原",
+        "高爐",
+        "君津"
+      ],
+      "image": "assets/articles/2026-10-nippon-steel-hydrogen-bf-kimitsu.jpg",
+      "url": "articles/2026-10-nippon-steel-hydrogen-bf.html"
+    },
+    {
+      "id": "2026-10-arcelormittal-kryvyi-rih",
+      "category": "mills",
+      "title": "烽火下熄爐：ArcelorMittal 烏克蘭克里維里赫鋼廠無限期停產",
+      "period": "2026-10",
+      "published": "2026-10-05",
+      "summary": "五週內遭飛彈直接擊中四次，ArcelorMittal 宣布烏克蘭克里維里赫鋼廠無法安全復工、無限期停產，認列約 10 億美元減損。",
+      "tags": [
+        "ArcelorMittal",
+        "烏克蘭",
+        "克里維里赫",
+        "高爐",
+        "減損"
+      ],
+      "image": "assets/articles/2026-10-arcelormittal-kryvyi-rih-towers.jpg",
+      "url": "articles/2026-10-arcelormittal-kryvyi-rih.html"
+    },
+    {
+      "id": "2026-10-trump-shipbuilding",
+      "category": "trade",
+      "title": "川普重振美國造船業：港口費、韓國資金與鋼板商機",
+      "period": "2026-10",
+      "published": "2026-10-05",
+      "summary": "川普以 301 港口費、海事行動計畫與外國造艦備忘錄重振美國造船業，韓國 1,500 億美元 MASGA 入局；鋼鐵關稅與造船厚板需求是鋼鐵業觀察重點。",
+      "tags": [
+        "川普",
+        "造船",
+        "301 條款",
+        "MASGA",
+        "韓華",
+        "厚板"
+      ],
+      "image": "assets/articles/2026-10-trump-shipbuilding-philly.jpg",
+      "url": "articles/2026-10-trump-shipbuilding.html"
+    },
+    {
+      "id": "2026-10-iron-ore-mining",
+      "category": "steel101",
+      "title": "鐵礦砂從哪裡來：全球礦區分布與開採技術",
+      "period": "2026-10",
+      "published": "2026-10-04",
+      "summary": "鋼鐵小學堂：鐵礦砂的形成、全球主要礦區分布，以及露天開採、地下崩落法、無卡車採礦、自動化與選礦造粒等主流技術。",
+      "tags": [
+        "鐵礦砂",
+        "採礦",
+        "皮爾巴拉",
+        "卡拉加斯",
+        "Simandou",
+        "選礦"
+      ],
+      "image": "assets/articles/2026-10-iron-ore-mining-pit.jpg",
+      "url": "articles/2026-10-iron-ore-mining.html"
+    },
+    {
+      "id": "2026-10-taiwan-carbon",
+      "category": "carbon",
+      "title": "碳有價元年：台灣碳中和 2026 進度與鋼鐵業壓力",
+      "period": "2026-10",
+      "published": "2026-10-04",
+      "summary": "2026 年台灣碳費首次收費 49.7 億元，第二階段費率與 2028 年碳交易試辦接續登場；綠電落後目標，鋼鐵業碳成本壓力在後頭。",
+      "tags": [
+        "碳費",
+        "碳交易",
+        "NDC 3.0",
+        "CBAM",
+        "中鋼",
+        "再生能源"
+      ],
+      "image": "assets/articles/2026-10-taiwan-carbon-csc.jpg",
+      "url": "articles/2026-10-taiwan-carbon.html"
+    },
+    {
+      "id": "2026-10-ai-steel",
+      "category": "demand",
+      "title": "AI 吃電也吃鋼：鋼鐵業的新需求與新工具",
+      "period": "2026-10",
+      "published": "2026-10-04",
+      "summary": "AI 資料中心帶動電網、變壓器與高階鋼材需求，方向性電磁鋼片成為瓶頸；鋼廠也用 AI 改造煉鐵、品管與巡檢。",
+      "tags": [
+        "AI",
+        "資料中心",
+        "變壓器",
+        "電磁鋼片",
+        "智慧製造"
+      ],
+      "image": "assets/articles/2026-10-ai-steel-datacenter.jpg",
+      "url": "articles/2026-10-ai-steel.html"
+    },
+    {
+      "id": "2026-10-hyundai-steel-louisiana",
+      "category": "mills",
+      "title": "現代製鐵路易斯安那廠：韓國鋼廠的美國突圍戰",
+      "period": "2026-10",
+      "published": "2026-10-04",
+      "summary": "現代製鐵聯手 POSCO 與現代、起亞，投資 58 億美元在路易斯安那建 DRI＋電爐一貫廠，年產 270 萬噸汽車鋼板，2029 年投產。",
+      "tags": [
+        "現代製鐵",
+        "POSCO",
+        "路易斯安那",
+        "DRI",
+        "電弧爐",
+        "232 條款"
+      ],
+      "image": "assets/articles/2026-10-hyundai-steel-louisiana-eaf.jpg",
+      "url": "articles/2026-10-hyundai-steel-louisiana.html"
+    },
+    {
+      "id": "2026-10-csc-drones-robot-dogs",
+      "category": "vehicles",
+      "title": "牽狗放鷹：中鋼的無人機與機器狗布局",
+      "period": "2026-10",
+      "published": "2026-10-04",
+      "summary": "中鋼一邊用機器狗與無人機巡檢鋼廠，一邊把 0.20 到 0.10 mm 的極薄電磁鋼片賣進無人機與機器人馬達。",
+      "tags": [
+        "中鋼",
+        "無人機",
+        "機器狗",
+        "電磁鋼片",
+        "機器人"
+      ],
+      "image": "assets/articles/2026-10-csc-drones-robot-dogs-spot.jpg",
+      "url": "articles/2026-10-csc-drones-robot-dogs.html"
+    },
+    {
+      "id": "2026-10-eu-green-steel",
+      "category": "decarb",
+      "title": "歐洲綠鋼進度：氫氣退潮、電爐接棒",
+      "period": "2026-10",
+      "published": "2026-10-04",
+      "summary": "氫氣直接還原專案因綠氫太貴延後或改用天然氣，電弧爐專案 2027 年起陸續投產。",
+      "tags": [
+        "綠鋼",
+        "氫氣直接還原",
+        "電弧爐",
+        "Stegra",
+        "thyssenkrupp"
+      ],
+      "image": "assets/articles/2026-10-eu-green-steel-linz.jpg",
+      "url": "articles/2026-10-eu-green-steel.html"
+    },
+    {
+      "id": "2026-10-us-canada-tariffs",
+      "category": "trade",
+      "title": "美加關稅戰升級：鋼鋁互課 50%，談判凍結",
+      "period": "2026-10",
+      "published": "2026-10-04",
+      "summary": "8 月談判破局後美加互加 50% 關稅，加拿大對美鋼鋁加倍到 50%，美國再禁止約 10 億美元加拿大商品進口。",
+      "tags": [
+        "美國",
+        "加拿大",
+        "232 條款",
+        "鋼鋁關稅"
+      ],
+      "image": "assets/articles/2026-10-us-canada-tariffs-trump.jpg",
+      "url": "articles/2026-10-us-canada-tariffs.html"
+    },
+    {
+      "id": "2026-09-raw-materials",
+      "category": "materials",
+      "title": "2026年9月 鋼鐵原物料月報",
+      "period": "2026-09",
+      "published": "2026-10-04",
+      "summary": "煤強礦弱：冶金煤因供給偏緊漲到約每噸 275 美元（中鋼），鐵礦砂在中國減產壓力下滑到五週低點，台灣廢鋼中旬起連三週上漲。",
+      "tags": [
+        "鐵礦砂",
+        "焦煤",
+        "廢鋼",
+        "能源與碳成本"
+      ],
+      "url": "articles/2026-09-raw-materials.html"
+    }
+  ]
 }
