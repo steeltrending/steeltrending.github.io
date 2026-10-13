@@ -381,13 +381,15 @@ document.getElementById('mail-btn').addEventListener('click', function () {
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) {
       Array.prototype.forEach.call(boxes, function (box) {
-        var list = (d.items || []).filter(function (a) { return a.category === box.getAttribute('data-articles'); })
+        var category = box.getAttribute('data-articles');
+        var list = (d.items || []).filter(function (a) { return a.category === category; })
           .sort(function (a, b) { return (a.published || a.period) < (b.published || b.period) ? 1 : -1; });
         var seen = {};
         list = list.filter(function (a) { if (!a.series) return true; if (seen[a.series]) return false; seen[a.series] = 1; return true; });
         if (!list.length) return;
         box.textContent = '';
-        list.forEach(function (a) {
+        var displayList = list.slice(0, 3);
+        displayList.forEach(function (a) {
           var l = document.createElement('a');
           l.href = a.url; l.title = a.summary || '';
           l.setAttribute('style', 'display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0; color: #E8E6E1; text-decoration: none; font-size: 15px; font-weight: 700; border-bottom: 1px solid #22262B');
@@ -395,6 +397,13 @@ document.getElementById('mail-btn').addEventListener('click', function () {
           var ar = document.createElement('span'); ar.setAttribute('aria-hidden', 'true'); ar.style.color = '#FF6A1A'; ar.textContent = '→';
           l.appendChild(ar); box.appendChild(l);
         });
+        if (list.length > 3) {
+          var more = document.createElement('a');
+          more.href = category + '.html';
+          more.setAttribute('style', 'align-self: flex-start; color: #FF8A47; text-decoration: none; font-size: 14px; padding: 8px 0 0');
+          more.textContent = '看全部' + category + ' →';
+          box.appendChild(more);
+        }
       });
     })
     .catch(function () {});
