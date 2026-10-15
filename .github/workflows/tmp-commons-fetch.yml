@@ -1,0 +1,20 @@
+name: 暫時：抓取 Commons 電爐照片
+on:
+  push:
+    branches: [tmp/commons-eaf-photos]
+    paths: [tmp_commons/pick.txt, tmp_commons/fetch.py]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tmp_commons/fetch.py
+      - run: |
+          git config user.name "steeltrending"
+          git config user.email "noreply@steeltrending.github.io"
+          git add tmp_commons
+          git diff --cached --quiet && exit 0
+          git commit -m "暫時：Commons 照片抓取結果"
+          git push origin HEAD:tmp/commons-eaf-photos
