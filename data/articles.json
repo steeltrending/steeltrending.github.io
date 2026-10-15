@@ -1,6 +1,25 @@
 {
  "items": [
   {
+   "id": "2026-10-eaf-operation",
+   "category": "steel101",
+   "title": "電爐怎麼煉鋼：從通電熔化到出鋼的一爐週期",
+   "period": "2026-10",
+   "published": "2026-10-15",
+   "summary": "鋼鐵小學堂：以一座爐殼 7.4 公尺、出鋼 150 噸的真實電爐為比例，畫出電爐剖面與一爐四階段，看懂穿井、熔化、泡沫渣、去磷與脫硫、偏心爐底出鋼與鋼包精煉，以及耗電、副產品與台灣電爐業的課題。",
+   "tags": [
+    "電爐",
+    "電弧",
+    "泡沫渣",
+    "出鋼",
+    "鋼包精煉",
+    "東和鋼鐵",
+    "耗電"
+   ],
+   "image": "assets/articles/2026-10-eaf-operation-cross.jpg",
+   "url": "articles/2026-10-eaf-operation.html"
+  },
+  {
    "id": "2026-10-japan-korea-steel-sep",
    "category": "mills",
    "title": "日韓鋼廠 9 月觀察：日本受颱風與出口疲弱拖累，韓國靠反傾銷稅守住內需",

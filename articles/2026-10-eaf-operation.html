@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>電爐怎麼煉鋼：從通電熔化到出鋼的一爐週期 · 鋼鐵潮流 Steel Trending</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鋼鐵小學堂：電爐煉鋼是一爐一爐的批次作業。從裝料、通電穿井、熔化、泡沫渣、精煉扒渣到出鋼與鋼包精煉，看懂電爐一爐約 60 分鐘裡發生的事，以及耗電、副產品與台灣電爐業的課題。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+article{max-width:760px}
+article h2{margin:56px 0 14px;font-size:26px;font-weight:900;line-height:1.35;padding-top:20px;border-top:1px solid #2A2F35}
+article p{margin:0 0 16px;font-size:17px;line-height:1.9;color:#D5D7DA}
+article p.lead{font-size:19px;color:#E8E6E1}
+article ul{margin:0 0 20px;padding-left:1.2em}
+article li{margin:0 0 12px;font-size:16px;line-height:1.85;color:#C9CDD2}
+article li::marker{color:#FF6A1A}
+article li b{color:#E8E6E1}
+article .watch li::marker{content:'□  ';color:#9AA0A6}
+.tbl{overflow-x:auto;border:1px solid #2A2F35;margin:8px 0 24px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th,td{padding:12px 14px;border-bottom:1px solid #22262B;text-align:left;vertical-align:top}
+th{background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody th[scope=row]{width:9em;background:#15181B;font-size:13px;letter-spacing:.04em;white-space:nowrap}
+td.num{font-family:'IBM Plex Mono',monospace;white-space:nowrap;color:#E8E6E1}
+figure{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 12px;font-size:13px;line-height:1.7;color:#C9CDD2;border-top:1px solid #2A2F35}
+figcaption small{display:block;margin-top:2px;font-size:12px;color:#9AA0A6}
+.tlfig{border:1px solid #2A2F35;background:#121417;padding:24px 16px 4px;margin:8px 0 24px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.tl::before{content:'';position:absolute;left:6%;right:6%;top:31px;height:2px;background:linear-gradient(90deg,#FF6A1A 0,#FF6A1A 84%,#3A3F46 84%)}
+.tl .ev{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px;position:relative}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9CDD2;height:20px;white-space:nowrap}
+.tl .dot{width:14px;height:14px;border-radius:50%;background:#FF6A1A;border:3px solid #121417;box-sizing:content-box;margin:2px 0 10px;position:relative;z-index:1}
+.tl .t{font-size:13px;line-height:1.6;color:#C9CDD2}
+.tl .x .dot{background:#8DB4D6}.tl .x .d{color:#8DB4D6}
+.tl .k .dot{width:20px;height:20px;margin:-1px 0 7px;box-shadow:0 0 0 4px rgba(255,106,26,.25)}.tl .k .t{color:#E8E6E1;font-weight:700}.tl .k .d{color:#FF8A47}
+.tl .f .dot{background:#121417;border:2px dashed #9AA0A6;width:14px;height:14px}.tl .f .d,.tl .f .t{color:#9AA0A6}
+.tlkey{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;padding:18px 0 14px !important;border-top:0 !important;font-size:12px !important;color:#9AA0A6 !important}
+.tlkey i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.tlkey .k1{background:#FF6A1A}.tlkey .k2{background:#8DB4D6}.tlkey .k3{border:2px dashed #9AA0A6;width:8px;height:8px}
+@media (max-width:720px){
+.tlfig{padding:20px 16px 4px}
+.tl{grid-template-columns:1fr}
+.tl::before{left:9px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,#FF6A1A 0,#FF6A1A 86%,#3A3F46 86%)}
+.tl .ev{display:grid;grid-template-columns:20px 92px 1fr;align-items:start;text-align:left;padding:0 0 14px;gap:0 10px}
+.tl .dot{grid-column:1;grid-row:1;margin:3px 0 0 0;justify-self:center}
+.tl .k .dot{margin:0}
+.tl .d{grid-column:2;grid-row:1;height:auto;padding-top:2px}
+.tl .t{grid-column:3;grid-row:1}
+}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;margin:8px 0 24px}
+.fact{background:#121417;padding:18px 16px;display:flex;gap:12px;align-items:flex-start}
+.fact .ic{flex:none;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid #3A3F46;background:#181B1F;color:#FF6A1A}
+.fact .fl{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#9AA0A6;margin-bottom:4px}
+.fact .fv{display:block;font-size:16px;font-weight:700;color:#E8E6E1;line-height:1.5}
+.fact .fs{display:block;font-size:13px;color:#9AA0A6;line-height:1.6;margin-top:2px}
+.pies{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 8px}
+.pie{margin:0;border:1px solid #2A2F35;background:#121417;padding:16px}
+.pie .ph{font-size:14px;font-weight:700;color:#E8E6E1;margin-bottom:10px;padding:0;border:0}
+.pw{display:flex;align-items:center;gap:16px}
+.pw svg{width:150px;height:150px;flex:none;overflow:visible}
+.pw path{cursor:default;transition:opacity .15s}
+.pw svg:hover path{opacity:.45}.pw svg path:hover{opacity:1}
+.c1{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;fill:#E8E6E1}
+.c2{font-size:12px;fill:#9AA0A6}
+.lg{list-style:none;margin:0;padding:0;flex:1}
+.lg li{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:14px;color:#C9CDD2}
+.lg li::marker{content:''}
+.lg i{width:10px;height:10px;border-radius:2px;flex:none}
+.lg .ln{flex:1}.lg .lv{font-family:'IBM Plex Mono',monospace;color:#E8E6E1}
+.note{font-size:13px !important;color:#9AA0A6 !important;margin:6px 0 18px !important}
+.tip{position:fixed;z-index:10;pointer-events:none;background:#1C2024;border:1px solid #3A3F46;color:#E8E6E1;font-size:13px;padding:6px 10px;white-space:nowrap}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}.pies{grid-template-columns:1fr}}
+@media (max-width:420px){.facts{grid-template-columns:1fr}}
+.bars{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.bars .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.bar{display:grid;grid-template-columns:7.5em 1fr 4.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.bar .tr{height:14px;background:#1C2024;border-radius:0 4px 4px 0}
+.bar .fi{height:14px;background:#8A8F96;border-radius:0 4px 4px 0}
+.bar.hi .fi{background:#FF6A1A}.bar.hi{color:#E8E6E1;font-weight:700}
+.bar .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1}
+.bars .bn{font-size:12px;color:#9AA0A6;margin:8px 0 0}
+.flow{list-style:none;margin:8px 0 24px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;counter-reset:st}
+.flow li{background:#121417;padding:14px 12px;margin:0;counter-increment:st;font-size:13px;line-height:1.6;color:#9AA0A6}
+.flow li::marker{content:''}
+.flow li b{display:block;font-size:15px;color:#E8E6E1;margin-bottom:2px}
+.flow li b::before{content:counter(st,decimal-leading-zero) '  ';font-family:'IBM Plex Mono',monospace;font-size:12px;color:#FF6A1A;font-weight:500}
+.flow li.mine{border-top:2px solid #FF6A1A}.flow li.proc{border-top:2px solid #8DB4D6}.flow li.log{border-top:2px solid #9AA0A6}
+.flowkey{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#9AA0A6;margin:-14px 0 24px}
+.flowkey i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:6px}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mapfig{margin:8px 0 8px;border:1px solid #2A2F35;background:#121417;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mapfig .mi{min-width:680px}
+.mapfig svg path[stroke-opacity]:hover{stroke-opacity:1;filter:drop-shadow(0 0 3px rgba(255,255,255,.35))}
+.mapkey{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:#C9CDD2;margin:10px 0 6px}
+.mapkey i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.mapkey .ds{background:none;border-top:2px dashed #FF6A1A;height:0}
+.mapkey .ck{width:10px;height:10px;border-radius:50%;border:1.5px solid #E8E6E1;background:none}
+.rt td:first-child{white-space:nowrap}
+.bars2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 24px}
+.bars2 .bars{margin:0}
+@media (max-width:720px){.bars2{grid-template-columns:1fr}}
+.rng{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.rng .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.rng .rw{display:grid;grid-template-columns:8em 1fr 5.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.rng .tr{position:relative;height:14px;background:#1C2024;border-radius:2px}
+.rng .fi{position:absolute;top:0;height:14px;border-radius:2px}
+.rng .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1;white-space:nowrap}
+.rng .ax{display:grid;grid-template-columns:8em 1fr 5.2em;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9AA0A6}
+.rng .ax .sc{position:relative;height:14px}
+.rng .ax .sc span{position:absolute;transform:translateX(-50%)}
+.rng .bn{font-size:12px;color:#9AA0A6;margin:10px 0 0}
+@media (max-width:560px){.rng .rw,.rng .ax{grid-template-columns:6.2em 1fr 4.6em}}
+.flow.f5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:900px){.flow.f5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sources li{font-size:14px}
+@media (max-width:640px){.wrap{padding:0 16px}article p{font-size:16px}article p.lead{font-size:17px}}
+</style>
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<script>window.ARTICLE_CATEGORY = 'steel101';</script>
+<script src="../assets/article-nav.js" defer></script>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="../assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="../#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="../stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<style>.nvdd{position:relative}.nvdd summary{list-style:none;cursor:pointer;color:#C9CDD2;padding:12px;display:flex;align-items:center;gap:6px;font-size:15px;user-select:none}.nvdd summary::-webkit-details-marker{display:none}.nvdd summary span{font-size:11px;color:#FF6A1A;transition:transform .2s}.nvdd[open] summary span{transform:rotate(180deg)}.nvdd summary:hover,.nvdd[open] summary,.nvdd.cur summary{color:#FF8A47}.nvdd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}.nvdd-m{position:absolute;top:100%;left:0;z-index:50;min-width:180px;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45);padding:6px 0;display:flex;flex-direction:column}.nvdd-m a{padding:12px 16px;color:#E8E6E1;text-decoration:none;font-size:15px;white-space:nowrap}.nvdd-m a:hover{background:#1C2024;color:#FF8A47}.nvdd-m a[aria-current]{color:#FF8A47}</style><details class="nvdd"><summary>鋼鐵數字<span aria-hidden="true">▾</span></summary><div class="nvdd-m"><a href="../worldsteel.html">世界鋼鐵數據</a><a href="../twmap.html">台灣鋼鐵地圖</a><a href="../trends.html">關鍵字熱度</a></div></details>
+<a href="../archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="../#topics" style="text-decoration:none">關注主題</a> <span aria-hidden="true">›</span> 鋼鐵小學堂 <span aria-hidden="true">›</span> 專題</nav>
+
+<article>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">STEEL 101 · EAF STEELMAKING · 2026.10</p>
+<h1 style="margin:12px 0 10px;font-size:clamp(30px,5vw,46px);font-weight:900;line-height:1.25">電爐怎麼煉鋼：從通電熔化到出鋼的一爐週期</h1>
+<p style="font-size:14px;color:#9AA0A6">鋼鐵潮流工作室 · 發布 2026.10.15</p>
+
+<div class="mapfig"><div class="mi" style="min-width:860px"><svg viewBox="0 0 1080 640" role="img" aria-label="電弧爐剖面示意圖：以一座爐殼直徑 7.4 公尺、出鋼量 150 噸的交流電弧爐為比例，標示石墨電極、電極臂與立柱、水冷爐蓋與爐壁、第四孔排煙、泡沫渣、鋼液與熱底、偏心爐底出鋼口、爐門、燒嘴與噴槍、耐火材爐床及傾動機構" style="display:block;width:100%;height:auto;font-family:'Noto Sans TC','PingFang TC',sans-serif">
+<defs><linearGradient id="bath" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB15C"/><stop offset=".35" stop-color="#FF6A1A"/><stop offset="1" stop-color="#B8420C"/></linearGradient><linearGradient id="foam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9B45A" stop-opacity=".25"/><stop offset="1" stop-color="#D9B45A" stop-opacity=".85"/></linearGradient><radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF4E0" stop-opacity=".9"/><stop offset="1" stop-color="#FF6A1A" stop-opacity="0"/></radialGradient><pattern id="panel" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#1E2A33"/><rect x="2" width="6" height="10" rx="3" fill="#2E4352"/></pattern><pattern id="roofp" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(90)"><rect width="10" height="10" fill="#1E2A33"/><rect x="2" width="6" height="10" rx="3" fill="#2E4352"/></pattern><pattern id="refr" width="14" height="8" patternUnits="userSpaceOnUse"><rect width="14" height="8" fill="#5C4A3E"/><path d="M0 7.5H14M7 0V4M0 4H14M3.5 4V8M10.5 4V8" stroke="#7A6352" stroke-width=".8"/></pattern><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#9AA0A6"/></marker><marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#FF6A1A"/></marker><marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#8DB4D6"/></marker><clipPath id="inner"><path d="M287.6 318L287.6 362Q287.6 440 480 440Q672.4 440 672.4 362L672.4 318Z"/></clipPath></defs>
+<rect width="1080" height="640" fill="#121417"/>
+<rect x="20" y="512" width="1040" height="2" fill="#3A3F46"/>
+<text x="28.0" y="528.0" font-size="11" fill="#9AA0A6" text-anchor="start">工作平台</text>
+<path d="M350 482L390 482L390 498Q370 516 350 498Z" fill="#23282E" stroke="#3A3F46"/>
+<path d="M570 482L610 482L610 498Q590 516 570 498Z" fill="#23282E" stroke="#3A3F46"/>
+<rect x="330" y="510" width="300" height="6" fill="#2A2F35"/>
+<path d="M655 512L630 476" stroke="#8A8F96" stroke-width="7" stroke-linecap="round"/>
+<path d="M261.6 318L261.6 368Q261.6 476 480 476Q698.4 476 698.4 368L698.4 318Z" fill="#2A2F35" stroke="#4A5058"/>
+<path d="M273.6 318L273.6 366Q273.6 464 480 464Q686.4 464 686.4 366L686.4 318Z" fill="url(#refr)"/>
+<path d="M287.6 318L287.6 362Q287.6 440 480 440Q672.4 440 672.4 362L672.4 318Z" fill="#0B0C0E"/>
+<g clip-path="url(#inner)"><rect x="287.6" y="372" width="384.8" height="72" fill="url(#bath)"/><rect x="287.6" y="328" width="384.8" height="44" fill="url(#foam)"/>
+<circle cx="412.2" cy="336.9" r="2.8" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="315.5" cy="351.9" r="2.1" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="309.9" cy="350.8" r="1.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="454.5" cy="333.7" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="451.0" cy="363.2" r="1.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="373.5" cy="355.5" r="3.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="509.7" cy="346.5" r="3.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="305.5" cy="364.5" r="1.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="343.1" cy="335.6" r="1.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="601.6" cy="338.0" r="2.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="533.5" cy="345.5" r="2.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="311.8" cy="333.3" r="1.7" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="549.4" cy="347.7" r="2.0" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="512.9" cy="348.7" r="1.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="593.3" cy="358.3" r="1.8" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="508.6" cy="351.5" r="3.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="568.3" cy="342.2" r="3.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="333.0" cy="347.3" r="3.0" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="346.1" cy="350.1" r="1.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="544.7" cy="360.8" r="2.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="624.5" cy="343.2" r="2.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="516.3" cy="353.6" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="610.8" cy="367.8" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="543.2" cy="333.4" r="2.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="536.6" cy="369.7" r="3.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="397.1" cy="346.0" r="2.8" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="296.3" cy="349.0" r="1.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="332.7" cy="333.3" r="3.0" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="337.4" cy="340.7" r="2.1" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="622.9" cy="334.1" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="499.0" cy="365.5" r="3.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="620.1" cy="341.9" r="2.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="425.7" cy="365.5" r="3.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="345.7" cy="337.9" r="1.8" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="377.4" cy="349.9" r="2.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="388.7" cy="331.2" r="2.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="429.7" cy="353.1" r="3.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="553.3" cy="351.1" r="2.7" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="547.8" cy="333.1" r="3.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="587.7" cy="365.1" r="3.1" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="438.6" cy="346.6" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="531.7" cy="333.4" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="367.9" cy="337.3" r="2.0" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="307.8" cy="331.0" r="1.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="326.6" cy="345.2" r="1.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="624.0" cy="354.9" r="1.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="384.7" cy="344.5" r="2.1" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="334.9" cy="364.1" r="3.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="466.9" cy="349.9" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="326.9" cy="344.4" r="1.8" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="606.5" cy="337.3" r="1.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="653.5" cy="351.6" r="1.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="496.6" cy="332.1" r="2.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="664.1" cy="364.7" r="2.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="388.1" cy="345.3" r="1.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="584.6" cy="351.8" r="3.1" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="414.5" cy="339.7" r="3.1" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="666.6" cy="364.3" r="3.1" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="602.5" cy="359.9" r="1.7" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="486.8" cy="344.9" r="1.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="298.4" cy="341.9" r="1.8" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="554.1" cy="368.3" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="648.2" cy="369.5" r="3.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="427.9" cy="339.6" r="1.7" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="363.3" cy="339.0" r="2.7" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="634.0" cy="363.8" r="2.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="538.9" cy="362.2" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="541.8" cy="366.5" r="3.1" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="576.3" cy="349.6" r="1.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="591.3" cy="344.0" r="3.1" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="661.5" cy="346.4" r="2.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="651.9" cy="359.3" r="1.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="336.5" cy="336.9" r="3.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="597.9" cy="336.7" r="3.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="664.8" cy="356.6" r="2.0" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="498.7" cy="336.1" r="1.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="661.2" cy="356.3" r="2.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="646.9" cy="347.9" r="3.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="605.5" cy="339.2" r="1.8" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="400.3" cy="340.4" r="2.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="387.4" cy="347.3" r="1.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="637.8" cy="344.8" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="512.1" cy="366.3" r="2.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="640.7" cy="350.6" r="2.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="489.0" cy="331.7" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="358.1" cy="331.2" r="3.1" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="353.9" cy="349.5" r="2.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="501.7" cy="343.7" r="2.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="501.3" cy="361.6" r="1.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="503.2" cy="340.7" r="1.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="584.8" cy="350.8" r="2.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="580.0" cy="366.6" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="523.3" cy="350.7" r="2.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="554.2" cy="348.6" r="2.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="471.5" cy="367.7" r="2.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="624.9" cy="367.7" r="1.8" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="502.9" cy="367.8" r="3.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="340.4" cy="335.7" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="315.5" cy="340.4" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="545.2" cy="361.6" r="3.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="347.0" cy="358.9" r="2.8" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="342.6" cy="365.4" r="3.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="372.1" cy="368.1" r="2.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="475.1" cy="369.6" r="3.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="349.7" cy="347.8" r="2.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="418.1" cy="338.6" r="2.0" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="565.5" cy="331.8" r="2.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="457.1" cy="331.7" r="2.0" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="527.7" cy="351.0" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="666.7" cy="361.7" r="3.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="327.9" cy="341.4" r="1.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="587.4" cy="341.5" r="1.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="450.1" cy="366.5" r="3.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="387.1" cy="336.8" r="3.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="507.2" cy="358.3" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="309.7" cy="357.8" r="2.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="315.5" cy="367.6" r="2.7" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="596.1" cy="334.3" r="3.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="313.2" cy="364.6" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="418.1" cy="352.6" r="3.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="390.7" cy="336.0" r="2.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="379.4" cy="335.3" r="1.6" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="307.0" cy="338.9" r="1.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="405.0" cy="360.6" r="1.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="480.0" cy="337.9" r="2.0" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="294.6" cy="340.8" r="1.2" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="569.7" cy="352.5" r="1.7" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="470.3" cy="367.5" r="1.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="602.7" cy="347.9" r="2.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="608.8" cy="346.3" r="2.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="552.2" cy="369.3" r="2.0" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="607.9" cy="358.6" r="2.7" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="443.3" cy="344.6" r="1.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="337.6" cy="333.8" r="3.0" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="386.0" cy="337.4" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="611.3" cy="365.0" r="2.8" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="396.1" cy="340.4" r="1.9" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="464.4" cy="337.1" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="388.9" cy="368.5" r="3.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+<circle cx="498.1" cy="340.5" r="3.5" fill="none" stroke="#F2D58A" stroke-opacity=".55" stroke-width=".8"/>
+</g>
+<rect x="271.6" y="174" width="16" height="144" fill="url(#panel)" stroke="#3B5566"/>
+<rect x="672.4" y="174" width="16" height="144" fill="url(#panel)" stroke="#3B5566"/>
+<rect x="265.6" y="170" width="6" height="150" fill="#2A2F35"/><rect x="688.4" y="170" width="6" height="150" fill="#2A2F35"/>
+<path d="M261.6 326L203.60000000000002 326L203.60000000000002 410Q203.60000000000002 434 227.60000000000002 434L261.6 434Z" fill="#2A2F35" stroke="#4A5058"/>
+<path d="M257.6 332L211.60000000000002 332L211.60000000000002 408Q211.60000000000002 424 227.60000000000002 424L257.6 424Z" fill="url(#refr)"/>
+<path d="M215.60000000000002 336L261.6 336L261.6 420L233.60000000000002 420Q215.60000000000002 420 215.60000000000002 402Z" fill="#0B0C0E"/>
+<path d="M215.60000000000002 372L261.6 372L261.6 420L233.60000000000002 420Q215.60000000000002 420 215.60000000000002 402Z" fill="url(#bath)"/>
+<rect x="215.60000000000002" y="348" width="46" height="24" fill="url(#foam)"/>
+<path d="M287.6 372L261.6 372" stroke="#FF6A1A" stroke-width="2"/>
+<rect x="225.60000000000002" y="424" width="12" height="100" fill="#4A5058"/><rect x="228.60000000000002" y="420" width="6" height="104" fill="#0B0C0E"/>
+<rect x="221.60000000000002" y="506" width="20" height="6" fill="#8A8F96"/>
+<path d="M179.60000000000002 530L283.6 530L275.6 616L187.60000000000002 616Z" fill="#2A2F35" stroke="#4A5058"/>
+<path d="M187.60000000000002 536L275.6 536L269.6 608L193.60000000000002 608Z" fill="url(#refr)" opacity=".8"/>
+<path d="M193.60000000000002 542L269.6 542" stroke="#3A3F46" stroke-dasharray="3 3"/>
+<rect x="672.4" y="310" width="22" height="58" fill="#0B0C0E"/>
+<rect x="694.4" y="302" width="10" height="34" fill="#8A8F96"/>
+<path d="M672.4 370L722.4 378" stroke="#4A5058" stroke-width="5"/>
+<path d="M728.4 298L632.4 366" stroke="#C9CDD2" stroke-width="3"/>
+<path d="M632.4 366L610.4 380" stroke="#8DB4D6" stroke-width="1.6" stroke-dasharray="3 3" marker-end="url(#arB)"/>
+<path d="M700.4 532L768.4 532L758.4 588L710.4 588Z" fill="#2A2F35" stroke="#4A5058"/><path d="M704.4 540L764.4 540L756.4 582L712.4 582Z" fill="#D9B45A" opacity=".55"/>
+<rect x="245.60000000000002" y="255" width="34" height="14" rx="2" fill="#8A8F96"/>
+<path d="M293.6 262L379.6 358" stroke="#FF6A1A" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arO)"/>
+<path d="M293.6 258L327.6 280L293.6 270Z" fill="#FF6A1A" opacity=".5"/>
+<path d="M261.6 176L261.6 164Q480 94 698.4 164L698.4 176Q480 108 261.6 176Z" fill="url(#roofp)" stroke="#3B5566"/>
+<path d="M400 130Q480 118 560 130L554 144Q480 133 406 144Z" fill="url(#refr)" stroke="#7A6352"/>
+<path d="M335.6 144L335.6 70L267.6 70L267.6 48L379.6 48L379.6 134Z" fill="url(#panel)" stroke="#3B5566"/>
+<path d="M357.6 138L357.6 84L217.60000000000002 60" stroke="#9AA0A6" stroke-width="1.4" stroke-dasharray="4 4" fill="none" marker-end="url(#ar)"/>
+<rect x="465.0" y="30" width="30" height="308" fill="#3A3F46" stroke="#666C74"/>
+<path d="M465.0 110L495.0 110" stroke="#2A2F35" stroke-width="2"/>
+<path d="M465.0 230L495.0 230" stroke="#2A2F35" stroke-width="2"/>
+<ellipse cx="480" cy="338" rx="15.0" ry="4" fill="#FFB15C" opacity=".9"/>
+<circle cx="480" cy="354" r="26" fill="url(#glow)"/>
+<path d="M480.0 340.0L477.4 345.7L476.0 351.3L479.0 357.0L476.5 362.7L475.7 368.3L480.0 374.0" stroke="#FFE2B8" stroke-width="5.2" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M480.0 340.0L477.4 345.7L476.0 351.3L479.0 357.0L476.5 362.7L475.7 368.3L480.0 374.0" stroke="#FFF4E0" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+<rect x="407.0" y="30" width="30" height="308" fill="#4F555D" stroke="#666C74"/>
+<path d="M407.0 110L437.0 110" stroke="#2A2F35" stroke-width="2"/>
+<path d="M407.0 230L437.0 230" stroke="#2A2F35" stroke-width="2"/>
+<ellipse cx="422" cy="338" rx="15.0" ry="4" fill="#FFB15C" opacity=".9"/>
+<circle cx="422" cy="354" r="26" fill="url(#glow)"/>
+<path d="M422.0 340.0L419.4 345.7L422.4 351.3L420.7 357.0L423.0 362.7L423.3 368.3L422.0 374.0" stroke="#FFE2B8" stroke-width="5.2" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M422.0 340.0L419.4 345.7L422.4 351.3L420.7 357.0L423.0 362.7L423.3 368.3L422.0 374.0" stroke="#FFF4E0" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+<rect x="523.0" y="30" width="30" height="308" fill="#4F555D" stroke="#666C74"/>
+<path d="M523.0 110L553.0 110" stroke="#2A2F35" stroke-width="2"/>
+<path d="M523.0 230L553.0 230" stroke="#2A2F35" stroke-width="2"/>
+<ellipse cx="538" cy="338" rx="15.0" ry="4" fill="#FFB15C" opacity=".9"/>
+<circle cx="538" cy="354" r="26" fill="url(#glow)"/>
+<path d="M538.0 340.0L539.2 345.7L540.4 351.3L541.0 357.0L542.4 362.7L540.4 368.3L538.0 374.0" stroke="#FFE2B8" stroke-width="5.2" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M538.0 340.0L539.2 345.7L540.4 351.3L541.0 357.0L542.4 362.7L540.4 368.3L538.0 374.0" stroke="#FFF4E0" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+<rect x="459.0" y="40" width="42" height="20" rx="3" fill="#B87333" stroke="#D08A4A"/>
+<rect x="501.0" y="43" width="267.4" height="14" fill="#9C6A3E" stroke="#B87333"/>
+<rect x="401.0" y="50" width="42" height="20" rx="3" fill="#B87333" stroke="#D08A4A"/>
+<rect x="443.0" y="53" width="325.4" height="14" fill="#9C6A3E" stroke="#B87333"/>
+<rect x="517.0" y="60" width="42" height="20" rx="3" fill="#B87333" stroke="#D08A4A"/>
+<rect x="559.0" y="63" width="209.39999999999998" height="14" fill="#9C6A3E" stroke="#B87333"/>
+<rect x="768.4" y="30" width="22" height="452" fill="#2A2F35" stroke="#4A5058"/>
+<rect x="774.4" y="140" width="10" height="306" fill="#8A8F96"/>
+<path d="M790.4 52C838.4 122,970 122,1010 142" stroke="#8DB4D6" stroke-width="3" fill="none" opacity=".85"/>
+<path d="M790.4 62C838.4 132,970 132,1010 152" stroke="#8DB4D6" stroke-width="3" fill="none" opacity=".85"/>
+<path d="M790.4 72C838.4 142,970 142,1010 162" stroke="#8DB4D6" stroke-width="3" fill="none" opacity=".85"/>
+<rect x="1010" y="120" width="40" height="110" fill="#23282E" stroke="#4A5058"/>
+<path d="M1018 140h24M1018 156h24M1018 172h24M1018 188h24M1018 204h24" stroke="#9AA0A6"/>
+<path d="M1002 104V250" stroke="#3A3F46" stroke-width="3" stroke-dasharray="6 4"/>
+<path d="M287.6 502L672.4 502" stroke="#9AA0A6" stroke-width="1" marker-start="url(#ar)" marker-end="url(#ar)"/>
+<path d="M287.6 494V510M672.4 494V510" stroke="#9AA0A6"/>
+<rect x="422" y="493" width="116" height="18" fill="#121417"/>
+<text x="480.0" y="507.0" font-size="12" fill="#C9CDD2" text-anchor="middle">爐殼直徑約 7.4 公尺</text>
+<path d="M297.6 57.0L190.0 46.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="297.6" cy="57.0" r="2.6" fill="#9AA0A6"/><text x="184.0" y="50.0" font-size="13.5" fill="#E8E6E1" text-anchor="end" font-weight="700">第四孔排煙</text><text x="184.0" y="67.0" font-size="12" fill="#9AA0A6" text-anchor="end">高溫廢氣送集塵系統</text>
+<path d="M407.0 140.0L190.0 112.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="407.0" cy="140.0" r="2.6" fill="#9AA0A6"/><text x="184.0" y="116.0" font-size="13.5" fill="#E8E6E1" text-anchor="end" font-weight="700">石墨電極</text><text x="184.0" y="133.0" font-size="12" fill="#9AA0A6" text-anchor="end">交流爐三根，可接長續用</text>
+<path d="M267.6 170.0L190.0 176.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="267.6" cy="170.0" r="2.6" fill="#9AA0A6"/><text x="184.0" y="180.0" font-size="13.5" fill="#E8E6E1" text-anchor="end" font-weight="700">水冷爐蓋</text><text x="184.0" y="197.0" font-size="12" fill="#9AA0A6" text-anchor="end">中央為耐火材「三角區」</text>
+<path d="M268.6 226.0L190.0 232.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="268.6" cy="226.0" r="2.6" fill="#9AA0A6"/><text x="184.0" y="236.0" font-size="13.5" fill="#E8E6E1" text-anchor="end" font-weight="700">水冷爐壁</text><text x="184.0" y="253.0" font-size="12" fill="#9AA0A6" text-anchor="end">渣線以上改用水冷板</text>
+<path d="M245.6 262.0L190.0 288.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="245.6" cy="262.0" r="2.6" fill="#9AA0A6"/><text x="184.0" y="292.0" font-size="13.5" fill="#E8E6E1" text-anchor="end" font-weight="700">氧燃燒嘴、噴槍</text><text x="184.0" y="309.0" font-size="12" fill="#9AA0A6" text-anchor="end">補強冷區、吹氧</text>
+<path d="M211.6 392.0L190.0 352.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="211.6" cy="392.0" r="2.6" fill="#9AA0A6"/><text x="184.0" y="356.0" font-size="13.5" fill="#E8E6E1" text-anchor="end" font-weight="700">偏心爐底出鋼口（EBT）</text><text x="184.0" y="373.0" font-size="12" fill="#9AA0A6" text-anchor="end">傾轉約 15–20° 出鋼</text>
+<path d="M327.6 422.0L190.0 418.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="327.6" cy="422.0" r="2.6" fill="#9AA0A6"/><text x="184.0" y="422.0" font-size="13.5" fill="#E8E6E1" text-anchor="end" font-weight="700">鋼液與熱底</text><text x="184.0" y="439.0" font-size="12" fill="#9AA0A6" text-anchor="end">出鋼後留下部分鋼液</text>
+<path d="M183.6 570.0L150.0 570.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="183.6" cy="570.0" r="2.6" fill="#9AA0A6"/><text x="144.0" y="574.0" font-size="13.5" fill="#E8E6E1" text-anchor="end" font-weight="700">鋼包</text>
+<path d="M497.0 50.0L812.4 150.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="497.0" cy="50.0" r="2.6" fill="#9AA0A6"/><text x="818.4" y="154.0" font-size="13.5" fill="#E8E6E1" text-anchor="start" font-weight="700">導電臂與電極夾頭</text><text x="818.4" y="171.0" font-size="12" fill="#9AA0A6" text-anchor="start">油壓立柱帶動升降</text>
+<path d="M544.0 364.0L812.4 226.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="544.0" cy="364.0" r="2.6" fill="#9AA0A6"/><text x="818.4" y="230.0" font-size="13.5" fill="#E8E6E1" text-anchor="start" font-weight="700">電弧</text><text x="818.4" y="247.0" font-size="12" fill="#9AA0A6" text-anchor="start">埋在泡沫渣裡</text>
+<path d="M642.4 340.0L812.4 290.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="642.4" cy="340.0" r="2.6" fill="#9AA0A6"/><text x="818.4" y="294.0" font-size="13.5" fill="#E8E6E1" text-anchor="start" font-weight="700">泡沫渣</text><text x="818.4" y="311.0" font-size="12" fill="#9AA0A6" text-anchor="start">噴碳生成 CO 氣泡</text>
+<path d="M698.4 332.0L812.4 348.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="698.4" cy="332.0" r="2.6" fill="#9AA0A6"/><text x="818.4" y="352.0" font-size="13.5" fill="#E8E6E1" text-anchor="start" font-weight="700">爐門與噴槍</text><text x="818.4" y="369.0" font-size="12" fill="#9AA0A6" text-anchor="start">扒渣、送氧與碳粉</text>
+<path d="M682.4 430.0L812.4 410.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="682.4" cy="430.0" r="2.6" fill="#9AA0A6"/><text x="818.4" y="414.0" font-size="13.5" fill="#E8E6E1" text-anchor="start" font-weight="700">耐火材爐床</text><text x="818.4" y="431.0" font-size="12" fill="#9AA0A6" text-anchor="start">安全層加搗打料</text>
+<path d="M660.0 492.0L812.4 470.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="660.0" cy="492.0" r="2.6" fill="#9AA0A6"/><text x="818.4" y="474.0" font-size="13.5" fill="#E8E6E1" text-anchor="start" font-weight="700">傾動機構</text><text x="818.4" y="491.0" font-size="12" fill="#9AA0A6" text-anchor="start">搖架與油壓缸</text>
+<path d="M750.4 566.0L786.4 572.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="750.4" cy="566.0" r="2.6" fill="#9AA0A6"/><text x="792.4" y="576.0" font-size="13.5" fill="#E8E6E1" text-anchor="start" font-weight="700">渣罐</text>
+<path d="M1030.0 232.0L1030.0 262.0" stroke="#9AA0A6" stroke-width="1" fill="none"/><circle cx="1030.0" cy="232.0" r="2.6" fill="#9AA0A6"/><text x="1024.0" y="266.0" font-size="13.5" fill="#E8E6E1" text-anchor="middle" font-weight="700">電爐變壓器</text><text x="1024.0" y="283.0" font-size="12" fill="#9AA0A6" text-anchor="middle">經水冷電纜供電</text>
+</svg></div></div>
+<div class="mapkey"><span><i style="background:#FF6A1A"></i>鋼液與電弧</span><span><i style="background:#D9B45A"></i>泡沫渣</span><span><i style="background:#8DB4D6"></i>水冷構件與供電電纜</span><span><i style="background:#7A6352"></i>耐火材</span></div>
+<p class="note">本站繪製之剖面示意圖，爐殼直徑依 Kroman Çelik 150 噸電爐比例，其餘構件依 ISPATGURU 等資料簡化；電極、爐門、出鋼口的實際位置與尺寸依各廠設計而異。圖中為平浴、造泡沫渣的精煉階段，手機上可以左右滑動看全圖。下方「電爐長什麼樣子」一節有各構件說明。</p>
+
+<h2>本期重點</h2>
+<p class="lead">上一課〈<a href="2026-10-scrap-prep.html">廢鋼進爐之前</a>〉走到廢鋼配好料、分層裝進料籃。這一課接著看爐子裡面發生什麼事。電爐煉鋼是「一爐一爐」做的批次作業，每一爐叫一個 heat；從上一爐出鋼到下一爐出鋼的時間，叫出鋼週期（tap-to-tap time）。早年一爐常要三小時以上，現代電爐多半不到一小時，而且大部分時間都花在熔化。</p>
+<ul>
+<li><b>一爐分六段。</b> 裝料、熔化、精煉、扒渣、出鋼，再加上為下一爐做準備的爐況整備；其中裝料與整備時不通電，是所謂的「死時間」。</li>
+<li><b>熔化靠電，也靠氧。</b> 石墨電極的電弧是主熱源；吹氧與氧燃燒嘴補充化學能，光是碳與氧的反應，就能提供淨熱量的三到四成。</li>
+<li><b>泡沫渣是關鍵技術。</b> 噴碳讓爐渣起泡、把電弧埋起來，熱量才不會直接打在爐壁上，也省電、省電極、護爐襯。</li>
+<li><b>電爐善於去磷，不善於脫硫。</b> 爐內是氧化環境，磷進渣、扒渣帶走；硫則多留到出鋼後的鋼包精煉，在還原性爐渣下去除。</li>
+</ul>
+<div class="facts"><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6"/></svg></span><div><span class="fl">出鋼週期</span><span class="fv">60 分鐘以內</span><span class="fs">現代電爐的常見水準；雙爐殼可縮短到 35–40 分鐘</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><div><span class="fl">實際耗電</span><span class="fv">約 360–440 度／噸</span><span class="fs">熔化廢鋼的理論最低值約 300 度／噸</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 20V10a6 6 0 0 1 12 0v10"/><path d="M9 6l-3-3"/><path d="M15 6l3-3"/></svg></span><div><span class="fl">開一次爐蓋</span><span class="fv">損失 10–20 度／噸</span><span class="fs">料籃裝料每次加料都要停電、開蓋，熱量隨之散失</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 3-6 6-10z"/><path d="M12 13c1.2 1.5 2 2.4 2 3.5a2 2 0 0 1-4 0c0-1.1.8-2 2-3.5z"/></svg></span><div><span class="fl">碳氧反應</span><span class="fv">淨熱量的 30–40%</span><span class="fs">吹氧燒掉鋼液中的碳，同時放熱</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V11h14v10"/><path d="M8 11V5"/><path d="M12 11V3"/><path d="M16 11V5"/></svg></span><div><span class="fl">最大廢鋼電爐</span><span class="fv">420 噸</span><span class="fs">日本東京製鐵的直流電爐，八台 32 MVA 變壓器</span></div></div><div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-15 14z"/><path d="M5 19l9-9"/></svg></span><div><span class="fl">每噸鋼排碳</span><span class="fv">最低約 0.6 噸 CO₂</span><span class="fs">高爐轉爐流程約 2.9 噸；電爐實際排碳視電力來源而定</span></div></div></div>
+
+<h2>電爐長什麼樣子</h2>
+<p>文章開頭的剖面圖，以一座真實電爐的尺寸為比例：土耳其 Kroman Çelik 鋼廠的 Danieli 交流電爐，爐殼直徑 7.4 公尺，升級後每爐出鋼 150 噸、最大功率 114 MW，每噸鋼耗電約 365 度、耗氧約 32 標準立方公尺。爐體分成上下兩半：下半部是耐火材砌成的碗狀爐床，裝著鋼液；上半部的爐壁與爐蓋改用通水冷卻的水冷板（鋼管或銅板），因為電弧與廢氣的熱量，耐火材撐不了多久。</p>
+
+<ul>
+<li><b>電極系統。</b> 三根石墨電極由銅包鋼或鋁合金的導電臂夾住，立柱裡的油壓缸帶動升降；控制系統依電壓與電流的比值不斷調整電極高度，維持穩定的電弧。電力從電爐變壓器經水冷電纜送到導電臂。</li>
+<li><b>爐蓋與第四孔。</b> 爐蓋上有三個電極孔，中央是耐火材做的「三角區」，周圍是水冷板；另一個開口就是「第四孔」，把高溫廢氣抽往集塵系統，有些爐子還有第五孔，用來加入直接還原鐵或石灰。</li>
+<li><b>出鋼口與爐門。</b> 偏心爐底出鋼口設在爐床一側突出的「鼻子」底部，平時填砂封住；對側是爐門，用來扒渣，也是噴槍送進氧氣與碳粉的入口。</li>
+<li><b>傾動機構。</b> 整座爐體坐在搖架上，靠油壓缸前後傾轉：向前傾約 15–20° 從爐底出鋼，向後傾從爐門扒渣。</li>
+</ul>
+
+<h2>一爐鋼的流程</h2>
+<p>電爐的一爐，從裝第一籃廢鋼開始，到出鋼、整理爐子為止。下圖把一個典型週期拆成十個步驟：前段是熔化，中段是精煉，最後是出鋼與準備下一爐。</p>
+<ol class="flow"><li class="mine"><b>第一籃裝料</b>開爐蓋，吊車把料籃裡的廢鋼倒進爐內</li><li class="mine"><b>通電穿井</b>電極下降通電，在廢鋼堆中向下熔出一口「井」</li><li class="mine"><b>主熔化</b>穿井完成後加大功率，配合燒嘴與吹氧熔化廢鋼</li><li class="mine"><b>追加裝料</b>爐內有空間後再開蓋加第二籃，通常每爐兩到三籃</li><li class="mine"><b>平浴</b>廢鋼熔完，電弧作用在平靜的鋼液上</li><li class="proc"><b>測溫取樣</b>量鋼液溫度、取樣分析，算出還要吹多久氧、送多少電</li><li class="proc"><b>吹氧精煉</b>去碳、去磷，同時噴碳造泡沫渣</li><li class="proc"><b>扒渣</b>爐體向後傾，爐渣從爐門流出，避免磷回到鋼液</li><li class="log"><b>出鋼</b>爐體前傾，鋼液流進鋼包，同時加入脫氧劑與合金</li><li class="log"><b>爐況整備</b>修補爐襯、清理出鋼口，準備下一爐</li></ol>
+<div class="flowkey"><span><i style="background:#FF6A1A"></i>熔化</span><span><i style="background:#8DB4D6"></i>精煉</span><span><i style="background:#9AA0A6"></i>出鋼與整備</span></div>
+<p>把十個步驟濃縮成四個畫面，爐內大致是這樣變化的：</p>
+<div class="mapfig"><div class="mi" style="min-width:760px"><svg viewBox="0 0 960 330" role="img" aria-label="電弧爐一爐的四個階段：裝料後通電穿井、主熔化、平浴與泡沫渣精煉、傾轉出鋼並保留熱底" style="display:block;width:100%;height:auto;font-family:'Noto Sans TC','PingFang TC',sans-serif">
+<defs><linearGradient id="s_bath" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB15C"/><stop offset=".35" stop-color="#FF6A1A"/><stop offset="1" stop-color="#B8420C"/></linearGradient><linearGradient id="s_foam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9B45A" stop-opacity=".25"/><stop offset="1" stop-color="#D9B45A" stop-opacity=".85"/></linearGradient><radialGradient id="s_glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF4E0" stop-opacity=".9"/><stop offset="1" stop-color="#FF6A1A" stop-opacity="0"/></radialGradient><pattern id="s_panel" width="6" height="6" patternUnits="userSpaceOnUse"><rect width="6" height="6" fill="#1E2A33"/><rect x="1" width="4" height="6" rx="2" fill="#2E4352"/></pattern><pattern id="s_roofp" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(90)"><rect width="6" height="6" fill="#1E2A33"/><rect x="1" width="4" height="6" rx="2" fill="#2E4352"/></pattern><pattern id="s_refr" width="10" height="6" patternUnits="userSpaceOnUse"><rect width="10" height="6" fill="#5C4A3E"/><path d="M0 5.5H10M5 0V3M0 3H10" stroke="#7A6352" stroke-width=".6"/></pattern><marker id="s_arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#FF6A1A"/></marker><marker id="s_arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 1L9 5L0 9z" fill="#8DB4D6"/></marker></defs>
+<rect width="960" height="330" fill="#121417"/>
+<g>
+<defs><clipPath id="mi0"><path d="M23.799999999999997 60L23.799999999999997 166Q23.799999999999997 198 120 198Q216.2 198 216.2 166L216.2 60Z"/></clipPath></defs>
+<g transform=" rotate(0 120 212)">
+<path d="M11.799999999999997 128L11.799999999999997 168Q11.799999999999997 218 120 218Q228.2 218 228.2 168L228.2 128Z" fill="url(#s_refr)" stroke="#4A5058"/>
+<rect x="15.799999999999997" y="60" width="8" height="68" fill="url(#s_panel)"/><rect x="216.2" y="60" width="8" height="68" fill="url(#s_panel)"/>
+<path d="M23.799999999999997 60L23.799999999999997 166Q23.799999999999997 198 120 198Q216.2 198 216.2 166L216.2 60Z" fill="#0B0C0E"/>
+<path d="M11.799999999999997 134L-10.200000000000003 134L-10.200000000000003 188L11.799999999999997 188Z" fill="url(#s_refr)" stroke="#4A5058"/>
+<rect x="-6.200000000000003" y="138" width="18" height="46" fill="#0B0C0E"/>
+<g clip-path="url(#mi0)"><rect x="102.6" y="143.7" width="16.5" height="5.0" fill="#8A8F96" opacity="0.78" transform="rotate(166 110.8 146.2)"/><rect x="48.8" y="141.1" width="21.1" height="3.4" fill="#8A8F96" opacity="0.67" transform="rotate(113 59.3 142.8)"/><rect x="36.0" y="160.2" width="10.6" height="6.9" fill="#8A8F96" opacity="0.94" transform="rotate(125 41.2 163.7)"/><rect x="144.5" y="147.5" width="10.2" height="5.1" fill="#8A8F96" opacity="0.57" transform="rotate(28 149.6 150.1)"/><rect x="52.1" y="121.6" width="16.5" height="4.8" fill="#8A8F96" opacity="0.89" transform="rotate(5 60.4 123.9)"/><rect x="114.0" y="149.4" width="19.3" height="4.8" fill="#8A8F96" opacity="0.66" transform="rotate(90 123.7 151.8)"/><rect x="205.8" y="174.6" width="19.9" height="4.3" fill="#8A8F96" opacity="0.64" transform="rotate(151 215.7 176.7)"/><rect x="71.6" y="108.7" width="15.6" height="6.4" fill="#8A8F96" opacity="0.70" transform="rotate(138 79.4 111.9)"/><rect x="201.7" y="163.0" width="12.9" height="6.6" fill="#8A8F96" opacity="0.74" transform="rotate(0 208.1 166.3)"/><rect x="203.0" y="131.8" width="18.8" height="6.1" fill="#8A8F96" opacity="0.66" transform="rotate(13 212.4 134.8)"/><rect x="30.3" y="128.5" width="20.6" height="3.5" fill="#8A8F96" opacity="0.65" transform="rotate(174 40.6 130.3)"/><rect x="37.0" y="108.6" width="12.5" height="5.2" fill="#8A8F96" opacity="0.73" transform="rotate(143 43.2 111.2)"/><rect x="51.0" y="156.5" width="19.0" height="3.5" fill="#8A8F96" opacity="0.72" transform="rotate(24 60.5 158.2)"/><rect x="54.1" y="123.8" width="21.2" height="4.2" fill="#8A8F96" opacity="0.90" transform="rotate(175 64.8 125.9)"/><rect x="54.8" y="132.9" width="19.0" height="3.4" fill="#8A8F96" opacity="0.95" transform="rotate(154 64.3 134.6)"/><rect x="57.5" y="123.0" width="14.6" height="4.2" fill="#8A8F96" opacity="0.58" transform="rotate(139 64.8 125.1)"/><rect x="31.9" y="145.5" width="18.4" height="4.5" fill="#8A8F96" opacity="0.73" transform="rotate(44 41.1 147.8)"/><rect x="197.3" y="139.0" width="22.1" height="3.7" fill="#8A8F96" opacity="0.61" transform="rotate(103 208.3 140.9)"/><rect x="192.3" y="161.3" width="12.7" height="6.0" fill="#8A8F96" opacity="0.93" transform="rotate(45 198.6 164.2)"/><rect x="52.4" y="171.2" width="18.4" height="4.7" fill="#8A8F96" opacity="0.59" transform="rotate(159 61.6 173.5)"/><rect x="21.3" y="172.4" width="19.9" height="4.0" fill="#8A8F96" opacity="0.88" transform="rotate(43 31.2 174.4)"/><rect x="128.5" y="125.9" width="20.1" height="3.3" fill="#8A8F96" opacity="0.64" transform="rotate(32 138.6 127.5)"/><rect x="124.5" y="163.3" width="13.9" height="6.7" fill="#8A8F96" opacity="0.63" transform="rotate(111 131.4 166.7)"/><rect x="21.6" y="124.0" width="10.8" height="3.7" fill="#8A8F96" opacity="0.70" transform="rotate(80 27.0 125.8)"/><rect x="122.6" y="112.7" width="22.5" height="6.9" fill="#8A8F96" opacity="0.81" transform="rotate(65 133.9 116.2)"/><rect x="151.5" y="146.4" width="10.5" height="3.1" fill="#8A8F96" opacity="0.91" transform="rotate(25 156.8 147.9)"/><rect x="149.2" y="171.9" width="18.9" height="4.9" fill="#8A8F96" opacity="0.84" transform="rotate(4 158.7 174.4)"/><rect x="76.3" y="174.0" width="17.6" height="5.9" fill="#8A8F96" opacity="0.91" transform="rotate(14 85.2 177.0)"/><rect x="154.2" y="154.1" width="22.8" height="4.4" fill="#8A8F96" opacity="0.82" transform="rotate(143 165.6 156.3)"/><rect x="186.6" y="164.8" width="21.1" height="6.5" fill="#8A8F96" opacity="0.78" transform="rotate(75 197.1 168.0)"/><rect x="134.8" y="132.1" width="18.5" height="3.3" fill="#8A8F96" opacity="0.81" transform="rotate(105 144.0 133.8)"/><rect x="207.2" y="165.6" width="15.4" height="5.9" fill="#8A8F96" opacity="0.78" transform="rotate(131 214.9 168.6)"/><rect x="98.3" y="164.1" width="20.5" height="3.1" fill="#8A8F96" opacity="0.79" transform="rotate(15 108.6 165.7)"/><rect x="107.9" y="120.4" width="17.0" height="5.5" fill="#8A8F96" opacity="0.92" transform="rotate(126 116.3 123.1)"/><rect x="63.3" y="105.9" width="19.5" height="3.8" fill="#8A8F96" opacity="0.62" transform="rotate(54 73.0 107.8)"/><rect x="186.8" y="151.0" width="22.5" height="4.3" fill="#8A8F96" opacity="0.82" transform="rotate(80 198.1 153.2)"/><rect x="50.6" y="133.9" width="22.8" height="6.5" fill="#8A8F96" opacity="0.70" transform="rotate(145 62.0 137.2)"/><rect x="127.5" y="126.0" width="17.0" height="6.3" fill="#8A8F96" opacity="0.89" transform="rotate(25 136.0 129.2)"/><rect x="154.5" y="171.1" width="12.4" height="4.8" fill="#8A8F96" opacity="0.66" transform="rotate(50 160.6 173.5)"/><rect x="56.5" y="133.8" width="16.9" height="4.3" fill="#8A8F96" opacity="0.89" transform="rotate(113 65.0 136.0)"/><rect x="207.5" y="135.4" width="10.4" height="6.5" fill="#8A8F96" opacity="0.57" transform="rotate(13 212.7 138.7)"/><rect x="149.6" y="145.4" width="21.1" height="3.1" fill="#8A8F96" opacity="0.60" transform="rotate(56 160.1 146.9)"/><rect x="104.6" y="106.9" width="13.3" height="3.6" fill="#8A8F96" opacity="0.57" transform="rotate(149 111.3 108.7)"/><rect x="135.3" y="135.1" width="19.2" height="6.2" fill="#8A8F96" opacity="0.93" transform="rotate(113 144.9 138.3)"/><rect x="149.2" y="119.4" width="12.5" height="3.0" fill="#8A8F96" opacity="0.74" transform="rotate(86 155.5 121.0)"/><rect x="153.8" y="116.6" width="14.8" height="5.8" fill="#8A8F96" opacity="0.76" transform="rotate(49 161.2 119.5)"/><rect x="131.5" y="156.6" width="21.1" height="6.6" fill="#8A8F96" opacity="0.58" transform="rotate(71 142.0 159.9)"/><rect x="195.1" y="154.8" width="16.3" height="5.5" fill="#8A8F96" opacity="0.91" transform="rotate(23 203.2 157.6)"/><rect x="85.7" y="143.4" width="21.2" height="6.8" fill="#8A8F96" opacity="0.74" transform="rotate(158 96.3 146.8)"/><rect x="138.4" y="118.6" width="21.5" height="5.6" fill="#8A8F96" opacity="0.84" transform="rotate(130 149.1 121.3)"/><rect x="53.0" y="167.4" width="23.7" height="5.1" fill="#8A8F96" opacity="0.87" transform="rotate(176 64.8 170.0)"/><rect x="78.0" y="169.0" width="14.9" height="3.3" fill="#8A8F96" opacity="0.73" transform="rotate(154 85.4 170.7)"/><rect x="124.5" y="157.7" width="10.4" height="6.2" fill="#8A8F96" opacity="0.58" transform="rotate(88 129.7 160.8)"/><rect x="167.2" y="117.3" width="21.0" height="3.6" fill="#8A8F96" opacity="0.61" transform="rotate(60 177.7 119.1)"/><rect x="113.4" y="154.3" width="19.7" height="6.8" fill="#8A8F96" opacity="0.75" transform="rotate(151 123.2 157.6)"/><rect x="197.7" y="110.9" width="17.4" height="4.2" fill="#8A8F96" opacity="0.84" transform="rotate(40 206.4 113.0)"/><rect x="137.8" y="141.5" width="17.8" height="4.2" fill="#8A8F96" opacity="0.70" transform="rotate(152 146.7 143.6)"/><rect x="175.5" y="166.6" width="21.9" height="6.9" fill="#8A8F96" opacity="0.76" transform="rotate(37 186.4 170.0)"/><rect x="125.5" y="118.4" width="17.0" height="5.4" fill="#8A8F96" opacity="0.56" transform="rotate(96 134.0 121.1)"/><rect x="199.7" y="140.5" width="21.2" height="5.3" fill="#8A8F96" opacity="0.75" transform="rotate(72 210.3 143.1)"/><rect x="148.8" y="108.2" width="15.8" height="6.8" fill="#8A8F96" opacity="0.92" transform="rotate(97 156.7 111.6)"/><rect x="67.6" y="137.0" width="16.1" height="6.3" fill="#8A8F96" opacity="0.91" transform="rotate(23 75.6 140.1)"/><rect x="106.2" y="125.9" width="18.7" height="6.7" fill="#8A8F96" opacity="0.60" transform="rotate(34 115.5 129.2)"/><rect x="167.1" y="105.7" width="13.2" height="5.7" fill="#8A8F96" opacity="0.68" transform="rotate(35 173.7 108.6)"/><rect x="82.1" y="148.6" width="20.2" height="3.5" fill="#8A8F96" opacity="0.75" transform="rotate(19 92.2 150.4)"/><rect x="63.9" y="118.6" width="16.1" height="4.5" fill="#8A8F96" opacity="0.72" transform="rotate(95 72.0 120.8)"/><rect x="116.2" y="115.4" width="18.8" height="5.6" fill="#8A8F96" opacity="0.76" transform="rotate(37 125.6 118.2)"/><rect x="181.0" y="146.8" width="13.3" height="6.0" fill="#8A8F96" opacity="0.87" transform="rotate(154 187.6 149.8)"/><rect x="186.0" y="127.2" width="22.9" height="3.9" fill="#8A8F96" opacity="0.95" transform="rotate(57 197.5 129.1)"/><rect x="184.5" y="114.4" width="20.2" height="4.0" fill="#8A8F96" opacity="0.59" transform="rotate(43 194.6 116.4)"/><rect x="178.0" y="134.2" width="11.8" height="4.6" fill="#8A8F96" opacity="0.82" transform="rotate(142 183.9 136.5)"/><rect x="15.8" y="117.6" width="22.8" height="6.9" fill="#8A8F96" opacity="0.60" transform="rotate(123 27.2 121.1)"/><rect x="111.3" y="158.2" width="19.6" height="3.8" fill="#8A8F96" opacity="0.58" transform="rotate(91 121.1 160.1)"/><rect x="35.6" y="107.0" width="17.2" height="5.3" fill="#8A8F96" opacity="0.61" transform="rotate(99 44.2 109.6)"/><rect x="47.4" y="117.9" width="23.9" height="6.7" fill="#8A8F96" opacity="0.59" transform="rotate(151 59.3 121.3)"/><rect x="25.4" y="171.5" width="20.7" height="4.3" fill="#8A8F96" opacity="0.74" transform="rotate(83 35.7 173.6)"/><rect x="117.8" y="134.2" width="10.2" height="5.8" fill="#8A8F96" opacity="0.89" transform="rotate(108 122.9 137.1)"/><rect x="50.8" y="136.9" width="15.7" height="3.8" fill="#8A8F96" opacity="0.62" transform="rotate(133 58.7 138.8)"/><rect x="111.8" y="105.2" width="21.2" height="5.8" fill="#8A8F96" opacity="0.89" transform="rotate(161 122.4 108.1)"/><rect x="136.4" y="131.9" width="17.1" height="6.9" fill="#8A8F96" opacity="0.87" transform="rotate(108 144.9 135.3)"/><rect x="63.0" y="167.7" width="20.9" height="6.3" fill="#8A8F96" opacity="0.71" transform="rotate(134 73.5 170.8)"/><rect x="185.9" y="165.6" width="20.7" height="6.1" fill="#8A8F96" opacity="0.71" transform="rotate(125 196.3 168.6)"/><rect x="154.6" y="110.4" width="16.6" height="3.0" fill="#8A8F96" opacity="0.69" transform="rotate(62 162.8 111.9)"/><rect x="135.1" y="147.8" width="23.2" height="5.7" fill="#8A8F96" opacity="0.69" transform="rotate(42 146.7 150.7)"/><rect x="143.0" y="143.4" width="15.5" height="7.0" fill="#8A8F96" opacity="0.81" transform="rotate(96 150.7 146.9)"/><rect x="153.6" y="157.6" width="10.3" height="5.5" fill="#8A8F96" opacity="0.85" transform="rotate(176 158.7 160.3)"/><rect x="66.8" y="132.9" width="12.7" height="4.5" fill="#8A8F96" opacity="0.59" transform="rotate(9 73.2 135.1)"/><rect x="63.5" y="167.0" width="17.1" height="6.9" fill="#8A8F96" opacity="0.78" transform="rotate(99 72.1 170.4)"/><rect x="209.7" y="149.0" width="11.1" height="5.4" fill="#8A8F96" opacity="0.85" transform="rotate(146 215.3 151.7)"/><rect x="24.2" y="170.3" width="16.6" height="3.7" fill="#8A8F96" opacity="0.75" transform="rotate(29 32.5 172.1)"/><rect x="133.4" y="108.5" width="15.9" height="5.1" fill="#8A8F96" opacity="0.79" transform="rotate(170 141.4 111.1)"/><rect x="85.2" y="124.9" width="17.8" height="4.1" fill="#8A8F96" opacity="0.84" transform="rotate(118 94.1 127.0)"/><rect x="75.5" y="106.2" width="10.6" height="3.6" fill="#8A8F96" opacity="0.85" transform="rotate(44 80.8 108.0)"/><rect x="93.5" y="166.4" width="10.7" height="7.0" fill="#8A8F96" opacity="0.93" transform="rotate(135 98.8 169.8)"/><rect x="29.6" y="166.9" width="16.7" height="6.9" fill="#8A8F96" opacity="0.65" transform="rotate(77 37.9 170.4)"/><rect x="116.2" y="169.2" width="16.6" height="6.9" fill="#8A8F96" opacity="0.88" transform="rotate(130 124.5 172.6)"/><rect x="131.7" y="113.1" width="16.4" height="3.8" fill="#8A8F96" opacity="0.57" transform="rotate(112 139.9 115.1)"/><rect x="115.7" y="113.3" width="19.4" height="4.8" fill="#8A8F96" opacity="0.65" transform="rotate(80 125.4 115.7)"/><rect x="127.1" y="132.9" width="17.4" height="7.0" fill="#8A8F96" opacity="0.93" transform="rotate(140 135.8 136.4)"/><rect x="153.8" y="120.6" width="22.5" height="6.1" fill="#8A8F96" opacity="0.80" transform="rotate(20 165.1 123.7)"/><rect x="84.0" y="123.3" width="17.9" height="5.4" fill="#8A8F96" opacity="0.80" transform="rotate(123 92.9 126.0)"/><rect x="156.9" y="117.0" width="23.7" height="6.7" fill="#8A8F96" opacity="0.90" transform="rotate(45 168.7 120.3)"/><rect x="23.4" y="108.5" width="16.0" height="5.5" fill="#8A8F96" opacity="0.59" transform="rotate(49 31.4 111.3)"/><rect x="118.3" y="109.5" width="19.5" height="5.2" fill="#8A8F96" opacity="0.80" transform="rotate(16 128.0 112.1)"/><rect x="88.2" y="137.5" width="14.8" height="6.0" fill="#8A8F96" opacity="0.89" transform="rotate(38 95.6 140.5)"/><rect x="28.7" y="112.3" width="18.7" height="6.1" fill="#8A8F96" opacity="0.64" transform="rotate(146 38.1 115.4)"/><rect x="97.9" y="122.3" width="15.2" height="5.6" fill="#8A8F96" opacity="0.95" transform="rotate(146 105.4 125.1)"/><rect x="75.0" y="143.0" width="22.9" height="4.7" fill="#8A8F96" opacity="0.70" transform="rotate(134 86.4 145.4)"/><rect x="36.9" y="165.6" width="11.2" height="5.3" fill="#8A8F96" opacity="0.74" transform="rotate(14 42.5 168.3)"/><rect x="150.1" y="126.0" width="11.1" height="3.9" fill="#8A8F96" opacity="0.81" transform="rotate(140 155.7 127.9)"/><rect x="29.7" y="126.2" width="19.7" height="4.1" fill="#8A8F96" opacity="0.61" transform="rotate(130 39.5 128.3)"/><rect x="86.8" y="154.9" width="11.6" height="5.8" fill="#8A8F96" opacity="0.78" transform="rotate(66 92.6 157.8)"/><rect x="192.5" y="169.7" width="16.1" height="6.2" fill="#8A8F96" opacity="0.67" transform="rotate(164 200.5 172.8)"/><rect x="73.6" y="133.0" width="22.5" height="4.0" fill="#8A8F96" opacity="0.69" transform="rotate(168 84.9 135.0)"/><rect x="86.4" y="130.5" width="15.4" height="3.8" fill="#8A8F96" opacity="0.78" transform="rotate(71 94.1 132.4)"/><rect x="168.2" y="143.0" width="17.9" height="3.7" fill="#8A8F96" opacity="0.85" transform="rotate(151 177.2 144.8)"/><rect x="184.7" y="124.1" width="17.2" height="5.2" fill="#8A8F96" opacity="0.78" transform="rotate(4 193.3 126.7)"/><rect x="204.3" y="150.0" width="10.9" height="5.2" fill="#8A8F96" opacity="0.87" transform="rotate(145 209.7 152.6)"/><rect x="28.7" y="111.0" width="22.6" height="3.3" fill="#8A8F96" opacity="0.80" transform="rotate(133 40.0 112.7)"/><rect x="44.8" y="157.3" width="13.4" height="3.9" fill="#8A8F96" opacity="0.86" transform="rotate(117 51.5 159.2)"/><rect x="116.8" y="157.1" width="14.7" height="6.9" fill="#8A8F96" opacity="0.82" transform="rotate(71 124.1 160.5)"/><rect x="108.8" y="141.3" width="19.9" height="6.7" fill="#8A8F96" opacity="0.71" transform="rotate(130 118.8 144.6)"/><rect x="172.1" y="150.5" width="21.3" height="6.3" fill="#8A8F96" opacity="0.91" transform="rotate(154 182.8 153.7)"/><rect x="198.1" y="148.7" width="19.9" height="6.2" fill="#8A8F96" opacity="0.72" transform="rotate(94 208.1 151.8)"/><rect x="92.8" y="115.0" width="23.9" height="4.5" fill="#8A8F96" opacity="0.62" transform="rotate(133 104.7 117.2)"/><rect x="51.3" y="135.1" width="23.6" height="3.2" fill="#8A8F96" opacity="0.67" transform="rotate(53 63.1 136.7)"/><rect x="39.6" y="150.7" width="12.5" height="3.2" fill="#8A8F96" opacity="0.73" transform="rotate(140 45.9 152.4)"/><rect x="130.4" y="168.8" width="11.5" height="3.7" fill="#8A8F96" opacity="0.64" transform="rotate(7 136.2 170.7)"/><rect x="62.5" y="155.3" width="13.1" height="3.7" fill="#8A8F96" opacity="0.66" transform="rotate(107 69.1 157.2)"/><rect x="48.2" y="156.9" width="17.7" height="6.3" fill="#8A8F96" opacity="0.74" transform="rotate(56 57.0 160.0)"/><rect x="66.5" y="166.5" width="14.8" height="5.2" fill="#8A8F96" opacity="0.93" transform="rotate(165 73.9 169.1)"/><rect x="105.0" y="119.4" width="23.3" height="6.2" fill="#8A8F96" opacity="0.70" transform="rotate(9 116.7 122.5)"/><rect x="113.4" y="140.3" width="23.9" height="5.6" fill="#8A8F96" opacity="0.65" transform="rotate(49 125.3 143.1)"/><rect x="15.3" y="137.2" width="21.2" height="5.9" fill="#8A8F96" opacity="0.79" transform="rotate(67 25.9 140.1)"/><rect x="47.2" y="114.7" width="13.6" height="6.5" fill="#8A8F96" opacity="0.76" transform="rotate(58 54.1 118.0)"/><rect x="137.6" y="174.7" width="17.5" height="3.6" fill="#8A8F96" opacity="0.86" transform="rotate(48 146.4 176.5)"/><rect x="13.3" y="162.8" width="21.5" height="3.3" fill="#8A8F96" opacity="0.66" transform="rotate(152 24.1 164.5)"/><rect x="153.4" y="110.4" width="16.6" height="6.8" fill="#8A8F96" opacity="0.78" transform="rotate(86 161.7 113.8)"/><rect x="180.8" y="124.9" width="15.8" height="6.7" fill="#8A8F96" opacity="0.59" transform="rotate(142 188.8 128.3)"/><rect x="174.1" y="119.8" width="17.4" height="3.6" fill="#8A8F96" opacity="0.88" transform="rotate(98 182.8 121.6)"/><rect x="76.6" y="126.3" width="14.3" height="4.9" fill="#8A8F96" opacity="0.84" transform="rotate(14 83.7 128.8)"/><rect x="85.2" y="152.7" width="15.5" height="4.8" fill="#8A8F96" opacity="0.94" transform="rotate(19 93.0 155.1)"/><rect x="175.8" y="149.9" width="15.3" height="5.8" fill="#8A8F96" opacity="0.64" transform="rotate(2 183.4 152.8)"/><rect x="120.4" y="136.0" width="23.9" height="6.2" fill="#8A8F96" opacity="0.63" transform="rotate(2 132.3 139.1)"/><rect x="133.6" y="125.2" width="17.6" height="4.2" fill="#8A8F96" opacity="0.68" transform="rotate(68 142.3 127.3)"/><rect x="92.9" y="150.7" width="12.8" height="5.9" fill="#8A8F96" opacity="0.68" transform="rotate(46 99.3 153.7)"/><rect x="198.3" y="143.2" width="14.6" height="6.3" fill="#8A8F96" opacity="0.59" transform="rotate(130 205.6 146.4)"/><rect x="40.9" y="111.7" width="19.9" height="3.7" fill="#8A8F96" opacity="0.71" transform="rotate(122 50.9 113.6)"/><rect x="178.2" y="146.7" width="13.2" height="3.6" fill="#8A8F96" opacity="0.60" transform="rotate(16 184.8 148.5)"/><rect x="94.1" y="109.6" width="16.0" height="5.0" fill="#8A8F96" opacity="0.81" transform="rotate(166 102.1 112.1)"/><rect x="164.0" y="162.2" width="14.6" height="4.6" fill="#8A8F96" opacity="0.56" transform="rotate(69 171.3 164.5)"/><rect x="90.4" y="153.2" width="21.1" height="5.6" fill="#8A8F96" opacity="0.79" transform="rotate(177 100.9 156.0)"/><rect x="17.8" y="128.5" width="19.1" height="3.4" fill="#8A8F96" opacity="0.70" transform="rotate(62 27.4 130.2)"/><rect x="112.5" y="160.4" width="18.6" height="3.6" fill="#8A8F96" opacity="0.86" transform="rotate(149 121.8 162.2)"/><rect x="189.0" y="143.6" width="17.0" height="3.6" fill="#8A8F96" opacity="0.84" transform="rotate(63 197.5 145.4)"/><rect x="202.8" y="141.2" width="21.7" height="3.8" fill="#8A8F96" opacity="0.93" transform="rotate(129 213.7 143.1)"/><rect x="137.7" y="118.2" width="13.4" height="5.3" fill="#8A8F96" opacity="0.83" transform="rotate(15 144.5 120.9)"/><rect x="78.9" y="170.3" width="16.5" height="3.5" fill="#8A8F96" opacity="0.94" transform="rotate(65 87.1 172.0)"/><rect x="41.0" y="167.7" width="17.9" height="5.2" fill="#8A8F96" opacity="0.66" transform="rotate(98 49.9 170.3)"/><rect x="189.5" y="174.7" width="18.4" height="3.5" fill="#8A8F96" opacity="0.88" transform="rotate(147 198.8 176.4)"/><rect x="70.3" y="166.6" width="18.0" height="6.3" fill="#8A8F96" opacity="0.62" transform="rotate(43 79.3 169.8)"/><rect x="122.9" y="108.9" width="12.5" height="6.9" fill="#8A8F96" opacity="0.93" transform="rotate(6 129.2 112.3)"/><rect x="140.3" y="126.3" width="20.3" height="4.5" fill="#8A8F96" opacity="0.79" transform="rotate(121 150.5 128.5)"/><rect x="170.2" y="106.4" width="16.6" height="3.6" fill="#8A8F96" opacity="0.70" transform="rotate(36 178.5 108.1)"/><rect x="126.5" y="116.5" width="13.7" height="5.3" fill="#8A8F96" opacity="0.68" transform="rotate(94 133.4 119.2)"/><rect x="141.3" y="106.2" width="12.0" height="6.8" fill="#8A8F96" opacity="0.79" transform="rotate(121 147.3 109.7)"/><rect x="104.4" y="132.8" width="19.7" height="6.0" fill="#8A8F96" opacity="0.85" transform="rotate(112 114.2 135.8)"/><rect x="106.3" y="174.3" width="22.0" height="4.6" fill="#8A8F96" opacity="0.72" transform="rotate(151 117.3 176.6)"/><rect x="124.0" y="168.0" width="17.4" height="4.7" fill="#8A8F96" opacity="0.91" transform="rotate(95 132.7 170.4)"/><rect x="74.2" y="107.9" width="22.6" height="5.9" fill="#8A8F96" opacity="0.79" transform="rotate(131 85.5 110.8)"/><rect x="163.0" y="126.6" width="11.0" height="3.5" fill="#8A8F96" opacity="0.73" transform="rotate(107 168.5 128.3)"/><rect x="110.6" y="132.2" width="19.7" height="5.1" fill="#8A8F96" opacity="0.65" transform="rotate(9 120.5 134.8)"/><rect x="77.3" y="131.4" width="11.0" height="6.6" fill="#8A8F96" opacity="0.94" transform="rotate(42 82.7 134.7)"/><rect x="141.2" y="165.7" width="21.3" height="3.9" fill="#8A8F96" opacity="0.85" transform="rotate(76 151.9 167.7)"/><rect x="122.3" y="168.5" width="21.1" height="3.5" fill="#8A8F96" opacity="0.77" transform="rotate(18 132.9 170.2)"/><rect x="199.7" y="104.9" width="14.2" height="4.3" fill="#8A8F96" opacity="0.58" transform="rotate(44 206.8 107.0)"/><rect x="188.5" y="161.4" width="15.0" height="5.3" fill="#8A8F96" opacity="0.57" transform="rotate(72 196.0 164.1)"/><rect x="21.3" y="166.5" width="17.0" height="6.7" fill="#8A8F96" opacity="0.94" transform="rotate(55 29.8 169.9)"/><rect x="103.3" y="118.2" width="22.9" height="6.6" fill="#8A8F96" opacity="0.63" transform="rotate(53 114.7 121.5)"/><rect x="178.8" y="128.5" width="12.4" height="6.5" fill="#8A8F96" opacity="0.95" transform="rotate(85 185.0 131.8)"/><rect x="51.5" y="149.7" width="22.3" height="3.2" fill="#8A8F96" opacity="0.59" transform="rotate(34 62.7 151.3)"/><rect x="152.4" y="126.0" width="22.2" height="5.9" fill="#8A8F96" opacity="0.60" transform="rotate(162 163.4 128.9)"/><rect x="152.1" y="170.7" width="11.1" height="3.9" fill="#8A8F96" opacity="0.67" transform="rotate(80 157.7 172.6)"/><rect x="153.9" y="117.9" width="13.3" height="5.7" fill="#8A8F96" opacity="0.87" transform="rotate(33 160.5 120.8)"/><rect x="86.3" y="151.4" width="18.3" height="3.9" fill="#8A8F96" opacity="0.67" transform="rotate(159 95.5 153.3)"/><rect x="192.6" y="152.0" width="19.0" height="3.4" fill="#8A8F96" opacity="0.94" transform="rotate(50 202.1 153.7)"/><rect x="103.2" y="141.3" width="10.6" height="5.4" fill="#8A8F96" opacity="0.66" transform="rotate(96 108.5 144.0)"/><rect x="65.1" y="160.2" width="14.0" height="6.0" fill="#8A8F96" opacity="0.65" transform="rotate(16 72.1 163.2)"/><rect x="66.2" y="141.9" width="22.6" height="7.0" fill="#8A8F96" opacity="0.56" transform="rotate(34 77.5 145.4)"/><rect x="101.1" y="157.0" width="23.0" height="5.0" fill="#8A8F96" opacity="0.62" transform="rotate(69 112.6 159.5)"/><rect x="121.2" y="149.1" width="19.2" height="6.1" fill="#8A8F96" opacity="0.76" transform="rotate(65 130.8 152.1)"/><rect x="112.4" y="162.8" width="17.3" height="6.8" fill="#8A8F96" opacity="0.62" transform="rotate(123 121.1 166.2)"/><rect x="167.2" y="116.2" width="13.3" height="4.8" fill="#8A8F96" opacity="0.86" transform="rotate(109 173.8 118.6)"/><rect x="166.7" y="160.4" width="16.8" height="3.9" fill="#8A8F96" opacity="0.78" transform="rotate(42 175.1 162.4)"/><rect x="109.8" y="106.8" width="20.0" height="5.3" fill="#8A8F96" opacity="0.90" transform="rotate(107 119.8 109.5)"/><rect x="50.0" y="115.3" width="16.9" height="4.7" fill="#8A8F96" opacity="0.73" transform="rotate(3 58.4 117.6)"/><rect x="63.0" y="160.3" width="22.7" height="5.3" fill="#8A8F96" opacity="0.77" transform="rotate(13 74.4 162.9)"/><rect x="168.9" y="122.1" width="14.4" height="3.2" fill="#8A8F96" opacity="0.68" transform="rotate(26 176.1 123.7)"/><rect x="134.2" y="142.1" width="18.2" height="3.4" fill="#8A8F96" opacity="0.88" transform="rotate(48 143.3 143.8)"/><rect x="47.0" y="121.7" width="19.7" height="6.3" fill="#8A8F96" opacity="0.86" transform="rotate(29 56.8 124.8)"/><rect x="29.0" y="132.3" width="13.0" height="6.9" fill="#8A8F96" opacity="0.57" transform="rotate(66 35.6 135.7)"/><rect x="112.0" y="157.9" width="12.0" height="4.8" fill="#8A8F96" opacity="0.85" transform="rotate(178 118.0 160.3)"/><rect x="25.4" y="121.6" width="12.0" height="4.6" fill="#8A8F96" opacity="0.67" transform="rotate(160 31.3 123.8)"/><rect x="93.5" y="109.3" width="23.9" height="6.1" fill="#8A8F96" opacity="0.84" transform="rotate(6 105.5 112.4)"/><rect x="61.3" y="122.3" width="13.4" height="4.8" fill="#8A8F96" opacity="0.92" transform="rotate(99 68.0 124.7)"/><rect x="84.6" y="129.0" width="18.6" height="3.2" fill="#8A8F96" opacity="0.71" transform="rotate(177 93.8 130.6)"/><rect x="139.0" y="107.9" width="19.7" height="6.5" fill="#8A8F96" opacity="0.79" transform="rotate(62 148.8 111.1)"/><rect x="183.4" y="137.1" width="21.8" height="4.5" fill="#8A8F96" opacity="0.86" transform="rotate(71 194.3 139.4)"/><rect x="56.4" y="129.5" width="17.7" height="3.7" fill="#8A8F96" opacity="0.63" transform="rotate(33 65.2 131.3)"/><rect x="56.9" y="136.3" width="16.3" height="7.0" fill="#8A8F96" opacity="0.82" transform="rotate(56 65.1 139.7)"/><rect x="184.3" y="118.4" width="11.0" height="5.8" fill="#8A8F96" opacity="0.70" transform="rotate(69 189.8 121.3)"/><rect x="69.8" y="106.0" width="13.7" height="4.6" fill="#8A8F96" opacity="0.92" transform="rotate(33 76.6 108.3)"/><rect x="155.3" y="122.4" width="12.1" height="6.7" fill="#8A8F96" opacity="0.69" transform="rotate(65 161.4 125.8)"/><rect x="166.0" y="155.5" width="10.3" height="4.3" fill="#8A8F96" opacity="0.70" transform="rotate(163 171.1 157.6)"/><rect x="29.4" y="166.2" width="20.8" height="5.1" fill="#8A8F96" opacity="0.57" transform="rotate(59 39.8 168.8)"/><rect x="93.5" y="121.0" width="12.1" height="5.4" fill="#8A8F96" opacity="0.56" transform="rotate(7 99.6 123.7)"/><rect x="77.9" y="133.8" width="11.9" height="5.8" fill="#8A8F96" opacity="0.65" transform="rotate(98 83.9 136.7)"/><rect x="156.9" y="151.6" width="12.9" height="4.1" fill="#8A8F96" opacity="0.84" transform="rotate(26 163.4 153.6)"/><rect x="95.2" y="132.0" width="13.2" height="4.2" fill="#8A8F96" opacity="0.69" transform="rotate(156 101.8 134.1)"/><rect x="55.9" y="107.2" width="18.8" height="5.3" fill="#8A8F96" opacity="0.87" transform="rotate(4 65.3 109.8)"/></g>
+<rect x="90" y="14" width="12" height="94" fill="#4F555D"/>
+<circle cx="96" cy="118" r="14" fill="url(#s_glow)"/><path d="M96.0 108.0L94.7 111.3L100.1 114.7L95.0 118.0L93.1 121.3L99.2 124.7L96.0 128.0" stroke="#FFE2B8" stroke-width="4.6" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M96.0 108.0L94.7 111.3L100.1 114.7L95.0 118.0L93.1 121.3L99.2 124.7L96.0 128.0" stroke="#FFF4E0" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+<rect x="114" y="14" width="12" height="94" fill="#4F555D"/>
+<circle cx="120" cy="118" r="14" fill="url(#s_glow)"/><path d="M120.0 108.0L120.1 111.3L116.9 114.7L124.5 118.0L121.4 121.3L120.9 124.7L120.0 128.0" stroke="#FFE2B8" stroke-width="4.6" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M120.0 108.0L120.1 111.3L116.9 114.7L124.5 118.0L121.4 121.3L120.9 124.7L120.0 128.0" stroke="#FFF4E0" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+<rect x="138" y="14" width="12" height="94" fill="#4F555D"/>
+<circle cx="144" cy="118" r="14" fill="url(#s_glow)"/><path d="M144.0 108.0L143.5 111.3L143.5 114.7L148.4 118.0L146.2 121.3L147.1 124.7L144.0 128.0" stroke="#FFE2B8" stroke-width="4.6" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M144.0 108.0L143.5 111.3L143.5 114.7L148.4 118.0L146.2 121.3L147.1 124.7L144.0 128.0" stroke="#FFF4E0" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+<rect x="9.799999999999997" y="54" width="220.4" height="8" fill="url(#s_roofp)"/>
+</g>
+<text x="12.0" y="278.0" font-size="12" fill="#FF6A1A" text-anchor="start" font-weight="600" font-family="IBM Plex Mono,monospace">01</text>
+<text x="38.0" y="278.0" font-size="14.5" fill="#E8E6E1" text-anchor="start" font-weight="700">裝料、通電穿井</text>
+<text x="12.0" y="298.0" font-size="12" fill="#9AA0A6" text-anchor="start">電極在廢鋼堆中向下熔出</text>
+<text x="12.0" y="316.0" font-size="12" fill="#9AA0A6" text-anchor="start">空間；廢鋼擋住電弧、護爐壁</text>
+</g>
+<path d="M240 24V310" stroke="#22262B"/>
+<g>
+<defs><clipPath id="mi1"><path d="M263.8 60L263.8 166Q263.8 198 360 198Q456.2 198 456.2 166L456.2 60Z"/></clipPath></defs>
+<g transform=" rotate(0 360 212)">
+<path d="M251.8 128L251.8 168Q251.8 218 360 218Q468.2 218 468.2 168L468.2 128Z" fill="url(#s_refr)" stroke="#4A5058"/>
+<rect x="255.8" y="60" width="8" height="68" fill="url(#s_panel)"/><rect x="456.2" y="60" width="8" height="68" fill="url(#s_panel)"/>
+<path d="M263.8 60L263.8 166Q263.8 198 360 198Q456.2 198 456.2 166L456.2 60Z" fill="#0B0C0E"/>
+<path d="M251.8 134L229.8 134L229.8 188L251.8 188Z" fill="url(#s_refr)" stroke="#4A5058"/>
+<rect x="233.8" y="138" width="18" height="46" fill="#0B0C0E"/>
+<g clip-path="url(#mi1)"><rect x="263.8" y="180" width="192.4" height="40" fill="url(#s_bath)"/></g>
+<g clip-path="url(#mi1)"><rect x="261.4" y="167.5" width="16.7" height="3.9" fill="#8A8F96" opacity="0.87" transform="rotate(114 269.7 169.4)"/><rect x="286.2" y="157.2" width="13.3" height="3.0" fill="#8A8F96" opacity="0.70" transform="rotate(91 292.9 158.7)"/><rect x="278.2" y="130.2" width="13.3" height="3.9" fill="#8A8F96" opacity="0.57" transform="rotate(143 284.9 132.2)"/><rect x="290.4" y="170.8" width="18.6" height="3.1" fill="#8A8F96" opacity="0.68" transform="rotate(158 299.7 172.3)"/><rect x="274.1" y="133.1" width="15.2" height="3.6" fill="#8A8F96" opacity="0.88" transform="rotate(171 281.7 134.9)"/><rect x="259.4" y="181.5" width="17.7" height="4.4" fill="#8A8F96" opacity="0.74" transform="rotate(82 268.3 183.7)"/><rect x="263.9" y="127.2" width="13.3" height="6.1" fill="#8A8F96" opacity="0.63" transform="rotate(156 270.5 130.2)"/><rect x="288.3" y="179.0" width="20.7" height="5.3" fill="#8A8F96" opacity="0.84" transform="rotate(136 298.7 181.6)"/><rect x="261.8" y="153.2" width="12.8" height="6.7" fill="#8A8F96" opacity="0.91" transform="rotate(149 268.2 156.6)"/><rect x="270.8" y="146.4" width="15.4" height="7.0" fill="#8A8F96" opacity="0.70" transform="rotate(81 278.5 149.9)"/><rect x="252.8" y="131.1" width="23.9" height="5.0" fill="#8A8F96" opacity="0.75" transform="rotate(129 264.8 133.6)"/><rect x="274.4" y="170.3" width="18.5" height="5.2" fill="#8A8F96" opacity="0.80" transform="rotate(40 283.6 172.9)"/><rect x="258.8" y="136.0" width="23.0" height="4.4" fill="#8A8F96" opacity="0.79" transform="rotate(63 270.3 138.2)"/><rect x="264.1" y="131.1" width="21.4" height="6.1" fill="#8A8F96" opacity="0.70" transform="rotate(12 274.8 134.2)"/><rect x="276.7" y="166.2" width="23.4" height="4.6" fill="#8A8F96" opacity="0.95" transform="rotate(162 288.4 168.6)"/><rect x="290.0" y="161.2" width="16.9" height="4.5" fill="#8A8F96" opacity="0.65" transform="rotate(159 298.4 163.4)"/><rect x="284.7" y="134.7" width="21.3" height="6.1" fill="#8A8F96" opacity="0.74" transform="rotate(12 295.3 137.7)"/><rect x="286.9" y="128.8" width="14.1" height="4.7" fill="#8A8F96" opacity="0.62" transform="rotate(46 293.9 131.1)"/><rect x="254.4" y="145.3" width="23.8" height="6.0" fill="#8A8F96" opacity="0.74" transform="rotate(162 266.3 148.3)"/><rect x="262.8" y="184.0" width="20.2" height="3.1" fill="#8A8F96" opacity="0.63" transform="rotate(95 272.9 185.5)"/><rect x="284.8" y="173.4" width="18.4" height="4.7" fill="#8A8F96" opacity="0.78" transform="rotate(159 294.0 175.7)"/><rect x="287.4" y="143.4" width="13.9" height="6.1" fill="#8A8F96" opacity="0.55" transform="rotate(96 294.4 146.5)"/><rect x="279.3" y="182.5" width="18.3" height="5.6" fill="#8A8F96" opacity="0.89" transform="rotate(4 288.5 185.2)"/><rect x="273.1" y="140.1" width="23.4" height="6.6" fill="#8A8F96" opacity="0.60" transform="rotate(73 284.8 143.4)"/><rect x="259.1" y="131.9" width="16.3" height="3.6" fill="#8A8F96" opacity="0.90" transform="rotate(5 267.2 133.6)"/><rect x="280.1" y="133.1" width="14.5" height="5.0" fill="#8A8F96" opacity="0.64" transform="rotate(97 287.4 135.6)"/><rect x="259.8" y="136.4" width="19.9" height="5.2" fill="#8A8F96" opacity="0.57" transform="rotate(68 269.8 139.0)"/><rect x="278.9" y="178.9" width="21.1" height="3.0" fill="#8A8F96" opacity="0.74" transform="rotate(139 289.4 180.4)"/><rect x="256.1" y="171.8" width="20.0" height="4.0" fill="#8A8F96" opacity="0.83" transform="rotate(32 266.1 173.8)"/><rect x="267.9" y="127.2" width="14.3" height="6.6" fill="#8A8F96" opacity="0.67" transform="rotate(70 275.1 130.5)"/><rect x="276.2" y="158.3" width="11.4" height="5.4" fill="#8A8F96" opacity="0.75" transform="rotate(171 281.9 161.0)"/><rect x="280.3" y="183.5" width="19.8" height="5.1" fill="#8A8F96" opacity="0.77" transform="rotate(56 290.2 186.0)"/><rect x="258.6" y="174.7" width="15.0" height="4.3" fill="#8A8F96" opacity="0.95" transform="rotate(176 266.1 176.9)"/><rect x="257.0" y="129.5" width="21.4" height="6.0" fill="#8A8F96" opacity="0.73" transform="rotate(13 267.7 132.6)"/><rect x="278.1" y="126.7" width="16.2" height="5.1" fill="#8A8F96" opacity="0.71" transform="rotate(116 286.2 129.2)"/><rect x="270.2" y="139.5" width="16.1" height="4.0" fill="#8A8F96" opacity="0.83" transform="rotate(9 278.3 141.5)"/><rect x="286.6" y="169.2" width="13.3" height="4.5" fill="#8A8F96" opacity="0.74" transform="rotate(82 293.2 171.4)"/><rect x="278.2" y="183.3" width="16.7" height="5.0" fill="#8A8F96" opacity="0.84" transform="rotate(15 286.5 185.8)"/><rect x="285.5" y="171.9" width="20.6" height="5.7" fill="#8A8F96" opacity="0.89" transform="rotate(113 295.9 174.8)"/><rect x="277.5" y="166.7" width="22.8" height="4.5" fill="#8A8F96" opacity="0.80" transform="rotate(44 289.0 169.0)"/><rect x="442.7" y="134.6" width="24.0" height="3.7" fill="#8A8F96" opacity="0.60" transform="rotate(4 454.7 136.4)"/><rect x="437.0" y="145.3" width="13.2" height="6.8" fill="#8A8F96" opacity="0.68" transform="rotate(160 443.7 148.7)"/><rect x="430.4" y="181.0" width="22.9" height="5.8" fill="#8A8F96" opacity="0.57" transform="rotate(123 441.8 183.9)"/><rect x="445.6" y="160.2" width="12.7" height="6.4" fill="#8A8F96" opacity="0.78" transform="rotate(56 451.9 163.4)"/><rect x="445.0" y="171.5" width="17.9" height="5.8" fill="#8A8F96" opacity="0.79" transform="rotate(173 454.0 174.4)"/><rect x="419.0" y="182.0" width="20.9" height="6.8" fill="#8A8F96" opacity="0.81" transform="rotate(56 429.5 185.4)"/><rect x="419.0" y="175.9" width="12.6" height="3.2" fill="#8A8F96" opacity="0.76" transform="rotate(120 425.3 177.5)"/><rect x="412.7" y="181.2" width="17.2" height="4.6" fill="#8A8F96" opacity="0.81" transform="rotate(91 421.4 183.5)"/><rect x="444.1" y="144.3" width="18.2" height="4.2" fill="#8A8F96" opacity="0.79" transform="rotate(67 453.2 146.4)"/><rect x="431.1" y="152.3" width="17.4" height="3.4" fill="#8A8F96" opacity="0.95" transform="rotate(121 439.8 154.0)"/><rect x="421.5" y="150.5" width="23.0" height="6.8" fill="#8A8F96" opacity="0.75" transform="rotate(73 433.0 153.9)"/><rect x="428.4" y="131.2" width="12.4" height="5.2" fill="#8A8F96" opacity="0.69" transform="rotate(161 434.6 133.8)"/><rect x="426.8" y="146.9" width="10.5" height="5.1" fill="#8A8F96" opacity="0.87" transform="rotate(34 432.0 149.4)"/><rect x="438.1" y="137.8" width="10.7" height="4.6" fill="#8A8F96" opacity="0.88" transform="rotate(125 443.5 140.1)"/><rect x="444.9" y="153.1" width="17.0" height="5.1" fill="#8A8F96" opacity="0.78" transform="rotate(152 453.4 155.6)"/><rect x="445.8" y="169.8" width="20.2" height="5.6" fill="#8A8F96" opacity="0.69" transform="rotate(85 455.9 172.6)"/><rect x="436.8" y="175.7" width="23.2" height="3.1" fill="#8A8F96" opacity="0.75" transform="rotate(110 448.4 177.2)"/><rect x="433.2" y="146.1" width="19.7" height="4.7" fill="#8A8F96" opacity="0.66" transform="rotate(31 443.0 148.4)"/><rect x="415.9" y="184.1" width="11.7" height="3.9" fill="#8A8F96" opacity="0.65" transform="rotate(63 421.7 186.0)"/><rect x="445.7" y="136.4" width="11.4" height="4.9" fill="#8A8F96" opacity="0.63" transform="rotate(50 451.4 138.8)"/><rect x="421.7" y="170.5" width="21.7" height="3.2" fill="#8A8F96" opacity="0.70" transform="rotate(167 432.6 172.1)"/><rect x="442.3" y="127.7" width="16.9" height="4.5" fill="#8A8F96" opacity="0.85" transform="rotate(37 450.8 130.0)"/><rect x="439.4" y="153.8" width="13.2" height="4.1" fill="#8A8F96" opacity="0.58" transform="rotate(45 446.1 155.9)"/><rect x="434.6" y="135.9" width="19.0" height="3.2" fill="#8A8F96" opacity="0.75" transform="rotate(160 444.2 137.5)"/><rect x="436.7" y="127.5" width="10.4" height="6.1" fill="#8A8F96" opacity="0.55" transform="rotate(88 441.9 130.5)"/><rect x="436.3" y="184.6" width="13.3" height="5.1" fill="#8A8F96" opacity="0.61" transform="rotate(152 443.0 187.1)"/><rect x="427.5" y="177.6" width="10.1" height="4.5" fill="#8A8F96" opacity="0.81" transform="rotate(147 432.5 179.8)"/><rect x="417.7" y="173.9" width="17.7" height="4.4" fill="#8A8F96" opacity="0.89" transform="rotate(161 426.5 176.2)"/><rect x="432.5" y="136.1" width="12.2" height="6.4" fill="#8A8F96" opacity="0.75" transform="rotate(50 438.7 139.3)"/><rect x="438.9" y="174.7" width="12.7" height="4.6" fill="#8A8F96" opacity="0.90" transform="rotate(175 445.3 177.0)"/><rect x="441.3" y="149.4" width="12.7" height="3.6" fill="#8A8F96" opacity="0.57" transform="rotate(118 447.6 151.2)"/><rect x="422.1" y="140.4" width="23.6" height="3.6" fill="#8A8F96" opacity="0.77" transform="rotate(93 433.9 142.2)"/><rect x="441.0" y="162.4" width="20.7" height="3.1" fill="#8A8F96" opacity="0.93" transform="rotate(95 451.3 163.9)"/><rect x="439.2" y="174.8" width="11.4" height="3.3" fill="#8A8F96" opacity="0.62" transform="rotate(149 444.9 176.4)"/><rect x="430.5" y="181.6" width="15.8" height="5.5" fill="#8A8F96" opacity="0.85" transform="rotate(164 438.4 184.3)"/><rect x="422.1" y="182.9" width="20.2" height="6.6" fill="#8A8F96" opacity="0.87" transform="rotate(170 432.2 186.2)"/><rect x="437.0" y="145.7" width="13.3" height="3.2" fill="#8A8F96" opacity="0.92" transform="rotate(51 443.7 147.3)"/><rect x="425.2" y="127.0" width="11.4" height="4.8" fill="#8A8F96" opacity="0.68" transform="rotate(57 430.9 129.4)"/><rect x="419.0" y="153.5" width="15.0" height="6.3" fill="#8A8F96" opacity="0.67" transform="rotate(75 426.5 156.6)"/><rect x="432.1" y="179.1" width="15.2" height="3.2" fill="#8A8F96" opacity="0.93" transform="rotate(173 439.7 180.7)"/></g>
+<rect x="330" y="14" width="12" height="140" fill="#4F555D"/>
+<circle cx="336" cy="166" r="14" fill="url(#s_glow)"/><path d="M336.0 154.0L333.0 158.3L339.4 162.7L334.6 167.0L331.1 171.3L336.3 175.7L336.0 180.0" stroke="#FFE2B8" stroke-width="4.6" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M336.0 154.0L333.0 158.3L339.4 162.7L334.6 167.0L331.1 171.3L336.3 175.7L336.0 180.0" stroke="#FFF4E0" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+<rect x="354" y="14" width="12" height="140" fill="#4F555D"/>
+<circle cx="360" cy="166" r="14" fill="url(#s_glow)"/><path d="M360.0 154.0L364.1 158.3L356.3 162.7L362.7 167.0L359.0 171.3L363.9 175.7L360.0 180.0" stroke="#FFE2B8" stroke-width="4.6" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M360.0 154.0L364.1 158.3L356.3 162.7L362.7 167.0L359.0 171.3L363.9 175.7L360.0 180.0" stroke="#FFF4E0" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+<rect x="378" y="14" width="12" height="140" fill="#4F555D"/>
+<circle cx="384" cy="166" r="14" fill="url(#s_glow)"/><path d="M384.0 154.0L388.3 158.3L387.3 162.7L383.0 167.0L382.1 171.3L388.2 175.7L384.0 180.0" stroke="#FFE2B8" stroke-width="4.6" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M384.0 154.0L388.3 158.3L387.3 162.7L383.0 167.0L382.1 171.3L388.2 175.7L384.0 180.0" stroke="#FFF4E0" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+<rect x="249.8" y="54" width="220.4" height="8" fill="url(#s_roofp)"/>
+<path d="M233.8 90L293.8 164" stroke="#FF6A1A" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#s_arO)"/>
+</g>
+<text x="252.0" y="278.0" font-size="12" fill="#FF6A1A" text-anchor="start" font-weight="600" font-family="IBM Plex Mono,monospace">02</text>
+<text x="278.0" y="278.0" font-size="14.5" fill="#E8E6E1" text-anchor="start" font-weight="700">主熔化</text>
+<text x="252.0" y="298.0" font-size="12" fill="#9AA0A6" text-anchor="start">熔池擴大，燒嘴補強冷區；</text>
+<text x="252.0" y="316.0" font-size="12" fill="#9AA0A6" text-anchor="start">視空間追加第二、三籃廢鋼</text>
+</g>
+<path d="M480 24V310" stroke="#22262B"/>
+<g>
+<defs><clipPath id="mi2"><path d="M503.8 60L503.8 166Q503.8 198 600 198Q696.2 198 696.2 166L696.2 60Z"/></clipPath></defs>
+<g transform=" rotate(0 600 212)">
+<path d="M491.8 128L491.8 168Q491.8 218 600 218Q708.2 218 708.2 168L708.2 128Z" fill="url(#s_refr)" stroke="#4A5058"/>
+<rect x="495.8" y="60" width="8" height="68" fill="url(#s_panel)"/><rect x="696.2" y="60" width="8" height="68" fill="url(#s_panel)"/>
+<path d="M503.8 60L503.8 166Q503.8 198 600 198Q696.2 198 696.2 166L696.2 60Z" fill="#0B0C0E"/>
+<path d="M491.8 134L469.8 134L469.8 188L491.8 188Z" fill="url(#s_refr)" stroke="#4A5058"/>
+<rect x="473.8" y="138" width="18" height="46" fill="#0B0C0E"/>
+<g clip-path="url(#mi2)"><rect x="503.8" y="168" width="192.4" height="40" fill="url(#s_bath)"/><rect x="503.8" y="142" width="192.4" height="26" fill="url(#s_foam)"/></g>
+<circle cx="623.2" cy="160.3" r="2.1" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="683.4" cy="160.3" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="511.3" cy="154.2" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="628.1" cy="163.8" r="1.2" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="594.2" cy="149.4" r="1.8" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="613.9" cy="144.3" r="1.3" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="558.5" cy="164.2" r="2.1" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="535.9" cy="161.5" r="1.2" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="622.1" cy="146.8" r="1.0" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="670.0" cy="148.6" r="1.3" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="690.9" cy="163.2" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="686.9" cy="155.9" r="1.9" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="544.4" cy="164.7" r="2.0" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="687.9" cy="163.7" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="573.8" cy="147.7" r="1.2" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="518.1" cy="150.6" r="1.8" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="506.4" cy="158.9" r="1.5" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="564.2" cy="162.0" r="1.7" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="565.3" cy="154.6" r="2.0" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="516.5" cy="165.5" r="1.0" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="647.1" cy="162.6" r="1.0" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="654.2" cy="152.1" r="1.8" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="507.5" cy="145.0" r="1.3" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="685.8" cy="148.3" r="2.1" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="680.9" cy="164.7" r="1.5" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="572.6" cy="155.5" r="2.1" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="526.2" cy="160.5" r="2.1" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="667.8" cy="144.8" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="523.0" cy="151.5" r="1.9" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="678.8" cy="151.5" r="2.3" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="608.5" cy="150.9" r="1.4" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="539.2" cy="145.7" r="1.2" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="635.6" cy="165.9" r="1.2" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="514.9" cy="165.7" r="1.7" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="582.3" cy="149.2" r="1.8" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="661.5" cy="154.0" r="1.6" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="516.3" cy="164.2" r="1.0" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="598.8" cy="162.4" r="1.2" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="643.6" cy="164.9" r="1.9" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<circle cx="654.3" cy="146.3" r="1.6" fill="none" stroke="#F2D58A" stroke-opacity=".6" stroke-width=".7"/>
+<rect x="570" y="14" width="12" height="136" fill="#4F555D"/>
+<path d="M576.0 150.0L578.6 153.0L572.6 156.0L576.7 159.0L578.8 162.0L574.6 165.0L576.0 168.0" stroke="#FFE2B8" stroke-width="4.4" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M576.0 150.0L578.6 153.0L572.6 156.0L576.7 159.0L578.8 162.0L574.6 165.0L576.0 168.0" stroke="#FFF4E0" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+<rect x="594" y="14" width="12" height="136" fill="#4F555D"/>
+<path d="M600.0 150.0L599.0 153.0L598.3 156.0L602.4 159.0L599.6 162.0L601.0 165.0L600.0 168.0" stroke="#FFE2B8" stroke-width="4.4" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M600.0 150.0L599.0 153.0L598.3 156.0L602.4 159.0L599.6 162.0L601.0 165.0L600.0 168.0" stroke="#FFF4E0" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+<rect x="618" y="14" width="12" height="136" fill="#4F555D"/>
+<path d="M624.0 150.0L622.7 153.0L620.2 156.0L619.2 159.0L620.3 162.0L626.7 165.0L624.0 168.0" stroke="#FFE2B8" stroke-width="4.4" opacity=".35" fill="none" stroke-linejoin="round"/><path d="M624.0 150.0L622.7 153.0L620.2 156.0L619.2 159.0L620.3 162.0L626.7 165.0L624.0 168.0" stroke="#FFF4E0" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+<rect x="489.8" y="54" width="220.4" height="8" fill="url(#s_roofp)"/>
+<rect x="473.8" y="168" width="18" height="16" fill="url(#s_bath)"/>
+<path d="M708.2 128L682.2 156" stroke="#C9CDD2" stroke-width="2"/><path d="M682.2 156L668.2 164" stroke="#8DB4D6" stroke-width="1.3" stroke-dasharray="3 2" marker-end="url(#s_arB)"/>
+</g>
+<text x="492.0" y="278.0" font-size="12" fill="#FF6A1A" text-anchor="start" font-weight="600" font-family="IBM Plex Mono,monospace">03</text>
+<text x="518.0" y="278.0" font-size="14.5" fill="#E8E6E1" text-anchor="start" font-weight="700">平浴、泡沫渣精煉</text>
+<text x="492.0" y="298.0" font-size="12" fill="#9AA0A6" text-anchor="start">廢鋼熔完，噴碳造泡沫渣埋住</text>
+<text x="492.0" y="316.0" font-size="12" fill="#9AA0A6" text-anchor="start">電弧；吹氧去碳、去磷</text>
+</g>
+<path d="M720 24V310" stroke="#22262B"/>
+<g>
+<defs><clipPath id="mi3"><path d="M743.8 60L743.8 166Q743.8 198 840 198Q936.2 198 936.2 166L936.2 60Z"/></clipPath></defs>
+<g transform=" translate(0 -34) rotate(-17 840 212) translate(840 212) scale(.86) translate(-840 -212)">
+<path d="M731.8 128L731.8 168Q731.8 218 840 218Q948.2 218 948.2 168L948.2 128Z" fill="url(#s_refr)" stroke="#4A5058"/>
+<rect x="735.8" y="60" width="8" height="68" fill="url(#s_panel)"/><rect x="936.2" y="60" width="8" height="68" fill="url(#s_panel)"/>
+<path d="M743.8 60L743.8 166Q743.8 198 840 198Q936.2 198 936.2 166L936.2 60Z" fill="#0B0C0E"/>
+<path d="M731.8 134L709.8 134L709.8 188L731.8 188Z" fill="url(#s_refr)" stroke="#4A5058"/>
+<rect x="713.8" y="138" width="18" height="46" fill="#0B0C0E"/>
+<g clip-path="url(#mi3)"><path d="M713.8 148.8L966.2 226.0L966.2 228L713.8 228Z" fill="url(#s_bath)"/></g>
+<rect x="713.8" y="138" width="18" height="46" fill="url(#s_bath)"/>
+<rect x="729.8" y="54" width="220.4" height="8" fill="url(#s_roofp)"/>
+<rect x="810" y="14" width="12" height="40" fill="#4F555D"/>
+<rect x="834" y="14" width="12" height="40" fill="#4F555D"/>
+<rect x="858" y="14" width="12" height="40" fill="#4F555D"/>
+</g>
+<path d="M736.6 184.4C735.6 198.4,734.6 206.4,734.6 218.4" stroke="#FF6A1A" stroke-width="5" fill="none"/>
+<path d="M710.5718203872501 216.4409103388242L758.5718203872501 216.4409103388242L753.5718203872501 250.4409103388242L715.5718203872501 250.4409103388242Z" fill="#2A2F35" stroke="#4A5058"/><rect x="714.5718203872501" y="228.4409103388242" width="40" height="19" fill="url(#s_bath)"/>
+<text x="732.0" y="278.0" font-size="12" fill="#FF6A1A" text-anchor="start" font-weight="600" font-family="IBM Plex Mono,monospace">04</text>
+<text x="758.0" y="278.0" font-size="14.5" fill="#E8E6E1" text-anchor="start" font-weight="700">傾轉出鋼、留熱底</text>
+<text x="732.0" y="298.0" font-size="12" fill="#9AA0A6" text-anchor="start">向出鋼口側傾轉約 15–20°，</text>
+<text x="732.0" y="316.0" font-size="12" fill="#9AA0A6" text-anchor="start">鋼液流入鋼包，爐內留下熱底</text>
+</g>
+</svg></div></div>
+<p class="note">本站繪製之示意圖，簡化自一般廢鋼電爐的操作順序；各廠的裝料籃數、噴槍位置與出鋼方式不同。</p>
+
+<p>各段時間怎麼分配？下面是一篇研究論文描述的一座廢鋼電爐，合計剛好 60 分鐘。兩段熔化就占了 34 分鐘，超過一半。</p>
+<div class="bars" role="img" aria-label="一座廢鋼電爐的出鋼週期範例（分鐘）：第一次裝料 3、第一次熔化 20、追加裝料 3、第二次熔化 14、精煉 10、扒渣與出鋼 3、爐體傾轉 7，合計 60 分鐘">
+<p class="bt">一座廢鋼電爐的出鋼週期範例（分鐘）</p>
+<div class="bar" title="第一次裝料：3 分鐘"><span>第一次裝料</span><span class="tr"><span class="fi" style="display:block;width:15.0%"></span></span><span class="v">3</span></div><div class="bar hi" title="第一次熔化：20 分鐘"><span>第一次熔化</span><span class="tr"><span class="fi" style="display:block;width:100.0%"></span></span><span class="v">20</span></div><div class="bar" title="追加裝料：3 分鐘"><span>追加裝料</span><span class="tr"><span class="fi" style="display:block;width:15.0%"></span></span><span class="v">3</span></div><div class="bar hi" title="第二次熔化：14 分鐘"><span>第二次熔化</span><span class="tr"><span class="fi" style="display:block;width:70.0%"></span></span><span class="v">14</span></div><div class="bar" title="精煉：10 分鐘"><span>精煉</span><span class="tr"><span class="fi" style="display:block;width:50.0%;background:#8DB4D6"></span></span><span class="v">10</span></div><div class="bar" title="扒渣與出鋼：3 分鐘"><span>扒渣與出鋼</span><span class="tr"><span class="fi" style="display:block;width:15.0%"></span></span><span class="v">3</span></div><div class="bar" title="爐體傾轉：7 分鐘"><span>爐體傾轉</span><span class="tr"><span class="fi" style="display:block;width:35.0%"></span></span><span class="v">7</span></div>
+<p class="bn">合計 60 分鐘；橘色為熔化、藍色為精煉。資料來源：arXiv 論文〈Prediction of Final Phosphorus Content of Steel in a Scrap-Based Electric Arc Furnace〉描述的典型週期。各廠依爐型、料型與供電條件而異。</p>
+</div>
+<p>注意兩次裝料：這段時間爐子停電、開蓋，不但不熔鋼，每開一次蓋還要損失每噸 10 到 20 度電的熱量。爐況整備則通常是整個週期中最長的停電時間，過去約要 20 分鐘，新式電爐已縮短到 5 分鐘以內。這也是上一課提到的連續加料與廢鋼預熱，能夠提高產能的原因。</p>
+
+<h2>熔化：電弧加上化學能</h2>
+<p>熔化是一爐中最花時間的階段。主熱源是石墨電極與廢鋼之間的電弧，溫度超過 3,000°C；交流電爐用三根電極，直流電爐只用一根，電流從爐底導電爐床回流。化學能則來自兩個地方：爐壁上的氧燃燒嘴燒天然氣，補強爐內較冷的角落；吹氧槍把氧氣吹進鋼液，燒掉碳與矽、錳、鐵，同時放熱，也能幫忙切割還沒熔化的大塊廢鋼。</p>
+<div class="tbl"><table class="rt">
+<caption style="position:absolute;left:-9999px">電爐的兩種能量來源</caption>
+<thead><tr><th scope="col">能量</th><th scope="col">來源</th><th scope="col">作用與重點</th></tr></thead>
+<tbody>
+<tr><td><b>電能</b></td><td>石墨電極產生的電弧</td><td>熔化的主力。電極會氧化、折斷、磨損，每煉一噸鋼常見約消耗 1–2 公斤；直流電爐只有一根電極，消耗較低</td></tr>
+<tr><td><b>化學能</b></td><td>吹氧槍、氧燃燒嘴、噴吹碳粉</td><td>碳與氧反應可提供淨熱量的 30–40%；超音速氧氣噴嘴能穿過泡沫渣直達鋼液</td></tr>
+</tbody></table></div>
+<p>把電與化學能加總，現代電爐每噸鋼的總投入能量約相當於 550–700 度電；把廢鋼熔化並加熱到出鋼溫度，理論上只需約 350–370 度，熱效率大約五到六成，其餘隨廢氣、冷卻水與爐體散失。</p>
+<p>熔化的順序也有講究：</p>
+<ul>
+<li><b>穿井（bore-in）。</b> 剛通電時，電極向下鑽進廢鋼堆，周圍的廢鋼擋在電弧與爐壁之間。穿井完成後，爐壁仍被廢鋼保護，就可以改用高電壓、長電弧加快熔化。</li>
+<li><b>注意塌料。</b> 廢鋼在熔化過程中會崩塌，可能撞斷電極，所以上一課講的料籃分層很重要。</li>
+<li><b>爐壁暴露。</b> 最後一籃熔完時，爐壁直接面對電弧的強烈輻射，這時要靠泡沫渣把電弧「埋」起來，保護爐殼。</li>
+<li><b>熱底（hot heel）。</b> 出鋼時刻意在爐內留下幾噸鋼液與爐渣，下一爐的廢鋼一倒進來就開始被加熱，熔化更快，也有利於去磷。</li>
+</ul>
+
+<h2>泡沫渣：把電弧「包起來」</h2>
+<p>電弧如果直接暴露在爐內，大量熱量會輻射到爐壁和爐蓋，熱損失大，爐襯也撐不久。解決辦法是在鋼液上造一層厚厚的泡沫渣：把碳粉噴進爐渣，碳與渣中的氧化鐵反應生成一氧化碳氣泡，把爐渣撐成泡沫，電弧就被埋在裡面。同時吹氧，讓鋼液中的碳也反應成氣泡。化學反應產生的小氣泡比直接吹氣形成的泡沫更穩定。</p>
+<ul>
+<li><b>省電、護爐。</b> 文獻報告泡沫渣可省下約 3–10% 的能量，耐火材消耗可減少 25–63%，電弧也更穩定。</li>
+<li><b>提高收得率。</b> 墨西哥 IMEXSA 鋼廠 1995 年發表的案例中，這座以直接還原鐵（DRI）為主料的電爐導入泡沫渣後，渣中氧化鐵由 36–40% 降到 23–25%，更多鐵留在鋼液裡；耗電由每噸 730 度降到 640 度，電極消耗由 2.25 降到 1.81 公斤。</li>
+<li><b>連續進料更依賴它。</b> 連續進料電爐的電弧一直作用在液態鋼浴上，需要比料籃裝料更多的造泡沫渣材料。</li>
+</ul>
+
+<h2>精煉、扒渣與出鋼</h2>
+<p>廢鋼熔完後，操作人員量測鋼液溫度、取樣分析，決定還要吹多久的氧、送多少電。電爐裡是氧化環境：矽、鋁、錳等對氧親和力比碳強的元素，會先被氧化進入爐渣；磷則要靠鹼性高、氧化鐵多的爐渣，趁鋼液溫度還低時去除，溫度一高就會回到鋼液。爐渣以石灰造成鹼性渣，典型成分為氧化鈣 45–58%、氧化鐵 10–28%、氧化鎂 5–8%。不過，各種元素在爐內的去留並不相同：</p>
+<div class="tbl"><table class="rt">
+<caption style="position:absolute;left:-9999px">各元素在電爐與鋼包的處理</caption>
+<thead><tr><th scope="col">元素</th><th scope="col">電爐內（氧化環境）</th><th scope="col">出鋼後的鋼包</th></tr></thead>
+<tbody>
+<tr><td><b>碳</b></td><td>吹氧脫碳，同時放熱；脫碳產生的氣泡也能在約 10 分鐘內把氫從約 8 ppm 降到 2 ppm</td><td>依鋼種補碳微調</td></tr>
+<tr><td><b>磷</b></td><td>越早去除越好，熱底操作有利；一般可去除 20–50%，所以低磷鋼種要先挑低磷廢鋼；扒渣把含磷爐渣帶走，避免回磷</td><td>不再去磷，重點是防止出鋼時帶渣造成回磷</td></tr>
+<tr><td><b>硫</b></td><td>困難：硫在渣與鋼之間的分配比只有 3–5</td><td>主要脫硫的地方：在還原性爐渣下，分配比可達 20–100</td></tr>
+<tr><td><b>矽、錳、鋁</b></td><td>氧化進入爐渣；錳常降到約 0.06%</td><td>出鋼時依鋼種加入矽鐵、矽錳等合金調回</td></tr>
+<tr><td><b>氧</b></td><td>吹氧後鋼液含氧量高</td><td>以鋁、矽鐵、矽錳脫氧</td></tr>
+</tbody></table></div>
+<p>精煉完成後先扒渣：爐體向後傾，爐渣從爐門流出。接著出鋼：爐體向前傾，鋼液從出鋼口流進鋼包。許多現代電爐採用偏心爐底出鋼（EBT），出鋼口設在爐底偏心的位置，能減少爐渣與空氣中的氮混進鋼液。出鋼時要注意三件事：</p>
+<ul>
+<li><b>合金在出鋼時加入。</b> 依爐內分析結果，一邊出鋼一邊把脫氧劑與合金加進鋼包。</li>
+<li><b>爐子不會倒空。</b> 出鋼口封閉前會留下一部分鋼液，就是下一爐的熱底。</li>
+<li><b>溫度會掉。</b> 出鋼過程中鋼液溫度約降低 60°C，出鋼溫度要預留這段損失，鋼包也要事先預熱。</li>
+</ul>
+<h2>爐後：鋼包精煉</h2>
+<p>早期電爐要在爐內完成所有精煉，一爐動輒三小時以上。後來發展出鋼包冶金（ladle metallurgy），把精煉搬到鋼包裡進行，電爐就能專心「快速熔化」，這是電爐產能大幅提高的關鍵之一。鋼包精煉也是改變鋼液成分的最後機會，主要任務包括：</p>
+<ul>
+<li><b>調整溫度。</b> 鋼包爐有自己的電極，可以重新加熱，讓鋼液溫度適合連鑄。</li>
+<li><b>脫氧。</b> 先以矽錳、錳鐵、矽鐵部分脫氧，最後再用鋁做最終脫氧。</li>
+<li><b>脫硫與合金微調。</b> 在還原性爐渣下脫硫，並精準加入合金，把成分調到鋼種規格。</li>
+<li><b>提高潔淨度。</b> 底部吹氬攪拌，讓成分與溫度均勻，並讓夾雜物浮到渣中；特殊鋼還會再經真空脫氣。</li>
+</ul>
+<p>之後鋼包送到連鑄機澆鑄成鋼胚，進入軋延。</p>
+
+<h2>副產品：爐渣與集塵灰</h2>
+<ul>
+<li><b>爐渣。</b> 一座電爐每生產一噸鋼液，約產生 110 公斤爐渣，實際量依原料與操作而異。電爐渣的成分變動比高爐渣大，較難像高爐渣那樣直接用在水泥工業，多半經破碎、篩分等處理後作為道路與營建骨材，部分也可作水泥原料。</li>
+<li><b>集塵灰。</b> 爐內約 1,600°C 的高溫下，鋅、鉛、鎘等金屬會變成蒸氣，隨廢氣離開後冷卻凝結成細粉，被袋式集塵器收集，就是電爐集塵灰。每噸鋼約產生 10–20 公斤；廢鋼中的鍍鋅料越多，灰中的鋅也越多。美國環保署把電爐集塵灰列為有害廢棄物，鋼廠多委託業者以高溫製程回收其中的鋅。</li>
+</ul>
+
+<h2>歷史小註腳：從三小時到一小時</h2>
+<p>西門子（William Siemens）在 1878 至 1879 年間就取得電弧爐專利；1900 年，法國的埃魯（Paul Héroult）做出第一座商業上成功的煉鋼電弧爐。1907 年，美國紐約州雪城出現美國第一座商業電弧爐。早年的電爐規模小，一爐常要三小時以上，主要用來煉特殊鋼。</p>
+<p>此後的進步，幾乎都是在縮短出鋼週期：加大變壓器功率、吹氧與燒嘴補充化學能、泡沫渣保護爐壁、水冷爐壁延長爐襯壽命、把精煉移到鋼包，再到預熱與連續進料。今天最大的廢鋼電爐是日本東京製鐵的 420 噸直流電爐。巨大的瞬間用電也帶來電力品質的課題：熔化初期電流劇烈波動，曾對電網造成干擾，這也是穩定電弧的技術持續發展的原因之一。</p>
+
+<h2>對台灣鋼鐵業的意義</h2>
+<div class="bars" role="img" aria-label="每噸鋼的耗電：熔化理論最低值約 300 度、東和鋼鐵新電爐目標 300 度、東和現有電爐 390 度、國際典型值約 440 度">
+<p class="bt">每噸鋼耗電（度）</p>
+<div class="bar" title="熔化廢鋼的理論最低值：約 300 度／噸"><span>理論最低值</span><span class="tr"><span class="fi" style="display:block;width:68.2%;background:#3A3F46"></span></span><span class="v">約 300</span></div><div class="bar hi" title="東和鋼鐵現有電爐：390 度／噸"><span>東和現有電爐</span><span class="tr"><span class="fi" style="display:block;width:88.6%"></span></span><span class="v">390</span></div><div class="bar" title="東和鋼鐵新電爐目標：300 度／噸"><span>東和新爐目標</span><span class="tr"><span class="fi" style="display:block;width:68.2%;background:#8DB4D6"></span></span><span class="v">300</span></div><div class="bar" title="國際典型值：約 440 度／噸"><span>國際典型值</span><span class="tr"><span class="fi" style="display:block;width:100.0%"></span></span><span class="v">約 440</span></div>
+<p class="bn">東和數字為《數位時代》2023 年 7 月報導；理論最低值與國際典型值引自 ISPATGURU 與 Wikipedia。各廠耗電依料型、預熱與操作而異。</p>
+</div>
+<ul>
+<li><b>電爐是台灣鋼筋與型鋼的主力。</b> 豐興、威致、東和、燁聯等電爐廠以廢鋼為主原料，生產鋼筋、型鋼與不銹鋼。以東和鋼鐵為例，1977 年在高雄廠建立第一座電爐；2023 年報導指出，其 H 型鋼國內市占接近六成。</li>
+<li><b>電是最大的變數。</b> 東和估計公司約 75% 的碳排放來自用電，現有電爐每噸鋼耗電約 390 度。2023 年報導指出，東和規劃投資逾百億元汰換苗栗、桃園兩廠的舊電爐，新爐每噸鋼耗電可降到約 300 度，節電 20–30%；苗栗廠預計 2026 年、桃園廠 2030 年完成。</li>
+<li><b>跟著電價排班。</b> 2023 年 4 月高壓工業用電調漲 17%，當時報導指出，多數電爐廠預計夏季減少或停止白天生產，改在離峰時段煉鋼；還有大廠規劃從 5 月中到 10 月中完全不在白天生產。出鋼週期越短、越能把熔化集中在離峰時段，電費就越省。</li>
+<li><b>減碳的捷徑，也有自己的課題。</b> 電爐每噸鋼排碳最低可到約 0.6 噸，遠低於高爐轉爐的 2.9 噸，但前提是電夠乾淨。用電來源、廢鋼品質與爐渣、集塵灰的去化，都是電爐廠接下來要面對的題目。東和表示爐渣與集塵灰已回收作為道路填料與水泥原料，目標是零廢棄。</li>
+</ul>
+
+<h2>延伸閱讀</h2>
+<ul>
+<li><a href="2026-10-scrap-prep.html">廢鋼進爐之前：從廢料場到電爐料籃的檢查、破碎、分選與配料</a></li>
+<li><a href="2026-10-steel-scrap.html">廢鋼從哪裡來：全球規模、三種來源與處理流程</a></li>
+<li><a href="2026-10-port-to-blast-furnace.html">進爐之前：鐵礦、焦煤與石灰從港口到高爐的處理流程</a></li>
+<li><a href="2026-10-eu-green-steel.html">歐洲綠鋼進度：氫氣退潮、電爐接棒</a></li>
+</ul>
+
+<h2>資料來源</h2>
+<ul class="sources">
+<li><a href="https://www.ispatguru.com/?p=3072">Understanding Electric Arc Furnace Steel Making Operations</a>（ISPATGURU）</li>
+<li><a href="https://abmproceedings.com.br/en/article/heat-size-upgrade-in-kroman-elik-eaf">Heat Size Upgrade in Kroman Çelik EAF</a>（ABM Proceedings）</li>
+<li><a href="https://www.ispatguru.com/?p=3075">Design Features of an AC Electric Arc Furnace</a>（ISPATGURU）</li>
+<li><a href="https://en.wikipedia.org/wiki/Electric_arc_furnace">Electric arc furnace</a>、<a href="https://en.wikipedia.org/wiki/Paul_H%C3%A9roult">Paul Héroult</a>（Wikipedia）</li>
+<li><a href="https://arxiv.org/pdf/2410.19924">Prediction of Final Phosphorus Content of Steel in a Scrap-Based Electric Arc Furnace Using Artificial Neural Networks</a>（arXiv）</li>
+<li><a href="https://www.ispatguru.com/foaming-of-slag-in-electric-arc-furnace/">Foaming of Slag in Electric Arc Furnace</a>（ISPATGURU）</li>
+<li><a href="https://ipn.elsevierpure.com/en/publications/the-slag-foaming-practice-in-eaf-and-its-influence-on-the-steelma">The Slag Foaming Practice in EAF and Its Influence on the Steelmaking Shop Productivity</a>（ISIJ International，1995）</li>
+<li><a href="https://abmproceedings.com.br/en/article/download-pdf/utilization-of-process-feedback-for-optimization-of-injection-technologies-in-the-electric-arc-furnace">Utilization of process feedback for optimization of injection technologies in the electric arc furnace</a>（ABM Proceedings）</li>
+<li><a href="https://innovation-centre-for-industrial-transformation.ec.europa.eu/innovative-techniques/enhanced-eaf-steelmaking-through-continuous-charging-scrap-preheating-and">Enhanced EAF steelmaking through continuous charging, scrap preheating and electromagnetic stirring</a>（歐盟工業轉型創新中心）</li>
+<li><a href="https://www.ispatguru.com/ladle-metallurgy/">Ladle Metallurgy</a>（ISPATGURU）</li>
+<li><a href="https://www.gem.wiki/Ladle_Metallurgy_Furnace">Ladle Metallurgy Furnace</a>（Global Energy Monitor）</li>
+<li><a href="https://taylorandfrancis.com/knowledge/Engineering_and_technology/Industrial_engineering_%26_manufacturing/Ladle">Ladle</a>（Taylor &amp; Francis，引用 Metallurgy for Physicists and Engineers）</li>
+<li><a href="https://www.osti.gov/biblio/594449">Processing electric arc furnace dust into saleable chemical products</a>（美國能源部 OSTI）</li>
+<li><a href="https://cris.cobiss.net/ecris/si/en/project/20985">Upscaling of the two-step dust recycling process for Electric Arc Furnace Dust</a>（COBISS）</li>
+<li><a href="https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6438154">US 6438154</a>（美國專利說明書，電爐爐渣與集塵灰量級的背景描述）</li>
+<li><a href="https://www.bnext.com.tw/article/75895/thsvc-electricity-carbon-reduction">東和鋼鐵節電減碳相關報導（2023-07-04）</a>（數位時代）</li>
+<li><a href="https://ctee.com.tw/people/interview/844377.html">東和鋼鐵汰換電爐相關專訪（2023-04-17）</a>（工商時報）</li>
+<li><a href="https://fastmarkets.com/insights/power-price-taiwan-steel-mills-summer-closures">Power price hike forces Taiwan steel mills to plan sharp cut in summer production（2023-04-25）</a>（Fastmarkets）</li>
+</ul>
+<p style="font-size:13px;color:#9AA0A6;margin-top:32px">內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</p>
+</article>
+<!-- article-qr -->
+<aside aria-label="本文連結 QR Code" style="max-width:760px;box-sizing:border-box;margin-top:48px;border:1px solid #2A2F35;background:#15181B;padding:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+<img src="../assets/qr/2026-10-eaf-operation.png" alt="本文連結 QR Code" width="132" height="132" loading="lazy" style="display:block;width:132px;height:132px;background:#FFFFFF;flex:none">
+<div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 220px">
+<p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;color:#FF6A1A">SHARE</p>
+<p style="margin:0;font-size:17px;font-weight:900;color:#E8E6E1">掃描 QR Code 開啟本文</p>
+<p style="margin:0;font-size:13px;line-height:1.7;color:#9AA0A6;word-break:break-all">https://steeltrending.github.io/articles/2026-10-eaf-operation.html</p>
+<div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:4px"><a href="../assets/qr/2026-10-eaf-operation.png" download="steeltrending-2026-10-eaf-operation-qr.png" style="font-size:14px;color:#FF8A47;text-decoration:none">下載 QR Code ↓</a><button type="button" data-url="https://steeltrending.github.io/articles/2026-10-eaf-operation.html" onclick="var b=this,u=this.dataset.url;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).catch(function(){var t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}).then(function(){b.textContent='已複製本文網址';setTimeout(function(){b.textContent='分享本文'},2000)})" style="font:inherit;font-size:14px;color:#FF8A47;background:none;border:0;padding:0;cursor:pointer">分享本文</button></div>
+</div>
+</aside>
+<!-- /article-qr -->
+
+<p style="margin-top:48px"><a href="../#topics" style="display:inline-flex;align-items:center;border:1px solid #4A5058;color:#E8E6E1;text-decoration:none;padding:12px 20px">← 回到鋼鐵小學堂</a></p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending　·　<a href="../sitemap.html" style="color:#C9CDD2">網站導覽</a></span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+<script src="../assets/hover.js" defer></script>
+<script src="../assets/tts.js" defer></script>
+</body>
+</html>
