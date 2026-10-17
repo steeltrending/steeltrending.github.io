@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>高爐怎麼煉鐵：從爐頂裝料、熱風燃燒到出鐵的連續作業 · 鋼鐵潮流 Steel Trending</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鋼鐵小學堂：高爐是一年到頭不停的連續反應器。從爐頂分層裝料、爐身間接還原、軟熔帶、風口迴旋區燃燒，到爐缸出鐵出渣，看懂高爐構造、熱風爐、造渣與高爐煤氣，以及台灣高爐的現況與減碳課題。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+article{max-width:760px}
+article h2{margin:56px 0 14px;font-size:26px;font-weight:900;line-height:1.35;padding-top:20px;border-top:1px solid #2A2F35}
+article p{margin:0 0 16px;font-size:17px;line-height:1.9;color:#D5D7DA}
+article p.lead{font-size:19px;color:#E8E6E1}
+article ul{margin:0 0 20px;padding-left:1.2em}
+article li{margin:0 0 12px;font-size:16px;line-height:1.85;color:#C9CDD2}
+article li::marker{color:#FF6A1A}
+article li b{color:#E8E6E1}
+article .watch li::marker{content:'□  ';color:#9AA0A6}
+.tbl{overflow-x:auto;border:1px solid #2A2F35;margin:8px 0 24px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th,td{padding:12px 14px;border-bottom:1px solid #22262B;text-align:left;vertical-align:top}
+th{background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody th[scope=row]{width:9em;background:#15181B;font-size:13px;letter-spacing:.04em;white-space:nowrap}
+td.num{font-family:'IBM Plex Mono',monospace;white-space:nowrap;color:#E8E6E1}
+figure{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 12px;font-size:13px;line-height:1.7;color:#C9CDD2;border-top:1px solid #2A2F35}
+figcaption small{display:block;margin-top:2px;font-size:12px;color:#9AA0A6}
+.tlfig{border:1px solid #2A2F35;background:#121417;padding:24px 16px 4px;margin:8px 0 24px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.tl::before{content:'';position:absolute;left:6%;right:6%;top:31px;height:2px;background:linear-gradient(90deg,#FF6A1A 0,#FF6A1A 84%,#3A3F46 84%)}
+.tl .ev{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px;position:relative}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9CDD2;height:20px;white-space:nowrap}
+.tl .dot{width:14px;height:14px;border-radius:50%;background:#FF6A1A;border:3px solid #121417;box-sizing:content-box;margin:2px 0 10px;position:relative;z-index:1}
+.tl .t{font-size:13px;line-height:1.6;color:#C9CDD2}
+.tl .x .dot{background:#8DB4D6}.tl .x .d{color:#8DB4D6}
+.tl .k .dot{width:20px;height:20px;margin:-1px 0 7px;box-shadow:0 0 0 4px rgba(255,106,26,.25)}.tl .k .t{color:#E8E6E1;font-weight:700}.tl .k .d{color:#FF8A47}
+.tl .f .dot{background:#121417;border:2px dashed #9AA0A6;width:14px;height:14px}.tl .f .d,.tl .f .t{color:#9AA0A6}
+.tlkey{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;padding:18px 0 14px !important;border-top:0 !important;font-size:12px !important;color:#9AA0A6 !important}
+.tlkey i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.tlkey .k1{background:#FF6A1A}.tlkey .k2{background:#8DB4D6}.tlkey .k3{border:2px dashed #9AA0A6;width:8px;height:8px}
+@media (max-width:720px){
+.tlfig{padding:20px 16px 4px}
+.tl{grid-template-columns:1fr}
+.tl::before{left:9px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,#FF6A1A 0,#FF6A1A 86%,#3A3F46 86%)}
+.tl .ev{display:grid;grid-template-columns:20px 92px 1fr;align-items:start;text-align:left;padding:0 0 14px;gap:0 10px}
+.tl .dot{grid-column:1;grid-row:1;margin:3px 0 0 0;justify-self:center}
+.tl .k .dot{margin:0}
+.tl .d{grid-column:2;grid-row:1;height:auto;padding-top:2px}
+.tl .t{grid-column:3;grid-row:1}
+}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;margin:8px 0 24px}
+.fact{background:#121417;padding:18px 16px;display:flex;gap:12px;align-items:flex-start}
+.fact .ic{flex:none;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid #3A3F46;background:#181B1F;color:#FF6A1A}
+.fact .fl{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#9AA0A6;margin-bottom:4px}
+.fact .fv{display:block;font-size:16px;font-weight:700;color:#E8E6E1;line-height:1.5}
+.fact .fs{display:block;font-size:13px;color:#9AA0A6;line-height:1.6;margin-top:2px}
+.pies{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 8px}
+.pie{margin:0;border:1px solid #2A2F35;background:#121417;padding:16px}
+.pie .ph{font-size:14px;font-weight:700;color:#E8E6E1;margin-bottom:10px;padding:0;border:0}
+.pw{display:flex;align-items:center;gap:16px}
+.pw svg{width:150px;height:150px;flex:none;overflow:visible}
+.pw path{cursor:default;transition:opacity .15s}
+.pw svg:hover path{opacity:.45}.pw svg path:hover{opacity:1}
+.c1{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;fill:#E8E6E1}
+.c2{font-size:12px;fill:#9AA0A6}
+.lg{list-style:none;margin:0;padding:0;flex:1}
+.lg li{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:14px;color:#C9CDD2}
+.lg li::marker{content:''}
+.lg i{width:10px;height:10px;border-radius:2px;flex:none}
+.lg .ln{flex:1}.lg .lv{font-family:'IBM Plex Mono',monospace;color:#E8E6E1}
+.note{font-size:13px !important;color:#9AA0A6 !important;margin:6px 0 18px !important}
+.tip{position:fixed;z-index:10;pointer-events:none;background:#1C2024;border:1px solid #3A3F46;color:#E8E6E1;font-size:13px;padding:6px 10px;white-space:nowrap}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}.pies{grid-template-columns:1fr}}
+@media (max-width:420px){.facts{grid-template-columns:1fr}}
+.bars{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.bars .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.bar{display:grid;grid-template-columns:7.5em 1fr 4.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.bar .tr{height:14px;background:#1C2024;border-radius:0 4px 4px 0}
+.bar .fi{height:14px;background:#8A8F96;border-radius:0 4px 4px 0}
+.bar.hi .fi{background:#FF6A1A}.bar.hi{color:#E8E6E1;font-weight:700}
+.bar .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1}
+.bars .bn{font-size:12px;color:#9AA0A6;margin:8px 0 0}
+.flow{list-style:none;margin:8px 0 24px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;counter-reset:st}
+.flow li{background:#121417;padding:14px 12px;margin:0;counter-increment:st;font-size:13px;line-height:1.6;color:#9AA0A6}
+.flow li::marker{content:''}
+.flow li b{display:block;font-size:15px;color:#E8E6E1;margin-bottom:2px}
+.flow li b::before{content:counter(st,decimal-leading-zero) '  ';font-family:'IBM Plex Mono',monospace;font-size:12px;color:#FF6A1A;font-weight:500}
+.flow li.mine{border-top:2px solid #FF6A1A}.flow li.proc{border-top:2px solid #8DB4D6}.flow li.log{border-top:2px solid #9AA0A6}
+.flowkey{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#9AA0A6;margin:-14px 0 24px}
+.flowkey i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:6px}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mapfig{margin:8px 0 8px;border:1px solid #2A2F35;background:#121417;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mapfig .mi{min-width:680px}
+.mapfig svg path[stroke-opacity]:hover{stroke-opacity:1;filter:drop-shadow(0 0 3px rgba(255,255,255,.35))}
+.mapkey{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:#C9CDD2;margin:10px 0 6px}
+.mapkey i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.mapkey .ds{background:none;border-top:2px dashed #FF6A1A;height:0}
+.mapkey .ck{width:10px;height:10px;border-radius:50%;border:1.5px solid #E8E6E1;background:none}
+.rt td:first-child{white-space:nowrap}
+.bars2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 24px}
+.bars2 .bars{margin:0}
+@media (max-width:720px){.bars2{grid-template-columns:1fr}}
+.rng{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.rng .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.rng .rw{display:grid;grid-template-columns:8em 1fr 5.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.rng .tr{position:relative;height:14px;background:#1C2024;border-radius:2px}
+.rng .fi{position:absolute;top:0;height:14px;border-radius:2px}
+.rng .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1;white-space:nowrap}
+.rng .ax{display:grid;grid-template-columns:8em 1fr 5.2em;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9AA0A6}
+.rng .ax .sc{position:relative;height:14px}
+.rng .ax .sc span{position:absolute;transform:translateX(-50%)}
+.rng .bn{font-size:12px;color:#9AA0A6;margin:10px 0 0}
+@media (max-width:560px){.rng .rw,.rng .ax{grid-template-columns:6.2em 1fr 4.6em}}
+.flow.f5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:900px){.flow.f5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sources li{font-size:14px}
+@media (max-width:640px){.wrap{padding:0 16px}article p{font-size:16px}article p.lead{font-size:17px}}
+.bffig{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+.bffig figcaption{border-top:1px solid #2A2F35}
+.bar .tr,.bar .fi{display:block}
+.flow li.z1{border-top:2px solid #9AA0A6}.flow li.z2{border-top:2px solid #FF6A1A}.flow li.z3{border-top:2px solid #8DB4D6}
+.fsq{max-width:520px;margin-left:auto;margin-right:auto}
+.tbl.nar tbody th[scope=row]{width:1%;padding-right:14px}
+.tbl.nar thead th:first-child{white-space:nowrap;width:1%}
+.tbl.nar table{min-width:520px}
+.rng .rw,.rng .ax{grid-template-columns:8em 1fr 7.6em}
+@media (max-width:560px){.rng .rw,.rng .ax{grid-template-columns:6.4em 1fr 7.2em}.rng .rw,.rng .rw .v{font-size:13px}}
+@media (max-width:400px){.rng .rw,.rng .ax{grid-template-columns:5.4em 1fr 6.4em;gap:8px}}
+</style>
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<script>window.ARTICLE_CATEGORY = 'steel101';</script>
+<script src="../assets/article-nav.js" defer></script>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="../assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="../#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="../stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<style>.nvdd{position:relative}.nvdd summary{list-style:none;cursor:pointer;color:#C9CDD2;padding:12px;display:flex;align-items:center;gap:6px;font-size:15px;user-select:none}.nvdd summary::-webkit-details-marker{display:none}.nvdd summary span{font-size:11px;color:#FF6A1A;transition:transform .2s}.nvdd[open] summary span{transform:rotate(180deg)}.nvdd summary:hover,.nvdd[open] summary,.nvdd.cur summary{color:#FF8A47}.nvdd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}.nvdd-m{position:absolute;top:100%;left:0;z-index:50;min-width:180px;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45);padding:6px 0;display:flex;flex-direction:column}.nvdd-m a{padding:12px 16px;color:#E8E6E1;text-decoration:none;font-size:15px;white-space:nowrap}.nvdd-m a:hover{background:#1C2024;color:#FF8A47}.nvdd-m a[aria-current]{color:#FF8A47}</style><details class="nvdd"><summary>鋼鐵數字<span aria-hidden="true">▾</span></summary><div class="nvdd-m"><a href="../worldsteel.html">世界鋼鐵數據</a><a href="../twmap.html">台灣鋼鐵地圖</a><a href="../trends.html">關鍵字熱度</a></div></details>
+<a href="../archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="../#topics" style="text-decoration:none">關注主題</a> <span aria-hidden="true">›</span> 鋼鐵小學堂 <span aria-hidden="true">›</span> 專題</nav>
+
+<article>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">STEEL 101 · BLAST FURNACE · 2026.10</p>
+<h1 style="margin:12px 0 10px;font-size:clamp(30px,5vw,46px);font-weight:900;line-height:1.25">高爐怎麼煉鐵：從爐頂裝料、熱風燃燒到出鐵的連續作業</h1>
+<p style="font-size:14px;color:#9AA0A6">鋼鐵潮流工作室 · 發布 2026.10.17</p>
+
+<figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/DSC06453_Blast_Furnace_4%2C_voestalpine_Leoben-Donawitz%2C_2026.jpg/960px-DSC06453_Blast_Furnace_4%2C_voestalpine_Leoben-Donawitz%2C_2026.jpg" alt="山谷間的鋼廠，一座鐵褐色的高爐與升降塔架，右側是幾座圓筒形的熱風爐與一根高煙囪，背後是森林覆蓋的山坡" width="960" height="720"><figcaption>奧地利 voestalpine Donawitz 鋼廠的 4 號高爐與熱風爐。高爐是一座高數十公尺的直立式豎爐，熱風爐就設在旁邊，把空氣加熱後送進爐子。<small>照片：Aciarium，2026 年攝，<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:DSC06453_Blast_Furnace_4,_voestalpine_Leoben-Donawitz,_2026.jpg">Wikimedia Commons</a></small></figcaption></figure>
+
+<h2>本期重點</h2>
+<p class="lead">上一課〈<a href="2026-10-port-to-blast-furnace.html">進爐之前</a>〉走到燒結礦、球團、焦炭與石灰石篩好、秤好，從爐頂分層裝進去。這一課接著看爐子裡面發生什麼事。電爐是一爐一爐的批次作業；高爐則是一年到頭不停的連續作業：原料從頂端一批批裝入，熱風從底部吹進去，鐵水與爐渣定時從爐底放出來。</p>
+<ul>
+<li><b>高爐的任務是「還原」。</b> 鐵礦裡的鐵以氧化物（Fe₂O₃、Fe₃O₄）的形式存在，高爐用一氧化碳與焦炭把氧拿走，得到含碳約 4–4.5% 的液態鐵，也就是鐵水。</li>
+<li><b>焦炭一身三職。</b> 燃料、還原劑，也是爐內的骨架：礦石在高溫下軟化熔融，只有焦炭保持固態，讓煤氣能穿過料柱往上走。</li>
+<li><b>逆流是設計的核心。</b> 固體由上往下，煤氣由下往上，熱與化學能才能被充分利用。原料從爐頂走到爐缸要好幾個小時，煤氣由下到上只要幾秒鐘。</li>
+<li><b>高爐不能隨便停。</b> 一代爐役可長達十幾到二十年；若意外長時間停風，爐缸裡的鐵水與爐渣凝固，復爐非常困難，所以操作講究一個「穩」字。</li>
+</ul>
+<div class="facts">
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><span class="fl">一代爐役</span><span class="fv">約 15–20 年</span><span class="fs">兩次大修之間幾乎不停爐，爐缸耐火材決定壽命</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h12"/><path d="M13 8l4 4-4 4"/><path d="M20 5v14"/></svg></span><div><span class="fl">熱風溫度</span><span class="fv">約 1,200°C</span><span class="fs">熱風爐把空氣加熱後，以數個大氣壓吹進風口</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3 0-6 1-9z"/></svg></span><div><span class="fl">風口前火焰溫度</span><span class="fv">約 2,000–2,300°C</span><span class="fs">焦炭與噴吹煤粉在迴旋區燃燒</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></span><div><span class="fl">鐵水出爐</span><span class="fv">約 1,450–1,500°C</span><span class="fs">含碳約 4–4.5%，還要送轉爐吹氧去碳才成為鋼</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 21h14"/><path d="M4 8h16"/><path d="M4 8l-2 6a3 3 0 0 0 4 0zM20 8l-2 6a3 3 0 0 0 4 0z"/></svg></span><div><span class="fl">每噸鐵水燃料</span><span class="fv">約 500 公斤</span><span class="fs">焦炭加噴吹煤粉合計；大型高爐焦比已低於 400 公斤</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 20V10l6-6 6 6v10"/><path d="M10 20v-5h4v5"/></svg></span><div><span class="fl">大型高爐</span><span class="fv">日產萬噸級</span><span class="fs">內容積 4,000–5,000 立方公尺以上</span></div></div>
+</div>
+<p class="note">以上為典型範圍，實際數值依各廠原料、爐容與操作而異。</p>
+
+<h2>高爐長什麼樣子</h2>
+<figure class="bffig"><div class="mapfig" style="margin:0;border:0"><div class="mi" style="min-width:720px">
+<svg viewBox="0 0 960 620" role="img" aria-label="高爐剖面示意圖：爐頂裝料、爐喉、爐身、爐腰、爐腹、爐缸，軟熔帶、風口與迴旋區、爐渣與鐵水、出鐵口，以及左側的熱風爐與煤氣上升管" style="display:block;width:100%;height:auto;font-family:'Noto Sans TC','PingFang TC',sans-serif">
+<defs>
+<clipPath id="bfIn"><path d="M325,80 L475,80 L550,300 L520,410 L520,545 L280,545 L280,410 L250,300 Z"/></clipPath>
+<clipPath id="bfAbove"><path d="M230,60 L570,60 L570,342 L542,342 L400,182 L258,342 L230,342 Z"/></clipPath>
+<linearGradient id="bfHm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB07F"/><stop offset="1" stop-color="#FF6A1A"/></linearGradient>
+<linearGradient id="bfCz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C8642A"/><stop offset="1" stop-color="#FF8A47"/></linearGradient>
+<radialGradient id="bfRw"><stop offset="0" stop-color="#FFF3C4"/><stop offset=".6" stop-color="#FFC24A"/><stop offset="1" stop-color="#FF6A1A" stop-opacity="0"/></radialGradient>
+<marker id="bfAr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8DB4D6"/></marker>
+<marker id="bfAh" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FF8A47"/></marker>
+</defs>
+
+<!-- 爐殼與耐火材 -->
+<path d="M310,72 L490,72 L568,300 L538,410 L538,560 L262,560 L262,410 L232,300 Z" fill="#3A3F46" stroke="#6A7078" stroke-width="2"/>
+
+<!-- 爐內底色：焦炭 -->
+<g clip-path="url(#bfIn)">
+<rect x="240" y="70" width="320" height="490" fill="#26221D"/>
+<!-- 礦焦分層（軟熔帶以上） -->
+<g clip-path="url(#bfAbove)">
+<rect x="240" y="80" width="320" height="26" fill="#9A4E26"/><rect x="240" y="106" width="320" height="18" fill="#2E2A24"/>
+<rect x="240" y="124" width="320" height="26" fill="#9A4E26"/><rect x="240" y="150" width="320" height="18" fill="#2E2A24"/>
+<rect x="240" y="168" width="320" height="26" fill="#9A4E26"/><rect x="240" y="194" width="320" height="18" fill="#2E2A24"/>
+<rect x="240" y="212" width="320" height="26" fill="#9A4E26"/><rect x="240" y="238" width="320" height="18" fill="#2E2A24"/>
+<rect x="240" y="256" width="320" height="26" fill="#9A4E26"/><rect x="240" y="282" width="320" height="18" fill="#2E2A24"/>
+<rect x="240" y="300" width="320" height="26" fill="#9A4E26"/><rect x="240" y="326" width="320" height="18" fill="#2E2A24"/>
+</g>
+<!-- 軟熔帶 -->
+<path d="M400,182 L258,342 L272,394 L400,236 L528,394 L542,342 Z" fill="url(#bfCz)" opacity=".92"/>
+<!-- 滴落帶：焦塊與鐵滴 -->
+<g fill="#3E372E">
+<rect x="330" y="300" width="14" height="10" rx="3"/><rect x="380" y="290" width="16" height="10" rx="3"/><rect x="430" y="305" width="14" height="10" rx="3"/>
+<rect x="300" y="360" width="14" height="10" rx="3"/><rect x="350" y="340" width="16" height="10" rx="3"/><rect x="455" y="345" width="14" height="10" rx="3"/>
+<rect x="485" y="375" width="14" height="10" rx="3"/><rect x="320" y="395" width="16" height="10" rx="3"/><rect x="410" y="370" width="14" height="10" rx="3"/>
+</g>
+<g fill="#FF8A47"><ellipse cx="362" cy="318" rx="3" ry="5"/><ellipse cx="418" cy="334" rx="3" ry="5"/><ellipse cx="338" cy="378" rx="3" ry="5"/><ellipse cx="470" cy="398" rx="3" ry="5"/><ellipse cx="395" cy="410" rx="3" ry="5"/></g>
+<!-- 死料柱 -->
+<path d="M300,545 L400,432 L500,545 Z" fill="#3E372E"/>
+<!-- 爐渣與鐵水 -->
+<rect x="270" y="458" width="260" height="24" fill="#C9A15A" opacity=".85"/>
+<rect x="270" y="482" width="260" height="70" fill="url(#bfHm)" opacity=".9"/>
+<!-- 迴旋區 -->
+<ellipse cx="304" cy="420" rx="30" ry="15" fill="url(#bfRw)"/><ellipse cx="496" cy="420" rx="30" ry="15" fill="url(#bfRw)"/>
+<!-- 煤氣上升 -->
+<g stroke="#8DB4D6" stroke-width="2" fill="none" marker-end="url(#bfAr)" opacity=".9">
+<path d="M330,410 L330,350"/><path d="M470,410 L470,350"/><path d="M400,300 L400,250"/>
+<path d="M360,160 L360,110"/><path d="M440,160 L440,110"/>
+</g>
+</g>
+
+<!-- 溫度標籤 -->
+<g font-family="'IBM Plex Mono',monospace" font-size="11" fill="#E8E6E1" text-anchor="middle">
+<rect x="326" y="88" width="64" height="16" fill="#0F1113" opacity=".75"/><text x="358" y="100">~200°C</text>
+<rect x="364" y="198" width="72" height="16" fill="#0F1113" opacity=".75"/><text x="400" y="210">~1,200°C</text>
+<rect x="364" y="270" width="72" height="16" fill="#0F1113" opacity=".75"/><text x="400" y="282">~1,500°C</text>
+<rect x="268" y="433" width="72" height="16" fill="#0F1113" opacity=".75"/><text x="304" y="445">~2,200°C</text>
+</g>
+
+<!-- 爐頂：受料斗、溜槽、輸送帶 -->
+<path d="M372,14 L428,14 L414,40 L386,40 Z" fill="#2A2F35" stroke="#6A7078"/>
+<rect x="345" y="40" width="110" height="34" fill="#2A2F35" stroke="#6A7078"/>
+<path d="M400,58 L436,98" stroke="#C9CDD2" stroke-width="5" stroke-linecap="round"/>
+<path d="M430,30 L640,18" stroke="#9AA0A6" stroke-width="4"/>
+
+<!-- 煤氣上升管 -->
+<path d="M360,42 L330,18 L180,18" stroke="#8DB4D6" stroke-width="7" fill="none" opacity=".55"/>
+<path d="M440,42 L430,30" stroke="#8DB4D6" stroke-width="7" opacity=".55"/>
+
+<!-- 熱風爐 -->
+<g fill="#2A2F35" stroke="#6A7078" stroke-width="1.5">
+<path d="M52,410 L52,262 a18,18 0 0 1 36,0 L88,410 Z"/>
+<path d="M100,410 L100,262 a18,18 0 0 1 36,0 L136,410 Z"/>
+<path d="M148,410 L148,262 a18,18 0 0 1 36,0 L184,410 Z"/>
+</g>
+<g stroke="#4A5058" stroke-width="1"><path d="M58,290 h24 M58,305 h24 M58,320 h24 M58,335 h24 M58,350 h24"/><path d="M106,290 h24 M106,305 h24 M106,320 h24 M106,335 h24 M106,350 h24"/><path d="M154,290 h24 M154,305 h24 M154,320 h24 M154,335 h24 M154,350 h24"/></g>
+<!-- 熱風主管與圍管 -->
+<path d="M118,248 L118,236 L214,236 L214,420" stroke="#FF8A47" stroke-width="5" fill="none"/>
+<circle cx="214" cy="420" r="11" fill="#0F1113" stroke="#FF8A47" stroke-width="4"/>
+<circle cx="586" cy="420" r="11" fill="#0F1113" stroke="#FF8A47" stroke-width="4"/>
+<!-- 風口 -->
+<rect x="225" y="415" width="56" height="10" fill="#8A8F96"/><rect x="519" y="415" width="56" height="10" fill="#8A8F96"/>
+<path d="M232,420 L268,420" stroke="#FF8A47" stroke-width="2" marker-end="url(#bfAh)"/>
+<path d="M568,420 L532,420" stroke="#FF8A47" stroke-width="2" marker-end="url(#bfAh)"/>
+
+<!-- 出鐵口與鐵水溝 -->
+<path d="M520,538 L560,548 L648,580" stroke="#FF6A1A" stroke-width="5" fill="none" stroke-linecap="round"/>
+<rect x="640" y="578" width="110" height="24" rx="12" fill="#2A2F35" stroke="#6A7078"/>
+<circle cx="662" cy="608" r="6" fill="#4A5058"/><circle cx="728" cy="608" r="6" fill="#4A5058"/>
+
+<!-- 右側標籤 -->
+<g stroke="#6A7078" stroke-width="1" fill="none">
+<path d="M478,86 L600,86"/><path d="M515,190 L600,160"/><path d="M482,300 L600,246"/><path d="M552,304 L600,304"/>
+<path d="M534,372 L600,362"/><path d="M500,420 L540,436 L600,436"/><path d="M505,470 L600,486"/><path d="M470,520 L600,532"/>
+</g>
+<g font-size="14" font-weight="700" fill="#E8E6E1">
+<text x="608" y="84">爐頂與爐喉</text><text x="608" y="158">爐身</text><text x="608" y="244">軟熔帶</text><text x="608" y="302">爐腰</text>
+<text x="608" y="360">爐腹</text><text x="608" y="434">風口與迴旋區</text><text x="608" y="484">爐缸：爐渣</text><text x="608" y="530">鐵水與死料柱</text>
+</g>
+<g font-size="12" fill="#9AA0A6">
+<text x="608" y="101">旋轉溜槽把礦石、焦炭交替分層裝入</text><text x="608" y="175">煤氣預熱原料，一氧化碳間接還原</text>
+<text x="608" y="261">礦石軟化熔融，透氣性最差的一層</text><text x="608" y="319">爐子最寬的部位</text>
+<text x="608" y="377">向下收窄，配合爐料熔化縮小</text><text x="608" y="451">熱風吹入，焦炭與煤粉燃燒</text>
+<text x="608" y="501">密度較小，浮在鐵水上</text><text x="608" y="547">焦炭柱泡在爐缸裡，鐵水定時放出</text>
+</g>
+<!-- 左側與底部標籤 -->
+<g font-size="13" font-weight="700" fill="#E8E6E1"><text x="40" y="12" dy="8">煤氣上升管</text><text x="40" y="436">熱風爐</text><text x="166" y="226" text-anchor="middle">熱風主管</text><text x="762" y="596">魚雷車</text><text x="530" y="48">爐頂輸送帶</text></g>
+<g font-size="12" fill="#9AA0A6"><text x="40" y="38">→ 除塵、TRT 發電、廠內燃料</text><text x="40" y="453">3–4 座輪流蓄熱、送風</text><text x="214" y="456" text-anchor="middle">圍管</text><text x="560" y="574">出鐵口</text></g>
+</svg>
+</div></div>
+<figcaption>本站繪製之剖面示意圖，比例簡化；各廠高爐內型、風口數量與出鐵口配置不同，軟熔帶的形狀與位置也隨爐況改變。圖中溫度為約略值。手機上可以左右滑動看全圖。</figcaption>
+</figure>
+<div class="mapkey"><span><i style="background:#9A4E26;height:10px;width:14px"></i>礦石層</span><span><i style="background:#2E2A24;height:10px;width:14px;border:1px solid #4A5058"></i>焦炭層</span><span><i style="background:#FF8A47;height:10px;width:14px"></i>軟熔帶、鐵水</span><span><i style="background:#C9A15A;height:10px;width:14px"></i>爐渣</span><span><i style="background:#FF8A47"></i>熱風</span><span><i style="background:#8DB4D6"></i>煤氣</span></div>
+<p>高爐是一座高數十公尺、內襯耐火材的直立式豎爐，形狀像兩個圓錐底對底接在一起：中間最寬，上下兩端收窄。這個形狀不是隨便決定的，爐料往下走時受熱膨脹，到了下段又熔化縮小，爐壁的斜度就是配合爐料體積的變化。</p>
+<ul>
+<li><b>爐頂與爐喉。</b> 現代大型高爐多採無鐘爐頂，用一支可旋轉、可改變角度的溜槽，把礦石與焦炭分層鋪進爐內，控制料面形狀與煤氣分布。Paul Wurth 公司的無鐘爐頂自 1972 年首度成功應用於工業生產，後來成為大型高爐的主流。</li>
+<li><b>爐身。</b> 往下逐漸變寬。爐料在這裡被上升的煤氣烘乾、預熱，並開始被一氧化碳還原。</li>
+<li><b>爐腰與爐腹。</b> 爐腰是最寬處；爐腹向下收窄，因為礦石在這裡熔化，體積變小。</li>
+<li><b>爐缸。</b> 爐子最底部，積存鐵水與爐渣。爐缸的耐火材侵蝕是決定爐役長短的關鍵，所以爐缸溫度是監控重點。</li>
+<li><b>風口。</b> 在爐缸上緣沿圓周裝設十幾到數十個水冷銅風口，熱風與噴吹煤粉由此吹入。</li>
+<li><b>出鐵口。</b> 位於爐缸下部；大型高爐通常有兩個以上出鐵口輪流使用，鐵水與爐渣一起流出，再靠撇渣器分開。</li>
+<li><b>熱風爐與煤氣系統。</b> 每座高爐配 3 到 4 座熱風爐，輪流蓄熱與送風；爐頂煤氣經除塵、清洗後，回頭當作熱風爐與全廠的燃料。</li>
+</ul>
+
+<h2>爐內的旅程：十個步驟</h2>
+<figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/DSC03739_Blast_Furnace_1_at_Night%2C_voestalpine_Donawitz%2C_2026-02.jpg/960px-DSC03739_Blast_Furnace_1_at_Night%2C_voestalpine_Donawitz%2C_2026-02.jpg" alt="黑白夜景，高爐的鋼構塔架在蒸汽與霧氣中亮著燈，右側有圓筒形設備與高煙囪" width="960" height="640" loading="lazy"><figcaption>同一座鋼廠的 1 號高爐夜景。高爐是日夜不停的連續作業，爐料從頂端裝入，在往下走的幾個小時裡，一路被加熱、還原、熔化。<small>照片：Aciarium，2026 年 2 月攝，<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:DSC03739_Blast_Furnace_1_at_Night,_voestalpine_Donawitz,_2026-02.jpg">Wikimedia Commons</a></small></figcaption></figure>
+<p>從爐頂裝進去的一批礦石，到變成鐵水流出出鐵口，大致經過下面十個步驟。前四步爐料還是固體，中間三步溫度升到一千度以上、礦石開始軟化熔融，最後三步在風口與爐缸完成。</p>
+<ol class="flow">
+<li class="z1"><b>爐頂裝料</b>燒結礦、球團、塊礦與焦炭交替分層入爐</li>
+<li class="z1"><b>乾燥預熱</b>爐身上部約 200–500°C，水分蒸發、爐料被煤氣預熱</li>
+<li class="z1"><b>間接還原</b>約 400–1,000°C，一氧化碳把 Fe₂O₃ 逐步還原成 Fe₃O₄、FeO、Fe</li>
+<li class="z1"><b>熔劑分解</b>石灰石放出二氧化碳，氧化鈣準備與脈石造渣</li>
+<li class="z2"><b>直接還原</b>約 1,000°C 以上，碳直接參與奪氧</li>
+<li class="z2"><b>軟熔帶</b>礦石軟化、黏結、熔融，煤氣只能從焦炭層的「窗口」穿過</li>
+<li class="z2"><b>滴落</b>鐵水與爐渣穿過焦炭層滴下，鐵水一路吸碳</li>
+<li class="z3"><b>風口燃燒</b>熱風在迴旋區燃燒焦炭與煤粉，產生熱與一氧化碳</li>
+<li class="z3"><b>爐缸積存</b>鐵水沉底，爐渣浮在上面</li>
+<li class="z3"><b>出鐵出渣</b>打開出鐵口放出鐵水與爐渣，再用泥炮封口</li>
+</ol>
+<div class="flowkey"><span><i style="background:#9AA0A6"></i>固體區（預熱、間接還原）</span><span><i style="background:#FF6A1A"></i>直接還原、軟熔與滴落</span><span><i style="background:#8DB4D6"></i>風口與爐缸</span></div>
+<p>各區的溫度差很大：爐頂的煤氣只剩一兩百度，風口前卻是兩千度以上的火焰。下圖把各區的約略溫度放在同一把尺上比較。</p>
+<div class="rng" role="img" aria-label="高爐各區約略溫度（°C）：爐頂煤氣 100–250、乾燥預熱 200–500、間接還原 400–1,000、軟熔帶 1,100–1,450、滴落帶 1,400–1,550、爐缸鐵水 1,420–1,520、風口前火焰 2,000–2,300"><p class="bt">高爐各區約略溫度（°C）</p>
+<div class="rw" title="爐頂煤氣：100–250°C"><span>爐頂煤氣</span><span class="tr"><span class="fi" style="left:4.2%;width:6.3%;background:#8DB4D6"></span></span><span class="v">100–250</span></div>
+<div class="rw" title="乾燥預熱：200–500°C"><span>乾燥預熱</span><span class="tr"><span class="fi" style="left:8.3%;width:12.5%;background:#9AA0A6"></span></span><span class="v">200–500</span></div>
+<div class="rw" title="間接還原：400–1,000°C"><span>間接還原</span><span class="tr"><span class="fi" style="left:16.7%;width:25%;background:#9AA0A6"></span></span><span class="v">400–1,000</span></div>
+<div class="rw" title="軟熔帶：1,100–1,450°C"><span>軟熔帶</span><span class="tr"><span class="fi" style="left:45.8%;width:14.6%;background:#FF6A1A"></span></span><span class="v">1,100–1,450</span></div>
+<div class="rw" title="滴落帶：1,400–1,550°C"><span>滴落帶</span><span class="tr"><span class="fi" style="left:58.3%;width:6.3%;background:#FF6A1A"></span></span><span class="v">1,400–1,550</span></div>
+<div class="rw" title="爐缸鐵水：1,420–1,520°C"><span>爐缸鐵水</span><span class="tr"><span class="fi" style="left:59.2%;width:4.2%;background:#FF8A47"></span></span><span class="v">1,420–1,520</span></div>
+<div class="rw" title="風口前火焰：2,000–2,300°C"><span>風口前火焰</span><span class="tr"><span class="fi" style="left:83.3%;width:12.5%;background:#FFB07F"></span></span><span class="v">2,000–2,300</span></div>
+<div class="ax"><span></span><span class="sc"><span style="left:0%">0</span><span style="left:25%">600</span><span style="left:50%">1,200</span><span style="left:75%">1,800</span><span style="left:100%">2,400</span></span><span></span></div>
+<p class="bn">依高爐冶金教科書與 Wikipedia 等資料整理的約略範圍。各資料的分區說法略有出入，各區界線也隨爐況、原料與噴吹量改變；風口前火焰指理論火焰溫度。</p></div>
+
+<h2>風口與熱風：高爐的「引擎」</h2>
+<p>高爐需要的熱與還原氣體，幾乎都從風口來。空氣先在熱風爐加熱，經熱風主管進入圍繞爐體的圍管，再分送到各個風口，高速吹進爐缸。風口前端被吹出一個空腔，焦炭在裡面翻滾燃燒，這個區域叫迴旋區（raceway）。</p>
+<ul>
+<li><b>熱風爐怎麼運作。</b> 熱風爐是一座裝滿格子磚的高塔，格子磚上有數千個通道。燃燒期燒高爐煤氣，把格子磚燒熱；送風期改讓冷空氣通過熱磚，加熱到約 1,200°C 再送出，常見上限約 1,250°C。3 到 4 座輪流切換，才能不斷供應熱風。</li>
+<li><b>風越熱，焦炭越省。</b> 熱風帶進來的熱，就是不必靠燒焦炭補的熱。提高風溫一直是降低焦比最有效的手段之一。</li>
+<li><b>噴吹煤粉。</b> 現代高爐從風口同時噴入煤粉，取代部分焦炭、降低成本。但焦炭的骨架作用無法被取代，所以噴吹量有上限。</li>
+<li><b>風口前的反應。</b> 氧氣遇到碳，先燃燒成二氧化碳並放出大量熱，二氧化碳隨即在高溫下被焦炭還原成一氧化碳（C + CO₂ → 2CO）。這股高溫、富含一氧化碳的煤氣往上衝，一路加熱並還原爐料。</li>
+</ul>
+
+<h2>造渣與成分：哪些元素留在鐵水裡</h2>
+<p>礦石裡除了氧化鐵，還有二氧化矽、氧化鋁等脈石，焦炭燃燒後也留下灰分。加入石灰石、白雲石後，氧化鈣與脈石結合成熔點較低、流動性好的爐渣，浮在鐵水上方。爐渣的鹼度（以 (CaO＋MgO)／(SiO₂＋Al₂O₃) 計）操作上大約維持在 1.2，每噸鐵水約產生 225–300 公斤爐渣。高爐是還原環境，各元素的去留跟電爐正好相反：</p>
+<div class="tbl nar"><table>
+<caption style="position:absolute;left:-9999px">各元素在高爐內的去向</caption>
+<thead><tr><th scope="col">元素</th><th scope="col">高爐內（還原環境）</th><th scope="col">之後怎麼處理</th></tr></thead>
+<tbody>
+<tr><th scope="row">碳</th><td>鐵滴穿過焦炭層時大量吸碳，鐵水含碳約 4–4.5%</td><td>轉爐吹氧去碳，降到鋼種需要的含量</td></tr>
+<tr><th scope="row">矽</th><td>部分二氧化矽被碳還原進入鐵水；爐溫越高，進入鐵水的矽越多，所以鐵水含矽量常被當作爐溫的指標</td><td>轉爐吹氧時氧化進渣，同時提供熱量</td></tr>
+<tr><th scope="row">錳</th><td>部分還原進入鐵水，其餘進渣</td><td>依鋼種在出鋼時以錳鐵調整</td></tr>
+<tr><th scope="row">磷</th><td>幾乎全部被還原進入鐵水，高爐去不掉</td><td>原料端挑低磷礦；鐵水預處理或轉爐去磷</td></tr>
+<tr><th scope="row">硫</th><td>主要來自焦炭；高溫、鹼性的爐渣能吸走大部分</td><td>鐵水預處理再脫硫，之後還有鋼包精煉</td></tr>
+</tbody></table></div>
+<p>爐渣也不是廢物。出渣後用大量水急速冷卻，變成玻璃質的水淬爐渣，磨細就是爐石粉，可以取代部分水泥用在預拌混凝土；緩冷的氣冷爐渣則破碎後作為道路與營建骨材。</p>
+
+<h2>出鐵：定時放出的一爐</h2>
+<figure class="fsq"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/RIAN_archive_35522_Teeming_operation_in_the_blast_furnace_plant_of_the_Kuibyshev_Steel_Works_in_Kramatorsk.jpg/960px-RIAN_archive_35522_Teeming_operation_in_the_blast_furnace_plant_of_the_Kuibyshev_Steel_Works_in_Kramatorsk.jpg" alt="一只巨大的鐵水包傾斜，鐵水落下迸出大片火花，周圍有幾名工人" width="960" height="968" loading="lazy"><figcaption>1968 年克拉馬托爾斯克（今烏克蘭）古比雪夫鋼廠高爐車間的鐵水澆注作業。高爐放出的鐵水約 1,450–1,500°C，要裝進鐵水包，再送往下一道製程。<small>照片：Yuriy Ivanov，RIA Novosti 檔案，1968 年攝，<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:RIAN_archive_35522_Teeming_operation_in_the_blast_furnace_plant_of_the_Kuibyshev_Steel_Works_in_Kramatorsk.jpg">Wikimedia Commons</a></small></figcaption></figure>
+<p>高爐不會把鐵水一次放乾。爐缸像一個蓄水槽，鐵水與爐渣累積到一定的量，就要打開出鐵口放出來。</p>
+<ul>
+<li><b>開口。</b> 開口機鑽穿出鐵口的耐火泥塞，鐵水與爐渣沿著出鐵場的主溝流出。</li>
+<li><b>分離。</b> 撇渣器利用密度差，把浮在上面的爐渣擋下、導入渣溝；鐵水從下方通過，流往鐵水溝。</li>
+<li><b>封口。</b> 出完一爐，泥炮把耐火泥打進出鐵口重新封住。</li>
+<li><b>輪流。</b> 兩個以上出鐵口交替使用，一個出鐵、一個準備，讓產出保持連續。</li>
+<li><b>去向。</b> 鐵水裝進魚雷車送往煉鋼廠，經脫硫等預處理後倒進轉爐。一貫作業鋼廠多半直接以液態運送，保留鐵水的熱量；鐵水也可以鑄成塊狀生鐵出售。</li>
+</ul>
+
+<h2>高爐煤氣：自己產生的燃料</h2>
+<p>從爐頂排出的煤氣含有兩、三成的一氧化碳，熱值雖然低，量卻很大，是一貫作業鋼廠最重要的副產燃料之一。</p>
+<div class="rng" role="img" aria-label="高爐煤氣主要成分範圍（體積百分比）：一氧化碳加二氧化碳 37–53、氮為其餘約 40–62、氫 1–7"><p class="bt">高爐煤氣主要成分範圍（體積 %）</p>
+<div class="rw" title="一氧化碳＋二氧化碳：37–53%"><span>CO＋CO₂</span><span class="tr"><span class="fi" style="left:52.9%;width:22.9%;background:#FF6A1A"></span></span><span class="v">37–53</span></div>
+<div class="rw" title="氮（其餘）：約 40–62%"><span>氮 N₂</span><span class="tr"><span class="fi" style="left:57.1%;width:31.4%;background:#9AA0A6"></span></span><span class="v">約 40–62</span></div>
+<div class="rw" title="氫：1–7%"><span>氫 H₂</span><span class="tr"><span class="fi" style="left:1.4%;width:8.6%;background:#8DB4D6"></span></span><span class="v">1–7</span></div>
+<div class="ax"><span></span><span class="sc"><span style="left:0%">0</span><span style="left:28.6%">20</span><span style="left:57.1%">40</span><span style="left:85.7%">60</span></span><span></span></div>
+<p class="bn">資料來源：ISPATGURU〈Blast Furnace Gas Generation and Usage〉：CO＋CO₂ 約 37–53%，CO／CO₂ 比 1.25–2.5，H₂ 約 1–7%；氮是其餘成分，依前兩項推算約 40–62%。熱值約 700–850 kcal／Nm³（約 2.9–3.6 MJ／Nm³），大約只有天然氣的十分之一。</p></div>
+<ul>
+<li><b>先供熱風爐，再供全廠。</b> 高爐煤氣除了燒熱風爐，也送往焦爐、加熱爐與鍋爐發電。</li>
+<li><b>爐頂壓差發電（TRT）。</b> 高爐爐頂的煤氣還有壓力，經過透平膨脹就能發電，不必多燒任何燃料；每噸鐵水約可發 15–60 度電，約占高爐自身用電的三成，內容積超過 1,000 立方公尺的高爐裝設較划算。</li>
+<li><b>代價是碳排。</b> 這些煤氣燒完都成了二氧化碳。高爐以碳作為還原劑，排碳是製程的本質，不是操作不當。</li>
+</ul>
+
+<h2>高爐與電爐，差在哪裡</h2>
+<div class="tbl nar"><table>
+<caption style="position:absolute;left:-9999px">高爐轉爐流程與電爐比較</caption>
+<thead><tr><th scope="col">項目</th><th scope="col">高爐（加轉爐）</th><th scope="col">電爐</th></tr></thead>
+<tbody>
+<tr><th scope="row">主要原料</th><td>鐵礦砂、煉焦煤、石灰石</td><td>廢鋼，或直接還原鐵</td></tr>
+<tr><th scope="row">主要能源</th><td>焦炭、噴吹煤粉</td><td>電力，加上吹氧與燃燒嘴</td></tr>
+<tr><th scope="row">作業方式</th><td>連續作業，不停爐</td><td>一爐一爐的批次作業</td></tr>
+<tr><th scope="row">產出</th><td>鐵水，還要經轉爐煉成鋼</td><td>直接煉成鋼液</td></tr>
+<tr><th scope="row">單爐規模</th><td>大型高爐日產可達萬噸級鐵水</td><td>每爐出鋼數十到數百噸，最大約 420 噸</td></tr>
+<tr><th scope="row">每噸鋼排碳</th><td><b>約 2.9 噸</b> CO₂</td><td>最低約 <b>0.6 噸</b>，視電力來源而定</td></tr>
+<tr><th scope="row">調整彈性</th><td>停爐、復爐成本高，產量不易調整</td><td>啟停容易，可以配合電價排班</td></tr>
+</tbody></table></div>
+<p class="note">排碳數字與〈<a href="2026-10-eaf-operation.html">電爐怎麼煉鋼</a>〉一致，實際值依統計邊界與各廠條件而異。</p>
+
+<h2>歷史小註腳：從木炭到焦炭，從冷風到熱風</h2>
+<div class="tlfig">
+<ol class="tl">
+<li class="ev"><span class="d">約前 5 世紀</span><span class="dot"></span><span class="t">中國已能冶煉生鐵（鑄鐵）</span></li>
+<li class="ev"><span class="d">12–15 世紀</span><span class="dot"></span><span class="t">歐洲出現水力鼓風的高爐</span></li>
+<li class="ev k"><span class="d">1709</span><span class="dot"></span><span class="t">達比以焦炭煉鐵成功</span></li>
+<li class="ev"><span class="d">1828</span><span class="dot"></span><span class="t">尼爾森取得熱風專利</span></li>
+<li class="ev x"><span class="d">1856–1878</span><span class="dot"></span><span class="t">轉爐與托馬斯法，鐵水有了出路</span></li><li class="ev"><span class="d">1857</span><span class="dot"></span><span class="t">考珀發明蓄熱式熱風爐</span></li>
+<li class="ev"><span class="d">1970 年代</span><span class="dot"></span><span class="t">無鐘爐頂、高爐大型化</span></li>
+<li class="ev f"><span class="d">2029</span><span class="dot"></span><span class="t">中鋼一號高爐最遲除役</span></li>
+</ol>
+<p class="tlkey"><span><i class="k1"></i>煉鐵技術</span><span><i class="k2"></i>煉鋼端</span><span><i class="k3"></i>規劃中</span></p>
+</div>
+<ul>
+<li><b>木炭的極限。</b> 早期高爐燒木炭，木炭強度低，撐不起太高的料柱，爐子也長不大；英國的木炭供應也越來越吃緊。</li>
+<li><b>焦炭登場。</b> 1709 年，亞伯拉罕・達比（Abraham Darby）在英國科爾布魯克代爾用焦炭煉鐵成功。焦炭強度高、煤炭又多，高爐從此可以越蓋越大，奠定工業革命的鋼鐵基礎。</li>
+<li><b>熱風。</b> 1828 年，蘇格蘭的尼爾森（James Beaumont Neilson）取得預熱鼓風專利，每噸鐵的用煤量降了三成多；1857 年考珀（Edward Alfred Cowper）發明蓄熱式熱風爐，至今仍是熱風爐的基本形式。</li>
+<li><b>鐵水有了出路。</b> 高爐鐵水含碳高、性脆，1856 年貝塞麥轉爐與 1878 年托馬斯法相繼出現，大量鐵水才能煉成鋼，高爐轉爐流程從此成形。</li>
+<li><b>越來越大，也越來越聰明。</b> 二十世紀後半，高爐內容積突破五千立方公尺，加上無鐘爐頂、噴吹煤粉、爐況監控與爐缸測溫，同樣的原料煉出更多鐵、用掉更少焦炭。</li>
+</ul>
+
+<h2>對台灣鋼鐵業的意義</h2>
+<ul>
+<li><b>台灣的高爐集中在兩家公司。</b> 中鋼高雄廠有 4 座高爐，年產能合計約 990 萬噸；子公司中龍台中廠另有 2 座高爐與 1 座電爐，集團年產能約 1,600 萬噸。</li>
+<li><b>一號高爐即將退場。</b> 中鋼董事會 2025 年 12 月 26 日決議，1977 年完工的一號高爐最遲於 2029 年第一季除役。這座高爐設計年產能 150 萬噸，近年實際產出約 120 至 130 萬噸，原訂 2030 年大修，一次大修需 60 至 70 億元；在鋼市不佳下提前除役，產量改由其餘高爐支應。原址是否改建電爐，公司表示仍在評估。</li>
+<li><b>焦炭供應是高爐穩定的前提。</b> 同一次董事會也通過約 15.6 億元的廠內焦炭運輸調控流程計畫，執行期間 2026 至 2028 年，目的就是穩定高爐所需的焦炭。</li>
+<li><b>碳排壓力最集中在這一段。</b> 高爐煉鐵是一貫作業鋼廠最大的排碳來源，歐盟 CBAM 與台灣碳費都讓這部分的成本越來越具體。降低焦比、提高轉爐廢鋼比、高爐噴吹富氫氣體，以及長期轉向直接還原鐵加電爐，都是正在研究的方向；日本的做法可參考〈<a href="2026-10-nippon-steel-hydrogen-bf.html">高爐吹氫減碳 43%</a>〉。</li>
+</ul>
+
+<h2>延伸閱讀</h2>
+<ul>
+<li><a href="2026-10-port-to-blast-furnace.html">進爐之前：鐵礦、焦煤與石灰從港口到高爐的處理流程</a></li>
+<li><a href="2026-10-eaf-operation.html">電爐怎麼煉鋼：從通電熔化到出鋼的一爐週期</a></li>
+<li><a href="2026-10-nippon-steel-hydrogen-bf.html">高爐吹氫減碳 43%：日本製鐵 Super COURSE50 試驗全解析</a></li>
+<li><a href="2026-10-eu-green-steel.html">歐洲綠鋼進度：氫氣退潮、電爐接棒</a></li>
+</ul>
+
+<h2>資料來源</h2>
+<ul class="sources">
+<li><a href="https://www.ispatguru.com/hot-blast-stoves/">Hot Blast Stoves</a>（ISPATGURU）</li>
+<li><a href="https://www.ispatguru.com/blast-furnace-gas-generation-and-usage/">Blast Furnace Gas Generation and Usage</a>（ISPATGURU）</li>
+<li><a href="https://www.ispatguru.com/blast-furnace-gas-top-pressure-recovery-turbine">Blast Furnace Gas Top Pressure Recovery Turbine</a>（ISPATGURU）</li>
+<li><a href="https://www.ispatguru.com/blast-furnace-slag-and-its-role-in-furnace-operation/">Blast Furnace Slag and its Role in Furnace Operation</a>（ISPATGURU）</li>
+<li><a href="https://www.ispatguru.com/hot-metal/">Hot Metal</a>（ISPATGURU）</li>
+<li><a href="https://hatch.com/About-Us/Publications/Technical-Papers/2016/01/Principles-for-Blast-Furnace-Refractory-Lining-Inspection-and-Monitoring">Principles for Blast Furnace Refractory Lining Inspection and Monitoring</a>（Hatch，2016）</li>
+<li><a href="https://paulwurth.com/?p=366">Paul Wurth 無鐘爐頂（BLT）</a>（Paul Wurth）</li>
+<li><a href="https://en.wikipedia.org/wiki/Blast_furnace">Blast furnace</a>、<a href="https://en.wikipedia.org/wiki/Hot_blast">Hot blast</a>、<a href="https://en.wikipedia.org/wiki/Abraham_Darby_I">Abraham Darby I</a>、<a href="https://en.wikipedia.org/wiki/Edward_Alfred_Cowper">Edward Alfred Cowper</a>（Wikipedia）</li>
+<li><a href="https://uanalyze.com.tw/articles/4107943435">中鋼董事會拍板 一號高爐除役</a>（優分析）</li>
+<li><a href="https://www.ctee.com.tw/news/20251227700157-430503">中鋼壹號高爐除役相關報導（2025-12-27）</a>（工商時報）</li>
+</ul>
+<p style="font-size:13px;color:#9AA0A6;margin-top:32px">內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</p>
+</article>
+<!-- article-qr -->
+<aside aria-label="本文連結 QR Code" style="max-width:760px;box-sizing:border-box;margin-top:48px;border:1px solid #2A2F35;background:#15181B;padding:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+<img src="../assets/qr/2026-10-blast-furnace.png" alt="本文連結 QR Code" width="132" height="132" loading="lazy" style="display:block;width:132px;height:132px;background:#FFFFFF;flex:none">
+<div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 220px">
+<p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;color:#FF6A1A">SHARE</p>
+<p style="margin:0;font-size:17px;font-weight:900;color:#E8E6E1">掃描 QR Code 開啟本文</p>
+<p style="margin:0;font-size:13px;line-height:1.7;color:#9AA0A6;word-break:break-all">https://steeltrending.github.io/articles/2026-10-blast-furnace.html</p>
+<div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:4px"><a href="../assets/qr/2026-10-blast-furnace.png" download="steeltrending-2026-10-blast-furnace-qr.png" style="font-size:14px;color:#FF8A47;text-decoration:none">下載 QR Code ↓</a><button type="button" data-url="https://steeltrending.github.io/articles/2026-10-blast-furnace.html" onclick="var b=this,u=this.dataset.url;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).catch(function(){var t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}).then(function(){b.textContent='已複製本文網址';setTimeout(function(){b.textContent='分享本文'},2000)})" style="font:inherit;font-size:14px;color:#FF8A47;background:none;border:0;padding:0;cursor:pointer">分享本文</button></div>
+</div>
+</aside>
+<!-- /article-qr -->
+
+<p style="margin-top:48px"><a href="../#topics" style="display:inline-flex;align-items:center;border:1px solid #4A5058;color:#E8E6E1;text-decoration:none;padding:12px 20px">← 回到鋼鐵小學堂</a></p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending　·　<a href="../sitemap.html" style="color:#C9CDD2">網站導覽</a></span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+<div class="tip" id="tip" hidden></div>
+<script>
+(function(){var t=document.getElementById('tip');if(!t)return;
+document.querySelectorAll('.pw path[data-tip]').forEach(function(p){
+p.addEventListener('mousemove',function(e){t.textContent=p.getAttribute('data-tip');t.hidden=false;t.style.left=(e.clientX+12)+'px';t.style.top=(e.clientY+12)+'px';});
+p.addEventListener('mouseleave',function(){t.hidden=true;});});})();
+</script>
+<script src="../assets/hover.js" defer></script>
+<script src="../assets/tts.js" defer></script>
+</body>
+</html>
