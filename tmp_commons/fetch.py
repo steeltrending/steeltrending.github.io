@@ -54,10 +54,20 @@ def members(cat, kind):
 def candidates():
     used = {urllib.parse.unquote(l.strip()).replace("_", " ") for l in open(os.path.join(HERE, "used.txt")) if l.strip()}
     titles = set()
-    cats = ["Category:Electric arc furnaces"] + members("Category:Electric arc furnaces", "subcat")
+    cfg = json.load(open(os.path.join(HERE, "search.json")))
+    cats = []
+    for c in cfg["categories"]:
+        cats.append(c)
+        try:
+            cats += members(c, "subcat")
+        except Exception as e:  # noqa
+            print("cat fail", c, e)
     for c in cats:
-        titles |= set(members(c, "file"))
-    for q in ["electric arc furnace steel", "Elektrolichtbogenofen", "arc furnace tapping", "electric arc furnace electrodes"]:
+        try:
+            titles |= set(members(c, "file"))
+        except Exception as e:  # noqa
+            print("cat fail", c, e)
+    for q in cfg["queries"]:
         d = get({"action": "query", "list": "search", "srsearch": q + " filetype:bitmap", "srnamespace": "6", "srlimit": "50"})
         titles |= {s["title"] for s in d["query"]["search"]}
     titles = sorted(t for t in titles if t.replace("File:", "") not in used)
@@ -65,7 +75,7 @@ def candidates():
              and x["w"] >= 900 and FREE.match(x["license"] or "")]
     os.makedirs(os.path.join(HERE, "cand"), exist_ok=True)
     keep = []
-    for n, x in enumerate(items[:80]):
+    for n, x in enumerate(items[:120]):
         fn = "c%02d.jpg" % n
         try:
             download(x["thumb"], os.path.join(HERE, "cand", fn)); x["file"] = fn; keep.append(x)
