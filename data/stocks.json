@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T16:57:40+08:00",
+ "updated": "2026-10-20T19:11:04+08:00",
  "items": [
   {
    "key": "tw",
@@ -234,10 +234,10 @@
    "country": "印尼",
    "exchange": "IDX",
    "currency": "IDR",
-   "price": 173.0,
-   "change": -13.0,
-   "change_pct": -6.99,
-   "asof": "2026-10-19"
+   "price": 186.0,
+   "change": 13.0,
+   "change_pct": 7.51,
+   "asof": "2026-10-20"
   },
   {
    "key": "sea3",
@@ -248,10 +248,10 @@
    "country": "馬來西亞",
    "exchange": "Bursa Malaysia",
    "currency": "MYR",
-   "price": 0.45,
-   "change": -0.01,
-   "change_pct": -2.17,
-   "asof": "2026-10-19"
+   "price": 0.445,
+   "change": -0.005,
+   "change_pct": -1.11,
+   "asof": "2026-10-20"
   },
   {
    "key": "in",
