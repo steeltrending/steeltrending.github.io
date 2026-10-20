@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>連續鑄造怎麼做：從鋼包、中間包到結晶器，把鋼液凝固成鋼胚 · 鋼鐵潮流 Steel Trending</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鋼鐵小學堂：連續鑄造把鋼液直接凝固成鋼胚。從鋼包、中間包、結晶器的振動與保護渣，到二次冷卻、弧形矯直與切斷，看懂板胚、方胚、薄板胚的差別、連鑄的缺陷與歷史，以及台灣 100% 連鑄的現況。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+article{max-width:760px}
+article h2{margin:56px 0 14px;font-size:26px;font-weight:900;line-height:1.35;padding-top:20px;border-top:1px solid #2A2F35}
+article p{margin:0 0 16px;font-size:17px;line-height:1.9;color:#D5D7DA}
+article p.lead{font-size:19px;color:#E8E6E1}
+article ul{margin:0 0 20px;padding-left:1.2em}
+article li{margin:0 0 12px;font-size:16px;line-height:1.85;color:#C9CDD2}
+article li::marker{color:#FF6A1A}
+article li b{color:#E8E6E1}
+article .watch li::marker{content:'□  ';color:#9AA0A6}
+.tbl{overflow-x:auto;border:1px solid #2A2F35;margin:8px 0 24px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th,td{padding:12px 14px;border-bottom:1px solid #22262B;text-align:left;vertical-align:top}
+th{background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody th[scope=row]{width:9em;background:#15181B;font-size:13px;letter-spacing:.04em;white-space:nowrap}
+td.num{font-family:'IBM Plex Mono',monospace;white-space:nowrap;color:#E8E6E1}
+figure{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 12px;font-size:13px;line-height:1.7;color:#C9CDD2;border-top:1px solid #2A2F35}
+figcaption small{display:block;margin-top:2px;font-size:12px;color:#9AA0A6}
+.tlfig{border:1px solid #2A2F35;background:#121417;padding:24px 16px 4px;margin:8px 0 24px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.tl::before{content:'';position:absolute;left:6%;right:6%;top:31px;height:2px;background:linear-gradient(90deg,#FF6A1A 0,#FF6A1A 84%,#3A3F46 84%)}
+.tl .ev{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px;position:relative}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9CDD2;height:20px;white-space:nowrap}
+.tl .dot{width:14px;height:14px;border-radius:50%;background:#FF6A1A;border:3px solid #121417;box-sizing:content-box;margin:2px 0 10px;position:relative;z-index:1}
+.tl .t{font-size:13px;line-height:1.6;color:#C9CDD2}
+.tl .x .dot{background:#8DB4D6}.tl .x .d{color:#8DB4D6}
+.tl .k .dot{width:20px;height:20px;margin:-1px 0 7px;box-shadow:0 0 0 4px rgba(255,106,26,.25)}.tl .k .t{color:#E8E6E1;font-weight:700}.tl .k .d{color:#FF8A47}
+.tl .f .dot{background:#121417;border:2px dashed #9AA0A6;width:14px;height:14px}.tl .f .d,.tl .f .t{color:#9AA0A6}
+.tlkey{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;padding:18px 0 14px !important;border-top:0 !important;font-size:12px !important;color:#9AA0A6 !important}
+.tlkey i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.tlkey .k1{background:#FF6A1A}.tlkey .k2{background:#8DB4D6}.tlkey .k3{border:2px dashed #9AA0A6;width:8px;height:8px}
+@media (max-width:720px){
+.tlfig{padding:20px 16px 4px}
+.tl{grid-template-columns:1fr}
+.tl::before{left:9px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,#FF6A1A 0,#FF6A1A 86%,#3A3F46 86%)}
+.tl .ev{display:grid;grid-template-columns:20px 92px 1fr;align-items:start;text-align:left;padding:0 0 14px;gap:0 10px}
+.tl .dot{grid-column:1;grid-row:1;margin:3px 0 0 0;justify-self:center}
+.tl .k .dot{margin:0}
+.tl .d{grid-column:2;grid-row:1;height:auto;padding-top:2px}
+.tl .t{grid-column:3;grid-row:1}
+}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;margin:8px 0 24px}
+.fact{background:#121417;padding:18px 16px;display:flex;gap:12px;align-items:flex-start}
+.fact .ic{flex:none;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid #3A3F46;background:#181B1F;color:#FF6A1A}
+.fact .fl{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#9AA0A6;margin-bottom:4px}
+.fact .fv{display:block;font-size:16px;font-weight:700;color:#E8E6E1;line-height:1.5}
+.fact .fs{display:block;font-size:13px;color:#9AA0A6;line-height:1.6;margin-top:2px}
+.pies{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 8px}
+.pie{margin:0;border:1px solid #2A2F35;background:#121417;padding:16px}
+.pie .ph{font-size:14px;font-weight:700;color:#E8E6E1;margin-bottom:10px;padding:0;border:0}
+.pw{display:flex;align-items:center;gap:16px}
+.pw svg{width:150px;height:150px;flex:none;overflow:visible}
+.pw path{cursor:default;transition:opacity .15s}
+.pw svg:hover path{opacity:.45}.pw svg path:hover{opacity:1}
+.c1{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;fill:#E8E6E1}
+.c2{font-size:12px;fill:#9AA0A6}
+.lg{list-style:none;margin:0;padding:0;flex:1}
+.lg li{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:14px;color:#C9CDD2}
+.lg li::marker{content:''}
+.lg i{width:10px;height:10px;border-radius:2px;flex:none}
+.lg .ln{flex:1}.lg .lv{font-family:'IBM Plex Mono',monospace;color:#E8E6E1}
+.note{font-size:13px !important;color:#9AA0A6 !important;margin:6px 0 18px !important}
+.tip{position:fixed;z-index:10;pointer-events:none;background:#1C2024;border:1px solid #3A3F46;color:#E8E6E1;font-size:13px;padding:6px 10px;white-space:nowrap}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}.pies{grid-template-columns:1fr}}
+@media (max-width:420px){.facts{grid-template-columns:1fr}}
+.bars{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.bars .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.bar{display:grid;grid-template-columns:7.5em 1fr 4.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.bar .tr{height:14px;background:#1C2024;border-radius:0 4px 4px 0}
+.bar .fi{height:14px;background:#8A8F96;border-radius:0 4px 4px 0}
+.bar.hi .fi{background:#FF6A1A}.bar.hi{color:#E8E6E1;font-weight:700}
+.bar .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1}
+.bars .bn{font-size:12px;color:#9AA0A6;margin:8px 0 0}
+.flow{list-style:none;margin:8px 0 24px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;counter-reset:st}
+.flow li{background:#121417;padding:14px 12px;margin:0;counter-increment:st;font-size:13px;line-height:1.6;color:#9AA0A6}
+.flow li::marker{content:''}
+.flow li b{display:block;font-size:15px;color:#E8E6E1;margin-bottom:2px}
+.flow li b::before{content:counter(st,decimal-leading-zero) '  ';font-family:'IBM Plex Mono',monospace;font-size:12px;color:#FF6A1A;font-weight:500}
+.flow li.mine{border-top:2px solid #FF6A1A}.flow li.proc{border-top:2px solid #8DB4D6}.flow li.log{border-top:2px solid #9AA0A6}
+.flowkey{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#9AA0A6;margin:-14px 0 24px}
+.flowkey i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:6px}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mapfig{margin:8px 0 8px;border:1px solid #2A2F35;background:#121417;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mapfig .mi{min-width:680px}
+.mapfig svg path[stroke-opacity]:hover{stroke-opacity:1;filter:drop-shadow(0 0 3px rgba(255,255,255,.35))}
+.mapkey{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:#C9CDD2;margin:10px 0 6px}
+.mapkey i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.mapkey .ds{background:none;border-top:2px dashed #FF6A1A;height:0}
+.mapkey .ck{width:10px;height:10px;border-radius:50%;border:1.5px solid #E8E6E1;background:none}
+.rt td:first-child{white-space:nowrap}
+.bars2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 24px}
+.bars2 .bars{margin:0}
+@media (max-width:720px){.bars2{grid-template-columns:1fr}}
+.rng{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.rng .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.rng .rw{display:grid;grid-template-columns:8em 1fr 5.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.rng .tr{position:relative;height:14px;background:#1C2024;border-radius:2px}
+.rng .fi{position:absolute;top:0;height:14px;border-radius:2px}
+.rng .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1;white-space:nowrap}
+.rng .ax{display:grid;grid-template-columns:8em 1fr 5.2em;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9AA0A6}
+.rng .ax .sc{position:relative;height:14px}
+.rng .ax .sc span{position:absolute;transform:translateX(-50%)}
+.rng .bn{font-size:12px;color:#9AA0A6;margin:10px 0 0}
+@media (max-width:560px){.rng .rw,.rng .ax{grid-template-columns:6.2em 1fr 4.6em}}
+.flow.f5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:900px){.flow.f5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sources li{font-size:14px}
+@media (max-width:640px){.wrap{padding:0 16px}article p{font-size:16px}article p.lead{font-size:17px}}
+.bffig{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+.bffig figcaption{border-top:1px solid #2A2F35}
+.flow li.z1{border-top:2px solid #9AA0A6}.flow li.z2{border-top:2px solid #FF6A1A}.flow li.z3{border-top:2px solid #8DB4D6}
+.fsq2{max-width:440px;margin-left:auto;margin-right:auto;margin-bottom:22px}
+.tl.nofut::before{background:#FF6A1A !important}
+.tbl.nar tbody th[scope=row]{width:1%;padding-right:14px;white-space:nowrap}
+.tbl.nar thead th:first-child{white-space:nowrap;width:1%}
+.tbl.nar table{min-width:520px}
+.rng .rw,.rng .ax{grid-template-columns:8em 1fr 7.6em}
+@media (max-width:560px){.rng .rw,.rng .ax{grid-template-columns:6.4em 1fr 7.2em}.rng .rw,.rng .rw .v{font-size:13px}}
+@media (max-width:400px){.rng .rw,.rng .ax{grid-template-columns:5.4em 1fr 6.4em;gap:8px}}
+</style>
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<script>window.ARTICLE_CATEGORY = 'steel101';</script>
+<script src="../assets/article-nav.js" defer></script>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="../assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="../#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="../stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<style>.nvdd{position:relative}.nvdd summary{list-style:none;cursor:pointer;color:#C9CDD2;padding:12px;display:flex;align-items:center;gap:6px;font-size:15px;user-select:none}.nvdd summary::-webkit-details-marker{display:none}.nvdd summary span{font-size:11px;color:#FF6A1A;transition:transform .2s}.nvdd[open] summary span{transform:rotate(180deg)}.nvdd summary:hover,.nvdd[open] summary,.nvdd.cur summary{color:#FF8A47}.nvdd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}.nvdd-m{position:absolute;top:100%;left:0;z-index:50;min-width:180px;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45);padding:6px 0;display:flex;flex-direction:column}.nvdd-m a{padding:12px 16px;color:#E8E6E1;text-decoration:none;font-size:15px;white-space:nowrap}.nvdd-m a:hover{background:#1C2024;color:#FF8A47}.nvdd-m a[aria-current]{color:#FF8A47}</style><details class="nvdd"><summary>鋼鐵數字<span aria-hidden="true">▾</span></summary><div class="nvdd-m"><a href="../worldsteel.html">世界鋼鐵數據</a><a href="../twmap.html">台灣鋼鐵地圖</a><a href="../trends.html">關鍵字熱度</a></div></details>
+<a href="../archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="../#topics" style="text-decoration:none">關注主題</a> <span aria-hidden="true">›</span> 鋼鐵小學堂 <span aria-hidden="true">›</span> 專題</nav>
+
+<article>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">STEEL 101 · CONTINUOUS CASTING · 2026.10</p>
+<h1 style="margin:12px 0 10px;font-size:clamp(30px,5vw,46px);font-weight:900;line-height:1.25">連續鑄造怎麼做：從鋼包、中間包到結晶器，把鋼液凝固成鋼胚</h1>
+<p style="font-size:14px;color:#9AA0A6">鋼鐵潮流工作室 · 發布 2026.10.20</p>
+
+<figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/%D0%9F%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D1%81%D0%BB%D1%8F%D0%B1%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%9C%D0%9D%D0%9B%D0%97-1.jpg/960px-%D0%9F%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D1%81%D0%BB%D1%8F%D0%B1%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%9C%D0%9D%D0%9B%D0%97-1.jpg" alt="連鑄機出口端，兩條通紅的長方形板胚在輥道上前進，上方的火焰切割機噴出強光，周圍是鋼構與管線" width="960" height="643"><figcaption>連鑄機的出口端：兩條通紅的板胚在輥道上前進，上方的火焰切割機把連續的鑄坯切成定長。連鑄機的任務，就是把鋼液變成這樣一條不間斷的實心鑄坯。<small>照片：DDEKK，2024 年攝，<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:%D0%9F%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D1%81%D0%BB%D1%8F%D0%B1%D0%BE%D0%B2_%D0%BD%D0%B0_%D0%9C%D0%9D%D0%9B%D0%97-1.jpg">Wikimedia Commons</a></small></figcaption></figure>
+
+<h2>本期重點</h2>
+<p class="lead">上一課〈<a href="2026-10-bof.html">轉爐怎麼煉鋼</a>〉的最後，鋼包在二次精煉站調好成分與溫度，被吊去連鑄；電爐的鋼包也是同一個去處。這一課接著看連鑄機裡面發生什麼事：鋼液怎麼從一包液體，變成一條可以送去軋延的實心鋼胚。</p>
+<ul>
+<li><b>連鑄的任務是「凝固」，而且是邊凝固邊往前走。</b> 鋼液從鑄機上方注入，外層先凝固成坯殼，中心還是液態；鑄坯一路被拉著前進、噴水冷卻，直到整個斷面凝固，再切成定長。</li>
+<li><b>冷卻分成兩關。</b> 結晶器（一次冷卻）在不到兩公尺的長度內冷出坯殼；其後的二次冷卻區用噴水與夾輥，繼續把鑄坯冷到完全凝固。</li>
+<li><b>一爐接一爐，不必停機。</b> 鋼包放在轉台上，一包澆完就換下一包；中間包負責在換包時維持液面，所以多爐鋼液可以接續澆鑄。</li>
+<li><b>連鑄已經是絕對主流。</b> 2024 年全球約 97.5% 的粗鋼是連鑄出來的，台灣則是 100%；沒有連鑄，就沒有今天的鋼廠效率。</li>
+</ul>
+<div class="facts">
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18"/></svg></span><div><span class="fl">全球連鑄比</span><span class="fv">約 97.5%</span><span class="fs">2024 年，worldsteel 統計表中各國合計</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 20V10l6-6 6 6v10"/><path d="M10 20v-5h4v5"/></svg></span><div><span class="fl">台灣連鑄比</span><span class="fv">100%</span><span class="fs">2024 年連鑄鋼產量約 1,920 萬噸</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 21h14"/><path d="M4 8h16"/><path d="M4 8l-2 6a3 3 0 0 0 4 0zM20 8l-2 6a3 3 0 0 0 4 0z"/></svg></span><div><span class="fl">每 100 噸鋼液的成材</span><span class="fv">約 94 vs 84 噸</span><span class="fs">連鑄對上鋼錠加初軋的路線（歐洲早期資料）</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v18M15 3v18"/><path d="M5 8h14"/></svg></span><div><span class="fl">結晶器長度</span><span class="fv">約 0.5–2 m</span><span class="fs">常見約 510–915 mm；短短一段就要冷出坯殼</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="8"/><path d="M3 12h18"/></svg></span><div><span class="fl">板胚尺寸</span><span class="fv">厚 180–250 mm</span><span class="fs">寬 100–1,600 mm，長可達 12 公尺</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></span><div><span class="fl">二次冷卻設計表面溫度</span><span class="fv">約 1,200→700°C</span><span class="fs">沿著鑄坯行進方向逐段降溫</span></div></div>
+</div>
+<p class="note">以上為典型或文獻列出的範圍，實際數值依鋼種、鑄機型式與各廠操作而異。</p>
+
+<h2>連鑄機長什麼樣子</h2>
+<figure class="bffig"><div class="mapfig" style="margin:0;border:0"><div class="mi" style="min-width:720px">
+<svg viewBox="0 0 960 560" role="img" aria-label="弧形連鑄機剖面示意圖：鋼包、中間包、浸入式水口、結晶器、二次冷卻區的夾輥與噴水、弧形段、矯直段、凝固終點、火焰切割與定長板胚，鑄坯中心的橙色液心逐漸縮小直到完全凝固" style="display:block;width:100%;height:auto;font-family:'Noto Sans TC','PingFang TC',sans-serif">
+<defs><linearGradient id="ccL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB07F"/><stop offset="1" stop-color="#FF6A1A"/></linearGradient><marker id="ccB" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8DB4D6"/></marker></defs>
+<path d="M100,24 L200,24 L190,84 L110,84 Z" fill="#2A2F35" stroke="#6A7078" stroke-width="1.5"/><path d="M106,34 L194,34 L188,80 L112,80 Z" fill="#FF6A1A" opacity=".85"/>
+<rect x="146" y="84" width="8" height="26" fill="#8A8F96"/>
+<path d="M170,104 L330,104 L318,140 L182,140 Z" fill="#2A2F35" stroke="#6A7078" stroke-width="1.5"/><path d="M176,112 L324,112 L316,136 L184,136 Z" fill="#FF6A1A" opacity=".85"/>
+<rect x="245" y="140" width="10" height="50" fill="#8A8F96"/>
+<rect x="222" y="150" width="14" height="70" fill="#C9744A" stroke="#6A7078"/><rect x="264" y="150" width="14" height="70" fill="#C9744A" stroke="#6A7078"/>
+<rect x="236" y="150" width="28" height="4" fill="#E8D08A"/>
+<polygon points="265.0,150.0 265.0,160.7 265.0,171.5 265.0,182.2 265.0,192.9 265.0,203.7 265.0,214.4 265.0,225.1 265.0,235.8 265.0,246.6 265.0,257.3 265.0,268.0 265.2,278.1 265.9,287.9 267.2,297.7 269.1,307.4 271.4,317.0 274.4,326.5 277.8,335.7 281.8,344.8 286.3,353.6 291.2,362.1 296.7,370.4 302.5,378.3 308.9,385.9 315.6,393.1 322.8,399.9 330.3,406.4 338.2,412.3 346.4,417.8 354.9,422.9 363.6,427.5 372.6,431.5 381.9,435.1 391.3,438.1 400.8,440.6 410.5,442.5 420.3,443.9 430.2,444.7 440.0,445.0 450.8,445.0 461.5,445.0 472.2,445.0 483.0,445.0 493.7,445.0 504.4,445.0 515.2,445.0 525.9,445.0 536.6,445.0 547.4,445.0 558.1,445.0 568.8,445.0 579.5,445.0 590.3,445.0 601.0,445.0 611.7,445.0 622.5,445.0 633.2,445.0 643.9,445.0 654.7,445.0 665.4,445.0 676.1,445.0 686.8,445.0 697.6,445.0 708.3,445.0 719.0,445.0 729.8,445.0 740.5,445.0 751.2,445.0 762.0,445.0 772.7,445.0 783.4,445.0 794.2,445.0 804.9,445.0 815.6,445.0 826.3,445.0 837.1,445.0 847.8,445.0 858.5,445.0 869.3,445.0 880.0,445.0 880.0,475.0 869.3,475.0 858.5,475.0 847.8,475.0 837.1,475.0 826.3,475.0 815.6,475.0 804.9,475.0 794.2,475.0 783.4,475.0 772.7,475.0 762.0,475.0 751.2,475.0 740.5,475.0 729.8,475.0 719.0,475.0 708.3,475.0 697.6,475.0 686.8,475.0 676.1,475.0 665.4,475.0 654.7,475.0 643.9,475.0 633.2,475.0 622.5,475.0 611.7,475.0 601.0,475.0 590.3,475.0 579.5,475.0 568.8,475.0 558.1,475.0 547.4,475.0 536.6,475.0 525.9,475.0 515.2,475.0 504.4,475.0 493.7,475.0 483.0,475.0 472.2,475.0 461.5,475.0 450.8,475.0 440.0,475.0 428.5,474.7 416.9,473.7 405.5,472.1 394.1,469.8 382.9,466.9 371.9,463.4 361.1,459.2 350.5,454.4 340.3,449.1 330.3,443.2 320.7,436.7 311.5,429.7 302.7,422.2 294.3,414.2 286.4,405.8 279.0,396.9 272.1,387.6 265.7,377.9 259.9,367.9 254.7,357.6 250.0,347.0 246.0,336.1 242.5,325.1 239.7,313.9 237.6,302.5 236.1,291.0 235.2,279.5 235.0,268.0 235.0,257.3 235.0,246.6 235.0,235.8 235.0,225.1 235.0,214.4 235.0,203.7 235.0,192.9 235.0,182.2 235.0,171.5 235.0,160.7 235.0,150.0" fill="#8A8F96" stroke="#4A5058" stroke-width="1"/>
+<polygon points="263.5,150.0 262.4,153.7 261.9,157.5 261.5,161.2 261.2,165.0 260.9,168.7 260.7,172.4 260.5,176.2 260.3,179.9 260.1,183.7 259.9,187.4 259.7,191.1 259.5,194.9 259.4,198.6 259.2,202.3 259.1,206.1 258.9,209.8 258.8,213.6 258.7,217.3 258.5,221.0 258.4,224.8 258.3,228.5 258.1,232.3 258.0,236.0 257.9,239.7 257.8,243.5 257.7,247.2 257.6,251.0 257.5,254.7 257.4,258.4 257.3,262.2 257.1,265.9 257.0,269.6 257.0,273.3 257.0,276.9 257.0,280.5 257.2,284.1 257.4,287.7 257.7,291.3 258.1,294.9 258.5,298.5 259.0,302.0 259.6,305.6 260.2,309.2 261.0,312.7 261.8,316.3 262.6,319.8 263.6,323.3 264.6,326.8 265.6,330.2 266.8,333.7 268.0,337.1 269.3,340.5 270.6,343.9 272.0,347.3 273.5,350.6 275.1,353.9 276.7,357.1 278.4,360.4 280.1,363.6 281.9,366.7 283.8,369.9 285.7,373.0 287.7,376.0 289.8,379.0 291.9,382.0 294.1,385.0 296.3,387.8 298.6,390.7 300.9,393.5 303.4,396.3 305.8,399.0 308.3,401.6 310.9,404.2 313.5,406.8 316.2,409.3 318.9,411.8 321.7,414.2 324.5,416.5 327.4,418.8 330.3,421.1 333.3,423.3 336.3,425.4 339.3,427.4 342.4,429.4 345.5,431.4 348.7,433.3 351.9,435.1 355.1,436.8 358.4,438.5 361.7,440.2 365.0,441.7 368.4,443.2 371.8,444.7 375.2,446.0 378.7,447.3 382.2,448.5 385.7,449.7 389.2,450.8 392.8,451.8 396.3,452.8 399.9,453.6 403.5,454.5 407.2,455.2 410.8,455.9 414.5,456.5 418.1,457.0 421.8,457.4 425.5,457.8 429.2,458.1 432.9,458.3 436.6,458.5 440.3,458.6 444.0,458.6 447.8,458.7 451.5,458.7 455.3,458.8 459.0,458.8 462.7,458.9 466.5,458.9 470.2,459.0 474.0,459.1 477.7,459.1 481.4,459.2 485.2,459.2 488.9,459.3 492.7,459.3 496.4,459.4 500.1,459.4 503.9,459.5 507.6,459.5 511.3,459.6 515.1,459.6 518.8,459.7 522.6,459.7 526.3,459.8 530.0,459.8 533.8,459.9 537.5,459.9 541.3,460.0 545.0,460.0 545.0,460.0 541.3,460.0 537.5,460.1 533.8,460.1 530.0,460.2 526.3,460.2 522.6,460.3 518.8,460.3 515.1,460.4 511.3,460.4 507.6,460.5 503.9,460.5 500.1,460.6 496.4,460.6 492.7,460.7 488.9,460.7 485.2,460.8 481.4,460.8 477.7,460.9 474.0,460.9 470.2,461.0 466.5,461.1 462.7,461.1 459.0,461.2 455.3,461.2 451.5,461.3 447.8,461.3 444.0,461.4 440.3,461.4 436.5,461.4 432.8,461.4 429.0,461.3 425.2,461.1 421.5,460.8 417.7,460.5 414.0,460.0 410.2,459.5 406.5,459.0 402.8,458.3 399.1,457.6 395.4,456.8 391.7,456.0 388.0,455.0 384.4,454.0 380.7,453.0 377.1,451.8 373.5,450.6 370.0,449.3 366.4,448.0 362.9,446.5 359.5,445.0 356.0,443.5 352.6,441.8 349.2,440.1 345.8,438.4 342.5,436.5 339.2,434.6 335.9,432.7 332.7,430.6 329.6,428.6 326.4,426.4 323.3,424.2 320.3,421.9 317.3,419.6 314.3,417.2 311.4,414.7 308.5,412.2 305.7,409.7 302.9,407.0 300.2,404.4 297.5,401.6 294.9,398.8 292.4,396.0 289.9,393.1 287.4,390.2 285.0,387.2 282.7,384.2 280.4,381.1 278.2,378.0 276.1,374.8 274.0,371.6 271.9,368.4 270.0,365.1 268.1,361.7 266.2,358.4 264.4,355.0 262.7,351.5 261.1,348.1 259.5,344.5 258.0,341.0 256.6,337.4 255.2,333.8 253.9,330.2 252.7,326.6 251.5,322.9 250.4,319.2 249.4,315.5 248.5,311.7 247.6,308.0 246.8,304.2 246.1,300.4 245.4,296.6 244.9,292.8 244.4,288.9 243.9,285.1 243.6,281.2 243.3,277.4 243.1,273.5 243.0,269.6 242.9,265.9 242.7,262.2 242.6,258.4 242.5,254.7 242.4,251.0 242.3,247.2 242.2,243.5 242.1,239.7 242.0,236.0 241.9,232.3 241.7,228.5 241.6,224.8 241.5,221.0 241.3,217.3 241.2,213.6 241.1,209.8 240.9,206.1 240.8,202.3 240.6,198.6 240.5,194.9 240.3,191.1 240.1,187.4 239.9,183.7 239.7,179.9 239.5,176.2 239.3,172.4 239.1,168.7 238.8,165.0 238.5,161.2 238.1,157.5 237.6,153.7 236.5,150.0" fill="url(#ccL)"/>
+<path d="M545.0,416.0 L545.0,440.0" stroke="#E8E6E1" stroke-width="1.5" stroke-dasharray="3 3"/>
+<circle cx="299.3" cy="359.9" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="260.5" cy="384.7" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M319.7,358.0 L307.6,366.8" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M253.6,406.4 L265.7,397.5" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="311.7" cy="376.9" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="276.4" cy="406.4" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M331.8,372.4 L320.9,382.7" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M272.2,428.8 L283.1,418.5" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="326.2" cy="392.2" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="294.9" cy="425.9" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M345.5,385.2 L336.0,396.8" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M293.6,448.7 L303.1,437.1" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="342.5" cy="405.6" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="315.6" cy="442.9" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M360.8,396.2 L352.8,408.9" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M317.2,465.7 L325.2,453.0" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="360.4" cy="416.8" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="338.4" cy="457.2" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M377.4,405.2 L371.0,418.8" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M342.9,479.6 L349.2,466.0" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="379.5" cy="425.7" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="362.8" cy="468.5" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M394.9,412.0 L390.3,426.3" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M370.1,490.2 L374.6,475.9" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="399.6" cy="432.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="388.4" cy="476.7" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M413.1,416.6 L410.4,431.3" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M398.3,497.2 L401.0,482.5" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="420.3" cy="435.8" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="414.9" cy="481.5" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M431.8,418.8 L431.0,433.8" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M427.3,500.7 L428.1,485.7" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="441.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="441.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M453.5,419.0 L453.5,434.0" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M453.5,501.0 L453.5,486.0" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="465.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="465.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M477.5,419.0 L477.5,434.0" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M477.5,501.0 L477.5,486.0" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="489.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="489.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M501.5,419.0 L501.5,434.0" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M501.5,501.0 L501.5,486.0" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="513.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="513.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M525.5,419.0 L525.5,434.0" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M525.5,501.0 L525.5,486.0" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<circle cx="537.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="537.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="561.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="561.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="605.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="605.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="649.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="649.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="693.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="693.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="737.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="737.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="781.5" cy="437.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<circle cx="781.5" cy="483.0" r="7" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M198,170 L219,170" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/><path d="M302,170 L281,170" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ccB)"/>
+<path d="M770,412 L770,442" stroke="#FFC24A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="770" cy="444" r="6" fill="#FFF3C4"/>
+<rect x="773" y="443" width="6" height="34" fill="#0F1113"/>
+<g stroke="#6A7078" stroke-width="1" fill="none"><path d="M200,40 L330,40"/><path d="M326,120 L380,120"/><path d="M280,170 L380,170"/><path d="M284,228 L380,228"/><path d="M270,330 L380,300"/><path d="M296,520 L296,520"/><path d="M350,520 L440,492"/></g>
+<g font-size="14" font-weight="700" fill="#E8E6E1"><text x="338" y="44">鋼包</text><text x="388" y="124">中間包</text><text x="388" y="174">結晶器</text><text x="388" y="229">二次冷卻區</text></g>
+<g font-size="12" fill="#9AA0A6"><text x="338" y="62">放在轉台上，鋼液從底部滑動水口流出</text><text x="388" y="142">穩定流量、讓夾雜物上浮</text><text x="388" y="192">水冷銅板；上下振動，鋼液表面蓋保護渣</text><text x="388" y="247">噴水冷卻，夾輥支撐；鑄坯一路往下、轉彎</text></g>
+<g font-size="13" font-weight="700" fill="#E8E6E1"><text x="388" y="320">弧形段</text><text x="300" y="526">矯直</text><text x="553" y="386" text-anchor="middle">凝固終點</text><text x="770" y="404" text-anchor="middle">火焰切割</text><text x="830" y="512" text-anchor="middle">定長板胚</text></g>
+<g font-size="12" fill="#9AA0A6"><text x="388" y="338">鑄坯沿圓弧往下走，同時繼續冷卻</text><text x="300" y="543">把弧形拉直，成為水平</text><text x="553" y="402" text-anchor="middle">液心消失</text></g>
+<g font-size="13" font-weight="700" fill="#E8E6E1"><text x="40" y="300">坯殼</text><text x="40" y="360">液心</text></g><g font-size="12" fill="#9AA0A6"><text x="40" y="317">外層先凝固</text><text x="40" y="377">中心仍是液態</text></g>
+<g stroke="#6A7078" stroke-width="1" fill="none"><path d="M96,296 L281,351"/><path d="M96,356 L334,426"/></g>
+</svg>
+</div></div>
+<figcaption>本站繪製之弧形連鑄機剖面示意圖，比例簡化；各廠的機長、弧形半徑、輥子配置與流數都不同，鑄坯內的液心長度也隨鑄速與鋼種改變。圖中橙色為尚未凝固的液心，灰色為已凝固的坯殼。手機上可以左右滑動看全圖。</figcaption>
+</figure>
+<div class="mapkey"><span><i style="background:#FF6A1A;height:10px;width:14px"></i>鋼液、液心</span><span><i style="background:#8A8F96;height:10px;width:14px"></i>已凝固的坯殼</span><span><i style="background:#C9744A;height:10px;width:14px"></i>銅製結晶器</span><span><i style="background:#8DB4D6"></i>冷卻水</span></div>
+<p>連鑄機的外形像一座高聳的「滑梯」：鋼液從高處注入，鑄坯沿著弧形往下走、轉成水平，再一路送到切斷點。圖上是目前最常見的弧形連鑄機；另外還有鑄坯全程垂直的立式，以及水平式、雙帶式等型式，各有適合的產品與廠房條件。</p>
+<ul>
+<li><b>鋼包與轉台。</b> 鋼包放在連鑄機上方的轉台上，一包澆完，轉台轉位，換上下一包。鋼包底部有滑動水口，打開後鋼液流入中間包。</li>
+<li><b>中間包。</b> 它接收鋼包的鋼液，依設定的速率分給結晶器。它同時是緩衝槽：換鋼包時，靠中間包裡的存量維持澆鑄；鋼液在裡面緩流，也讓夾雜物有機會上浮。連鑄機的「流」（strand）數就是中間包分出去的路數，板胚機常是 1–2 流，大方胚 2–6 流，小方胚 2–8 流。</li>
+<li><b>水口與保護。</b> 鋼液不能暴露在空氣中，否則會再氧化。鋼包到中間包有長水口，中間包到結晶器有浸入式水口，連接處常吹氬氣保護；中間包液面蓋有覆蓋渣。</li>
+<li><b>結晶器。</b> 一個沒有底的水冷銅框，是連鑄機最關鍵的設備。鋼液在這裡第一次接觸冷銅板，外層立刻凝固成殼。</li>
+<li><b>二次冷卻區。</b> 鑄坯出結晶器後，兩側有密排的夾輥撐住坯殼，並在輥子之間噴水冷卻。</li>
+<li><b>拉矯與切斷。</b> 驅動輥以設定的鑄速把鑄坯往外拉，弧形機在這一段把鑄坯矯直成水平；完全凝固後，用火焰切割或剪切機切成定長，送到冷床或直接進軋延。</li>
+<li><b>引錠。</b> 開澆前，要先用一支「引錠」封住結晶器底部，鋼液才有地方凝固；待液位到了設定值，才開始抽拉，引錠頭帶著鑄坯一起往外走。</li>
+</ul>
+
+<h2>一包鋼液的旅程：九個步驟</h2>
+<p>一爐鋼的鋼液，從鋼包流進鑄機，到變成定長的鋼胚，大致經過下面九個步驟。前四步鋼液都還是液體，中間三步完成凝固，最後兩步是成形與切斷。</p>
+<ol class="flow">
+<li class="z1"><b>鋼包就位</b>鋼包吊上轉台，轉到澆鑄位置</li>
+<li class="z1"><b>鋼液進中間包</b>打開鋼包滑動水口，長水口把鋼液導入中間包，並吹氬氣保護</li>
+<li class="z1"><b>中間包分配</b>穩定流量、維持液位，讓夾雜物上浮，再分給各流</li>
+<li class="z1"><b>注入結晶器</b>浸入式水口把鋼液送到液面以下，液面蓋上保護渣</li>
+<li class="z2"><b>結晶器初凝</b>水冷銅板把鋼液冷出坯殼，結晶器同時上下振動，避免坯殼黏在銅板上</li>
+<li class="z2"><b>拉出結晶器</b>坯殼夠厚，足以承受內部鋼液的壓力，才由驅動輥以設定的鑄速往外拉</li>
+<li class="z2"><b>二次冷卻</b>一路噴水，夾輥支撐，坯殼越長越厚，中心的液心越縮越短</li>
+<li class="z3"><b>弧形與矯直</b>弧形機的鑄坯沿圓弧走，最後被逐步矯直成水平</li>
+<li class="z3"><b>切斷出坯</b>完全凝固後，以火焰切割或剪切機切成定長，送往冷床或直接軋延</li>
+</ol>
+<div class="flowkey"><span><i style="background:#9AA0A6"></i>鋼液輸送（鋼包、中間包）</span><span><i style="background:#FF6A1A"></i>凝固（結晶器、二次冷卻）</span><span><i style="background:#8DB4D6"></i>矯直與切斷</span></div>
+<p>鑄速、鋼液溫度與冷卻水量必須互相配合：鑄得太快，坯殼來不及長厚，就可能在出結晶器之後被鋼液壓破，造成漏鋼；鑄得太慢，產量上不去。所以連鑄機的操作，本質上是在「產量」與「坯殼厚度」之間找平衡。</p>
+
+<h2>結晶器：決定品質的第一關</h2>
+<p>結晶器是整個連鑄機最小、也最辛苦的設備。鋼液在這裡第一次碰到水冷的銅壁，坯殼就從這裡開始長。熱應力最集中的位置，是鋼液表面（彎月面）附近的銅板熱面。下表整理結晶器的主要設計重點：</p>
+<div class="tbl nar"><table>
+<caption style="position:absolute;left:-9999px">連鑄結晶器的主要設計重點</caption>
+<thead><tr><th scope="col">項目</th><th scope="col">重點</th></tr></thead>
+<tbody>
+<tr><th scope="row">材質</th><td>高純度銅。常見有 DHP 銅、含銀銅（CuAg）、CuCrZr 等。含銀約 0.10% 的銅，再結晶溫度約高 100°C，適合彎月面溫度在 300°C 以上的方胚與板胚</td></tr>
+<tr><th scope="row">銅板厚度</th><td>板式結晶器約 30–60 mm；小方胚的管式結晶器管壁約 10–12 mm，大斷面圓胚最厚可到 30–40 mm</td></tr>
+<tr><th scope="row">表面鍍層</th><td>工作面常鍍鉻或鎳，增加耐磨、延長壽命；鎳合金的熱膨脹係數約為鉻的兩倍，常用鎳鉻雙層鍍層，減少鍍層開裂</td></tr>
+<tr><th scope="row">冷卻水</th><td>管式結晶器的冷卻水流速約 11–13 m/s，以抑制核沸騰</td></tr>
+<tr><th scope="row">長度</th><td>深度約 0.5–2 m，依鑄速與斷面而定；ISPATGURU 列出的常見長度為 510–915 mm，與斷面大小關係不大</td></tr>
+<tr><th scope="row">錐度</th><td>鋼凝固會收縮，結晶器內腔做成上寬下窄，讓坯殼持續貼緊銅板、避免產生氣隙。板胚窄面約每公尺 0.9–1.2%，寬面約 0.35–0.45%；鑄速越高，需要的錐度越大</td></tr>
+<tr><th scope="row">振動</th><td>結晶器整體做上下的正弦振動，多採短行程、高頻率：頻率從早年約每分鐘 50–60 次，逐步提高到最高約 250–300 次。目的是製造短暫的「負滑脫」（結晶器下降速度比鑄坯快），把黏住的坯殼鬆開，並讓表面的振痕更淺</td></tr>
+<tr><th scope="row">保護渣</th><td>撒在鋼液表面，熔化後流進坯殼與銅板的縫隙。它同時隔熱、隔絕空氣、潤滑、讓傳熱均勻，還能吸收浮上來的氧化鋁夾雜</td></tr>
+<tr><th scope="row">液位控制</th><td>彎月面液位要控制在設定值 ±5 mm 內，通常能做到 ±3 mm 內，液面起伏過大會把保護渣捲進鋼裡</td></tr>
+</tbody></table></div>
+<p class="note">資料主要整理自 ISPATGURU〈Continuous Casting Mould〉與 Wikipedia；各廠機型與操作條件不同，數字為文獻列出的範圍或上限。</p>
+
+<h2>二次冷卻：邊冷邊彎邊矯直</h2>
+<p>鑄坯離開結晶器時，只有外面薄薄一層是固體，中心仍是液態，必須靠夾輥撐住，否則坯殼會被內部鋼液的壓力撐鼓、甚至破裂。二次冷卻區要做兩件事：把液心冷到完全凝固，同時維持鑄坯的形狀與表面溫度。</p>
+<figure class="fsq2"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/ECSC_Financial_report_1995_Dillinger_H%C3%BCtte_Continuous_casting.jpg/960px-ECSC_Financial_report_1995_Dillinger_H%C3%BCtte_Continuous_casting.jpg" alt="一條通紅發亮的鑄坯沿著弧形的導輥彎曲向下，旁邊站著一名戴安全帽的工人" width="960" height="1358" loading="lazy"><figcaption>德國 Dillinger Hütte 鋼廠 1995 年的板胚連鑄。一條通紅的板胚沿著弧形的導軌往前送出，這正是弧形連鑄機的特徵：鑄坯走的是一段圓弧。<small>照片：歐洲煤鋼共同體（ECSC），1995 年，<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:ECSC_Financial_report_1995_Dillinger_H%C3%BCtte_Continuous_casting.jpg">Wikimedia Commons</a></small></figcaption></figure>
+<ul>
+<li><b>噴水或水氣霧。</b> 冷卻水分成多個區段噴向鑄坯。水氣霧（空氣加水）的優點是冷卻均勻、用水較少、可減少表面裂紋。</li>
+<li><b>水量逐段遞減。</b> 愈接近結晶器，坯殼愈薄、需要冷卻的熱量愈多，噴水也愈密；愈往後水量愈少，並隨鑄速、溫度與鋼種調整。設計時鑄坯表面溫度約從 1,200°C 降到 700°C。</li>
+<li><b>夾輥由密到疏。</b> 輥距靠近結晶器處很密、輥徑小，往後逐漸放寬。輥子除了支撐，也會把熱量傳走，但冷卻仍以噴水為主。</li>
+<li><b>冷卻不是越多越好。</b> 過度冷卻會造成裂紋，包括鑄坯內部的中間裂紋；冷卻不足則讓液心太長，也可能造成表面裂紋，嚴重時坯殼破裂就會漏鋼。</li>
+<li><b>彎和矯直也傷鑄坯。</b> 弧形機的鑄坯由垂直轉向水平，彎曲時外弧受拉、內弧受壓，應變過大就會裂。所以採多點漸進的方式（例如三段弧半徑逐漸變小），把變形分散，並讓驅動輥以壓應力推送鑄坯，減少拉應力。</li>
+<li><b>冶金長度與凝固終點。</b> 從鋼液表面到液心完全消失的距離，稱為冶金長度，它與鑄機的長度設計直接相關。凝固終點一定要在切斷點之前，許多機型把它放在矯直機之前。</li>
+</ul>
+
+<h2>鑄出來的是什麼：板胚、方胚與薄板胚</h2>
+<p>連鑄機依鑄坯的斷面分成幾種，它們決定了下游能做什麼產品。扁平的板胚送去熱軋，做成鋼板與鋼捲；長條的方胚送去軋成棒鋼、線材與型鋼。</p>
+<div class="tbl nar"><table>
+<caption style="position:absolute;left:-9999px">各類鑄坯的斷面與常見用途</caption>
+<thead><tr><th scope="col">鑄坯</th><th scope="col">斷面（約略）</th><th scope="col">常見流數</th><th scope="col">常見下游</th></tr></thead>
+<tbody>
+<tr><th scope="row">板胚</th><td>厚 180–250 mm，寬 100–1,600 mm，長可達 12 m</td><td>1–2 流</td><td>熱軋鋼板、鋼捲</td></tr>
+<tr><th scope="row">薄板胚</th><td>厚約 40–110 mm</td><td>—</td><td>熱軋鋼捲，多見於電爐小型鋼廠</td></tr>
+<tr><th scope="row">大方胚</th><td>大於 200×200 mm</td><td>2–6 流</td><td>型鋼、大型棒材等</td></tr>
+<tr><th scope="row">小方胚</th><td>小於 200 mm 見方</td><td>2–8 流</td><td>棒鋼、線材</td></tr>
+</tbody></table></div>
+<p class="note">斷面與流數取自 Wikipedia 與 ISPATGURU；下游用途為常見對應，實際依各廠產線而異。</p>
+<figure class="fsq2"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/ECSC_Financial_report_1988_Ensidesa_Continuous_casting.jpg/960px-ECSC_Financial_report_1988_Ensidesa_Continuous_casting.jpg" alt="連鑄機下方，兩條通紅的鑄坯並排從鑄機送出，上方是藍綠色的鋼構廠房與吊車" width="960" height="1365" loading="lazy"><figcaption>西班牙 Avilés 的 Ensidesa 鋼廠 1988 年的連鑄。畫面中兩條通紅的鑄坯並排送出，這是「雙流」連鑄機：同一台機器同時鑄出兩條鑄坯，產量比單流高。<small>照片：歐洲煤鋼共同體（ECSC），1988 年，<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:ECSC_Financial_report_1988_Ensidesa_Continuous_casting.jpg">Wikimedia Commons</a></small></figcaption></figure>
+<p>鑄坯的斷面愈小，流數就愈多：小方胚機常有四、五流甚至更多，一個中間包同時餵好幾個結晶器；板胚斷面大，一台機常是一到兩流。機型不同，鋼廠能做的產品也不同，這也是為什麼煉鋼廠的連鑄機配置，幾乎決定了它的產品線。</p>
+
+<h2>為什麼連鑄取代了鋼錠</h2>
+<p>連鑄普及之前，鋼液是倒進一個個鋼錠模，凝固後脫模、再加熱均勻，用初軋機開胚，才能變成可以軋延的鋼胚。連鑄把這一串工序併成一條連續的線：</p>
+<div class="rng" role="img" aria-label="每 100 噸鋼液的成材比較：鋼錠加初軋路線得到約 84 噸板胚，連鑄得到約 94 噸"><p class="bt">每 100 噸鋼液可得到的板胚（噸）</p>
+<div class="rw" title="鋼錠路線：約 84 噸"><span>鋼錠＋初軋</span><span class="tr"><span class="fi" style="left:0%;width:84%;background:#9AA0A6"></span></span><span class="v">約 84</span></div>
+<div class="rw" title="連續鑄造：約 94 噸"><span>連續鑄造</span><span class="tr"><span class="fi" style="left:0%;width:94%;background:#FF6A1A"></span></span><span class="v">約 94</span></div>
+<div class="ax"><span></span><span class="sc"><span style="left:0%">0</span><span style="left:50%">50</span><span style="left:100%">100</span></span><span></span></div>
+<p class="bn">資料來源：歐洲煤鋼共同體（ECSC）出版物的製程圖（Wikimedia Commons，CC BY-SA 4.0）。圖中從 100 噸鋼液出發，鋼錠路線經鋼錠、均熱、初軋後得到 84 噸板胚，連鑄得到 94 噸。這是較早年代的歐洲示意數字，實際依鋼種、產品與各廠而異。</p></div>
+<ul>
+<li><b>成材率高。</b> 鋼錠有冒口與底部要切除，開胚時還有切頭尾的損失；連鑄是連續成形，這部分損耗大幅縮小。</li>
+<li><b>少了好幾道工序。</b> 不需要鋼錠模、脫模、均熱爐與初軋機，省下的設備、能源與人力都很可觀，據 ISPATGURU，連鑄的設備投資較高、操作成本較低，是大量生產半成品鋼材時成本與能源效率最高的方法。</li>
+<li><b>品質更均勻。</b> 每一支鑄坯都經過幾乎相同的冷卻歷程，成分與組織的一致性比鋼錠好控制，也更容易自動化。</li>
+<li><b>普及速度驚人。</b> 據 ISPATGURU，連鑄占世界粗鋼的比例 1970 年約 4%，同一篇文章引用的近年比例約為 96%；worldsteel 統計 2024 年為 97.5%。</li>
+</ul>
+
+<h2>連鑄會出什麼問題</h2>
+<p>鑄坯內部還是液態的時候，坯殼就像一層薄皮。連鑄的各種異常，大多與坯殼和冷卻有關：</p>
+<ul>
+<li><b>漏鋼（breakout）。</b> 最嚴重的異常。坯殼太薄、鑄速太快、鋼液過熱度太高、流動紊亂，或坯殼黏在結晶器上被撕裂，都可能讓坯殼破掉、液態鋼漏出來，輕則停機清理，重則損壞設備、危及人員。</li>
+<li><b>黏結。</b> 坯殼黏在銅板上，是結晶器要振動、要用保護渣潤滑的主因。結晶器內的液位要控制得很穩，通常在 ±3 mm 內，這也與保護渣膜的穩定有關。</li>
+<li><b>裂紋。</b> 過冷、欠冷、彎曲與矯直的應變、結晶器內的不均勻收縮，都可能造成表面或內部裂紋。方胚在高鑄速時，角部的坯殼可能收縮脫離銅壁，傳熱變差，造成角部裂紋或漏鋼風險。</li>
+<li><b>夾雜與偏析。</b> 夾雜物來自鋼包與中間包的流動與再氧化；中心偏析則與最後凝固的區域有關。對策方面，1980 年代起，鋼包處理、電磁攪拌與二次冷卻等技術都全面改進，這些改進是連鑄品質提升的關鍵。</li>
+</ul>
+
+<h2>更薄、更接近成品：薄板胚與薄帶鑄造</h2>
+<p>既然鑄得出板胚，能不能鑄得更薄，省掉更多軋延？答案是可以：</p>
+<div class="rng" role="img" aria-label="各種連鑄產品的厚度範圍（毫米）：雙輥薄帶鑄造約 1–2、水平單帶鑄造 10–15、薄板胚 40–110、傳統板胚 180–250"><p class="bt">各種鑄坯與鑄帶的厚度（mm）</p>
+<div class="rw" title="雙輥薄帶鑄造：約 1–2 mm"><span>雙輥薄帶</span><span class="tr"><span class="fi" style="left:0.4%;width:0.8%;background:#8DB4D6;min-width:3px"></span></span><span class="v">約 1–2</span></div>
+<div class="rw" title="水平單帶鑄造：10–15 mm"><span>水平單帶</span><span class="tr"><span class="fi" style="left:4%;width:2%;background:#8DB4D6;min-width:3px"></span></span><span class="v">10–15</span></div>
+<div class="rw" title="薄板胚：40–110 mm"><span>薄板胚</span><span class="tr"><span class="fi" style="left:16%;width:28%;background:#FF8A47"></span></span><span class="v">40–110</span></div>
+<div class="rw" title="傳統板胚：180–250 mm"><span>傳統板胚</span><span class="tr"><span class="fi" style="left:72%;width:28%;background:#FF6A1A"></span></span><span class="v">180–250</span></div>
+<div class="ax"><span></span><span class="sc"><span style="left:0%">0</span><span style="left:40%">100</span><span style="left:80%">200</span></span><span></span></div>
+<p class="bn">資料來源：Wikipedia、ISPATGURU、Encyclopedia.pub；各資料對薄帶厚度的說法略有出入，此處取約略範圍。</p></div>
+<ul>
+<li><b>薄板胚連鑄。</b> 1985 年起出現，鑄坯厚度只有傳統板胚的幾分之一，主要服務電爐小型鋼廠，讓它們也能進入扁平產品市場。</li>
+<li><b>薄帶鑄造。</b> 雙輥式是貝塞麥早在 1857 年就想到的構想，直到 2000 年代才有商業成功的案例（如 Castrip）；義大利的 Arvedi ESP 於 2015 年投產，把連鑄和軋延連成一條線；水平單帶鑄造則可直接鑄出 10–15 mm 的鑄帶。</li>
+<li><b>取捨。</b> 鑄得愈薄，省下的軋延愈多，但鑄速、表面品質與鋼種範圍的限制也愈大，所以傳統板胚連鑄機仍是主流。</li>
+</ul>
+
+<h2>歷史小註腳：從專利到每一座鋼廠</h2>
+<div class="tlfig">
+<ol class="tl nofut">
+<li class="ev"><span class="d">1857</span><span class="dot"></span><span class="t">貝塞麥提出雙輥連鑄專利</span></li>
+<li class="ev"><span class="d">1886</span><span class="dot"></span><span class="t">阿薩提出無底水冷結晶器專利</span></li>
+<li class="ev k"><span class="d">1930 年代</span><span class="dot"></span><span class="t">容漢斯用結晶器振動，解決黏結</span></li>
+<li class="ev x"><span class="d">1949</span><span class="dot"></span><span class="t">羅西的鋼連鑄機在美國啟用</span></li>
+<li class="ev x"><span class="d">1950 年代</span><span class="dot"></span><span class="t">立式連鑄機開始商業運轉</span></li>
+<li class="ev x"><span class="d">1960 年代</span><span class="dot"></span><span class="t">日本、韓國率先大規模採用</span></li>
+<li class="ev k"><span class="d">1985</span><span class="dot"></span><span class="t">薄板胚連鑄出現</span></li>
+<li class="ev k"><span class="d">2000 年代</span><span class="dot"></span><span class="t">薄帶鑄造開始商業化</span></li>
+</ol>
+<p class="tlkey"><span><i class="k1"></i>技術發明</span><span><i class="k2"></i>工業化與普及</span></p>
+</div>
+<ul>
+<li><b>一個多世紀的構想。</b> 1857 年，英國的貝塞麥（Henry Bessemer）取得專利，構想把鋼液注入兩個相向轉動的滾輪之間，直接鑄出鋼板。這個想法在當時的材料與控制條件下無法實現，要等到一個半世紀後的 2000 年代，才有商業成功的案例。</li>
+<li><b>水冷銅框。</b> 1886 年，阿薩（Benjamin Atha）提出無底的水冷結晶器專利；1915 年，由機械製造商建造的連鑄機問世，鑄出的是小斷面（約 45–75 mm 見方）的鑄坯。</li>
+<li><b>振動是關鍵。</b> 早期連鑄最大的難題是坯殼黏在結晶器上。1921 年有人提出結晶器往復運動的專利，1930 年代德國的容漢斯（Siegfried Junghans）把結晶器振動實際用在黃銅連鑄上，才解決這個問題，奠定現代連鑄的基礎。</li>
+<li><b>從試驗到商業運轉。</b> 1949 年，羅西（Rossi）的鋼連鑄機在美國 Allegheny Ludlum 啟用；1954 年羅西創立 Concast 公司，同年加拿大安大略 Welland 的 Atlas Steels 投產北美第一台商業上成功的立式連鑄機。1950 年代之後，連鑄才逐步取代鋼錠。</li>
+<li><b>亞洲的追趕。</b> 1960 年代，日本與韓國的鋼鐵業在擴張期率先大規模採用連鑄，後來亞洲也成為連鑄機的主要供應地區。</li>
+</ul>
+
+<h2>對台灣鋼鐵業的意義</h2>
+<ul>
+<li><b>連鑄比 100%。</b> 據 worldsteel 統計，台灣的粗鋼 100% 是連鑄出來的；2022、2023、2024 年的連鑄鋼產量分別約為 2,080、1,910、1,920 萬噸。沒有鋼錠路線，意味著每一爐鋼都要在連鑄機上通過凝固這一關。</li>
+<li><b>中鋼有 10 座連鑄機。</b> 依中鋼網站的生產設備頁，有大鋼胚連鑄機 3 座，每座 4 流；扁鋼胚連鑄機 7 座，每座 2 流。轉爐出鋼、二次精煉後的鋼包，就送到這些連鑄機澆成大鋼胚與扁鋼胚（板胚），再往下游軋成棒線、型鋼與鋼板。</li>
+<li><b>中龍走全密閉。</b> 中龍鋼鐵是國內唯一同時具備高爐、轉爐與電爐的鋼廠，網站介紹的特色之一，就是高爐鐵水、真空脫氣精煉與全密閉式連鑄設備的組合；一般來說，全密閉的目的，是讓鋼液從鋼包到結晶器都盡量不與空氣接觸，減少再氧化。</li>
+<li><b>品質從連鑄開始。</b> 汽車外板、電磁鋼片這類高階產品，對夾雜物與表面缺陷要求極嚴，鑄坯的清淨度與表面品質，很大程度在連鑄階段就決定了。</li>
+</ul>
+
+<h2>延伸閱讀</h2>
+<ul>
+<li><a href="2026-10-bof.html">轉爐怎麼煉鋼：從兌鐵水、吹氧到出鋼的四十分鐘</a></li>
+<li><a href="2026-10-eaf-operation.html">電爐怎麼煉鋼：從通電熔化到出鋼的一爐週期</a></li>
+<li><a href="2026-10-blast-furnace.html">高爐怎麼煉鐵：從爐頂裝料、熱風燃燒到出鐵的連續作業</a></li>
+<li><a href="2026-10-csc-if-rc30.html">中鋼 IF 汽車用鋼 RC30：把三成廢鋼煉進汽車外板</a></li>
+</ul>
+
+<h2>資料來源</h2>
+<ul class="sources">
+<li><a href="https://www.ispatguru.com/?p=2779">Understanding the Process of Continuous Casting of Steel</a>（ISPATGURU，2015）</li>
+<li><a href="https://www.ispatguru.com/?p=10026">Continuous Casting Mould</a>（ISPATGURU，2020）</li>
+<li><a href="https://ispatguru.com/?p=1724">Secondary Cooling Technology in Continuous Casting Process</a>（ISPATGURU，2014）</li>
+<li><a href="https://www.ispatguru.com/?p=3410">Historical aspects of the Continuous Casting and related Technologies for Steel</a>（ISPATGURU，2016）</li>
+<li><a href="https://en.wikipedia.org/wiki/Continuous_casting">Continuous casting</a>（Wikipedia）</li>
+<li><a href="https://encyclopedia.pub/entry/23634">連鑄與薄鑄技術歷史</a>（Encyclopedia.pub）</li>
+<li><a href="https://worldsteel.org/wp-content/uploads/World-Steel-in-Figures-2025.pdf">World Steel in Figures 2025</a>（worldsteel）</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Continuous_casting_steel_yield_versus_ingot_casting.png">Continuous casting steel yield versus ingot casting</a>（歐洲煤鋼共同體，Wikimedia Commons）</li>
+<li><a href="https://www.csc.com.tw/csc/pd/pdeq/pdeq.html">中鋼鋼品主要生產設備</a>（中國鋼鐵）</li>
+<li><a href="https://www.dragonsteel.com.tw/pro/pro.html">中龍鋼鐵產品與設備介紹</a>（中龍鋼鐵）</li>
+</ul>
+<p style="font-size:13px;color:#9AA0A6;margin-top:32px">內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</p>
+</article>
+<!-- article-qr -->
+<aside aria-label="本文連結 QR Code" style="max-width:760px;box-sizing:border-box;margin-top:48px;border:1px solid #2A2F35;background:#15181B;padding:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+<img src="../assets/qr/2026-10-continuous-casting.png" alt="本文連結 QR Code" width="132" height="132" loading="lazy" style="display:block;width:132px;height:132px;background:#FFFFFF;flex:none">
+<div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 220px">
+<p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;color:#FF6A1A">SHARE</p>
+<p style="margin:0;font-size:17px;font-weight:900;color:#E8E6E1">掃描 QR Code 開啟本文</p>
+<p style="margin:0;font-size:13px;line-height:1.7;color:#9AA0A6;word-break:break-all">https://steeltrending.github.io/articles/2026-10-continuous-casting.html</p>
+<div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:4px"><a href="../assets/qr/2026-10-continuous-casting.png" download="steeltrending-2026-10-continuous-casting-qr.png" style="font-size:14px;color:#FF8A47;text-decoration:none">下載 QR Code ↓</a><button type="button" data-url="https://steeltrending.github.io/articles/2026-10-continuous-casting.html" onclick="var b=this,u=this.dataset.url;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).catch(function(){var t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}).then(function(){b.textContent='已複製本文網址';setTimeout(function(){b.textContent='分享本文'},2000)})" style="font:inherit;font-size:14px;color:#FF8A47;background:none;border:0;padding:0;cursor:pointer">分享本文</button></div>
+</div>
+</aside>
+<!-- /article-qr -->
+
+<p style="margin-top:48px"><a href="../#topics" style="display:inline-flex;align-items:center;border:1px solid #4A5058;color:#E8E6E1;text-decoration:none;padding:12px 20px">← 回到鋼鐵小學堂</a></p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending　·　<a href="../sitemap.html" style="color:#C9CDD2">網站導覽</a></span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+<div class="tip" id="tip" hidden></div>
+<script>
+(function(){var t=document.getElementById('tip');if(!t)return;
+document.querySelectorAll('.pw path[data-tip]').forEach(function(p){
+p.addEventListener('mousemove',function(e){t.textContent=p.getAttribute('data-tip');t.hidden=false;t.style.left=(e.clientX+12)+'px';t.style.top=(e.clientY+12)+'px';});
+p.addEventListener('mouseleave',function(){t.hidden=true;});});})();
+</script>
+<script src="../assets/hover.js" defer></script>
+<script src="../assets/tts.js" defer></script>
+</body>
+</html>
