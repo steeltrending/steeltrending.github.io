@@ -12,6 +12,8 @@ on:
       - tools/article_qr.py
       - tools/article_tts.py
       - assets/tts.js
+      - tools/page_theme.py
+      - assets/theme.js
   workflow_dispatch:
 
 permissions:
@@ -34,12 +36,14 @@ jobs:
           python3 tools/article_qr.py
       - name: 文章語音朗讀
         run: python3 tools/article_tts.py
+      - name: 亮色／暗色主題切換
+        run: python3 tools/page_theme.py
       - run: python3 tools/build_sitemap.py
       - name: 提交更新
         run: |
           git config user.name "steeltrending"
           git config user.email "noreply@steeltrending.github.io"
-          git add sitemap.xml robots.txt articles assets/qr
+          git add sitemap.xml robots.txt articles assets/qr '*.html'
           if git diff --cached --quiet; then echo "沒有變動"; exit 0; fi
           git commit -m "sitemap.xml／文章 QR 自動更新 $(TZ=Asia/Taipei date +%F)"
           for i in 1 2 3; do

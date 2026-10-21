@@ -146,6 +146,7 @@
     '.tts-bar .tts-st{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:12px;color:#9AA0A6;white-space:nowrap}' +
     '.tts-on{background:rgba(255,106,26,.10);box-shadow:-10px 0 0 rgba(255,106,26,.10),10px 0 0 rgba(255,106,26,.10);border-radius:2px;transition:background .2s}' +
     'h2.tts-on{color:#FF8A47}' +
+    '@media (max-width:860px){.tts-bar{padding-right:64px}}' +
     '@media (max-width:640px){.tts-bar{gap:8px}.tts-bar .tts-st{margin-left:0;width:100%}.tts-bar select{max-width:140px}}' +
     '@media print{.tts-bar{display:none}}';
   document.head.appendChild(css);
