@@ -85,6 +85,23 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 @media (max-width:900px){.map-layout{grid-template-columns:1fr}}
 @media (max-width:640px){.wrap{padding:0 16px}#map{max-height:none}.map-box{padding:8px}.kpi{padding:14px}.kpi .v{font-size:22px}.kpi .v small{font-size:13px;margin-left:4px}.info{width:calc(100% - 16px);right:8px;bottom:8px;max-height:52%;padding:10px 12px}.info h3{font-size:16px}.info dl{grid-template-columns:5.6em 1fr;font-size:12px;gap:2px 8px}.list{max-height:520px}}
 @media (min-width:901px) and (max-width:1180px){.info{width:300px}}
+.tl{margin-top:48px}
+.tl h2{margin:0;font-size:clamp(22px,3vw,30px);font-weight:900}
+.tl-box{border:1px solid #2A2F35;background:#121417;padding:14px;margin-top:16px}
+.tl-tools{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-bottom:10px}
+.tl-tools .grp{display:flex;gap:6px;flex-wrap:wrap}
+.chip[aria-pressed="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+#tl{display:block;width:100%;height:auto;touch-action:pan-y;cursor:crosshair}
+#tl .ax{stroke:#2A2F35;stroke-width:1}
+#tl .tk{fill:#9AA0A6;font-size:12px;font-family:'IBM Plex Mono',monospace}
+#tl .ln{fill:none;stroke-width:2.2;stroke-linejoin:round}
+#tl .gap{fill:none;stroke-width:1.4;stroke-dasharray:4 4;opacity:.55}
+#tl .ms text{fill:#E8E6E1;font-size:11px;paint-order:stroke;stroke:#121417;stroke-width:3px}
+#tl .ms line{stroke:#5A6068;stroke-dasharray:2 3}
+.tl-read{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:1px solid #2A2F35;border-left:1px solid #2A2F35;margin-top:12px}
+.tl-read div{padding:12px 14px;border-right:1px solid #2A2F35;border-bottom:1px solid #2A2F35;background:#15181B;font-size:13px;color:#9AA0A6;line-height:1.6}
+.tl-read b{display:block;font-size:18px;color:#E8E6E1;font-weight:600}
+.dot{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:50%}
 </style>
 <link rel="icon" href="/favicon.ico?v=2" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
@@ -149,6 +166,22 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 <p id="listnote" class="note" style="margin:0"></p>
 </aside>
 </div>
+
+<section class="tl" aria-labelledby="tl-h">
+<p class="mono" style="margin:0 0 8px;font-size:13px;letter-spacing:.24em;color:#FF6A1A">NATIONAL TIMELINE</p>
+<h2 id="tl-h">全國粗鋼歷史走勢（1949 起）</h2>
+<p style="margin:8px 0 0;font-size:15px;line-height:1.8;color:#9AA0A6;max-width:46em">從國家統計局有紀錄的 1949 年起，看全國粗鋼產量如何一路成長到 2020 年的高峰、再回落。滑鼠移到圖上（手機用手指點）可讀取各年數字。</p>
+<div class="tl-box">
+<div class="tl-tools">
+<div class="grp" role="group" aria-label="資料系列"><button class="chip" type="button" id="s-nbs" aria-pressed="true"><span class="dot" style="background:#FF8A47"></span>國家統計局</button><button class="chip" type="button" id="s-ws" aria-pressed="true"><span class="dot" style="background:#8DB4D6"></span>worldsteel</button></div>
+<div class="grp" role="group" aria-label="座標尺度"><button class="chip" type="button" data-sc="lin" aria-pressed="true">線性</button><button class="chip" type="button" data-sc="log" aria-pressed="false">對數</button></div>
+<div class="grp" role="group" aria-label="年份範圍"><button class="chip" type="button" data-r="1949" aria-pressed="true">1949 起</button><button class="chip" type="button" data-r="1990" aria-pressed="false">1990 起</button><button class="chip" type="button" data-r="2006" aria-pressed="false">2006 起</button></div>
+</div>
+<svg id="tl" viewBox="0 0 800 380" role="img" aria-label="全國粗鋼歷年產量折線圖"></svg>
+<div id="tl-read" class="tl-read" aria-live="polite"></div>
+<p class="note" id="tl-note"></p>
+</div>
+</section>
 
 <p id="src" style="margin:48px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6"></p>
 </main>
@@ -545,6 +578,120 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
     refreshClasses(); drawCard();
     if (p) focusProvince(p);
   }
+
+  /* ---------- 全國歷史時間軸 ---------- */
+  (function () {
+    var NS = 'http://www.w3.org/2000/svg', $ = function (id) { return document.getElementById(id); };
+    var box = $('tl'), W = 800, H = 380, M = { l: 62, r: 18, t: 18, b: 32 };
+    var C = { nbs: '#FF8A47', ws: '#8DB4D6' };
+    var st = { nbs: true, ws: true, sc: 'lin', r0: 1949 }, S = { nbs: [], ws: [] }, hist = null, maxY = 0;
+    function sv(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
+    function fmt(n) { return Math.round(n).toLocaleString('zh-TW'); }
+    function wanTxt(n) { return n >= 10000 ? (n / 1e4).toLocaleString('zh-TW', { maximumFractionDigits: 2 }) + ' 億噸' : fmt(n) + ' 萬噸'; }
+    Promise.all([
+      fetch('data/cnsteel.json?ts=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }),
+      fetch('data/worldsteel.json?ts=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); })
+    ]).then(function (res) {
+      hist = res[0].history; S.nbs = hist.nbs.slice();
+      var c = res[1].annual && res[1].annual.crude && res[1].annual.crude.CHN || {};
+      S.ws = Object.keys(c).map(function (y) { return [+y, c[y] / 10]; }).sort(function (a, b) { return a[0] - b[0]; });
+      $('tl-note').textContent = '單位：萬噸（粗鋼）。橘色為國家統計局口徑（' + hist.nbs_source + '）；藍色為世界鋼鐵協會統計（每年自動更新），兩者口徑略有差異（如 2011 年相差約 2%）。虛線表示該段期間沒有逐年資料，不代表實際走勢。' + hist.gaps;
+      bindTl(); drawTl();
+    }).catch(function () { $('tl-note').textContent = '歷史資料載入失敗，請稍後重新整理。'; });
+
+    function bindTl() {
+      $('s-nbs').addEventListener('click', function () { st.nbs = !st.nbs; this.setAttribute('aria-pressed', st.nbs); drawTl(); });
+      $('s-ws').addEventListener('click', function () { st.ws = !st.ws; this.setAttribute('aria-pressed', st.ws); drawTl(); });
+      [].forEach.call(document.querySelectorAll('[data-sc]'), function (b) { b.addEventListener('click', function () { st.sc = b.dataset.sc; [].forEach.call(document.querySelectorAll('[data-sc]'), function (x) { x.setAttribute('aria-pressed', x === b); }); drawTl(); }); });
+      [].forEach.call(document.querySelectorAll('[data-r]'), function (b) { b.addEventListener('click', function () { st.r0 = +b.dataset.r; [].forEach.call(document.querySelectorAll('[data-r]'), function (x) { x.setAttribute('aria-pressed', x === b); }); drawTl(); }); });
+      box.addEventListener('pointermove', onMove); box.addEventListener('pointerdown', onMove);
+      box.addEventListener('pointerleave', function () { readout(null); });
+    }
+    var X = null, Y = null, x0, x1;
+    function scales() {
+      x0 = st.r0 - (st.r0 === 1949 ? 1 : 0.5); x1 = 2026;
+      var vis = [];
+      if (st.nbs) vis = vis.concat(S.nbs); if (st.ws) vis = vis.concat(S.ws);
+      vis = vis.filter(function (p) { return p[0] >= st.r0; });
+      maxY = Math.max.apply(null, vis.map(function (p) { return p[1]; }).concat([1]));
+      X = function (y) { return M.l + (y - x0) / (x1 - x0) * (W - M.l - M.r); };
+      if (st.sc === 'log') {
+        var lo = Math.log10(vis.length ? Math.min.apply(null, vis.map(function (p) { return p[1]; })) : 10), hi = Math.log10(maxY * 1.2);
+        lo = Math.floor(lo); hi = Math.ceil(hi);
+        Y = function (v) { return H - M.b - (Math.log10(Math.max(v, 1)) - lo) / (hi - lo) * (H - M.t - M.b); };
+        Y.ticks = []; for (var e = lo; e <= hi; e++) Y.ticks.push(Math.pow(10, e));
+      } else {
+        var step = maxY > 60000 ? 20000 : maxY > 20000 ? 10000 : maxY > 8000 ? 2000 : 1000, top = Math.ceil(maxY * 1.05 / step) * step;
+        Y = function (v) { return H - M.b - v / top * (H - M.t - M.b); };
+        Y.ticks = []; for (var t = 0; t <= top; t += step) Y.ticks.push(t);
+      }
+    }
+    function drawTl() {
+      scales(); box.innerHTML = '';
+      Y.ticks.forEach(function (t) {
+        sv('line', { x1: M.l, x2: W - M.r, y1: Y(t), y2: Y(t), 'class': 'ax' }, box);
+        var tx = sv('text', { x: M.l - 8, y: Y(t) + 4, 'text-anchor': 'end', 'class': 'tk' }, box);
+        tx.textContent = t === 0 ? '0' : (t >= 10000 ? (t / 1e4) + ' 億' : fmt(t) + ' 萬');
+      });
+      var step = st.r0 >= 2006 ? 5 : 10;
+      for (var y = Math.ceil(st.r0 / step) * step; y <= 2025; y += step) {
+        sv('line', { x1: X(y), x2: X(y), y1: H - M.b, y2: H - M.b + 4, 'class': 'ax' }, box);
+        var t2 = sv('text', { x: X(y), y: H - M.b + 18, 'text-anchor': 'middle', 'class': 'tk' }, box); t2.textContent = y;
+      }
+      ['nbs', 'ws'].forEach(function (k) { if (st[k]) series(S[k].filter(function (p) { return p[0] >= st.r0; }), C[k], k === 'nbs'); });
+      if (st.nbs && st.sc === 'lin') milestones();
+      cross = sv('g', {}, box);
+      readout(null);
+    }
+    function series(pts, col, dots) {
+      var run = [];
+      function flush() { if (run.length > 1) sv('path', { d: 'M' + run.map(function (p) { return X(p[0]).toFixed(1) + ',' + Y(p[1]).toFixed(1); }).join('L'), 'class': 'ln', stroke: col }, box); run = []; }
+      for (var i = 0; i < pts.length; i++) {
+        if (i && pts[i][0] - pts[i - 1][0] > 1) {
+          flush();
+          sv('path', { d: 'M' + X(pts[i - 1][0]).toFixed(1) + ',' + Y(pts[i - 1][1]).toFixed(1) + 'L' + X(pts[i][0]).toFixed(1) + ',' + Y(pts[i][1]).toFixed(1), 'class': 'gap', stroke: col }, box);
+        }
+        run.push(pts[i]);
+      }
+      flush();
+      pts.forEach(function (p) { if (dots) sv('circle', { cx: X(p[0]), cy: Y(p[1]), r: 3.2, fill: col }, box); });
+    }
+    function milestones() {
+      [10000, 20000, 30000, 40000, 50000, 60000].forEach(function (v) {
+        var p = S.nbs.filter(function (q) { return q[1] >= v && q[0] >= st.r0; })[0];
+        var prev = p && S.nbs[S.nbs.indexOf(p) - 1];
+        if (!p || !prev || p[0] - prev[0] !== 1) return;   // 只標逐年資料中確定的首次突破
+        var g = sv('g', { 'class': 'ms' }, box);
+        sv('line', { x1: X(p[0]), x2: X(p[0]), y1: Y(p[1]), y2: Y(p[1]) - 26 }, g);
+        var t = sv('text', { x: X(p[0]) - 4, y: Y(p[1]) - 30, 'text-anchor': 'end' }, g); t.textContent = p[0] + ' 首破 ' + (v / 1e4) + ' 億噸';
+      });
+    }
+    var cross;
+    function onMove(e) {
+      var r = box.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * W;
+      var yr = Math.round(x0 + (x - M.l) / (W - M.l - M.r) * (x1 - x0));
+      if (yr < st.r0 || yr > 2025) { readout(null); return; }
+      readout(yr);
+    }
+    function find(a, y) { for (var i = 0; i < a.length; i++) if (a[i][0] === y) return a[i]; return null; }
+    function readout(yr) {
+      var rd = $('tl-read'); rd.innerHTML = '';
+      cross.innerHTML = '';
+      function cell(h, v, sub) { var d = document.createElement('div'); d.innerHTML = '<span></span><b></b><span></span>'; d.children[0].textContent = h; d.children[1].textContent = v; d.children[2].textContent = sub || ''; rd.appendChild(d); }
+      if (yr == null) {
+        var ws = S.ws, peak = ws.reduce(function (m, p) { return p[1] > m[1] ? p : m; }, [0, 0]), last = ws[ws.length - 1];
+        cell('歷史高峰（worldsteel）', peak[0] + ' 年 ' + wanTxt(peak[1]), '');
+        cell('最新年度', last[0] + ' 年 ' + wanTxt(last[1]), '較高峰 ' + ((last[1] / peak[1] - 1) * 100).toFixed(1) + '%');
+        var f = S.nbs[0]; cell('最早紀錄（國家統計局）', f[0] + ' 年 ' + f[1].toLocaleString('zh-TW') + ' 萬噸', '1949 至 2025 年約成長 6,000 倍');
+        return;
+      }
+      sv('line', { x1: X(yr), x2: X(yr), y1: M.t, y2: H - M.b, stroke: '#E8E6E1', 'stroke-width': 1, 'stroke-dasharray': '3 3' }, cross);
+      var a = find(S.nbs, yr), b = find(S.ws, yr);
+      cell('年份', yr + ' 年', '');
+      if (st.nbs) { cell('國家統計局', a ? wanTxt(a[1]) : '無資料', a ? (function () { var pv = find(S.nbs, yr - 1); return pv ? '年增 ' + ((a[1] / pv[1] - 1) * 100).toFixed(1) + '%' : ''; })() : '該年未取得'); if (a) sv('circle', { cx: X(yr), cy: Y(a[1]), r: 5, fill: 'none', stroke: '#fff', 'stroke-width': 2 }, cross); }
+      if (st.ws) { cell('worldsteel', b ? wanTxt(b[1]) : '無資料', b ? (function () { var pv = find(S.ws, yr - 1); return pv ? '年增 ' + ((b[1] / pv[1] - 1) * 100).toFixed(1) + '%' : ''; })() : '2006 年起才有'); if (b) sv('circle', { cx: X(yr), cy: Y(b[1]), r: 5, fill: 'none', stroke: '#fff', 'stroke-width': 2 }, cross); }
+    }
+  })();
 })();
 </script>
 </body>
