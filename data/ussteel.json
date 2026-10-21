@@ -1,0 +1,589 @@
+{
+ "country": "us",
+ "name": "美國",
+ "year": 2025,
+ "top": "nucor",
+ "toplabel": "總部在美國的最大鋼企",
+ "updated": "2026-10-22",
+ "source": {
+  "co": "世界鋼鐵協會（worldsteel）2025 年全球鋼企粗鋼產量排名，2026 年 6 月發布",
+  "plant": "Nucor FY2025 Form 10-K（鋼廠表）；U.S. Steel FY2024 Form 10-K（廠區與配置產能）；Cleveland-Cliffs FY2025 Form 10-K 與公司營運頁；Steel Dynamics FY2025 Form 10-K；USGS《Mineral Commodity Summaries 2026》鋼鐵篇；少數城市與開業年份取自維基百科",
+  "hist": "2006 年起：worldsteel 逐年統計（每年自動更新）；1973、1980、1990、2000 年：worldsteel 數據，1973 年高峰引自 statbase.org 轉載、其餘三年引自維基百科〈List of countries by steel production〉轉載，皆四捨五入至 0.1 百萬噸"
+ },
+ "companies": [
+  {
+   "id": "nss",
+   "n": "日本製鐵（含 U.S. Steel）",
+   "s": "日本製鐵",
+   "mt": 57.78,
+   "rk": 3,
+   "rky": 2025,
+   "c": "#FF8A47",
+   "note": "U.S. Steel 於 2025 年 6 月 18 日起成為日本製鐵子公司；世界鋼鐵協會的 57.78 百萬噸為集團合計，含日本與其他海外據點，並非美國產量。本頁只列 U.S. Steel 的美國廠區"
+  },
+  {
+   "id": "nucor",
+   "n": "紐柯 Nucor",
+   "s": "Nucor",
+   "mt": 22.33,
+   "rk": 16,
+   "rky": 2025,
+   "c": "#8DB4D6",
+   "note": "全部為電爐廠。Nucor 2025 年報稱鋼廠部門對外銷售約 1,985 萬短噸；世界鋼鐵協會的 22.33 百萬噸為其粗鋼產量。地圖列出年報「鋼廠」表中位於美國的 24 處廠區，加上路易斯安那州的直接還原鐵廠"
+  },
+  {
+   "id": "clf",
+   "n": "克里夫蘭—克里夫斯 Cleveland-Cliffs",
+   "s": "Cleveland-Cliffs",
+   "mt": 17.06,
+   "rk": 22,
+   "rky": 2025,
+   "c": "#7BC47F",
+   "note": "2025 年報：營運 7 座高爐、4 座電爐，原鋼配置產能約 2,000 萬短噸，主要廠區在印第安納、密西根、俄亥俄、賓夕法尼亞與安大略。本頁只標示有高爐的一貫廠與托雷多直接還原廠，電爐廠未能逐一核對所在地，暫不標示；2025 年決定關閉 Steelton、Conshohocken、Riverdale 三處"
+  },
+  {
+   "id": "stld",
+   "n": "鋼動力 Steel Dynamics",
+   "s": "Steel Dynamics",
+   "mt": 10.7,
+   "rk": 40,
+   "rky": 2025,
+   "c": "#D6A8E6",
+   "note": "全部為電爐煉鋼。2025 年報：三座薄板廠（Butler、Columbus、Sinton）及四個長材事業部；鋼鐵與塗層產能約 1,600 萬短噸。城市依公司廠區資訊，年報僅明載密西西比與西維吉尼亞州別"
+  }
+ ],
+ "plants": [
+  {
+   "id": "gary",
+   "co": "nss",
+   "n": "加里廠 Gary Works",
+   "reg": "印第安納州",
+   "city": "加里市",
+   "lat": 41.6,
+   "lon": -87.34,
+   "fig": {
+    "k": "cap",
+    "v": 680,
+    "y": "FY2024"
+   },
+   "note": "一貫製鐵（高爐＋轉爐）。年報載原鋼配置產能 750 萬短噸（含 50 萬短噸生鐵），已換算為公噸"
+  },
+  {
+   "id": "monvalley",
+   "co": "nss",
+   "n": "蒙谷廠 Mon Valley Works",
+   "reg": "賓夕法尼亞州",
+   "city": "匹茲堡近郊（布拉多克）",
+   "lat": 40.4,
+   "lon": -79.86,
+   "fig": {
+    "k": "cap",
+    "v": 263,
+    "y": "FY2024"
+   },
+   "note": "一貫製鐵；煉鋼在愛德格湯姆森（Edgar Thomson，布拉多克），另有 Irvin、Fairless 加工廠與 Clairton 焦化廠。年報載原鋼配置產能 290 萬短噸，已換算為公噸"
+  },
+  {
+   "id": "granite",
+   "co": "nss",
+   "n": "格蘭尼特城廠 Granite City Works",
+   "reg": "伊利諾州",
+   "city": "格蘭尼特城",
+   "lat": 38.7,
+   "lon": -90.15,
+   "fig": {
+    "k": "cap",
+    "v": 254,
+    "y": "FY2024"
+   },
+   "note": "年報載明煉鐵與煉鋼已無限期停止（2023 年 11 月），目前未運轉；數字為原鋼配置產能 280 萬短噸，已換算為公噸"
+  },
+  {
+   "id": "bigriver",
+   "co": "nss",
+   "n": "大河鋼鐵 Big River Steel（1、2 廠）",
+   "reg": "阿肯色州",
+   "city": "奧西奧拉",
+   "lat": 35.7,
+   "lon": -89.97,
+   "fig": {
+    "k": "cap",
+    "v": 572,
+    "y": "FY2024"
+   },
+   "note": "電爐。Big River 1 配置產能 330 萬短噸、Big River 2 為 300 萬短噸（兩座電爐），合計 630 萬短噸，已換算為公噸"
+  },
+  {
+   "id": "fairfield",
+   "co": "nss",
+   "n": "費爾菲爾德管材 Fairfield Tubular",
+   "reg": "阿拉巴馬州",
+   "city": "費爾菲爾德",
+   "lat": 33.49,
+   "lon": -86.91,
+   "fig": {
+    "k": "cap",
+    "v": 82,
+    "y": "FY2024"
+   },
+   "note": "電爐，供管材用鋼。年報載配置產能 90 萬短噸（受圓胚連鑄機限制），已換算為公噸；Fairfield Works 本體為加工廠，無煉鋼"
+  },
+  {
+   "id": "burns",
+   "co": "clf",
+   "n": "伯恩斯港廠 Burns Harbor",
+   "reg": "印第安納州",
+   "city": "伯恩斯港",
+   "lat": 41.62,
+   "lon": -87.13,
+   "fig": null,
+   "note": "一貫製鐵（高爐）"
+  },
+  {
+   "id": "indharbor",
+   "co": "clf",
+   "n": "印第安納港廠 Indiana Harbor",
+   "reg": "印第安納州",
+   "city": "東芝加哥",
+   "lat": 41.64,
+   "lon": -87.45,
+   "fig": null,
+   "note": "一貫製鐵（高爐）"
+  },
+  {
+   "id": "cleveland",
+   "co": "clf",
+   "n": "克里夫蘭廠 Cleveland Works",
+   "reg": "俄亥俄州",
+   "city": "克里夫蘭",
+   "lat": 41.47,
+   "lon": -81.65,
+   "fig": null,
+   "note": "一貫製鐵（高爐）"
+  },
+  {
+   "id": "middletown",
+   "co": "clf",
+   "n": "米德爾敦廠 Middletown Works",
+   "reg": "俄亥俄州",
+   "city": "米德爾敦",
+   "lat": 39.51,
+   "lon": -84.4,
+   "fig": null,
+   "note": "一貫製鐵（高爐）"
+  },
+  {
+   "id": "dearborn",
+   "co": "clf",
+   "n": "迪爾伯恩廠 Dearborn Works",
+   "reg": "密西根州",
+   "city": "迪爾伯恩",
+   "lat": 42.3,
+   "lon": -83.16,
+   "fig": null,
+   "note": "年報載明公司決定讓高爐、轉爐煉鋼與連鑄設備無限期停止（2025 年）"
+  },
+  {
+   "id": "toledo",
+   "co": "clf",
+   "n": "托雷多直接還原廠 Toledo DR",
+   "reg": "俄亥俄州",
+   "city": "托雷多",
+   "lat": 41.68,
+   "lon": -83.47,
+   "fig": null,
+   "note": "直接還原鐵（熱壓塊鐵 HBI）廠，年產能 190 萬公噸 HBI，2020 年完工；不是煉鋼廠，產品供高爐與電爐使用"
+  },
+  {
+   "id": "nu-hickman",
+   "co": "nucor",
+   "n": "Nucor 希克曼廠（阿肯色）",
+   "reg": "阿肯色州",
+   "city": "希克曼",
+   "lat": 35.88,
+   "lon": -89.8,
+   "fig": null,
+   "note": "電爐。產品：平軋鋼（薄板類）（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-berkeley",
+   "co": "nucor",
+   "n": "Nucor 伯克利郡廠（南卡）",
+   "reg": "南卡羅來納州",
+   "city": "伯克利郡（休格）",
+   "lat": 33.1,
+   "lon": -79.8,
+   "fig": null,
+   "note": "電爐。產品：平軋鋼與結構鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-crawfordsville",
+   "co": "nucor",
+   "n": "Nucor 克勞福茲維爾廠（印第安納）",
+   "reg": "印第安納州",
+   "city": "克勞福茲維爾",
+   "lat": 40.04,
+   "lon": -86.9,
+   "fig": null,
+   "note": "電爐。產品：平軋鋼；1989 年啟用，為全球第一座以薄板坯技術生產平軋鋼的小型鋼廠（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-blytheville",
+   "co": "nucor",
+   "n": "Nucor-Yamato 布萊斯維爾廠",
+   "reg": "阿肯色州",
+   "city": "布萊斯維爾",
+   "lat": 35.93,
+   "lon": -89.92,
+   "fig": null,
+   "note": "電爐。產品：結構鋼（寬翼緣 H 型鋼等）；Nucor 持股 51%（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-decatur",
+   "co": "nucor",
+   "n": "Nucor 迪凱特廠（阿拉巴馬）",
+   "reg": "阿拉巴馬州",
+   "city": "迪凱特",
+   "lat": 34.61,
+   "lon": -86.98,
+   "fig": null,
+   "note": "電爐。產品：平軋鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-norfolk",
+   "co": "nucor",
+   "n": "Nucor 諾福克廠（內布拉斯加）",
+   "reg": "內布拉斯加州",
+   "city": "諾福克",
+   "lat": 42.03,
+   "lon": -97.42,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-hertford",
+   "co": "nucor",
+   "n": "Nucor 赫特福德郡廠（北卡）",
+   "reg": "北卡羅來納州",
+   "city": "赫特福德郡",
+   "lat": 36.38,
+   "lon": -76.95,
+   "fig": null,
+   "note": "電爐。產品：厚板（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-plymouth",
+   "co": "nucor",
+   "n": "Nucor 普利茅斯廠（猶他）",
+   "reg": "猶他州",
+   "city": "普利茅斯",
+   "lat": 41.89,
+   "lon": -112.15,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-ghent",
+   "co": "nucor",
+   "n": "Nucor 根特廠（肯塔基）",
+   "reg": "肯塔基州",
+   "city": "根特",
+   "lat": 38.73,
+   "lon": -85.05,
+   "fig": null,
+   "note": "電爐。產品：平軋鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-jewett",
+   "co": "nucor",
+   "n": "Nucor 朱維特廠（德州）",
+   "reg": "德克薩斯州",
+   "city": "朱維特",
+   "lat": 31.36,
+   "lon": -96.14,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-darlington",
+   "co": "nucor",
+   "n": "Nucor 達靈頓廠（南卡）",
+   "reg": "南卡羅來納州",
+   "city": "達靈頓",
+   "lat": 34.3,
+   "lon": -79.87,
+   "fig": null,
+   "note": "電爐。產品：型鋼；1968 年啟用，為 Nucor 第一座棒鋼廠（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-kankakee",
+   "co": "nucor",
+   "n": "Nucor 坎卡基廠（伊利諾）",
+   "reg": "伊利諾州",
+   "city": "坎卡基",
+   "lat": 41.15,
+   "lon": -87.88,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-seattle",
+   "co": "nucor",
+   "n": "Nucor 西雅圖廠",
+   "reg": "華盛頓州",
+   "city": "西雅圖",
+   "lat": 47.55,
+   "lon": -122.34,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-tuscaloosa",
+   "co": "nucor",
+   "n": "Nucor 塔斯卡盧薩廠（阿拉巴馬）",
+   "reg": "阿拉巴馬州",
+   "city": "塔斯卡盧薩",
+   "lat": 33.21,
+   "lon": -87.57,
+   "fig": null,
+   "note": "電爐。產品：厚板（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-memphis",
+   "co": "nucor",
+   "n": "Nucor 孟菲斯廠",
+   "reg": "田納西州",
+   "city": "孟菲斯",
+   "lat": 35.15,
+   "lon": -90.05,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-auburn",
+   "co": "nucor",
+   "n": "Nucor 奧本廠（紐約）",
+   "reg": "紐約州",
+   "city": "奧本",
+   "lat": 42.93,
+   "lon": -76.57,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-jackson",
+   "co": "nucor",
+   "n": "Nucor 傑克遜廠（密西西比）",
+   "reg": "密西西比州",
+   "city": "傑克遜",
+   "lat": 32.3,
+   "lon": -90.18,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-brandenburg",
+   "co": "nucor",
+   "n": "Nucor 布蘭登堡廠（肯塔基）",
+   "reg": "肯塔基州",
+   "city": "布蘭登堡",
+   "lat": 37.99,
+   "lon": -86.22,
+   "fig": null,
+   "note": "電爐。產品：厚板（年報列為鋼廠，較新建的廠區）（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-sedalia",
+   "co": "nucor",
+   "n": "Nucor 塞達利亞廠（密蘇里）",
+   "reg": "密蘇里州",
+   "city": "塞達利亞",
+   "lat": 38.7,
+   "lon": -93.23,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-frostproof",
+   "co": "nucor",
+   "n": "Nucor 弗羅斯特普魯夫廠（佛州）",
+   "reg": "佛羅里達州",
+   "city": "弗羅斯特普魯夫",
+   "lat": 27.75,
+   "lon": -81.53,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-birmingham",
+   "co": "nucor",
+   "n": "Nucor 伯明罕廠（阿拉巴馬）",
+   "reg": "阿拉巴馬州",
+   "city": "伯明罕",
+   "lat": 33.52,
+   "lon": -86.8,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-marion",
+   "co": "nucor",
+   "n": "Nucor 馬里恩廠（俄亥俄）",
+   "reg": "俄亥俄州",
+   "city": "馬里恩",
+   "lat": 40.59,
+   "lon": -83.13,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-kingman",
+   "co": "nucor",
+   "n": "Nucor 金曼廠（亞利桑那）",
+   "reg": "亞利桑那州",
+   "city": "金曼",
+   "lat": 35.19,
+   "lon": -114.05,
+   "fig": null,
+   "note": "電爐。產品：型鋼（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-lexington",
+   "co": "nucor",
+   "n": "Nucor 列剋星敦廠（北卡）",
+   "reg": "北卡羅來納州",
+   "city": "列剋星敦",
+   "lat": 35.82,
+   "lon": -80.25,
+   "fig": null,
+   "note": "電爐。產品：型鋼；2023 年動工的新廠，已列於年報鋼廠表（Nucor 2025 年報廠區表，各廠產量未公布）"
+  },
+  {
+   "id": "nu-convent",
+   "co": "nucor",
+   "n": "Nucor 路易斯安那直接還原廠",
+   "reg": "路易斯安那州",
+   "city": "康文特",
+   "lat": 30.02,
+   "lon": -90.83,
+   "fig": null,
+   "note": "直接還原鐵（DRI）廠，不是煉鋼廠，供應 Nucor 電爐"
+  },
+  {
+   "id": "sd-butler",
+   "co": "stld",
+   "n": "巴特勒薄板廠 Butler Flat Roll",
+   "reg": "印第安納州",
+   "city": "巴特勒",
+   "lat": 41.43,
+   "lon": -84.87,
+   "fig": null,
+   "note": "電爐。產品：薄板（平軋）；1996 年投產（各廠產量未公布）"
+  },
+  {
+   "id": "sd-columbus",
+   "co": "stld",
+   "n": "哥倫布薄板廠 Columbus Flat Roll",
+   "reg": "密西西比州",
+   "city": "哥倫布",
+   "lat": 33.5,
+   "lon": -88.43,
+   "fig": null,
+   "note": "電爐。產品：薄板（平軋），原 Severstal Columbus，2014 年收購（各廠產量未公布）"
+  },
+  {
+   "id": "sd-sinton",
+   "co": "stld",
+   "n": "辛頓薄板廠 Sinton Flat Roll",
+   "reg": "德克薩斯州",
+   "city": "辛頓",
+   "lat": 28.04,
+   "lon": -97.51,
+   "fig": null,
+   "note": "電爐。產品：薄板（平軋）；2020 年投產（各廠產量未公布）"
+  },
+  {
+   "id": "sd-structural",
+   "co": "stld",
+   "n": "結構鋼與鋼軌事業部 Structural & Rail",
+   "reg": "印第安納州",
+   "city": "哥倫比亞城",
+   "lat": 41.16,
+   "lon": -85.49,
+   "fig": null,
+   "note": "電爐。產品：型鋼與鋼軌（各廠產量未公布）"
+  },
+  {
+   "id": "sd-bar",
+   "co": "stld",
+   "n": "精密棒鋼事業部 Engineered Bar Products",
+   "reg": "印第安納州",
+   "city": "皮茨伯勒",
+   "lat": 39.86,
+   "lon": -86.47,
+   "fig": null,
+   "note": "電爐。產品：特殊棒鋼（各廠產量未公布）"
+  },
+  {
+   "id": "sd-roanoke",
+   "co": "stld",
+   "n": "羅阿諾克棒鋼廠 Roanoke Bar",
+   "reg": "維吉尼亞州",
+   "city": "羅阿諾克",
+   "lat": 37.27,
+   "lon": -79.94,
+   "fig": null,
+   "note": "電爐。產品：棒鋼（各廠產量未公布）"
+  },
+  {
+   "id": "sd-swva",
+   "co": "stld",
+   "n": "西維吉尼亞鋼廠 Steel of West Virginia",
+   "reg": "西維吉尼亞州",
+   "city": "亨廷頓",
+   "lat": 38.42,
+   "lon": -82.44,
+   "fig": null,
+   "note": "電爐。產品：特殊型鋼（各廠產量未公布）"
+  }
+ ],
+ "history": {
+  "unit": "萬噸",
+  "nbs": [
+   [
+    1973,
+    13680.3
+   ],
+   [
+    1980,
+    10140
+   ],
+   [
+    1990,
+    8970
+   ],
+   [
+    2000,
+    10180
+   ]
+  ],
+  "nbs_name": "worldsteel 可確認年份",
+  "ws_key": "USA",
+  "milestones": [],
+  "mlabel": "萬噸",
+  "tlnote": "單位：萬噸（粗鋼）。橘點為 1973、1980、1990、2000 年可核對的 worldsteel 數字；藍線為 worldsteel 2006 年起的逐年統計（每年自動更新）。虛線連接的年份之間沒有逐年資料，不代表實際走勢；1973 年前的資料本站尚未取得可核對的來源。",
+  "gaps": "1973–2005 年僅標示 1973、1980、1990、2000 四個可核對的年份（虛線為連線，不代表中間年份走勢）；1973 年前與其餘年份的逐年資料本站尚未取得可核對的來源。"
+ },
+ "regnotes": {
+  "印第安納州": "USGS《Mineral Commodity Summaries 2026》：印第安納州約占全美粗鋼 19%，為最大產鋼州。",
+  "俄亥俄州": "USGS《Mineral Commodity Summaries 2026》：俄亥俄州約占全美粗鋼 8%。",
+  "德克薩斯州": "USGS《Mineral Commodity Summaries 2026》：德克薩斯州約占全美粗鋼 5%。",
+  "賓夕法尼亞州": "USGS《Mineral Commodity Summaries 2026》：賓夕法尼亞州約占全美粗鋼 4%。"
+ },
+ "notes": [
+  "美國沒有公開各州粗鋼產量；USGS 只指出印第安納約 19%、俄亥俄約 8%、德州約 5%、賓州約 4%，其餘各州均不超過 4%（見各州資訊卡）。因此地圖以鋼廠為單位。",
+  "圖上只放依企業年報核對、有煉鋼（高爐或電爐）的廠區。Cleveland-Cliffs 的電爐廠、Commercial Metals、Gerdau（世界第 31 名）等未能逐一核對所在地，暫未列入；Nucor 持股的 California Steel Industries（加州方塔納）為軋延廠，無煉鋼，亦不列入。",
+  "廠區產量僅 U.S. Steel 年報公布各廠「原鋼配置產能」（FY2024，短噸已換算為公噸），其餘企業未公布各廠產量，標示「未公布」。點位為廠區所在城市附近的示意位置，並非精確廠址；華盛頓特區面積太小未繪出。",
+  "企業產量為集團合計，含海外與子公司（日本製鐵數字含日本及其他海外廠區）；美國全國 2025 年粗鋼為 8,194 萬噸（worldsteel）。USGS 另載：美國有兩家公司營運一貫製鐵廠（8 處）、47 家公司營運 102 座電爐小型鋼廠，總產能約 1.05 億噸。"
+ ]
+}

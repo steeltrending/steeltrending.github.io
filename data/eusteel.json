@@ -1,0 +1,43 @@
+{
+ "name": "歐洲",
+ "updated": "2026-10-22",
+ "year": 2025,
+ "source": {
+  "prod": "世界鋼鐵協會（worldsteel）各國粗鋼年產量（data/worldsteel.json，每年自動更新）",
+  "co": "世界鋼鐵協會（worldsteel）《World Steel in Figures 2026》全球鋼企粗鋼產量排名（2025 年）",
+  "plant": "U.S. Steel FY2024 Form 10-K（Košice）；ArcelorMittal、Tata Steel、HBIS、Jingye（British Steel）、thyssenkrupp、Tosyalı 廠區依公司與維基百科公開資料"
+ },
+ "scope": {
+  "EU27": ["AUT","BEL","BGR","HRV","CYP","CZE","DNK","EST","FIN","FRA","DEU","GRC","HUN","IRL","ITA","LVA","LTU","LUX","MLT","NLD","POL","PRT","ROU","SVK","SVN","ESP","SWE"],
+  "OTH": ["GBR","NOR","CHE","ISL","SRB","BIH","MKD","ALB","MNE","KOS","TUR"]
+ },
+ "companies": [
+  {"id":"am","n":"安賽樂米塔爾 ArcelorMittal","s":"ArcelorMittal","mt":63.43,"rk":2,"hq":"LUX","hqn":"盧森堡","c":"#FF8A47",
+   "plants":[["FRA","敦克爾克（Dunkerque）、福斯（Fos-sur-Mer）"],["BEL","根特（Gent）"],["DEU","不來梅（Bremen）、愛森許滕施塔特（Eisenhüttenstadt）"],["ESP","希洪（Gijón）、阿維萊斯（Avilés）"],["POL","東布羅瓦（Dąbrowa Górnicza）"],["LUX","迪費當日（Differdange）、貝爾瓦（Belval）"]],
+   "note":"集團全球粗鋼，含美洲、巴西與持股比例計入的合資（如 AM/NS India 60%），並非歐洲產量。歐洲廠區為主要煉鋼據點、非完整名單；義大利 Acciaierie d'Italia（塔蘭托）因所有權與營運狀況複雜，未列入"},
+  {"id":"tata","n":"塔塔鋼鐵 Tata Steel","s":"Tata Steel","mt":30.46,"rk":10,"hq":null,"hqn":"印度","c":"#8DB4D6",
+   "plants":[["NLD","艾默伊登（IJmuiden）"],["GBR","塔爾伯特港（Port Talbot）"]],
+   "note":"集團全球粗鋼，主體在印度；歐洲營運在荷蘭與英國。英國 Port Talbot 的高爐已於 2024 年停用，改建電爐"},
+  {"id":"nss","n":"日本製鐵 Nippon Steel","s":"日本製鐵","mt":57.78,"rk":3,"hq":null,"hqn":"日本","c":"#E4572E",
+   "plants":[["SVK","科希策（U.S. Steel Košice）"]],
+   "note":"集團全球粗鋼，含日本與美國（U.S. Steel 於 2025 年 6 月 18 日成為子公司）。歐洲據點為 U.S. Steel Košice，年報載原鋼配置產能 5.0 百萬噸（原文單位為 tons）"},
+  {"id":"hbis","n":"河鋼集團 HBIS","s":"河鋼","mt":42.49,"rk":5,"hq":null,"hqn":"中國","c":"#C9A227",
+   "plants":[["SRB","斯梅代雷沃（Smederevo）"]],
+   "note":"集團全球粗鋼，主體在中國河北；歐洲據點為塞爾維亞的 HBIS Group Serbia Iron & Steel（2016 年收購）"},
+  {"id":"jingye","n":"敬業集團 Jingye","s":"敬業","mt":23.91,"rk":13,"hq":null,"hqn":"中國","c":"#7BC47F",
+   "plants":[["GBR","斯肯索普（Scunthorpe，British Steel）"]],
+   "note":"集團全球粗鋼，主體在中國河北；歐洲據點為英國 British Steel（2020 年收購）。2025 年 4 月起英國政府依特別措施法接管其營運"},
+  {"id":"tkse","n":"蒂森克虜伯 thyssenkrupp","s":"thyssenkrupp","mt":9.41,"rk":47,"hq":"DEU","hqn":"德國","c":"#D6A8E6",
+   "plants":[["DEU","杜伊斯堡（Duisburg）"]],
+   "note":"德國鋼企，煉鋼集中在杜伊斯堡（高爐＋轉爐）"},
+  {"id":"tosyali","n":"托薩利 Tosyalı Holding","s":"Tosyalı","mt":12.11,"rk":32,"hq":"TUR","hqn":"土耳其","c":"#EB7B8B",
+   "plants":[["TUR","奧斯馬尼耶（Osmaniye）"]],
+   "note":"集團全球粗鋼，含阿爾及利亞（Oran）等海外廠區，並非土耳其產量"}
+ ],
+ "notes": [
+  "國家產量為 worldsteel 各國年產量，EU27 與其他歐洲的合計是本站把有資料的國家加總，與 worldsteel 區域合計可能略有差異。範圍採 worldsteel 的歐洲定義：歐盟 27 國＋其他歐洲（英國、挪威、瑞士、土耳其、塞爾維亞等）；俄羅斯、烏克蘭、白俄羅斯、摩爾多瓦屬 CIS，只畫成灰色底圖。",
+  "worldsteel 未列出的國家（如丹麥、愛爾蘭、賽普勒斯等）顯示為「無統計」；拉脫維亞僅有 2006–2013 年資料、阿爾巴尼亞僅有至 2016 年。克羅埃西亞、匈牙利、蒙特內哥羅 2025 年在 worldsteel 列為 0。",
+  "鋼企只收錄世界鋼鐵協會 2025 年全球前 50 名中在歐洲設有煉鋼據點者；Salzgitter、voestalpine、SSAB、Erdemir 等未進前 50 名的歐洲鋼企，因無可核對的 2025 年噸數，暫未列入。俄羅斯鋼企（NLMK、Severstal、MMK、EVRAZ）不在本圖範圍。",
+  "歷史走勢只有 worldsteel 2006 年起的逐年資料；更早年份本站尚未取得可核對的來源。"
+ ]
+}

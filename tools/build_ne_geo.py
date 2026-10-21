@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """日本、南韓行政區地圖：由 Natural Earth 1:10m admin-1（公有領域）產生 Albers 投影的 SVG 路徑。
 
-用法：python3 tools/build_ne_geo.py <ne_10m_admin_1_states_provinces.geojson> [輸出資料夾，預設 assets]
-產出：assets/jpmap-geo.json、assets/krmap-geo.json
+用法：python3 tools/build_ne_geo.py <ne_10m_admin_1_states_provinces.geojson> [輸出資料夾，預設 assets] [jp kr us ...]
+產出：assets/jpmap-geo.json、assets/krmap-geo.json、assets/usmap-geo.json（可只指定其中幾個）
   {"W","H","proj":{p1,p2,l0,f0,x0,y0,k},"provs":[{"id","n","en","d","cx","cy"}...]}
 - 頁面以 proj 把廠區經緯度投影到同一座標系，所以資料檔只存經緯度。
 - 日本：遠離本土的小島（小笠原等）略去；沖繩縣以示意位置放在左下角（inset=true），不代表實際相對位置。
 - 南韓：略去面積極小的島嶼。
+- 美國：只畫本土 48 州＋華盛頓特區（阿拉斯加、夏威夷無鋼廠，略去）。
 - 一次性產生，不在排程中執行。需要 shapely。
 """
 import json, math, sys, os
@@ -18,7 +19,19 @@ CFG = {
                keep=lambda lon, lat, name: 30 <= lat <= 46 and lon <= 146.5),
     'kr': dict(admin='South Korea', p1=33, p2=38, l0=127.5, f0=36, W=520, min_area=0.002, tol=0.006,
                keep=lambda lon, lat, name: True),
+    'us': dict(admin='United States of America', p1=29.5, p2=45.5, l0=-96, f0=37.5, W=900, min_area=0.02, tol=0.02,
+               keep=lambda lon, lat, name: 24 <= lat <= 50 and -126 <= lon <= -66),
 }
+US_TC = {'Alabama': '阿拉巴馬州', 'Arizona': '亞利桑那州', 'Arkansas': '阿肯色州', 'California': '加利福尼亞州', 'Colorado': '科羅拉多州',
+         'Connecticut': '康乃狄克州', 'Delaware': '德拉瓦州', 'District of Columbia': '華盛頓特區', 'Florida': '佛羅里達州', 'Georgia': '喬治亞州',
+         'Idaho': '愛達荷州', 'Illinois': '伊利諾州', 'Indiana': '印第安納州', 'Iowa': '愛荷華州', 'Kansas': '堪薩斯州', 'Kentucky': '肯塔基州',
+         'Louisiana': '路易斯安那州', 'Maine': '緬因州', 'Maryland': '馬里蘭州', 'Massachusetts': '麻薩諸塞州', 'Michigan': '密西根州',
+         'Minnesota': '明尼蘇達州', 'Mississippi': '密西西比州', 'Missouri': '密蘇里州', 'Montana': '蒙大拿州', 'Nebraska': '內布拉斯加州',
+         'Nevada': '內華達州', 'New Hampshire': '新罕布夏州', 'New Jersey': '紐澤西州', 'New Mexico': '新墨西哥州', 'New York': '紐約州',
+         'North Carolina': '北卡羅來納州', 'North Dakota': '北達科他州', 'Ohio': '俄亥俄州', 'Oklahoma': '奧克拉荷馬州', 'Oregon': '奧勒岡州',
+         'Pennsylvania': '賓夕法尼亞州', 'Rhode Island': '羅德島州', 'South Carolina': '南卡羅來納州', 'South Dakota': '南達科他州',
+         'Tennessee': '田納西州', 'Texas': '德克薩斯州', 'Utah': '猶他州', 'Vermont': '佛蒙特州', 'Virginia': '維吉尼亞州',
+         'Washington': '華盛頓州', 'West Virginia': '西維吉尼亞州', 'Wisconsin': '威斯康辛州', 'Wyoming': '懷俄明州'}
 KR_TC = {'江原道': '江原道', '京畿道': '京畿道', '忠清南道': '忠清南道', '仁川広域市': '仁川廣域市', '全羅北道': '全羅北道', '全羅南道': '全羅南道', '慶尚南道': '慶尚南道', '釜山広域市': '釜山廣域市', '蔚山広域市': '蔚山廣域市', '慶尚北道': '慶尚北道', '済州特別自治道': '濟州特別自治道', 'ソウル特別市': '首爾特別市', '大田広域市': '大田廣域市', '世宗特別自治市': '世宗特別自治市', '忠清北道': '忠清北道', '光州広域市': '光州廣域市', '大邱広域市': '大邱廣域市'}  # 南韓行政區改用繁體中文漢字名
 OKINAWA_SHIFT = (14.5, 6.5)  # 度：把沖繩移到本州東南方的太平洋空白處，作為示意 inset（僅限日本）
 
@@ -47,8 +60,10 @@ def build(key, feats, out):
     items = []
     for f in feats:
         p = f['properties']
-        name = p.get('name_ja') or p.get('name_ko') or p['name']
-        name = KR_TC.get(name, name)
+        if key == 'us' and p['name'] in ('Alaska', 'Hawaii'):
+            continue
+        name = p['name'] if key == 'us' else (p.get('name_ja') or p.get('name_ko') or p['name'])
+        name = US_TC[name] if key == 'us' else KR_TC.get(name, name)
         g = shape(f['geometry'])
         ps = []
         for poly in polys_of(g):
@@ -93,8 +108,9 @@ def build(key, feats, out):
 def main():
     src = sys.argv[1]
     dst = sys.argv[2] if len(sys.argv) > 2 else 'assets'
+    keys = sys.argv[3:] or list(CFG)
     g = json.load(open(src, encoding='utf-8'))
-    for key in CFG:
+    for key in keys:
         feats = [f for f in g['features'] if f['properties'].get('admin') == CFG[key]['admin']]
         build(key, feats, os.path.join(dst, key + 'map-geo.json'))
 

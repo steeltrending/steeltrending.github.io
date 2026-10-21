@@ -112,7 +112,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 <div id="kpis" class="kpis"></div>
 
 <div class="map-layout">
-<section class="map-box" aria-label="@@NAME@@主要製鐵所分布圖">
+<section class="map-box" aria-label="@@NAME@@主要@@PW@@分布圖">
 <div class="map-tools">
 <div role="group" aria-label="縮放" style="display:flex;gap:6px">
 <button class="chip" type="button" id="zin" aria-label="放大">＋</button>
@@ -120,9 +120,9 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 <button class="chip" type="button" id="zreset">全圖</button>
 <button class="chip" type="button" id="clear">清除選取</button>
 </div>
-<span class="lbl" id="hint">點圓點看製鐵所・滾輪或雙指縮放・拖曳移動</span>
+<span class="lbl" id="hint">點圓點看@@PW@@・滾輪或雙指縮放・拖曳移動</span>
 </div>
-<div class="stage"><svg id="map" viewBox="0 0 100 100" role="img" aria-label="@@NAME@@主要製鐵所分布圖"><g id="vp"><g id="g-reg"></g><g id="g-label"></g><g id="g-plant"></g></g></svg>
+<div class="stage"><svg id="map" viewBox="0 0 100 100" role="img" aria-label="@@NAME@@主要@@PW@@分布圖"><g id="vp"><g id="g-reg"></g><g id="g-label"></g><g id="g-plant"></g></g></svg>
 <div id="info" class="info" hidden role="region" aria-label="詳細資料" aria-live="polite"></div>
 </div>
 <div class="legend" id="legend" aria-label="企業圖例"></div>
@@ -131,7 +131,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 
 <aside class="side">
 <div class="tabs" role="tablist" aria-label="清單類別">
-<button class="tab" role="tab" type="button" id="tab-plant" data-t="plant" aria-selected="true">製鐵所</button>
+<button class="tab" role="tab" type="button" id="tab-plant" data-t="plant" aria-selected="true">@@PW@@</button>
 <button class="tab" role="tab" type="button" id="tab-co" data-t="co" aria-selected="false">鋼鐵企業</button>
 </div>
 <div id="list" class="list" role="tabpanel" aria-labelledby="tab-plant"></div>
@@ -203,7 +203,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
     G.provs.forEach(function (g) {
       var path = sv('path', { d: g.d, tabindex: '-1' }, $('g-reg'));
       path.dataset.id = g.id; rEl[g.id] = path;
-      sv('title', {}, path).textContent = g.id + (hosts[g.id] ? '：' + hosts[g.id].length + ' 座已列入製鐵所' : '');
+      sv('title', {}, path).textContent = g.id + (hosts[g.id] ? '：' + hosts[g.id].length + ' 座已列入@@PW@@' : '');
       if (hosts[g.id]) {
         path.classList.add('host');
         var t = sv('text', { x: g.cx, y: g.cy, 'text-anchor': 'middle' }, $('g-label')); t.textContent = g.id;
@@ -227,11 +227,12 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
     var all = D.history.nbs.concat(yrs.map(function (y) { return [y, ws[y] / 10]; }));
     var peak = all.reduce(function (m, p) { return p[1] > m[1] ? p : m; }, [0, 0]);
     var top = D.companies.filter(function (c) { return c.mt; }).sort(function (a, b) { return b.mt - a.mt; })[0];
+    if (D.top) top = D.companies.filter(function (c) { return c.id === D.top; })[0] || top;
     var items = [
       [D.name + '粗鋼（' + last + '）', wanTxt(cur), 'worldsteel'],
       ['歷史高峰', wanTxt(peak[1]), peak[0] + ' 年，現況較高峰 ' + ((cur / peak[1] - 1) * 100).toFixed(1) + '%'],
-      ['最大鋼企', top.s, '集團粗鋼 ' + fmt(top.mt * 100) + ' 萬噸・世界第 ' + top.rk + '（含海外）'],
-      ['已列入製鐵所', D.plants.length + ' 座', D.companies.length + ' 家企業']
+      [D.toplabel || '最大鋼企', top.s, '集團粗鋼 ' + fmt(top.mt * 100) + ' 萬噸・世界第 ' + top.rk + '（含海外）'],
+      ['已列入@@PW@@', D.plants.length + ' 座', D.companies.length + ' 家企業']
     ];
     var box = $('kpis');
     items.forEach(function (it) { var k = h('div', 'kpi'); k.appendChild(h('span', 'k', it[0])); k.appendChild(h('span', 'v mono', it[1])); k.appendChild(h('span', 's', it[2])); box.appendChild(k); });
@@ -354,9 +355,10 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
     } else {
       info.appendChild(h('span', 'lbl', 'REGION'));
       info.appendChild(h('h3', null, card.id));
+      if (D.regnotes && D.regnotes[card.id]) info.appendChild(h('p', 'more', D.regnotes[card.id]));
       var ps = D.plants.filter(function (q) { return q.reg === card.id; });
-      if (!ps.length) info.appendChild(h('p', 'more', '此地區沒有已列入的主要製鐵所。本圖只列已查證所在地的主要企業，並不表示該地區沒有鋼鐵產業。'));
-      else { info.appendChild(h('h4', null, '已列入的製鐵所（' + ps.length + ' 座）')); var ul2 = h('ul', 'colist'); ps.forEach(function (q) { plantBtn(q, ul2); }); info.appendChild(ul2); }
+      if (!ps.length) info.appendChild(h('p', 'more', '此地區沒有已列入的主要@@PW@@。本圖只列已查證所在地的主要企業，並不表示該地區沒有鋼鐵產業。'));
+      else { info.appendChild(h('h4', null, '已列入的@@PW@@（' + ps.length + ' 座）')); var ul2 = h('ul', 'colist'); ps.forEach(function (q) { plantBtn(q, ul2); }); info.appendChild(ul2); }
     }
   }
 
@@ -441,6 +443,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
     $('s-ws').addEventListener('click', function () { T.st.ws = !T.st.ws; this.setAttribute('aria-pressed', T.st.ws); drawTl(); });
     [].forEach.call(document.querySelectorAll('[data-sc]'), function (b) { b.addEventListener('click', function () { T.st.sc = b.dataset.sc; [].forEach.call(document.querySelectorAll('[data-sc]'), function (x) { x.setAttribute('aria-pressed', x === b); }); drawTl(); }); });
     tl.addEventListener('pointermove', tlMove); tl.addEventListener('pointerdown', tlMove); tl.addEventListener('pointerleave', function () { readout(null); });
+    if (H.tlnote) $('tl-note').textContent = H.tlnote; else
     $('tl-note').textContent = '單位：萬噸（粗鋼）。橘色為' + H.nbs_name + '；藍色為世界鋼鐵協會統計（' + T.ws[0][0] + ' 年起，每年自動更新），兩者口徑略有差異。虛線表示該段期間沒有逐年資料，不代表實際走勢。' + H.gaps;
     drawTl();
     var rz = null; window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(drawTl, 150); });
@@ -510,7 +513,7 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
       var peak = all.reduce(function (m, p) { return p[1] > m[1] ? p : m; }, [0, 0]), last = T.ws[T.ws.length - 1], f = T.nbs[0];
       cell('歷史高峰', peak[0] + ' 年 ' + wanTxt(peak[1]), '');
       cell('最新年度（worldsteel）', last[0] + ' 年 ' + wanTxt(last[1]), '較高峰 ' + ((last[1] / peak[1] - 1) * 100).toFixed(1) + '%');
-      cell('最早紀錄', f[0] + ' 年 ' + wanTxt(f[1]), f[0] + ' 至 ' + last[0] + ' 年約成長 ' + Math.round(last[1] / f[1]) + ' 倍');
+      cell('最早紀錄', f[0] + ' 年 ' + wanTxt(f[1]), last[1] >= f[1] * 1.5 ? f[0] + ' 至 ' + last[0] + ' 年約成長 ' + Math.round(last[1] / f[1]) + ' 倍' : '最新年度較最早紀錄 ' + ((last[1] / f[1] - 1) * 100).toFixed(1) + '%');
       return;
     }
     sv('line', { x1: T.X(yr), x2: T.X(yr), y1: TM.t, y2: TH - TM.b, stroke: '#E8E6E1', 'stroke-width': 1, 'stroke-dasharray': '3 3' }, T.cross);

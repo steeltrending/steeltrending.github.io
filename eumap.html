@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>歐洲鋼鐵地圖 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="歐盟 27 國與其他歐洲各國粗鋼產量地圖：依世界鋼鐵協會 2025 年各國粗鋼產量上色，並標出 ArcelorMittal、Tata Steel、thyssenkrupp 等全球前 50 大鋼企的歐洲據點，附 2006 年起各國歷年走勢。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.flat{color:#9AA0A6}
+.lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;color:#9AA0A6}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-top:1px solid #2A2F35;border-left:1px solid #2A2F35;margin-top:28px}
+.kpi{padding:16px 18px;border-right:1px solid #2A2F35;border-bottom:1px solid #2A2F35;background:#15181B;display:flex;flex-direction:column;gap:6px}
+.kpi .k{font-size:13px;color:#9AA0A6}.kpi .v{font-size:26px;font-weight:600;white-space:nowrap}.kpi .v small{font-size:15px;font-weight:500;margin-left:6px;font-family:inherit;color:#C9CDD2}.kpi .s{font-size:12px;color:#9AA0A6}
+.map-layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px;margin-top:28px;align-items:start}
+.map-box{border:1px solid #2A2F35;background:#121417;padding:14px}
+.map-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.chip{background:transparent;border:1px solid #3A3F46;color:#C9CDD2;font:inherit;font-size:14px;min-height:40px;min-width:44px;padding:0 12px;cursor:pointer}
+.chip:hover{border-color:#FF6A1A;color:#E8E6E1}
+.chip:focus-visible,.tab:focus-visible,.row:focus-visible,.cobtn:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}
+.stage{position:relative}
+#map{display:block;width:100%;height:auto;max-height:78vh;touch-action:none;cursor:grab;background:#0F1113;-webkit-user-select:none;user-select:none}
+#map.drag{cursor:grabbing}
+#g-prov path{stroke:#0F1113;stroke-width:1;vector-effect:non-scaling-stroke;cursor:pointer;transition:opacity .15s}
+#g-prov path:hover{stroke:#E8E6E1}
+#g-prov path:focus{outline:none}
+#g-prov path:focus-visible{stroke:#FF6A1A;stroke-width:3}
+#g-prov path.dim{opacity:.25}
+#g-prov path.fp{stroke:#FFFFFF;stroke-width:2.5}
+#g-prov path.sel{stroke:#FF6A1A;stroke-width:3}
+#g-prov path.off{fill:#181C20!important;opacity:.4}
+#g-label text,#g-star text{pointer-events:none;paint-order:stroke;stroke:#0F1113;stroke-linejoin:round;font-weight:700}
+#g-label text{fill:#F3F1EC;stroke-width:3px}
+#g-label .v{font-weight:500;fill:#E8E6E1}
+#g-star text{fill:#FFFFFF;stroke-width:3px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 10px;margin-top:10px;font-size:12px;color:#C9CDD2;align-items:center}
+.legend .lt{margin-right:6px}
+.legend button{display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid transparent;color:inherit;font:inherit;padding:4px 6px;cursor:pointer;min-height:32px}
+.legend button[aria-pressed="false"]{opacity:.35}
+.legend i{display:inline-block;width:14px;height:14px;border:1px solid rgba(255,255,255,.12)}
+.note{margin:10px 0 0;font-size:12px;line-height:1.7;color:#9AA0A6}
+.info{position:absolute;right:10px;bottom:10px;z-index:5;width:min(340px,calc(100% - 20px));max-height:calc(100% - 20px);overflow:auto;box-sizing:border-box;border:1px solid #3A3F46;background:rgba(21,24,27,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 12px 32px rgba(0,0,0,.5);padding:14px 16px}
+.info[hidden]{display:none}
+.info .x{position:absolute;top:4px;right:4px;width:40px;height:40px;background:none;border:0;color:#9AA0A6;font-size:18px;cursor:pointer}
+.info .x:hover{color:#FF8A47}
+.info .lbl{padding-right:32px;display:block}
+.info h3{margin:2px 0 4px;padding-right:32px;font-size:19px;font-weight:900;line-height:1.4}
+.info dl{margin:10px 0 0;display:grid;grid-template-columns:84px 1fr;gap:4px 10px;font-size:13px;line-height:1.6}
+.info dt{color:#9AA0A6}.info dd{margin:0;color:#E8E6E1}
+.info h4{margin:14px 0 6px;font-size:13px;font-weight:700;color:#C9CDD2}
+.info .more{margin:10px 0 0;font-size:12px;line-height:1.7;color:#9AA0A6}
+.colist{list-style:none;margin:0;padding:0;border-top:1px solid #2A2F35}
+.colist li{border-bottom:1px solid #22262B}
+.cobtn{display:block;width:100%;text-align:left;background:none;border:0;color:#E8E6E1;font:inherit;font-size:13px;padding:8px 2px;cursor:pointer;min-height:40px;box-sizing:border-box}
+.cobtn:hover{color:#FF8A47}
+.cobtn .t1{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.cobtn .t1 b{font-weight:700}
+.cobtn .t2{font-size:12px;color:#9AA0A6;margin-top:2px}
+.tag{display:inline-block;font-size:11px;padding:0 6px;margin-right:6px;border:1px solid #FF6A1A;color:#FFB07F;line-height:18px;vertical-align:1px}
+.tag.pl{border-color:#5E8DB8;color:#8DB4D6}
+.side{display:flex;flex-direction:column;gap:12px}
+.tabs{display:flex;gap:6px}
+.tab{flex:1;background:#15181B;border:1px solid #3A3F46;color:#C9CDD2;font:inherit;font-size:15px;font-weight:700;min-height:44px;cursor:pointer}
+.tab[aria-selected="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113}
+.search{width:100%;box-sizing:border-box;background:#15181B;border:1px solid #3A3F46;color:#E8E6E1;font:inherit;font-size:15px;min-height:44px;padding:0 12px}
+.search:focus{outline:2px solid #FF6A1A;outline-offset:-1px}
+.list{border:1px solid #2A2F35;max-height:640px;overflow:auto}
+.row{display:grid;grid-template-columns:26px minmax(0,1fr) 78px;gap:4px 8px;align-items:center;width:100%;box-sizing:border-box;text-align:left;background:#15181B;border:0;border-bottom:1px solid #22262B;color:#E8E6E1;font:inherit;font-size:14px;padding:8px 12px;cursor:pointer;min-height:48px}
+.row:hover{background:#1C2024}
+.row[aria-pressed="true"]{background:#1F2328;box-shadow:inset 3px 0 0 #FF6A1A}
+.row .r{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#FF6A1A}
+.row .n{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .n small{color:#9AA0A6;font-size:12px;margin-left:6px}
+.row .v{font-family:'IBM Plex Mono',monospace;text-align:right;font-size:13px}
+.row .bar{grid-column:2 / 4;height:6px;background:#1C2024;display:block}
+.row .bar i{display:block;height:6px;background:#FF6A1A}
+.row.nodata .v{color:#9AA0A6;font-size:12px}
+.empty{padding:16px;font-size:13px;color:#9AA0A6}
+.ttl{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin:12px 0 12px}
+@media (max-width:900px){.map-layout{grid-template-columns:1fr}}
+@media (max-width:640px){.wrap{padding:0 16px}#map{max-height:none}.map-box{padding:8px}.kpi{padding:14px}.kpi .v{font-size:22px}.kpi .v small{font-size:13px;margin-left:4px}.info{width:calc(100% - 16px);right:8px;bottom:8px;max-height:52%;padding:10px 12px}.info h3{font-size:16px}.info dl{grid-template-columns:5.6em 1fr;font-size:12px;gap:2px 8px}.list{max-height:520px}}
+@media (min-width:901px) and (max-width:1180px){.info{width:300px}}
+.tl{margin-top:48px}
+.tl h2{margin:0;font-size:clamp(22px,3vw,30px);font-weight:900}
+.tl-box{border:1px solid #2A2F35;background:#121417;padding:14px;margin-top:16px}
+.tl-tools{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-bottom:10px}
+.tl-tools .grp{display:flex;gap:6px;flex-wrap:wrap}
+.chip[aria-pressed="true"]{background:#FF6A1A;border-color:#FF6A1A;color:#0F1113;font-weight:700}
+#tl{display:block;width:100%;height:auto;touch-action:pan-y;cursor:crosshair}
+#tl .ax{stroke:#2A2F35;stroke-width:1}
+#tl .tk{fill:#9AA0A6;font-size:12px;font-family:'IBM Plex Mono',monospace}
+#tl .ln{fill:none;stroke-width:2.2;stroke-linejoin:round}
+#tl .gap{fill:none;stroke-width:1.4;stroke-dasharray:4 4;opacity:.55}
+#tl .ms text{fill:#E8E6E1;font-size:11px;paint-order:stroke;stroke:#121417;stroke-width:3px}
+#tl .ms line{stroke:#5A6068;stroke-dasharray:2 3}
+.tl-read{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:1px solid #2A2F35;border-left:1px solid #2A2F35;margin-top:12px}
+.tl-read div{padding:12px 14px;border-right:1px solid #2A2F35;border-bottom:1px solid #2A2F35;background:#15181B;font-size:13px;color:#9AA0A6;line-height:1.6}
+.tl-read b{display:block;font-size:18px;color:#E8E6E1;font-weight:600}
+.dot{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:50%}
+#g-prov path.ctx{fill:#1A1D21;stroke:#0F1113;cursor:default;pointer-events:none}
+.tl-chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip .sw{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:50%;vertical-align:-1px}
+.chip.sel-c{border-style:dashed}
+</style>
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="./" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="./#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<style>.nvdd{position:relative}.nvdd summary{list-style:none;cursor:pointer;color:#C9CDD2;padding:12px;display:flex;align-items:center;gap:6px;font-size:15px;user-select:none}.nvdd summary::-webkit-details-marker{display:none}.nvdd summary span{font-size:11px;color:#FF6A1A;transition:transform .2s}.nvdd[open] summary span{transform:rotate(180deg)}.nvdd summary:hover,.nvdd[open] summary,.nvdd.cur summary{color:#FF8A47}.nvdd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}.nvdd-m{position:absolute;top:100%;left:0;z-index:50;min-width:180px;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45);padding:6px 0;display:flex;flex-direction:column}.nvdd-m a{padding:12px 16px;color:#E8E6E1;text-decoration:none;font-size:15px;white-space:nowrap}.nvdd-m a:hover{background:#1C2024;color:#FF8A47}.nvdd-m a[aria-current]{color:#FF8A47}</style><details class="nvdd cur"><summary>鋼鐵數字<span aria-hidden="true">▾</span></summary><div class="nvdd-m"><a href="worldsteel.html">世界鋼鐵數據</a><a href="cnmap.html">中國大陸鋼產量地圖</a><a href="jpmap.html">日本鋼鐵地圖</a><a href="krmap.html">南韓鋼鐵地圖</a><a href="usmap.html">美國鋼鐵地圖</a><a href="eumap.html" aria-current="page">歐洲鋼鐵地圖</a><a href="twmap.html">台灣鋼鐵地圖</a><a href="trends.html">關鍵字熱度</a></div></details>
+<a href="archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6">鋼鐵數字 <span aria-hidden="true">›</span> 歐洲鋼鐵地圖</nav>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">EUROPE STEEL MAP</p>
+<div class="ttl"><h1 style="margin:0;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">歐洲鋼鐵地圖</h1></div>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:46em">依世界鋼鐵協會公布的各國粗鋼產量上色，範圍是<span style="color:#FF8A47;font-weight:700">歐盟 27 國＋其他歐洲</span>（英國、挪威、瑞士、土耳其、塞爾維亞等）。點國家看排名、占比與近年變化；切到「鋼鐵企業」選一家全球前 50 大鋼企，地圖會標出它在歐洲的據點國家。下方可疊圖比較各國 2006 年起的走勢。</p>
+
+<div id="kpis" class="kpis"></div>
+
+<div class="map-layout">
+<section class="map-box" aria-label="歐洲各國粗鋼產量地圖">
+<div class="map-tools">
+<div role="group" aria-label="縮放" style="display:flex;gap:6px">
+<button class="chip" type="button" id="zin" aria-label="放大">＋</button>
+<button class="chip" type="button" id="zout" aria-label="縮小">－</button>
+<button class="chip" type="button" id="zreset">全圖</button>
+<button class="chip" type="button" id="clear">清除選取</button>
+</div>
+<span class="lbl" id="hint">點國家看資料・滾輪或雙指縮放・拖曳移動</span>
+</div>
+<div class="stage"><svg id="map" viewBox="0 0 860 754" role="img" aria-label="歐洲各國粗鋼產量地圖"><g id="vp"><g id="g-prov"></g><g id="g-label"></g><g id="g-star"></g></g></svg>
+<div id="info" class="info" hidden role="region" aria-label="詳細資料" aria-live="polite"></div>
+</div>
+<div class="legend" id="legend" aria-label="產量圖例"></div>
+<p class="note" id="mapnote"></p>
+</section>
+
+<aside class="side">
+<div class="tabs" role="tablist" aria-label="清單類別">
+<button class="tab" role="tab" type="button" id="tab-prov" data-t="prov" aria-selected="true">國家排行</button>
+<button class="tab" role="tab" type="button" id="tab-co" data-t="co" aria-selected="false">鋼鐵企業</button>
+</div>
+<label for="q" style="position:absolute;left:-9999px">搜尋國家或鋼鐵企業</label>
+<input id="q" class="search" type="search" placeholder="搜尋國家或企業，例如：德國、ArcelorMittal">
+<div id="list" class="list" role="tabpanel" aria-labelledby="tab-prov"></div>
+<p id="listnote" class="note" style="margin:0"></p>
+</aside>
+</div>
+
+<section class="tl" aria-labelledby="tl-h">
+<p class="mono" style="margin:0 0 8px;font-size:13px;letter-spacing:.24em;color:#FF6A1A">COUNTRY TIMELINE</p>
+<h2 id="tl-h">各國粗鋼歷年走勢（2006 起）</h2>
+<p style="margin:8px 0 0;font-size:15px;line-height:1.8;color:#9AA0A6;max-width:46em">勾選下方系列疊圖比較；在地圖上點選的國家會自動以白色粗線加入。「指數」模式把各系列的 2006 年設為 100，方便比較規模懸殊的國家。滑鼠移到圖上（手機用手指點）可讀取各年數字。</p>
+<div class="tl-box">
+<div class="tl-tools">
+<div class="grp tl-chips" role="group" aria-label="資料系列" id="ser"></div>
+<div class="grp" role="group" aria-label="座標尺度"><button class="chip" type="button" data-sc="lin" aria-pressed="true">線性</button><button class="chip" type="button" data-sc="log" aria-pressed="false">對數</button><button class="chip" type="button" data-sc="idx" aria-pressed="false">指數（2006＝100）</button></div>
+</div>
+<svg id="tl" viewBox="0 0 800 380" role="img" aria-label="歐洲各國粗鋼歷年產量折線圖"></svg>
+<div id="tl-read" class="tl-read" aria-live="polite"></div>
+<p class="note" id="tl-note"></p>
+</div>
+</section>
+
+<p id="src" style="margin:48px 0 0;font-size:13px;line-height:1.8;color:#9AA0A6"></p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending　·　<a href="sitemap.html" style="color:#C9CDD2">網站導覽</a></span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+
+<script>
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  var BINS = [
+    { min: 0, max: 100, c: '#46291B', l: '未滿 100' },
+    { min: 100, max: 500, c: '#6F3C22', l: '100–500' },
+    { min: 500, max: 1000, c: '#A24F1F', l: '500–1,000' },
+    { min: 1000, max: 2000, c: '#D2601B', l: '1,000–2,000' },
+    { min: 2000, max: 3500, c: '#FF7E3A', l: '2,000–3,500' },
+    { min: 3500, max: Infinity, c: '#FFBE8C', l: '3,500 以上' }
+  ];
+  var NODATA = '#181C20';
+  var MINZ = { LUX: 3.4, MLT: 4, CYP: 2.6, SVN: 2.4, MNE: 3.2, KOS: 3.2, MKD: 2.6, ALB: 2.6, BIH: 2.2, HRV: 1.8, BEL: 2.0, NLD: 1.9, CHE: 1.9, DNK: 1.9, EST: 1.9, LVA: 1.9, LTU: 1.9, SVK: 1.9, CZE: 1.5, AUT: 1.5, HUN: 1.5, SRB: 1.9, BGR: 1.5, IRL: 1.5, PRT: 1.5, GRC: 1.5, ISL: 1.2, ROU: 1.2 };
+  var $ = function (id) { return document.getElementById(id); };
+  function h(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function sv(tag, attrs, parent) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+  function fmt(n) { return Math.round(n).toLocaleString('zh-TW'); }
+  function pct(n) { return (n * 100).toLocaleString('zh-TW', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + '%'; }
+  function wanTxt(n) { return n >= 10000 ? (n / 1e4).toLocaleString('zh-TW', { maximumFractionDigits: 2 }) + ' 億噸' : fmt(n) + ' 萬噸'; }
+  function binOf(w) { for (var i = 0; i < BINS.length; i++) if (w < BINS[i].max) return i; return BINS.length - 1; }
+
+  var svg = $('map'), vp = $('vp'), gProv = $('g-prov'), gLabel = $('g-label'), gStar = $('g-star'), info = $('info');
+  var G, D, WS, YEAR = 2025, P = {}, paths = {}, labels = [], stars = [], coList = [], inScope = {};
+  var on = BINS.map(function () { return true; });
+  var FULL = { x: 0, y: 0, w: 860, h: 754 }, view = { x: 0, y: 0, w: 860, h: 754 };
+  var selP = null, selC = null, card = null, tab = 'prov', suppress = false;
+
+  Promise.all([
+    fetch('assets/eumap-geo.json').then(function (r) { return r.json(); }),
+    fetch('data/eusteel.json?ts=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }),
+    fetch('data/worldsteel.json?ts=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); })
+  ]).then(function (res) { G = res[0]; D = res[1]; WS = res[2]; init(); }).catch(function () {
+    $('list').appendChild(h('p', 'empty', '資料載入失敗，請稍後重新整理。'));
+  });
+
+  function crude(iso) { return (WS.annual && WS.annual.crude && WS.annual.crude[iso]) || null; }
+  function yearsOf(iso) { var c = crude(iso); return c ? Object.keys(c).map(Number).filter(function (y) { return c[y] != null; }).sort(function (a, b) { return a - b; }) : []; }
+
+  function init() {
+    FULL.w = view.w = G.W; FULL.h = view.h = G.H;
+    svg.setAttribute('viewBox', '0 0 ' + G.W + ' ' + G.H);
+    D.scope.EU27.forEach(function (i) { inScope[i] = 'EU27'; });
+    D.scope.OTH.forEach(function (i) { inScope[i] = 'OTH'; });
+    var rank = 0, tot = { all: 0, EU27: 0, OTH: 0 };
+    G.provs.forEach(function (g) {
+      var p = { id: g.id, n: g.n, en: g.en, g: g.g, geo: g, scope: !!inScope[g.id], wan: null, prev: null, last: null };
+      if (p.scope) {
+        var c = crude(g.id);
+        if (c && c[YEAR] != null) { p.wan = c[YEAR] / 10; if (c[YEAR - 1] != null) p.prev = c[YEAR - 1] / 10; }
+        else { var ys = yearsOf(g.id); if (ys.length) p.last = [ys[ys.length - 1], c[ys[ys.length - 1]] / 10]; }
+        if (p.wan != null) { tot.all += p.wan; tot[g.g] += p.wan; }
+      }
+      P[g.id] = p;
+    });
+    P.tot = tot;
+    Object.keys(P).filter(function (k) { return k !== 'tot' && P[k].wan > 0; }).sort(function (a, b) { return P[b].wan - P[a].wan; }).forEach(function (k) { P[k].rank = ++rank; P[k].share = P[k].wan / tot.all; });
+    P.nRank = rank; P.max = Math.max.apply(null, Object.keys(P).filter(function (k) { return k !== 'tot' && P[k].wan != null; }).map(function (k) { return P[k].wan; }));
+    coList = D.companies.slice().sort(function (a, b) { return b.mt - a.mt; });
+    coList.forEach(function (c) { c.wan = c.mt * 100; c.provSet = {}; c.plants.forEach(function (pl) { c.provSet[pl[0]] = pl[1]; }); });
+
+    G.provs.forEach(function (g) {
+      var p = P[g.id], path = sv('path', { d: g.d }, gProv);
+      path.dataset.id = g.id;
+      if (!p.scope) { path.setAttribute('class', 'ctx'); path.setAttribute('aria-hidden', 'true'); return; }
+      path.setAttribute('tabindex', '0'); path.setAttribute('role', 'button');
+      var txt = p.wan > 0 ? '：' + fmt(p.wan) + ' 萬噸（' + YEAR + '）' : (p.wan === 0 ? '：' + YEAR + ' 年 worldsteel 列為 0' : '：worldsteel 無' + YEAR + ' 年統計');
+      path.setAttribute('aria-label', p.n + txt);
+      sv('title', {}, path).textContent = p.n + txt;
+      paths[g.id] = path;
+      var lab = sv('text', { x: g.cx, y: g.cy, 'text-anchor': 'middle' }, gLabel);
+      lab.dataset.id = g.id;
+      var t1 = sv('tspan', { x: g.cx }, lab); t1.textContent = p.n.length > 5 ? p.n.slice(0, 4) : p.n;
+      var t2 = null;
+      if (p.wan >= 1000) { t2 = sv('tspan', { x: g.cx, 'class': 'v' }, lab); t2.textContent = fmt(p.wan); }
+      labels.push({ el: lab, t1: t1, t2: t2, id: g.id });
+    });
+    paintBase(); legend(); kpis();
+    $('mapnote').textContent = '數字單位為萬噸（粗鋼，' + YEAR + ' 年）。灰色為範圍外的底圖（俄羅斯、烏克蘭、白俄羅斯、摩爾多瓦）。' + D.notes[1];
+    var s = h('span'); s.textContent = '資料來源：各國產量——' + D.source.prod + '；鋼企產量——' + D.source.co + '；歐洲據點——' + D.source.plant + '。資料年度 ' + YEAR + '，最後更新 ' + D.updated + '。';
+    $('src').appendChild(s);
+    [D.notes[0]].concat(D.notes.slice(2)).forEach(function (n) { $('src').appendChild(h('br')); $('src').appendChild(document.createTextNode('・' + n)); });
+    bind(); renderList(); applyView(); timeline(); fromHash();
+  }
+
+  function paintBase() {
+    Object.keys(paths).forEach(function (id) {
+      var p = P[id], path = paths[id];
+      if (p.wan == null) { path.style.fill = NODATA; path.removeAttribute('data-bin'); return; }
+      var b = binOf(p.wan); path.style.fill = BINS[b].c; path.setAttribute('data-bin', b);
+    });
+    refreshClasses();
+  }
+  function refreshClasses() {
+    var fp = selC ? selC.provSet : null;
+    Object.keys(paths).forEach(function (id) {
+      var path = paths[id], b = path.getAttribute('data-bin');
+      path.classList.toggle('off', b != null && !on[+b]);
+      path.classList.toggle('dim', !!fp && !(id in fp));
+      path.classList.toggle('fp', !!fp && (id in fp));
+      path.classList.toggle('sel', selP === id);
+    });
+    Object.keys(paths).forEach(function (id) { var q = paths[id]; if (q.classList.contains('fp') || q.classList.contains('sel')) gProv.appendChild(q); });
+    while (gStar.firstChild) gStar.removeChild(gStar.firstChild);
+    stars = [];
+    if (selC && selC.hq && P[selC.hq]) { var g = P[selC.hq].geo, t = sv('text', { x: g.cx, y: g.cy, 'text-anchor': 'middle', 'dominant-baseline': 'central' }, gStar); t.textContent = '★'; stars.push(t); }
+    applyView(); renderList();
+  }
+
+  function legend() {
+    var box = $('legend'); box.innerHTML = '';
+    box.appendChild(h('span', 'lbl lt', YEAR + ' 粗鋼（萬噸）'));
+    BINS.forEach(function (b, i) {
+      var btn = h('button'); btn.type = 'button'; btn.setAttribute('aria-pressed', 'true');
+      var sw = h('i'); sw.style.background = b.c; btn.appendChild(sw); btn.appendChild(document.createTextNode(b.l));
+      btn.addEventListener('click', function () { on[i] = !on[i]; btn.setAttribute('aria-pressed', on[i] ? 'true' : 'false'); refreshClasses(); });
+      box.appendChild(btn);
+    });
+    var nd = h('span'); nd.style.cssText = 'display:inline-flex;align-items:center;gap:8px;padding:4px 6px;color:#9AA0A6';
+    var sw2 = h('i'); sw2.style.background = NODATA; nd.appendChild(sw2); nd.appendChild(document.createTextNode('無統計'));
+    box.appendChild(nd);
+  }
+
+  function kpis() {
+    var box = $('kpis'); box.innerHTML = '';
+    var ks = Object.keys(P).filter(function (k) { return k !== 'tot' && P[k].rank; }).sort(function (a, b) { return P[a].rank - P[b].rank; });
+    var top5 = ks.slice(0, 5).reduce(function (s, k) { return s + P[k].wan; }, 0), n = Object.keys(inScope).length;
+    var items = [
+      ['歐洲合計（' + YEAR + '）', wanTxt(P.tot.all), 'EU27＋其他歐洲，各國加總'],
+      ['歐盟 27 國', wanTxt(P.tot.EU27), '占歐洲合計 ' + pct(P.tot.EU27 / P.tot.all)],
+      ['產量最大的國家', P[ks[0]].n, fmt(P[ks[0]].wan) + ' 萬噸，占歐洲 ' + pct(P[ks[0]].share)],
+      ['前五大國合計占比', pct(top5 / P.tot.all), ks.slice(0, 5).map(function (k) { return P[k].n; }).join('、')],
+      ['有粗鋼統計的國家', ks.length + ' 個', '範圍內共 ' + n + ' 國／地區']
+    ];
+    items.forEach(function (it) {
+      var k = h('div', 'kpi'); k.appendChild(h('span', 'k', it[0]));
+      var v = h('span', 'v mono'); v.textContent = it[1]; k.appendChild(v);
+      k.appendChild(h('span', 's', it[2])); box.appendChild(k);
+    });
+  }
+
+  /* ---------- 清單 ---------- */
+  function valTxt(p) { return p.wan > 0 ? fmt(p.wan) : (p.wan === 0 ? '0' : '無統計'); }
+  function renderList() {
+    var box = $('list'), q = $('q').value.trim(), qq = q.toLowerCase();
+    box.innerHTML = ''; box.setAttribute('aria-labelledby', 'tab-' + tab);
+    var n = 0;
+    if (tab === 'prov') {
+      var ps = Object.keys(P).filter(function (k) { return k !== 'tot' && P[k].scope; }).map(function (k) { return P[k]; });
+      ps.sort(function (a, b) { return (b.wan == null ? -2 : b.wan) - (a.wan == null ? -2 : a.wan); });
+      ps.forEach(function (p) {
+        if (q && p.n.toLowerCase().indexOf(qq) < 0 && (p.en || '').toLowerCase().indexOf(qq) < 0 && p.id.toLowerCase().indexOf(qq) < 0) return;
+        n++;
+        var r = h('button', 'row' + (p.wan > 0 ? '' : ' nodata')); r.type = 'button';
+        r.setAttribute('aria-pressed', selP === p.id ? 'true' : 'false');
+        r.appendChild(h('span', 'r', p.rank ? String(p.rank) : '–'));
+        var nm = h('span', 'n', p.n); nm.appendChild(h('small', null, p.g === 'EU27' ? '歐盟' : '其他歐洲')); r.appendChild(nm);
+        r.appendChild(h('span', 'v', valTxt(p)));
+        if (p.wan > 0) { var bar = h('span', 'bar'), i = h('i'); i.style.width = Math.max(1, p.wan / P.max * 100) + '%'; bar.appendChild(i); r.appendChild(bar); }
+        r.addEventListener('click', function () { selectCountry(selP === p.id ? null : p.id, true); });
+        box.appendChild(r);
+      });
+      $('listnote').textContent = '單位：萬噸。依 ' + YEAR + ' 年粗鋼產量排序，長條為相對最大國的比例。';
+    } else {
+      var max = coList[0].wan;
+      coList.forEach(function (c) {
+        if (q && (c.n + c.s + (c.hqn || '')).toLowerCase().indexOf(qq) < 0) return;
+        n++;
+        var r = h('button', 'row'); r.type = 'button';
+        r.setAttribute('aria-pressed', selC === c ? 'true' : 'false');
+        r.appendChild(h('span', 'r', String(c.rk)));
+        var nm = h('span', 'n', c.s); nm.appendChild(h('small', null, '總部・' + c.hqn)); r.appendChild(nm);
+        r.appendChild(h('span', 'v', fmt(c.wan)));
+        var bar = h('span', 'bar'), i = h('i'); i.style.width = Math.max(1, c.wan / max * 100) + '%'; bar.appendChild(i); r.appendChild(bar);
+        r.addEventListener('click', function () { selectCompany(selC === c ? null : c, true); });
+        box.appendChild(r);
+      });
+      $('listnote').textContent = '單位：萬噸（集團全球粗鋼，含歐洲以外與其他廠區）。左側序號為世界鋼鐵協會 ' + YEAR + ' 年全球排名；只收錄前 50 名中在歐洲設有煉鋼據點者。';
+    }
+    if (!n) box.appendChild(h('p', 'empty', '找不到符合的項目。'));
+  }
+
+  /* ---------- 選取與資訊卡 ---------- */
+  function selectCountry(id, scroll) {
+    selP = id;
+    if (id) card = { t: 'p', id: id }; else if (card && card.t === 'p') card = null;
+    refreshClasses(); drawCard(); setHash(); seriesChips(); drawTl();
+    if (id && scroll) focusCountry(id);
+  }
+  function selectCompany(c, scroll) {
+    selC = c;
+    if (c) card = { t: 'c', c: c }; else if (card && card.t === 'c') card = null;
+    refreshClasses(); drawCard(); setHash();
+    if (c && scroll) resetView();
+  }
+  function companiesIn(id) {
+    var out = [];
+    coList.forEach(function (c) { var hq = c.hq === id, pl = id in c.provSet; if (hq || pl) out.push({ c: c, hq: hq, site: c.provSet[id] }); });
+    out.sort(function (a, b) { return (b.hq - a.hq) || (b.c.mt - a.c.mt); });
+    return out;
+  }
+  function drawCard() {
+    info.innerHTML = '';
+    if (!card) { info.hidden = true; return; }
+    info.hidden = false;
+    var x = h('button', 'x', '✕'); x.type = 'button'; x.setAttribute('aria-label', '關閉'); x.addEventListener('click', function () { card = null; info.hidden = true; });
+    info.appendChild(x);
+    var dl = h('dl');
+    function row(k, v) { dl.appendChild(h('dt', null, k)); dl.appendChild(h('dd', null, v)); }
+    if (card.t === 'p') {
+      var p = P[card.id];
+      info.appendChild(h('span', 'lbl', (p.g === 'EU27' ? 'EU27' : 'OTHER EUROPE') + (p.en ? ' · ' + p.en.toUpperCase() : '')));
+      info.appendChild(h('h3', null, p.n));
+      if (p.wan > 0) {
+        row(YEAR + ' 粗鋼', fmt(p.wan) + ' 萬噸');
+        row('歐洲排名', '第 ' + p.rank + ' 名（共 ' + P.nRank + ' 國有產量）');
+        row('占歐洲合計', pct(p.share));
+        if (p.prev) row('較 ' + (YEAR - 1) + ' 年', (p.wan >= p.prev ? '＋' : '－') + Math.abs((p.wan / p.prev - 1) * 100).toFixed(1) + '%（' + fmt(p.prev) + ' 萬噸）');
+        var c = crude(p.id), ys = yearsOf(p.id), pk = ys.reduce(function (m, y) { return c[y] > c[m] ? y : m; }, ys[0]);
+        row(ys[0] + ' 年起高峰', pk + ' 年 ' + fmt(c[pk] / 10) + ' 萬噸' + (pk === YEAR ? '' : '（現況為高峰的 ' + pct(p.wan / (c[pk] / 10)) + '）'));
+      } else if (p.wan === 0) { row(YEAR + ' 粗鋼', 'worldsteel 列為 0'); var pc = crude(p.id); if (pc && pc[YEAR - 1]) row((YEAR - 1) + ' 粗鋼', fmt(pc[YEAR - 1] / 10) + ' 萬噸'); }
+      else if (p.last) { row(YEAR + ' 粗鋼', 'worldsteel 無統計'); row('最近一筆', p.last[0] + ' 年 ' + fmt(p.last[1]) + ' 萬噸'); }
+      else { row(YEAR + ' 粗鋼', 'worldsteel 未列出'); }
+      info.appendChild(dl);
+      var list = companiesIn(p.id);
+      info.appendChild(h('h4', null, '全球前 50 大鋼企在此的據點'));
+      if (!list.length) info.appendChild(h('p', 'more', '本頁收錄的鋼企中，沒有總部或煉鋼據點在此國的企業；並不表示該國沒有鋼鐵產業。'));
+      else {
+        var ul = h('ul', 'colist');
+        list.forEach(function (it) {
+          var li = h('li'), b = h('button', 'cobtn'); b.type = 'button';
+          var t1 = h('span', 't1'); t1.appendChild(h('b', null, it.c.n)); t1.appendChild(h('span', 'mono', fmt(it.c.wan))); b.appendChild(t1);
+          var t2 = h('span', 't2'); if (it.hq) t2.appendChild(h('span', 'tag', '總部')); if (it.site) t2.appendChild(h('span', 'tag pl', '據點'));
+          t2.appendChild(document.createTextNode(it.site || '總部所在國')); b.appendChild(t2);
+          b.addEventListener('click', function () { tab = 'co'; syncTabs(); selectCompany(it.c, false); });
+          li.appendChild(b); ul.appendChild(li);
+        });
+        info.appendChild(ul);
+        info.appendChild(h('p', 'more', '右側數字為集團全球粗鋼（萬噸），含其他國家的廠區，並非該國產量。'));
+      }
+    } else {
+      var co = card.c;
+      info.appendChild(h('span', 'lbl', 'COMPANY · 世界第 ' + co.rk));
+      info.appendChild(h('h3', null, co.n));
+      row(YEAR + ' 粗鋼', fmt(co.wan) + ' 萬噸（集團）');
+      row('總部', co.hqn);
+      info.appendChild(dl);
+      info.appendChild(h('h4', null, '在歐洲的主要據點（點選查看該國）'));
+      var ul2 = h('ul', 'colist');
+      co.plants.forEach(function (pl) {
+        var li = h('li'), b = h('button', 'cobtn'); b.type = 'button'; var cq = P[pl[0]];
+        var t1 = h('span', 't1'); t1.appendChild(h('b', null, cq ? cq.n : pl[0])); t1.appendChild(h('span', 'mono flat', cq && cq.wan > 0 ? '全國 ' + fmt(cq.wan) : '無統計')); b.appendChild(t1);
+        b.appendChild(h('span', 't2', pl[1]));
+        b.addEventListener('click', function () { tab = 'prov'; syncTabs(); selectCountry(pl[0], true); });
+        li.appendChild(b); ul2.appendChild(li);
+      });
+      info.appendChild(ul2);
+      info.appendChild(h('p', 'more', (co.hq ? '★ 為總部所在國，' : '') + '白框為歐洲據點所在國。集團產量未按國家拆分，列出的據點非完整名單。' + (co.note ? co.note + '。' : '')));
+    }
+  }
+
+  /* ---------- 縮放與拖曳 ---------- */
+  function applyView() {
+    view.w = Math.min(FULL.w, Math.max(FULL.w / 10, view.w)); view.h = view.w * FULL.h / FULL.w;
+    view.x = Math.min(FULL.w - view.w + 60, Math.max(-60, view.x));
+    view.y = Math.min(FULL.h - view.h + 60, Math.max(-60, view.y));
+    svg.setAttribute('viewBox', [view.x, view.y, view.w, view.h].map(function (n) { return +n.toFixed(2); }).join(' '));
+    var z = FULL.w / view.w, fs = 11 / z;
+    labels.forEach(function (l) {
+      var show = z >= (MINZ[l.id] || 0.01);
+      l.el.style.display = show ? '' : 'none';
+      l.el.setAttribute('font-size', fs.toFixed(2)); l.el.style.strokeWidth = (3 / z).toFixed(2) + 'px';
+      var g = P[l.id].geo; l.t1.setAttribute('y', (g.cy - (l.t2 ? fs * 0.1 : -fs * 0.35)).toFixed(2));
+      if (l.t2) l.t2.setAttribute('y', (g.cy + fs * 1.15).toFixed(2));
+    });
+    stars.forEach(function (s) { s.setAttribute('font-size', (22 / z).toFixed(2)); s.style.strokeWidth = (3 / z).toFixed(2) + 'px'; });
+  }
+  function zoomAt(f, fx, fy) {
+    var nw = Math.min(FULL.w, Math.max(FULL.w / 10, view.w * f)), k = nw / view.w;
+    view.x = fx - (fx - view.x) * k; view.y = fy - (fy - view.y) * k; view.w = nw; applyView();
+  }
+  function resetView() { view.x = 0; view.y = 0; view.w = FULL.w; applyView(); }
+  function focusCountry(id) {
+    var g = P[id] && P[id].geo; if (!g || !paths[id]) return;
+    var bb = paths[id].getBBox(), z = Math.min(4.5, Math.max(1, 0.5 * FULL.w / Math.max(bb.width * 1.6, bb.height * 1.6 * FULL.w / FULL.h)));
+    view.w = FULL.w / z; view.h = view.w * FULL.h / FULL.w;
+    view.x = bb.x + bb.width / 2 - view.w / 2; view.y = bb.y + bb.height / 2 - view.h / 2; applyView();
+  }
+  function toUser(cx, cy) { var r = svg.getBoundingClientRect(); return { x: view.x + (cx - r.left) / r.width * view.w, y: view.y + (cy - r.top) / r.height * view.h }; }
+
+  var pts = {}, drag = null, pinch = null;
+  function ptsArr() { return Object.keys(pts).map(function (k) { return pts[k]; }); }
+  function dist() { var a = ptsArr(); return Math.max(10, Math.hypot(a[0].x - a[1].x, a[0].y - a[1].y)); }
+  function syncTabs() { [].forEach.call(document.querySelectorAll('.tab'), function (b) { b.setAttribute('aria-selected', b.dataset.t === tab ? 'true' : 'false'); }); renderList(); }
+  function bind() {
+    $('zin').addEventListener('click', function () { zoomAt(1 / 1.5, view.x + view.w / 2, view.y + view.h / 2); });
+    $('zout').addEventListener('click', function () { zoomAt(1.5, view.x + view.w / 2, view.y + view.h / 2); });
+    $('zreset').addEventListener('click', resetView);
+    $('clear').addEventListener('click', function () { selP = null; selC = null; card = null; info.hidden = true; refreshClasses(); setHash(); seriesChips(); drawTl(); resetView(); });
+    svg.addEventListener('wheel', function (e) { e.preventDefault(); var u = toUser(e.clientX, e.clientY); zoomAt(e.deltaY < 0 ? 1 / 1.2 : 1.2, u.x, u.y); }, { passive: false });
+    svg.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      pts[e.pointerId] = { x: e.clientX, y: e.clientY }; suppress = false;
+      var ids = Object.keys(pts);
+      if (ids.length === 1) drag = { x: e.clientX, y: e.clientY, vx: view.x, vy: view.y, moved: false };
+      else if (ids.length === 2) { drag = null; pinch = { d: dist(), w: view.w }; }
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (!(e.pointerId in pts)) return; pts[e.pointerId] = { x: e.clientX, y: e.clientY };
+      if (pinch && Object.keys(pts).length === 2) { var a = ptsArr(), mid = toUser((a[0].x + a[1].x) / 2, (a[0].y + a[1].y) / 2); zoomAt(pinch.w * pinch.d / dist() / view.w, mid.x, mid.y); suppress = true; return; }
+      if (drag) {
+        var dx = e.clientX - drag.x, dy = e.clientY - drag.y; if (!drag.moved && Math.abs(dx) + Math.abs(dy) < 6) return;
+        drag.moved = true; suppress = true; svg.classList.add('drag'); var r = svg.getBoundingClientRect();
+        view.x = drag.vx - dx * view.w / r.width; view.y = drag.vy - dy * view.h / r.height; applyView();
+      }
+    });
+    function end(e) { delete pts[e.pointerId]; pinch = null; drag = null; svg.classList.remove('drag'); var ids = Object.keys(pts); if (ids.length === 1) { var p = pts[ids[0]]; drag = { x: p.x, y: p.y, vx: view.x, vy: view.y, moved: true }; } }
+    window.addEventListener('pointerup', end); window.addEventListener('pointercancel', end);
+    gProv.addEventListener('click', function (e) {
+      if (suppress) { suppress = false; return; }
+      var p = e.target.closest ? e.target.closest('path') : null;
+      if (!p || p.classList.contains('ctx') || p.classList.contains('off')) return;
+      tab = 'prov'; syncTabs(); selectCountry(p.dataset.id, false);
+    });
+    gProv.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); var p = e.target; if (p.dataset && p.dataset.id) { tab = 'prov'; syncTabs(); selectCountry(p.dataset.id, false); } }
+    });
+    svg.addEventListener('click', function (e) { if (e.target === svg || e.target === vp) { if (suppress) { suppress = false; return; } selectCountry(null); } });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && card) { card = null; info.hidden = true; } });
+    $('q').addEventListener('input', renderList);
+    [].forEach.call(document.querySelectorAll('.tab'), function (b) { b.addEventListener('click', function () { tab = b.dataset.t; syncTabs(); }); });
+    window.addEventListener('hashchange', fromHash);
+  }
+
+  /* ---------- 網址（可分享） ---------- */
+  function setHash() {
+    var parts = [];
+    if (selP) parts.push('p=' + encodeURIComponent(selP));
+    if (selC) parts.push('c=' + encodeURIComponent(selC.id));
+    try { history.replaceState(null, '', parts.length ? '#' + parts.join('&') : location.pathname + location.search); } catch (e) { }
+  }
+  function fromHash() {
+    var m = {}; location.hash.replace(/^#/, '').split('&').forEach(function (kv) { var a = kv.split('='); if (a[0]) m[a[0]] = decodeURIComponent(a[1] || ''); });
+    var c = m.c ? coList.filter(function (x) { return x.id === m.c; })[0] : null;
+    var p = m.p && P[m.p] && P[m.p].scope ? m.p : null;
+    if (c) { tab = 'co'; syncTabs(); }
+    selP = p; selC = c || null;
+    card = c ? { t: 'c', c: c } : (p ? { t: 'p', id: p } : null);
+    refreshClasses(); drawCard(); seriesChips(); drawTl();
+    if (p) focusCountry(p);
+  }
+
+  /* ---------- 歷年走勢（worldsteel 2006 起） ---------- */
+  var PAL = ['#FF8A47', '#8DB4D6', '#7BC47F', '#D6A8E6', '#F2C94C', '#EB7B8B', '#4FC3C3', '#B0A090', '#9AA0F0', '#C9CDD2'];
+  var DEFS = [], tOn = {}, tSc = 'lin', tl, TW = 800, TH = 380, TM = { l: 62, r: 18, t: 18, b: 32 }, TX0 = 2006, TX1 = 2025, T = {}, cross;
+  function sumSeries(list) {
+    var out = {};
+    list.forEach(function (i) { var c = crude(i); if (!c) return; Object.keys(c).forEach(function (y) { if (c[y] != null) out[y] = (out[y] || 0) + c[y] / 10; }); });
+    return Object.keys(out).map(function (y) { return [+y, out[y]]; }).sort(function (a, b) { return a[0] - b[0]; });
+  }
+  function countrySeries(i) { var c = crude(i) || {}; return Object.keys(c).filter(function (y) { return c[y] != null; }).map(function (y) { return [+y, c[y] / 10]; }).sort(function (a, b) { return a[0] - b[0]; }); }
+  function timeline() {
+    tl = $('tl');
+    DEFS = [
+      { k: 'EU27', n: '歐盟 27 國合計', data: sumSeries(D.scope.EU27), on: true },
+      { k: 'OTH', n: '其他歐洲合計', data: sumSeries(D.scope.OTH), on: true }
+    ];
+    ['DEU', 'TUR', 'ITA', 'ESP', 'FRA', 'POL', 'GBR', 'NLD'].forEach(function (i) { DEFS.push({ k: i, n: P[i] ? P[i].n : i, data: countrySeries(i), on: i === 'DEU' || i === 'TUR' }); });
+    DEFS.forEach(function (d, i) { d.c = PAL[i % PAL.length]; tOn[d.k] = d.on; });
+    [].forEach.call(document.querySelectorAll('[data-sc]'), function (b) { b.addEventListener('click', function () { tSc = b.dataset.sc; [].forEach.call(document.querySelectorAll('[data-sc]'), function (x) { x.setAttribute('aria-pressed', x === b); }); drawTl(); }); });
+    tl.addEventListener('pointermove', tlMove); tl.addEventListener('pointerdown', tlMove); tl.addEventListener('pointerleave', function () { readout(null); });
+    $('tl-note').textContent = '單位：萬噸（粗鋼）。資料為 worldsteel 各國年產量（2006 年起，每年自動更新）；兩條合計線是本站把有資料的國家加總（拉脫維亞僅 2006–2013 年有資料，使合計在 2014 年有小幅段差）。更早年份本站尚未取得可核對的來源。';
+    seriesChips(); drawTl();
+    var rz = null; window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(drawTl, 150); });
+  }
+  function activeSeries() {
+    var out = DEFS.filter(function (d) { return tOn[d.k]; });
+    if (selP && !DEFS.some(function (d) { return d.k === selP; })) out.push({ k: selP, n: P[selP].n, data: countrySeries(selP), c: '#FFFFFF', sel: true });
+    else if (selP) out.forEach(function (d) { if (d.k === selP) d.sel = true; });
+    return out;
+  }
+  function seriesChips() {
+    var box = $('ser'); if (!box) return; box.innerHTML = '';
+    DEFS.forEach(function (d) {
+      var b = h('button', 'chip'); b.type = 'button'; b.setAttribute('aria-pressed', tOn[d.k] ? 'true' : 'false');
+      var s = h('span', 'sw'); s.style.background = d.c; b.appendChild(s); b.appendChild(document.createTextNode(d.n));
+      b.addEventListener('click', function () { tOn[d.k] = !tOn[d.k]; b.setAttribute('aria-pressed', tOn[d.k] ? 'true' : 'false'); drawTl(); });
+      box.appendChild(b);
+    });
+    if (selP && !DEFS.some(function (d) { return d.k === selP; })) {
+      var b2 = h('button', 'chip sel-c'); b2.type = 'button'; b2.setAttribute('aria-pressed', 'true'); b2.disabled = true;
+      var s2 = h('span', 'sw'); s2.style.background = '#fff'; b2.appendChild(s2); b2.appendChild(document.createTextNode('地圖選取：' + P[selP].n)); box.appendChild(b2);
+    }
+  }
+  function valAt(d, y) { for (var i = 0; i < d.data.length; i++) if (d.data[i][0] === y) return d.data[i][1]; return null; }
+  function tlPts(d) {
+    var base = d.data.length ? d.data[0][1] : 0;
+    return d.data.filter(function (p) { return p[0] >= TX0; }).map(function (p) { return [p[0], tSc === 'idx' ? (base ? p[1] / base * 100 : 0) : p[1]]; });
+  }
+  function tlScales(S) {
+    var all = []; S.forEach(function (d) { all = all.concat(tlPts(d)); });
+    var vals = all.map(function (p) { return p[1]; }), mx = Math.max.apply(null, vals.concat([1]));
+    T.X = function (y) { return TM.l + (y - (TX0 - 0.5)) / (TX1 + 0.5 - (TX0 - 0.5)) * (TW - TM.l - TM.r); };
+    T.ticks = [];
+    if (tSc === 'log') {
+      var pos = vals.filter(function (v) { return v > 0; }), lo = Math.floor(Math.log10(pos.length ? Math.min.apply(null, pos) : 1)), hi = Math.ceil(Math.log10(mx * 1.2));
+      if (hi <= lo) hi = lo + 1;
+      T.Y = function (v) { return TH - TM.b - (Math.log10(Math.max(v, Math.pow(10, lo))) - lo) / (hi - lo) * (TH - TM.t - TM.b); };
+      for (var e = lo; e <= hi; e++) T.ticks.push(Math.pow(10, e));
+    } else {
+      var raw = mx / 5, mag = Math.pow(10, Math.floor(Math.log10(raw))), r = raw / mag, step = mag * (r <= 1 ? 1 : r <= 2 ? 2 : r <= 5 ? 5 : 10), top = Math.ceil(mx * 1.05 / step) * step;
+      T.Y = function (v) { return TH - TM.b - v / top * (TH - TM.t - TM.b); };
+      for (var t = 0; t <= top + 1e-6; t += step) T.ticks.push(t);
+    }
+  }
+  function tkLabel(t) { if (tSc === 'idx') return fmt(t); return t === 0 ? '0' : (t >= 10000 ? (t / 1e4).toLocaleString('zh-TW', { maximumFractionDigits: 1 }) + ' 億' : fmt(t) + ' 萬'); }
+  function drawTl() {
+    if (!tl) return;
+    TW = Math.max(340, Math.round(tl.getBoundingClientRect().width) || 800); TH = TW < 500 ? 300 : 380;
+    tl.setAttribute('viewBox', '0 0 ' + TW + ' ' + TH);
+    var S = activeSeries(); T.S = S; tlScales(S); tl.innerHTML = '';
+    T.ticks.forEach(function (t) {
+      sv('line', { x1: TM.l, x2: TW - TM.r, y1: T.Y(t), y2: T.Y(t), 'class': 'ax' }, tl);
+      sv('text', { x: TM.l - 8, y: T.Y(t) + 4, 'text-anchor': 'end', 'class': 'tk' }, tl).textContent = tkLabel(t);
+    });
+    for (var y = 2006; y <= 2025; y += 5) {
+      sv('line', { x1: T.X(y), x2: T.X(y), y1: TH - TM.b, y2: TH - TM.b + 4, 'class': 'ax' }, tl);
+      sv('text', { x: T.X(y), y: TH - TM.b + 18, 'text-anchor': 'middle', 'class': 'tk' }, tl).textContent = y;
+    }
+    S.forEach(function (d) {
+      var pts = tlPts(d).filter(function (p) { return tSc !== 'log' || p[1] > 0; }), run = [];
+      function flush() { if (run.length > 1) sv('path', { d: 'M' + run.map(function (p) { return T.X(p[0]).toFixed(1) + ',' + T.Y(p[1]).toFixed(1); }).join('L'), 'class': 'ln', stroke: d.c, 'stroke-width': d.sel ? 3.6 : 2.2 }, tl); else if (run.length === 1) sv('circle', { cx: T.X(run[0][0]), cy: T.Y(run[0][1]), r: 3, fill: d.c }, tl); run = []; }
+      for (var i = 0; i < pts.length; i++) {
+        if (i && pts[i][0] - pts[i - 1][0] > 1) { flush(); sv('path', { d: 'M' + T.X(pts[i - 1][0]).toFixed(1) + ',' + T.Y(pts[i - 1][1]).toFixed(1) + 'L' + T.X(pts[i][0]).toFixed(1) + ',' + T.Y(pts[i][1]).toFixed(1), 'class': 'gap', stroke: d.c }, tl); }
+        run.push(pts[i]);
+      }
+      flush();
+    });
+    cross = sv('g', {}, tl); readout(null);
+  }
+  function tlMove(e) {
+    var r = tl.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * TW, yr = Math.round(TX0 - 0.5 + (x - TM.l) / (TW - TM.l - TM.r) * (TX1 + 1));
+    if (yr < TX0 || yr > TX1) { readout(null); return; } readout(yr);
+  }
+  function readout(yr) {
+    var rd = $('tl-read'); rd.innerHTML = ''; cross.innerHTML = '';
+    function cell(hd, v, sub, col) { var d = h('div'); var s = h('span'); if (col) { var dot = h('span', 'dot'); dot.style.background = col; s.appendChild(dot); } s.appendChild(document.createTextNode(hd)); d.appendChild(s); d.appendChild(h('b', null, v)); d.appendChild(h('span', null, sub || '')); rd.appendChild(d); }
+    var S = T.S || [];
+    if (!S.length) { rd.appendChild(h('div', null, '請至少勾選一個系列。')); return; }
+    if (yr == null) {
+      S.forEach(function (d) {
+        var l = d.data[d.data.length - 1]; if (!l) return;
+        var pk = d.data.reduce(function (m, p) { return p[1] > m[1] ? p : m; }, d.data[0]);
+        cell(d.n, l[0] + ' 年 ' + wanTxt(l[1]), '2006 年起高峰 ' + pk[0] + ' 年 ' + wanTxt(pk[1]) + (l[0] === pk[0] ? '' : '・現為 ' + pct(l[1] / pk[1])), d.c);
+      });
+      return;
+    }
+    sv('line', { x1: T.X(yr), x2: T.X(yr), y1: TM.t, y2: TH - TM.b, stroke: '#E8E6E1', 'stroke-width': 1, 'stroke-dasharray': '3 3' }, cross);
+    cell('年份', yr + ' 年', '');
+    S.forEach(function (d) {
+      var v = valAt(d, yr), pv = valAt(d, yr - 1), base = d.data[0] && d.data[0][1];
+      if (v == null) { cell(d.n, '無資料', '', d.c); return; }
+      cell(d.n, wanTxt(v), (pv ? '年增 ' + ((v / pv - 1) * 100).toFixed(1) + '%' : '') + (tSc === 'idx' && base ? '・指數 ' + (v / base * 100).toFixed(0) : ''), d.c);
+      var yv = tSc === 'idx' ? (base ? v / base * 100 : 0) : v;
+      if (tSc !== 'log' || yv > 0) sv('circle', { cx: T.X(yr), cy: T.Y(yv), r: 5, fill: 'none', stroke: '#fff', 'stroke-width': 2 }, cross);
+    });
+  }
+})();
+</script>
+</body>
+</html>
