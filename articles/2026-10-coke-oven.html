@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>煉焦爐怎麼煉焦：從裝煤、乾餾到推焦熄焦的十幾個小時 · 鋼鐵潮流 Steel Trending</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鋼鐵小學堂：煉焦爐如何把煉焦煤乾餾成高爐用的焦炭。從炭化室、燃燒室與蓄熱室的構造，到裝煤、推焦、濕熄與乾熄焦，以及焦爐煤氣與副產品、焦炭品質、環保和中鋼新焦爐工程。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+article{max-width:760px}
+article h2{margin:56px 0 14px;font-size:26px;font-weight:900;line-height:1.35;padding-top:20px;border-top:1px solid #2A2F35}
+article p{margin:0 0 16px;font-size:17px;line-height:1.9;color:#D5D7DA}
+article p.lead{font-size:19px;color:#E8E6E1}
+article ul{margin:0 0 20px;padding-left:1.2em}
+article li{margin:0 0 12px;font-size:16px;line-height:1.85;color:#C9CDD2}
+article li::marker{color:#FF6A1A}
+article li b{color:#E8E6E1}
+article .watch li::marker{content:'□  ';color:#9AA0A6}
+.tbl{overflow-x:auto;border:1px solid #2A2F35;margin:8px 0 24px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+th,td{padding:12px 14px;border-bottom:1px solid #22262B;text-align:left;vertical-align:top}
+th{background:#15181B;font-weight:500;font-size:12px;letter-spacing:.08em;color:#9AA0A6}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody th[scope=row]{width:9em;background:#15181B;font-size:13px;letter-spacing:.04em;white-space:nowrap}
+td.num{font-family:'IBM Plex Mono',monospace;white-space:nowrap;color:#E8E6E1}
+figure{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 12px;font-size:13px;line-height:1.7;color:#C9CDD2;border-top:1px solid #2A2F35}
+figcaption small{display:block;margin-top:2px;font-size:12px;color:#9AA0A6}
+.tlfig{border:1px solid #2A2F35;background:#121417;padding:24px 16px 4px;margin:8px 0 24px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.tl::before{content:'';position:absolute;left:6%;right:6%;top:31px;height:2px;background:linear-gradient(90deg,#FF6A1A 0,#FF6A1A 84%,#3A3F46 84%)}
+.tl .ev{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px;position:relative}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9CDD2;height:20px;white-space:nowrap}
+.tl .dot{width:14px;height:14px;border-radius:50%;background:#FF6A1A;border:3px solid #121417;box-sizing:content-box;margin:2px 0 10px;position:relative;z-index:1}
+.tl .t{font-size:13px;line-height:1.6;color:#C9CDD2}
+.tl .x .dot{background:#8DB4D6}.tl .x .d{color:#8DB4D6}
+.tl .k .dot{width:20px;height:20px;margin:-1px 0 7px;box-shadow:0 0 0 4px rgba(255,106,26,.25)}.tl .k .t{color:#E8E6E1;font-weight:700}.tl .k .d{color:#FF8A47}
+.tl .f .dot{background:#121417;border:2px dashed #9AA0A6;width:14px;height:14px}.tl .f .d,.tl .f .t{color:#9AA0A6}
+.tlkey{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;padding:18px 0 14px !important;border-top:0 !important;font-size:12px !important;color:#9AA0A6 !important}
+.tlkey i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.tlkey .k1{background:#FF6A1A}.tlkey .k2{background:#8DB4D6}.tlkey .k3{border:2px dashed #9AA0A6;width:8px;height:8px}
+@media (max-width:720px){
+.tlfig{padding:20px 16px 4px}
+.tl{grid-template-columns:1fr}
+.tl::before{left:9px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,#FF6A1A 0,#FF6A1A 86%,#3A3F46 86%)}
+.tl .ev{display:grid;grid-template-columns:20px 92px 1fr;align-items:start;text-align:left;padding:0 0 14px;gap:0 10px}
+.tl .dot{grid-column:1;grid-row:1;margin:3px 0 0 0;justify-self:center}
+.tl .k .dot{margin:0}
+.tl .d{grid-column:2;grid-row:1;height:auto;padding-top:2px}
+.tl .t{grid-column:3;grid-row:1}
+}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;margin:8px 0 24px}
+.fact{background:#121417;padding:18px 16px;display:flex;gap:12px;align-items:flex-start}
+.fact .ic{flex:none;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid #3A3F46;background:#181B1F;color:#FF6A1A}
+.fact .fl{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#9AA0A6;margin-bottom:4px}
+.fact .fv{display:block;font-size:16px;font-weight:700;color:#E8E6E1;line-height:1.5}
+.fact .fs{display:block;font-size:13px;color:#9AA0A6;line-height:1.6;margin-top:2px}
+.pies{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 8px}
+.pie{margin:0;border:1px solid #2A2F35;background:#121417;padding:16px}
+.pie .ph{font-size:14px;font-weight:700;color:#E8E6E1;margin-bottom:10px;padding:0;border:0}
+.pw{display:flex;align-items:center;gap:16px}
+.pw svg{width:150px;height:150px;flex:none;overflow:visible}
+.pw path{cursor:default;transition:opacity .15s}
+.pw svg:hover path{opacity:.45}.pw svg path:hover{opacity:1}
+.c1{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;fill:#E8E6E1}
+.c2{font-size:12px;fill:#9AA0A6}
+.lg{list-style:none;margin:0;padding:0;flex:1}
+.lg li{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:14px;color:#C9CDD2}
+.lg li::marker{content:''}
+.lg i{width:10px;height:10px;border-radius:2px;flex:none}
+.lg .ln{flex:1}.lg .lv{font-family:'IBM Plex Mono',monospace;color:#E8E6E1}
+.note{font-size:13px !important;color:#9AA0A6 !important;margin:6px 0 18px !important}
+.tip{position:fixed;z-index:10;pointer-events:none;background:#1C2024;border:1px solid #3A3F46;color:#E8E6E1;font-size:13px;padding:6px 10px;white-space:nowrap}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}.pies{grid-template-columns:1fr}}
+@media (max-width:420px){.facts{grid-template-columns:1fr}}
+.bars{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.bars .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.bar{display:grid;grid-template-columns:7.5em 1fr 4.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.bar .tr{height:14px;background:#1C2024;border-radius:0 4px 4px 0}
+.bar .fi{height:14px;background:#8A8F96;border-radius:0 4px 4px 0}
+.bar.hi .fi{background:#FF6A1A}.bar.hi{color:#E8E6E1;font-weight:700}
+.bar .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1}
+.bars .bn{font-size:12px;color:#9AA0A6;margin:8px 0 0}
+.flow{list-style:none;margin:8px 0 24px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;counter-reset:st}
+.flow li{background:#121417;padding:14px 12px;margin:0;counter-increment:st;font-size:13px;line-height:1.6;color:#9AA0A6}
+.flow li::marker{content:''}
+.flow li b{display:block;font-size:15px;color:#E8E6E1;margin-bottom:2px}
+.flow li b::before{content:counter(st,decimal-leading-zero) '  ';font-family:'IBM Plex Mono',monospace;font-size:12px;color:#FF6A1A;font-weight:500}
+.flow li.mine{border-top:2px solid #FF6A1A}.flow li.proc{border-top:2px solid #8DB4D6}.flow li.log{border-top:2px solid #9AA0A6}
+.flowkey{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#9AA0A6;margin:-14px 0 24px}
+.flowkey i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:6px}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mapfig{margin:8px 0 8px;border:1px solid #2A2F35;background:#121417;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mapfig .mi{min-width:680px}
+.mapfig svg path[stroke-opacity]:hover{stroke-opacity:1;filter:drop-shadow(0 0 3px rgba(255,255,255,.35))}
+.mapkey{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:#C9CDD2;margin:10px 0 6px}
+.mapkey i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.mapkey .ds{background:none;border-top:2px dashed #FF6A1A;height:0}
+.mapkey .ck{width:10px;height:10px;border-radius:50%;border:1.5px solid #E8E6E1;background:none}
+.rt td:first-child{white-space:nowrap}
+.bars2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 24px}
+.bars2 .bars{margin:0}
+@media (max-width:720px){.bars2{grid-template-columns:1fr}}
+.rng{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.rng .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.rng .rw{display:grid;grid-template-columns:8em 1fr 5.2em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.rng .tr{position:relative;height:14px;background:#1C2024;border-radius:2px}
+.rng .fi{position:absolute;top:0;height:14px;border-radius:2px}
+.rng .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1;white-space:nowrap}
+.rng .ax{display:grid;grid-template-columns:8em 1fr 5.2em;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9AA0A6}
+.rng .ax .sc{position:relative;height:14px}
+.rng .ax .sc span{position:absolute;transform:translateX(-50%)}
+.rng .bn{font-size:12px;color:#9AA0A6;margin:10px 0 0}
+@media (max-width:560px){.rng .rw,.rng .ax{grid-template-columns:6.2em 1fr 4.6em}}
+.flow.f5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:900px){.flow.f5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sources li{font-size:14px}
+@media (max-width:640px){.wrap{padding:0 16px}article p{font-size:16px}article p.lead{font-size:17px}}
+.bffig{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+.bffig figcaption{border-top:1px solid #2A2F35}
+.flow li.z1{border-top:2px solid #9AA0A6}.flow li.z2{border-top:2px solid #FF6A1A}.flow li.z3{border-top:2px solid #8DB4D6}
+.fsq2{max-width:440px;margin-left:auto;margin-right:auto;margin-bottom:22px}
+.tl.nofut::before{background:#FF6A1A !important}
+.tbl.nar tbody th[scope=row]{width:1%;padding-right:14px;white-space:nowrap}
+.tbl.nar thead th:first-child{white-space:nowrap;width:1%}
+.tbl.nar table{min-width:520px}
+.rng .rw,.rng .ax{grid-template-columns:8em 1fr 7.6em}
+@media (max-width:560px){.rng .rw,.rng .ax{grid-template-columns:6.4em 1fr 7.2em}.rng .rw,.rng .rw .v{font-size:13px}}
+@media (max-width:400px){.rng .rw,.rng .ax{grid-template-columns:5.4em 1fr 6.4em;gap:8px}}
+</style>
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<script>window.ARTICLE_CATEGORY = 'steel101';</script>
+<script src="../assets/article-nav.js" defer></script>
+</head>
+<body>
+
+<header style="border-bottom:1px solid #2A2F35">
+<nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1">
+<img src="../assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+<span style="display:flex;flex-direction:column;line-height:1.1">
+<span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+<span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+</span>
+</a>
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+<a href="../#daily" style="color:#C9CDD2;text-decoration:none;padding:12px">每日速報</a>
+<a href="../stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px">全球鋼鐵股</a>
+<style>.nvdd{position:relative}.nvdd summary{list-style:none;cursor:pointer;color:#C9CDD2;padding:12px;display:flex;align-items:center;gap:6px;font-size:15px;user-select:none}.nvdd summary::-webkit-details-marker{display:none}.nvdd summary span{font-size:11px;color:#FF6A1A;transition:transform .2s}.nvdd[open] summary span{transform:rotate(180deg)}.nvdd summary:hover,.nvdd[open] summary,.nvdd.cur summary{color:#FF8A47}.nvdd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}.nvdd-m{position:absolute;top:100%;left:0;z-index:50;min-width:180px;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45);padding:6px 0;display:flex;flex-direction:column}.nvdd-m a{padding:12px 16px;color:#E8E6E1;text-decoration:none;font-size:15px;white-space:nowrap}.nvdd-m a:hover{background:#1C2024;color:#FF8A47}.nvdd-m a[aria-current]{color:#FF8A47}</style><details class="nvdd"><summary>鋼鐵數字<span aria-hidden="true">▾</span></summary><div class="nvdd-m"><a href="../worldsteel.html">世界鋼鐵數據</a><a href="../twmap.html">台灣鋼鐵地圖</a><a href="../trends.html">關鍵字熱度</a></div></details>
+<a href="../archive.html" style="color:#C9CDD2;text-decoration:none;padding:12px">過去詳情</a>
+<a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px">訂閱頻道</a>
+</div>
+</nav>
+</header>
+
+<main class="wrap" style="padding-top:40px;padding-bottom:96px">
+<nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="../#topics" style="text-decoration:none">關注主題</a> <span aria-hidden="true">›</span> 鋼鐵小學堂 <span aria-hidden="true">›</span> 專題</nav>
+
+<article>
+<p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">STEEL 101 · COKE OVEN · 2026.10</p>
+<h1 style="margin:12px 0 10px;font-size:clamp(30px,5vw,46px);font-weight:900;line-height:1.25">煉焦爐怎麼煉焦：從裝煤、乾餾到推焦熄焦的十幾個小時</h1>
+<p style="font-size:14px;color:#9AA0A6">鋼鐵潮流工作室 · 發布 2026.10.21</p>
+
+<figure><img src="../assets/articles/2026-10-coke-oven-1.jpg" alt="焦爐組長長的外牆沿走道延伸，牆面佈滿管線與欄杆，下方是軌道，整個空間籠罩在橘黃色的霧氣與燈光中" width="960" height="640"><figcaption>烏克蘭 ArcelorMittal Kryvyi Rih 的 6 號焦爐組。一組焦爐由幾十個狹長的炭化室並排而成，照片中是爐組外側長長的牆面、管線與軌道。<small>照片：ArcelorMittal Kryvyi Rih，2016 年攝，<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:%D0%9A%D0%BE%D0%BA%D1%81%D0%BE%D0%B2%D0%B0%D1%8F_%D0%B1%D0%B0%D1%82%D0%B0%D1%80%D0%B5%D1%8F_%E2%84%966.jpg">Wikimedia Commons</a></small></figcaption></figure>
+
+<h2>本期重點</h2>
+<p class="lead">〈<a href="2026-10-port-to-blast-furnace.html">進爐之前</a>〉提到，煉焦煤不能直接進高爐，要先在焦爐裡「乾餾」成焦炭；〈<a href="2026-10-blast-furnace.html">高爐怎麼煉鐵</a>〉則說明焦炭在爐裡既是燃料、還原劑，也是撐住料柱的骨架。這一課回頭看焦炭是怎麼煉出來的：煉焦爐一天到晚輪流裝煤、結焦、推焦，把一爐爐的煤變成強度夠的塊焦。</p>
+<ul>
+<li><b>煉焦就是「隔絕空氣的烘烤」。</b> 煤在 900–1,100°C 的爐室裡不能燒起來，只能被慢慢加熱；揮發物跑掉之後，剩下的就是多孔、堅硬的焦炭。</li>
+<li><b>爐子是「窄而高」的夾心設計。</b> 炭化室只有半公尺上下寬，兩側夾著燃燒室，熱量從牆壁傳進去。爐室太寬，中心就熱不透。</li>
+<li><b>一座焦爐不停，是靠一整組輪流。</b> 一組焦爐有 20 到 100 個炭化室，每室約十幾個小時出一次焦，錯開排程，焦炭與煤氣才能源源不斷。</li>
+<li><b>煤氣不浪費。</b> 結焦時逸出的焦爐煤氣，約三到四成淨化後送回爐子自己燃燒，其餘供全廠使用；焦油、氨與粗苯也會被回收。</li>
+</ul>
+<div class="facts">
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><span class="fl">高爐焦結焦時間</span><span class="fv">約 15–18 小時</span><span class="fs">需求低時可延到約 24 小時</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></span><div><span class="fl">結焦溫度</span><span class="fv">約 900–1,100°C</span><span class="fs">爐中心到約 950–1,000°C 才算結焦完成</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v18M15 3v18"/><path d="M5 8h14"/></svg></span><div><span class="fl">炭化室寬度</span><span class="fv">約 0.35–0.6 m</span><span class="fs">長十餘公尺、高約 3–9 m，依爐型而異</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="4" height="12"/><rect x="10" y="6" width="4" height="12"/><rect x="17" y="6" width="4" height="12"/></svg></span><div><span class="fl">一組焦爐</span><span class="fv">20–100 個炭化室</span><span class="fs">並排共用隔牆，輪流裝煤、推焦</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h12"/><path d="M13 8l4 4-4 4"/><path d="M20 5v14"/></svg></span><div><span class="fl">焦爐煤氣熱值</span><span class="fv">約 4,400 kcal/m³</span><span class="fs">氫含量高，約占體積六成</span></div></div>
+<div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 21h14"/><path d="M4 8h16"/></svg></span><div><span class="fl">乾熄焦蒸汽</span><span class="fv">約 0.45 t／t 焦</span><span class="fs">焦炭由約 1,000°C 冷到約 200°C 回收的熱</span></div></div>
+</div>
+<p class="note">以上為典型或文獻列出的範圍，實際數值依煤種、爐型與各廠操作而異。</p>
+
+<h2>焦爐長什麼樣子</h2>
+<figure class="bffig"><div class="mapfig" style="margin:0;border:0"><div class="mi" style="min-width:720px">
+<svg viewBox="0 0 960 560" role="img" aria-label="焦爐組橫剖面示意圖：上方裝煤車從裝煤孔把煤倒進狹長的炭化室；炭化室兩側是燃燒室的火道，下方是蓄熱室與煙道。三個炭化室分別是剛裝煤、結焦中（塑性層由兩側往中心推進）與結焦完成" style="display:block;width:100%;height:auto;font-family:'Noto Sans TC','PingFang TC',sans-serif">
+<defs><linearGradient id="ckF" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#FF6A1A"/><stop offset="1" stop-color="#FFB07F"/></linearGradient><linearGradient id="ckC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B4532A"/><stop offset="1" stop-color="#6E3A22"/></linearGradient><marker id="ckO" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF8A47"/></marker><marker id="ckB" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8DB4D6"/></marker><marker id="ckG" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9AA0A6"/></marker></defs>
+<rect x="60" y="120" width="432" height="30" fill="#3A3F46" stroke="#6A7078"/>
+<rect x="60" y="150" width="432" height="250" fill="#2A2F35" stroke="#6A7078"/>
+<rect x="60" y="400" width="432" height="72" fill="#2A2F35" stroke="#6A7078"/>
+<rect x="60" y="472" width="432" height="34" fill="#15181B" stroke="#6A7078"/>
+<rect x="60" y="150" width="60" height="250" fill="#4A3A32"/>
+<rect x="67" y="165" width="11" height="225" fill="url(#ckF)" opacity=".95"/>
+<rect x="84" y="165" width="11" height="225" fill="#7A5A4A" opacity=".8"/>
+<rect x="101" y="165" width="11" height="225" fill="url(#ckF)" opacity=".95"/>
+<rect x="64" y="408" width="52" height="58" fill="#5A3E30"/>
+<path d="M66,412 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M66,420 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M66,428 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M66,436 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M66,444 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M66,452 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M66,460 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M72,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M82,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M92,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M102,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M112,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<rect x="120" y="150" width="64" height="250" fill="#15181B"/>
+<rect x="122" y="190" width="60" height="210" fill="#0F1113"/>
+<path d="M152.0,128 L152.0,184" stroke="#C9CDD2" stroke-width="5" stroke-dasharray="5 4" marker-end="url(#ckG)"/>
+<path d="M166.0,186 L166.0,160" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ckB)"/>
+<rect x="184" y="150" width="60" height="250" fill="#4A3A32"/>
+<rect x="191" y="165" width="11" height="225" fill="url(#ckF)" opacity=".95"/>
+<rect x="208" y="165" width="11" height="225" fill="#7A5A4A" opacity=".8"/>
+<rect x="225" y="165" width="11" height="225" fill="url(#ckF)" opacity=".95"/>
+<rect x="188" y="408" width="52" height="58" fill="#5A3E30"/>
+<path d="M190,412 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M190,420 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M190,428 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M190,436 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M190,444 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M190,452 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M190,460 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M196,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M206,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M216,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M226,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M236,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<rect x="244" y="150" width="64" height="250" fill="#15181B"/>
+<rect x="246" y="190" width="60" height="210" fill="url(#ckC)" opacity=".55"/>
+<rect x="258" y="190" width="36" height="210" fill="#FF6A1A" opacity=".85"/>
+<rect x="266" y="190" width="20" height="210" fill="#0F1113"/>
+<path d="M284.0,186 L284.0,160" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ckB)"/>
+<rect x="308" y="150" width="60" height="250" fill="#4A3A32"/>
+<rect x="315" y="165" width="11" height="225" fill="url(#ckF)" opacity=".95"/>
+<rect x="332" y="165" width="11" height="225" fill="#7A5A4A" opacity=".8"/>
+<rect x="349" y="165" width="11" height="225" fill="url(#ckF)" opacity=".95"/>
+<rect x="312" y="408" width="52" height="58" fill="#5A3E30"/>
+<path d="M314,412 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M314,420 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M314,428 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M314,436 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M314,444 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M314,452 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M314,460 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M320,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M330,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M340,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M350,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M360,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<rect x="368" y="150" width="64" height="250" fill="#15181B"/>
+<rect x="370" y="190" width="60" height="210" fill="url(#ckC)"/>
+<circle cx="380" cy="215" r="3" fill="#FFB07F" opacity=".8"/>
+<circle cx="389" cy="242" r="3" fill="#FFB07F" opacity=".8"/>
+<circle cx="398" cy="269" r="3" fill="#FFB07F" opacity=".8"/>
+<circle cx="407" cy="296" r="3" fill="#FFB07F" opacity=".8"/>
+<circle cx="416" cy="323" r="3" fill="#FFB07F" opacity=".8"/>
+<circle cx="385" cy="350" r="3" fill="#FFB07F" opacity=".8"/>
+<circle cx="394" cy="377" r="3" fill="#FFB07F" opacity=".8"/>
+<path d="M408.0,186 L408.0,160" stroke="#8DB4D6" stroke-width="2" marker-end="url(#ckB)"/>
+<rect x="432" y="150" width="60" height="250" fill="#4A3A32"/>
+<rect x="439" y="165" width="11" height="225" fill="url(#ckF)" opacity=".95"/>
+<rect x="456" y="165" width="11" height="225" fill="#7A5A4A" opacity=".8"/>
+<rect x="473" y="165" width="11" height="225" fill="url(#ckF)" opacity=".95"/>
+<rect x="436" y="408" width="52" height="58" fill="#5A3E30"/>
+<path d="M438,412 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M438,420 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M438,428 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M438,436 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M438,444 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M438,452 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M438,460 h48" stroke="#2A2F35" stroke-width="2"/>
+<path d="M444,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M454,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M464,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M474,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<path d="M484,410 v54" stroke="#2A2F35" stroke-width="2"/>
+<rect x="141.0" y="124" width="22" height="26" fill="#15181B" stroke="#6A7078"/>
+<rect x="265.0" y="124" width="22" height="26" fill="#15181B" stroke="#6A7078"/>
+<rect x="389.0" y="124" width="22" height="26" fill="#15181B" stroke="#6A7078"/>
+<rect x="60" y="112" width="432" height="6" fill="#6A7078"/>
+<rect x="77.0" y="52" width="150" height="46" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<path d="M132.0,98 L142.0,124 L162.0,124 L172.0,98 Z" fill="#2A2F35" stroke="#9AA0A6" stroke-width="1.5"/>
+<rect x="87.0" y="60" width="130" height="26" fill="#0F1113"/>
+<circle cx="97.0" cy="108" r="6" fill="#2A2F35" stroke="#9AA0A6"/><circle cx="207.0" cy="108" r="6" fill="#2A2F35" stroke="#9AA0A6"/>
+<path d="M90.0,500 L90.0,478" stroke="#8DB4D6" stroke-width="2.5" marker-end="url(#ckB)"/>
+<path d="M90.0,470 L90.0,410" stroke="#8DB4D6" stroke-width="2.5" marker-end="url(#ckB)"/>
+<path d="M214.0,410 L214.0,470" stroke="#9AA0A6" stroke-width="2.5" marker-end="url(#ckG)"/>
+<path d="M214.0,478 L214.0,500" stroke="#9AA0A6" stroke-width="2.5" marker-end="url(#ckG)"/>
+<path d="M338.0,500 L338.0,478" stroke="#8DB4D6" stroke-width="2.5" marker-end="url(#ckB)"/>
+<path d="M338.0,470 L338.0,410" stroke="#8DB4D6" stroke-width="2.5" marker-end="url(#ckB)"/>
+<path d="M462.0,410 L462.0,470" stroke="#9AA0A6" stroke-width="2.5" marker-end="url(#ckG)"/>
+<path d="M462.0,478 L462.0,500" stroke="#9AA0A6" stroke-width="2.5" marker-end="url(#ckG)"/>
+<path d="M227.0,76.0 L520,74" stroke="#6A7078" stroke-width="1" fill="none"/>
+<text x="530" y="80" font-size="14" font-weight="700" fill="#E8E6E1">裝煤車</text>
+<text x="530" y="97" font-size="12" fill="#9AA0A6">走在爐頂軌道上，從裝煤孔把配好的煤倒進炭化室</text>
+<path d="M411.0,136.0 L520,134" stroke="#6A7078" stroke-width="1" fill="none"/>
+<text x="530" y="140" font-size="14" font-weight="700" fill="#E8E6E1">裝煤孔</text>
+<text x="530" y="157" font-size="12" fill="#9AA0A6">裝完煤蓋上蓋子，爐室頂部留出空間讓煤氣上升</text>
+<path d="M430.0,214.0 L520,208" stroke="#6A7078" stroke-width="1" fill="none"/>
+<text x="530" y="214" font-size="14" font-weight="700" fill="#E8E6E1">炭化室</text>
+<text x="530" y="231" font-size="12" fill="#9AA0A6">寬只有 0.5 公尺上下，長十多公尺、高約三到九公尺；煤在裡面隔絕空氣加熱</text>
+<path d="M448.0,292.0 L520,286" stroke="#6A7078" stroke-width="1" fill="none"/>
+<text x="530" y="292" font-size="14" font-weight="700" fill="#E8E6E1">燃燒室（火道）</text>
+<text x="530" y="309" font-size="12" fill="#9AA0A6">焦爐煤氣在火道燃燒，從兩側壁把熱量傳進炭化室</text>
+<path d="M486.0,436.0 L520,398" stroke="#6A7078" stroke-width="1" fill="none"/>
+<text x="530" y="404" font-size="14" font-weight="700" fill="#E8E6E1">蓄熱室</text>
+<text x="530" y="421" font-size="12" fill="#9AA0A6">格子磚吸收廢氣的熱量，下半週期再預熱進來的空氣</text>
+<path d="M486.0,490.0 L520,486" stroke="#6A7078" stroke-width="1" fill="none"/>
+<text x="530" y="492" font-size="14" font-weight="700" fill="#E8E6E1">煙道</text>
+<text x="530" y="509" font-size="12" fill="#9AA0A6">廢氣由此送往煙囪；每 20–30 分鐘換向一次</text>
+<text x="152.0" y="426" font-size="0"></text>
+<text x="276.0" y="426" font-size="0"></text>
+<text x="400.0" y="426" font-size="0"></text>
+<g font-size="12" fill="#9AA0A6" text-anchor="middle">
+</g>
+<g font-size="12" font-weight="700" fill="#E8E6E1" text-anchor="middle">
+<text x="152.0" y="528">①剛裝煤</text>
+<text x="276.0" y="528">②結焦中</text>
+<text x="400.0" y="528">③結焦完成</text>
+</g>
+<text x="60" y="548" font-size="12" fill="#9AA0A6">橙色細層是塑性層，由兩側往中心推進；中心到 950–1,000°C 才算結焦完成</text>
+</svg>
+</div></div>
+<figcaption>本站繪製之焦爐組橫剖面示意圖，比例大幅簡化（真實的炭化室是細長的窄縫，高度與長度遠大於寬度）；各廠爐型、火道數量與加熱方式不同。手機上可以左右滑動看全圖。</figcaption>
+</figure>
+<div class="mapkey"><span><i style="background:#0F1113;height:10px;width:14px;border:1px solid #4A5058"></i>剛裝入的煤</span><span><i style="background:#FF6A1A;height:10px;width:14px"></i>塑性層、燃燒中的火道</span><span><i style="background:#8A5030;height:10px;width:14px"></i>焦炭</span><span><i style="background:#8DB4D6"></i>空氣、煤氣上升</span><span><i style="background:#9AA0A6"></i>廢氣</span></div>
+<p>焦爐不是一個一個獨立的爐子，而是一整排「煤」與「火」交錯的牆：炭化室裝煤，旁邊的燃燒室燒煤氣，熱量穿過約 100 mm 厚的耐火磚牆傳進煤裡。整排並在一起，就是一個焦爐組（coke oven battery）。</p>
+<ul>
+<li><b>炭化室。</b> 裝煤的地方，是又細又高的長方形空間，寬只有約 350–600 mm。又窄又長，是為了讓熱量能從兩側傳到中心，又能一次推出整塊焦餅。文獻列的尺寸因年代與爐型而異：美國環保署整理的副產品焦爐為長 11–16.8 m、高 3.0–6.7 m、寬 0.35–0.5 m；ISPATGURU 兩篇文章分別列了長 11–18.7 m、高 3.0–7.4 m，以及長 15–20 m、高 6–9 m、寬 500–600 mm 的大型爐；中鋼新爐高 7.6 m。</li>
+<li><b>燃燒室與火道。</b> 夾在炭化室之間，裡面是一條條垂直的火道。焦爐煤氣在其中燃燒，把爐壁加熱，每次換向時，一半火道燒煤氣，另一半把廢氣送出。</li>
+<li><b>蓄熱室。</b> 位於燃燒室下方，裡面砌滿格子磚，吸收離開的廢氣熱量，再用來預熱進來的空氣，省下燃料。</li>
+<li><b>裝煤孔與上升管。</b> 煤由爐頂的裝煤孔裝入，頂部留出空間讓煤氣上升；煤氣從爐室兩端的上升管導出，匯入集氣管，再送去煤氣處理。</li>
+<li><b>爐門。</b> 炭化室的兩端是可拆卸的爐門：一側是推焦機的「機側」，另一側是焦炭被推出去的「焦側」。</li>
+<li><b>機械。</b> 裝煤車在爐頂、推焦機在機側、導焦車與熄焦車在焦側，沿著軌道在爐組長度方向來回走，配合整組的排程。</li>
+</ul>
+
+<h2>一爐焦炭的旅程：九個步驟</h2>
+<p>從配好的煤送到焦爐，到篩好的塊焦送進高爐，大致經過下面九個步驟。前兩步煤還在爐外，中間三步是爐內的結焦，最後四步是出爐與處理。</p>
+<ol class="flow">
+<li class="z1"><b>配煤與粉碎</b>多種煤依比例配合，粉碎到約 3 mm 以下（至少 85% 通過 3.2 mm 篩孔）</li>
+<li class="z1"><b>入煤塔、秤量</b>配好的煤進煤塔，再秤出每個炭化室需要的量</li>
+<li class="z2"><b>裝煤</b>裝煤車從裝煤孔裝入，推焦機的平煤桿把煤層整平</li>
+<li class="z2"><b>乾餾</b>隔絕空氣，兩側加熱到 900–1,100°C，揮發物逸出，煤軟化、固化、收縮成焦</li>
+<li class="z2"><b>結焦完成</b>爐中心約 950–1,000°C，焦炭與爐壁分離，變成一整塊焦餅</li>
+<li class="z3"><b>推焦</b>拆下兩端爐門，推焦機以推桿把焦餅推出，經導焦車落進熄焦車</li>
+<li class="z3"><b>熄焦</b>赤熱的焦炭用水噴淋（濕熄），或在密閉槽中用惰性氣體冷卻（乾熄）</li>
+<li class="z3"><b>篩分</b>約 25–80 mm 的塊焦送高爐，10–25 mm 的小塊焦與 10 mm 以下的焦粉另作他用</li>
+<li class="z3"><b>送高爐</b>焦炭由輸送帶運到高爐料倉，是高爐入料的一部分</li>
+</ol>
+<div class="flowkey"><span><i style="background:#9AA0A6"></i>備煤</span><span><i style="background:#FF6A1A"></i>爐內結焦</span><span><i style="background:#8DB4D6"></i>出焦、熄焦與處理</span></div>
+<p>一個炭化室從裝煤到推焦，高爐用焦炭約需 15–18 小時（需求低時可拉長到約 24 小時）。一組焦爐有幾十個炭化室，每個錯開不同時間，所以整組看起來是「每隔一小段時間就有一爐出焦、一爐裝煤」。</p>
+
+<h2>煤怎麼變成焦：爐內的溫度歷程</h2>
+<p>炭化室裡的煤，是從兩側往中心一層一層熟的。靠牆的煤先熱、先軟化、先變成焦；中心還是煤。兩側各有一層黏稠的「塑性層」，逐漸往中心推進，最後在中間會合，整爐才算結焦完成。下圖把煤加熱過程中的幾個關鍵溫度放在同一把尺上比較：</p>
+<div class="rng" role="img" aria-label="煤結焦過程的約略溫度範圍（°C）：塑性範圍 350–500、煤分解形成塑性層 375–475、塑性質部分轉為半焦 450–550、焦油與芳香烴明顯析出 475–600、焦炭收縮並放出氫 600–1,100、爐中心結焦終點 950–1,000"><p class="bt">煤結焦過程的約略溫度（°C）</p>
+<div class="rw" title="冶金煤塑性範圍：約 350–500°C"><span>塑性範圍</span><span class="tr"><span class="fi" style="left:29.2%;width:12.5%;background:#FF8A47"></span></span><span class="v">350–500</span></div>
+<div class="rw" title="煤分解、形成塑性層：375–475°C"><span>形成塑性層</span><span class="tr"><span class="fi" style="left:31.3%;width:8.3%;background:#FF6A1A"></span></span><span class="v">375–475</span></div>
+<div class="rw" title="塑性質部分轉為半焦：450–550°C"><span>轉為半焦</span><span class="tr"><span class="fi" style="left:37.5%;width:8.3%;background:#FF6A1A"></span></span><span class="v">450–550</span></div>
+<div class="rw" title="焦油與芳香烴明顯析出：475–600°C"><span>焦油析出</span><span class="tr"><span class="fi" style="left:39.6%;width:10.4%;background:#8DB4D6"></span></span><span class="v">475–600</span></div>
+<div class="rw" title="焦炭收縮、結構發展並放出氫：600–1,100°C"><span>收縮放氫</span><span class="tr"><span class="fi" style="left:50%;width:41.7%;background:#9AA0A6"></span></span><span class="v">600–1,100</span></div>
+<div class="rw" title="爐中心結焦終點：約 950–1,000°C"><span>中心終點</span><span class="tr"><span class="fi" style="left:79.2%;width:4.2%;background:#FFB07F"></span></span><span class="v">950–1,000</span></div>
+<div class="ax"><span></span><span class="sc"><span style="left:0%">0</span><span style="left:25%">300</span><span style="left:50%">600</span><span style="left:75%">900</span><span style="left:100%">1,200</span></span><span></span></div>
+<p class="bn">資料來源：ISPATGURU〈Coal Carbonization for Coke Production〉與〈Coke making in Byproduct Coke Oven Batteries〉。各煤種的軟化與固化溫度不同，圖中為文獻列出的約略範圍。</p></div>
+<ul>
+<li><b>黏結性是配煤的關鍵。</b> 只有加熱時能軟化、黏結的煤，才能結成有強度的焦。所以不會只用一種煤，而是把黏結性強、弱，揮發分高、低的煤依比例配合，目標是讓塑性層厚度與焦炭強度剛好。</li>
+<li><b>煤氣與焦炭各占多少。</b> 揮發物與煤氣約占裝入煤重的 20–35%（美國環保署資料）；扣掉這些，推算焦炭約占煤重的三分之二到八成，實際比例依煤種與水分而異。</li>
+<li><b>焦炭是怎麼變硬的。</b> 約 600°C 以上，半焦持續收縮、放出氫，結構越來越緊密，到爐中心升到 950–1,000°C，焦炭的強度才定型。</li>
+</ul>
+
+<h2>燃燒室與換向：怎麼把熱送進去</h2>
+<p>焦爐的熱源是煤氣，而且大部分就是它自己產生的煤氣。炭化室裡的煤氣經淨化後，有一部分送回燃燒室的火道燃燒，把爐壁加熱，煤也就跟著結焦。</p>
+<ul>
+<li><b>自給自足。</b> 淨化後的焦爐煤氣約有 35–40% 回到爐子當燃料；其餘送給全廠用。</li>
+<li><b>每 20–30 分鐘換向一次。</b> 一半火道燃燒煤氣，另一半把廢氣向下送到蓄熱室；換向後，兩邊對調。這樣爐壁的溫度才能保持均勻，也能利用廢氣的熱預熱進來的空氣。</li>
+<li><b>廢氣最後走煙道。</b> 經過蓄熱室冷卻的廢氣，沿爐組底部的煙道送往煙囪，所以焦爐的煙囪排放，主要是燃燒煙氣；而推焦、裝煤時的逸散，是另外的排放源。</li>
+<li><b>爐溫要穩。</b> 爐壁溫度太高會燒壞耐火磚、損傷爐體；太低則結焦不透、焦炭強度不足。因此火道溫度的量測與控制，是焦爐操作的重點。</li>
+</ul>
+
+<h2>裝煤、推焦、熄焦：靠機械輪流作業</h2>
+<figure><img src="../assets/articles/2026-10-coke-oven-2.jpg" alt="紅褐色的大型鋼構設備橫跨在水面上方，後方是一支磚造煙囪" width="960" height="720" loading="lazy"><figcaption>德國埃森 Zollverein 煉焦廠保存下來的推焦機（照片中是它的鋼構外觀）。推焦機在焦爐組的機側沿軌道行走，用推桿把整塊焦餅從炭化室推出。<small>照片：Rainer Halama，2009 年攝，<a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a>，經 <a href="https://commons.wikimedia.org/wiki/File:Kokerei_Zollverein_-_Dr%C3%BCckmaschine.jpg">Wikimedia Commons</a></small></figcaption></figure>
+<p>焦爐組是固定的，人與機械在爐組外側來回走。每個炭化室都按照排程，依序經過「裝煤、結焦、推焦」，由下面這幾台機械完成：</p>
+<div class="tbl nar"><table>
+<caption style="position:absolute;left:-9999px">焦爐組的主要機械與任務</caption>
+<thead><tr><th scope="col">機械</th><th scope="col">位置</th><th scope="col">任務</th></tr></thead>
+<tbody>
+<tr><th scope="row">裝煤車</th><td>爐頂軌道</td><td>從煤塔取煤，對準裝煤孔，把煤倒進炭化室</td></tr>
+<tr><th scope="row">推焦機</th><td>機側</td><td>拆下爐門，以推桿把焦餅整塊推出；也負責在裝煤後把煤層整平</td></tr>
+<tr><th scope="row">導焦車</th><td>焦側</td><td>拆焦側爐門、接住推出來的焦餅，導入熄焦車</td></tr>
+<tr><th scope="row">熄焦車</th><td>焦側軌道</td><td>接住赤熱的焦炭，運往熄焦塔或乾熄焦設備</td></tr>
+</tbody></table></div>
+<p class="note">機械名稱依美國環保署 AP-42 與 ISPATGURU 的說明整理。</p>
+<p>推焦是整個過程最有戲劇性的一步：兩端爐門拆下之後，炭化室裡約 1,000°C 的焦餅被推桿一次推出，落進等在旁邊的熄焦車，同時冒出火焰與煙塵。</p>
+<figure><img src="../assets/articles/2026-10-coke-oven-3.jpg" alt="歷史彩色照片：橘紅色的赤熱焦炭堆在車內燃燒，冒出火焰與大量黑煙，左側是焦爐的爐體" width="960" height="769" loading="lazy"><figcaption>1942 年美國底特律 Great Lakes Steel 公司 Hanna 煉焦爐的推焦：赤熱的焦炭被推進熄焦車，冒出火焰與濃煙（彩色底片）。<small>照片：Arthur S. Siegel，1942 年 11 月攝，美國國會圖書館藏，公有領域，經 <a href="https://commons.wikimedia.org/wiki/File:Coke_being_pushed_into_a_quenching_car1a35416v.jpg">Wikimedia Commons</a></small></figcaption></figure>
+
+<h2>熄焦：濕熄與乾熄</h2>
+<p>推出來的焦炭約有 1,000°C，遇到空氣就會燒掉，必須馬上冷卻。傳統做法是濕式熄焦：熄焦車開到熄焦塔下，用水噴淋，水變成大量蒸汽升空；乾式熄焦（CDQ）則改在密閉槽裡，用循環的惰性氣體把焦炭冷卻，熱氣再進鍋爐產生蒸汽。</p>
+<div class="tbl nar"><table>
+<caption style="position:absolute;left:-9999px">濕式熄焦與乾式熄焦的比較</caption>
+<thead><tr><th scope="col">項目</th><th scope="col">濕式熄焦</th><th scope="col">乾式熄焦</th></tr></thead>
+<tbody>
+<tr><th scope="row">冷卻方式</th><td>噴水，水變成蒸汽排出</td><td>密閉槽內，惰性氣體循環冷卻</td></tr>
+<tr><th scope="row">焦炭水分</th><td>約 2–5%</td><td>約 0.1–0.3%</td></tr>
+<tr><th scope="row">用水</th><td>每噸焦約 0.6 m³</td><td>不用水冷卻焦炭</td></tr>
+<tr><th scope="row">粉塵</th><td>每噸焦約 300–400 g</td><td>每噸焦低於 3 g</td></tr>
+<tr><th scope="row">熱能</th><td>隨蒸汽散失</td><td>回收產生蒸汽，約 0.45 t／t 焦</td></tr>
+<tr><th scope="row">反應後強度 CSR</th><td>約 58</td><td>約 60</td></tr>
+</tbody></table></div>
+<p class="note">數字出自 ISPATGURU〈Dry cooling of coke〉的一組 56 t/h 模組與比較表，實際依各廠設計與運轉條件而異；蒸汽量是依文中 25 t/h、焦炭 56 t/h 推算。</p>
+<ul>
+<li><b>乾熄怎麼運作。</b> 焦炭約 1,000–1,050°C 進入冷卻槽，停留約 5–6 小時，出口約 200°C；循環的惰性氣體從底部吹入（入口約 170°C），離開時已有 800–850°C，通過鍋爐產生壓力約 40 kg/cm²、溫度約 440°C 的蒸汽，用來發電或供熱。</li>
+<li><b>焦炭品質也更好。</b> 乾熄的焦炭水分低、冷卻均勻，強度與反應後強度略有提升，高爐用起來更穩定。</li>
+<li><b>代價是投資大。</b> 乾熄需要密閉槽、鍋爐與循環系統，是比熄焦塔更大的一筆投資。</li>
+</ul>
+
+<h2>副產品：煤氣、焦油、氨與粗苯</h2>
+<p>焦爐不只做焦炭。結焦時逸出的煤氣先經集氣管匯集，再一步步冷卻、淨化，把有價值的成分回收：</p>
+<p class="note">煤氣離開炭化室時約 760–870°C，經噴灑氨水急冷到約 80–100°C，離開飽和器約 60°C，最後冷卻到約 24°C（美國環保署 AP-42 第 12.2 章）。</p>
+<ul>
+<li><b>焦油。</b> 煤氣冷卻時凝結出焦油，在分離槽與水、氨水分開。</li>
+<li><b>氨。</b> 煤氣通過含 5–10% 硫酸的飽和器，氨與硫酸反應結晶成硫酸銨，可以當肥料。</li>
+<li><b>粗苯（輕油）。</b> 用重質石油餾分當洗油吸收，洗油能吸收約自身重量的 2–3%，去除煤氣中約 95% 的輕油；之後可再加工成苯、甲苯、二甲苯。</li>
+<li><b>淨化後的煤氣。</b> 熱值約 4,400 kcal／m³（ISPATGURU，約 18 MJ/m³），氫含量高（Wikipedia 稱氫約占體積六成）。除了回燒焦爐，也送到加熱爐、鍋爐與發電。</li>
+
+</ul>
+
+<h2>焦炭品質：高爐要的是「強度」</h2>
+<p>焦炭在高爐裡要撐住數千噸爐料，還要在高溫、二氧化碳環境下不碎成粉，否則煤氣就走不通。所以煉焦廠最在意的，不是產量，而是強度：</p>
+<div class="tbl nar"><table>
+<caption style="position:absolute;left:-9999px">焦炭品質常用指標</caption>
+<thead><tr><th scope="col">指標</th><th scope="col">意義</th></tr></thead>
+<tbody>
+<tr><th scope="row">M40</th><td>焦炭在轉鼓中轉 100 轉後，仍留在 40 mm 篩上的百分比；愈高愈好</td></tr>
+<tr><th scope="row">M10</th><td>同一個轉鼓試驗後，通過 10 mm 篩的百分比；愈低愈好</td></tr>
+<tr><th scope="row">CRI</th><td>反應性指數：焦炭在惰性氣氛加熱到約 950°C，再與二氧化碳反應，以損失的重量百分比表示（各標準的試驗條件不同）</td></tr>
+<tr><th scope="row">CSR</th><td>反應後強度：焦炭經 CRI 反應後再做轉鼓試驗，看它在高溫、二氧化碳環境下抵抗碎裂的能力</td></tr>
+<tr><th scope="row">灰分、硫</th><td>灰分高會增加爐渣量，硫會進入鐵水；兩者主要由煤種決定，所以選煤與配煤很重要</td></tr>
+<tr><th scope="row">水分</th><td>濕熄後的焦炭通常吸收約 3–6% 質量的水</td></tr>
+</tbody></table></div>
+<p class="note">指標定義整理自 ISPATGURU〈Metallurgical Coke〉與 Wikipedia；各國試驗標準略有不同，數字不能直接互比。</p>
+<ul>
+<li><b>粒度。</b> 高爐用的塊焦約 25–80 mm；10–25 mm 為小塊焦（nut coke），10 mm 以下為焦粉（breeze），不進高爐，另作他用。</li>
+<li><b>焦比越來越低。</b> 達比早期操作每噸鐵要用約 4 噸焦炭；ISPATGURU 指出，日產逾一萬噸的現代大型高爐，每噸鐵水的焦炭用量已低於 400 公斤。</li>
+<li><b>AI 配煤。</b> 配煤是煉焦最大的變數。中鋼 2024 年發表「焦炭強度 AI 預測智能平台」，先在四階煉焦爐導入，協助即時調整配煤比例、穩定焦炭強度，並可採用較低成本的煉焦煤，公司估計該爐每年可降低原料成本約 7,500 萬元。</li>
+</ul>
+
+<h2>環保挑戰與另一種焦爐</h2>
+<p>焦爐的排放來源很多，從煤進來、到焦炭出去，每一步都可能逸散：</p>
+<ul>
+<li><b>裝煤。</b> 煤倒入高溫炭化室，瞬間冒出煤氣與煙塵。各廠會用密封與抽吸等做法，盡量減少逸散。</li>
+<li><b>爐門、爐蓋與上升管。</b> 副產品焦爐是在爐內壓力高於大氣壓的狀態下操作，縫隙就可能漏氣，所以爐門密封與維修，是日常最繁重的工作之一。</li>
+<li><b>推焦與熄焦。</b> 推焦時有粉塵與有機氣體逸出，濕熄時蒸汽夾帶粉塵與水中物質，這也是推動乾熄的原因。</li>
+<li><b>燃燒煙囪。</b> 加熱火道的燃燒廢氣，經蓄熱室後由煙囪排出。</li>
+</ul>
+<p>另一類焦爐叫非回收式（heat recovery）焦爐，作法完全不同：爐室是水平的大空間（寬約 3.5–3.7 m），整個系統在負壓下操作，不回收化學副產品，揮發物在爐內燃燒，用廢熱發電，結焦時間也較長（文獻中約 48–72 小時）。它的好處是負壓操作、不產生液體廢水，但無法回收焦油、氨與苯。</p>
+
+<h2>歷史小註腳：從蜂巢爐到乾熄焦</h2>
+<div class="tlfig">
+<ol class="tl nofut">
+<li class="ev k"><span class="d">1709</span><span class="dot"></span><span class="t">達比以焦炭煉鐵成功</span></li>
+<li class="ev"><span class="d">1870</span><span class="dot"></span><span class="t">英國達拉姆煤田已有 14,000 座蜂巢爐</span></li>
+<li class="ev"><span class="d">1910</span><span class="dot"></span><span class="t">匹茲堡蜂巢爐近 48,000 座達高峰</span></li>
+<li class="ev k"><span class="d">19 世紀末</span><span class="dot"></span><span class="t">Otto-Hoffmann 副產品焦爐成形</span></li>
+<li class="ev x"><span class="d">1920 年代</span><span class="dot"></span><span class="t">瑞士提出乾熄焦構想</span></li>
+<li class="ev x"><span class="d">1965</span><span class="dot"></span><span class="t">首座全尺寸乾熄焦在蘇聯投運</span></li>
+<li class="ev x"><span class="d">1976–77</span><span class="dot"></span><span class="t">日本三座乾熄焦投運</span></li>
+<li class="ev k"><span class="d">2020</span><span class="dot"></span><span class="t">中鋼啟動新二階焦爐與乾熄焦工程</span></li>
+</ol>
+<p class="tlkey"><span><i class="k1"></i>煉焦技術</span><span><i class="k2"></i>乾熄焦發展</span></p>
+</div>
+<ul>
+<li><b>從蜂巢爐開始。</b> 早期焦炭是在圓頂的磚砌蜂巢爐裡燒出來的，煤由爐頂裝入、從側門整平，靠燒掉煤自己放出的揮發物加熱，煉焦時間要 48–72 小時，沒有回收副產品。1870 年英國達拉姆煤田有 14,000 座，年產約 400 萬長噸。</li>
+<li><b>變成化工廠。</b> 十九世紀後期，德國的奧托（C. Otto）把 Coppée 爐改造成能回收揮發物的裝置，霍夫曼（Gustav Hoffmann）再加上西門子的蓄熱室，形成 Otto-Hoffmann 系統，能同時產出焦炭、焦油、苯與氨。</li>
+<li><b>乾熄焦。</b> 乾熄焦的構想由瑞士的蘇爾壽（Sulzer）兄弟在 1920 年代提出，後來蘇聯的 Giprokoks 研究所發展出連續作業的版本，1965 年在 Cherepovets 鋼廠投運第一座全尺寸裝置；到 1978 年，蘇聯約有 50 個每小時 56 噸的模組在運轉。日本 1975 年向蘇聯購買授權，1976–77 年間投運三座。</li>
+</ul>
+
+<h2>對台灣鋼鐵業的意義</h2>
+<ul>
+<li><b>中鋼是副產品式煉焦的老資格。</b> 1978 年《鑛冶》期刊的介紹文章，就稱中鋼煉焦廠設有典型的副產品式煉焦爐，焦炭達到高爐所需水準。焦炭由煉焦廠供應高爐，也是一貫作業鋼廠的第一關。</li>
+<li><b>新二階焦爐與乾熄焦工程。</b> 中鋼董事會 2020 年 3 月通過焦爐及乾式熄焦工程第一期，94 億餘元；其後再通過煉焦爐及乾熄焦第二期約 80.8 億元，與煤場封閉式建築第二期約 38 億元，兩項合計逾 118 億元。2023 年 5 月，新一、二階焦爐舉行築爐奠基祈福典禮，新爐高 7.6 公尺，採底噴式複循環燃燒。</li>
+<li><b>預期效益。</b> 依中鋼公告，各階段工程逐步完成後，每年可減少揮發性有機物約 73 公噸（約 63%）、粒狀物約 41 公噸（約 56%），單位能耗項目列 214 百萬卡／公噸焦（約 10%），增加發電量約 2.73 億度，並減少二氧化碳排放約 14.6 萬公噸。</li>
+<li><b>智慧化。</b> 2023 年 5 月 31 日的奠基報導指出，中鋼規劃建置煉焦爐智能化整合中心，開發配煤與焦炭品質預測、車輛智能防撞、爐溫控制與診斷、智慧型 AI 加料設定等四大模型。</li>
+
+</ul>
+<p class="note">投資金額、時程與效益取自上述董事會公告與新聞報導；各階段的實際完工與投產進度，本文沒有查到最新的公開資料，請以中鋼公告為準。</p>
+
+<h2>延伸閱讀</h2>
+<ul>
+<li><a href="2026-10-port-to-blast-furnace.html">進爐之前：鐵礦、焦煤與石灰從港口到高爐的處理流程</a></li>
+<li><a href="2026-10-blast-furnace.html">高爐怎麼煉鐵：從爐頂裝料、熱風燃燒到出鐵的連續作業</a></li>
+<li><a href="2026-10-bof.html">轉爐怎麼煉鋼：從兌鐵水、吹氧到出鋼的四十分鐘</a></li>
+<li><a href="2026-10-nippon-steel-hydrogen-bf.html">高爐吹氫減碳 43%：日本製鐵 Super COURSE50 試驗全解析</a></li>
+</ul>
+
+<h2>資料來源</h2>
+<ul class="sources">
+<li><a href="https://www.ispatguru.com/?p=1551">Coke making in Byproduct Coke Oven Batteries</a>（ISPATGURU，2014）</li>
+<li><a href="https://www.ispatguru.com/?p=2525">Understanding Coke Making in Byproduct Coke Oven Battery</a>（ISPATGURU，2015）</li>
+<li><a href="https://www.ispatguru.com/coal-carbonization-for-coke-production/">Coal Carbonization for Coke Production</a>（ISPATGURU）</li>
+<li><a href="https://www.ispatguru.com/metallurgical-coke/">Metallurgical Coke</a>（ISPATGURU）</li>
+<li><a href="https://www.ispatguru.com/dry-cooling-of-coke/">Dry cooling of coke</a>（ISPATGURU）</li>
+<li><a href="https://www.ispatguru.com/?p=391">Dry Quenching of Hot Coke</a>（ISPATGURU，2013）</li>
+<li><a href="https://www.ispatguru.com/?p=4674">Carbonization of Coal in Heat Recovery Coke Oven Battery</a>（ISPATGURU）</li>
+<li><a href="https://www.epa.gov/sites/default/files/2020-11/documents/c12s02_may08.pdf">AP-42 Section 12.2 Coke Production</a>（美國環保署，2008）</li>
+<li><a href="https://en.wikipedia.org/wiki/Coke_(fuel)">Coke (fuel)</a>（Wikipedia）</li>
+<li><a href="https://www.gracesguide.co.uk/Otto-Hoffmann">Otto-Hoffmann</a>（Grace's Guide）</li>
+<li><a href="https://www.airitilibrary.com/Article/Detail/04510011-N202306220014-00006">中鋼的煉焦工場</a>（鑛冶，1978，華藝線上圖書館）</li>
+<li><a href="https://n.yam.com/Article/20240417876433">中鋼運用AI智慧配煤技術 降減原料採購成本</a>（yam 天空新聞，2024）</li>
+<li><a href="https://news.cnyes.com/news/id/4554760">中鋼投資118億元進行二工程案 優化製程減排</a>（鉅亨網）</li>
+<li><a href="https://news.cnyes.com/news/id/5198703">中鋼一二階煉焦爐築爐奠基祈福 將同步建置智能化整合中心</a>（鉅亨網，2023）</li>
+<li><a href="https://ec.ltn.com.tw/article/breakingnews/3118745">中鋼啟動「新2階煉焦爐及乾式淬火設備工程」</a>（自由財經）</li>
+<li><a href="https://www.cna.com.tw/news/afe/202003230206.aspx">中鋼董事會通過焦爐及乾式熄焦工程第一期（2020-03-23）</a>（中央社）</li>
+</ul>
+<p style="font-size:13px;color:#9AA0A6;margin-top:32px">內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</p>
+</article>
+<!-- article-qr -->
+<aside aria-label="本文連結 QR Code" style="max-width:760px;box-sizing:border-box;margin-top:48px;border:1px solid #2A2F35;background:#15181B;padding:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+<img src="../assets/qr/2026-10-coke-oven.png" alt="本文連結 QR Code" width="132" height="132" loading="lazy" style="display:block;width:132px;height:132px;background:#FFFFFF;flex:none">
+<div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 220px">
+<p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;color:#FF6A1A">SHARE</p>
+<p style="margin:0;font-size:17px;font-weight:900;color:#E8E6E1">掃描 QR Code 開啟本文</p>
+<p style="margin:0;font-size:13px;line-height:1.7;color:#9AA0A6;word-break:break-all">https://steeltrending.github.io/articles/2026-10-coke-oven.html</p>
+<div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:4px"><a href="../assets/qr/2026-10-coke-oven.png" download="steeltrending-2026-10-coke-oven-qr.png" style="font-size:14px;color:#FF8A47;text-decoration:none">下載 QR Code ↓</a><button type="button" data-url="https://steeltrending.github.io/articles/2026-10-coke-oven.html" onclick="var b=this,u=this.dataset.url;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).catch(function(){var t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}).then(function(){b.textContent='已複製本文網址';setTimeout(function(){b.textContent='分享本文'},2000)})" style="font:inherit;font-size:14px;color:#FF8A47;background:none;border:0;padding:0;cursor:pointer">分享本文</button></div>
+</div>
+</aside>
+<!-- /article-qr -->
+
+<p style="margin-top:48px"><a href="../#topics" style="display:inline-flex;align-items:center;border:1px solid #4A5058;color:#E8E6E1;text-decoration:none;padding:12px 20px">← 回到鋼鐵小學堂</a></p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E">
+<div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+<span>© 2026 鋼鐵潮流 Steel Trending　·　<a href="../sitemap.html" style="color:#C9CDD2">網站導覽</a></span>
+<span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+</div>
+</footer>
+<div class="tip" id="tip" hidden></div>
+<script>
+(function(){var t=document.getElementById('tip');if(!t)return;
+document.querySelectorAll('.pw path[data-tip]').forEach(function(p){
+p.addEventListener('mousemove',function(e){t.textContent=p.getAttribute('data-tip');t.hidden=false;t.style.left=(e.clientX+12)+'px';t.style.top=(e.clientY+12)+'px';});
+p.addEventListener('mouseleave',function(){t.hidden=true;});});})();
+</script>
+<script src="../assets/hover.js" defer></script>
+<script src="../assets/tts.js" defer></script>
+</body>
+</html>
