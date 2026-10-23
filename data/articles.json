@@ -1,6 +1,23 @@
 {
  "items": [
   {
+   "id": "2026-10-csc-ops-2026",
+   "category": "csc",
+   "title": "中鋼 2026 運營狀況：第一季虧損、第二季轉盈，9 月營收創 28 個月新高",
+   "period": "2026-10",
+   "published": "2026-10-23",
+   "summary": "中鋼 2026 年前三季運營：出貨逐季增加（253.0、270.7、287.3 萬噸）、熱軋月盤與季盤逐月調整、9 月營收 310.01 億元創 28 個月新高、稅前盈餘 4 月起由虧轉盈，並整理第四季三種情境與 2027 年的變數。",
+   "tags": [
+    "中鋼",
+    "運營",
+    "盤價",
+    "營收",
+    "2026"
+   ],
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Kaohsiung_China_Steel_Corporation_Headquarters_09.jpg/960px-Kaohsiung_China_Steel_Corporation_Headquarters_09.jpg",
+   "url": "articles/2026-10-csc-ops-2026.html"
+  },
+  {
    "id": "2026-10-thyssenkrupp-steel-layoffs",
    "category": "mills",
    "title": "蒂森克虜伯鋼鐵裁員進度：1.1 萬個職位已減 4,000，產能縮到 870–900 萬噸，杜伊斯堡 DRI 廠先不用氫",
