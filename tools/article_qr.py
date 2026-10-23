@@ -3,7 +3,7 @@
 
 - 每篇 articles/<名稱>.html 產生 assets/qr/<名稱>.png，連到 https://steeltrending.github.io/articles/<名稱>.html
 - QR 用最高容錯（H 級），中央放圓形吉祥物，產生後會實際解碼驗證，掃不出來就停止。
-- 「中鋼新聞專區」的文章（返回連結為「回到中鋼新聞專區」）不加。
+- 「中鋼新聞專區」的文章（返回連結為「回到中鋼新聞專區」）不加，INCLUDE 內的例外。
 - 區塊插在 </article> 之後；已有區塊的文章會更新成最新版本，重複執行不會重複插入。
 - 由 GitHub Actions（.github/workflows/sitemap.yml）在文章有異動時自動執行，新文章不必手動處理。
 
@@ -21,6 +21,7 @@ BASE = "https://steeltrending.github.io/articles/"
 MASCOT = os.path.join(ROOT, "assets", "mascot.jpg")
 OUT_DIR = os.path.join(ROOT, "assets", "qr")
 EXCLUDE = "回到中鋼新聞專區"
+INCLUDE = {"2026-10-csc-ops-2026.html"}  # 中鋼專區中例外要加 QR 與分享按鈕的文章
 SIZE = 600            # 輸出 PNG 邊長（px）
 LOGO_RATIO = 0.30     # 吉祥物（含白邊）直徑佔整張圖的比例
 ORANGE = (255, 106, 26)
@@ -91,7 +92,7 @@ def main():
         html = open(path, encoding="utf-8").read()
         new = BLOCK_RE.sub("\n", html)
         png = os.path.join(OUT_DIR, name[:-5] + ".png")
-        if EXCLUDE in html:
+        if EXCLUDE in html and name not in INCLUDE:
             if os.path.exists(png):
                 os.remove(png)
             skipped += 1
