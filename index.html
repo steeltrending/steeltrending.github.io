@@ -193,6 +193,17 @@ Facebook 粉專</a>
 </div>
 </section>
 
+<!-- LATEST ARTICLES -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.24em; color: #FF6A1A">02.5 · LATEST</p>
+<h2 style="margin: 0; font-size: clamp(32px, 4.5vw, 48px); font-weight: 900; line-height: 1.2">最新文章</h2>
+</div>
+<div id="latest-articles-list" style="display: flex; flex-direction: column; gap: 0; border: 1px solid #2A2F35; background: #15181B">
+<!-- 文章會由 JavaScript 動態填充 -->
+</div>
+</section>
+
 <!-- ABOUT / CTA -->
 <section id="about" aria-labelledby="about-title" style="position: relative; border-top: 1px solid #2A2F35; background-color: #0F1113; background-image: linear-gradient(90deg, rgba(15,17,19,.92) 0%, rgba(15,17,19,.72) 42%, rgba(15,17,19,.22) 100%), linear-gradient(180deg, rgba(15,17,19,.6) 0%, rgba(15,17,19,0) 30%, rgba(15,17,19,0) 70%, rgba(15,17,19,.85) 100%), url('assets/about-blast-furnace.jpg'); background-size: cover; background-position: center 58%">
 <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: center">
@@ -428,6 +439,100 @@ document.getElementById('mail-btn').addEventListener('click', function () {
       });
     })
     .catch(function () {});
+})();
+</script>
+<script>
+/* 最新文章列表 */
+(function () {
+  var categoryNames = {
+    'materials': '原料與價格',
+    'mills': '全球鋼廠動態',
+    'vehicles': '先進載具與鋼材',
+    'demand': '下游需求觀察',
+    'trade': '貿易與政策',
+    'carbon': '碳中和',
+    'decarb': '低碳冶金',
+    'steel101': '鋼鐵小學堂',
+    'csc': '中鋼新聞專區'
+  };
+
+  fetch('data/articles.json?ts=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) {
+      var list = document.getElementById('latest-articles-list');
+      if (!list) return;
+
+      var latest = (d.items || [])
+        .filter(function (a) { return a.published; })
+        .sort(function (a, b) { return new Date(b.published) - new Date(a.published); })
+        .slice(0, 5);
+
+      if (!latest.length) {
+        list.textContent = '';
+        list.appendChild(document.createElement('p')).textContent = '文章準備中';
+        return;
+      }
+
+      list.textContent = '';
+      latest.forEach(function (a, idx) {
+        var row = document.createElement('a');
+        row.href = a.url;
+        row.setAttribute('style', 'display: grid; grid-template-columns: 90px 120px minmax(0, 1fr) 24px; gap: 16px; padding: 16px 24px; align-items: center; color: #E8E6E1; text-decoration: none; border-bottom: 1px solid #22262B; transition: background 0.2s; cursor: pointer');
+        row.onmouseover = function () { this.style.background = '#1C2024'; };
+        row.onmouseout = function () { this.style.background = 'transparent'; };
+
+        // 日期
+        var dateEl = document.createElement('span');
+        dateEl.setAttribute('style', "font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #FF6A1A; white-space: nowrap");
+        dateEl.textContent = a.published.slice(0, 10).replace(/-/g, '/');
+        row.appendChild(dateEl);
+
+        // 主題
+        var catEl = document.createElement('span');
+        catEl.setAttribute('style', 'font-family: \'IBM Plex Mono\', monospace; font-size: 12px; color: #9AA0A6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis');
+        catEl.textContent = categoryNames[a.category] || a.category;
+        row.appendChild(catEl);
+
+        // 標題
+        var titleEl = document.createElement('span');
+        titleEl.setAttribute('style', 'font-size: 15px; font-weight: 700; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden');
+        titleEl.textContent = a.title;
+        row.appendChild(titleEl);
+
+        // 箭頭
+        var arrowEl = document.createElement('span');
+        arrowEl.setAttribute('aria-hidden', 'true');
+        arrowEl.setAttribute('style', 'color: #FF6A1A; text-align: center; width: 24px');
+        arrowEl.textContent = '→';
+        row.appendChild(arrowEl);
+
+        list.appendChild(row);
+      });
+
+      // 響應式調整
+      function updateLayout() {
+        var items = list.querySelectorAll('a');
+        items.forEach(function (item) {
+          var width = window.innerWidth;
+          if (width < 800) {
+            item.style.gridTemplateColumns = '80px minmax(0, 1fr) 20px';
+            item.style.gap = '12px';
+          } else if (width < 1200) {
+            item.style.gridTemplateColumns = '85px 110px minmax(0, 1fr) 24px';
+            item.style.gap = '14px';
+          } else {
+            item.style.gridTemplateColumns = '90px 120px minmax(0, 1fr) 24px';
+            item.style.gap = '16px';
+          }
+        });
+      }
+      window.addEventListener('resize', updateLayout);
+      updateLayout();
+    })
+    .catch(function () {
+      var list = document.getElementById('latest-articles-list');
+      if (list) list.textContent = '文章資料暫時無法載入';
+    });
 })();
 </script>
 <script>
