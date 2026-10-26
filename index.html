@@ -470,32 +470,32 @@ document.getElementById('mail-btn').addEventListener('click', function () {
       latest.forEach(function (a, idx) {
         var row = document.createElement('a');
         row.href = a.url;
-        row.setAttribute('style', 'display: grid; grid-template-columns: 90px 120px minmax(0, 1fr) 24px; gap: 16px; padding: 16px 24px; align-items: center; color: #E8E6E1; text-decoration: none; border-bottom: 1px solid #22262B; transition: background 0.2s; cursor: pointer');
+        row.setAttribute('style', 'display: grid; grid-template-columns: 90px 120px minmax(0, 1fr) 24px; gap: 16px; padding: 16px 24px; align-items: start; color: #E8E6E1; text-decoration: none; border-bottom: 1px solid #22262B; transition: background 0.2s; cursor: pointer');
         row.onmouseover = function () { this.style.background = '#1C2024'; };
         row.onmouseout = function () { this.style.background = 'transparent'; };
 
         // 日期
         var dateEl = document.createElement('span');
-        dateEl.setAttribute('style', "font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #FF6A1A; white-space: nowrap");
+        dateEl.setAttribute('style', "font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #FF6A1A; white-space: nowrap; flex-shrink: 0");
         dateEl.textContent = a.published.slice(0, 10).replace(/-/g, '/');
         row.appendChild(dateEl);
 
         // 主題
         var catEl = document.createElement('span');
-        catEl.setAttribute('style', 'font-family: \'IBM Plex Mono\', monospace; font-size: 12px; color: #9AA0A6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis');
+        catEl.setAttribute('style', 'font-family: \'IBM Plex Mono\', monospace; font-size: 12px; color: #9AA0A6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 0');
         catEl.textContent = categoryNames[a.category] || a.category;
         row.appendChild(catEl);
 
         // 標題
         var titleEl = document.createElement('span');
-        titleEl.setAttribute('style', 'font-size: 15px; font-weight: 700; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden');
+        titleEl.setAttribute('style', 'font-size: 15px; font-weight: 700; line-height: 1.6; word-break: break-word');
         titleEl.textContent = a.title;
         row.appendChild(titleEl);
 
         // 箭頭
         var arrowEl = document.createElement('span');
         arrowEl.setAttribute('aria-hidden', 'true');
-        arrowEl.setAttribute('style', 'color: #FF6A1A; text-align: center; width: 24px');
+        arrowEl.setAttribute('style', 'color: #FF6A1A; text-align: center; width: 24px; flex-shrink: 0');
         arrowEl.textContent = '→';
         row.appendChild(arrowEl);
 
@@ -505,17 +505,39 @@ document.getElementById('mail-btn').addEventListener('click', function () {
       // 響應式調整
       function updateLayout() {
         var items = list.querySelectorAll('a');
+        var width = window.innerWidth;
         items.forEach(function (item) {
-          var width = window.innerWidth;
-          if (width < 800) {
-            item.style.gridTemplateColumns = '80px minmax(0, 1fr) 20px';
+          if (width < 600) {
+            // 手機版：只顯示標題和箭頭
+            item.style.gridTemplateColumns = 'minmax(0, 1fr) 24px';
+            item.style.gap = '8px';
+            item.style.padding = '12px 16px';
+            // 隱藏日期和主題
+            var children = item.querySelectorAll('span');
+            if (children.length >= 4) {
+              children[0].style.display = 'none'; // 日期
+              children[1].style.display = 'none'; // 主題
+            }
+          } else if (width < 900) {
+            // 平板版：顯示日期、標題、箭頭
+            item.style.gridTemplateColumns = '80px minmax(0, 1fr) 24px';
             item.style.gap = '12px';
-          } else if (width < 1200) {
-            item.style.gridTemplateColumns = '85px 110px minmax(0, 1fr) 24px';
-            item.style.gap = '14px';
+            item.style.padding = '14px 20px';
+            var children = item.querySelectorAll('span');
+            if (children.length >= 4) {
+              children[0].style.display = 'inline'; // 日期
+              children[1].style.display = 'none'; // 主題
+            }
           } else {
+            // 桌面版：顯示所有內容
             item.style.gridTemplateColumns = '90px 120px minmax(0, 1fr) 24px';
             item.style.gap = '16px';
+            item.style.padding = '16px 24px';
+            var children = item.querySelectorAll('span');
+            if (children.length >= 4) {
+              children[0].style.display = 'inline'; // 日期
+              children[1].style.display = 'inline'; // 主題
+            }
           }
         });
       }
