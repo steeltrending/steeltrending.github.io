@@ -35,7 +35,7 @@ jobs:
         run: |
           git config user.name "steeltrending"
           git config user.email "noreply@steeltrending.github.io"
-          git add data/twchain.json data/twhistory
+          git add data/twchain.json data/twhistory data/tw_closed.json
           if git diff --cached --quiet; then echo "沒有新資料"; exit 0; fi
           git commit -m "台股產業鏈自動更新 $(TZ=Asia/Taipei date +%F)"
           for i in 1 2 3; do

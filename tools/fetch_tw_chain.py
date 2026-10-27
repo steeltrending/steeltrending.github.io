@@ -11,6 +11,9 @@
 - data/twchain.json 的最新報價只在新交易日不早於現有 asof、且價格與現值差距合理（0.5～2 倍）時才覆寫；
   抓不到新資料時沿用最近一次可取得的資料，不留空。
 - 漲跌幅由累積的歷史序列計算：當日、近 5 日、近 20 日、今年以來（以 2025 年最後一個交易日為基準）。
+- 休市日防呆：Yahoo Finance 在颱風假等臨時休市日常會補一筆「收盤價與前一日相同」的假 K 棒，
+  導致當日漲跌幅全部變 0。若某日九成以上個股收盤價都與前一交易日相同，判定為休市日，
+  記入 data/tw_closed.json，並從歷史與最新報價中排除；頁面一律顯示最近一個實際開盤日的數據。
 """
 import datetime as dt
 import json
@@ -27,6 +30,9 @@ TPE = dt.timezone(dt.timedelta(hours=8))
 START = "2025-12-15"          # 抓到 2025 年最後一個交易日，作為今年以來的基準
 YEAR_BASE = "2026-01-01"
 CLOSE_HHMM = (13, 55)         # 台股收盤後約 25 分鐘才採用當日收盤價
+CLOSED = os.path.join(ROOT, "data", "tw_closed.json")   # 台股休市日（Yahoo 假 K 棒），fetch_history.py 共用
+GHOST_RATIO = 0.9             # 某日九成以上個股收盤價與前一日相同 → 視為休市日
+GHOST_MIN = 20                # 至少要有這麼多檔可比對才判定
 
 # 分類依網站「下游需求觀察」主題：AI、能源、營建、汽車、造船、家電、機械，前面加上游與鋼鐵本業
 # 產業別為證交所上市產業分類（2026-10-05 對照）
@@ -78,6 +84,39 @@ def drop_unclosed(pts):
     return [p for p in pts if p[0] < today or (p[0] == today and closed)]
 
 
+def load_closed():
+    try:
+        return set(json.load(open(CLOSED, encoding="utf-8")).get("dates") or [])
+    except Exception:  # noqa: BLE001
+        return set()
+
+
+def save_closed(dates):
+    with open(CLOSED, "w", encoding="utf-8") as f:
+        json.dump({"note": "台股休市日（颱風假等）。Yahoo Finance 會在這些日期補上與前一日相同的假收盤價，"
+                           "fetch_tw_chain.py 與 fetch_history.py 一律排除。",
+                   "dates": sorted(dates)}, f, ensure_ascii=False, indent=1)
+        f.write("\n")
+
+
+def detect_ghost_days(all_series, known):
+    """找出九成以上個股收盤價與前一交易日相同的日期（休市日的假 K 棒）。"""
+    found = set()
+    dates = sorted({d for s in all_series for d, _ in s if d not in known})
+    for day in dates[-15:]:
+        same = total = 0
+        for s in all_series:
+            pts = [(d, c) for d, c in s if d not in known]
+            idx = next((i for i, (d, _) in enumerate(pts) if d == day), None)
+            if idx is None or idx == 0:
+                continue
+            total += 1
+            same += pts[idx][1] == pts[idx - 1][1]
+        if total >= GHOST_MIN and same / total >= GHOST_RATIO:
+            found.add(day)
+    return found
+
+
 def fetch_yahoo(code):
     for attempt in range(3):
         try:
@@ -123,15 +162,11 @@ def main():
                     old[it["code"]] = it
         except Exception:  # noqa: BLE001
             pass
-    errors, report, groups, latest = [], [], [], ""
-    for key, name, role, steel, items in GROUPS:
-        out = []
-        for code, nm, industry in items:
-            it = {"code": code, "name": nm, "industry": industry}
-            prev = old.get(code, {})
+    closed = load_closed()
+    fetched = {}   # code -> (pts, oldh, merged series)
+    for _, _, _, _, items in GROUPS:
+        for code, nm, _ in items:
             pts = drop_unclosed(fetch_yahoo(code))
-
-            # 歷史檔只新增或修正日期，不刪除既有資料點；舊檔若留有今天的盤中值且仍未收盤，一併移除
             path = os.path.join(HIST, f"{code}.json")
             oldh = {}
             if os.path.exists(path):
@@ -139,10 +174,29 @@ def main():
                     oldh = json.load(open(path, encoding="utf-8"))
                 except Exception:  # noqa: BLE001
                     oldh = {}
+            # 歷史檔只新增或修正日期；舊檔若留有今天的盤中值且仍未收盤，一併移除
             merged = {d: c for d, c in drop_unclosed(oldh.get("points") or [])}
             for d, c in pts:
                 merged[d] = c
-            series = sorted(merged.items())
+            fetched[code] = (pts, oldh, sorted(merged.items()))
+            time.sleep(0.4)
+    ghosts = detect_ghost_days([s for _, _, s in fetched.values()], closed)
+    if ghosts:
+        log(f"  偵測到休市日假 K 棒：{', '.join(sorted(ghosts))}，已排除")
+    if ghosts or not os.path.exists(CLOSED):
+        closed |= ghosts
+        save_closed(closed)
+
+    errors, report, groups, latest = [], [], [], ""
+    for key, name, role, steel, items in GROUPS:
+        out = []
+        for code, nm, industry in items:
+            it = {"code": code, "name": nm, "industry": industry}
+            prev = old.get(code, {})
+            pts, oldh, series = fetched[code]
+            pts = [p for p in pts if p[0] not in closed]
+            series = [p for p in series if p[0] not in closed]
+            path = os.path.join(HIST, f"{code}.json")
             if series:
                 with open(path, "w", encoding="utf-8") as f:
                     json.dump({"code": code, "name": nm, "ticker": code + ".TW", "currency": "TWD",
@@ -158,7 +212,10 @@ def main():
                 d1, c1 = series[-1]
                 pc = prev.get("close")
                 sane = not isinstance(pc, (int, float)) or pc == 0 or 0.5 < c1 / pc < 2
-                use_new = (prev.get("asof") or "") <= d1 and sane
+                pa = prev.get("asof") or ""
+                if pa in closed:   # 舊報價落在休市日（假資料），一律改用最近實際開盤日
+                    pa = ""
+                use_new = pa <= d1 and sane
                 if not sane:
                     log(f"  ！{nm} 新價 {c1} 與現值 {pc} 差距過大，未覆寫最新報價")
             if use_new:
@@ -172,7 +229,6 @@ def main():
                 latest = max(latest, it["asof"])
             report.append(f"{nm} {code}: {len(series)} 筆，最新 {it.get('asof') or '—'}")
             out.append(it)
-            time.sleep(0.4)
         groups.append({"key": key, "name": name, "role": role, "steel": steel, "items": out})
     data = {"updated": now, "asof": latest, "groups": groups, "errors": errors}
     with open(OUT, "w", encoding="utf-8") as f:

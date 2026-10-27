@@ -22,6 +22,18 @@ STOCKS = os.path.join(ROOT, "data", "stocks.json")
 HIST = os.path.join(ROOT, "data", "history")
 START = "2026-01-01"
 TPE = dt.timezone(dt.timedelta(hours=8))
+# 台股休市日（颱風假等臨時休市）：Yahoo 會補上與前一日相同的假收盤價，
+# 由 tools/fetch_tw_chain.py 偵測並寫入 data/tw_closed.json，這裡對台股三檔一律排除。
+TW_CLOSED = os.path.join(ROOT, "data", "tw_closed.json")
+TW_KEYS = {"tw", "tw2", "tw3"}
+
+
+def load_tw_closed():
+    try:
+        with open(TW_CLOSED, encoding="utf-8") as f:
+            return set(json.load(f).get("dates") or [])
+    except Exception:  # noqa: BLE001
+        return set()
 
 # stocks.json 的 key → Yahoo Finance 代號（HPG 不在 Yahoo，改用越南券商公開 API）
 YAHOO = {
@@ -177,6 +189,7 @@ def main():
     touched_latest = False
     report = []
     status = {"updated": now}
+    tw_closed = load_tw_closed()
 
     for it in stocks["items"]:
         key, cur = it["key"], it["currency"]
@@ -199,6 +212,9 @@ def main():
         for d, c in pts:
             merged[d] = rnd(c, cur)
         series = sorted(merged.items())
+        if key in TW_KEYS and tw_closed:
+            pts = [p for p in pts if p[0] not in tw_closed]
+            series = [p for p in series if p[0] not in tw_closed]
 
         if not pts:
             report.append(f"{it['name']}: 查無新資料，保留 {len(series)} 筆")
@@ -217,7 +233,10 @@ def main():
             (d1, c1), (d0, c0) = series[-1], series[-2]
             prev = it.get("price")
             sane = not isinstance(prev, (int, float)) or prev == 0 or 0.5 < c1 / prev < 2
-            if (it.get("asof") or "") <= d1 and sane:
+            pa = it.get("asof") or ""
+            if key in TW_KEYS and pa in tw_closed:   # 舊報價落在休市日（假資料），改用最近實際開盤日
+                pa = ""
+            if pa <= d1 and sane:
                 it["price"] = rnd(c1, cur)
                 it["change"] = rnd(c1 - c0, cur)
                 it["change_pct"] = round((c1 - c0) / c0 * 100, 2) if c0 else None

@@ -1,0 +1,6 @@
+{
+ "note": "台股休市日（颱風假等）。Yahoo Finance 會在這些日期補上與前一日相同的假收盤價，fetch_tw_chain.py 與 fetch_history.py 一律排除。",
+ "dates": [
+  "2026-10-23"
+ ]
+}
