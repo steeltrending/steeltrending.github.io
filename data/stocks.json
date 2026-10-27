@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T17:35:08+08:00",
+ "updated": "2026-10-27T19:17:31+08:00",
  "items": [
   {
    "key": "tw",
@@ -262,10 +262,10 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 169.94,
-   "change": 2.27,
-   "change_pct": 1.35,
-   "asof": "2026-10-26"
+   "price": 171.42,
+   "change": 1.48,
+   "change_pct": 0.87,
+   "asof": "2026-10-27"
   },
   {
    "key": "in2",
@@ -276,10 +276,10 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 1260.0,
-   "change": 74.5,
-   "change_pct": 6.28,
-   "asof": "2026-10-26"
+   "price": 1252.7,
+   "change": -7.3,
+   "change_pct": -0.58,
+   "asof": "2026-10-27"
   },
   {
    "key": "in3",
@@ -290,10 +290,10 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 169.8,
-   "change": 5.46,
-   "change_pct": 3.32,
-   "asof": "2026-10-26"
+   "price": 171.2,
+   "change": 1.4,
+   "change_pct": 0.82,
+   "asof": "2026-10-27"
   }
  ]
 }
