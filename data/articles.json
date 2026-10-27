@@ -1,6 +1,26 @@
 {
  "items": [
   {
+   "id": "2026-10-tw-trade-steel-machinery",
+   "category": "trade",
+   "title": "台灣鋼鐵、機械與金屬製品進出口：2025 全年與 2026 前三季對照",
+   "period": "2026-10",
+   "published": "2026-10-27",
+   "summary": "2026 年 1–9 月台灣總出口 6,615.5 億美元、年增 46.2%，已超過去年全年；鋼鐵出口值仍年減 4.3%，基本金屬及其製品的增量來自銅與陸港，機械則由半導體設備撐住，工具機整機偏弱。",
+   "tags": [
+    "進出口",
+    "鋼鐵",
+    "機械",
+    "金屬製品",
+    "工具機",
+    "半導體設備",
+    "銅",
+    "2026"
+   ],
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Aerial_view_of_Kaohsiung_Port_First_Port_and_Container_Center_%28Kaohsiung_City_on_the_right%29.jpg/960px-Aerial_view_of_Kaohsiung_Port_First_Port_and_Container_Center_%28Kaohsiung_City_on_the_right%29.jpg",
+   "url": "articles/2026-10-tw-trade-steel-machinery.html"
+  },
+  {
    "id": "2026-10-csc-ops-2026",
    "category": "csc",
    "title": "中鋼 2026 運營狀況：第一季虧損、第二季轉盈，9 月營收創 28 個月新高",
