@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-26T18:01:51+08:00",
+  "updated": "2026-10-27T08:11:53+08:00",
   "social": { "date": "2026-10-25" },
   "items": [
-    { "key": "sgx_iron_ore", "name": "鐵礦砂", "contract": "SGX 62% Fe 鐵礦砂期貨 近月", "price": 90.8, "change": 0.26, "unit": "USD/t", "asof": "2026-10-23" },
+    { "key": "sgx_iron_ore", "name": "鐵礦砂", "contract": "SGX 62% Fe 鐵礦砂期貨 近月", "price": 90.7, "change": -0.1, "unit": "USD/t", "asof": "2026-10-26" },
     { "key": "dce_iron_ore", "name": "鐵礦石", "contract": "大連商品交易所 鐵礦石期貨 主力", "price": 671.5, "change": 0.5, "unit": "CNY/t", "asof": "2026-10-26" },
     { "key": "dce_coking_coal", "name": "焦煤", "contract": "大連商品交易所 焦煤期貨 主力", "price": 1405.5, "change": -6.5, "unit": "CNY/t", "asof": "2026-10-26" },
     { "key": "lme_scrap", "name": "廢鋼", "contract": "LME 廢鋼期貨（土耳其 HMS 1&2 80:20 CFR）近月", "price": 400.5, "change": 0, "unit": "USD/t", "asof": "2026-10-25" },
