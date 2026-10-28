@@ -103,9 +103,8 @@ cp "$SOURCE_IMAGE" "$REPO_FOLDER/data/steel_social.jpg"
 print_status "success" "圖卡文件已複製"
 
 if [ "$HAS_PDF" = true ]; then
-    mkdir -p "$REPO_FOLDER/data/report/$DATE"
-    cp "$SOURCE_PDF" "$REPO_FOLDER/data/report/$DATE/report.pdf"
-    print_status "success" "報告文件已複製"
+    # 注意：add_card.py 會先清空 data/report/$DATE 再自行複製，故這裡不可預先複製 PDF
+    print_status "success" "報告文件已確認（交由 add_card.py 處理）"
 fi
 
 # 執行 add_card.py
@@ -114,7 +113,7 @@ print_status "info" "執行 add_card.py 處理..."
 cd "$REPO_FOLDER"
 
 if [ "$HAS_PDF" = true ]; then
-    python3 tools/add_card.py "$REPO_FOLDER/data/steel_social.jpg" "$DATE" "$REPO_FOLDER/data/report/$DATE/report.pdf" 2>&1 | tee -a "$LOG_FILE"
+    python3 tools/add_card.py "$REPO_FOLDER/data/steel_social.jpg" "$DATE" "$SOURCE_PDF" 2>&1 | tee -a "$LOG_FILE"
 else
     python3 tools/add_card.py "$REPO_FOLDER/data/steel_social.jpg" "$DATE" 2>&1 | tee -a "$LOG_FILE"
 fi
