@@ -83,7 +83,29 @@ Facebook 粉專</a>
 </div>
 </div>
 
-<!-- Hero side: 七大地區龍頭鋼鐵股（資料：data/stocks.json，每日更新） -->
+<!-- Hero side: 每日鋼鐵速報（資料：data/latest.json 與 data/steel_social.jpg 每日更新） -->
+<figure id="brief-card" style="margin: 0; border: 1px solid #2A2F35; background: #121417; display: flex; flex-direction: column">
+<a id="brief-link" href="data/steel_social.jpg" title="點擊放大" aria-label="放大檢視今日速報圖卡" style="display: block; cursor: zoom-in">
+<img id="brief-img" src="data/steel_social.jpg" alt="鋼鐵潮流今日速報圖卡" width="2160" height="2121" style="display: block; width: 100%; height: auto">
+</a>
+<p id="brief-missing" hidden style="margin: 0; padding: 120px 24px; text-align: center; color: #9AA0A6; font-size: 15px">今日圖卡準備中，請稍後再來看看。</p>
+<figcaption style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; border-top: 1px solid #2A2F35; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #9AA0A6"><span>TODAY'S BRIEF · 點圖放大</span><span id="brief-date">—</span></figcaption>
+</figure>
+</section>
+
+<div style="border-top: 1px solid #2A2F35"></div>
+
+
+<!-- DAILY BRIEF -->
+<section id="daily" aria-labelledby="daily-title" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.24em; color: #FF6A1A">01 · DAILY BRIEF</p>
+<h2 id="daily-title" style="margin: 0; font-size: clamp(32px, 4.5vw, 48px); font-weight: 900; line-height: 1.2">每日鋼鐵速報</h2>
+</div>
+
+<!-- 七大龍頭鋼鐵股 + 價格看板：內容由 data/stocks.json 與 data/latest.json 每日更新 -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; align-items: start">
+
 <section aria-labelledby="stocks-title" style="border: 1px solid #2A2F35; background: #15181B; display: flex; flex-direction: column">
 <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px 20px; border-bottom: 1px solid #2A2F35">
 <h2 id="stocks-title" style="margin: 0; font-size: 16px; font-weight: 700"><a href="stocks.html" style="color: #E8E6E1; text-decoration: none">七大地區龍頭鋼鐵股</a></h2>
@@ -98,28 +120,6 @@ Facebook 粉專</a>
 <a href="stocks.html" style="align-self: flex-start; color: #FF8A47; text-decoration: none; font-size: 14px; padding: 8px 0 0">查看七大地區 21 檔明細 →</a>
 </div>
 </section>
-</section>
-
-<div style="border-top: 1px solid #2A2F35"></div>
-
-
-<!-- DAILY BRIEF -->
-<section id="daily" aria-labelledby="daily-title" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 12px">
-<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.24em; color: #FF6A1A">01 · DAILY BRIEF</p>
-<h2 id="daily-title" style="margin: 0; font-size: clamp(32px, 4.5vw, 48px); font-weight: 900; line-height: 1.2">每日鋼鐵速報</h2>
-</div>
-
-<!-- 每日圖卡 + 價格看板：內容由 data/latest.json 與 data/steel_social.jpg 每日更新 -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; align-items: start">
-
-<figure id="brief-card" style="margin: 0; border: 1px solid #2A2F35; background: #121417; display: flex; flex-direction: column">
-<a id="brief-link" href="data/steel_social.jpg" title="點擊放大" aria-label="放大檢視今日速報圖卡" style="display: block; cursor: zoom-in">
-<img id="brief-img" src="data/steel_social.jpg" alt="鋼鐵潮流今日速報圖卡" width="2160" height="2121" style="display: block; width: 100%; height: auto">
-</a>
-<p id="brief-missing" hidden style="margin: 0; padding: 120px 24px; text-align: center; color: #9AA0A6; font-size: 15px">今日圖卡準備中，請稍後再來看看。</p>
-<figcaption style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; border-top: 1px solid #2A2F35; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; color: #9AA0A6"><span>TODAY'S BRIEF · 點圖放大</span><span id="brief-date">—</span></figcaption>
-</figure>
 
 <div style="display: flex; flex-direction: column; gap: 20px">
 <article aria-labelledby="price-title" style="border: 1px solid #2A2F35; background: #15181B; display: flex; flex-direction: column">
