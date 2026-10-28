@@ -1,0 +1,22 @@
+[2026-10-28 14:57:41] ℹ️  ==========================================
+[2026-10-28 14:57:41] ℹ️  鋼鐵潮流 - 每日更新開始
+[2026-10-28 14:57:41] ℹ️  ==========================================
+[2026-10-28 14:57:41] ℹ️  處理日期: 2026-10-28
+[2026-10-28 14:57:41] ✅ 找到圖卡文件
+[2026-10-28 14:57:41] ✅ 找到報告文件
+[2026-10-28 14:57:41] ℹ️  複製文件到倉庫...
+[2026-10-28 14:57:41] ✅ 圖卡文件已複製
+[2026-10-28 14:57:41] ✅ 報告文件已複製
+[2026-10-28 14:57:41] ℹ️  執行 add_card.py 處理...
+Traceback (most recent call last):
+  File "/Users/chen/Documents/GitHub/steeltrending.github.io/tools/add_card.py", line 109, in <module>
+    add_pdf(a[2], a[1])
+  File "/Users/chen/Documents/GitHub/steeltrending.github.io/tools/add_card.py", line 52, in add_pdf
+    shutil.copyfile(src, pdf)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 264, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/chen/Documents/GitHub/steeltrending.github.io/data/report/2026-10-28/report.pdf'
+[2026-10-28 14:57:42] ⚠️  add_card.py 執行失敗或未找到
+[2026-10-28 14:57:42] ℹ️  更新 latest.json...
+[2026-10-28 14:57:42] ✅ latest.json 更新完成
+[2026-10-28 14:57:42] ℹ️  配置 Git 並提交變更...
