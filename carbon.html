@@ -77,13 +77,13 @@ a{color:#FF8A47}a:hover{color:#FFB07F}
 </aside>
 </div>
 <!-- topic-qr -->
-<aside aria-label="本頁連結 QR Code" style="max-width:760px;box-sizing:border-box;margin:48px auto 0;border:1px solid #2A2F35;background:#15181B;padding:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+<aside aria-label="本頁連結 QR Code" style="max-width:760px;box-sizing:border-box;margin-top:48px;border:1px solid #2A2F35;background:#15181B;padding:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
 <img src="assets/qr/topic-carbon.png" alt="本頁連結 QR Code" width="132" height="132" loading="lazy" style="display:block;width:132px;height:132px;background:#FFFFFF;flex:none">
 <div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 220px">
 <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;color:#FF6A1A">SHARE</p>
 <p style="margin:0;font-size:17px;font-weight:900;color:#E8E6E1">掃描 QR Code 開啟本頁</p>
 <p style="margin:0;font-size:13px;line-height:1.7;color:#9AA0A6;word-break:break-all">https://steeltrending.github.io/carbon.html</p>
-<a href="assets/qr/topic-carbon.png" download="steeltrending-topic-carbon-qr.png" style="align-self:flex-start;margin-top:4px;font-size:14px;color:#FF8A47;text-decoration:none">下載 QR Code ↓</a>
+<div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:4px"><a href="assets/qr/topic-carbon.png" download="steeltrending-topic-carbon-qr.png" style="font-size:14px;color:#FF8A47;text-decoration:none">下載 QR Code ↓</a><button type="button" data-url="https://steeltrending.github.io/carbon.html" onclick="var b=this,u=this.dataset.url;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).catch(function(){var t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}).then(function(){b.textContent='已複製本頁網址';setTimeout(function(){b.textContent='分享本頁'},2000)})" style="font:inherit;font-size:14px;color:#FF8A47;background:none;border:0;padding:0;cursor:pointer">分享本頁</button></div>
 </div>
 </aside>
 <!-- /topic-qr -->
