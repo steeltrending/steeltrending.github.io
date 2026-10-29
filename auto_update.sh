@@ -1,4 +1,5 @@
 #!/bin/bash
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"  # launchd 預設 PATH 找不到 Homebrew 的 pdfinfo／pdftoppm
 
 ################################################################################
 # Steel Trending Daily Update Automation Script (改進版)

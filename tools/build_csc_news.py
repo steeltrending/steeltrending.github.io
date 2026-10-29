@@ -136,7 +136,7 @@ def main():
                              "key": norm(body), "event": None, "manual": True})
         except (ValueError, KeyError) as e:
             print(f"手動補登檔讀取失敗：{e}")
-    rows.sort(key=lambda r: r["date"])  # 穩定排序：同日保留原順序
+    rows.sort(key=lambda r: (r["date"], not r.get("manual")))  # 同日手動補登排前面，報告中的同則新聞會併入為重複
 
     def grams(k):
         return {k[i:i + 2] for i in range(len(k) - 1)}
@@ -164,6 +164,8 @@ def main():
                 dup = k
                 break
         if dup:
+            if dup.get("manual") and dup["date"] == r["date"]:
+                continue  # 手動補登的同日原文，不算重複報導
             dup["repeats"] = dup.get("repeats", 0) + 1
             dup["last_seen"] = r["date"]
             continue
