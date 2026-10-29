@@ -16,6 +16,7 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "data", "csc_news.json")
+MANUAL = os.path.join(ROOT, "data", "csc_news_manual.json")
 TPE = dt.timezone(dt.timedelta(hours=8))
 
 BULLET = re.compile(r"\s*(?:[・•]|(?<![\d.])\d{1,2}\.\s)\s*")
@@ -126,6 +127,17 @@ def main():
                 continue
             rows.append({"date": date, "text": body, "source": src, "key": norm(body), "event": ev})
 
+    # 手動補登（data/csc_news_manual.json）：一律保留，不被判為重複
+    if os.path.exists(MANUAL):
+        try:
+            for m in json.load(open(MANUAL, encoding="utf-8")).get("items", []):
+                body = m["text"].strip()
+                rows.append({"date": m["date"], "text": body, "source": m.get("source", ""),
+                             "key": norm(body), "event": None, "manual": True})
+        except (ValueError, KeyError) as e:
+            print(f"手動補登檔讀取失敗：{e}")
+    rows.sort(key=lambda r: r["date"])  # 穩定排序：同日保留原順序
+
     def grams(k):
         return {k[i:i + 2] for i in range(len(k) - 1)}
 
@@ -136,6 +148,10 @@ def main():
     for r in rows:  # 由舊到新：三週內內容相近的報導只留第一次出現
         g = grams(r["key"])
         dup = None
+        if r.get("manual"):
+            r["grams"] = g
+            kept.append(r)
+            continue
         for k in kept:
             if days(r["date"], k["date"]) > 35:
                 continue
