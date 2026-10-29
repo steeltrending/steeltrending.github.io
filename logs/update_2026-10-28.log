@@ -20,3 +20,22 @@ FileNotFoundError: [Errno 2] No such file or directory: '/Users/chen/Documents/G
 [2026-10-28 14:57:42] ℹ️  更新 latest.json...
 [2026-10-28 14:57:42] ✅ latest.json 更新完成
 [2026-10-28 14:57:42] ℹ️  配置 Git 並提交變更...
+[2026-10-28 14:57:42] ✅ 文件已暫存
+[2026-10-28 14:57:42] ✅ 變更已提交: 自動更新 2026-10-28 鋼鐵日報圖卡與報告
+[2026-10-28 14:57:42] ℹ️  準備推送到 GitHub...
+[2026-10-28 14:57:42] ℹ️  檢查遠程更新...
+From https://github.com/steeltrending/steeltrending.github.io
+ * branch            main       -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ data/csc_news.json | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-10-28 14:57:42] ✅ 遠程同步完成
+[2026-10-28 14:57:42] ℹ️  推送嘗試 [1/3]...
+To https://github.com/steeltrending/steeltrending.github.io.git
+   2df018f..3ef71e4  main -> main
+[2026-10-28 14:57:45] ✅ ✨ 成功推送到 GitHub
+[2026-10-28 14:57:45] ✅ ==========================================
+[2026-10-28 14:57:45] ✅ 每日更新完成
+[2026-10-28 14:57:45] ✅ 日期: 2026-10-28
+[2026-10-28 14:57:45] ✅ 時間: 2026-10-28 14:57:45
+[2026-10-28 14:57:45] ✅ ==========================================
