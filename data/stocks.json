@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T17:12:46+08:00",
+ "updated": "2026-10-29T19:21:40+08:00",
  "items": [
   {
    "key": "tw",
@@ -234,10 +234,10 @@
    "country": "印尼",
    "exchange": "IDX",
    "currency": "IDR",
-   "price": 176.0,
-   "change": -2.0,
-   "change_pct": -1.12,
-   "asof": "2026-10-28"
+   "price": 165.0,
+   "change": -11.0,
+   "change_pct": -6.25,
+   "asof": "2026-10-29"
   },
   {
    "key": "sea3",
@@ -248,10 +248,10 @@
    "country": "馬來西亞",
    "exchange": "Bursa Malaysia",
    "currency": "MYR",
-   "price": 0.455,
-   "change": 0.0,
-   "change_pct": 0.0,
-   "asof": "2026-10-28"
+   "price": 0.475,
+   "change": 0.02,
+   "change_pct": 4.4,
+   "asof": "2026-10-29"
   },
   {
    "key": "in",
@@ -262,10 +262,10 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 169.27,
-   "change": -2.15,
-   "change_pct": -1.25,
-   "asof": "2026-10-28"
+   "price": 169.46,
+   "change": 0.19,
+   "change_pct": 0.11,
+   "asof": "2026-10-29"
   },
   {
    "key": "in2",
@@ -276,10 +276,10 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 1241.2,
-   "change": -11.5,
-   "change_pct": -0.92,
-   "asof": "2026-10-28"
+   "price": 1255.4,
+   "change": 14.2,
+   "change_pct": 1.14,
+   "asof": "2026-10-29"
   },
   {
    "key": "in3",
@@ -290,10 +290,10 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 162.0,
-   "change": -9.2,
-   "change_pct": -5.37,
-   "asof": "2026-10-28"
+   "price": 161.0,
+   "change": -1.0,
+   "change_pct": -0.62,
+   "asof": "2026-10-29"
   }
  ]
 }
