@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>鋼水怎麼變成鋼捲：連續鑄造到熱軋，一次看懂 · 鋼鐵潮流 Steel Trending</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="鋼鐵小學堂：連續鑄造如何把鋼水直接鑄成板胚、方胚與圓胚。從鋼包、中間包、結晶器到二次冷卻與切斷，常見鋼胚與下游產品，以及為什麼熱軋捲是國際鋼價報價的主流、美國慣用的短噸與長噸如何換算公噸。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<script>window.ARTICLE_CATEGORY = 'steel101';</script>
+<script src="../assets/article-nav.js" defer></script>
+<script src="/assets/theme.js"></script>
+<meta name="theme-color" content="#0F1113">
+<style>
+body{margin:0;background:#0F1113;color:#E8E6E1;font-family:'Noto Sans TC','PingFang TC',sans-serif}
+a{color:#FF8A47}a:hover{color:#FFB07F}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+article{max-width:760px}
+article h2{margin:56px 0 14px;font-size:26px;font-weight:900;line-height:1.35;padding-top:20px;border-top:1px solid #2A2F35}
+article h3{margin:28px 0 10px;font-size:18px;font-weight:900;line-height:1.4}
+article p{margin:0 0 16px;font-size:17px;line-height:1.9;color:#D5D7DA}
+article p.lead{font-size:19px;color:#E8E6E1}
+article ul{margin:0 0 20px;padding-left:1.2em}
+article li{margin:0 0 12px;font-size:16px;line-height:1.85;color:#C9CDD2}
+article li::marker{color:#FF6A1A}
+article li b{color:#E8E6E1}
+figure{margin:28px 0 8px;border:1px solid #2A2F35;background:#121417}
+figure img{display:block;width:100%;height:auto}
+figcaption{padding:10px 12px;font-size:13px;line-height:1.7;color:#C9CDD2;border-top:1px solid #2A2F35}
+figcaption small{display:block;margin-top:2px;font-size:12px;color:#9AA0A6}
+.ph{border:1px dashed #3A3F46}.phb{aspect-ratio:3/2;max-height:320px;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:16px;box-sizing:border-box;color:#9AA0A6}.phb .mono{font-size:12px;letter-spacing:.2em;color:#FF6A1A}.phb b{font-size:16px;color:#E8E6E1}.phb small{font-size:13px}
+.tlfig{border:1px solid #2A2F35;background:#121417;padding:24px 16px 4px;margin:8px 0 24px}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.tl::before{content:'';position:absolute;left:6%;right:6%;top:31px;height:2px;background:linear-gradient(90deg,#FF6A1A 0,#FF6A1A 84%,#3A3F46 84%)}
+.tl .ev{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px;position:relative;margin:0}
+.tl .d{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9CDD2;min-height:20px}
+.tl .dot{width:14px;height:14px;border-radius:50%;background:#FF6A1A;border:3px solid #121417;box-sizing:content-box;margin:2px 0 10px;position:relative;z-index:1}
+.tl .t{font-size:13px;line-height:1.6;color:#C9CDD2}
+.tl .x .dot{background:#8DB4D6}.tl .x .d{color:#8DB4D6}
+.tl .k .dot{width:20px;height:20px;margin:-1px 0 7px;box-shadow:0 0 0 4px rgba(255,106,26,.25)}.tl .k .t{color:#E8E6E1;font-weight:700}.tl .k .d{color:#FF8A47}
+.tl.nofut::before{background:#FF6A1A !important}
+.tl.tl7{grid-template-columns:repeat(7,1fr)}
+.tl.tl7::before{left:7%;right:7%}
+.tlkey{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;padding:18px 0 14px !important;border-top:0 !important;font-size:12px !important;color:#9AA0A6 !important;margin:0 !important}
+.tlkey i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+@media (max-width:720px){
+.tlfig{padding:20px 16px 4px}
+.tl,.tl.tl7{grid-template-columns:1fr}
+.tl::before,.tl.tl7::before{left:9px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:#FF6A1A}
+.tl .ev{display:grid;grid-template-columns:20px 92px 1fr;align-items:start;text-align:left;padding:0 0 14px;gap:0 10px}
+.tl .dot{grid-column:1;grid-row:1;margin:3px 0 0 0;justify-self:center}
+.tl .k .dot{margin:0}
+.tl .d{grid-column:2;grid-row:1;padding-top:2px}
+.tl .t{grid-column:3;grid-row:1}
+}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;margin:8px 0 24px}
+.fact{background:#121417;padding:18px 16px;display:flex;gap:12px;align-items:flex-start;min-width:0}
+.fact .ic{flex:none;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid #3A3F46;background:#181B1F;color:#FF6A1A}
+.fact .fl{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#9AA0A6;margin-bottom:4px}
+.fact .fv{display:block;font-size:16px;font-weight:700;color:#E8E6E1;line-height:1.5}
+.fact .fs{display:block;font-size:13px;color:#9AA0A6;line-height:1.6;margin-top:2px}
+.note{font-size:13px !important;color:#9AA0A6 !important;margin:6px 0 18px !important}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.facts{grid-template-columns:1fr}}
+.bars{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.bars .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.bar{display:grid;grid-template-columns:7.5em 1fr 4.6em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.bar .tr{height:14px;background:#1C2024;border-radius:0 4px 4px 0}
+.bar .fi{display:block;height:14px;background:#8A8F96;border-radius:0 4px 4px 0}
+.bar.hi .fi{background:#FF6A1A}.bar.hi{color:#E8E6E1;font-weight:700}
+.bar .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1;font-size:13px;white-space:nowrap}
+.bars .bn{font-size:12px;color:#9AA0A6;margin:8px 0 0;line-height:1.7}
+.rng{margin:8px 0 24px;border:1px solid #2A2F35;background:#121417;padding:18px 16px}
+.rng .bt{font-size:14px;font-weight:700;color:#E8E6E1;margin:0 0 12px}
+.rng .rw{display:grid;grid-template-columns:8em 1fr 7.6em;align-items:center;gap:10px;margin:0 0 10px;font-size:14px;color:#C9CDD2}
+.rng .tr{position:relative;height:14px;background:#1C2024;border-radius:2px}
+.rng .fi{position:absolute;top:0;height:14px;border-radius:2px}
+.rng .v{font-family:'IBM Plex Mono',monospace;text-align:right;color:#E8E6E1;white-space:nowrap;font-size:13px}
+.rng .ax{display:grid;grid-template-columns:8em 1fr 7.6em;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#9AA0A6}
+.rng .ax .sc{position:relative;height:14px;font-size:11px}
+.rng .ax .sc span{position:absolute;transform:translateX(-50%)}
+.rng .bn{font-size:12px;color:#9AA0A6;margin:10px 0 0;line-height:1.7}
+@media (max-width:560px){.rng .rw,.rng .ax{grid-template-columns:6.4em 1fr 7.2em}.rng .rw,.rng .rw .v{font-size:13px}.bar{grid-template-columns:5.6em 1fr 4.8em}}
+@media (max-width:400px){.rng .rw,.rng .ax{grid-template-columns:5.4em 1fr 6.4em;gap:8px}}
+.flow{list-style:none;margin:8px 0 24px;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;counter-reset:st}
+.flow.f4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.flow.f3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.flow li{background:#121417;padding:14px 12px;margin:0;counter-increment:st;font-size:13px;line-height:1.6;color:#9AA0A6;min-width:0}
+.flow li::marker{content:''}
+.flow li b{display:block;font-size:15px;color:#E8E6E1;margin-bottom:2px}
+.flow li b::before{content:counter(st,decimal-leading-zero) ' ';font-family:'IBM Plex Mono',monospace;font-size:12px;color:#FF6A1A;font-weight:500}
+.flow li.z1{border-top:2px solid #9AA0A6}.flow li.z2{border-top:2px solid #FF6A1A}.flow li.z3{border-top:2px solid #8DB4D6}
+.flowkey{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#9AA0A6;margin:-14px 0 24px}
+.flowkey i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:6px}
+@media (max-width:900px){.flow,.flow.f4,.flow.f3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.flow,.flow.f4,.flow.f3{grid-template-columns:1fr}}
+.mapfig{margin:8px 0 8px;border:1px solid #2A2F35;background:#121417;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mapfig .mi{min-width:680px}
+.mapfig svg{display:block;width:100%;height:auto}
+.mapfig svg text{font-family:'Noto Sans TC','PingFang TC',sans-serif}
+.mapkey{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:#C9CDD2;margin:10px 0 6px}
+.mapkey i{display:inline-block;width:18px;height:6px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.prod{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2A2F35;border:1px solid #2A2F35;margin:8px 0 8px}
+.pc{background:#121417;padding:16px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.pc .sec{height:56px;display:flex;align-items:center}
+.pc .sec svg{height:56px;width:auto;max-width:100%}
+.pc .nm{font-size:16px;font-weight:900;color:#E8E6E1;line-height:1.3}
+.pc .nm small{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#FF6A1A;font-weight:500;margin-bottom:2px}
+.pc .sh{font-size:13px;color:#9AA0A6;line-height:1.6}
+.pc .dn{font-size:13px;color:#C9CDD2;line-height:1.7;border-top:1px solid #2A2F35;padding-top:8px}
+.pc .dn b{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#9AA0A6;font-weight:500;margin-bottom:2px}
+@media (max-width:720px){.prod{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.prod{grid-template-columns:1fr}}
+.call{border:1px solid #2A2F35;border-left:3px solid #FF6A1A;background:#15181B;padding:16px 18px;margin:8px 0 24px}
+.call p{margin:0 !important;font-size:17px !important;color:#E8E6E1 !important;line-height:1.85 !important}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.chips span{border:1px solid #3A3F46;background:#15181B;padding:4px 12px;font-size:13px;color:#C9CDD2}
+.chips span b{color:#E8E6E1;font-weight:700}
+.sources li{font-size:14px}
+@media (max-width:640px){.wrap{padding:0 16px}article p{font-size:16px}article p.lead{font-size:17px}}
+html[data-theme=light]{filter:invert(1) hue-rotate(180deg)}html[data-theme=light] img,html[data-theme=light] video,html[data-theme=light] iframe,html[data-theme=light] .st-keep{filter:invert(1) hue-rotate(180deg)}html[data-theme=light] .st-keep img,html[data-theme=light] .st-keep video,html[data-theme=light] .st-keep iframe{filter:none}html[data-theme=light] a[style*="background:#FF6A1A" i],html[data-theme=light] a[style*="background: #FF6A1A" i],html[data-theme=light] a[style*="background: rgb(255, 106, 26)"],html[data-theme=light] button[style*="background:#FF6A1A" i],html[data-theme=light] button[style*="background: rgb(255, 106, 26)"],html[data-theme=light] .chip[aria-pressed="true"],html[data-theme=light] .chip[aria-current="true"],html[data-theme=light] .chip[aria-selected="true"],html[data-theme=light] .tab[aria-selected="true"],html[data-theme=light] .btn.primary,html[data-theme=light] .tts-bar .tts-play{background:#FF8F5A !important}
+.nvdd{position:relative}.nvdd summary{list-style:none;cursor:pointer;color:#C9CDD2;padding:12px;display:flex;align-items:center;gap:6px;font-size:15px;user-select:none}.nvdd summary::-webkit-details-marker{display:none}.nvdd summary span{font-size:11px;color:#FF6A1A;transition:transform .2s}.nvdd[open] summary span{transform:rotate(180deg)}.nvdd summary:hover,.nvdd[open] summary,.nvdd.cur summary{color:#FF8A47}.nvdd summary:focus-visible{outline:2px solid #FF6A1A;outline-offset:2px}.nvdd-m{position:absolute;top:100%;left:0;z-index:50;min-width:180px;background:#15181B;border:1px solid #3A3F46;box-shadow:0 12px 32px rgba(0,0,0,.45);padding:6px 0;display:flex;flex-direction:column}.nvdd-m a{padding:12px 16px;color:#E8E6E1;text-decoration:none;font-size:15px;white-space:nowrap}.nvdd-m a:hover{background:#1C2024;color:#FF8A47}.nvdd-m a[aria-current]{color:#FF8A47}
+.tip{position:fixed;z-index:10;pointer-events:none;background:#1C2024;border:1px solid #3A3F46;color:#E8E6E1;font-size:13px;padding:6px 10px;white-space:nowrap}
+</style>
+</head>
+<body>
+<header style="border-bottom:1px solid #2A2F35">
+  <nav aria-label="主選單" class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#E8E6E1" class="lkb">
+      <img src="../assets/mascot.jpg" alt="鋼鐵潮流吉祥物" width="44" height="44" style="width:44px;height:44px;border-radius:50%;border:2px solid #FF6A1A;object-fit:cover;display:block">
+      <span style="display:flex;flex-direction:column;line-height:1.1">
+        <span style="font-weight:900;font-size:20px;letter-spacing:.08em">鋼鐵潮流</span>
+        <span class="mono" style="font-size:11px;letter-spacing:.2em;color:#9AA0A6">STEEL TRENDING</span>
+      </span>
+    </a>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px">
+      <a href="../#daily" style="color:#C9CDD2;text-decoration:none;padding:12px" class="lk sc">每日速報</a>
+      <a href="../stocks.html" style="color:#C9CDD2;text-decoration:none;padding:12px" class="lk sc">全球鋼鐵股</a>
+      <details class="nvdd"><summary>鋼鐵數字<span aria-hidden="true">▾</span></summary><div class="nvdd-m"><a href="../worldsteel.html" class="lk sc">世界鋼鐵數據</a><a href="../cnmap.html" class="lk sc">中國大陸鋼產量地圖</a><a href="../jpmap.html" class="lk sc">日本鋼鐵地圖</a><a href="../krmap.html" class="lk sc">南韓鋼鐵地圖</a><a href="../usmap.html" class="lk sc">美國鋼鐵地圖</a><a href="../eumap.html" class="lk sc">歐洲鋼鐵地圖</a><a href="../twmap.html" class="lk sc">台灣鋼鐵地圖</a><a href="../trends.html" class="lk sc">關鍵字熱度</a></div></details>
+      <a href="https://www.youtube.com/@steeltrending" style="background:#FF6A1A;color:#0F1113;text-decoration:none;font-weight:700;padding:12px 20px" class="lkb">訂閱頻道</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+  <nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6;margin-top:20px"><a href="../#topics" style="text-decoration:none" class="lk">關注主題</a> <span aria-hidden="true">›</span> 鋼鐵小學堂 <span aria-hidden="true">›</span> 專題</nav>
+
+  <article>
+    <p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">STEEL 101 · CONTINUOUS CASTING · 2026.10</p>
+    <h1 style="margin:12px 0 10px;font-size:clamp(30px,5vw,46px);font-weight:900;line-height:1.25">鋼水怎麼變成鋼捲：連續鑄造到熱軋，一次看懂</h1>
+    <p style="font-size:14px;color:#9AA0A6">鋼鐵潮流工作室 · 發布 2026.10.29</p>
+
+    <!-- TODO 配圖：換成未在其他文章用過的 CC 授權照片，圖說標註作者、拍攝時間與授權
+    <figure><img src="../assets/articles/2026-10-casting-to-coil-0.jpg" alt="（替代文字）" width="960" height="640"><figcaption>圖說。<small>照片：作者，年份攝，<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>，經 <a href="https://commons.wikimedia.org/">Wikimedia Commons</a></small></figcaption></figure>
+    -->
+
+    <p class="lead">鋼水煉好之後還是液體。連續鑄造把它倒進水冷的銅模，邊凝固邊往下拉，出來就是一條連續的鋼胚，切成板胚、方胚或圓胚再送去軋延。世界鋼鐵協會（worldsteel）2025 年的資料中，所列國家合計約 97.4% 的粗鋼是連鑄鋼。接在連鑄後面最大宗的平板產品是熱軋捲，也是國際鋼價最常引用的基準。</p>
+
+    <h2>本期重點</h2>
+    <ul>
+      <li><b>連鑄取代鑄錠：</b>不必先鑄成鋼錠再開胚、切頭去尾，據文獻整理，收得率可多約 10–15%。</li>
+      <li><b>流程：</b>鋼包、中間包、結晶器、二次冷卻、矯直、切斷，液態的核心一路在鑄機裡凝固。</li>
+      <li><b>產品：</b>板胚、大方胚、小方胚、異型胚、圓胚，加上近年的薄板胚，各自對應不同的軋延產品。</li>
+      <li><b>報價：</b>熱軋捲量大、是其他平板的起點、各區都有指數，還有期貨，所以成為國際報價的主流。</li>
+      <li><b>單位：</b>美國報價慣用短噸（2,000 磅）；長噸是 2,240 磅；公噸是 1,000 公斤，三者最多差約 12%。</li>
+    </ul>
+
+    <h2>關鍵數字</h2>
+    <div class="facts">
+      <div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6.4 6.4"/></svg></span><div><span class="fl">連鑄比（2025）</span><span class="fv">約 97.4%</span><span class="fs">worldsteel 所列國家合計</span></div></div>
+      <div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V6M6 12l6-6 6 6"/></svg></span><div><span class="fl">收得率優勢</span><span class="fv">約 10–15%</span><span class="fs">相對鑄錠加開胚的頭尾損失，文獻整理值</span></div></div>
+      <div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><span class="fl">傳統鑄機拉速</span><span class="fv">約 1.2–1.6 m/min</span><span class="fs">薄板胚鑄機約 5 m/min</span></div></div>
+      <div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-4 9 4-9 4-9-4zM3 12l9 4 9-4M3 16l9 4 9-4"/></svg></span><div><span class="fl">板胚厚度（舉例）</span><span class="fv">約 300 mm</span><span class="fs">進熱軋後先軋成約 25–50 mm 的中間坯</span></div></div>
+      <div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><div><span class="fl">薄板胚單線年產</span><span class="fv">最高約 80 萬噸</span><span class="fs">來源未標明噸別，見最後一節</span></div></div>
+      <div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6M12 9L5 21M12 9l7 12M12 9v12"/></svg></span><div><span class="fl">中間包流數</span><span class="fv">1–8 流</span><span class="fs">一台鑄機可同時拉出多條鋼胚</span></div></div>
+    </div>
+
+    <h2>連鑄比：幾乎所有鋼都走這條路</h2>
+    <p>從前的做法是把鋼水倒進鋼錠模，凝固後脫模、再加熱、開胚軋成胚料，開胚時還要切掉頭尾。連鑄省掉了鑄錠和開胚，鋼水直接變成可軋的胚，流程短、收得率高，所以逐步取代了鑄錠。如今主要產鋼國的連鑄比都很高，印度與俄羅斯相對低一些。</p>
+    <div class="bars" role="img" aria-label="2025 年各主要產鋼國連鑄比：美國 99.7%、日本 99.1%、中國 98.3%、南韓 98.2%、德國 98.0%、歐盟 97.3%、印度 94.1%、俄羅斯 83.8%">
+      <p class="bt">2025 年連鑄鋼占粗鋼產量的比率（%）</p>
+      <div class="bar"><span>美國</span><span class="tr"><span class="fi" style="width:99.7%"></span></span><span class="v">99.7</span></div>
+      <div class="bar"><span>日本</span><span class="tr"><span class="fi" style="width:99.1%"></span></span><span class="v">99.1</span></div>
+      <div class="bar hi"><span>中國</span><span class="tr"><span class="fi" style="width:98.3%"></span></span><span class="v">98.3</span></div>
+      <div class="bar"><span>南韓</span><span class="tr"><span class="fi" style="width:98.2%"></span></span><span class="v">98.2</span></div>
+      <div class="bar"><span>德國</span><span class="tr"><span class="fi" style="width:98%"></span></span><span class="v">98.0</span></div>
+      <div class="bar"><span>歐盟（27）</span><span class="tr"><span class="fi" style="width:97.3%"></span></span><span class="v">97.3</span></div>
+      <div class="bar"><span>印度</span><span class="tr"><span class="fi" style="width:94.1%"></span></span><span class="v">94.1</span></div>
+      <div class="bar"><span>俄羅斯</span><span class="tr"><span class="fi" style="width:83.8%"></span></span><span class="v">83.8</span></div>
+      <p class="bn">刻度從 0 起算。資料來源：worldsteel《World Steel in Figures 2026》。表中連鑄鋼含鋼粉。</p>
+    </div>
+
+    <h2>一台連鑄機長什麼樣子</h2>
+    <p>鋼水從煉鋼爐倒進鋼包，再經中間包分配到結晶器。外層一凝固就被輥子夾住往下拉，中心還是液態，一路被噴水冷卻，在弧形段彎成水平，矯直後完全凝固，最後切成定長。手機上可以左右滑動看全圖。</p>
+    <div class="mapfig">
+      <div class="mi">
+        <svg viewBox="0 0 760 430" role="img" aria-labelledby="cc-t cc-d">
+          <title id="cc-t">連續鑄造機側視示意圖</title>
+          <desc id="cc-d">鋼包經中間包與浸入式水口把鋼水注入水冷結晶器，鋼胚外殼先凝固，經二次冷卻噴水、弧形段與拉矯輥變成水平，液芯在約中段凝固完畢，最後以火焰切割成板胚或方胚。</desc>
+          <!-- ladle -->
+          <path d="M60 34 H150 L136 104 H74 Z" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/>
+          <path d="M65 52 H145 L136 102 H74 Z" fill="#FF6A1A" opacity=".9"/>
+          <text x="105" y="24" text-anchor="middle" fill="#E8E6E1" font-size="14" font-weight="700">鋼包</text>
+          <path d="M105 104 V130" stroke="#FF6A1A" stroke-width="4"/>
+          <!-- tundish -->
+          <path d="M50 130 H230 L214 178 H66 Z" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/>
+          <path d="M56 142 H224 L214 176 H66 Z" fill="#FF6A1A" opacity=".9"/>
+          <text x="244" y="160" fill="#E8E6E1" font-size="14" font-weight="700">中間包</text>
+          <text x="244" y="178" fill="#9AA0A6" font-size="12">分配鋼水，1–8 流</text>
+          <!-- submerged nozzle -->
+          <rect x="186" y="176" width="8" height="46" fill="#8A8F96"/>
+          <!-- mold -->
+          <rect x="164" y="198" width="14" height="70" fill="#8DB4D6" opacity=".6"/>
+          <rect x="202" y="198" width="14" height="70" fill="#8DB4D6" opacity=".6"/>
+          <rect x="178" y="210" width="24" height="58" fill="#FF6A1A"/>
+          <text x="236" y="226" fill="#E8E6E1" font-size="14" font-weight="700">結晶器</text>
+          <text x="236" y="244" fill="#9AA0A6" font-size="12">水冷銅模，上下振動</text>
+          <!-- strand shell then liquid core -->
+          <path d="M190 268 V292 A90 90 0 0 0 280 382 H600" fill="none" stroke="#8A8F96" stroke-width="24"/>
+          <path d="M190 268 V292 A90 90 0 0 0 280 382 H470" fill="none" stroke="#FF6A1A" stroke-width="10"/>
+          <!-- sprays -->
+          <g stroke="#8DB4D6" stroke-width="2" stroke-linecap="round">
+            <path d="M154 274 h12 M154 284 h12 M154 294 h12"/>
+            <path d="M214 274 h12 M214 284 h12 M214 294 h12"/>
+          </g>
+          <text x="146" y="278" text-anchor="end" fill="#8DB4D6" font-size="13">二次冷卻</text>
+          <text x="146" y="296" text-anchor="end" fill="#8DB4D6" font-size="12">水噴淋</text>
+          <!-- rolls -->
+          <g fill="none" stroke="#9AA0A6" stroke-width="2">
+            <circle cx="310" cy="363" r="7"/><circle cx="350" cy="363" r="7"/><circle cx="390" cy="363" r="7"/><circle cx="430" cy="363" r="7"/><circle cx="470" cy="363" r="7"/>
+            <circle cx="310" cy="401" r="7"/><circle cx="350" cy="401" r="7"/><circle cx="390" cy="401" r="7"/><circle cx="430" cy="401" r="7"/><circle cx="470" cy="401" r="7"/>
+          </g>
+          <text x="310" y="342" fill="#9AA0A6" font-size="12">拉矯輥</text>
+          <!-- core end -->
+          <path d="M470 352 V344" stroke="#FF8A47" stroke-width="2"/>
+          <text x="478" y="340" fill="#FF8A47" font-size="12">液芯凝固終點</text>
+          <!-- torch -->
+          <path d="M594 346 H606 L600 368 Z" fill="#FFB07F"/>
+          <text x="600" y="336" text-anchor="middle" fill="#E8E6E1" font-size="13">火焰切割</text>
+          <path d="M600 372 V396" stroke="#FFB07F" stroke-width="2" stroke-dasharray="3 3"/>
+          <rect x="614" y="370" width="84" height="24" fill="#8A8F96" stroke="#E8E6E1" stroke-width="1"/>
+          <text x="656" y="418" text-anchor="middle" fill="#E8E6E1" font-size="13">板胚／方胚</text>
+        </svg>
+      </div>
+    </div>
+    <div class="mapkey"><span><i style="background:#FF6A1A"></i>鋼水、液芯</span><span><i style="background:#8A8F96"></i>已凝固外殼</span><span><i style="background:#8DB4D6"></i>冷卻水與銅模</span></div>
+    <p class="note">示意圖為簡化畫法，尺寸與比例不代表實機，實際鑄機的弧形半徑與冷卻分區因廠而異。</p>
+
+    <h2>鋼水變鋼胚的流程</h2>
+    <ol class="flow f4">
+      <li class="z1"><b>鋼包盛裝</b>鋼包裝著精煉好的鋼水，放在可旋轉的轉台上，轉台轉動就能換包、連續澆鑄</li>
+      <li class="z1"><b>注入中間包</b>鋼水經保護套管流入中間包，由它分配給 1 到 8 條鑄流</li>
+      <li class="z2"><b>結晶器成殼</b>水冷銅模上下振動，保護渣潤滑並隔熱，浸入式水口避免鋼水再氧化</li>
+      <li class="z2"><b>二次冷卻</b>出模後的鋼胚由一組組水噴嘴持續帶走熱量，外殼逐步增厚</li>
+      <li class="z3"><b>支撐與矯直</b>輥子支撐鋼胚，在弧形段彎成水平，再由拉矯機矯直並夾住往外拉</li>
+      <li class="z3"><b>切斷</b>火焰切割把連續的鋼胚切成定長，起鑄時用引錠桿帶出第一段</li>
+      <li class="z3"><b>標記與冷卻</b>切好的鋼胚做標記、去毛邊，視需要堆冷或熱送</li>
+      <li class="z3"><b>送軋延</b>板胚送熱軋機、方胚與異型胚送棒線材或型鋼軋機</li>
+    </ol>
+    <div class="flowkey"><span><i style="background:#8A8F96"></i>供料</span><span><i style="background:#FF6A1A"></i>凝固成形</span><span><i style="background:#8DB4D6"></i>後段處理</span></div>
+
+    <h2>常見產品：板胚、方胚、圓胚，各自軋成什麼</h2>
+    <p>連鑄機鑄出的斷面形狀，決定了後面軋機能軋出哪一類產品。左邊的小圖是各種鋼胚的斷面，下面列出它們最常見的下游產品。</p>
+    <div class="prod">
+      <div class="pc"><div class="sec"><svg viewBox="0 0 80 56" aria-hidden="true"><rect x="6" y="20" width="68" height="16" fill="rgba(255,106,26,.18)" stroke="#FF6A1A" stroke-width="2"/></svg></div><div class="nm"><small>SLAB</small>板胚</div><div class="sh">寬而扁的長方形斷面</div><div class="dn"><b>下游產品</b>熱軋鋼捲、中厚板；再往下是冷軋、鍍鋅、造船板、管線鋼、汽車鋼板</div></div>
+      <div class="pc"><div class="sec"><svg viewBox="0 0 80 56" aria-hidden="true"><rect x="20" y="6" width="40" height="44" fill="rgba(255,106,26,.18)" stroke="#FF6A1A" stroke-width="2"/></svg></div><div class="nm"><small>BLOOM</small>大方胚</div><div class="sh">較大的方形或矩形斷面</div><div class="dn"><b>下游產品</b>大型型鋼、鋼軌、大型鍛件、無縫鋼管用的坯料</div></div>
+      <div class="pc"><div class="sec"><svg viewBox="0 0 80 56" aria-hidden="true"><rect x="28" y="16" width="24" height="24" fill="rgba(255,106,26,.18)" stroke="#FF6A1A" stroke-width="2"/></svg></div><div class="nm"><small>BILLET</small>小方胚</div><div class="sh">較小的方形斷面</div><div class="dn"><b>下游產品</b>鋼筋、線材、棒鋼、小型型鋼</div></div>
+      <div class="pc"><div class="sec"><svg viewBox="0 0 80 56" aria-hidden="true"><path d="M14 8 H66 V18 H48 V38 H66 V48 H14 V38 H32 V18 H14 Z" fill="rgba(255,106,26,.18)" stroke="#FF6A1A" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="nm"><small>BEAM BLANK</small>異型胚</div><div class="sh">狗骨形斷面，已接近成品形狀</div><div class="dn"><b>下游產品</b>H 型鋼、工字鋼</div></div>
+      <div class="pc"><div class="sec"><svg viewBox="0 0 80 56" aria-hidden="true"><circle cx="40" cy="28" r="22" fill="rgba(255,106,26,.18)" stroke="#FF6A1A" stroke-width="2"/></svg></div><div class="nm"><small>ROUND</small>圓胚</div><div class="sh">圓形斷面</div><div class="dn"><b>下游產品</b>無縫鋼管、軸類鍛件、棒鋼</div></div>
+      <div class="pc"><div class="sec"><svg viewBox="0 0 80 56" aria-hidden="true"><rect x="6" y="24" width="68" height="8" fill="rgba(141,180,214,.22)" stroke="#8DB4D6" stroke-width="2"/></svg></div><div class="nm"><small>THIN SLAB</small>薄板胚</div><div class="sh">薄而寬，拉速約 5 m/min，常見於電爐廠</div><div class="dn"><b>下游產品</b>縮短流程，近乎直接進熱軋機軋成熱軋鋼捲</div></div>
+    </div>
+    <p class="note">各類鋼胚斷面尺寸的分界，各廠與各教科書劃法不同。下游產品為通用分類，由本刊整理。</p>
+
+    <h2>歷史小註腳：從構想到工業化的連鑄</h2>
+    <div class="tlfig">
+      <ol class="tl tl7 nofut">
+        <li class="ev"><span class="d">19 世紀中葉</span><span class="dot"></span><span class="t">Bessemer 提出在雙輥之間直接澆鑄鋼水</span></li>
+        <li class="ev"><span class="d">1930 年代初</span><span class="dot"></span><span class="t">Junghans 研究開底水冷銅模，連續拉出鋼胚</span></li>
+        <li class="ev k"><span class="d">1950 年代</span><span class="dot"></span><span class="t">Rossi 與 Concast 發展傳統連鑄機，並取得 Junghans 的專利權</span></li>
+        <li class="ev"><span class="d">1954</span><span class="dot"></span><span class="t">加拿大 Atlas Steels 投運立式連鑄機，鑄不鏽鋼板胚</span></li>
+        <li class="ev"><span class="d">1958</span><span class="dot"></span><span class="t">Halliday 的負滑脫振動，拉速達 14.5 m/min</span></li>
+        <li class="ev k"><span class="d">1985</span><span class="dot"></span><span class="t">薄板胚連鑄機問世，配合電爐迷你鋼廠</span></li>
+        <li class="ev x"><span class="d">約 2015</span><span class="dot"></span><span class="t">CASTRIP 與水平單帶鑄機等近終形鑄帶技術</span></li>
+      </ol>
+      <p class="tlkey"><span><i style="background:#FF6A1A"></i>連鑄技術</span><span><i style="background:#8DB4D6"></i>近終形鑄造</span></p>
+    </div>
+
+    <h2>從板胚到熱軋鋼捲：薄板胚是怎麼被捲起來的</h2>
+    <p>報價以熱軋捲為主，是因為它是板胚進熱軋機之後的第一個成品。這一步把約 200 多毫米厚的板胚，壓成幾毫米厚、可以捲成一圈的長鋼帶。薄板胚的差別，是少走中間幾步。</p>
+    <figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Vitkovice_Steel.jpg/960px-Vitkovice_Steel.jpg" alt="鋼廠廠房內，幾塊厚重的鋼材呈明亮的橘紅色，躺在深色的地面上，後方是鋼構廠房" width="960" height="638" loading="lazy"><figcaption>捷克 Ostrava 的 Vítkovice Steel 鋼廠內，剛離開高溫製程的紅熱鋼材。鋼材要加熱到上千度才夠軟、可以軋延，這時的顏色就是橘紅色。<small>照片：Petr Štefek，2007 年攝，<a href="https://creativecommons.org/licenses/by/3.0/" data-hov="1" class="lk">CC BY 3.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:Vitkovice_Steel.jpg" data-hov="1" class="lk">Wikimedia Commons</a></small></figcaption></figure>
+    <h3>傳統熱軋帶鋼機：加熱、軋薄、冷卻、捲取</h3>
+    <ol class="flow f4">
+      <li class="z1"><b>板胚加熱</b>冷胚或熱送胚進加熱爐，均勻加熱到約 1,150–1,250°C，軋起來才夠軟</li>
+      <li class="z1"><b>除鱗</b>高壓水沖掉表面氧化鐵皮，避免壓進鋼板表面造成缺陷</li>
+      <li class="z2"><b>粗軋</b>在粗軋機來回軋數道，把板胚壓成約數十毫米厚的中間坯，也稱為傳送帶坯</li>
+      <li class="z2"><b>精軋</b>中間坯進入一連串精軋機架（常見 5–7 架），依序連續軋薄到目標厚度，出口速度最快</li>
+      <li class="z3"><b>層流冷卻</b>鋼帶在輸出輥道上被一排排水幕冷卻，由冷卻速度控制組織與強度</li>
+      <li class="z3"><b>捲取</b>鋼帶經夾送輥送入捲取機，在助捲輥與捲筒之間被繞成一捲，並保持張力</li>
+      <li class="z3"><b>卸捲與打帶</b>捲取機卸下鋼捲，用鋼帶捆綁，避免鬆開</li>
+      <li class="z3"><b>標記與出貨</b>噴印捲號、秤重，送冷軋、酸洗或直接出貨</li>
+    </ol>
+    <div class="flowkey"><span><i style="background:#8A8F96"></i>加熱準備</span><span><i style="background:#FF6A1A"></i>軋延成形</span><span><i style="background:#8DB4D6"></i>冷卻與捲取</span></div>
+    <p>捲取是最後一道關鍵。精軋出來的鋼帶很長，會一邊沿輸出輥道前進、一邊被層流冷卻。到了捲取機前，夾送輥先把帶頭導入，再由助捲輥壓著帶頭繞上捲筒，之後捲筒持續旋轉，把整條鋼帶一圈圈繞緊。<b>捲取溫度</b>是品質的重點，溫度不同，鋼的晶粒與強度就不同，所以各廠會依鋼種設定。</p>
+
+    <figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/COILING_MACHINERY_AT_THE_END_OF_THE_84-INCH_CONTINUOUS_HOT_STRIP_MILL._EACH_STEEL_SLAB_BY_THIS_POINT_HAS_BECOME_A_SINGLE_TRIP_VARYING_IN_WIDTH_AND_THICKNESS_ACCORDING_TO_THE_HAER_OHIO%2C18-CLEV%2C34-48.tif/lossy-page1-960px-thumbnail.tif.jpg" alt="黑白照片：寬敞的廠房內，產線盡頭有捲取設備，地面上立著幾個圓筒狀的鋼捲" width="960" height="760" loading="lazy"><figcaption>美國克里夫蘭 Corrigan-McKinney Steel 公司 84 吋熱軋帶鋼機的尾端捲取設備（歷史照片，Commons 上目前找不到較新、授權明確的捲取機照片）。板胚軋到這裡已經變成一條長鋼帶，寬度與厚度依訂單而定，最後在這一段被繞成鋼捲。<small>照片：Historic American Engineering Record（HAER OHIO,18-CLEV,34-48），1968 年後編製，美國國會圖書館藏，公有領域，經 <a href="https://commons.wikimedia.org/wiki/File:COILING_MACHINERY_AT_THE_END_OF_THE_84-INCH_CONTINUOUS_HOT_STRIP_MILL._EACH_STEEL_SLAB_BY_THIS_POINT_HAS_BECOME_A_SINGLE_TRIP_VARYING_IN_WIDTH_AND_THICKNESS_ACCORDING_TO_THE_HAER_OHIO,18-CLEV,34-48.tif" data-hov="1" class="lk">Wikimedia Commons</a></small></figcaption></figure>
+    <div class="mapfig">
+      <div class="mi">
+        <svg viewBox="0 0 760 330" role="img" aria-labelledby="cl-t cl-d">
+          <title id="cl-t">熱軋鋼帶捲取流程示意圖</title>
+          <desc id="cl-d">鋼帶從精軋機出來後，在輸出輥道上被層流冷卻水幕降溫，再經夾送輥送入捲取機，由助捲輥壓著帶頭繞上捲筒，一圈圈繞成鋼捲。</desc>
+          <defs><linearGradient id="cl-g" x1="0" x2="1"><stop offset="0" stop-color="#FF8A47"/><stop offset=".75" stop-color="#C98A6B"/><stop offset="1" stop-color="#8DB4D6"/></linearGradient></defs>
+          <!-- laminar cooling -->
+          <rect x="40" y="82" width="290" height="14" rx="3" fill="#1C2024" stroke="#8DB4D6" stroke-width="2"/>
+          <line x1="60" y1="96" x2="60" y2="140" stroke="#8DB4D6" stroke-width="2" stroke-dasharray="3 5"/><line x1="100" y1="96" x2="100" y2="140" stroke="#8DB4D6" stroke-width="2" stroke-dasharray="3 5"/><line x1="140" y1="96" x2="140" y2="140" stroke="#8DB4D6" stroke-width="2" stroke-dasharray="3 5"/><line x1="180" y1="96" x2="180" y2="140" stroke="#8DB4D6" stroke-width="2" stroke-dasharray="3 5"/><line x1="220" y1="96" x2="220" y2="140" stroke="#8DB4D6" stroke-width="2" stroke-dasharray="3 5"/><line x1="260" y1="96" x2="260" y2="140" stroke="#8DB4D6" stroke-width="2" stroke-dasharray="3 5"/><line x1="300" y1="96" x2="300" y2="140" stroke="#8DB4D6" stroke-width="2" stroke-dasharray="3 5"/>
+          <!-- run-out table -->
+          <circle cx="40" cy="166" r="9" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/><circle cx="80" cy="166" r="9" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/><circle cx="120" cy="166" r="9" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/><circle cx="160" cy="166" r="9" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/><circle cx="200" cy="166" r="9" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/><circle cx="240" cy="166" r="9" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/><circle cx="280" cy="166" r="9" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/><circle cx="320" cy="166" r="9" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/><circle cx="360" cy="166" r="9" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/><circle cx="400" cy="166" r="9" fill="#1C2024" stroke="#8A8F96" stroke-width="2"/>
+          <!-- strip -->
+          <rect x="10" y="146" width="580" height="5" fill="url(#cl-g)"/>
+          <path d="M20 148 l-12 0" stroke="#FF8A47" stroke-width="5"/>
+          <!-- pinch rolls -->
+          <circle cx="470" cy="130" r="16" fill="#1C2024" stroke="#E8E6E1" stroke-width="2"/>
+          <circle cx="470" cy="167" r="16" fill="#1C2024" stroke="#E8E6E1" stroke-width="2"/>
+          <!-- coil -->
+          <circle cx="590" cy="205" r="50" fill="#15181B" stroke="#FF6A1A" stroke-width="2"/>
+          <circle cx="590" cy="205" r="18" fill="none" stroke="#FF6A1A" stroke-width="3" opacity="0.75"/><circle cx="590" cy="205" r="24" fill="none" stroke="#FF6A1A" stroke-width="3" opacity="0.75"/><circle cx="590" cy="205" r="30" fill="none" stroke="#FF6A1A" stroke-width="3" opacity="0.75"/><circle cx="590" cy="205" r="36" fill="none" stroke="#FF6A1A" stroke-width="3" opacity="0.75"/><circle cx="590" cy="205" r="42" fill="none" stroke="#FF6A1A" stroke-width="3" opacity="0.95"/><circle cx="590" cy="205" r="48" fill="none" stroke="#FF6A1A" stroke-width="3" opacity="0.95"/>
+          <circle cx="590" cy="205" r="12" fill="#8A8F96"/>
+          <!-- wrapper rolls -->
+          <circle cx="526" cy="205" r="14" fill="#1C2024" stroke="#E8E6E1" stroke-width="2"/>
+          <circle cx="546" cy="252" r="14" fill="#1C2024" stroke="#E8E6E1" stroke-width="2"/>
+          <circle cx="634" cy="252" r="14" fill="#1C2024" stroke="#E8E6E1" stroke-width="2"/>
+          <!-- direction -->
+          <path d="M150 190 H240" stroke="#FF6A1A" stroke-width="2" marker-end="url(#cl-a)"/>
+          <defs><marker id="cl-a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#FF6A1A"/></marker></defs>
+          <text x="248" y="194" font-size="12" fill="#FF8A47">鋼帶行進方向</text>
+          <!-- labels -->
+          <g font-size="14" fill="#E8E6E1" font-weight="700">
+            <circle cx="40" cy="46" r="13" fill="#FF6A1A"/><text x="40" y="51" text-anchor="middle" fill="#0F1113" font-size="14">1</text>
+            <text x="62" y="51">層流冷卻水幕</text>
+            <circle cx="40" cy="226" r="13" fill="#FF6A1A"/><text x="40" y="231" text-anchor="middle" fill="#0F1113" font-size="14">1</text>
+            <text x="62" y="231">輸出輥道（承載鋼帶前進）</text>
+            <circle cx="400" cy="58" r="13" fill="#FF6A1A"/><text x="400" y="63" text-anchor="middle" fill="#0F1113" font-size="14">2</text>
+            <text x="422" y="63">夾送輥</text>
+            <circle cx="400" cy="296" r="13" fill="#FF6A1A"/><text x="400" y="301" text-anchor="middle" fill="#0F1113" font-size="14">3</text>
+            <text x="422" y="301">助捲輥</text>
+            <circle cx="690" cy="136" r="13" fill="#FF6A1A"/><text x="690" y="141" text-anchor="middle" fill="#0F1113" font-size="14">4</text>
+            <text x="624" y="104" font-size="14">捲筒與鋼捲</text>
+          </g>
+          <g stroke="#3A3F46" stroke-width="1.5" fill="none">
+            <path d="M470 76 V112"/><path d="M420 290 L540 262"/><path d="M652 108 L612 160"/>
+          </g>
+          <text x="20" y="190" font-size="12" fill="#FF8A47">約 850–920°C</text>
+          <text x="330" y="190" font-size="12" fill="#8DB4D6">約 550–750°C</text>
+        </svg>
+      </div>
+    </div>
+    <div class="mapkey"><span><i style="background:#FF8A47"></i>高溫鋼帶</span><span><i style="background:#8DB4D6"></i>冷卻後鋼帶</span><span><i style="background:#E8E6E1"></i>輥子</span></div>
+    <p class="note">示意圖，比例與機型簡化。捲取機形式（三輥式、四輥式等）與助捲輥數量依產線而異。</p>
+    <figure><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Gdansk_Nowy_Port_kregi.jpg/960px-Gdansk_Nowy_Port_kregi.jpg" alt="碼頭邊的空地上，大量圓筒狀的鋼捲一排排整齊堆放，遠處是水面與船隻" width="960" height="720" loading="lazy"><figcaption>波蘭格但斯克新港（Nowy Port）碼頭上成排堆放的鋼捲。捲好的鋼捲離廠後，常經鐵路、卡車或海運送到下游客戶。<small>照片：Andrzej Otrębski，2013 年攝，<a href="https://creativecommons.org/licenses/by-sa/3.0/" data-hov="1" class="lk">CC BY-SA 3.0</a>，經 <a href="https://commons.wikimedia.org/wiki/File:Gdansk_Nowy_Port_kregi.jpg" data-hov="1" class="lk">Wikimedia Commons</a></small></figcaption></figure>
+
+    <div class="rng" role="img" aria-label="熱軋過程典型溫度範圍：加熱爐出爐約 1,150 至 1,250 度，精軋出口約 850 至 920 度，捲取約 550 至 750 度">
+      <p class="bt">熱軋三個關鍵點的典型溫度（°C）</p>
+      <div class="rw"><span>加熱爐出爐</span><span class="tr"><span class="fi" style="left:81.25%;width:12.5%;background:#FF6A1A"></span></span><span class="v">約 1,150–1,250</span></div>
+      <div class="rw"><span>精軋出口</span><span class="tr"><span class="fi" style="left:43.75%;width:8.75%;background:#FF8A47"></span></span><span class="v">約 850–920</span></div>
+      <div class="rw"><span>捲取</span><span class="tr"><span class="fi" style="left:6.25%;width:25%;background:#8DB4D6"></span></span><span class="v">約 550–750</span></div>
+      <div class="ax"><span></span><span class="sc"><span style="left:0%;transform:none">500</span><span style="left:25%">700</span><span style="left:50%">900</span><span style="left:75%">1,100</span><span style="left:100%;transform:translateX(-100%)">1,300</span></span><span></span></div>
+      <p class="bn">溫度範圍為一般教科書與廠商資料常見的典型區間，實際設定依鋼種、厚度與產線而異。</p>
+    </div>
+
+    <div class="bars" role="img" aria-label="板胚軋成熱軋鋼帶的厚度變化示意：板胚約 220 毫米，粗軋後約 35 毫米，精軋後約 4 毫米；薄板胚約 60 毫米">
+      <p class="bt">厚度一路被壓薄（毫米，示意）</p>
+      <div class="bar"><span>傳統板胚</span><span class="tr"><span class="fi" style="width:100%"></span></span><span class="v">約 220</span></div>
+      <div class="bar"><span>粗軋後</span><span class="tr"><span class="fi" style="width:16%"></span></span><span class="v">約 35</span></div>
+      <div class="bar hi"><span>精軋後鋼帶</span><span class="tr"><span class="fi" style="width:3%"></span></span><span class="v">約 4</span></div>
+      <div class="bar"><span>薄板胚</span><span class="tr"><span class="fi" style="width:27%"></span></span><span class="v">約 60</span></div>
+      <p class="bn">傳統板胚厚度多在 200–250 毫米，薄板胚多在 50–90 毫米，熱軋鋼帶常見約 1.2–12 毫米。數字為示意，非特定產線。</p>
+    </div>
+
+    <h3>薄板胚：省掉粗軋，甚至不用重新加熱</h3>
+    <p>薄板胚連鑄機鑄出的胚本來就薄，出機後直接進入隧道式均熱爐補熱，不必重新加熱，也不必粗軋，直接進精軋機架，再冷卻、捲取。整條線從鋼水到鋼捲連成一氣，能源與時間都省下來，適合電爐迷你鋼廠。</p>
+    <ul>
+      <li><b>連鑄與軋延直接相連</b>：鑄出的胚不經冷卻就進爐，熱量留在鋼裡，所以加熱的能源少很多。</li>
+      <li><b>無頭軋延</b>：部分產線（例如 Arvedi 的 ESP）把連鑄與精軋接成一條連續的鋼帶，不切斷直接軋，最後才切成鋼捲，能軋出更薄的熱軋捲。</li>
+      <li><b>限制</b>：薄板胚凝固快、斷面薄，對鋼種與表面品質要求高，厚度規格與高強度鋼種也受到限制，所以傳統熱軋機仍占大宗。</li>
+    </ul>
+    <p class="note">加熱溫度、機架數與厚度為一般性的典型範圍，各廠設備不同。無頭軋延技術名稱依各設備商而異。本刊整理，建議對照設備商資料確認。</p>
+
+    <h2>為什麼國際鋼價報價以熱軋捲為主流</h2>
+    <div class="call"><p>熱軋捲（HRC）是連鑄板胚進熱軋機後的第一個平板成品：量最大、標準最一致，冷軋、鍍鋅等產品都以它為基價再加價，美國、歐洲、亞洲都有指數，期貨也以它為標的。</p></div>
+    <p>先看價格怎麼層層堆疊。下圖是 Steel on the Net 的示例：以熱軋捲每公噸 600 美元為基準，冷軋捲約加價 100–150 美元，鍍鋅捲再從冷軋加價約 150–250 美元，合計約比熱軋高 250–400 美元。這是示例，不是實際行情，加價幅度會隨供需變動。</p>
+    <div class="rng" role="img" aria-label="以熱軋捲每公噸 600 美元為基準的示例：冷軋捲約 700 至 750 美元，鍍鋅捲約 850 至 1,000 美元">
+      <p class="bt">示例：平板產品在熱軋基價上的加價（美元／公噸）</p>
+      <div class="rw"><span>熱軋捲 HRC</span><span class="tr"><span class="fi" style="left:0;width:60%;background:#8A8F96"></span></span><span class="v">600（基準）</span></div>
+      <div class="rw"><span>冷軋捲 CRC</span><span class="tr"><span class="fi" style="left:0;width:60%;background:#8A8F96"></span><span class="fi" style="left:60%;width:10%;background:#FF6A1A"></span><span class="fi" style="left:70%;width:5%;background:#FF8A47;opacity:.55"></span></span><span class="v">約 700–750</span></div>
+      <div class="rw"><span>鍍鋅捲</span><span class="tr"><span class="fi" style="left:0;width:60%;background:#8A8F96"></span><span class="fi" style="left:60%;width:25%;background:#FF6A1A"></span><span class="fi" style="left:85%;width:15%;background:#FF8A47;opacity:.55"></span></span><span class="v">約 850–1,000</span></div>
+      <div class="ax"><span></span><span class="sc"><span style="left:0%">0</span><span style="left:20%">200</span><span style="left:40%">400</span><span style="left:60%">600</span><span style="left:80%">800</span><span style="left:100%;transform:translateX(-100%)">1,000</span></span><span></span></div>
+      <p class="bn">灰色為熱軋基價，橘色為加價，淡橘色為加價範圍的不確定部分。資料來源：Steel on the Net，示例數字，非即時行情。</p>
+    </div>
+
+    <h3>六個原因</h3>
+    <ol class="flow f3">
+      <li class="z2"><b>量大、成交多</b>Steel on the Net 的整理稱熱軋捲是全球量最大的鋼品，成交多，價格容易被看見</li>
+      <li class="z2"><b>是其他平板的起點</b>冷軋、鍍鋅、塗層都從熱軋捲加工而來，價格以熱軋為基價再加價</li>
+      <li class="z1"><b>位置居中</b>在煉鋼之後、產品分化之前，反映一貫廠的製造成本</li>
+      <li class="z1"><b>容易跨廠比較</b>多數鋼廠都做熱軋，不論產品組合，成本與價格都能並排比</li>
+      <li class="z3"><b>各區都有基準價</b>美國、歐洲、亞洲各有熱軋捲指數，方便追蹤區域價差</li>
+      <li class="z3"><b>期貨以它為標的</b>CME 的美國中西部熱軋捲期貨，每口 20 短噸，報價為美元每短噸</li>
+    </ol>
+    <div class="chips" aria-label="常見的價格報告機構"><span><b>CRU</b> 週報、重視實際成交</span><span><b>Platts</b> 日報、亞洲與中國熱軋</span><span><b>MEPS</b> 月均價</span><span><b>Fastmarkets</b> 日報與週報</span><span><b>Argus</b> 歐洲西北熱軋</span></div>
+
+    <p>熱軋捲賣到哪裡去？下圖是同一來源的概估用途占比，營建與汽車合計超過一半，管線用的窄帶鋼（skelp）也占一成多。用途這麼分散，代表它的價格能代表整體景氣，分析師常把它當作領先指標。</p>
+    <div class="rng" role="img" aria-label="熱軋捲約略用途占比：營建 35–40%、汽車 20–25%、管線 15–20%、一般加工 10–15%、其他 10–15%">
+      <p class="bt">熱軋捲的約略用途占比（%）</p>
+      <div class="rw"><span>營建</span><span class="tr"><span class="fi" style="left:70%;width:10%;background:#FF6A1A"></span></span><span class="v">35–40</span></div>
+      <div class="rw"><span>汽車</span><span class="tr"><span class="fi" style="left:40%;width:10%;background:#FF6A1A"></span></span><span class="v">20–25</span></div>
+      <div class="rw"><span>管線（skelp）</span><span class="tr"><span class="fi" style="left:30%;width:10%;background:#8DB4D6"></span></span><span class="v">15–20</span></div>
+      <div class="rw"><span>一般加工</span><span class="tr"><span class="fi" style="left:20%;width:10%;background:#9AA0A6"></span></span><span class="v">10–15</span></div>
+      <div class="rw"><span>其他</span><span class="tr"><span class="fi" style="left:20%;width:10%;background:#9AA0A6"></span></span><span class="v">10–15</span></div>
+      <div class="ax"><span></span><span class="sc"><span style="left:0%">0</span><span style="left:20%">10</span><span style="left:40%">20</span><span style="left:60%">30</span><span style="left:80%">40</span><span style="left:100%;transform:translateX(-100%)">50</span></span><span></span></div>
+      <p class="bn">每一列是範圍，不是單一值，各列加總不等於 100%。資料來源：Steel on the Net 的概估，非官方統計。</p>
+    </div>
+    <p>本刊判斷：熱軋捲正好接在連鑄板胚後面。板胚進熱軋機，軋成捲就能賣，是整條平板流程中最短也最標準的一段，因此市場自然拿它當基準，其他產品再用加價表示。</p>
+
+    <h2>報價單位：長噸、短噸與公噸</h2>
+    <p>看美國的熱軋價格，先要確認單位。美國鋼鐵統計與期貨用的是短噸，美國業界稱淨噸（net ton）；長噸源自英制，業界稱毛噸（gross ton）；台灣與多數國家用公噸。三者的重量不同，直接把數字拿來比，會差出一成左右。</p>
+    <div class="facts">
+      <div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h16M7 18l1-9h8l1 9M10 9V6h4v3"/></svg></span><div><span class="fl">短噸 SHORT TON</span><span class="fv">2,000 磅 ≈ 907.18 kg</span><span class="fs">美國慣稱淨噸，CME 熱軋捲期貨的單位</span></div></div>
+      <div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18M6 18l1.5-10h9L18 18M9.5 8V5h5v3"/></svg></span><div><span class="fl">長噸 LONG TON</span><span class="fv">2,240 磅 ≈ 1,016.05 kg</span><span class="fs">英制，美國業界稱毛噸</span></div></div>
+      <div class="fact"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M5 9h14M7 9l-3 7h6l-3-7zM17 9l-3 7h6l-3-7z"/></svg></span><div><span class="fl">公噸 METRIC TONNE</span><span class="fv">1,000 kg ≈ 2,204.6 磅</span><span class="fs">台灣與多數國家的報價、統計單位</span></div></div>
+    </div>
+    <div class="bars" role="img" aria-label="一噸的重量比較：短噸 907.2 公斤、公噸 1,000 公斤、長噸 1,016.0 公斤">
+      <p class="bt">三種「一噸」的重量（公斤）</p>
+      <div class="bar hi"><span>短噸（美）</span><span class="tr"><span class="fi" style="width:82.5%"></span></span><span class="v">907.2</span></div>
+      <div class="bar"><span>公噸</span><span class="tr"><span class="fi" style="width:90.9%"></span></span><span class="v">1,000.0</span></div>
+      <div class="bar"><span>長噸（英）</span><span class="tr"><span class="fi" style="width:92.4%"></span></span><span class="v">1,016.0</span></div>
+      <p class="bn">刻度從 0 到 1,100 公斤。1 磅以 0.45359237 公斤換算；橘色為美國報價慣用的短噸。</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="ic mono" aria-hidden="true" style="font-size:12px">×1.12</span><div><span class="fl">長噸 → 短噸</span><span class="fv">1 長噸 = 1.12 短噸</span><span class="fs">2,240 ÷ 2,000</span></div></div>
+      <div class="fact"><span class="ic mono" aria-hidden="true" style="font-size:12px">×1.10</span><div><span class="fl">公噸 → 短噸</span><span class="fv">1 公噸 ≈ 1.1023 短噸</span><span class="fs">1,000 ÷ 907.18</span></div></div>
+      <div class="fact"><span class="ic mono" aria-hidden="true" style="font-size:12px">×0.91</span><div><span class="fl">短噸 → 公噸</span><span class="fv">1 短噸 ≈ 0.9072 公噸</span><span class="fs">1 長噸 ≈ 1.0160 公噸</span></div></div>
+    </div>
+    <ul>
+      <li><b>價格換算：</b>價格是「每噸多少錢」，噸變輕價格要換成每公噸就變高。假設熱軋捲每短噸 800 美元，約等於每公噸 882 美元（800 × 1.1023）。這是計算示例，不是行情。</li>
+      <li><b>期貨合約：</b>CME 熱軋捲期貨每口 20 短噸，約 18.14 公噸，報價單位是美元與美分每短噸。</li>
+      <li><b>產量統計：</b>SteelOrbis 報導美國鋼廠 2026 年 8 月出貨 8,220,554 淨噸，約 746 萬公噸。</li>
+      <li><b>注意：</b>只寫「噸」而沒寫單位時，美國通常指短噸，但鋼鐵業與廢鋼業也有人用毛噸，要看報價單上的標示。</li>
+    </ul>
+
+    <h2>對台灣的意義</h2>
+    <ul>
+      <li><b>比價前先換單位：</b>台灣報價與統計用公噸。把美國熱軋行情（每短噸）換成每公噸，才能和亞洲、歐洲的報價並排比較。</li>
+      <li><b>熱軋是議價的參照：</b>本刊判斷，台灣鋼廠與下游談價時，熱軋價格是常見的參照，再加上規格、厚度與塗鍍層的差價；各廠實際條件不同。</li>
+    </ul>
+
+    <h2>觀察重點</h2>
+    <ul>
+      <li>印度（94.1%）與俄羅斯（83.8%）的連鑄比有沒有提升。</li>
+      <li>薄板胚與近終形鑄帶的新產能，以及可生產的產品範圍。</li>
+      <li>美國熱軋捲期貨與亞洲、歐洲基準價的價差，與關稅、貿易措施的關係。</li>
+      <li>引用美國數字時，確認是短噸、長噸還是公噸。</li>
+    </ul>
+
+    <h2>延伸閱讀</h2>
+    <ul class="sources">
+      <li><a href="https://steeltrending.github.io/articles/2026-10-bof.html">轉爐怎麼煉鋼：從兌鐵水、吹氧到出鋼的四十分鐘</a></li>
+      <li><a href="https://steeltrending.github.io/articles/2026-10-eaf-operation.html">電爐怎麼煉鋼：從通電熔化到出鋼的一爐週期</a></li>
+      <li><a href="../steel101.html">鋼鐵小學堂</a></li>
+    </ul>
+
+    <h2>資料來源</h2>
+    <ul class="sources">
+      <li><a href="https://worldsteel.org/wp-content/uploads/World-Steel-in-Figures-2026.pdf">World Steel in Figures 2026</a>（worldsteel）：2025 年各國連鑄鋼產量與比率</li>
+      <li><a href="https://encyclopedia.pub/entry/23634">Continuous casting</a>（Encyclopedia.pub）：歷史、設備、板胚與薄板胚、收得率優勢</li>
+      <li><a href="https://www.steelonthenet.com/essentials/steel-pricing.html">Steel Pricing FAQ</a>（Steel on the Net）：熱軋捲作為基準價的原因與報價機構</li>
+      <li><a href="https://www.steelonthenet.com/essentials/flat-rolled-steel.html">Flat-Rolled Steel questions</a>（Steel on the Net）：熱軋、冷軋、鍍鋅的加價與熱軋捲用途占比</li>
+      <li><a href="https://www.cmegroup.com/trading/metals/files/us-midwest-domestic-hot-rolled-coil-steel-futures-and-options.pdf">US Midwest Domestic Hot-Rolled Coil Steel Futures and Options</a>（CME Group）：每口 20 短噸、美元每短噸</li>
+      <li><a href="https://www.cmegroup.com/education/courses/hedging-price-risk-with-steel-future-contracts/hedging-with-hot-rolled-coil-hrc-steel-futures-contracts">Hedging with Hot Rolled Coil (HRC) Steel Futures Contracts</a>（CME Group）</li>
+      <li><a href="https://energyeducation.ca/encyclopedia/Long_ton">Long ton</a>（Energy Education）：長噸、短噸與公噸的定義</li>
+      <li><a href="https://iscrapapp.com/blog/gross-ton-vs-net-ton-what-do-these-mean-for-scrap-metal/">Gross Ton vs Net Ton</a>（iScrap App）：毛噸與淨噸的用法</li>
+      <li><a href="https://www.steelorbis.com/steel-news/latest-news/us-steel-mill-shipments-up-001-percent-in-august-2026-from-july-1482825.htm">US steel mill shipments up 0.01 percent in August 2026 from July</a>（SteelOrbis）：美國出貨以淨噸計</li>
+    </ul>
+    <p class="note" style="margin-top:20px !important">鋼胚分類與下游產品對應為通用分類，由本刊整理，非逐條引自單一來源。重量換算依 1 磅 = 0.45359237 公斤計算。</p>
+    <p style="font-size:13px;color:#9AA0A6;margin-top:32px">內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</p>
+  </article>
+
+  <!-- article-qr -->
+  <aside aria-label="本文連結 QR Code" style="max-width:760px;box-sizing:border-box;margin-top:48px;border:1px solid #2A2F35;background:#15181B;padding:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+    <img src="../assets/qr/2026-10-casting-to-coil.png" alt="本文連結 QR Code" width="132" height="132" loading="lazy" style="display:block;width:132px;height:132px;background:#FFFFFF;flex:none">
+    <div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 220px">
+      <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.2em;color:#FF6A1A">SHARE</p>
+      <p style="margin:0;font-size:17px;font-weight:900;color:#E8E6E1">掃描 QR Code 開啟本文</p>
+      <p style="margin:0;font-size:13px;line-height:1.7;color:#9AA0A6;word-break:break-all">https://steeltrending.github.io/articles/2026-10-casting-to-coil.html</p>
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:4px"><a href="../assets/qr/2026-10-casting-to-coil.png" download="steeltrending-2026-10-casting-to-coil-qr.png" style="font-size:14px;color:#FF8A47;text-decoration:none" class="lk sc">下載 QR Code ↓</a><button type="button" data-url="https://steeltrending.github.io/articles/2026-10-casting-to-coil.html" onclick="var b=this,u=this.dataset.url;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).catch(function(){var t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}).then(function(){b.textContent='已複製本文網址';setTimeout(function(){b.textContent='分享本文'},2000)})" style="font:inherit;font-size:14px;color:#FF8A47;background:none;border:0;padding:0;cursor:pointer">分享本文</button></div>
+    </div>
+  </aside>
+  <!-- /article-qr -->
+
+  <p style="margin-top:48px"><a href="../steel101.html" style="display:inline-flex;align-items:center;border:1px solid #4A5058;color:#E8E6E1;text-decoration:none;padding:12px 20px" class="lk sc">← 回到鋼鐵小學堂</a></p>
+</main>
+
+<footer style="border-top:1px solid #2A2F35;background:#0B0C0E;margin-top:48px">
+  <div class="wrap" style="padding-top:32px;padding-bottom:32px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#9AA0A6;line-height:1.7">
+    <span>© 2026 鋼鐵潮流 Steel Trending · <a href="../sitemap.html" style="color:#C9CDD2" class="lk">網站導覽</a></span>
+    <span>內容僅供產業資訊參考，不構成投資建議。新聞版權屬原出處所有。</span>
+  </div>
+</footer>
+<div class="tip" id="tip" hidden></div>
+<script src="../assets/hover.js"></script>
+<script src="../assets/tts.js"></script>
+</body>
+</html>
