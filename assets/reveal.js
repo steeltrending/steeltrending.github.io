@@ -1,4 +1,4 @@
-/* 鋼鐵潮流首頁：01 每日速報、02 追蹤主題、03 關於 三個區域的區塊捲動流入。
+/* 鋼鐵潮流首頁：鋼鐵股與價格看板、02 追蹤主題、03 關於 三個區域的區塊捲動流入。
    區塊的位置與透明度直接由捲動位置決定（不是計時動畫）：捲動時區塊由下方斜向流入定位，
    停止捲動就停在當下的位置；往回捲則反向退出。尊重「減少動態效果」設定。 */
 (function () {
@@ -7,7 +7,7 @@
   var items = [];
 
   function collect() {
-    var daily = document.getElementById('daily');
+    var daily = document.getElementById('market');      // 鋼鐵股與價格看板（每日速報圖卡在首屏，不做流入）
     var topics = document.getElementById('topics');
     var about = document.getElementById('about');
     function add(el, i, side) { if (el) items.push({ el: el, i: i, side: side }); }
@@ -69,7 +69,7 @@
     collect();
     if (!items.length) return;
     // 斜向流入時不讓區塊撐出橫向捲軸
-    ['daily', 'topics', 'about'].forEach(function (id) {
+    ['market', 'topics', 'about'].forEach(function (id) {
       var s = document.getElementById(id);
       if (s) s.style.overflowX = 'clip';
     });

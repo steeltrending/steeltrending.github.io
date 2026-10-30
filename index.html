@@ -83,11 +83,11 @@ Facebook 粉專</a>
 </div>
 </div>
 
-<!-- Hero side: 每日鋼鐵速報（資料：data/latest.json 與 data/steel_social.jpg 每日更新） -->
-<div style="display: flex; flex-direction: column; gap: 0">
+<!-- Hero side: 每日鋼鐵速報（資料：data/latest.json 與 data/steel_social.jpg 每日更新）；選單「每日速報」（#daily）跳到這裡 -->
+<div id="daily" aria-labelledby="daily-title" style="display: flex; flex-direction: column; gap: 0; scroll-margin-top: 16px">
 <div style="display: flex; flex-direction: column; gap: 12px; padding: 0 0 16px 0">
 <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.24em; color: #FF6A1A">01 · DAILY BRIEF</p>
-<h2 style="margin: 0; font-size: 20px; font-weight: 700">每日鋼鐵速報</h2>
+<h2 id="daily-title" style="margin: 0; font-size: 20px; font-weight: 700">每日鋼鐵速報</h2>
 </div>
 <figure id="brief-card" style="margin: 0; border: 1px solid #2A2F35; background: #121417; display: flex; flex-direction: column">
 <a id="brief-link" href="data/steel_social.jpg" title="點擊放大" aria-label="放大檢視今日速報圖卡" style="display: block; cursor: zoom-in">
@@ -110,8 +110,8 @@ Facebook 粉專</a>
 <div style="border-top: 1px solid #2A2F35"></div>
 
 
-<!-- DAILY BRIEF -->
-<section id="daily" aria-labelledby="daily-title" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<!-- 鋼鐵股與價格看板 -->
+<section id="market" aria-label="鋼鐵股與原料價格看板" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
 
 <!-- 七大龍頭鋼鐵股 + 價格看板：內容由 data/stocks.json 與 data/latest.json 每日更新 -->
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; align-items: start">
@@ -568,7 +568,16 @@ document.getElementById('mail-btn').addEventListener('click', function () {
 })();
 </script>
 <script src="assets/hover.js" defer></script>
-<script src="assets/reveal.js" defer></script>
+<script src="assets/reveal.js?v=2" defer></script>
 <script src="assets/quote.js?v=6" defer></script>
+<script>
+// 從其他頁點「每日速報」等帶 #錨點 的連結進來時，等版面（股價、格言、圖卡）載完再對準一次
+window.addEventListener('load', function () {
+  var id = decodeURIComponent(location.hash.slice(1)), t = id && document.getElementById(id), moved = false;
+  if (!t) return;
+  ['wheel', 'touchstart', 'keydown'].forEach(function (ev) { window.addEventListener(ev, function () { moved = true; }, { once: true, passive: true }); });
+  [200, 700, 1500].forEach(function (ms) { setTimeout(function () { if (!moved) t.scrollIntoView({ behavior: 'instant', block: 'start' }); }, ms); });
+});
+</script>
 </body>
 </html>
