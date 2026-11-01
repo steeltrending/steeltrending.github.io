@@ -24,3 +24,28 @@ FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
 [2026-10-31 09:30:00] ℹ️  更新 latest.json...
 [2026-10-31 09:30:00] ✅ latest.json 更新完成
 [2026-10-31 09:30:00] ℹ️  配置 Git 並提交變更...
+[2026-10-31 09:30:00] ✅ 文件已暫存
+[2026-10-31 09:30:01] ✅ 變更已提交: 自動更新 2026-10-31 鋼鐵日報圖卡與報告
+[2026-10-31 09:30:01] ℹ️  準備推送到 GitHub...
+[2026-10-31 09:30:01] ℹ️  檢查遠程更新...
+From https://github.com/steeltrending/steeltrending.github.io
+ * branch            main       -> FETCH_HEAD
+   d86410c..6fd9271  main       -> origin/main
+Auto-merging data/latest.json
+CONFLICT (content): Merge conflict in data/latest.json
+Automatic merge failed; fix conflicts and then commit the result.
+[2026-10-31 09:30:02] ✅ 遠程同步完成
+[2026-10-31 09:30:02] ℹ️  推送嘗試 [1/3]...
+To https://github.com/steeltrending/steeltrending.github.io.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/steeltrending/steeltrending.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2026-10-31 09:30:03] ✅ ✨ 成功推送到 GitHub
+[2026-10-31 09:30:03] ✅ ==========================================
+[2026-10-31 09:30:03] ✅ 每日更新完成
+[2026-10-31 09:30:03] ✅ 日期: 2026-10-31
+[2026-10-31 09:30:03] ✅ 時間: 2026-10-31 09:30:03
+[2026-10-31 09:30:03] ✅ ==========================================
