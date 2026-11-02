@@ -131,23 +131,27 @@ print_status "info" "更新 latest.json..."
 python3 << PYTHON_FINAL
 import json
 import os
-from datetime import datetime
+import re
 
 repo_folder = "/Users/chen/Documents/GitHub/steeltrending.github.io"
 latest_json_path = os.path.join(repo_folder, "data/latest.json")
 
+# latest.json 的 items／updated 由 GitHub Actions（fetch_futures.py）寫入。
+# 本機只改 social.date 這一個值，並用文字替換保留原排版，避免整份重寫造成合併衝突。
 try:
     with open(latest_json_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    
-    data['updated'] = datetime.now().isoformat()
-    if 'social' not in data:
-        data['social'] = {}
-    data['social']['date'] = "$DATE"
-    
-    with open(latest_json_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    
+        text = f.read()
+    json.loads(text)
+
+    new_text, n = re.subn(r'("social"\s*:\s*\{\s*"date"\s*:\s*)"[^"]*"', r'\g<1>"$DATE"', text, count=1)
+    if n == 0:
+        raise ValueError("找不到 social.date 欄位，未修改 latest.json")
+    json.loads(new_text)
+
+    if new_text != text:
+        with open(latest_json_path, 'w', encoding='utf-8') as f:
+            f.write(new_text)
+
     print("✅ latest.json 已更新")
 except Exception as e:
     print(f"❌ latest.json 更新失敗: {e}")
@@ -186,7 +190,8 @@ else
     print_status "info" "檢查遠程更新..."
     # 與 GitHub Actions 一致使用 rebase；失敗就中止 rebase、不推送，避免留下衝突狀態
     sync_remote() {
-        git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE"
+        # --autostash：logs/ 已被 git 追蹤且執行中持續寫入，否則 rebase 會因未暫存變更而拒絕
+        git pull --rebase --autostash origin main 2>&1 | tee -a "$LOG_FILE"
         if [ "${PIPESTATUS[0]}" -eq 0 ]; then
             return 0
         fi
