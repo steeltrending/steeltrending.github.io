@@ -57,6 +57,16 @@ h2.sec{margin:64px 0 8px;font-size:26px;font-weight:900;line-height:1.35;padding
 .src{margin:12px 0 0;font-size:12px;color:#9AA0A6;line-height:1.6}
 .src a{color:#9AA0A6}
 
+.seg{display:grid;grid-template-columns:1fr 1fr;margin:0 0 12px;border:1px solid #3A3F46}
+.seg button{font:inherit;text-align:left;padding:10px 16px;min-height:56px;background:#15181B;color:#C9CDD2;border:0;cursor:pointer;display:flex;flex-direction:column;gap:2px;white-space:normal}
+.seg button+button{border-left:1px solid #3A3F46}
+.seg b{font-size:15px;font-weight:700}
+.seg span{font-size:12px;color:#9AA0A6;font-weight:400}
+.seg button:hover{background:#1C2024;color:#E8E6E1}
+.seg button[aria-pressed="true"]{background:#FF6A1A;color:#0F1113}
+.seg button[aria-pressed="true"] span{color:#0F1113}
+.seg #rt-eaf[aria-pressed="true"]{background:#8DB4D6}
+.seg button:focus-visible{outline:2px solid #FF6A1A;outline-offset:-2px}
 /* 控制列 */
 .ctrl{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin:16px 0 0}
 .btn{font:inherit;font-weight:700;font-size:15px;min-height:44px;padding:0 20px;background:transparent;color:#E8E6E1;border:1px solid #3A3F46;cursor:pointer}
@@ -77,6 +87,7 @@ h2.sec{margin:64px 0 8px;font-size:26px;font-weight:900;line-height:1.35;padding
 /* 場景 SVG */
 .st{cursor:pointer;outline:none;transition:opacity .35s}
 .st.dim{opacity:.78}
+.st.off{opacity:.32}.st.tg.off{opacity:.6}
 .tag rect{fill:#15181B;stroke:#3A3F46;stroke-width:1.5}
 .tag text{font-family:'Noto Sans TC',sans-serif;font-weight:700;fill:#E8E6E1}
 .tag .n{fill:#FF8A47;font-family:'IBM Plex Mono',monospace;font-weight:600}
@@ -145,7 +156,7 @@ td.num{font-family:'IBM Plex Mono',monospace;color:#E8E6E1;white-space:nowrap}
 
 @media (max-width:980px){.stage{grid-template-columns:minmax(0,1fr)}.panel{position:static}.dgrid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:720px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.facts{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:720px){#scene{min-width:780px}}
+@media (max-width:720px){#scene{min-width:920px}.seg b{font-size:14px}.seg button{padding:10px 12px}}
 @media (max-width:640px){.wrap{padding:0 16px}.kv{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){.glow,.flick,.smoke,.spark,.bub,.tapflow,.strand,.spray,.windl,#tokpulse{animation:none}.st,.ring{transition:none}}
 </style>
@@ -180,7 +191,7 @@ td.num{font-family:'IBM Plex Mono',monospace;color:#E8E6E1;white-space:nowrap}
 <nav aria-label="導覽路徑" style="font-size:14px;color:#9AA0A6"><a href="steel101.html" style="text-decoration:none">鋼鐵小學堂</a> <span aria-hidden="true">›</span> <span>一貫作業煉鋼流程</span></nav>
 <p class="mono" style="margin:28px 0 0;font-size:13px;letter-spacing:.24em;color:#FF6A1A">STEEL 101 · INTERACTIVE</p>
 <h1 style="margin:12px 0 12px;font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.2">一貫作業煉鋼流程</h1>
-<p style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:44em">跟著一批原料，從鐵礦砂走到鋼捲。點選廠區裡的製程站，或按「播放全程」，看每一站投入什麼、產出什麼。數據引用 worldsteel 公開資料。</p>
+<p style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#9AA0A6;max-width:44em">跟著一批原料，從鐵礦砂走到鋼捲，也可以切到電爐路線，看廢鋼怎麼變成鋼水。點選廠區裡的製程站，或按「播放全程」，看每一站投入什麼、產出什麼。數據引用 worldsteel 公開資料。</p>
 
 <section class="stats" aria-label="全球鋼鐵數據">
 <div class="stat"><div class="v">1,849<small>Mt</small></div><div class="k">2025 年全球粗鋼產量</div></div>
@@ -192,6 +203,10 @@ td.num{font-family:'IBM Plex Mono',monospace;color:#E8E6E1;white-space:nowrap}
 
 <section class="stage" aria-label="互動煉鋼流程">
 <div class="left">
+<div class="seg" role="group" aria-label="選擇製程路線">
+<button type="button" class="chip" id="rt-bof" aria-pressed="true"><b>高爐—轉爐路線</b><span>全球粗鋼的 69.4%</span></button>
+<button type="button" class="chip" id="rt-eaf" aria-pressed="false"><b>電爐路線</b><span>全球粗鋼的 30.3%，以廢鋼為主</span></button>
+</div>
 <div class="scene" id="scenebox"><svg id="scene" role="group" aria-label="一貫作業煉鋼廠等角示意圖"></svg></div>
 <div class="ctrl">
 <button class="btn" id="prev" type="button">上一站</button>
@@ -270,7 +285,20 @@ var ST=[
  inp:'熱軋鋼捲',out:'冷軋、鍍層、塗裝鋼捲',
  kv:[['精整工序','冷軋、鍍層、塗裝'],['2021 全球回收鋼','約 8 億噸'],['營建鋼材回收率','≥85%'],['汽車鋼回收率','約 90%']],
  pts:['鋼可以反覆回收再製，worldsteel 稱它是全球回收最多的材料','家電用鋼的回收率約 50%，是各領域中較低的一項'],
- low:'每一卷鋼的終點，也是下一爐廢鋼的起點，這是鋼鐵循環的核心。'}
+ low:'每一卷鋼的終點，也是下一爐廢鋼的起點，這是鋼鐵循環的核心。'},
+{name:'廢鋼場',short:'廢鋼場',en:'Scrap yard (EAF route)',src:'BC',
+ lead:'電爐路線的主要原料是廢鋼，包括生產過程中的邊角料，以及使用後報廢的鋼材。廢鋼在料場分類堆放，再配料裝進電爐。',
+ inp:'廢鋼（生產邊角料、報廢鋼材）',out:'配好的廢鋼料',
+ bars:{cap:'每噸粗鋼的投入（電爐路線平均，kg）',items:[['廢鋼',710,'#8DB4D6'],['鐵礦砂',586,'#B0663F'],['煤',150,'#8C939A'],['石灰石',88,'#E8E6E1']]},
+ kv:[['電爐可用廢鋼比','最高 100%'],['2021 全球回收鋼','約 8 億噸']],
+ pts:['worldsteel：電爐路線平均每噸鋼用 710 kg 廢鋼','廢鋼包含製造過程的邊角料，以及使用後報廢的鋼材'],
+ low:'2021 年全球用掉約 6.8 億噸廢鋼，其中約 4.5 億噸進了電爐。'},
+{name:'電爐',short:'電爐',en:'Electric arc furnace',src:'ABD',
+ lead:'電爐用電極通電，在電極與廢鋼之間產生電弧，把廢鋼熔化成鋼水。除了廢鋼，也可以搭配直接還原鐵（DRI）或高爐鐵水。',
+ inp:'廢鋼、電力（可搭配 DRI 或鐵水）',out:'粗鋼水、電爐渣、煙塵',
+ kv:[['每噸鋼用電','2.3 GJ'],['2025 電爐鋼占比','30.3%'],['2021 電爐鋼產量','約 5.6 億噸'],['同年用廢鋼','約 4.5 億噸']],
+ pts:['2021 年的電爐鋼，除了約 4.5 億噸廢鋼，還用了約 1.2 億噸 DRI 與約 6,000 萬噸高爐產出的鐵','電爐的鋼水一樣要精煉、連鑄，與轉爐路線在二次精煉匯合'],
+ lowk:'與轉爐路線比較',low:'電爐路線每噸鋼用煤約 150 kg，高爐—轉爐路線約 780 kg；但電爐要用電，每噸鋼約 2.3 GJ。'}
 ];
 
 /* 等角座標：1 格 = S px。P(x,y,z) 回傳畫面座標。 */
@@ -390,22 +418,48 @@ function(a,b){var s='';
       +'<ellipse fill="none" stroke="#FF6A1A" stroke-width="1.6" stroke-dasharray="4 5" class="windl" cx="'+f(p[0])+'" cy="'+f(p[1])+'" rx="'+f(1.2247*.46*S)+'" ry="'+f(.7071*.46*S)+'"/>';};
   s+=coil(a+1.6,b+3.4,.25)+coil(a+3.0,b+3.4,.25)+coil(a+4.4,b+3.4,.25)+coil(a+3.0,b+3.4,1.15)+coil(a+2.4,b+4.9,.25)+coil(a+3.9,b+4.9,.25);
   return s;}
+,
+/* 9 廢鋼場（電爐路線）：分類堆放的廢鋼與門式吊車 */
+function(a,b){var s='',RUST=['orehi','ore','orer'];
+  s+=cone(a+1.8,b+2.0,.25,1.2,1.7,STL)+cone(a+3.6,b+1.6,.25,1.0,1.4,RUST)+cone(a+3.3,b+4.1,.25,1.3,2.0,STL)+cone(a+1.6,b+4.4,.25,.8,1.1,RUST);
+  s+=box(a+5.2,b+.3,.25,.45,.45,3.9,CRM)+box(a+5.2,b+5.25,.25,.45,.45,3.9,CRM)+box(a+5.2,b+.3,4.0,.45,5.4,.35,CRM);
+  s+=line3([a+5.4,b+3.2,4.0],[a+5.4,b+3.2,2.6],3,'belt-top')+frust(a+5.42,b+3.2,2.2,.45,.45,.4,DK);
+  return s;},
+/* 10 電爐：爐殼、三支電極、電弧、變壓器與集塵設備 */
+function(a,b){var s='',cx=a+2.8,cy=b+3.0,E=[[-.7,0],[.4,-.6],[.4,.6]];
+  s+=box(a+.4,b+4.4,.25,1.4,1.4,1.3,['d','l','r']);
+  s+=box(a+4.6,b+3.9,.25,1.2,1.4,2.8,G)+frust(a+5.2,b+4.6,3.05,.35,.3,1.6,G)+smoke(a+5.2,b+4.6,4.8);
+  s+=frust(cx,cy,.25,1.55,1.55,1.5,G);
+  var m=P(cx,cy,1.75);
+  s+='<ellipse class="fire glow" cx="'+f(m[0])+'" cy="'+f(m[1])+'" rx="54" ry="31"/>';
+  E.forEach(function(e){s+=box(cx+e[0]-.1,cy+e[1]-.1,1.8,.2,.2,3.6,DK);});
+  s+=box(cx-1.3,cy-.35,5.4,2.6,.7,.3,CRM);
+  E.forEach(function(e){var p=P(cx+e[0],cy+e[1],1.85);s+='<ellipse class="hot flick" cx="'+f(p[0])+'" cy="'+f(p[1])+'" rx="9" ry="4.5"/>';});
+  return s;}
 ];
-var POS=[[0,0],[8,0],[16,0],[24,0],[24,9],[16,9],[8,9],[0,9]];
-var TAGZ=[3.7,6.1,7.7,7.3,6.4,6.0,4.1,3.8];
+var POS=[[0,0],[8,0],[16,0],[24,0],[24,9],[16,9],[8,9],[0,9],[32,0],[32,9]];
+var TAGZ=[3.7,6.1,7.7,7.3,6.4,6.0,4.1,3.8,5.0,7.0];
 var ROUTE=[[-4,3],[3,3],[11,3],[19,3],[27,3],[27,12],[19,12],[11,12],[3,12],[3,17]];
+var ROUTE_E=[[42,3],[35,3],[35,12],[27,12]];
 
 var svg=document.getElementById('scene'),panel=document.getElementById('panel'),rail=document.getElementById('rail'),
-  playBtn=document.getElementById('play'),scrub=document.getElementById('scrub');
+  playBtn=document.getElementById('play'),scrub=document.getElementById('scrub'),sbox=document.getElementById('scenebox');
 var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var NB=8; /* 高爐—轉爐路線的站數；編號 8、9 是電爐路線專用的站 */
 var order=POS.map(function(p,i){return i;}).sort(function(i,j){return POS[i][0]+POS[i][1]-POS[j][0]-POS[j][1];});
-var rp=ROUTE.map(function(r){return P(r[0],r[1],.3);});
-var cum=[0],i0;for(i0=1;i0<rp.length;i0++)cum.push(cum[i0-1]+Math.hypot(rp[i0][0]-rp[i0-1][0],rp[i0][1]-rp[i0-1][1]));
-var TOTAL=cum[cum.length-1],ARR=ST.map(function(_,i){return cum[i+1];});
-var rd='M'+rp.map(function(p){return f(p[0])+','+f(p[1]);}).join('L');
+function lane(pts){var rp=pts.map(function(r){return P(r[0],r[1],.3);}),cum=[0],i;
+  for(i=1;i<rp.length;i++)cum.push(cum[i-1]+Math.hypot(rp[i][0]-rp[i-1][0],rp[i][1]-rp[i-1][1]));
+  return {rp:rp,cum:cum,total:cum[cum.length-1]};}
+var LM=lane(ROUTE),LE=lane(ROUTE_E);
+/* 兩條「旅程」：高爐—轉爐 = 站 0–7；電爐 = 廢鋼場、電爐，接上二次精煉以後的共用工序 */
+var JR={bof:{st:[0,1,2,3,4,5,6,7],pts:ROUTE},eaf:{st:[8,9,4,5,6,7],pts:ROUTE_E.concat(ROUTE.slice(6))}};
+Object.keys(JR).forEach(function(k){var j=JR[k],l=lane(j.pts);j.rp=l.rp;j.cum=l.cum;j.total=l.total;j.arr=j.st.map(function(_,n){return l.cum[n+1];});});
+var route='bof',J=JR.bof;
+var rd=function(L){return 'M'+L.rp.map(function(p){return f(p[0])+','+f(p[1]);}).join('L');};
+var tagNo=function(i){return i<NB?String(i+1):'E'+(i-NB+1);};
 
-/* 每段輸送帶上，物料的樣子：進料 → 混料 → 爐料 → 鐵水 → 鋼水 → 精煉鋼水 → 板胚 → 鋼帶 → 鋼捲 */
-var STAGE=[
+/* 輸送帶上物料的樣子：進料 → 混料 → 爐料 → 鐵水 → 鋼水 → 精煉鋼水 → 板胚 → 鋼帶 → 鋼捲 */
+var STAGE_M=[
  {k:'c',r:4.5,fill:['#B0663F'],stroke:'#63351F'},
  {k:'c',r:4.5,fill:['#B0663F','#323840'],stroke:'#6B7178'},
  {k:'c',r:4.5,fill:['#8A4B2F','#323840'],stroke:'#6B7178'},
@@ -414,72 +468,89 @@ var STAGE=[
  {k:'c',r:6.5,fill:['#FFB07F'],stroke:'#FFE2D0',glow:1},
  {k:'r',w:24,h:10,fill:['#E8742E'],stroke:'#FFB07F',glow:1},
  {k:'r',w:30,h:4,fill:['#C9CDD2'],stroke:'#E8E6E1'},
- {k:'o',r:7,fill:['#A5ABB2'],stroke:'#E8E6E1'}
-];
+ {k:'o',r:7,fill:['#A5ABB2'],stroke:'#E8E6E1'}];
+/* 電爐支線：廢鋼 → 廢鋼 → 電爐流出的鋼水 */
+var STAGE_E=[
+ {k:'c',r:4.5,fill:['#A5ABB2','#737A82'],stroke:'#D8DCE0'},
+ {k:'c',r:4.5,fill:['#A5ABB2','#737A82'],stroke:'#D8DCE0'},
+ {k:'c',r:6.5,fill:['#FF8A47'],stroke:'#FFD3B8',glow:1}];
 
 var h='';
-h+='<polygon class="plate" points="'+pts([P(-5,-3,0),P(32,-3,0),P(32,18.5,0),P(-5,18.5,0)])+'"/>';
-for(var gx=-4;gx<=32;gx+=2){var ga=P(gx,-3,0),gb=P(gx,18.5,0);h+='<line class="gridl" x1="'+f(ga[0])+'" y1="'+f(ga[1])+'" x2="'+f(gb[0])+'" y2="'+f(gb[1])+'"/>';}
-for(var gy=-2;gy<=18;gy+=2){var gc=P(-5,gy,0),gd=P(32,gy,0);h+='<line class="gridl" x1="'+f(gc[0])+'" y1="'+f(gc[1])+'" x2="'+f(gd[0])+'" y2="'+f(gd[1])+'"/>';}
+h+='<polygon class="plate" points="'+pts([P(-5,-3,0),P(44,-3,0),P(44,18.5,0),P(-5,18.5,0)])+'"/>';
+for(var gx=-4;gx<=44;gx+=2){var ga=P(gx,-3,0),gb=P(gx,18.5,0);h+='<line class="gridl" x1="'+f(ga[0])+'" y1="'+f(ga[1])+'" x2="'+f(gb[0])+'" y2="'+f(gb[1])+'"/>';}
+for(var gy=-2;gy<=18;gy+=2){var gc=P(-5,gy,0),gd=P(44,gy,0);h+='<line class="gridl" x1="'+f(gc[0])+'" y1="'+f(gc[1])+'" x2="'+f(gd[0])+'" y2="'+f(gd[1])+'"/>';}
 order.forEach(function(i){h+=pad(POS[i][0],POS[i][1]);});
-h+='<path d="'+rd+'" class="belt"/><path d="'+rd+'" class="belt-top"/><path d="'+rd+'" class="belt-mark"/>';
+[LM,LE].forEach(function(L){var d=rd(L);h+='<path d="'+d+'" class="belt"/><path d="'+d+'" class="belt-top"/><path d="'+d+'" class="belt-mark"/>';});
 order.forEach(function(i){var a=POS[i][0],b=POS[i][1];
   h+='<polygon class="ring" id="ring'+i+'" points="'+pts([P(a-.5,b-.5,.3),P(a+6.5,b-.5,.3),P(a+6.5,b+6.5,.3),P(a-.5,b+6.5,.3)])+'"/>';});
 order.forEach(function(i){h+='<g class="st bd" data-i="'+i+'" id="bd'+i+'">'+DRAW[i](POS[i][0],POS[i][1])+'</g>';});
-var NP=44;h+='<g id="flow" pointer-events="none">';
-for(var k=0;k<NP;k++)h+='<g class="pt"><circle class="pg" r="0" opacity=".25"/><circle class="pa" r="0"/><rect class="pc" width="0" height="0"/><circle class="pb" r="0" fill="#0C0D0F"/></g>';
+var NPM=44,NPE=14;h+='<g id="flow" pointer-events="none">';
+for(var k=0;k<NPM+NPE;k++)h+='<g class="pt"><circle class="pg" r="0" opacity=".25"/><circle class="pa" r="0"/><rect class="pc" width="0" height="0"/><circle class="pb" r="0" fill="#0C0D0F"/></g>';
 h+='</g>';
 h+='<g id="tok" pointer-events="none"><circle id="tokpulse" r="14"/><circle id="tokring" r="14"/><circle id="tokdot" r="5"/></g>';
 order.forEach(function(i){var a=POS[i][0],b=POS[i][1],t=P(a+3,b+3,TAGZ[i]),w=92+ST[i].short.length*33;
-  h+='<g class="st tg" data-i="'+i+'" tabindex="0" role="button" aria-label="第'+(i+1)+'站 '+ST[i].name+'">'
+  h+='<g class="st tg" data-i="'+i+'" tabindex="0" role="button" aria-label="'+(i<NB?'第'+(i+1)+'站 ':'電爐路線 ')+ST[i].name+'">'
    +'<g class="tag" transform="translate('+f(t[0])+','+f(t[1])+')"><rect x="'+f(-w/2)+'" y="-30" width="'+w+'" height="60"/>'
-   +'<text class="n" x="'+f(-w/2+28)+'" y="11" font-size="30" text-anchor="middle">'+(i+1)+'</text>'
-   +'<text x="'+f(-w/2+54)+'" y="11" font-size="32">'+ST[i].short+'</text></g></g>';});
+   +'<text class="n" x="'+f(-w/2+30)+'" y="11" font-size="'+(i<NB?30:26)+'" text-anchor="middle">'+tagNo(i)+'</text>'
+   +'<text x="'+f(-w/2+58)+'" y="11" font-size="32">'+ST[i].short+'</text></g></g>';});
 svg.innerHTML=h;
 var bb=svg.getBBox();
 svg.setAttribute('viewBox',f(bb.x-20)+' '+f(bb.y-20)+' '+f(bb.width+40)+' '+f(bb.height+40));
 
 /* ---- 物料流：粒子沿輸送帶前進，進入製程站後消失，出來時已經變成下一階段的樣子 ---- */
-var parts=[].slice.call(svg.querySelectorAll('#flow .pt')).map(function(g){
-  return {g:g,pa:g.querySelector('.pa'),pb:g.querySelector('.pb'),pc:g.querySelector('.pc'),pg:g.querySelector('.pg'),seg:-1};});
-function posAt(sv){var j=0;while(j<cum.length-2&&sv>=cum[j+1])j++;
-  var u=(sv-cum[j])/(cum[j+1]-cum[j]);
-  return {x:rp[j][0]+(rp[j+1][0]-rp[j][0])*u,y:rp[j][1]+(rp[j+1][1]-rp[j][1])*u,j:j,a:Math.atan2(rp[j+1][1]-rp[j][1],rp[j+1][0]-rp[j][0])*180/Math.PI};}
-function styleParticle(p,j,n){var c=STAGE[j],fill=c.fill[n%c.fill.length];
-  p.seg=j;p.n=n;
+var parts=[].slice.call(svg.querySelectorAll('#flow .pt')).map(function(g,n){
+  return {g:g,pa:g.querySelector('.pa'),pb:g.querySelector('.pb'),pc:g.querySelector('.pc'),pg:g.querySelector('.pg'),seg:-1,
+    L:n<NPM?LM:LE,stg:n<NPM?STAGE_M:STAGE_E,idx:n<NPM?n:n-NPM,cnt:n<NPM?NPM:NPE,main:n<NPM};});
+function posAt(L,sv){var j=0;while(j<L.cum.length-2&&sv>=L.cum[j+1])j++;
+  var u=(sv-L.cum[j])/(L.cum[j+1]-L.cum[j]);
+  return {x:L.rp[j][0]+(L.rp[j+1][0]-L.rp[j][0])*u,y:L.rp[j][1]+(L.rp[j+1][1]-L.rp[j][1])*u,j:j,a:Math.atan2(L.rp[j+1][1]-L.rp[j][1],L.rp[j+1][0]-L.rp[j][0])*180/Math.PI};}
+function styleParticle(p,c){var fill=c.fill[p.idx%c.fill.length];
   p.pa.setAttribute('r',c.k==='r'?0:c.r);p.pa.setAttribute('fill',fill);p.pa.setAttribute('stroke',c.stroke);p.pa.setAttribute('stroke-width',1.5);
   p.pb.setAttribute('r',c.k==='o'?2.6:0);
   if(c.k==='r'){p.pc.setAttribute('x',-c.w/2);p.pc.setAttribute('y',-c.h/2);p.pc.setAttribute('width',c.w);p.pc.setAttribute('height',c.h);p.pc.setAttribute('fill',fill);p.pc.setAttribute('stroke',c.stroke);p.pc.setAttribute('stroke-width',1.5);}
   else{p.pc.setAttribute('width',0);p.pc.setAttribute('height',0);}
   p.pg.setAttribute('r',c.glow?(c.k==='r'?15:c.r*2.1):0);p.pg.setAttribute('fill',fill);}
 var flowOff=0;
+/* 這一段輸送帶屬於目前選的路線嗎？不屬於的話淡化 */
+function active(p,j){if(route==='bof')return p.main?1:.2;return p.main?(j>=5?1:.2):1;}
 function drawFlow(){
-  for(var k=0;k<parts.length;k++){var p=parts[k],sv=(flowOff+k*TOTAL/parts.length)%TOTAL,q=posAt(sv);
-    if(p.seg!==q.j||p.n!==k)styleParticle(p,q.j,k);
-    var d=1e9,i;for(i=0;i<ARR.length;i++)d=Math.min(d,Math.abs(sv-ARR[i]));
+  for(var k=0;k<parts.length;k++){var p=parts[k],L=p.L,sv=(flowOff+p.idx*L.total/p.cnt)%L.total,q=posAt(L,sv);
+    if(p.seg!==q.j){styleParticle(p,p.stg[q.j]);p.seg=q.j;}
+    var d=1e9,i,stops=p.main?J_ALL.main:J_ALL.eaf;
+    for(i=0;i<stops.length;i++)d=Math.min(d,Math.abs(sv-stops[i]));
     var op=Math.max(0,Math.min(1,(d-78)/26));
-    op=Math.min(op,Math.min(1,sv/50),Math.min(1,(TOTAL-sv)/50));
+    op=Math.min(op,Math.min(1,sv/50),p.main?Math.min(1,(L.total-sv)/50):1)*active(p,q.j);
     p.g.setAttribute('opacity',op.toFixed(2));
-    p.g.setAttribute('transform','translate('+q.x.toFixed(1)+','+q.y.toFixed(1)+')'+(STAGE[q.j].k==='r'?' rotate('+q.a.toFixed(0)+')':''));
+    p.g.setAttribute('transform','translate('+q.x.toFixed(1)+','+q.y.toFixed(1)+')'+(p.stg[q.j].k==='r'?' rotate('+q.a.toFixed(0)+')':''));
   }}
+/* 粒子「進站消失」的位置：主線在八站，支線在廢鋼場、電爐，以及併入二次精煉的終點 */
+var J_ALL={main:LM.cum.slice(1,9),eaf:[LE.cum[1],LE.cum[2],LE.total]};
 
-/* ---- 批次標記（跟著選取的製程站移動，也可以用滑桿拖曳） ---- */
-var tok=document.getElementById('tok'),s=ARR[0],cur=-1,raf=0,tween=0;
-function setS(v){s=Math.max(0,Math.min(TOTAL,v));var q=posAt(s);tok.setAttribute('transform','translate('+q.x.toFixed(1)+','+q.y.toFixed(1)+')');
-  scrub.value=Math.round(s/TOTAL*1000);}
+/* ---- 批次標記（跟著選取的站移動，也可以用滑桿拖曳） ---- */
+var tok=document.getElementById('tok'),s=J.arr[0],cur=-1,raf=0,tween=0;
+function setS(v){s=Math.max(0,Math.min(J.total,v));var q=posAt(J,s);tok.setAttribute('transform','translate('+q.x.toFixed(1)+','+q.y.toFixed(1)+')');
+  scrub.value=Math.round(s/J.total*1000);}
 function moveTo(to,ms){cancelAnimationFrame(tween);var from=s,t0=performance.now();
   if(reduce){setS(to);return;}
   var step=function(now){var u=Math.min(1,(now-t0)/ms),e=u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2;setS(from+(to-from)*e);if(u<1)tween=requestAnimationFrame(step);};
   tween=requestAnimationFrame(step);}
 
-/* ---- 右側面板與選取 ---- */
-rail.innerHTML=ST.map(function(t,i){return '<button type="button" class="chip" data-i="'+i+'"><span class="cn">'+(i+1)+'</span>'+t.short+'</button>';}).join('');
-function showPanel(i){var t=ST[i];
+/* ---- 路線切換、選站清單、右側面板 ---- */
+function buildRail(){rail.innerHTML=J.st.map(function(id,n){return '<button type="button" class="chip" data-i="'+id+'"><span class="cn">'+(n+1)+'</span>'+ST[id].short+'</button>';}).join('');}
+function setRoute(r){
+  if(r===route&&rail.children.length)return;
+  route=r;J=JR[r];buildRail();
+  ST.forEach(function(_,k){var on=J.st.indexOf(k)>=0;
+    document.getElementById('bd'+k).classList.toggle('off',!on);
+    svg.querySelector('.tg[data-i="'+k+'"]').classList.toggle('off',!on);});
+  document.getElementById('rt-bof').setAttribute('aria-pressed',r==='bof');
+  document.getElementById('rt-eaf').setAttribute('aria-pressed',r==='eaf');}
+function showPanel(i){var t=ST[i],n=J.st.indexOf(i);
   var bars='';
   if(t.bars){var mx=1400;bars='<div class="bars"><div class="cap">'+t.bars.cap+'</div>'+t.bars.items.map(function(b){
     return '<div class="bar"><span>'+b[0]+'</span><span class="tr"><i style="width:'+(b[1]/mx*100).toFixed(1)+'%;background:'+b[2]+'"></i></span><span class="n">'+b[1].toLocaleString('en-US')+'</span></div>';}).join('')+'</div>';}
   var src=t.src.split('').map(function(c){return '<a href="'+SRC[c][1]+'" target="_blank" rel="noopener">'+SRC[c][0]+'</a>';}).join('、');
-  panel.innerHTML='<div class="no">STATION '+String(i+1).padStart(2,'0')+' / '+String(ST.length).padStart(2,'0')+'</div>'
+  panel.innerHTML='<div class="no">'+(route==='eaf'?'EAF ROUTE ':'')+'STATION '+String(n+1).padStart(2,'0')+' / '+String(J.st.length).padStart(2,'0')+'</div>'
   +'<h2>'+t.name+'</h2><div class="en">'+t.en+'</div><p class="lead">'+t.lead+'</p>'
   +'<div class="io"><div><b>投入</b>'+t.inp+'</div><div><b>產出</b>'+t.out+'</div></div>'
   +bars
@@ -488,58 +559,63 @@ function showPanel(i){var t=ST[i];
   +'<h3>PROCESS NOTES</h3><ul>'+t.pts.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>'
   +'<p class="low"><b>'+(t.lowk||'循環與低碳')+'</b>'+t.low+'</p>'
   +'<p class="src">資料：worldsteel　'+src+'</p>';}
-function select(i,o){o=o||{};i=(i+ST.length)%ST.length;
+function select(i,o){o=o||{};
   if(!o.keep)stop();
+  if(JR[route].st.indexOf(i)<0)setRoute(i>=NB?'eaf':'bof');
   cur=i;showPanel(i);
   ST.forEach(function(_,k){var on=k===i;
     document.getElementById('bd'+k).classList.toggle('dim',!on);
     document.getElementById('ring'+k).classList.toggle('on',on);
-    svg.querySelector('.tg[data-i="'+k+'"]').classList.toggle('on',on);
-    var c=rail.children[k];if(on)c.setAttribute('aria-current','true');else c.removeAttribute('aria-current');});
-  scrub.setAttribute('aria-valuetext','第'+(i+1)+'站　'+ST[i].name);
-  if(!o.noMove)moveTo(ARR[i],900);
-  var box=document.getElementById('scenebox');
-  if(box.scrollWidth>box.clientWidth+4){var tg=svg.querySelector('.tg[data-i="'+i+'"]'),r1=tg.getBoundingClientRect(),r2=box.getBoundingClientRect();
-    box.scrollTo({left:box.scrollLeft+(r1.left+r1.width/2)-(r2.left+r2.width/2),behavior:(reduce||o.noMove)?'auto':'smooth'});}
-  var c2=rail.children[i];if(!o.noscroll&&rail.scrollTo)rail.scrollTo({left:c2.offsetLeft-rail.clientWidth/2+c2.clientWidth/2,behavior:reduce?'auto':'smooth'});}
+    svg.querySelector('.tg[data-i="'+k+'"]').classList.toggle('on',on);});
+  [].forEach.call(rail.children,function(c){if(+c.dataset.i===i)c.setAttribute('aria-current','true');else c.removeAttribute('aria-current');});
+  var n=J.st.indexOf(i);
+  scrub.setAttribute('aria-valuetext','第'+(n+1)+'站　'+ST[i].name);
+  if(!o.noMove)moveTo(J.arr[n],900);
+  if(sbox.scrollWidth>sbox.clientWidth+4){var tg=svg.querySelector('.tg[data-i="'+i+'"]'),r1=tg.getBoundingClientRect(),r2=sbox.getBoundingClientRect();
+    sbox.scrollTo({left:sbox.scrollLeft+(r1.left+r1.width/2)-(r2.left+r2.width/2),behavior:(reduce||o.noMove)?'auto':'smooth'});}
+  var c2=[].filter.call(rail.children,function(c){return +c.dataset.i===i;})[0];
+  if(!o.noscroll&&c2&&rail.scrollTo)rail.scrollTo({left:c2.offsetLeft-rail.clientWidth/2+c2.clientWidth/2,behavior:reduce?'auto':'smooth'});}
+function go(step){var n=J.st.indexOf(cur);select(J.st[(n+step+J.st.length)%J.st.length]);}
 
 /* ---- 播放全程：批次一站一站走，到站停留讀內容，再往下一站 ---- */
 var playing=false,dwell=0,last=0,slow=0;
-function stop(){playing=false;clearTimeout(slow);playBtn.textContent=cur===ST.length-1&&s>=ARR[ST.length-1]-1?'重播':'播放全程';}
+function atEnd(){return J.st.indexOf(cur)===J.st.length-1;}
+function stop(){playing=false;clearTimeout(slow);playBtn.textContent=(cur>=0&&atEnd())?'重播':'播放全程';}
 function play(){
   if(playing){stop();return;}
   cancelAnimationFrame(tween);
-  if(cur<0||cur===ST.length-1)select(0,{keep:true,noMove:true});
+  if(cur<0||atEnd())select(J.st[0],{keep:true,noMove:true});
   playing=true;playBtn.textContent='暫停';dwell=performance.now()+900;
-  if(cur===0&&s<ARR[0]-1)setS(ARR[0]);
-  if(reduce){(function stepR(){slow=setTimeout(function(){if(!playing)return;if(cur>=ST.length-1){stop();return;}select(cur+1,{keep:true,noscroll:false});stepR();},4000);})();}
+  if(reduce){(function stepR(){slow=setTimeout(function(){if(!playing)return;if(atEnd()){stop();return;}select(J.st[J.st.indexOf(cur)+1],{keep:true});stepR();},4000);})();}
 }
 function frame(now){
   var dt=Math.min(.05,(now-last)/1000||0);last=now;
-  flowOff=(flowOff+90*dt)%TOTAL;drawFlow();
+  flowOff=(flowOff+90*dt)%1e6;drawFlow();
   if(playing&&!reduce&&now>=dwell){
-    var nx=cur+1;
-    if(nx>=ST.length){stop();}
+    var n=J.st.indexOf(cur),nx=n+1;
+    if(nx>=J.st.length){stop();}
     else{var ns=s+190*dt;
-      if(ns>=ARR[nx]){setS(ARR[nx]);select(nx,{keep:true,noMove:true});dwell=now+3200;}
+      if(ns>=J.arr[nx]){setS(J.arr[nx]);select(J.st[nx],{keep:true,noMove:true});dwell=now+3200;}
       else setS(ns);}
   }
   raf=requestAnimationFrame(frame);}
 
 svg.addEventListener('click',function(e){var t=e.target.closest('[data-i]');if(t)select(+t.dataset.i);});
-rail.addEventListener('click',function(e){var t=e.target.closest('[data-i]');if(t)select(+t.dataset.i,{noscroll:false});});
+rail.addEventListener('click',function(e){var t=e.target.closest('[data-i]');if(t)select(+t.dataset.i);});
 svg.addEventListener('keydown',function(e){var t=e.target.closest&&e.target.closest('.tg');
   if(t&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(+t.dataset.i);}});
-document.getElementById('prev').onclick=function(){select(cur-1);};
-document.getElementById('next').onclick=function(){select(cur+1);};
+document.getElementById('prev').onclick=function(){go(-1);};
+document.getElementById('next').onclick=function(){go(1);};
 playBtn.onclick=play;
-scrub.addEventListener('input',function(){stop();cancelAnimationFrame(tween);setS(scrub.value/1000*TOTAL);
-  var b=0,bd=1e9;ARR.forEach(function(a,i){var d=Math.abs(a-s);if(d<bd){bd=d;b=i;}});
-  if(b!==cur)select(b,{keep:true,noMove:true,noscroll:false});});
+['bof','eaf'].forEach(function(r){document.getElementById('rt-'+r).onclick=function(){
+  stop();setRoute(r);cancelAnimationFrame(tween);select(JR[r].st[0],{keep:true,noMove:true});setS(J.arr[0]);};});
+scrub.addEventListener('input',function(){stop();cancelAnimationFrame(tween);setS(scrub.value/1000*J.total);
+  var b=0,bd=1e9;J.arr.forEach(function(a,i){var d=Math.abs(a-s);if(d<bd){bd=d;b=i;}});
+  if(J.st[b]!==cur)select(J.st[b],{keep:true,noMove:true,noscroll:false});});
 document.addEventListener('keydown',function(e){
   if(e.target&&/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
-  if(e.key==='ArrowRight')select(cur+1);else if(e.key==='ArrowLeft')select(cur-1);});
-setS(ARR[0]);select(0,{noMove:true,noscroll:true});
+  if(e.key==='ArrowRight')go(1);else if(e.key==='ArrowLeft')go(-1);});
+setRoute('bof');setS(J.arr[0]);select(0,{noMove:true,noscroll:true});
 drawFlow();
 if(!reduce)raf=requestAnimationFrame(frame);
 
