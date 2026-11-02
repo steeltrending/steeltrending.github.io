@@ -63,16 +63,35 @@ def fetch_live():
         pg = b.new_page()
         pg.goto(PAGE, wait_until="networkidle", timeout=120000)
         pg.wait_for_timeout(3000)
-        get = "u => fetch(u, {credentials: 'include'}).then(r => r.text())"
+        get = "u => fetch(u, {credentials: 'include'}).then(async r => [r.status, r.headers.get('content-type') || '', await r.text()])"
+
+        def call(url, label, want):
+            """呼叫 API；回應不是預期的 JSON 時印出狀態碼與開頭內容以利診斷，並重試（最多 3 次，間隔遞增、第 2 次起重新載入頁面）。"""
+            for attempt in range(1, 4):
+                try:
+                    status, ctype, text = pg.evaluate(get, url)
+                    try:
+                        if want in json.loads(text):
+                            return text
+                    except ValueError:
+                        pass
+                    log(f"  {label} 第 {attempt} 次回應異常：HTTP {status} {ctype} 開頭＝{text[:120]!r}")
+                except Exception as e:  # noqa: BLE001
+                    log(f"  {label} 第 {attempt} 次失敗：{e}")
+                if attempt < 3:
+                    pg.wait_for_timeout(5000 * attempt)
+                    if attempt == 2:
+                        pg.goto(PAGE, wait_until="networkidle", timeout=120000)
+                        pg.wait_for_timeout(3000)
+            return None
+
         for c in codes:
-            try:
-                raw[c] = pg.evaluate(get, API.format(c))
-            except Exception as e:  # noqa: BLE001
-                log(f"  {c} 失敗：{e}")
-        try:
-            raw["meta_zh"] = pg.evaluate(get, META)
-        except Exception as e:  # noqa: BLE001
-            log(f"  meta 失敗：{e}")
+            t = call(API.format(c), c, "indicators")
+            if t is not None:
+                raw[c] = t
+        t = call(META, "meta", "geoitems")
+        if t is not None:
+            raw["meta_zh"] = t
         b.close()
     return raw
 
