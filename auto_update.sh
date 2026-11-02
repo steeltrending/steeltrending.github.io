@@ -184,18 +184,30 @@ else
     
     # 嘗試拉取遠程更新 (避免衝突)
     print_status "info" "檢查遠程更新..."
-    if git pull origin main --no-edit 2>&1 | tee -a "$LOG_FILE"; then
-        print_status "success" "遠程同步完成"
-    else
-        print_status "warning" "遠程同步出現問題，繼續推送"
-    fi
-    
-    # 推送到 GitHub (最多重試 3 次)
+    # 與 GitHub Actions 一致使用 rebase；失敗就中止 rebase、不推送，避免留下衝突狀態
+    sync_remote() {
+        git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE"
+        if [ "${PIPESTATUS[0]}" -eq 0 ]; then
+            return 0
+        fi
+        git rebase --abort >/dev/null 2>&1 || true
+        return 1
+    }
+
+    # 推送到 GitHub (最多重試 3 次，每次推送前先 rebase 同步)
     PUSH_SUCCESS=false
     for attempt in 1 2 3; do
+        if sync_remote; then
+            print_status "success" "遠程同步完成"
+        else
+            print_status "error" "遠程同步失敗（已中止 rebase），本次不推送"
+            break
+        fi
+
         print_status "info" "推送嘗試 [$attempt/3]..."
-        
-        if git push origin main 2>&1 | tee -a "$LOG_FILE"; then
+
+        git push origin main 2>&1 | tee -a "$LOG_FILE"
+        if [ "${PIPESTATUS[0]}" -eq 0 ]; then
             print_status "success" "✨ 成功推送到 GitHub"
             PUSH_SUCCESS=true
             break
