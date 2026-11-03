@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T19:30:08+08:00",
+ "updated": "2026-11-03T09:15:09+08:00",
  "items": [
   {
    "key": "tw",
@@ -136,10 +136,10 @@
    "country": "美國",
    "exchange": "NYSE",
    "currency": "USD",
-   "price": 273.87,
-   "change": -1.42,
-   "change_pct": -0.52,
-   "asof": "2026-10-30"
+   "price": 277.65,
+   "change": 3.78,
+   "change_pct": 1.38,
+   "asof": "2026-11-02"
   },
   {
    "key": "us2",
@@ -178,10 +178,10 @@
    "country": "盧森堡",
    "exchange": "NYSE",
    "currency": "USD",
-   "price": 59.81,
-   "change": -1.98,
-   "change_pct": -3.2,
-   "asof": "2026-10-30"
+   "price": 61.2,
+   "change": 1.39,
+   "change_pct": 2.32,
+   "asof": "2026-11-02"
   },
   {
    "key": "eu2",
