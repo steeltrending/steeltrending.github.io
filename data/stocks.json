@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T09:20:17+08:00",
+ "updated": "2026-11-04T11:00:28+08:00",
  "items": [
   {
    "key": "tw",
@@ -24,10 +24,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 16.35,
-   "change": 0.15,
-   "change_pct": 0.93,
-   "asof": "2026-11-02"
+   "price": 16.0,
+   "change": -0.35,
+   "change_pct": -2.14,
+   "asof": "2026-11-03"
   },
   {
    "key": "tw3",
@@ -38,10 +38,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 6.93,
-   "change": 0.01,
-   "change_pct": 0.14,
-   "asof": "2026-11-02"
+   "price": 6.8,
+   "change": -0.13,
+   "change_pct": -1.88,
+   "asof": "2026-11-03"
   },
   {
    "key": "cn",
@@ -66,10 +66,10 @@
    "country": "中國",
    "exchange": "深交所",
    "currency": "CNY",
-   "price": 1.9,
-   "change": 0.02,
-   "change_pct": 1.06,
-   "asof": "2026-11-02"
+   "price": 1.94,
+   "change": 0.04,
+   "change_pct": 2.11,
+   "asof": "2026-11-03"
   },
   {
    "key": "cn3",
@@ -80,10 +80,10 @@
    "country": "中國",
    "exchange": "深交所",
    "currency": "CNY",
-   "price": 3.38,
-   "change": 0.04,
-   "change_pct": 1.2,
-   "asof": "2026-11-02"
+   "price": 3.47,
+   "change": 0.09,
+   "change_pct": 2.66,
+   "asof": "2026-11-03"
   },
   {
    "key": "jpkr",
@@ -122,10 +122,10 @@
    "country": "韓國",
    "exchange": "KRX",
    "currency": "KRW",
-   "price": 283000.0,
-   "change": 9500.0,
-   "change_pct": 3.47,
-   "asof": "2026-11-02"
+   "price": 266500.0,
+   "change": -16500.0,
+   "change_pct": -5.83,
+   "asof": "2026-11-03"
   },
   {
    "key": "us",
@@ -150,10 +150,10 @@
    "country": "美國",
    "exchange": "NASDAQ",
    "currency": "USD",
-   "price": 251.91,
-   "change": 1.11,
-   "change_pct": 0.44,
-   "asof": "2026-11-02"
+   "price": 247.66,
+   "change": -4.25,
+   "change_pct": -1.69,
+   "asof": "2026-11-03"
   },
   {
    "key": "us3",
@@ -164,10 +164,10 @@
    "country": "美國",
    "exchange": "NYSE",
    "currency": "USD",
-   "price": 14.27,
-   "change": 0.02,
-   "change_pct": 0.14,
-   "asof": "2026-11-02"
+   "price": 14.14,
+   "change": -0.13,
+   "change_pct": -0.91,
+   "asof": "2026-11-03"
   },
   {
    "key": "eu",
@@ -249,9 +249,9 @@
    "exchange": "Bursa Malaysia",
    "currency": "MYR",
    "price": 0.495,
-   "change": 0.01,
-   "change_pct": 2.06,
-   "asof": "2026-11-02"
+   "change": 0.0,
+   "change_pct": 0.0,
+   "asof": "2026-11-03"
   },
   {
    "key": "in",
