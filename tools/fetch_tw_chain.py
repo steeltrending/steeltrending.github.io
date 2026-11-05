@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """台股鋼鐵產業鏈：抓取上中下游九大類代表上市股的收盤價，計算當日、近 5 日、近 20 日與今年以來漲跌幅。
 
-由 GitHub Actions（.github/workflows/tw-chain.yml）每天 07:20、16:20、18:40（台北）自動執行，也可手動跑：
+由 GitHub Actions（.github/workflows/tw-chain.yml）每天 07:20、14:00（週一至週五，台股收盤後半小時）、16:20、18:40（台北）自動執行，也可手動跑：
   pip install yfinance
   python3 tools/fetch_tw_chain.py
 
