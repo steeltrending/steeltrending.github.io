@@ -102,7 +102,49 @@ def sgx_front_month(today):
         m += 1
         if m > 12:
             y, m = y + 1, 1
+    # 歷史 API 有時停更（2026-10-30 後曾數日無新資料），以即時行情 API 補上近期結算價；
+    # 歷史 API 恢復後會以官方歷史值覆寫。
+    try:
+        for d, v in sgx_live(today).items():
+            if d not in pts:
+                pts[d] = v
+                log("  SGX 即時行情補上 %s %s" % (d, v))
+    except Exception as e:  # noqa: BLE001
+        log("  SGX 即時行情失敗：%s" % e)
     return pts
+
+
+def _prev_weekday(d):
+    d -= dt.timedelta(days=1)
+    while d.weekday() >= 5:
+        d -= dt.timedelta(days=1)
+    return d
+
+
+def sgx_live(today):
+    """SGX 即時行情（contract-code/FEF）中當月合約的結算價：
+    - daily-settlement-price-abs：該 base-date 的正式結算價（收盤後才有）
+    - 日盤（current-trading-session=0）的 preliminary-settlement-price-abs：前一交易日結算價
+      （即漲跌的基準價，change-abs = 最新價 − 此值），日期取 base-date 前一個工作日。"""
+    url = ("https://api.sgx.com/derivatives/v1.0/contract-code/FEF?order=asc&orderby=delivery-month"
+           "&category=futures")
+    sym = "FEF%s%02d" % (MONTH_CODE[today.month - 1], today.year % 100)
+    ym = "%04d-%02d" % (today.year, today.month)
+    out = {}
+    for r in json.loads(get(url)).get("data") or []:
+        if r.get("symbol") != sym:
+            continue
+        b = str(r.get("base-date", ""))
+        if len(b) != 8:
+            continue
+        bd = dt.date(int(b[:4]), int(b[4:6]), int(b[6:]))
+        dsp = r.get("daily-settlement-price-abs")
+        if isinstance(dsp, (int, float)) and dsp > 0:
+            out[bd.isoformat()] = round(float(dsp), 2)
+        pre = r.get("preliminary-settlement-price-abs")
+        if str(r.get("current-trading-session")) == "0" and isinstance(pre, (int, float)) and pre > 0:
+            out.setdefault(_prev_weekday(bd).isoformat(), round(float(pre), 2))
+    return {d: v for d, v in out.items() if d[:7] == ym and d >= START}
 
 
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august",

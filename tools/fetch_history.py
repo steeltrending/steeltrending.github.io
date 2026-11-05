@@ -89,11 +89,31 @@ def log(*a):
     print(*a, flush=True)
 
 
+def with_market_price(out, meta, symbol=""):
+    """Yahoo 日 K 最後一天的收盤價常是空值（數小時後才補），yfinance 會把它略過。
+    改用 chart API 的 meta.regularMarketPrice／regularMarketTime 補上該交易日；
+    是否已收盤由後面的 drop_unclosed() 判斷，盤中值不會寫入。"""
+    p, ts = meta.get("regularMarketPrice"), meta.get("regularMarketTime")
+    if not isinstance(p, (int, float)) or p <= 0 or not ts:
+        return out
+    if isinstance(ts, dt.datetime):
+        d = ts.strftime("%Y-%m-%d")
+    else:
+        off = meta.get("gmtoffset") or 0
+        d = dt.datetime.fromtimestamp(int(ts) + int(off), dt.timezone.utc).strftime("%Y-%m-%d")
+    have = {x[0] for x in out}
+    if d not in have and (not out or d > out[-1][0]):
+        out = out + [[d, float(p)]]
+        log(f"  {symbol}: {d} 收盤價空值，改用 regularMarketPrice {p}")
+    return out
+
+
 def fetch_yahoo(symbol):
     import yfinance as yf
     for attempt in range(3):
         try:
-            df = yf.Ticker(symbol).history(start=START, interval="1d", auto_adjust=False, actions=False)
+            t = yf.Ticker(symbol)
+            df = t.history(start=START, interval="1d", auto_adjust=False, actions=False)
             if df is not None and len(df):
                 out = []
                 for idx, row in df.iterrows():
@@ -101,7 +121,11 @@ def fetch_yahoo(symbol):
                     if c is None or c != c:  # NaN
                         continue
                     out.append([idx.strftime("%Y-%m-%d"), float(c)])
-                return out
+                try:
+                    meta = t.history_metadata or {}
+                except Exception:  # noqa: BLE001
+                    meta = {}
+                return with_market_price(out, meta, symbol)
         except Exception as e:  # noqa: BLE001
             log(f"  {symbol} 第 {attempt + 1} 次失敗：{e}")
         time.sleep(3)
