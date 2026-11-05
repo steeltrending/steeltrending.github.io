@@ -43,6 +43,14 @@ jobs:
           git commit -m "股價歷史自動更新 $(TZ=Asia/Taipei date +%F)"
           for i in 1 2 3; do
             git pull --rebase origin main && git push origin main && exit 0
+            # 資料檔被別的更新搶先改過造成衝突：放棄合併，接上最新版後重抓一次再提交
+            git rebase --abort 2>/dev/null || true
+            git reset -q --hard origin/main
+            python3 tools/fetch_history.py || true
+            git add data/history data/stocks.json
+            git diff --cached --quiet && exit 0
+            git commit -q -m "股價歷史自動更新 $(TZ=Asia/Taipei date +%F)"
+            git push origin main && exit 0
             sleep 5
           done
           exit 1
