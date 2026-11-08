@@ -1,92 +1,134 @@
-全球鋼鐵產經速報 — 完整版
-STEEL MARKET DAILY FULL REPORT | 2026.11.08
+        全球鋼鐵產經速報 — 完整版
+        STEEL MARKET DAILY FULL REPORT | 2026.11.08
 
-⚠ 重大關稅/貿易政策快訊
-日本政府於2026年10月27日公告，對台灣、中國製造的鎳基合金不鏽鋼冷軋鋼板及鋼帶課徵為期5年的反傾銷稅，
-依企業不同稅率介於3.6%至42.1%，自10月31日起實施至2031年10月30日止。該產品可用於汽車外裝、排氣系統
-零件、餐具及鐵路車廂等，台灣相關不鏽鋼出口業者將受到影響。（中央社）
 
-【台灣】
+
+
+  ⚠ 重大關稅/貿易政策快訊
+  日本政府於2026年10月27日公告，對台灣、中國製造的鎳基合金不鏽鋼冷軋鋼板及鋼帶課徵為期5年的反傾銷稅，
+  依企業不同稅率介於3.6%至42.1%，自10月31日起實施至2031年10月30日止。該產品可用於汽車外裝、排氣系統
+  零件、餐具及鐵路車廂等，台灣相關不鏽鋼出口業者將受到影響。（中央社）
+
+
+
+ 【台灣】
 ・中鋼公告115年（2026年）12月份月盤盤價資訊，主要鋼品連三漲、每公噸調高約300元。中鋼表示，此次調漲係反映
 部分國際鋼價走強、下游外銷接單持續增加，以及新台幣貶值有助提振國產鋼材採購需求，希望藉此反映市場行情並穩定
 供應鏈購料成本，以擴大接單。（工商時報、經濟日報／鉅亨網、壹蘋新聞網）
+
 ・中鋼同步宣布砸逾10億元推動固態氧化物燃料電池（SOFC）技術，為公司在12月盤價小漲之餘，於能源轉型與新事業
 布局上的最新進展。（壹蘋新聞網）
+
 ・中鴻於10月14日開出11月內銷、12月外銷盤價，內銷熱軋、冷軋、鍍鋅鋼品每公噸調漲900元。調漲原因包括核心煉鋼
 原料成本支撐仍強、各國指標鋼廠挺價意願強烈、下游外貿接單及補庫需求陸續釋出，以及日韓鋼廠減產（日本JFE Steel
 因極端天氣減產約60萬噸、南韓POSCO光陽廠高爐11月將熄火大修）使區域現貨供給預期收斂。IMF並上調2026年全球經
 濟成長預測至3.1%，S&P Global 9月全球製造業PMI升至53.0，為盤價走勢增添信心。（優分析產業數據中心／鉅亨網）
+
 ・根據台灣經濟部統計，9月基本金屬及基本金屬製品出口訂單約24.3億美元，月增4%、年增29.7%；1至9月累計出口訂
 單年增12.7%，達194.2億美元。（SteelOrbis）
 
-【中國與亞洲】
+
+ 【中國與亞洲】
 ・中國鋼鐵工業協會（CISA）統計，10月中旬（11日至20日）會員大中型鋼廠平均日粗鋼產量為189.4萬噸，較10月上旬
 （193.9萬噸）減少2.3%；但截至10月20日，大中型鋼廠成品鋼材庫存為1722萬噸，較10月10日仍增加1.5%，顯示減產
 幅度尚不及需求疲弱的影響。（SteelOrbis）
+
 ・南韓對中國製鍍鋅、鍍鋅鋁、鋅鋁鎂合金鍍層冷軋鋼板及鋼捲（厚度低於4.75毫米）課徵臨時反傾銷稅，稅率依企業不
 同介於22.34%至33.67%，自2026年6月12日起生效，有效期至10月11日止；期滿後南韓可能對相關產品轉為課徵為期5年
 的正式反傾銷稅。（SteelOrbis）
+
 ・日本財務省與經濟產業省就南韓、中國進口鍍鋅鋼帶與鋼板展開反傾銷調查，已於2026年7月24日公布初步裁定（預備
 性決定）；最終裁定時程尚待後續公告。（Metal.com）
-・區域供給面同步收斂：日本JFE
 
-Steel因極端天氣因素減產約60萬噸；南韓POSCO光陽廠高爐將於11月熄火進行大修，
-
+・區域供給面同步收斂：日本JFE       Steel因極端天氣因素減產約60萬噸；南韓POSCO光陽廠高爐將於11月熄火進行大修，
 市場預期現貨供給將進一步收斂。（鉅亨網引述業界訊息）
 
-1
 
 
-【歐洲】
+
+                                        1
+ 【歐洲】
 ・歐盟理事會正式通過修訂版鋼鐵進口關稅配額（TRQ）制度，自2026年7月1日起生效（緊接在原防衛措施6月30日屆滿
 之後），大幅調降免稅進口配額，超額部分課徵50%關稅，並要求嚴格的「melt and pour」可追溯規範；未用完的配額
 可在同一年度內結轉。（Metal.com／SMM）
+
 ・受CBAM相關成本與保障配額限制下進口供應減少等因素支撐，歐盟現貨熱軋捲（HRC）報價約落在每噸620至640歐
 元，惟實際消費需求依然疲弱、庫存居高，漲勢主要是供給面因素而非真實需求回溫。（SteelOrbis）
+
 ・ArcelorMittal帶頭調漲歐盟熱軋捲報價，4月交貨報價上調約每噸50歐元至約750歐元（送達價），北歐出廠價約730歐
 元；市場人士普遍質疑此一價格水準能否站穩，因終端需求依然疲弱，漲勢主要仰賴CBAM及保障配額對進口的抑制效
 果。（SteelOrbis）
+
 ・thyssenkrupp集團旗下材料流通服務事業tk accelis於10月28日完成股市獨立上市（分拆上市）；集團另於10月30日公
 布其氫冶金煉鋼脫碳專案tkH2Steel獲得正式補助確認通知，持續推進鋼鐵事業脫碳布局。（thyssenkrupp官方新聞室）
 
-【北美】
+
+ 【北美】
 ・Cleveland-Cliffs公布第三季財報優於市場預期：調整後每股盈餘0.28美元（高於市場預期0.24美元），為連續第四季優
 於預期；調整後EBITDA達6.12億美元，高於公司自身財測；平均淨售價升至每噸1177美元（高於第二季的1124美元）。
 公司預估第四季調整後EBITDA為7.15億美元，並預期2027年EBITDA將超過40億美元。執行長Lourenco Goncalves表示：
 「問題已不在價格，而在於能否取得鋼材」（The problem is no longer price. The problem is having access to
 steel.）。（24/7 Wall St）
-・美加貿易緊張情勢未解：加拿大於10月21日宣布支援鋼鐵與汽車產業的方案，以抵銷美國關稅衝擊；同日，ClevelandCliffs確認其安大略省Hamilton廠裁員，旗下加拿大Stelco業務與閒置鍍鋅產線成為主要風險來源，美加是否重啟貿易談判
+
+・美加貿易緊張情勢未解：加拿大於10月21日宣布支援鋼鐵與汽車產業的方案，以抵銷美國關稅衝擊；同日，Cleveland-
+Cliffs確認其安大略省Hamilton廠裁員，旗下加拿大Stelco業務與閒置鍍鋅產線成為主要風險來源，美加是否重啟貿易談判
 將是後續觀察重點。（24/7 Wall St）
+
 ・Nucor將熱軋捲（HRC）現貨報價調漲至每短噸1255美元，為2022年5月以來新高，一年內累計漲幅達52%；
 Fastmarkets報導指出，主因在於美國關稅限制進口、本地供應偏緊，加上訂單交付時間拉長，推動價格穩步走高。
 （IndexBox／Fastmarkets）
+
 ・美國232條款關稅制度於2026年6月8日生效更新，適用至2027年12月31日：多數受影響進口品標準關稅維持25%；15%
 優惠稅率適用範圍擴大至農業設備、住宅HVAC系統及零組件與部分工業機械；鋼製貨架、鋁製平版印刷版新增納入課稅範
 圍；「完全」以美國金屬製造的認定門檻由95%放寬至85%；歐盟、英國、日本、南韓等特定夥伴國總關稅效果上限為
 15%，加拿大與墨西哥依USMCA僅對非美國成分課稅、最低有效稅率15%。（C.H. Robinson）
-鋼鐵潮流工作室 @steeltrending・完整版報告請見官方頻道
-
-2
 
 
-Sources
-1. 中鋼12月盤價小漲 穩定供應鏈購料成本擴大接單
-2. 市況保溫 中鋼12月盤價小漲
-3. 中鋼最新12月盤價連三漲、每公噸調高300元 鋼市正能量穩中帶堅
-4. 中鋼砸10億推固態氧化物燃料電池 12月盤價漲300元
-5. 各國指標鋼廠挺價+需求陸續釋出 中鴻11月內銷、12月外銷盤價順勢調漲
-6. Taiwan's basic metal export orders up 12.7 percent in January-September 2026
-7. 日本鎖定台灣與中製鋼板 將徵5年反傾銷稅、稅率3.6%至42.1%
-8. CISA mills' daily crude steel output down 2.3% in mid-October 2026, stocks up 1.5%
-9. South Korea imposes provisional AD duties of up to 33.67 percent on Chinese coated steel imports
+                         鋼鐵潮流工作室 @steeltrending・完整版報告請見官方頻道
+
+
+
+
+                                         2
+Sources
+
+ 1. 中鋼12月盤價小漲 穩定供應鏈購料成本擴大接單
+
+ 2. 市況保溫 中鋼12月盤價小漲
+
+ 3. 中鋼最新12月盤價連三漲、每公噸調高300元 鋼市正能量穩中帶堅
+
+ 4. 中鋼砸10億推固態氧化物燃料電池 12月盤價漲300元
+
+ 5. 各國指標鋼廠挺價+需求陸續釋出 中鴻11月內銷、12月外銷盤價順勢調漲
+
+ 6. Taiwan's basic metal export orders up 12.7 percent in January-September 2026
+
+ 7. 日本鎖定台灣與中製鋼板 將徵5年反傾銷稅、稅率3.6%至42.1%
+
+ 8. CISA mills' daily crude steel output down 2.3% in mid-October 2026, stocks up 1.5%
+
+ 9. South Korea imposes provisional AD duties of up to 33.67 percent on Chinese coated steel imports
+
 10. Japan Imposes Anti-Dumping Duties on South Korean and Chinese Galvanized Steel
+
 11. SMM Iron & Steel: EU Formally Adopts New Steel Trade Measure to Protect Market from Global Overcapacity
+
 12. EU domestic HRC prices stable at high levels, import market uncertain as prices depend on CBAM-related
-charges
+   charges
+
 13. ArcelorMittal-led HRC price push emerges in EU, buyers question real demand strength
+
 14. thyssenkrupp Newsroom Press Releases
+
 15. Cleveland-Cliffs Surges 7% Despite Trade Tensions; Steel Dynamics Climbs 3%, Nucor Edges Higher
+
 16. Nucor Lifts HRC Spot Price to $1,255 per Tonne as US Steel Prices Hit Four-Year High
+
 17. Updates to Section 232 Tariffs on Steel, Aluminum, Copper (June 2026)
 
-3
+
+
+
+                                                          3
+
