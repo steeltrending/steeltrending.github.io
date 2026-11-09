@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T23:10:56+08:00",
+ "updated": "2026-11-10T02:56:03+08:00",
  "items": [
   {
    "key": "tw",
@@ -192,10 +192,10 @@
    "country": "德國",
    "exchange": "XETRA",
    "currency": "EUR",
-   "price": 11.94,
-   "change": -0.06,
-   "change_pct": -0.5,
-   "asof": "2026-11-06"
+   "price": 12.32,
+   "change": 0.38,
+   "change_pct": 3.18,
+   "asof": "2026-11-09"
   },
   {
    "key": "eu3",
@@ -206,10 +206,10 @@
    "country": "奧地利",
    "exchange": "維也納證交所",
    "currency": "EUR",
-   "price": 40.14,
-   "change": -1.44,
-   "change_pct": -3.46,
-   "asof": "2026-11-06"
+   "price": 41.02,
+   "change": 0.88,
+   "change_pct": 2.19,
+   "asof": "2026-11-09"
   },
   {
    "key": "sea",
