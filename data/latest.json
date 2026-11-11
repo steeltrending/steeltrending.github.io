@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-11T08:47:51+08:00",
-  "social": { "date": "2026-11-10" },
+  "social": { "date": "2026-11-11" },
   "items": [
     { "key": "sgx_iron_ore", "name": "鐵礦砂", "contract": "SGX 62% Fe 鐵礦砂期貨 近月", "price": 92.75, "change": -0.25, "unit": "USD/t", "asof": "2026-11-10" },
     { "key": "dce_iron_ore", "name": "鐵礦石", "contract": "大連商品交易所 鐵礦石期貨 主力", "price": 684, "change": -0.5, "unit": "CNY/t", "asof": "2026-11-10" },
