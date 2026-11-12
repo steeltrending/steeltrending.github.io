@@ -1,6 +1,24 @@
 {
  "items": [
   {
+   "id": "carmarket-2026-10",
+   "category": "demand",
+   "series": "carmarket",
+   "title": "2026 年 10 月台灣車市：Tesla 空窗、颱風壓低總量，進口車占比回到五成以下",
+   "period": "2026-10",
+   "published": "2026-11-12",
+   "summary": "10 月新車掛牌 33,271 輛、年減 3.6%、月減 10.2%，低於業界預估的 3.7 萬輛；Tesla 僅掛 16 輛，進口車占比由 55.5% 回到 49.4%，國產車年減約 12%，國內汽車鋼板需求仍待觀察。",
+   "tags": [
+    "台灣車市",
+    "新車掛牌",
+    "進口車",
+    "電動車",
+    "汽車用鋼"
+   ],
+   "image": "assets/articles/carmarket-hero.jpg",
+   "url": "articles/carmarket-2026-10.html"
+  },
+  {
    "id": "2026-11-cold-rolling",
    "category": "steel101",
    "title": "熱軋捲怎麼變成薄板：冷軋製程，一次看懂",
