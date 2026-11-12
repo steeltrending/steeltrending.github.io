@@ -3,6 +3,12 @@
  "published": "2026-11-12",
  "headline": "Tesla 空窗、颱風壓低總量，進口車占比回到五成以下",
  "summary": "10 月新車掛牌 33,271 輛、年減 3.6%、月減 10.2%，低於業界預估的 3.7 萬輛；Tesla 僅掛 16 輛，進口車占比由 55.5% 回到 49.4%，國產車年減約 12%，國內汽車鋼板需求仍待觀察。",
+ "hero": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/A_Toyota_Corolla_Cross_at_Taichung.jpg/960px-A_Toyota_Corolla_Cross_at_Taichung.jpg",
+  "alt": "台中街頭路邊停放的一輛銀灰色 Toyota Corolla Cross，背景是騎樓、紅色春聯與停放的機車",
+  "caption": "Toyota Corolla Cross 是 10 月全市場銷量冠軍（3,333 輛）。台灣車市月報每月追蹤新車掛牌、國產與進口消長，以及對汽車用鋼的意涵。",
+  "credit": "照片：WC-QHS，2021 年攝於台中，<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>，經 <a href=\"https://commons.wikimedia.org/wiki/File:A_Toyota_Corolla_Cross_at_Taichung.jpg\">Wikimedia Commons</a>"
+ },
  "lead": "10 月新車掛牌 33,271 輛，年減 3.6%、月減 10.2%，低於業界原先預估的 3.7 萬輛，規模為近 10 年同期次低。1–10 月累計 340,481 輛，仍年增 3%。進口車占比由 9 月的 55.5% 回到 49.4%，但國產車的疲弱才是對鋼鐵業更實際的訊號。",
  "highlights": [
   [
@@ -40,25 +46,86 @@
   "ytd_import_share": 50.0
  },
  "brands": [
-  ["Toyota", 10357],
-  ["Lexus", 2704],
-  ["Mercedes-Benz", 2105],
-  ["Honda", 2032],
-  ["中華汽車", 1646],
-  ["BMW", 1617],
-  ["Mazda", 1336]
+  [
+   "Toyota",
+   10357
+  ],
+  [
+   "Lexus",
+   2704
+  ],
+  [
+   "Mercedes-Benz",
+   2105
+  ],
+  [
+   "Honda",
+   2032
+  ],
+  [
+   "中華汽車",
+   1646
+  ],
+  [
+   "BMW",
+   1617
+  ],
+  [
+   "Mazda",
+   1336
+  ]
  ],
  "models": [
-  ["Toyota Corolla Cross", 3333, "國產"],
-  ["Toyota RAV4", 2013, "進口"],
-  ["Toyota Yaris Cross", 1263, "國產"],
-  ["三菱 J Space", 1193, "國產（商用車）"],
-  ["Toyota Town Ace", 1183, "國產（商用車）"],
-  ["Lexus NX", 924, "進口"],
-  ["Honda CR-V", 782, "國產"],
-  ["Ford Territory", 779, "國產"],
-  ["Lexus UX300h", 776, "進口"],
-  ["Honda HR-V", 679, "國產"]
+  [
+   "Toyota Corolla Cross",
+   3333,
+   "國產"
+  ],
+  [
+   "Toyota RAV4",
+   2013,
+   "進口"
+  ],
+  [
+   "Toyota Yaris Cross",
+   1263,
+   "國產"
+  ],
+  [
+   "三菱 J Space",
+   1193,
+   "國產（商用車）"
+  ],
+  [
+   "Toyota Town Ace",
+   1183,
+   "國產（商用車）"
+  ],
+  [
+   "Lexus NX",
+   924,
+   "進口"
+  ],
+  [
+   "Honda CR-V",
+   782,
+   "國產"
+  ],
+  [
+   "Ford Territory",
+   779,
+   "國產"
+  ],
+  [
+   "Lexus UX300h",
+   776,
+   "進口"
+  ],
+  [
+   "Honda HR-V",
+   679,
+   "國產"
+  ]
  ],
  "drivers": [
   "各品牌陸續推出新車與改款，業者加大促銷力道，買氣原本熱絡，10 月下旬才受颱風干擾。",
@@ -110,17 +177,65 @@
   "全年累計能否維持正成長（目前年增 3%）。"
  ],
  "sources": [
-  ["2026年10月份臺灣汽車市場銷售報告", "https://news.u-car.com.tw/news/article/90130", "U-CAR"],
-  ["10月新車掛牌3.32萬輛受颱風影響 11月估3.8萬輛", "https://www.cna.com.tw/news/afe/202611020099.aspx", "中央社，2026-11-02"],
-  ["2026年10月台灣汽車銷售報告 CR-V反超Territory、Vios賣贏Altis", "https://c.8891.com.tw/news/toyota/corolla-cross/22768", "8891 汽車"],
-  ["〈車市〉耐久財買氣偏觀望？10月新車掛牌數創10年來同期次低", "https://news.cnyes.com/news/id/6643883", "優分析／鉅亨網"],
-  ["車市掛牌數低於預期 10 月達 33,271 輛 國產車買氣疲弱", "https://money.udn.com/money/story/10871/9853039", "聯合報"],
-  ["台灣車市10月小幅衰退 Toyota一枝獨秀、Foxtron少見展現買氣", "https://autos.udn.com/autos/story/7825/9851589", "UDN 汽車"],
-  ["台灣 10 月新車銷量衰退 1 成！Toyota 包辦前三名 Lexus 兩款衝進前十", "https://auto.ltn.com.tw/news/33326", "自由電子報汽車頻道"],
-  ["銷售戰報／2026年10月電動車掛牌跌破3千輛，Foxtron Cavira登上銷售龍頭", "https://cars.tvbs.com.tw/car-news/342538", "TVBS"],
-  ["2026 年十月台灣電動車銷售排行榜：Foxtron Cavira 奪冠", "https://www.ddcar.com.tw/article/44143", "DDCAR"],
-  ["Tesla年底交車潮來了！逾4000輛Model Y抵台 總市值破80億", "https://news.tvbs.com.tw/cars/4049081", "TVBS"],
-  ["2025年10月份臺灣汽車市場銷售報告", "https://news.u-car.com.tw/news/article/86080", "U-CAR，去年同期對照"],
-  ["10月新車掛牌3.45萬輛 11月估續增至4萬輛", "https://www.cna.com.tw/news/afe/202511030108.aspx", "中央社，2025-11-03，去年同期對照"]
+  [
+   "2026年10月份臺灣汽車市場銷售報告",
+   "https://news.u-car.com.tw/news/article/90130",
+   "U-CAR"
+  ],
+  [
+   "10月新車掛牌3.32萬輛受颱風影響 11月估3.8萬輛",
+   "https://www.cna.com.tw/news/afe/202611020099.aspx",
+   "中央社，2026-11-02"
+  ],
+  [
+   "2026年10月台灣汽車銷售報告 CR-V反超Territory、Vios賣贏Altis",
+   "https://c.8891.com.tw/news/toyota/corolla-cross/22768",
+   "8891 汽車"
+  ],
+  [
+   "〈車市〉耐久財買氣偏觀望？10月新車掛牌數創10年來同期次低",
+   "https://news.cnyes.com/news/id/6643883",
+   "優分析／鉅亨網"
+  ],
+  [
+   "車市掛牌數低於預期 10 月達 33,271 輛 國產車買氣疲弱",
+   "https://money.udn.com/money/story/10871/9853039",
+   "聯合報"
+  ],
+  [
+   "台灣車市10月小幅衰退 Toyota一枝獨秀、Foxtron少見展現買氣",
+   "https://autos.udn.com/autos/story/7825/9851589",
+   "UDN 汽車"
+  ],
+  [
+   "台灣 10 月新車銷量衰退 1 成！Toyota 包辦前三名 Lexus 兩款衝進前十",
+   "https://auto.ltn.com.tw/news/33326",
+   "自由電子報汽車頻道"
+  ],
+  [
+   "銷售戰報／2026年10月電動車掛牌跌破3千輛，Foxtron Cavira登上銷售龍頭",
+   "https://cars.tvbs.com.tw/car-news/342538",
+   "TVBS"
+  ],
+  [
+   "2026 年十月台灣電動車銷售排行榜：Foxtron Cavira 奪冠",
+   "https://www.ddcar.com.tw/article/44143",
+   "DDCAR"
+  ],
+  [
+   "Tesla年底交車潮來了！逾4000輛Model Y抵台 總市值破80億",
+   "https://news.tvbs.com.tw/cars/4049081",
+   "TVBS"
+  ],
+  [
+   "2025年10月份臺灣汽車市場銷售報告",
+   "https://news.u-car.com.tw/news/article/86080",
+   "U-CAR，去年同期對照"
+  ],
+  [
+   "10月新車掛牌3.45萬輛 11月估續增至4萬輛",
+   "https://www.cna.com.tw/news/afe/202511030108.aspx",
+   "中央社，2025-11-03，去年同期對照"
+  ]
  ]
 }

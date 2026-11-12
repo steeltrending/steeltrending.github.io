@@ -105,6 +105,13 @@ def build(ym):
     title = f"{label}台灣車市：{d['headline']}"
     slug = f"carmarket-{ym}"
 
+    # 可選：資料檔的 "hero"（src / alt / caption / credit）只覆寫該月份的主圖；省略時沿用共用主圖。
+    hero = d.get("hero") or {}
+    hero_src = hero.get("src") or f"../{HERO}"
+    hero_alt = hero.get("alt") or "台北夜間街頭，汽車與機車在路口等候通行，兩旁是燈火通明的商店"
+    hero_caption = hero.get("caption") or "台北南京西路夜間車流。台灣車市月報每月追蹤新車掛牌、國產與進口消長，以及對汽車用鋼的意涵。"
+    hero_credit = hero.get("credit") or HERO_CREDIT
+
     cards = "".join([
         card("car", "新車掛牌", f"{n(k['total'])} 輛", f"年增 {pct(k['yoy'])}、月增 {pct(k['mom'])}"),
         card("ship", "進口車", f"{n(k['imported'])} 輛", f"占 {k['import_share']:.1f}%"),
@@ -154,8 +161,8 @@ def build(ym):
 <p style="font-size:14px;color:#9AA0A6">鋼鐵潮流工作室 · 台灣車市月報 · 發布 {d["published"].replace("-", ".")}</p>
 
 <figure>
-<img src="../{HERO}" alt="台北夜間街頭，汽車與機車在路口等候通行，兩旁是燈火通明的商店" width="960" height="640">
-<figcaption>台北南京西路夜間車流。台灣車市月報每月追蹤新車掛牌、國產與進口消長，以及對汽車用鋼的意涵。<small>{HERO_CREDIT}</small></figcaption>
+<img src="{hero_src}" alt="{E(hero_alt)}" width="960" height="640">
+<figcaption>{E(hero_caption)}<small>{hero_credit}</small></figcaption>
 </figure>
 
 <h2>本期重點</h2>
