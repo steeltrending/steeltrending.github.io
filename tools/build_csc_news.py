@@ -86,6 +86,14 @@ def implausible(body, date, event):
 
 def event_key(s):
     """同一事件的不同報導歸成同一組：X 月盤價、X 月營收、X 月出貨。"""
+    k = _event_key(s)
+    # 中鴻等他廠的盤價不要和中鋼的盤價併成同一事件（否則中鋼新盤價會被誤判為重複）
+    if k and k.startswith("price") and re.search(r"中鴻|燁興|豐興|東和", s[:30]):
+        k = "other-" + k
+    return k
+
+
+def _event_key(s):
     m = re.search(MONTH + r"月(?!\d)(?:份)?[^，。；\d]{0,10}?盤", s)
     if m:
         n = m.group(1)
