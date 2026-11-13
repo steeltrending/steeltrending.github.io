@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T08:46:35+08:00",
+ "updated": "2026-11-13T11:25:21+08:00",
  "items": [
   {
    "key": "tw",
@@ -192,9 +192,9 @@
    "country": "德國",
    "exchange": "XETRA",
    "currency": "EUR",
-   "price": 12.44,
-   "change": -0.05,
-   "change_pct": -0.4,
+   "price": 12.45,
+   "change": -0.04,
+   "change_pct": -0.32,
    "asof": "2026-11-12"
   },
   {
