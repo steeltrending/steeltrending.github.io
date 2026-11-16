@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T10:44:11+08:00",
+ "updated": "2026-11-16T22:47:26+08:00",
  "items": [
   {
    "key": "tw",
@@ -10,10 +10,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 18.4,
-   "change": -0.2,
-   "change_pct": -1.08,
-   "asof": "2026-11-13"
+   "price": 18.0,
+   "change": -0.4,
+   "change_pct": -2.17,
+   "asof": "2026-11-16"
   },
   {
    "key": "tw2",
@@ -24,10 +24,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 14.8,
-   "change": -0.1,
-   "change_pct": -0.67,
-   "asof": "2026-11-13"
+   "price": 14.4,
+   "change": -0.4,
+   "change_pct": -2.7,
+   "asof": "2026-11-16"
   },
   {
    "key": "tw3",
@@ -38,10 +38,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 6.35,
-   "change": 0.1,
-   "change_pct": 1.6,
-   "asof": "2026-11-13"
+   "price": 6.29,
+   "change": -0.06,
+   "change_pct": -0.94,
+   "asof": "2026-11-16"
   },
   {
    "key": "cn",
@@ -52,10 +52,10 @@
    "country": "中國",
    "exchange": "上交所",
    "currency": "CNY",
-   "price": 6.18,
-   "change": 0.13,
-   "change_pct": 2.15,
-   "asof": "2026-11-13"
+   "price": 6.25,
+   "change": 0.07,
+   "change_pct": 1.13,
+   "asof": "2026-11-16"
   },
   {
    "key": "cn2",
@@ -66,10 +66,10 @@
    "country": "中國",
    "exchange": "深交所",
    "currency": "CNY",
-   "price": 1.87,
-   "change": -0.03,
-   "change_pct": -1.58,
-   "asof": "2026-11-13"
+   "price": 1.88,
+   "change": 0.01,
+   "change_pct": 0.53,
+   "asof": "2026-11-16"
   },
   {
    "key": "cn3",
@@ -81,9 +81,9 @@
    "exchange": "深交所",
    "currency": "CNY",
    "price": 3.25,
-   "change": -0.01,
-   "change_pct": -0.31,
-   "asof": "2026-11-13"
+   "change": 0.0,
+   "change_pct": 0.0,
+   "asof": "2026-11-16"
   },
   {
    "key": "jpkr",
@@ -94,10 +94,10 @@
    "country": "日本",
    "exchange": "東證",
    "currency": "JPY",
-   "price": 698.0,
-   "change": -6.6,
-   "change_pct": -0.94,
-   "asof": "2026-11-13"
+   "price": 695.1,
+   "change": -2.9,
+   "change_pct": -0.42,
+   "asof": "2026-11-16"
   },
   {
    "key": "jpkr2",
@@ -108,10 +108,10 @@
    "country": "日本",
    "exchange": "東證",
    "currency": "JPY",
-   "price": 1840.0,
-   "change": 12.5,
-   "change_pct": 0.68,
-   "asof": "2026-11-13"
+   "price": 1830.0,
+   "change": -10.0,
+   "change_pct": -0.54,
+   "asof": "2026-11-16"
   },
   {
    "key": "jpkr3",
@@ -122,10 +122,10 @@
    "country": "韓國",
    "exchange": "KRX",
    "currency": "KRW",
-   "price": 275000.0,
-   "change": 0.0,
-   "change_pct": 0.0,
-   "asof": "2026-11-13"
+   "price": 268500.0,
+   "change": -6500.0,
+   "change_pct": -2.36,
+   "asof": "2026-11-16"
   },
   {
    "key": "us",
@@ -223,7 +223,7 @@
    "price": 21050.0,
    "change": 0.0,
    "change_pct": 0.0,
-   "asof": "2026-11-13"
+   "asof": "2026-11-16"
   },
   {
    "key": "sea2",
@@ -234,10 +234,10 @@
    "country": "印尼",
    "exchange": "IDX",
    "currency": "IDR",
-   "price": 166.0,
-   "change": 3.0,
-   "change_pct": 1.84,
-   "asof": "2026-11-13"
+   "price": 165.0,
+   "change": -1.0,
+   "change_pct": -0.6,
+   "asof": "2026-11-16"
   },
   {
    "key": "sea3",
@@ -251,7 +251,7 @@
    "price": 0.495,
    "change": 0.0,
    "change_pct": 0.0,
-   "asof": "2026-11-13"
+   "asof": "2026-11-16"
   },
   {
    "key": "in",
@@ -262,10 +262,10 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 186.68,
-   "change": -1.32,
-   "change_pct": -0.7,
-   "asof": "2026-11-13"
+   "price": 182.26,
+   "change": -4.42,
+   "change_pct": -2.37,
+   "asof": "2026-11-16"
   },
   {
    "key": "in2",
@@ -276,10 +276,10 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 1348.0,
-   "change": -4.1,
-   "change_pct": -0.3,
-   "asof": "2026-11-13"
+   "price": 1334.6,
+   "change": -13.4,
+   "change_pct": -0.99,
+   "asof": "2026-11-16"
   },
   {
    "key": "in3",
@@ -290,10 +290,10 @@
    "country": "印度",
    "exchange": "NSE",
    "currency": "INR",
-   "price": 176.2,
-   "change": -1.5,
-   "change_pct": -0.84,
-   "asof": "2026-11-13"
+   "price": 168.75,
+   "change": -7.45,
+   "change_pct": -4.23,
+   "asof": "2026-11-16"
   }
  ]
 }
