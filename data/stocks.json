@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T09:45:42+08:00",
+ "updated": "2026-11-21T11:58:39+08:00",
  "items": [
   {
    "key": "tw",
@@ -249,7 +249,7 @@
    "exchange": "Bursa Malaysia",
    "currency": "MYR",
    "price": 0.49,
-   "change": -0.01,
+   "change": -0.005,
    "change_pct": -1.01,
    "asof": "2026-11-20"
   },
