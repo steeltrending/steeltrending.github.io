@@ -1,9 +1,6 @@
 {
- "updated": "2026-11-24T04:21:44+08:00",
- "sea_errors": [
-  "Vietcap: Expecting value: line 3 column 1 (char 4)",
-  "TCBS: Expecting value: line 1 column 1 (char 0)"
- ],
+ "updated": "2026-11-24T06:13:53+08:00",
+ "sea_errors": [],
  "report": [
   "中鋼: 215 筆，最新 2026-11-23（Yahoo Finance 2002.TW）",
   "中鴻: 215 筆，最新 2026-11-23（Yahoo Finance 2014.TW）",
@@ -14,13 +11,13 @@
   "日本製鐵: 215 筆，最新 2026-11-20（Yahoo Finance 5401.T）",
   "JFE Holdings: 215 筆，最新 2026-11-20（Yahoo Finance 5411.T）",
   "POSCO Holdings: 218 筆，最新 2026-11-23（Yahoo Finance 005490.KS）",
-  "Nucor: 224 筆，最新 2026-11-20（Yahoo Finance NUE）",
-  "Steel Dynamics: 224 筆，最新 2026-11-20（Yahoo Finance STLD）",
-  "Cleveland-Cliffs: 224 筆，最新 2026-11-20（Yahoo Finance CLF）",
-  "ArcelorMittal: 224 筆，最新 2026-11-20（Yahoo Finance MT）",
+  "Nucor: 225 筆，最新 2026-11-23（Yahoo Finance NUE）",
+  "Steel Dynamics: 225 筆，最新 2026-11-23（Yahoo Finance STLD）",
+  "Cleveland-Cliffs: 225 筆，最新 2026-11-23（Yahoo Finance CLF）",
+  "ArcelorMittal: 225 筆，最新 2026-11-23（Yahoo Finance MT）",
   "thyssenkrupp: 229 筆，最新 2026-11-23（Yahoo Finance TKA.DE）",
   "voestalpine: 228 筆，最新 2026-11-23（Yahoo Finance VOE.VI）",
-  "Hoa Phat Group: 220 筆，最新 2026-11-23（KB Securities）",
+  "Hoa Phat Group: 220 筆，最新 2026-11-23（Vietcap）",
   "Krakatau Steel: 218 筆，最新 2026-11-23（Yahoo Finance KRAS.JK）",
   "Ann Joo Resources: 223 筆，最新 2026-11-23（Yahoo Finance 6556.KL）",
   "Tata Steel: 226 筆，最新 2026-11-23（Yahoo Finance TATASTEEL.NS）",
