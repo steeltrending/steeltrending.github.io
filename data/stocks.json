@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T14:58:14+08:00",
+ "updated": "2026-11-25T00:57:32+08:00",
  "items": [
   {
    "key": "tw",
@@ -52,10 +52,10 @@
    "country": "中國",
    "exchange": "上交所",
    "currency": "CNY",
-   "price": 6.24,
-   "change": -0.1,
-   "change_pct": -1.58,
-   "asof": "2026-11-23"
+   "price": 6.17,
+   "change": -0.07,
+   "change_pct": -1.12,
+   "asof": "2026-11-24"
   },
   {
    "key": "cn2",
@@ -66,10 +66,10 @@
    "country": "中國",
    "exchange": "深交所",
    "currency": "CNY",
-   "price": 1.84,
-   "change": -0.01,
-   "change_pct": -0.54,
-   "asof": "2026-11-23"
+   "price": 1.82,
+   "change": -0.02,
+   "change_pct": -1.09,
+   "asof": "2026-11-24"
   },
   {
    "key": "cn3",
@@ -80,10 +80,10 @@
    "country": "中國",
    "exchange": "深交所",
    "currency": "CNY",
-   "price": 3.23,
-   "change": -0.03,
-   "change_pct": -0.92,
-   "asof": "2026-11-23"
+   "price": 3.19,
+   "change": -0.04,
+   "change_pct": -1.24,
+   "asof": "2026-11-24"
   },
   {
    "key": "jpkr",
@@ -192,10 +192,10 @@
    "country": "德國",
    "exchange": "XETRA",
    "currency": "EUR",
-   "price": 10.39,
-   "change": 0.08,
-   "change_pct": 0.78,
-   "asof": "2026-11-23"
+   "price": 10.04,
+   "change": -0.36,
+   "change_pct": -3.46,
+   "asof": "2026-11-24"
   },
   {
    "key": "eu3",
@@ -206,10 +206,10 @@
    "country": "奧地利",
    "exchange": "維也納證交所",
    "currency": "EUR",
-   "price": 33.28,
-   "change": 0.72,
-   "change_pct": 2.21,
-   "asof": "2026-11-23"
+   "price": 32.0,
+   "change": -1.28,
+   "change_pct": -3.85,
+   "asof": "2026-11-24"
   },
   {
    "key": "sea",
@@ -234,10 +234,10 @@
    "country": "印尼",
    "exchange": "IDX",
    "currency": "IDR",
-   "price": 159.0,
-   "change": 3.0,
-   "change_pct": 1.92,
-   "asof": "2026-11-23"
+   "price": 157.0,
+   "change": -2.0,
+   "change_pct": -1.26,
+   "asof": "2026-11-24"
   },
   {
    "key": "sea3",
@@ -248,10 +248,10 @@
    "country": "馬來西亞",
    "exchange": "Bursa Malaysia",
    "currency": "MYR",
-   "price": 0.485,
-   "change": -0.005,
-   "change_pct": -1.02,
-   "asof": "2026-11-23"
+   "price": 0.49,
+   "change": 0.005,
+   "change_pct": 1.03,
+   "asof": "2026-11-24"
   },
   {
    "key": "in",
