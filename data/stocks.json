@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T08:43:14+08:00",
+ "updated": "2026-11-24T14:58:14+08:00",
  "items": [
   {
    "key": "tw",
@@ -10,10 +10,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 16.85,
-   "change": -0.25,
-   "change_pct": -1.46,
-   "asof": "2026-11-23"
+   "price": 17.55,
+   "change": 0.7,
+   "change_pct": 4.15,
+   "asof": "2026-11-24"
   },
   {
    "key": "tw2",
@@ -24,10 +24,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 13.0,
-   "change": -0.05,
-   "change_pct": -0.38,
-   "asof": "2026-11-23"
+   "price": 13.65,
+   "change": 0.65,
+   "change_pct": 5.0,
+   "asof": "2026-11-24"
   },
   {
    "key": "tw3",
@@ -38,10 +38,10 @@
    "country": "台灣",
    "exchange": "TWSE",
    "currency": "TWD",
-   "price": 5.45,
-   "change": -0.13,
-   "change_pct": -2.33,
-   "asof": "2026-11-23"
+   "price": 5.91,
+   "change": 0.46,
+   "change_pct": 8.44,
+   "asof": "2026-11-24"
   },
   {
    "key": "cn",
@@ -94,10 +94,10 @@
    "country": "日本",
    "exchange": "東證",
    "currency": "JPY",
-   "price": 667.0,
-   "change": -20.6,
-   "change_pct": -3.0,
-   "asof": "2026-11-20"
+   "price": 670.7,
+   "change": 3.7,
+   "change_pct": 0.55,
+   "asof": "2026-11-24"
   },
   {
    "key": "jpkr2",
@@ -108,10 +108,10 @@
    "country": "日本",
    "exchange": "東證",
    "currency": "JPY",
-   "price": 1744.0,
-   "change": -43.0,
-   "change_pct": -2.41,
-   "asof": "2026-11-20"
+   "price": 1768.5,
+   "change": 24.5,
+   "change_pct": 1.4,
+   "asof": "2026-11-24"
   },
   {
    "key": "jpkr3",
@@ -122,10 +122,10 @@
    "country": "韓國",
    "exchange": "KRX",
    "currency": "KRW",
-   "price": 242500.0,
-   "change": -9500.0,
-   "change_pct": -3.77,
-   "asof": "2026-11-23"
+   "price": 255500.0,
+   "change": 13000.0,
+   "change_pct": 5.36,
+   "asof": "2026-11-24"
   },
   {
    "key": "us",
@@ -249,7 +249,7 @@
    "exchange": "Bursa Malaysia",
    "currency": "MYR",
    "price": 0.485,
-   "change": -0.01,
+   "change": -0.005,
    "change_pct": -1.02,
    "asof": "2026-11-23"
   },
