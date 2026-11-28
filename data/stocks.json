@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T03:39:10+08:00",
+ "updated": "2026-11-28T12:44:16+08:00",
  "items": [
   {
    "key": "tw",
@@ -136,10 +136,10 @@
    "country": "美國",
    "exchange": "NYSE",
    "currency": "USD",
-   "price": 248.34,
-   "change": 0.33,
-   "change_pct": 0.13,
-   "asof": "2026-11-25"
+   "price": 256.75,
+   "change": 8.41,
+   "change_pct": 3.39,
+   "asof": "2026-11-27"
   },
   {
    "key": "us2",
@@ -150,10 +150,10 @@
    "country": "美國",
    "exchange": "NASDAQ",
    "currency": "USD",
-   "price": 216.86,
-   "change": 1.63,
-   "change_pct": 0.76,
-   "asof": "2026-11-25"
+   "price": 222.01,
+   "change": 5.15,
+   "change_pct": 2.37,
+   "asof": "2026-11-27"
   },
   {
    "key": "us3",
@@ -164,10 +164,10 @@
    "country": "美國",
    "exchange": "NYSE",
    "currency": "USD",
-   "price": 11.27,
-   "change": 0.31,
-   "change_pct": 2.83,
-   "asof": "2026-11-25"
+   "price": 11.73,
+   "change": 0.46,
+   "change_pct": 4.08,
+   "asof": "2026-11-27"
   },
   {
    "key": "eu",
@@ -178,10 +178,10 @@
    "country": "盧森堡",
    "exchange": "NYSE",
    "currency": "USD",
-   "price": 57.91,
-   "change": 2.03,
-   "change_pct": 3.63,
-   "asof": "2026-11-25"
+   "price": 59.44,
+   "change": 1.53,
+   "change_pct": 2.64,
+   "asof": "2026-11-27"
   },
   {
    "key": "eu2",
